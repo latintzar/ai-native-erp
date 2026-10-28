@@ -1,6 +1,5 @@
 /** Narrow adapter for Cedar's existing customer-today starter. No ERP/store mutations. */
 export const taskId='erp.copilot.customer-today';
-export const gatewayOrigin='https://ai.atelierneyra.com';
 export const previewProject='ai-native-erp';
 export class PreviewInputUnsupported extends Error {}
 const unsupported=()=>{throw new PreviewInputUnsupported('Use a new session and one customer’s current-day orders within the preview limits.');};

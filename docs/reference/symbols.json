@@ -9060,92 +9060,92 @@
         {
           "name": "ChannelWorkspace",
           "kind": "TSTypeAliasDeclaration",
-          "line": 4
+          "line": 5
         },
         {
           "name": "Options",
           "kind": "TSTypeAliasDeclaration",
-          "line": 5
+          "line": 6
         },
         {
           "name": "ChannelApiError",
           "kind": "ClassDeclaration",
-          "line": 6
+          "line": 7
         },
         {
           "name": "ChannelApiError.constructor",
           "kind": "ClassMethod",
-          "line": 7
+          "line": 8
         },
         {
           "name": "requireGeneration",
           "kind": "FunctionValue",
-          "line": 12
+          "line": 13
         },
         {
           "name": "invalidateWorkspace",
           "kind": "FunctionDeclaration",
-          "line": 15
+          "line": 16
         },
         {
           "name": "base",
           "kind": "FunctionDeclaration",
-          "line": 21
+          "line": 22
         },
         {
           "name": "base.local",
           "kind": "FunctionValue",
-          "line": 25
+          "line": 27
         },
         {
           "name": "key",
           "kind": "FunctionValue",
-          "line": 31
+          "line": 33
         },
         {
           "name": "valid",
           "kind": "FunctionDeclaration",
-          "line": 32
+          "line": 34
         },
         {
           "name": "request",
           "kind": "FunctionDeclaration",
-          "line": 39
+          "line": 41
         },
         {
           "name": "request.abort",
           "kind": "FunctionValue",
-          "line": 44
+          "line": 46
         },
         {
           "name": "channelWorkspace",
           "kind": "FunctionDeclaration",
-          "line": 73
+          "line": 75
         },
         {
           "name": "channelApi",
           "kind": "FunctionDeclaration",
-          "line": 91
+          "line": 93
         },
         {
           "name": "resetChannelWorkspace",
           "kind": "FunctionDeclaration",
-          "line": 98
+          "line": 100
         },
         {
           "name": "channelDownload",
           "kind": "FunctionDeclaration",
-          "line": 108
+          "line": 110
         },
         {
           "name": "hasChannelWorkspace",
           "kind": "FunctionDeclaration",
-          "line": 115
+          "line": 117
         },
         {
           "name": "channelUpload",
           "kind": "FunctionDeclaration",
-          "line": 119
+          "line": 121
         }
       ]
     },
@@ -10496,32 +10496,32 @@
         {
           "name": "ProofApiError",
           "kind": "ClassDeclaration",
-          "line": 1
+          "line": 2
         },
         {
           "name": "ProofApiError.constructor",
           "kind": "ClassMethod",
-          "line": 2
+          "line": 3
         },
         {
           "name": "proofApi",
           "kind": "FunctionDeclaration",
-          "line": 6
+          "line": 7
         },
         {
           "name": "proofApi.abort",
           "kind": "FunctionValue",
-          "line": 10
+          "line": 11
         },
         {
           "name": "errorText",
           "kind": "FunctionValue",
-          "line": 40
+          "line": 41
         },
         {
           "name": "disconnectWhatsApp",
           "kind": "FunctionValue",
-          "line": 43
+          "line": 44
         }
       ]
     },
@@ -11067,6 +11067,23 @@
       "symbols": []
     },
     {
+      "path": "app/src/prototypes/cedar/copilot/preview-types.ts",
+      "language": "TypeScript",
+      "summary": "",
+      "symbols": [
+        {
+          "name": "PreviewTransport",
+          "kind": "TSTypeAliasDeclaration",
+          "line": 1
+        },
+        {
+          "name": "PreviewCopilotAnswer",
+          "kind": "TSTypeAliasDeclaration",
+          "line": 2
+        }
+      ]
+    },
+    {
       "path": "app/src/prototypes/cedar/copilot/router.ts",
       "language": "TypeScript",
       "summary": "",
@@ -11074,62 +11091,62 @@
         {
           "name": "Reading",
           "kind": "TSTypeAliasDeclaration",
-          "line": 37
+          "line": 40
         },
         {
           "name": "norm",
           "kind": "FunctionValue",
-          "line": 45
+          "line": 48
         },
         {
           "name": "productIn",
           "kind": "FunctionDeclaration",
-          "line": 51
+          "line": 54
         },
         {
           "name": "customerIn",
           "kind": "FunctionDeclaration",
-          "line": 62
+          "line": 65
         },
         {
           "name": "trail",
           "kind": "FunctionValue",
-          "line": 72
+          "line": 75
         },
         {
           "name": "turn",
           "kind": "FunctionValue",
-          "line": 75
+          "line": 78
         },
         {
           "name": "ordersFor",
           "kind": "FunctionDeclaration",
-          "line": 80
+          "line": 83
         },
         {
           "name": "answer",
           "kind": "FunctionDeclaration",
-          "line": 98
+          "line": 101
         },
         {
           "name": "proposalTrail",
           "kind": "FunctionValue",
-          "line": 194
+          "line": 197
         },
         {
           "name": "turnOf",
           "kind": "FunctionDeclaration",
-          "line": 210
+          "line": 213
         },
         {
           "name": "offlineTurn",
           "kind": "FunctionDeclaration",
-          "line": 227
+          "line": 231
         },
         {
           "name": "ask",
           "kind": "FunctionDeclaration",
-          "line": 239
+          "line": 243
         }
       ]
     },
@@ -11141,82 +11158,82 @@
         {
           "name": "KEY",
           "kind": "FunctionValue",
-          "line": 30
+          "line": 29
         },
         {
           "name": "blank",
           "kind": "FunctionValue",
-          "line": 32
+          "line": 31
         },
         {
           "name": "readStore",
           "kind": "FunctionDeclaration",
-          "line": 34
+          "line": 33
         },
         {
           "name": "writeStore",
           "kind": "FunctionDeclaration",
-          "line": 44
+          "line": 43
         },
         {
           "name": "uid",
           "kind": "FunctionValue",
-          "line": 55
+          "line": 54
         },
         {
           "name": "titleFrom",
           "kind": "FunctionValue",
-          "line": 58
+          "line": 57
         },
         {
           "name": "SessionSeed",
           "kind": "TSTypeAliasDeclaration",
-          "line": 64
+          "line": 63
         },
         {
           "name": "SessionsApi",
           "kind": "TSTypeAliasDeclaration",
-          "line": 71
+          "line": 70
         },
         {
           "name": "useSessions",
           "kind": "FunctionDeclaration",
-          "line": 93
+          "line": 92
         },
         {
           "name": "useSessions.onStorage",
           "kind": "FunctionValue",
-          "line": 117
+          "line": 116
         },
         {
           "name": "CopilotPosture",
           "kind": "TSTypeAliasDeclaration",
-          "line": 217
+          "line": 216
         },
         {
           "name": "CopilotRuntimeStanding",
           "kind": "TSTypeAliasDeclaration",
-          "line": 219
+          "line": 218
         },
         {
           "name": "noteCopilotPosture",
           "kind": "FunctionDeclaration",
-          "line": 231
+          "line": 230
         },
         {
           "name": "readCopilotPosture",
           "kind": "FunctionDeclaration",
-          "line": 238
+          "line": 237
         },
         {
           "name": "useCopilotPosture",
           "kind": "FunctionDeclaration",
-          "line": 248
+          "line": 241
         },
         {
           "name": "copilotStatusWord",
           "kind": "FunctionDeclaration",
-          "line": 261
+          "line": 254
         }
       ]
     },
@@ -11258,32 +11275,32 @@
         {
           "name": "SessionsRail",
           "kind": "FunctionDeclaration",
-          "line": 178
+          "line": 180
         },
         {
           "name": "CopilotHost",
           "kind": "FunctionDeclaration",
-          "line": 244
+          "line": 246
         },
         {
           "name": "CopilotHost.onOpen",
           "kind": "FunctionValue",
-          "line": 355
+          "line": 357
         },
         {
           "name": "CopilotHost.onKey",
           "kind": "FunctionValue",
-          "line": 427
+          "line": 429
         },
         {
           "name": "CopilotHost.startReport",
           "kind": "FunctionValue",
-          "line": 455
+          "line": 457
         },
         {
           "name": "CopilotHost.submit",
           "kind": "FunctionValue",
-          "line": 467
+          "line": 469
         }
       ]
     },
@@ -11295,67 +11312,67 @@
         {
           "name": "AssistantKind",
           "kind": "TSTypeAliasDeclaration",
-          "line": 26
+          "line": 27
         },
         {
           "name": "AssistantContext",
           "kind": "TSTypeAliasDeclaration",
-          "line": 28
+          "line": 29
         },
         {
           "name": "OpenAssistantDetail",
           "kind": "TSTypeAliasDeclaration",
-          "line": 37
+          "line": 38
         },
         {
           "name": "AssistantSendRequest",
           "kind": "TSTypeAliasDeclaration",
-          "line": 41
+          "line": 42
         },
         {
           "name": "AssistantDeliveryReceipt",
           "kind": "TSTypeAliasDeclaration",
-          "line": 50
+          "line": 51
         },
         {
           "name": "AssistantRuntimeAdapter",
           "kind": "TSTypeAliasDeclaration",
-          "line": 63
+          "line": 64
         },
         {
           "name": "Activity",
           "kind": "TSTypeAliasDeclaration",
-          "line": 73
+          "line": 74
         },
         {
           "name": "CopilotCard",
           "kind": "TSTypeAliasDeclaration",
-          "line": 82
+          "line": 83
         },
         {
           "name": "OperatorReport",
           "kind": "TSTypeAliasDeclaration",
-          "line": 90
+          "line": 91
         },
         {
           "name": "SupplyReviewDraft",
           "kind": "TSTypeAliasDeclaration",
-          "line": 97
+          "line": 98
         },
         {
           "name": "CopilotMessage",
           "kind": "TSTypeAliasDeclaration",
-          "line": 99
+          "line": 100
         },
         {
           "name": "CopilotSession",
           "kind": "TSTypeAliasDeclaration",
-          "line": 122
+          "line": 125
         },
         {
           "name": "CopilotStore",
           "kind": "TSTypeAliasDeclaration",
-          "line": 140
+          "line": 143
         }
       ]
     },
@@ -14765,6 +14782,18 @@
       ]
     },
     {
+      "path": "app/src/prototypes/cedar/guest-preview.ts",
+      "language": "TypeScript",
+      "summary": "",
+      "symbols": [
+        {
+          "name": "guestPrefix",
+          "kind": "FunctionDeclaration",
+          "line": 3
+        }
+      ]
+    },
+    {
       "path": "app/src/prototypes/cedar/inbox.tsx",
       "language": "TypeScript",
       "summary": "",
@@ -16546,202 +16575,202 @@
         {
           "name": "Workspace",
           "kind": "TSTypeAliasDeclaration",
-          "line": 5
+          "line": 6
         },
         {
           "name": "CollectionReceipt",
           "kind": "TSTypeAliasDeclaration",
-          "line": 6
+          "line": 7
         },
         {
           "name": "CollectionRequest",
           "kind": "TSTypeAliasDeclaration",
-          "line": 12
+          "line": 13
         },
         {
           "name": "collectionQuote",
           "kind": "FunctionDeclaration",
-          "line": 22
+          "line": 23
         },
         {
           "name": "CollectionApiError",
           "kind": "ClassDeclaration",
-          "line": 34
+          "line": 35
         },
         {
           "name": "CollectionApiError.constructor",
           "kind": "ClassMethod",
-          "line": 35
+          "line": 36
         },
         {
           "name": "workspaceKey",
           "kind": "FunctionValue",
-          "line": 37
+          "line": 38
         },
         {
           "name": "Binding",
           "kind": "TSTypeAliasDeclaration",
-          "line": 39
+          "line": 40
         },
         {
           "name": "changedWorkspace",
           "kind": "FunctionValue",
-          "line": 41
+          "line": 42
         },
         {
           "name": "storedBinding",
           "kind": "FunctionValue",
-          "line": 42
+          "line": 43
         },
         {
           "name": "binding",
           "kind": "FunctionDeclaration",
-          "line": 43
+          "line": 44
         },
         {
           "name": "invalidate",
           "kind": "FunctionDeclaration",
-          "line": 50
+          "line": 51
         },
         {
           "name": "collectionGuard",
           "kind": "FunctionDeclaration",
-          "line": 63
+          "line": 64
         },
         {
           "name": "resetCollectionWorkspace",
           "kind": "FunctionDeclaration",
-          "line": 67
+          "line": 68
         },
         {
           "name": "collectionOrigin",
           "kind": "FunctionDeclaration",
-          "line": 78
+          "line": 79
         },
         {
           "name": "request",
           "kind": "FunctionDeclaration",
-          "line": 92
+          "line": 94
         },
         {
           "name": "workspace",
           "kind": "FunctionDeclaration",
-          "line": 118
+          "line": 120
         },
         {
           "name": "hasCollectionWorkspace",
           "kind": "FunctionValue",
-          "line": 151
+          "line": 153
         },
         {
           "name": "rolloverCollectionFixture",
           "kind": "FunctionDeclaration",
-          "line": 153
+          "line": 155
         },
         {
           "name": "collectionOwnerRequest",
           "kind": "FunctionDeclaration",
-          "line": 164
+          "line": 166
         },
         {
           "name": "parseRequest",
           "kind": "FunctionDeclaration",
-          "line": 174
+          "line": 176
         },
         {
           "name": "parseRequest.minor",
           "kind": "FunctionValue",
-          "line": 177
+          "line": 179
         },
         {
           "name": "commercialDocumentOf",
           "kind": "FunctionValue",
-          "line": 199
+          "line": 201
         },
         {
           "name": "billingDraftOf",
           "kind": "FunctionValue",
-          "line": 204
+          "line": 206
         },
         {
           "name": "prepareCollectionFiscal",
           "kind": "FunctionDeclaration",
-          "line": 212
+          "line": 214
         },
         {
           "name": "reviseCollectionOrder",
           "kind": "FunctionDeclaration",
-          "line": 217
+          "line": 219
         },
         {
           "name": "collectionPayload",
           "kind": "FunctionDeclaration",
-          "line": 225
+          "line": 227
         },
         {
           "name": "createCollectionBatch",
           "kind": "FunctionDeclaration",
-          "line": 241
+          "line": 243
         },
         {
           "name": "createCollection",
           "kind": "FunctionDeclaration",
-          "line": 253
+          "line": 255
         },
         {
           "name": "readCollection",
           "kind": "FunctionDeclaration",
-          "line": 269
+          "line": 271
         },
         {
           "name": "addCollectionReceipt",
           "kind": "FunctionDeclaration",
-          "line": 275
+          "line": 277
         },
         {
           "name": "submitCollectionInvoice",
           "kind": "FunctionDeclaration",
-          "line": 284
+          "line": 286
         },
         {
           "name": "BankSnapshot",
           "kind": "TSTypeAliasDeclaration",
-          "line": 294
+          "line": 296
         },
         {
           "name": "ProviderMode",
           "kind": "TSTypeAliasDeclaration",
-          "line": 304
+          "line": 306
         },
         {
           "name": "WorkspaceReadiness",
           "kind": "TSTypeAliasDeclaration",
-          "line": 307
+          "line": 309
         },
         {
           "name": "providerRow",
           "kind": "FunctionValue",
-          "line": 311
+          "line": 313
         },
         {
           "name": "readWorkspaceReadiness",
           "kind": "FunctionDeclaration",
-          "line": 312
+          "line": 314
         },
         {
           "name": "readWorkspaceReadiness.mode",
           "kind": "FunctionValue",
-          "line": 318
+          "line": 320
         },
         {
           "name": "bankReadPath",
           "kind": "FunctionDeclaration",
-          "line": 331
+          "line": 333
         },
         {
           "name": "readBankSnapshot",
           "kind": "FunctionDeclaration",
-          "line": 343
+          "line": 345
         }
       ]
     },
@@ -23586,212 +23615,212 @@
         {
           "name": "RuntimeProvider",
           "kind": "TSTypeAliasDeclaration",
-          "line": 13
+          "line": 14
         },
         {
           "name": "ArtworkProviderState",
           "kind": "TSTypeAliasDeclaration",
-          "line": 20
+          "line": 21
         },
         {
           "name": "CopilotProviderState",
           "kind": "TSTypeAliasDeclaration",
-          "line": 21
+          "line": 22
         },
         {
           "name": "RuntimeHealth",
           "kind": "TSTypeAliasDeclaration",
-          "line": 22
+          "line": 23
         },
         {
           "name": "TwilioAccount",
           "kind": "TSTypeAliasDeclaration",
-          "line": 32
+          "line": 33
         },
         {
           "name": "ParsedRow",
           "kind": "TSTypeAliasDeclaration",
-          "line": 45
+          "line": 46
         },
         {
           "name": "ParseResult",
           "kind": "TSTypeAliasDeclaration",
-          "line": 46
+          "line": 47
         },
         {
           "name": "Identity",
           "kind": "TSTypeAliasDeclaration",
-          "line": 56
+          "line": 57
         },
         {
           "name": "AddressCountry",
           "kind": "TSTypeAliasDeclaration",
-          "line": 68
+          "line": 69
         },
         {
           "name": "AddressSuggestions",
           "kind": "TSTypeAliasDeclaration",
-          "line": 69
+          "line": 70
         },
         {
           "name": "Utterance",
           "kind": "TSTypeAliasDeclaration",
-          "line": 75
+          "line": 76
         },
         {
           "name": "Transcript",
           "kind": "TSTypeAliasDeclaration",
-          "line": 76
+          "line": 77
         },
         {
           "name": "CallObject",
           "kind": "TSTypeAliasDeclaration",
-          "line": 78
+          "line": 79
         },
         {
           "name": "PaperRect",
           "kind": "TSTypeAliasDeclaration",
-          "line": 117
+          "line": 118
         },
         {
           "name": "PaperCornerId",
           "kind": "TSTypeAliasDeclaration",
-          "line": 122
+          "line": 123
         },
         {
           "name": "PaperCell",
           "kind": "TSTypeAliasDeclaration",
-          "line": 124
+          "line": 125
         },
         {
           "name": "PaperReadingCell",
           "kind": "TSTypeAliasDeclaration",
-          "line": 126
+          "line": 127
         },
         {
           "name": "PaperReading",
           "kind": "TSTypeAliasDeclaration",
-          "line": 128
+          "line": 129
         },
         {
           "name": "PaperPageQuality",
           "kind": "TSTypeAliasDeclaration",
-          "line": 142
+          "line": 143
         },
         {
           "name": "PaperPageRead",
           "kind": "TSTypeAliasDeclaration",
-          "line": 143
+          "line": 144
         },
         {
           "name": "PaperRead",
           "kind": "TSTypeAliasDeclaration",
-          "line": 144
+          "line": 145
         },
         {
           "name": "PaperPageReading",
           "kind": "TSTypeAliasDeclaration",
-          "line": 156
+          "line": 157
         },
         {
           "name": "PaperReadResult",
           "kind": "TSTypeAliasDeclaration",
-          "line": 157
+          "line": 158
         },
         {
           "name": "PaperManifestReceipt",
           "kind": "TSTypeAliasDeclaration",
-          "line": 158
+          "line": 159
         },
         {
           "name": "CopilotRole",
           "kind": "TSTypeAliasDeclaration",
-          "line": 171
+          "line": 172
         },
         {
           "name": "CopilotSessionMessage",
           "kind": "TSTypeAliasDeclaration",
-          "line": 172
+          "line": 173
         },
         {
           "name": "CopilotContextLine",
           "kind": "TSTypeAliasDeclaration",
-          "line": 173
+          "line": 174
         },
         {
           "name": "CopilotDocumentLine",
           "kind": "TSTypeAliasDeclaration",
-          "line": 174
+          "line": 175
         },
         {
           "name": "CopilotContextOrder",
           "kind": "TSTypeAliasDeclaration",
-          "line": 175
+          "line": 176
         },
         {
           "name": "CopilotContextStock",
           "kind": "TSTypeAliasDeclaration",
-          "line": 185
+          "line": 186
         },
         {
           "name": "CopilotContext",
           "kind": "TSTypeAliasDeclaration",
-          "line": 186
+          "line": 187
         },
         {
           "name": "CopilotProposal",
           "kind": "TSTypeAliasDeclaration",
-          "line": 195
+          "line": 196
         },
         {
           "name": "CopilotAsk",
           "kind": "TSTypeAliasDeclaration",
-          "line": 206
+          "line": 207
         },
         {
           "name": "CopilotAnswer",
           "kind": "TSTypeAliasDeclaration",
-          "line": 212
+          "line": 213
         },
         {
           "name": "RuntimeUnreachable",
           "kind": "ClassDeclaration",
-          "line": 219
+          "line": 220
         },
         {
           "name": "RuntimeUnreachable.constructor",
           "kind": "ClassMethod",
-          "line": 220
+          "line": 221
         },
         {
           "name": "RuntimeRefused",
           "kind": "ClassDeclaration",
-          "line": 234
+          "line": 235
         },
         {
           "name": "RuntimeRefused.constructor",
           "kind": "ClassMethod",
-          "line": 235
+          "line": 236
         },
         {
           "name": "refusalOf",
           "kind": "FunctionValue",
-          "line": 243
+          "line": 244
         },
         {
           "name": "runtimeBase",
           "kind": "FunctionDeclaration",
-          "line": 254
+          "line": 255
         },
         {
           "name": "localWithoutRuntime",
           "kind": "FunctionDeclaration",
-          "line": 272
+          "line": 274
         },
         {
           "name": "call",
           "kind": "FunctionDeclaration",
-          "line": 278
+          "line": 280
         }
       ]
     },

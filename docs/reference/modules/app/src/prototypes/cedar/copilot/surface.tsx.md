@@ -11,9 +11,9 @@
 | `usePaper` | FunctionDeclaration | [L90](../../../../../../../../app/src/prototypes/cedar/copilot/surface.tsx#L90) |
 | `Thinking` | FunctionDeclaration | [L121](../../../../../../../../app/src/prototypes/cedar/copilot/surface.tsx#L121) |
 | `Turn` | FunctionDeclaration | [L136](../../../../../../../../app/src/prototypes/cedar/copilot/surface.tsx#L136) |
-| `SessionsRail` | FunctionDeclaration | [L178](../../../../../../../../app/src/prototypes/cedar/copilot/surface.tsx#L178) |
-| `CopilotHost` | FunctionDeclaration | [L244](../../../../../../../../app/src/prototypes/cedar/copilot/surface.tsx#L244) |
-| `CopilotHost.onOpen` | FunctionValue | [L355](../../../../../../../../app/src/prototypes/cedar/copilot/surface.tsx#L355) |
-| `CopilotHost.onKey` | FunctionValue | [L427](../../../../../../../../app/src/prototypes/cedar/copilot/surface.tsx#L427) |
-| `CopilotHost.startReport` | FunctionValue | [L455](../../../../../../../../app/src/prototypes/cedar/copilot/surface.tsx#L455) |
-| `CopilotHost.submit` | FunctionValue | [L467](../../../../../../../../app/src/prototypes/cedar/copilot/surface.tsx#L467) |
+| `SessionsRail` | FunctionDeclaration | [L180](../../../../../../../../app/src/prototypes/cedar/copilot/surface.tsx#L180) |
+| `CopilotHost` | FunctionDeclaration | [L246](../../../../../../../../app/src/prototypes/cedar/copilot/surface.tsx#L246) |
+| `CopilotHost.onOpen` | FunctionValue | [L357](../../../../../../../../app/src/prototypes/cedar/copilot/surface.tsx#L357) |
+| `CopilotHost.onKey` | FunctionValue | [L429](../../../../../../../../app/src/prototypes/cedar/copilot/surface.tsx#L429) |
+| `CopilotHost.startReport` | FunctionValue | [L457](../../../../../../../../app/src/prototypes/cedar/copilot/surface.tsx#L457) |
+| `CopilotHost.submit` | FunctionValue | [L469](../../../../../../../../app/src/prototypes/cedar/copilot/surface.tsx#L469) |

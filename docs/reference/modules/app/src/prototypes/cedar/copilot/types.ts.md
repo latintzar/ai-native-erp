@@ -5,16 +5,16 @@
 
 | Symbol | Kind | Source |
 |---|---|---|
-| `AssistantKind` | TSTypeAliasDeclaration | [L26](../../../../../../../../app/src/prototypes/cedar/copilot/types.ts#L26) |
-| `AssistantContext` | TSTypeAliasDeclaration | [L28](../../../../../../../../app/src/prototypes/cedar/copilot/types.ts#L28) |
-| `OpenAssistantDetail` | TSTypeAliasDeclaration | [L37](../../../../../../../../app/src/prototypes/cedar/copilot/types.ts#L37) |
-| `AssistantSendRequest` | TSTypeAliasDeclaration | [L41](../../../../../../../../app/src/prototypes/cedar/copilot/types.ts#L41) |
-| `AssistantDeliveryReceipt` | TSTypeAliasDeclaration | [L50](../../../../../../../../app/src/prototypes/cedar/copilot/types.ts#L50) |
-| `AssistantRuntimeAdapter` | TSTypeAliasDeclaration | [L63](../../../../../../../../app/src/prototypes/cedar/copilot/types.ts#L63) |
-| `Activity` | TSTypeAliasDeclaration | [L73](../../../../../../../../app/src/prototypes/cedar/copilot/types.ts#L73) |
-| `CopilotCard` | TSTypeAliasDeclaration | [L82](../../../../../../../../app/src/prototypes/cedar/copilot/types.ts#L82) |
-| `OperatorReport` | TSTypeAliasDeclaration | [L90](../../../../../../../../app/src/prototypes/cedar/copilot/types.ts#L90) |
-| `SupplyReviewDraft` | TSTypeAliasDeclaration | [L97](../../../../../../../../app/src/prototypes/cedar/copilot/types.ts#L97) |
-| `CopilotMessage` | TSTypeAliasDeclaration | [L99](../../../../../../../../app/src/prototypes/cedar/copilot/types.ts#L99) |
-| `CopilotSession` | TSTypeAliasDeclaration | [L122](../../../../../../../../app/src/prototypes/cedar/copilot/types.ts#L122) |
-| `CopilotStore` | TSTypeAliasDeclaration | [L140](../../../../../../../../app/src/prototypes/cedar/copilot/types.ts#L140) |
+| `AssistantKind` | TSTypeAliasDeclaration | [L27](../../../../../../../../app/src/prototypes/cedar/copilot/types.ts#L27) |
+| `AssistantContext` | TSTypeAliasDeclaration | [L29](../../../../../../../../app/src/prototypes/cedar/copilot/types.ts#L29) |
+| `OpenAssistantDetail` | TSTypeAliasDeclaration | [L38](../../../../../../../../app/src/prototypes/cedar/copilot/types.ts#L38) |
+| `AssistantSendRequest` | TSTypeAliasDeclaration | [L42](../../../../../../../../app/src/prototypes/cedar/copilot/types.ts#L42) |
+| `AssistantDeliveryReceipt` | TSTypeAliasDeclaration | [L51](../../../../../../../../app/src/prototypes/cedar/copilot/types.ts#L51) |
+| `AssistantRuntimeAdapter` | TSTypeAliasDeclaration | [L64](../../../../../../../../app/src/prototypes/cedar/copilot/types.ts#L64) |
+| `Activity` | TSTypeAliasDeclaration | [L74](../../../../../../../../app/src/prototypes/cedar/copilot/types.ts#L74) |
+| `CopilotCard` | TSTypeAliasDeclaration | [L83](../../../../../../../../app/src/prototypes/cedar/copilot/types.ts#L83) |
+| `OperatorReport` | TSTypeAliasDeclaration | [L91](../../../../../../../../app/src/prototypes/cedar/copilot/types.ts#L91) |
+| `SupplyReviewDraft` | TSTypeAliasDeclaration | [L98](../../../../../../../../app/src/prototypes/cedar/copilot/types.ts#L98) |
+| `CopilotMessage` | TSTypeAliasDeclaration | [L100](../../../../../../../../app/src/prototypes/cedar/copilot/types.ts#L100) |
+| `CopilotSession` | TSTypeAliasDeclaration | [L125](../../../../../../../../app/src/prototypes/cedar/copilot/types.ts#L125) |
+| `CopilotStore` | TSTypeAliasDeclaration | [L143](../../../../../../../../app/src/prototypes/cedar/copilot/types.ts#L143) |

@@ -5,9 +5,9 @@
 
 | Symbol | Kind | Source |
 |---|---|---|
-| `ProofApiError` | ClassDeclaration | [L1](../../../../../../../../app/src/prototypes/cedar/connections/api.ts#L1) |
-| `ProofApiError.constructor` | ClassMethod | [L2](../../../../../../../../app/src/prototypes/cedar/connections/api.ts#L2) |
-| `proofApi` | FunctionDeclaration | [L6](../../../../../../../../app/src/prototypes/cedar/connections/api.ts#L6) |
-| `proofApi.abort` | FunctionValue | [L10](../../../../../../../../app/src/prototypes/cedar/connections/api.ts#L10) |
-| `errorText` | FunctionValue | [L40](../../../../../../../../app/src/prototypes/cedar/connections/api.ts#L40) |
-| `disconnectWhatsApp` | FunctionValue | [L43](../../../../../../../../app/src/prototypes/cedar/connections/api.ts#L43) |
+| `ProofApiError` | ClassDeclaration | [L2](../../../../../../../../app/src/prototypes/cedar/connections/api.ts#L2) |
+| `ProofApiError.constructor` | ClassMethod | [L3](../../../../../../../../app/src/prototypes/cedar/connections/api.ts#L3) |
+| `proofApi` | FunctionDeclaration | [L7](../../../../../../../../app/src/prototypes/cedar/connections/api.ts#L7) |
+| `proofApi.abort` | FunctionValue | [L11](../../../../../../../../app/src/prototypes/cedar/connections/api.ts#L11) |
+| `errorText` | FunctionValue | [L41](../../../../../../../../app/src/prototypes/cedar/connections/api.ts#L41) |
+| `disconnectWhatsApp` | FunctionValue | [L44](../../../../../../../../app/src/prototypes/cedar/connections/api.ts#L44) |

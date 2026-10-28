@@ -5,15 +5,15 @@
 
 | Symbol | Kind | Source |
 |---|---|---|
-| `Reading` | TSTypeAliasDeclaration | [L37](../../../../../../../../app/src/prototypes/cedar/copilot/router.ts#L37) |
-| `norm` | FunctionValue | [L45](../../../../../../../../app/src/prototypes/cedar/copilot/router.ts#L45) |
-| `productIn` | FunctionDeclaration | [L51](../../../../../../../../app/src/prototypes/cedar/copilot/router.ts#L51) |
-| `customerIn` | FunctionDeclaration | [L62](../../../../../../../../app/src/prototypes/cedar/copilot/router.ts#L62) |
-| `trail` | FunctionValue | [L72](../../../../../../../../app/src/prototypes/cedar/copilot/router.ts#L72) |
-| `turn` | FunctionValue | [L75](../../../../../../../../app/src/prototypes/cedar/copilot/router.ts#L75) |
-| `ordersFor` | FunctionDeclaration | [L80](../../../../../../../../app/src/prototypes/cedar/copilot/router.ts#L80) |
-| `answer` | FunctionDeclaration | [L98](../../../../../../../../app/src/prototypes/cedar/copilot/router.ts#L98) |
-| `proposalTrail` | FunctionValue | [L194](../../../../../../../../app/src/prototypes/cedar/copilot/router.ts#L194) |
-| `turnOf` | FunctionDeclaration | [L210](../../../../../../../../app/src/prototypes/cedar/copilot/router.ts#L210) |
-| `offlineTurn` | FunctionDeclaration | [L227](../../../../../../../../app/src/prototypes/cedar/copilot/router.ts#L227) |
-| `ask` | FunctionDeclaration | [L239](../../../../../../../../app/src/prototypes/cedar/copilot/router.ts#L239) |
+| `Reading` | TSTypeAliasDeclaration | [L40](../../../../../../../../app/src/prototypes/cedar/copilot/router.ts#L40) |
+| `norm` | FunctionValue | [L48](../../../../../../../../app/src/prototypes/cedar/copilot/router.ts#L48) |
+| `productIn` | FunctionDeclaration | [L54](../../../../../../../../app/src/prototypes/cedar/copilot/router.ts#L54) |
+| `customerIn` | FunctionDeclaration | [L65](../../../../../../../../app/src/prototypes/cedar/copilot/router.ts#L65) |
+| `trail` | FunctionValue | [L75](../../../../../../../../app/src/prototypes/cedar/copilot/router.ts#L75) |
+| `turn` | FunctionValue | [L78](../../../../../../../../app/src/prototypes/cedar/copilot/router.ts#L78) |
+| `ordersFor` | FunctionDeclaration | [L83](../../../../../../../../app/src/prototypes/cedar/copilot/router.ts#L83) |
+| `answer` | FunctionDeclaration | [L101](../../../../../../../../app/src/prototypes/cedar/copilot/router.ts#L101) |
+| `proposalTrail` | FunctionValue | [L197](../../../../../../../../app/src/prototypes/cedar/copilot/router.ts#L197) |
+| `turnOf` | FunctionDeclaration | [L213](../../../../../../../../app/src/prototypes/cedar/copilot/router.ts#L213) |
+| `offlineTurn` | FunctionDeclaration | [L231](../../../../../../../../app/src/prototypes/cedar/copilot/router.ts#L231) |
+| `ask` | FunctionDeclaration | [L243](../../../../../../../../app/src/prototypes/cedar/copilot/router.ts#L243) |

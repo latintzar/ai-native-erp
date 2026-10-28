@@ -5,19 +5,19 @@
 
 | Symbol | Kind | Source |
 |---|---|---|
-| `KEY` | FunctionValue | [L30](../../../../../../../../app/src/prototypes/cedar/copilot/store.ts#L30) |
-| `blank` | FunctionValue | [L32](../../../../../../../../app/src/prototypes/cedar/copilot/store.ts#L32) |
-| `readStore` | FunctionDeclaration | [L34](../../../../../../../../app/src/prototypes/cedar/copilot/store.ts#L34) |
-| `writeStore` | FunctionDeclaration | [L44](../../../../../../../../app/src/prototypes/cedar/copilot/store.ts#L44) |
-| `uid` | FunctionValue | [L55](../../../../../../../../app/src/prototypes/cedar/copilot/store.ts#L55) |
-| `titleFrom` | FunctionValue | [L58](../../../../../../../../app/src/prototypes/cedar/copilot/store.ts#L58) |
-| `SessionSeed` | TSTypeAliasDeclaration | [L64](../../../../../../../../app/src/prototypes/cedar/copilot/store.ts#L64) |
-| `SessionsApi` | TSTypeAliasDeclaration | [L71](../../../../../../../../app/src/prototypes/cedar/copilot/store.ts#L71) |
-| `useSessions` | FunctionDeclaration | [L93](../../../../../../../../app/src/prototypes/cedar/copilot/store.ts#L93) |
-| `useSessions.onStorage` | FunctionValue | [L117](../../../../../../../../app/src/prototypes/cedar/copilot/store.ts#L117) |
-| `CopilotPosture` | TSTypeAliasDeclaration | [L217](../../../../../../../../app/src/prototypes/cedar/copilot/store.ts#L217) |
-| `CopilotRuntimeStanding` | TSTypeAliasDeclaration | [L219](../../../../../../../../app/src/prototypes/cedar/copilot/store.ts#L219) |
-| `noteCopilotPosture` | FunctionDeclaration | [L231](../../../../../../../../app/src/prototypes/cedar/copilot/store.ts#L231) |
-| `readCopilotPosture` | FunctionDeclaration | [L238](../../../../../../../../app/src/prototypes/cedar/copilot/store.ts#L238) |
-| `useCopilotPosture` | FunctionDeclaration | [L248](../../../../../../../../app/src/prototypes/cedar/copilot/store.ts#L248) |
-| `copilotStatusWord` | FunctionDeclaration | [L261](../../../../../../../../app/src/prototypes/cedar/copilot/store.ts#L261) |
+| `KEY` | FunctionValue | [L29](../../../../../../../../app/src/prototypes/cedar/copilot/store.ts#L29) |
+| `blank` | FunctionValue | [L31](../../../../../../../../app/src/prototypes/cedar/copilot/store.ts#L31) |
+| `readStore` | FunctionDeclaration | [L33](../../../../../../../../app/src/prototypes/cedar/copilot/store.ts#L33) |
+| `writeStore` | FunctionDeclaration | [L43](../../../../../../../../app/src/prototypes/cedar/copilot/store.ts#L43) |
+| `uid` | FunctionValue | [L54](../../../../../../../../app/src/prototypes/cedar/copilot/store.ts#L54) |
+| `titleFrom` | FunctionValue | [L57](../../../../../../../../app/src/prototypes/cedar/copilot/store.ts#L57) |
+| `SessionSeed` | TSTypeAliasDeclaration | [L63](../../../../../../../../app/src/prototypes/cedar/copilot/store.ts#L63) |
+| `SessionsApi` | TSTypeAliasDeclaration | [L70](../../../../../../../../app/src/prototypes/cedar/copilot/store.ts#L70) |
+| `useSessions` | FunctionDeclaration | [L92](../../../../../../../../app/src/prototypes/cedar/copilot/store.ts#L92) |
+| `useSessions.onStorage` | FunctionValue | [L116](../../../../../../../../app/src/prototypes/cedar/copilot/store.ts#L116) |
+| `CopilotPosture` | TSTypeAliasDeclaration | [L216](../../../../../../../../app/src/prototypes/cedar/copilot/store.ts#L216) |
+| `CopilotRuntimeStanding` | TSTypeAliasDeclaration | [L218](../../../../../../../../app/src/prototypes/cedar/copilot/store.ts#L218) |
+| `noteCopilotPosture` | FunctionDeclaration | [L230](../../../../../../../../app/src/prototypes/cedar/copilot/store.ts#L230) |
+| `readCopilotPosture` | FunctionDeclaration | [L237](../../../../../../../../app/src/prototypes/cedar/copilot/store.ts#L237) |
+| `useCopilotPosture` | FunctionDeclaration | [L241](../../../../../../../../app/src/prototypes/cedar/copilot/store.ts#L241) |
+| `copilotStatusWord` | FunctionDeclaration | [L254](../../../../../../../../app/src/prototypes/cedar/copilot/store.ts#L254) |

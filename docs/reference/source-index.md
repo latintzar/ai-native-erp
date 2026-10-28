@@ -4,7 +4,7 @@ Generated statically by `make source-reference`. Application modules and provide
 
 The [kernel API](../../backend/KERNEL-API.md) identifies the public backend seam. The full navigation below includes internal implementation symbols and design components; it is not an SDK stability promise.
 
-804 modules; 11015 named functions, classes, methods and TypeScript types. Anonymous callbacks are reached through their containing source. Literal defaults and private values are excluded.
+806 modules; 11018 named functions, classes, methods and TypeScript types. Anonymous callbacks are reached through their containing source. Literal defaults and private values are excluded.
 
 ## Component gallery
 
@@ -119,6 +119,7 @@ The [kernel API](../../backend/KERNEL-API.md) identifies the public backend seam
 | [app/src/prototypes/cedar/copilot/context.ts](modules/app/src/prototypes/cedar/copilot/context.ts.md) | 6 | [code](../../app/src/prototypes/cedar/copilot/context.ts) |
 | [app/src/prototypes/cedar/copilot/flows.tsx](modules/app/src/prototypes/cedar/copilot/flows.tsx.md) | 26 | [code](../../app/src/prototypes/cedar/copilot/flows.tsx) |
 | [app/src/prototypes/cedar/copilot/index.ts](modules/app/src/prototypes/cedar/copilot/index.ts.md) | 0 | [code](../../app/src/prototypes/cedar/copilot/index.ts) |
+| [app/src/prototypes/cedar/copilot/preview-types.ts](modules/app/src/prototypes/cedar/copilot/preview-types.ts.md) | 2 | [code](../../app/src/prototypes/cedar/copilot/preview-types.ts) |
 | [app/src/prototypes/cedar/copilot/router.ts](modules/app/src/prototypes/cedar/copilot/router.ts.md) | 12 | [code](../../app/src/prototypes/cedar/copilot/router.ts) |
 | [app/src/prototypes/cedar/copilot/store.ts](modules/app/src/prototypes/cedar/copilot/store.ts.md) | 16 | [code](../../app/src/prototypes/cedar/copilot/store.ts) |
 | [app/src/prototypes/cedar/copilot/surface.tsx](modules/app/src/prototypes/cedar/copilot/surface.tsx.md) | 12 | [code](../../app/src/prototypes/cedar/copilot/surface.tsx) |
@@ -158,6 +159,7 @@ The [kernel API](../../backend/KERNEL-API.md) identifies the public backend seam
 | [app/src/prototypes/cedar/glyphs.tsx](modules/app/src/prototypes/cedar/glyphs.tsx.md) | 11 | [code](../../app/src/prototypes/cedar/glyphs.tsx) |
 | [app/src/prototypes/cedar/google-ground.ts](modules/app/src/prototypes/cedar/google-ground.ts.md) | 14 | [code](../../app/src/prototypes/cedar/google-ground.ts) |
 | [app/src/prototypes/cedar/grants.ts](modules/app/src/prototypes/cedar/grants.ts.md) | 38 | [code](../../app/src/prototypes/cedar/grants.ts) |
+| [app/src/prototypes/cedar/guest-preview.ts](modules/app/src/prototypes/cedar/guest-preview.ts.md) | 1 | [code](../../app/src/prototypes/cedar/guest-preview.ts) |
 | [app/src/prototypes/cedar/inbox.tsx](modules/app/src/prototypes/cedar/inbox.tsx.md) | 19 | [code](../../app/src/prototypes/cedar/inbox.tsx) |
 | [app/src/prototypes/cedar/incoming.ts](modules/app/src/prototypes/cedar/incoming.ts.md) | 49 | [code](../../app/src/prototypes/cedar/incoming.ts) |
 | [app/src/prototypes/cedar/insights.ts](modules/app/src/prototypes/cedar/insights.ts.md) | 52 | [code](../../app/src/prototypes/cedar/insights.ts) |

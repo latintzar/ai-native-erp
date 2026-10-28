@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "id": "cedar-campaigns-v1",
+  "synthetic": true,
+  "referenceDay": "2025-08-22",
+  "fixture": {
+    "collections": {
+      "priceSignals": [
+        { "market": "peru", "product": "Corvina", "risePercent": 12, "risesInDays": 7 },
+        { "market": "peru", "product": "Lenguado", "risePercent": 8, "risesInDays": 7 },
+        { "market": "peru", "product": "Merluza", "risePercent": 12, "risesInDays": 7 },
+        { "market": "peru", "product": "Pulpo", "risePercent": 7, "risesInDays": 7 },
+        { "market": "peru", "product": "Media canal de cerdo", "risePercent": 9, "risesInDays": 7 },
+        { "market": "peru", "product": "Carne picada de ternera", "risePercent": 6, "risesInDays": 7 },
+        { "market": "peru", "product": "Melón piel de sapo", "risePercent": 11, "risesInDays": 7 },
+        { "market": "peru", "product": "Lechuga romana", "risePercent": 5, "risesInDays": 7 },
+        { "market": "spain", "product": "Rodaballo", "risePercent": 10, "risesInDays": 7 },
+        { "market": "spain", "product": "Bacalao", "risePercent": 7, "risesInDays": 7 },
+        { "market": "spain", "product": "Merluza", "risePercent": 9, "risesInDays": 7 },
+        { "market": "spain", "product": "Gamba roja de Palamós", "risePercent": 6, "risesInDays": 7 },
+        { "market": "spain", "product": "Entrecot de ternera", "risePercent": 8, "risesInDays": 7 },
+        { "market": "spain", "product": "Pollo entero", "risePercent": 5, "risesInDays": 7 },
+        { "market": "spain", "product": "Tomate rama", "risePercent": 9, "risesInDays": 7 },
+        { "market": "spain", "product": "Aguacate Hass", "risePercent": 6, "risesInDays": 7 }
+      ],
+      "accountHistory": [
+        { "scope": "fish", "customerId": "restaurant-malgrat", "lastOrderDay": "2025-08-04" },
+        { "scope": "fish", "customerId": "cal-estruch", "lastOrderDay": "2025-07-30" },
+        { "scope": "meat", "customerId": "masia-pallars", "lastOrderDay": "2025-08-03" },
+        { "scope": "meat", "customerId": "carnisseria-marce", "lastOrderDay": "2025-08-01" },
+        { "scope": "meat", "customerId": "cafe-garrell", "lastOrderDay": "2025-07-29" },
+        { "scope": "meat", "customerId": "cafe-llado", "lastOrderDay": "2025-07-27" },
+        { "scope": "meat", "customerId": "restaurant-palafrugell", "lastOrderDay": "2025-07-22" },
+        { "scope": "fruit", "customerId": "masia-bellpuig", "lastOrderDay": "2025-08-05" },
+        { "scope": "fruit", "customerId": "bar-tenas", "lastOrderDay": "2025-07-31" },
+        { "scope": "fruit", "customerId": "cafe-palol", "lastOrderDay": "2025-07-28" },
+        { "scope": "fruit", "customerId": "cafe-rodo", "lastOrderDay": "2025-07-25" },
+        { "scope": "fruit", "customerId": "can-mercader", "lastOrderDay": "2025-07-20" }
+      ]
+    }
+  }
+}

@@ -1,0 +1,17 @@
+schools/
+baseweb/node_modules/
+baseweb/dist/
+baseweb/bw-main.tgz
+# the raw administrative geometry the round map is cut from — 5 MB of source data that
+# `tools/build-round-map.mjs` re-fetches on demand; the CUT asset (src/app/round-map-geo.ts) is
+# what ships and is committed
+baseweb/.geo-cache/
+# the §25 drive build (see baseweb/README) — same output as dist/, on its own port
+baseweb/dist-river/
+# the §35.7 supplier-forwarding drive build (see notes/FEED-IA §35.7) — same output as dist/,
+# on its own port, so three packages can drive concurrently without clobbering one dist
+baseweb/dist-partners/
+# the §42 chat-commitments drive build — same output as dist/, on its own directory, so a fourth
+# package can drive concurrently without clobbering one dist
+baseweb/dist-chats/
+drives/shots/

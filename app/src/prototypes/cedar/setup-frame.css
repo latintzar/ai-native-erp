@@ -1,0 +1,7 @@
+/* Descendant rules stay inside a setup frame, including provider content. */
+[data-presentation] * { box-sizing: border-box; }
+[data-presentation] button { min-height: 44px; }
+[data-presentation] :is(button, input, summary, a):focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}

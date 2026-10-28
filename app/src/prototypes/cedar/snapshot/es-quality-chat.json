@@ -1,0 +1,398 @@
+{
+  "locale": "es-ES",
+  "schemaVersion": 1,
+  "entries": [
+    {
+      "source": "src/prototypes/cedar/inbox.tsx",
+      "context": "LogicalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "Delivery Note",
+      "spanish": "Albarán"
+    },
+    {
+      "source": "src/prototypes/cedar/inbox.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Credit note read",
+      "spanish": "Nota de abono leída"
+    },
+    {
+      "source": "src/prototypes/cedar/inbox.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Filed with the papers",
+      "spanish": "Archivado con la documentación"
+    },
+    {
+      "source": "src/prototypes/cedar/inbox.tsx",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "the sheet says what your rows say",
+      "spanish": "la hoja coincide con tus filas"
+    },
+    {
+      "source": "src/prototypes/cedar/inbox.tsx",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "${rows} ${rows === 1 ? 'fact differs' : 'facts differ'} from your rows",
+      "spanish": "${rows} ${rows === 1 ? 'fact differs' : 'facts differ'} de tus filas"
+    },
+    {
+      "source": "src/prototypes/cedar/inbox.tsx",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "From outside",
+      "spanish": "De fuera"
+    },
+    {
+      "source": "src/prototypes/cedar/inbox.tsx",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "A supplier",
+      "spanish": "Un proveedor"
+    },
+    {
+      "source": "src/prototypes/cedar/inbox.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "sent it",
+      "spanish": "lo ha enviado"
+    },
+    {
+      "source": "src/prototypes/cedar/inbox.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Connect your email, and the delivery notes your suppliers send land here with the file attached.",
+      "spanish": "Conecta tu correo y aquí llegarán los albaranes que envían tus proveedores, con el archivo adjunto."
+    },
+    {
+      "source": "src/prototypes/cedar/inbox.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Mail from your suppliers",
+      "spanish": "Correo de tus proveedores"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/chats.tsx",
+      "context": "JSXAttribute > StringLiteral:aria-label",
+      "kind": "literal",
+      "english": "Sent and delivered",
+      "spanish": "Enviado y entregado"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/chats.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Waiting on you",
+      "spanish": "Pendiente de ti"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/chats.tsx",
+      "context": "JSXAttribute > StringLiteral:aria-label",
+      "kind": "literal",
+      "english": "Which conversations",
+      "spanish": "Qué conversaciones"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/chats.tsx",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "Owner — ${held.name}",
+      "spanish": "Responsable — ${held.name}"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/chats.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Find a conversation",
+      "spanish": "Buscar una conversación"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/chats.tsx",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "0 conversations match “${query.trim()}”. Try the customer’s own name.",
+      "spanish": "Ninguna conversación coincide con «${query.trim()}». Prueba con el nombre del propio cliente."
+    },
+    {
+      "source": "src/prototypes/cedar/shell/chats.tsx",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "${held.name}’s conversations are all answered.",
+      "spanish": "Todas las conversaciones de ${held.name} tienen respuesta."
+    },
+    {
+      "source": "src/prototypes/cedar/shell/chats.tsx",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "Every conversation is answered.",
+      "spanish": "Todas las conversaciones tienen respuesta."
+    },
+    {
+      "source": "src/prototypes/cedar/shell/chats.tsx",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "The day’s conversations start here.",
+      "spanish": "Las conversaciones del día empiezan aquí."
+    },
+    {
+      "source": "src/prototypes/cedar/shell/chats.tsx",
+      "context": "JSXAttribute > StringLiteral:label",
+      "kind": "literal",
+      "english": "Find a conversation",
+      "spanish": "Buscar una conversación"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/chats.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Rocoto read it as",
+      "spanish": "Rocoto lo interpretó como"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/chats.tsx",
+      "context": "JSXAttribute > StringLiteral:aria-label",
+      "kind": "literal",
+      "english": "Reply to this",
+      "spanish": "Responder a esto"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/chats.tsx",
+      "context": "JSXAttribute > StringLiteral:aria-label",
+      "kind": "literal",
+      "english": "React to this",
+      "spanish": "Reaccionar a esto"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/chats.tsx",
+      "context": "JSXAttribute > StringLiteral:aria-label",
+      "kind": "literal",
+      "english": "Write to the conversation instead",
+      "spanish": "Escribir en la conversación"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/chats.tsx",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "Delivery Note ${sale.number}",
+      "spanish": "Albarán ${sale.number}"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/chats.tsx",
+      "context": "JSXAttribute > StringLiteral:label",
+      "kind": "literal",
+      "english": "Previous planned order",
+      "spanish": "Pedido planificado anterior"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/chats.tsx",
+      "context": "JSXAttribute > StringLiteral:label",
+      "kind": "literal",
+      "english": "Next planned order",
+      "spanish": "Siguiente pedido planificado"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/chats.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "To confirm",
+      "spanish": "Por confirmar"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/chats.tsx",
+      "context": "JSXAttribute > StringLiteral:aria-label",
+      "kind": "literal",
+      "english": "Attach a photo",
+      "spanish": "Adjuntar una foto"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/chats.tsx",
+      "context": "JSXAttribute > StringLiteral:label",
+      "kind": "literal",
+      "english": "Put the chats away",
+      "spanish": "Guardar las conversaciones"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/chats.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Pick a conversation.",
+      "spanish": "Elige una conversación."
+    },
+    {
+      "source": "src/prototypes/cedar/shell/chats.tsx",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "Put the chats away",
+      "spanish": "Guardar las conversaciones"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/chats.tsx",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "Chats — ${unread} ${unread === 1 ? 'reply' : 'replies'} owed",
+      "spanish": "Chats — ${unread} ${unread === 1 ? 'reply' : 'replies'} pendientes"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/embeds.tsx",
+      "context": "ReturnStatement > TemplateLiteral",
+      "kind": "template",
+      "english": "Read as ${sale.lines.length} ${sale.lines.length === 1 ? 'line' : 'lines'} · ${sale.deliveryDay}",
+      "spanish": "Interpretado como ${sale.lines.length} ${sale.lines.length === 1 ? 'line' : 'lines'} · ${sale.deliveryDay}"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/embeds.tsx",
+      "context": "LogicalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "Waiting on you",
+      "spanish": "Pendiente de ti"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/embeds.tsx",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "· took ${dropped.product.name} off",
+      "spanish": "· se quitó ${dropped.product.name}"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/embeds.tsx",
+      "context": "LogicalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "Open the delivery note",
+      "spanish": "Abrir el albarán"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/embeds.tsx",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "Rocoto asked",
+      "spanish": "Rocoto preguntó"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/embeds.tsx",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "needs its amount",
+      "spanish": "necesita su importe"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/embeds.tsx",
+      "context": "JSXExpressionContainer > TemplateLiteral",
+      "kind": "template",
+      "english": "Delivery Note ${sale.number}",
+      "spanish": "Albarán ${sale.number}"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/embeds.tsx",
+      "context": "JSXAttribute > StringLiteral:label",
+      "kind": "literal",
+      "english": "Rocoto answered it",
+      "spanish": "Rocoto respondió"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/embeds.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Today’s price",
+      "spanish": "Precio de hoy"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/embeds.tsx",
+      "context": "JSXAttribute > StringLiteral:label",
+      "kind": "literal",
+      "english": "Why this is waiting",
+      "spanish": "Por qué está pendiente"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/embeds.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Put it on",
+      "spanish": "Añadirlo"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/embeds.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Set it",
+      "spanish": "Fijarlo"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/embeds.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "We can get it",
+      "spanish": "Podemos conseguirlo"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/embeds.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "This one goes as it stands",
+      "spanish": "Este sale tal cual"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/embeds.tsx",
+      "context": "JSXAttribute > StringLiteral:label",
+      "kind": "literal",
+      "english": "Rocoto writes it",
+      "spanish": "Rocoto lo escribe"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/embeds.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Rocoto answers",
+      "spanish": "Rocoto responde"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/embeds.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Message them yourself",
+      "spanish": "Escríbeles tú mismo"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/media.tsx",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "The line alone",
+      "spanish": "Solo la línea"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/media.tsx",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "Read it all",
+      "spanish": "Leerlo todo"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/media.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Transcribing…",
+      "spanish": "Transcribiendo…"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/media.tsx",
+      "context": "JSXAttribute > StringLiteral:label",
+      "kind": "literal",
+      "english": "Scrub the recording",
+      "spanish": "Desplazarse por la grabación"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/media.tsx",
+      "context": "LogicalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "The picture",
+      "spanish": "La imagen"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/chats.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Reply needed",
+      "spanish": "Falta responder"
+    }
+  ]
+}

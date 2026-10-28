@@ -1,0 +1,9 @@
+{
+  "schema": 1,
+  "owner": "cedar",
+  "logicalEnvironment": "development/demo",
+  "uiOrigins": ["https://demo.soyrocoto.com", "https://cedar-demo.soyrocoto.com", "https://copper-demo.soyrocoto.com"],
+  "uiEntry": "/cedar/",
+  "apiOrigin": "https://copper-demo.soyrocoto.com",
+  "apiTarget": "copper-preview"
+}

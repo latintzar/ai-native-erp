@@ -1,0 +1,92 @@
+# The Python side of the repository, configured once at the root. There is no package here: this
+# file carries tool settings only, so `pip install` never reads it as a project.
+#
+# Two gates ride on it, both with a baseline that only counts down (tools/py-gate.py):
+#   python3 tools/py-gate.py ruff    · ruff, against tools/ruff-baseline.json
+#   python3 tools/py-gate.py types   · pyright basic, against tools/pyright-baseline.json
+# `make gates` runs both; .pre-commit-config.yaml calls the same two commands, so what a hook runs
+# is what CI runs.
+
+[tool.ruff]
+target-version = "py312"
+# Measured before it was chosen: of the 165,091 Python lines under these roots, 98.4% already fit
+# in 110 columns and 91.5% fit in 100. 110 is the width the code writes; 120 would have blessed
+# 1,151 lines nobody wrote to that width.
+line-length = 110
+# The four roots this repository's Python lives in. `src` is also what isort resolves a first-party
+# import against, so a new backend module is first-party without editing the list below.
+src = ["backend", "mock-api", "tools", "drives"]
+# Root-anchored, every one of them: a bare "app" is matched against the BASENAME, which would have
+# taken `mock-api/app/` — the kit runtime, 16 files — out of the lint with nothing said.
+extend-exclude = ["docs/**", "library/**", "app/**"]
+
+[tool.ruff.lint]
+# Started at ["E", "F", "W", "I", "B", "UP", "C4", "SIM", "RUF"] and measured. Two families came
+# back out, each because it asks for a whole-repository rewrite rather than a defect:
+#   UP  2,634 findings — typing.Dict → dict, Optional[X] → X | None, %-format → f-string. A real
+#       modernization, and its own pull request; landing it here would bury the autofix in noise.
+#   RUF   929 findings — 503 of them RUF001/2/3 (ambiguous unicode), which is what a Spanish
+#       codebase with typographic quotes and « » looks like, and 250 RUF100 for the noqa codes the
+#       repository already carries for rules outside this select.
+# What stayed: E 3,234 · B 708 · I 318 · SIM 227 · F 122 · C4 24 · W 0.
+select = ["E", "F", "W", "I", "B", "C4", "SIM"]
+
+[tool.ruff.lint.per-file-ignores]
+# The drives assert with a labelled message — `check(cond, f"{width}: the card has no …")` — and
+# carry page scripts inline; 1,362 of the repository's 2,649 long lines are those two shapes.
+"drives/**" = ["E501"]
+
+[tool.ruff.lint.flake8-bugbear]
+# FastAPI declares a dependency, a form field or an upload BY calling in the default argument. 525
+# of 708 B-findings were this idiom; they are the framework, not a mutable default.
+extend-immutable-calls = [
+  "fastapi.Body", "fastapi.Cookie", "fastapi.Depends", "fastapi.File", "fastapi.Form",
+  "fastapi.Header", "fastapi.Path", "fastapi.Query", "fastapi.Security",
+]
+
+[tool.ruff.lint.isort]
+# The backend's own top-level modules, so `import config` sorts beside `import db` and above
+# `import httpx`. `src` above covers a module added after this list was written.
+known-first-party = [
+  "actions", "agent_chat", "agent_reply", "ai_disclosure", "api_v1", "app", "assemble", "avisos",
+  "backfill", "behaviour", "brain", "business_day", "cascade", "channels", "claim", "confidence", "config",
+  "consent", "control_room", "cr", "cr_control", "credit", "cr_session", "db", "delivery", "demo_auth",
+  "demo_call", "demo_flow", "demo_media", "demo_phone", "demo_reap", "directory", "dispatch_sched", "doubt",
+  "duties", "el_convai", "eleven", "fcm", "gate", "historial", "identity_phone", "install", "intake_api",
+  "join", "learn", "lifecycle", "logging_setup", "mail_inbound", "market_voice", "mcp_auth", "mcp_server",
+  "memory", "mindcheck", "narrate", "ops", "order_receipt", "orders", "orders_tool", "pb", "pedidos_meter",
+  "playbook", "portal", "postcall", "presence", "presence_call", "projector", "provisioning", "reach",
+  "reparto_api", "review", "rocoto_processes", "rt_embed", "runtime", "scripts", "seed", "soul", "spine",
+  "sup_api", "sup_session", "sup_verbs", "sweep", "sync", "tenancy", "test_account", "test_join", "tests",
+  "trackers", "transcribe", "trends", "triggers", "try_chat", "twilio_wa", "urlfetch", "voice",
+  "voice_fabric", "voice_protocol", "voice_reply", "voice_toggle", "voice_turn", "vroom", "wa_calling",
+  "wa_coexistence", "wa_onboard", "whatsapp_cloud", "widget_build", "worker",
+]
+
+[tool.mypy]
+# BASIC, not strict. mypy's own defaults are the basic mode: an unannotated function body is not
+# checked, an unresolved third-party import is Any rather than an error, and nothing is required to
+# carry an annotation. 90% of the functions here already declare a return type, so most bodies are
+# inside the check already; turning on strict would report the other 10% as a wall of missing
+# annotations and say nothing about a defect.
+python_version = "3.12"
+ignore_missing_imports = true
+# THE GATE READS THIS REPOSITORY'S OWN CODE AND MYPY'S BUNDLED TYPESHED, NOTHING INSTALLED. With
+# site packages on, the answer is a function of whatever is in the environment: this box and
+# backend/requirements.txt disagree on 52 versions, so a baseline taken on one is red on the other,
+# and a dependabot bump of fastapi or stripe would arrive as dozens of findings in a pull request
+# that changed no Python. Off, the baseline depends only on the source and the mypy pin, and
+# `pip install -r tools/requirements-dev.txt && python3 tools/py-gate.py types` gives the same
+# answer on a laptop, in CI, and on a box that has never installed the backend. The price is real
+# and named: a call into fastapi or asyncpg is Any rather than checked, which halves what mypy
+# finds here (1,010 → 505 in backend/). Checking against the pinned tree is a second gate with its
+# own pinned stubs, and its own decision.
+no_site_packages = true
+# The gate runs `cd <root> && mypy .` once per root, so the root a file sits under is its package
+# base. With namespace packages on, a tree that holds packages two levels down with no __init__.py
+# above them would otherwise be read under two different bases, and mypy would report the same file
+# twice under two module names.
+explicit_package_bases = true
+namespace_packages = true
+show_error_codes = true
+show_column_numbers = false

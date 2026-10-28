@@ -1,0 +1,7169 @@
+{
+  "tool": "ruff",
+  "tool_version": "0.16.6",
+  "roots": [
+    "backend",
+    "mock-api",
+    "tools",
+    "drives",
+    "deploy"
+  ],
+  "total": 2164,
+  "distinct": 1192,
+  "how": "python3 tools/py-gate.py ruff --update",
+  "what": "every finding that existed when this file was written. The gate fails on a finding that is not here, and on an entry here that no longer happens. It only counts down.",
+  "findings": [
+    {
+      "path": "backend/actions.py",
+      "code": "E501",
+      "message": "Line too long (120 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/actions.py",
+      "code": "E501",
+      "message": "Line too long (136 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/actions.py",
+      "code": "SIM105",
+      "message": "Use `contextlib.suppress(Exception)` instead of `try`-`except`-`pass`",
+      "count": 3
+    },
+    {
+      "path": "backend/agent_chat.py",
+      "code": "E501",
+      "message": "Line too long (111 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/agent_chat.py",
+      "code": "E501",
+      "message": "Line too long (136 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/agent_chat.py",
+      "code": "E501",
+      "message": "Line too long (146 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/agent_chat.py",
+      "code": "E501",
+      "message": "Line too long (157 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/agent_chat.py",
+      "code": "E501",
+      "message": "Line too long (166 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/agent_reply.py",
+      "code": "E501",
+      "message": "Line too long (111 > 110)",
+      "count": 4
+    },
+    {
+      "path": "backend/agent_reply.py",
+      "code": "E501",
+      "message": "Line too long (112 > 110)",
+      "count": 4
+    },
+    {
+      "path": "backend/agent_reply.py",
+      "code": "E501",
+      "message": "Line too long (113 > 110)",
+      "count": 4
+    },
+    {
+      "path": "backend/agent_reply.py",
+      "code": "E501",
+      "message": "Line too long (114 > 110)",
+      "count": 2
+    },
+    {
+      "path": "backend/agent_reply.py",
+      "code": "E501",
+      "message": "Line too long (115 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/agent_reply.py",
+      "code": "E501",
+      "message": "Line too long (117 > 110)",
+      "count": 2
+    },
+    {
+      "path": "backend/agent_reply.py",
+      "code": "E501",
+      "message": "Line too long (118 > 110)",
+      "count": 2
+    },
+    {
+      "path": "backend/agent_reply.py",
+      "code": "E501",
+      "message": "Line too long (119 > 110)",
+      "count": 2
+    },
+    {
+      "path": "backend/agent_reply.py",
+      "code": "E501",
+      "message": "Line too long (120 > 110)",
+      "count": 2
+    },
+    {
+      "path": "backend/agent_reply.py",
+      "code": "E501",
+      "message": "Line too long (121 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/agent_reply.py",
+      "code": "E501",
+      "message": "Line too long (122 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/agent_reply.py",
+      "code": "E501",
+      "message": "Line too long (123 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/agent_reply.py",
+      "code": "E501",
+      "message": "Line too long (124 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/agent_reply.py",
+      "code": "E501",
+      "message": "Line too long (125 > 110)",
+      "count": 2
+    },
+    {
+      "path": "backend/agent_reply.py",
+      "code": "E501",
+      "message": "Line too long (126 > 110)",
+      "count": 2
+    },
+    {
+      "path": "backend/agent_reply.py",
+      "code": "E501",
+      "message": "Line too long (127 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/agent_reply.py",
+      "code": "E501",
+      "message": "Line too long (128 > 110)",
+      "count": 3
+    },
+    {
+      "path": "backend/agent_reply.py",
+      "code": "E501",
+      "message": "Line too long (134 > 110)",
+      "count": 3
+    },
+    {
+      "path": "backend/agent_reply.py",
+      "code": "E501",
+      "message": "Line too long (140 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/agent_reply.py",
+      "code": "E501",
+      "message": "Line too long (141 > 110)",
+      "count": 2
+    },
+    {
+      "path": "backend/agent_reply.py",
+      "code": "E501",
+      "message": "Line too long (142 > 110)",
+      "count": 2
+    },
+    {
+      "path": "backend/agent_reply.py",
+      "code": "E501",
+      "message": "Line too long (144 > 110)",
+      "count": 2
+    },
+    {
+      "path": "backend/agent_reply.py",
+      "code": "E501",
+      "message": "Line too long (145 > 110)",
+      "count": 2
+    },
+    {
+      "path": "backend/agent_reply.py",
+      "code": "E501",
+      "message": "Line too long (146 > 110)",
+      "count": 2
+    },
+    {
+      "path": "backend/agent_reply.py",
+      "code": "E501",
+      "message": "Line too long (149 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/agent_reply.py",
+      "code": "E501",
+      "message": "Line too long (150 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/agent_reply.py",
+      "code": "E501",
+      "message": "Line too long (155 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/agent_reply.py",
+      "code": "E501",
+      "message": "Line too long (160 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/agent_reply.py",
+      "code": "E501",
+      "message": "Line too long (161 > 110)",
+      "count": 2
+    },
+    {
+      "path": "backend/agent_reply.py",
+      "code": "E501",
+      "message": "Line too long (165 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/agent_reply.py",
+      "code": "E501",
+      "message": "Line too long (175 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/agent_reply.py",
+      "code": "E501",
+      "message": "Line too long (184 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/agent_reply.py",
+      "code": "E501",
+      "message": "Line too long (185 > 110)",
+      "count": 2
+    },
+    {
+      "path": "backend/agent_reply.py",
+      "code": "E501",
+      "message": "Line too long (214 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/agent_reply.py",
+      "code": "E501",
+      "message": "Line too long (247 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/agent_reply.py",
+      "code": "E501",
+      "message": "Line too long (254 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/agent_reply.py",
+      "code": "E501",
+      "message": "Line too long (263 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/agent_reply.py",
+      "code": "E501",
+      "message": "Line too long (301 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/agent_reply.py",
+      "code": "E501",
+      "message": "Line too long (303 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/agent_reply.py",
+      "code": "E501",
+      "message": "Line too long (326 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/agent_reply.py",
+      "code": "E501",
+      "message": "Line too long (370 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/agent_reply.py",
+      "code": "E501",
+      "message": "Line too long (439 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/agent_reply.py",
+      "code": "E501",
+      "message": "Line too long (493 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/agent_reply.py",
+      "code": "E501",
+      "message": "Line too long (510 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/agent_reply.py",
+      "code": "E501",
+      "message": "Line too long (599 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/agent_reply.py",
+      "code": "E501",
+      "message": "Line too long (627 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/agent_reply.py",
+      "code": "SIM105",
+      "message": "Use `contextlib.suppress(Exception)` instead of `try`-`except`-`pass`",
+      "count": 1
+    },
+    {
+      "path": "backend/ai_disclosure.py",
+      "code": "B904",
+      "message": "Within an `except` clause, raise exceptions with `raise ... from err` or `raise ... from None` to distinguish them from errors in exception handling",
+      "count": 2
+    },
+    {
+      "path": "backend/ai_disclosure.py",
+      "code": "SIM105",
+      "message": "Use `contextlib.suppress(Exception)` instead of `try`-`except`-`pass`",
+      "count": 1
+    },
+    {
+      "path": "backend/api_v1.py",
+      "code": "C408",
+      "message": "Unnecessary `dict()` call (rewrite as a literal)",
+      "count": 1
+    },
+    {
+      "path": "backend/app.py",
+      "code": "B008",
+      "message": "Do not perform function call `require_app_cap` in argument defaults; instead, perform the call within the function, or read the default from a module-level singleton variable",
+      "count": 21
+    },
+    {
+      "path": "backend/app.py",
+      "code": "B008",
+      "message": "Do not perform function call `require_app_runtime_cap` in argument defaults; instead, perform the call within the function, or read the default from a module-level singleton variable",
+      "count": 70
+    },
+    {
+      "path": "backend/app.py",
+      "code": "B008",
+      "message": "Do not perform function call `require_cr_cap` in argument defaults; instead, perform the call within the function, or read the default from a module-level singleton variable",
+      "count": 3
+    },
+    {
+      "path": "backend/app.py",
+      "code": "B904",
+      "message": "Within an `except` clause, raise exceptions with `raise ... from err` or `raise ... from None` to distinguish them from errors in exception handling",
+      "count": 21
+    },
+    {
+      "path": "backend/app.py",
+      "code": "C408",
+      "message": "Unnecessary `dict()` call (rewrite as a literal)",
+      "count": 1
+    },
+    {
+      "path": "backend/app.py",
+      "code": "E402",
+      "message": "Module level import not at top of file",
+      "count": 2
+    },
+    {
+      "path": "backend/app.py",
+      "code": "E501",
+      "message": "Line too long (111 > 110)",
+      "count": 8
+    },
+    {
+      "path": "backend/app.py",
+      "code": "E501",
+      "message": "Line too long (112 > 110)",
+      "count": 11
+    },
+    {
+      "path": "backend/app.py",
+      "code": "E501",
+      "message": "Line too long (113 > 110)",
+      "count": 9
+    },
+    {
+      "path": "backend/app.py",
+      "code": "E501",
+      "message": "Line too long (114 > 110)",
+      "count": 4
+    },
+    {
+      "path": "backend/app.py",
+      "code": "E501",
+      "message": "Line too long (115 > 110)",
+      "count": 2
+    },
+    {
+      "path": "backend/app.py",
+      "code": "E501",
+      "message": "Line too long (116 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/app.py",
+      "code": "E501",
+      "message": "Line too long (117 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/app.py",
+      "code": "E501",
+      "message": "Line too long (118 > 110)",
+      "count": 4
+    },
+    {
+      "path": "backend/app.py",
+      "code": "E501",
+      "message": "Line too long (119 > 110)",
+      "count": 2
+    },
+    {
+      "path": "backend/app.py",
+      "code": "E501",
+      "message": "Line too long (120 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/app.py",
+      "code": "E501",
+      "message": "Line too long (122 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/app.py",
+      "code": "E501",
+      "message": "Line too long (123 > 110)",
+      "count": 3
+    },
+    {
+      "path": "backend/app.py",
+      "code": "E501",
+      "message": "Line too long (124 > 110)",
+      "count": 2
+    },
+    {
+      "path": "backend/app.py",
+      "code": "E501",
+      "message": "Line too long (125 > 110)",
+      "count": 3
+    },
+    {
+      "path": "backend/app.py",
+      "code": "E501",
+      "message": "Line too long (126 > 110)",
+      "count": 3
+    },
+    {
+      "path": "backend/app.py",
+      "code": "E501",
+      "message": "Line too long (127 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/app.py",
+      "code": "E501",
+      "message": "Line too long (128 > 110)",
+      "count": 2
+    },
+    {
+      "path": "backend/app.py",
+      "code": "E501",
+      "message": "Line too long (129 > 110)",
+      "count": 2
+    },
+    {
+      "path": "backend/app.py",
+      "code": "E501",
+      "message": "Line too long (130 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/app.py",
+      "code": "E501",
+      "message": "Line too long (132 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/app.py",
+      "code": "E501",
+      "message": "Line too long (133 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/app.py",
+      "code": "E501",
+      "message": "Line too long (138 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/app.py",
+      "code": "E501",
+      "message": "Line too long (171 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/app.py",
+      "code": "E702",
+      "message": "Multiple statements on one line (semicolon)",
+      "count": 4
+    },
+    {
+      "path": "backend/app.py",
+      "code": "SIM105",
+      "message": "Use `contextlib.suppress(Exception)` instead of `try`-`except`-`pass`",
+      "count": 4
+    },
+    {
+      "path": "backend/app.py",
+      "code": "SIM105",
+      "message": "Use `contextlib.suppress(OSError)` instead of `try`-`except`-`pass`",
+      "count": 1
+    },
+    {
+      "path": "backend/assemble.py",
+      "code": "E501",
+      "message": "Line too long (111 > 110)",
+      "count": 2
+    },
+    {
+      "path": "backend/assemble.py",
+      "code": "E501",
+      "message": "Line too long (112 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/assemble.py",
+      "code": "E501",
+      "message": "Line too long (116 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/assemble.py",
+      "code": "E741",
+      "message": "Ambiguous variable name: `l`",
+      "count": 1
+    },
+    {
+      "path": "backend/backfill.py",
+      "code": "E501",
+      "message": "Line too long (114 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/backfill.py",
+      "code": "E501",
+      "message": "Line too long (118 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/backfill.py",
+      "code": "SIM105",
+      "message": "Use `contextlib.suppress(Exception)` instead of `try`-`except`-`pass`",
+      "count": 1
+    },
+    {
+      "path": "backend/behaviour.py",
+      "code": "E501",
+      "message": "Line too long (140 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/behaviour.py",
+      "code": "SIM118",
+      "message": "Use `key in dict` instead of `key in dict.keys()`",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/accept.py",
+      "code": "SIM102",
+      "message": "Use a single `if` statement instead of nested `if` statements",
+      "count": 2
+    },
+    {
+      "path": "backend/brain/auth.py",
+      "code": "B904",
+      "message": "Within an `except` clause, raise exceptions with `raise ... from err` or `raise ... from None` to distinguish them from errors in exception handling",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/auth.py",
+      "code": "E501",
+      "message": "Line too long (113 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/auth.py",
+      "code": "E501",
+      "message": "Line too long (115 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/auth.py",
+      "code": "E501",
+      "message": "Line too long (119 > 110)",
+      "count": 2
+    },
+    {
+      "path": "backend/brain/auth.py",
+      "code": "E501",
+      "message": "Line too long (127 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/auth.py",
+      "code": "SIM103",
+      "message": "Return the condition `(amd.get(\"provider\") or \"\") not in (\"\", \"email\")` directly",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/baskets.py",
+      "code": "E501",
+      "message": "Line too long (113 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/baskets.py",
+      "code": "E501",
+      "message": "Line too long (114 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/baskets.py",
+      "code": "E501",
+      "message": "Line too long (125 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/baskets.py",
+      "code": "E741",
+      "message": "Ambiguous variable name: `l`",
+      "count": 2
+    },
+    {
+      "path": "backend/brain/billing.py",
+      "code": "F841",
+      "message": "Local variable `invoiced` is assigned to but never used",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/calbook.py",
+      "code": "C401",
+      "message": "Unnecessary generator (rewrite as a set comprehension)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/choco.py",
+      "code": "E741",
+      "message": "Ambiguous variable name: `l`",
+      "count": 3
+    },
+    {
+      "path": "backend/brain/context.py",
+      "code": "E501",
+      "message": "Line too long (111 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/context.py",
+      "code": "E501",
+      "message": "Line too long (129 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/decision.py",
+      "code": "E501",
+      "message": "Line too long (114 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/drip.py",
+      "code": "E501",
+      "message": "Line too long (111 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/drip.py",
+      "code": "E501",
+      "message": "Line too long (115 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/drip.py",
+      "code": "E501",
+      "message": "Line too long (121 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/drip.py",
+      "code": "SIM117",
+      "message": "Use a single `with` statement with multiple contexts instead of nested `with` statements",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/events.py",
+      "code": "E501",
+      "message": "Line too long (119 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/events.py",
+      "code": "E501",
+      "message": "Line too long (121 > 110)",
+      "count": 2
+    },
+    {
+      "path": "backend/brain/events.py",
+      "code": "SIM105",
+      "message": "Use `contextlib.suppress(Exception)` instead of `try`-`except`-`pass`",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/events.py",
+      "code": "SIM117",
+      "message": "Use a single `with` statement with multiple contexts instead of nested `with` statements",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/golive.py",
+      "code": "B905",
+      "message": "`zip()` without an explicit `strict=` parameter",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/golive.py",
+      "code": "E501",
+      "message": "Line too long (111 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/golive.py",
+      "code": "E501",
+      "message": "Line too long (113 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/golive.py",
+      "code": "E702",
+      "message": "Multiple statements on one line (semicolon)",
+      "count": 3
+    },
+    {
+      "path": "backend/brain/golive.py",
+      "code": "E741",
+      "message": "Ambiguous variable name: `l`",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/lead_notify.py",
+      "code": "E501",
+      "message": "Line too long (116 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/learn.py",
+      "code": "E501",
+      "message": "Line too long (116 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/livecall.py",
+      "code": "E741",
+      "message": "Ambiguous variable name: `l`",
+      "count": 2
+    },
+    {
+      "path": "backend/brain/matcher.py",
+      "code": "B905",
+      "message": "`zip()` without an explicit `strict=` parameter",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/matcher.py",
+      "code": "E501",
+      "message": "Line too long (122 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/medusa_drain.py",
+      "code": "E501",
+      "message": "Line too long (113 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/notify.py",
+      "code": "E501",
+      "message": "Line too long (112 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/notify.py",
+      "code": "E501",
+      "message": "Line too long (126 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/onboard_q.py",
+      "code": "B904",
+      "message": "Within an `except` clause, raise exceptions with `raise ... from err` or `raise ... from None` to distinguish them from errors in exception handling",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/onboarding.py",
+      "code": "E501",
+      "message": "Line too long (111 > 110)",
+      "count": 2
+    },
+    {
+      "path": "backend/brain/onboarding.py",
+      "code": "E501",
+      "message": "Line too long (112 > 110)",
+      "count": 3
+    },
+    {
+      "path": "backend/brain/onboarding.py",
+      "code": "E501",
+      "message": "Line too long (114 > 110)",
+      "count": 2
+    },
+    {
+      "path": "backend/brain/onboarding.py",
+      "code": "E501",
+      "message": "Line too long (115 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/onboarding.py",
+      "code": "E501",
+      "message": "Line too long (118 > 110)",
+      "count": 2
+    },
+    {
+      "path": "backend/brain/onboarding.py",
+      "code": "E501",
+      "message": "Line too long (128 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/onboarding.py",
+      "code": "E501",
+      "message": "Line too long (131 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/onboarding.py",
+      "code": "E501",
+      "message": "Line too long (141 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/onboarding.py",
+      "code": "E501",
+      "message": "Line too long (148 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/onboarding.py",
+      "code": "E501",
+      "message": "Line too long (172 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/onboarding.py",
+      "code": "SIM105",
+      "message": "Use `contextlib.suppress(TypeError, ValueError)` instead of `try`-`except`-`pass`",
+      "count": 2
+    },
+    {
+      "path": "backend/brain/onboarding_ext.py",
+      "code": "E501",
+      "message": "Line too long (111 > 110)",
+      "count": 3
+    },
+    {
+      "path": "backend/brain/onboarding_ext.py",
+      "code": "E501",
+      "message": "Line too long (113 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/onboarding_ext.py",
+      "code": "E501",
+      "message": "Line too long (118 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/onboarding_ext.py",
+      "code": "E501",
+      "message": "Line too long (119 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/onboarding_ext.py",
+      "code": "E501",
+      "message": "Line too long (120 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/onboarding_ext.py",
+      "code": "E501",
+      "message": "Line too long (121 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/onboarding_ext.py",
+      "code": "E501",
+      "message": "Line too long (122 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/onboarding_ext.py",
+      "code": "E501",
+      "message": "Line too long (123 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/onboarding_ext.py",
+      "code": "E501",
+      "message": "Line too long (127 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/onboarding_ext.py",
+      "code": "E501",
+      "message": "Line too long (129 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/order_card.py",
+      "code": "B905",
+      "message": "`zip()` without an explicit `strict=` parameter",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/otp.py",
+      "code": "E501",
+      "message": "Line too long (118 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/pedidos_billing.py",
+      "code": "E501",
+      "message": "Line too long (115 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/pedidos_usage_report.py",
+      "code": "B023",
+      "message": "Function definition does not bind loop variable `counted_at`",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/pedidos_usage_report.py",
+      "code": "B023",
+      "message": "Function definition does not bind loop variable `order_id`",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/pipeline.py",
+      "code": "B905",
+      "message": "`zip()` without an explicit `strict=` parameter",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/pipeline.py",
+      "code": "E501",
+      "message": "Line too long (111 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/pipeline.py",
+      "code": "E501",
+      "message": "Line too long (113 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/pipeline.py",
+      "code": "E501",
+      "message": "Line too long (117 > 110)",
+      "count": 2
+    },
+    {
+      "path": "backend/brain/pipeline.py",
+      "code": "E501",
+      "message": "Line too long (121 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/pipeline.py",
+      "code": "E741",
+      "message": "Ambiguous variable name: `l`",
+      "count": 4
+    },
+    {
+      "path": "backend/brain/pipeline.py",
+      "code": "F821",
+      "message": "Undefined name `actions`",
+      "count": 2
+    },
+    {
+      "path": "backend/brain/pricing_quote.py",
+      "code": "E741",
+      "message": "Ambiguous variable name: `l`",
+      "count": 2
+    },
+    {
+      "path": "backend/brain/profile.py",
+      "code": "E501",
+      "message": "Line too long (114 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/profile.py",
+      "code": "E501",
+      "message": "Line too long (116 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/profile.py",
+      "code": "E501",
+      "message": "Line too long (117 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/profile.py",
+      "code": "E501",
+      "message": "Line too long (122 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/profile.py",
+      "code": "E702",
+      "message": "Multiple statements on one line (semicolon)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/prompts.py",
+      "code": "E501",
+      "message": "Line too long (123 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/prompts.py",
+      "code": "E501",
+      "message": "Line too long (126 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/prompts.py",
+      "code": "E501",
+      "message": "Line too long (130 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/prompts.py",
+      "code": "E501",
+      "message": "Line too long (139 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/prompts.py",
+      "code": "E501",
+      "message": "Line too long (140 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/prompts.py",
+      "code": "E501",
+      "message": "Line too long (150 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/prompts.py",
+      "code": "E501",
+      "message": "Line too long (160 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/prompts.py",
+      "code": "E501",
+      "message": "Line too long (165 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/prompts.py",
+      "code": "E501",
+      "message": "Line too long (201 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/queue.py",
+      "code": "E501",
+      "message": "Line too long (129 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/range.py",
+      "code": "F841",
+      "message": "Local variable `depot` is assigned to but never used",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/range.py",
+      "code": "SIM110",
+      "message": "Use `return any(isinstance(z, dict) and (z.get(\"ring\") or []) for z in zones or [])` instead of `for` loop",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/route.py",
+      "code": "E501",
+      "message": "Line too long (112 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/seed.py",
+      "code": "B905",
+      "message": "`zip()` without an explicit `strict=` parameter",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/seed.py",
+      "code": "E501",
+      "message": "Line too long (111 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/seed.py",
+      "code": "E501",
+      "message": "Line too long (113 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/seed.py",
+      "code": "E501",
+      "message": "Line too long (114 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/seed.py",
+      "code": "E741",
+      "message": "Ambiguous variable name: `l`",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/seed.py",
+      "code": "SIM105",
+      "message": "Use `contextlib.suppress(Exception)` instead of `try`-`except`-`pass`",
+      "count": 2
+    },
+    {
+      "path": "backend/brain/setupfee.py",
+      "code": "B023",
+      "message": "Function definition does not bind loop variable `sid`",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/setupfee.py",
+      "code": "E501",
+      "message": "Line too long (117 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/skuparse.py",
+      "code": "B023",
+      "message": "Function definition does not bind loop variable `r`",
+      "count": 4
+    },
+    {
+      "path": "backend/brain/skuparse.py",
+      "code": "C416",
+      "message": "Unnecessary list comprehension (rewrite using `list()`)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/skuparse.py",
+      "code": "E501",
+      "message": "Line too long (112 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/skuparse.py",
+      "code": "E501",
+      "message": "Line too long (115 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/skuparse.py",
+      "code": "E501",
+      "message": "Line too long (123 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/skuparse.py",
+      "code": "E501",
+      "message": "Line too long (130 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/skuparse.py",
+      "code": "E501",
+      "message": "Line too long (131 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/skuparse.py",
+      "code": "SIM105",
+      "message": "Use `contextlib.suppress(Exception)` instead of `try`-`except`-`pass`",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/skuparse.py",
+      "code": "SIM108",
+      "message": "Use ternary operator `s = s.replace(\".\", \"\").replace(\",\", \".\") if s.rfind(\",\") > s.rfind(\".\") else s.replace(\",\", \"\")` instead of `if`-`else`-block",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/stock.py",
+      "code": "B904",
+      "message": "Within an `except` clause, raise exceptions with `raise ... from err` or `raise ... from None` to distinguish them from errors in exception handling",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/stock.py",
+      "code": "B905",
+      "message": "`zip()` without an explicit `strict=` parameter",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/stock.py",
+      "code": "E501",
+      "message": "Line too long (112 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/stock.py",
+      "code": "E501",
+      "message": "Line too long (113 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/stock.py",
+      "code": "E501",
+      "message": "Line too long (114 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/stock.py",
+      "code": "E501",
+      "message": "Line too long (118 > 110)",
+      "count": 2
+    },
+    {
+      "path": "backend/brain/stock.py",
+      "code": "E501",
+      "message": "Line too long (131 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/stock.py",
+      "code": "E501",
+      "message": "Line too long (134 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/stock.py",
+      "code": "E501",
+      "message": "Line too long (142 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/stock.py",
+      "code": "E501",
+      "message": "Line too long (144 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/stock.py",
+      "code": "E501",
+      "message": "Line too long (160 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/stripe_subs.py",
+      "code": "E501",
+      "message": "Line too long (113 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/synthesiser.py",
+      "code": "E501",
+      "message": "Line too long (122 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/tasks.py",
+      "code": "E501",
+      "message": "Line too long (112 > 110)",
+      "count": 2
+    },
+    {
+      "path": "backend/brain/tasks.py",
+      "code": "E501",
+      "message": "Line too long (114 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/tasks.py",
+      "code": "E501",
+      "message": "Line too long (115 > 110)",
+      "count": 3
+    },
+    {
+      "path": "backend/brain/tasks.py",
+      "code": "E501",
+      "message": "Line too long (116 > 110)",
+      "count": 2
+    },
+    {
+      "path": "backend/brain/tasks.py",
+      "code": "E501",
+      "message": "Line too long (119 > 110)",
+      "count": 3
+    },
+    {
+      "path": "backend/brain/tasks.py",
+      "code": "E702",
+      "message": "Multiple statements on one line (semicolon)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/tasks.py",
+      "code": "SIM117",
+      "message": "Use a single `with` statement with multiple contexts instead of nested `with` statements",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/teams.py",
+      "code": "E501",
+      "message": "Line too long (115 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/teams.py",
+      "code": "E501",
+      "message": "Line too long (118 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/tenants.py",
+      "code": "E501",
+      "message": "Line too long (111 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/tenants.py",
+      "code": "E501",
+      "message": "Line too long (114 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/tenants.py",
+      "code": "E501",
+      "message": "Line too long (120 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/tenants.py",
+      "code": "E501",
+      "message": "Line too long (121 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/tenants.py",
+      "code": "E501",
+      "message": "Line too long (122 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/theme.py",
+      "code": "E501",
+      "message": "Line too long (112 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/theme.py",
+      "code": "E501",
+      "message": "Line too long (113 > 110)",
+      "count": 2
+    },
+    {
+      "path": "backend/brain/theme.py",
+      "code": "E501",
+      "message": "Line too long (117 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/theme.py",
+      "code": "E501",
+      "message": "Line too long (120 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/theme.py",
+      "code": "E501",
+      "message": "Line too long (172 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/understand.py",
+      "code": "E501",
+      "message": "Line too long (111 > 110)",
+      "count": 2
+    },
+    {
+      "path": "backend/brain/understand.py",
+      "code": "E501",
+      "message": "Line too long (114 > 110)",
+      "count": 2
+    },
+    {
+      "path": "backend/brain/understand.py",
+      "code": "E501",
+      "message": "Line too long (118 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/understand.py",
+      "code": "E501",
+      "message": "Line too long (124 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/understand.py",
+      "code": "E501",
+      "message": "Line too long (143 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/understand.py",
+      "code": "E501",
+      "message": "Line too long (144 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/understand.py",
+      "code": "E501",
+      "message": "Line too long (147 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/understand.py",
+      "code": "E501",
+      "message": "Line too long (162 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/vocab.py",
+      "code": "E501",
+      "message": "Line too long (111 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/vocab.py",
+      "code": "SIM103",
+      "message": "Return the condition `not (len(toks) == 1 and toks[0] in _STOP_SOLO)` directly",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/vocab.py",
+      "code": "SIM117",
+      "message": "Use a single `with` statement with multiple contexts instead of nested `with` statements",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/wa_watch.py",
+      "code": "E501",
+      "message": "Line too long (116 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/waitlist.py",
+      "code": "E501",
+      "message": "Line too long (112 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/cascade.py",
+      "code": "E501",
+      "message": "Line too long (113 > 110)",
+      "count": 2
+    },
+    {
+      "path": "backend/cascade.py",
+      "code": "E501",
+      "message": "Line too long (115 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/claim.py",
+      "code": "B008",
+      "message": "Do not perform function call `sup_api.require_cap` in argument defaults; instead, perform the call within the function, or read the default from a module-level singleton variable",
+      "count": 2
+    },
+    {
+      "path": "backend/claim.py",
+      "code": "B904",
+      "message": "Within an `except` clause, raise exceptions with `raise ... from err` or `raise ... from None` to distinguish them from errors in exception handling",
+      "count": 2
+    },
+    {
+      "path": "backend/confidence.py",
+      "code": "E501",
+      "message": "Line too long (116 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/confidence.py",
+      "code": "E501",
+      "message": "Line too long (127 > 110)",
+      "count": 2
+    },
+    {
+      "path": "backend/config.py",
+      "code": "E501",
+      "message": "Line too long (114 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/config.py",
+      "code": "E501",
+      "message": "Line too long (120 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/config.py",
+      "code": "E501",
+      "message": "Line too long (127 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/config.py",
+      "code": "E501",
+      "message": "Line too long (136 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/config.py",
+      "code": "E501",
+      "message": "Line too long (139 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/control_room.py",
+      "code": "C404",
+      "message": "Unnecessary list comprehension (rewrite as a dict comprehension)",
+      "count": 1
+    },
+    {
+      "path": "backend/control_room.py",
+      "code": "E501",
+      "message": "Line too long (111 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/control_room.py",
+      "code": "E501",
+      "message": "Line too long (112 > 110)",
+      "count": 3
+    },
+    {
+      "path": "backend/control_room.py",
+      "code": "E501",
+      "message": "Line too long (115 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/control_room.py",
+      "code": "E501",
+      "message": "Line too long (117 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/control_room.py",
+      "code": "E501",
+      "message": "Line too long (119 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/control_room.py",
+      "code": "E501",
+      "message": "Line too long (120 > 110)",
+      "count": 2
+    },
+    {
+      "path": "backend/control_room.py",
+      "code": "E501",
+      "message": "Line too long (122 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/control_room.py",
+      "code": "E501",
+      "message": "Line too long (124 > 110)",
+      "count": 2
+    },
+    {
+      "path": "backend/control_room.py",
+      "code": "E501",
+      "message": "Line too long (127 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/control_room.py",
+      "code": "E501",
+      "message": "Line too long (130 > 110)",
+      "count": 2
+    },
+    {
+      "path": "backend/control_room.py",
+      "code": "E501",
+      "message": "Line too long (131 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/control_room.py",
+      "code": "E501",
+      "message": "Line too long (132 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/control_room.py",
+      "code": "E501",
+      "message": "Line too long (133 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/control_room.py",
+      "code": "E501",
+      "message": "Line too long (134 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/control_room.py",
+      "code": "E501",
+      "message": "Line too long (135 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/control_room.py",
+      "code": "E501",
+      "message": "Line too long (136 > 110)",
+      "count": 2
+    },
+    {
+      "path": "backend/control_room.py",
+      "code": "E501",
+      "message": "Line too long (137 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/control_room.py",
+      "code": "E501",
+      "message": "Line too long (139 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/control_room.py",
+      "code": "E501",
+      "message": "Line too long (143 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/control_room.py",
+      "code": "E501",
+      "message": "Line too long (144 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/control_room.py",
+      "code": "E501",
+      "message": "Line too long (154 > 110)",
+      "count": 2
+    },
+    {
+      "path": "backend/control_room.py",
+      "code": "E501",
+      "message": "Line too long (155 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/control_room.py",
+      "code": "E501",
+      "message": "Line too long (157 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/control_room.py",
+      "code": "E501",
+      "message": "Line too long (158 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/control_room.py",
+      "code": "E501",
+      "message": "Line too long (161 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/control_room.py",
+      "code": "E501",
+      "message": "Line too long (181 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/control_room.py",
+      "code": "E501",
+      "message": "Line too long (186 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/control_room.py",
+      "code": "E501",
+      "message": "Line too long (194 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/control_room.py",
+      "code": "E501",
+      "message": "Line too long (214 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/control_room.py",
+      "code": "E501",
+      "message": "Line too long (215 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/control_room.py",
+      "code": "E701",
+      "message": "Multiple statements on one line (colon)",
+      "count": 4
+    },
+    {
+      "path": "backend/control_room.py",
+      "code": "E741",
+      "message": "Ambiguous variable name: `l`",
+      "count": 1
+    },
+    {
+      "path": "backend/control_room.py",
+      "code": "SIM401",
+      "message": "Use `r.get(\"lane\", None)` instead of an `if` block",
+      "count": 1
+    },
+    {
+      "path": "backend/cr_control.py",
+      "code": "E501",
+      "message": "Line too long (111 > 110)",
+      "count": 3
+    },
+    {
+      "path": "backend/cr_control.py",
+      "code": "E501",
+      "message": "Line too long (112 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/cr_control.py",
+      "code": "E501",
+      "message": "Line too long (113 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/cr_control.py",
+      "code": "E501",
+      "message": "Line too long (115 > 110)",
+      "count": 2
+    },
+    {
+      "path": "backend/cr_control.py",
+      "code": "E501",
+      "message": "Line too long (117 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/cr_control.py",
+      "code": "E501",
+      "message": "Line too long (121 > 110)",
+      "count": 3
+    },
+    {
+      "path": "backend/cr_control.py",
+      "code": "E501",
+      "message": "Line too long (124 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/cr_control.py",
+      "code": "E501",
+      "message": "Line too long (125 > 110)",
+      "count": 2
+    },
+    {
+      "path": "backend/cr_control.py",
+      "code": "E501",
+      "message": "Line too long (141 > 110)",
+      "count": 2
+    },
+    {
+      "path": "backend/cr_control.py",
+      "code": "E501",
+      "message": "Line too long (142 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/cr_control.py",
+      "code": "E501",
+      "message": "Line too long (144 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/cr_control.py",
+      "code": "E501",
+      "message": "Line too long (147 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/cr_control.py",
+      "code": "E702",
+      "message": "Multiple statements on one line (semicolon)",
+      "count": 1
+    },
+    {
+      "path": "backend/cr_control.py",
+      "code": "F841",
+      "message": "Local variable `audit_id` is assigned to but never used",
+      "count": 1
+    },
+    {
+      "path": "backend/cr_session.py",
+      "code": "E702",
+      "message": "Multiple statements on one line (semicolon)",
+      "count": 2
+    },
+    {
+      "path": "backend/db.py",
+      "code": "E501",
+      "message": "Line too long (111 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/db.py",
+      "code": "E501",
+      "message": "Line too long (118 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/db.py",
+      "code": "SIM118",
+      "message": "Use `key in dict` instead of `key in dict.keys()`",
+      "count": 1
+    },
+    {
+      "path": "backend/demo_auth.py",
+      "code": "B008",
+      "message": "Do not perform function call `sup_api.require_cap` in argument defaults; instead, perform the call within the function, or read the default from a module-level singleton variable",
+      "count": 2
+    },
+    {
+      "path": "backend/demo_auth.py",
+      "code": "E501",
+      "message": "Line too long (116 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/demo_auth.py",
+      "code": "SIM102",
+      "message": "Use a single `if` statement instead of nested `if` statements",
+      "count": 1
+    },
+    {
+      "path": "backend/demo_call.py",
+      "code": "B904",
+      "message": "Within an `except` clause, raise exceptions with `raise ... from err` or `raise ... from None` to distinguish them from errors in exception handling",
+      "count": 2
+    },
+    {
+      "path": "backend/demo_call.py",
+      "code": "E501",
+      "message": "Line too long (111 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/demo_call.py",
+      "code": "E501",
+      "message": "Line too long (112 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/demo_call.py",
+      "code": "E501",
+      "message": "Line too long (113 > 110)",
+      "count": 2
+    },
+    {
+      "path": "backend/demo_call.py",
+      "code": "E501",
+      "message": "Line too long (114 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/demo_call.py",
+      "code": "E501",
+      "message": "Line too long (117 > 110)",
+      "count": 2
+    },
+    {
+      "path": "backend/demo_call.py",
+      "code": "E501",
+      "message": "Line too long (119 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/demo_call.py",
+      "code": "E501",
+      "message": "Line too long (120 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/demo_call.py",
+      "code": "E501",
+      "message": "Line too long (125 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/demo_call.py",
+      "code": "E501",
+      "message": "Line too long (126 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/demo_call.py",
+      "code": "E501",
+      "message": "Line too long (127 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/demo_call.py",
+      "code": "E501",
+      "message": "Line too long (162 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/demo_call.py",
+      "code": "SIM102",
+      "message": "Use a single `if` statement instead of nested `if` statements",
+      "count": 1
+    },
+    {
+      "path": "backend/demo_call.py",
+      "code": "SIM105",
+      "message": "Use `contextlib.suppress(Exception)` instead of `try`-`except`-`pass`",
+      "count": 1
+    },
+    {
+      "path": "backend/demo_call.py",
+      "code": "SIM105",
+      "message": "Use `contextlib.suppress(ValueError)` instead of `try`-`except`-`pass`",
+      "count": 1
+    },
+    {
+      "path": "backend/demo_flow.py",
+      "code": "E501",
+      "message": "Line too long (112 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/demo_flow.py",
+      "code": "E741",
+      "message": "Ambiguous variable name: `l`",
+      "count": 9
+    },
+    {
+      "path": "backend/demo_flow.py",
+      "code": "SIM105",
+      "message": "Use `contextlib.suppress(TypeError, ValueError)` instead of `try`-`except`-`pass`",
+      "count": 1
+    },
+    {
+      "path": "backend/directory.py",
+      "code": "SIM108",
+      "message": "Use ternary operator `label = gmap.get(str(r[\"id\"])) or (r[\"family\"] or \"otros\") if gmap else r[\"family\"] or \"otros\"` instead of `if`-`else`-block",
+      "count": 1
+    },
+    {
+      "path": "backend/dispatch_sched.py",
+      "code": "E741",
+      "message": "Ambiguous variable name: `l`",
+      "count": 1
+    },
+    {
+      "path": "backend/duties.py",
+      "code": "E501",
+      "message": "Line too long (113 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/duties.py",
+      "code": "E501",
+      "message": "Line too long (115 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/duties.py",
+      "code": "SIM105",
+      "message": "Use `contextlib.suppress(Exception)` instead of `try`-`except`-`pass`",
+      "count": 1
+    },
+    {
+      "path": "backend/el_convai.py",
+      "code": "E501",
+      "message": "Line too long (112 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/el_convai.py",
+      "code": "E501",
+      "message": "Line too long (125 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/el_convai.py",
+      "code": "E501",
+      "message": "Line too long (131 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/el_convai.py",
+      "code": "SIM105",
+      "message": "Use `contextlib.suppress(Exception)` instead of `try`-`except`-`pass`",
+      "count": 2
+    },
+    {
+      "path": "backend/el_convai.py",
+      "code": "SIM115",
+      "message": "Use a context manager for opening files",
+      "count": 1
+    },
+    {
+      "path": "backend/eleven.py",
+      "code": "SIM105",
+      "message": "Use `contextlib.suppress(Exception)` instead of `try`-`except`-`pass`",
+      "count": 8
+    },
+    {
+      "path": "backend/gate.py",
+      "code": "E501",
+      "message": "Line too long (113 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/gate.py",
+      "code": "SIM105",
+      "message": "Use `contextlib.suppress(Exception)` instead of `try`-`except`-`pass`",
+      "count": 1
+    },
+    {
+      "path": "backend/historial.py",
+      "code": "C405",
+      "message": "Unnecessary list literal (rewrite as a set literal)",
+      "count": 1
+    },
+    {
+      "path": "backend/historial.py",
+      "code": "E501",
+      "message": "Line too long (821 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/historial.py",
+      "code": "E741",
+      "message": "Ambiguous variable name: `l`",
+      "count": 1
+    },
+    {
+      "path": "backend/install.py",
+      "code": "E501",
+      "message": "Line too long (126 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/intake_api.py",
+      "code": "B904",
+      "message": "Within an `except` clause, raise exceptions with `raise ... from err` or `raise ... from None` to distinguish them from errors in exception handling",
+      "count": 6
+    },
+    {
+      "path": "backend/join.py",
+      "code": "B904",
+      "message": "Within an `except` clause, raise exceptions with `raise ... from err` or `raise ... from None` to distinguish them from errors in exception handling",
+      "count": 1
+    },
+    {
+      "path": "backend/join.py",
+      "code": "E501",
+      "message": "Line too long (112 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/join.py",
+      "code": "SIM103",
+      "message": "Return the condition `not (not t or not re.fullmatch(r\"\\+?\\d{7,20}\", t))` directly",
+      "count": 1
+    },
+    {
+      "path": "backend/join.py",
+      "code": "SIM105",
+      "message": "Use `contextlib.suppress(OSError)` instead of `try`-`except`-`pass`",
+      "count": 1
+    },
+    {
+      "path": "backend/learn.py",
+      "code": "E501",
+      "message": "Line too long (112 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/learn.py",
+      "code": "E501",
+      "message": "Line too long (135 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/lifecycle.py",
+      "code": "E402",
+      "message": "Module level import not at top of file",
+      "count": 2
+    },
+    {
+      "path": "backend/lifecycle.py",
+      "code": "E501",
+      "message": "Line too long (114 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/lifecycle.py",
+      "code": "E501",
+      "message": "Line too long (115 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/lifecycle.py",
+      "code": "E501",
+      "message": "Line too long (120 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/lifecycle.py",
+      "code": "E501",
+      "message": "Line too long (130 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/memory.py",
+      "code": "E501",
+      "message": "Line too long (113 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/memory.py",
+      "code": "F841",
+      "message": "Local variable `lines` is assigned to but never used",
+      "count": 1
+    },
+    {
+      "path": "backend/narrate.py",
+      "code": "E501",
+      "message": "Line too long (122 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/narrate.py",
+      "code": "E501",
+      "message": "Line too long (144 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/narrate.py",
+      "code": "SIM105",
+      "message": "Use `contextlib.suppress(Exception)` instead of `try`-`except`-`pass`",
+      "count": 1
+    },
+    {
+      "path": "backend/narrate.py",
+      "code": "SIM222",
+      "message": "Use `True` instead of `... or True`",
+      "count": 1
+    },
+    {
+      "path": "backend/order_receipt.py",
+      "code": "SIM105",
+      "message": "Use `contextlib.suppress(Exception)` instead of `try`-`except`-`pass`",
+      "count": 1
+    },
+    {
+      "path": "backend/orders.py",
+      "code": "E501",
+      "message": "Line too long (111 > 110)",
+      "count": 2
+    },
+    {
+      "path": "backend/orders.py",
+      "code": "E501",
+      "message": "Line too long (112 > 110)",
+      "count": 3
+    },
+    {
+      "path": "backend/orders.py",
+      "code": "E501",
+      "message": "Line too long (127 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/orders.py",
+      "code": "E501",
+      "message": "Line too long (128 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/orders.py",
+      "code": "E501",
+      "message": "Line too long (129 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/orders.py",
+      "code": "E501",
+      "message": "Line too long (132 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/orders.py",
+      "code": "E501",
+      "message": "Line too long (133 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/orders.py",
+      "code": "E501",
+      "message": "Line too long (140 > 110)",
+      "count": 2
+    },
+    {
+      "path": "backend/orders.py",
+      "code": "E501",
+      "message": "Line too long (144 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/orders.py",
+      "code": "E501",
+      "message": "Line too long (148 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/orders.py",
+      "code": "E501",
+      "message": "Line too long (231 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/orders.py",
+      "code": "E741",
+      "message": "Ambiguous variable name: `l`",
+      "count": 3
+    },
+    {
+      "path": "backend/orders.py",
+      "code": "SIM105",
+      "message": "Use `contextlib.suppress(TypeError, ValueError)` instead of `try`-`except`-`pass`",
+      "count": 1
+    },
+    {
+      "path": "backend/orders.py",
+      "code": "SIM113",
+      "message": "Use `enumerate()` for index variable `n` in `for` loop",
+      "count": 1
+    },
+    {
+      "path": "backend/orders_tool.py",
+      "code": "E501",
+      "message": "Line too long (111 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/orders_tool.py",
+      "code": "E501",
+      "message": "Line too long (122 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/orders_tool.py",
+      "code": "E501",
+      "message": "Line too long (126 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/orders_tool.py",
+      "code": "E501",
+      "message": "Line too long (137 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/portal.py",
+      "code": "E501",
+      "message": "Line too long (112 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/postcall.py",
+      "code": "SIM105",
+      "message": "Use `contextlib.suppress(Exception)` instead of `try`-`except`-`pass`",
+      "count": 2
+    },
+    {
+      "path": "backend/projector.py",
+      "code": "E501",
+      "message": "Line too long (111 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/projector.py",
+      "code": "SIM102",
+      "message": "Use a single `if` statement instead of nested `if` statements",
+      "count": 1
+    },
+    {
+      "path": "backend/provisioning.py",
+      "code": "E501",
+      "message": "Line too long (114 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/reach.py",
+      "code": "E501",
+      "message": "Line too long (112 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/reach.py",
+      "code": "E501",
+      "message": "Line too long (114 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/reach.py",
+      "code": "E501",
+      "message": "Line too long (115 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/reach.py",
+      "code": "E501",
+      "message": "Line too long (118 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/reach.py",
+      "code": "E501",
+      "message": "Line too long (127 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/reparto_api.py",
+      "code": "B904",
+      "message": "Within an `except` clause, raise exceptions with `raise ... from err` or `raise ... from None` to distinguish them from errors in exception handling",
+      "count": 14
+    },
+    {
+      "path": "backend/reparto_api.py",
+      "code": "E501",
+      "message": "Line too long (111 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/reparto_api.py",
+      "code": "E501",
+      "message": "Line too long (114 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/review.py",
+      "code": "SIM105",
+      "message": "Use `contextlib.suppress(Exception)` instead of `try`-`except`-`pass`",
+      "count": 3
+    },
+    {
+      "path": "backend/review.py",
+      "code": "SIM118",
+      "message": "Use `key in dict` instead of `key in dict.keys()`",
+      "count": 1
+    },
+    {
+      "path": "backend/rocoto_processes.py",
+      "code": "E402",
+      "message": "Module level import not at top of file",
+      "count": 1
+    },
+    {
+      "path": "backend/rocoto_processes.py",
+      "code": "E501",
+      "message": "Line too long (114 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/rocoto_processes.py",
+      "code": "E501",
+      "message": "Line too long (115 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/rocoto_processes.py",
+      "code": "E741",
+      "message": "Ambiguous variable name: `l`",
+      "count": 1
+    },
+    {
+      "path": "backend/runtime.py",
+      "code": "E501",
+      "message": "Line too long (111 > 110)",
+      "count": 3
+    },
+    {
+      "path": "backend/runtime.py",
+      "code": "E501",
+      "message": "Line too long (112 > 110)",
+      "count": 3
+    },
+    {
+      "path": "backend/runtime.py",
+      "code": "E501",
+      "message": "Line too long (113 > 110)",
+      "count": 3
+    },
+    {
+      "path": "backend/runtime.py",
+      "code": "E501",
+      "message": "Line too long (114 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/runtime.py",
+      "code": "E501",
+      "message": "Line too long (115 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/runtime.py",
+      "code": "E501",
+      "message": "Line too long (116 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/runtime.py",
+      "code": "E501",
+      "message": "Line too long (117 > 110)",
+      "count": 2
+    },
+    {
+      "path": "backend/runtime.py",
+      "code": "E501",
+      "message": "Line too long (118 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/runtime.py",
+      "code": "E501",
+      "message": "Line too long (120 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/runtime.py",
+      "code": "E501",
+      "message": "Line too long (121 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/runtime.py",
+      "code": "E501",
+      "message": "Line too long (153 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/runtime.py",
+      "code": "SIM105",
+      "message": "Use `contextlib.suppress(Exception)` instead of `try`-`except`-`pass`",
+      "count": 1
+    },
+    {
+      "path": "backend/scripts/provision_stripe_pedidos.py",
+      "code": "C408",
+      "message": "Unnecessary `dict()` call (rewrite as a literal)",
+      "count": 1
+    },
+    {
+      "path": "backend/scripts/provision_stripe_v2.py",
+      "code": "C408",
+      "message": "Unnecessary `dict()` call (rewrite as a literal)",
+      "count": 1
+    },
+    {
+      "path": "backend/scripts/provision_stripe_v2.py",
+      "code": "F841",
+      "message": "Local variable `label` is assigned to but never used",
+      "count": 1
+    },
+    {
+      "path": "backend/soul.py",
+      "code": "E501",
+      "message": "Line too long (111 > 110)",
+      "count": 4
+    },
+    {
+      "path": "backend/spine.py",
+      "code": "E501",
+      "message": "Line too long (115 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/spine.py",
+      "code": "E501",
+      "message": "Line too long (118 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/spine.py",
+      "code": "SIM102",
+      "message": "Use a single `if` statement instead of nested `if` statements",
+      "count": 1
+    },
+    {
+      "path": "backend/sup_api.py",
+      "code": "B008",
+      "message": "Do not perform function call `require_cap` in argument defaults; instead, perform the call within the function, or read the default from a module-level singleton variable",
+      "count": 102
+    },
+    {
+      "path": "backend/sup_api.py",
+      "code": "B904",
+      "message": "Within an `except` clause, raise exceptions with `raise ... from err` or `raise ... from None` to distinguish them from errors in exception handling",
+      "count": 47
+    },
+    {
+      "path": "backend/sup_api.py",
+      "code": "E501",
+      "message": "Line too long (112 > 110)",
+      "count": 3
+    },
+    {
+      "path": "backend/sup_api.py",
+      "code": "E501",
+      "message": "Line too long (113 > 110)",
+      "count": 2
+    },
+    {
+      "path": "backend/sup_api.py",
+      "code": "E501",
+      "message": "Line too long (116 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/sup_api.py",
+      "code": "E501",
+      "message": "Line too long (120 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/sup_api.py",
+      "code": "E501",
+      "message": "Line too long (135 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/sup_api.py",
+      "code": "E741",
+      "message": "Ambiguous variable name: `l`",
+      "count": 2
+    },
+    {
+      "path": "backend/sup_api.py",
+      "code": "SIM102",
+      "message": "Use a single `if` statement instead of nested `if` statements",
+      "count": 1
+    },
+    {
+      "path": "backend/sup_session.py",
+      "code": "E702",
+      "message": "Multiple statements on one line (semicolon)",
+      "count": 2
+    },
+    {
+      "path": "backend/sup_verbs.py",
+      "code": "E501",
+      "message": "Line too long (113 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/sup_verbs.py",
+      "code": "E501",
+      "message": "Line too long (115 > 110)",
+      "count": 3
+    },
+    {
+      "path": "backend/sup_verbs.py",
+      "code": "E501",
+      "message": "Line too long (133 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/sup_verbs.py",
+      "code": "E501",
+      "message": "Line too long (153 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/test_account.py",
+      "code": "E501",
+      "message": "Line too long (111 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/_cold_fingerprint.py",
+      "code": "E402",
+      "message": "Module level import not at top of file",
+      "count": 3
+    },
+    {
+      "path": "backend/tests/_cold_fingerprint.py",
+      "code": "E702",
+      "message": "Multiple statements on one line (semicolon)",
+      "count": 2
+    },
+    {
+      "path": "backend/tests/_cold_fingerprint.py",
+      "code": "E741",
+      "message": "Ambiguous variable name: `l`",
+      "count": 2
+    },
+    {
+      "path": "backend/tests/_cold_tap.py",
+      "code": "E402",
+      "message": "Module level import not at top of file",
+      "count": 3
+    },
+    {
+      "path": "backend/tests/_cold_tap.py",
+      "code": "E702",
+      "message": "Multiple statements on one line (semicolon)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/_cold_tap.py",
+      "code": "E741",
+      "message": "Ambiguous variable name: `l`",
+      "count": 2
+    },
+    {
+      "path": "backend/tests/diag_scores.py",
+      "code": "E501",
+      "message": "Line too long (116 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/diag_scores.py",
+      "code": "E501",
+      "message": "Line too long (137 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/diag_scores.py",
+      "code": "E702",
+      "message": "Multiple statements on one line (semicolon)",
+      "count": 4
+    },
+    {
+      "path": "backend/tests/diag_scores.py",
+      "code": "SIM115",
+      "message": "Use a context manager for opening files",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/e2e_sup_routes_live.py",
+      "code": "E501",
+      "message": "Line too long (113 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/e2e_sup_routes_live.py",
+      "code": "E501",
+      "message": "Line too long (157 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/e2e_sup_routes_live.py",
+      "code": "E702",
+      "message": "Multiple statements on one line (semicolon)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/eval_golden_call.py",
+      "code": "E501",
+      "message": "Line too long (111 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/eval_golden_call.py",
+      "code": "E501",
+      "message": "Line too long (114 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/eval_golden_call.py",
+      "code": "SIM102",
+      "message": "Use a single `if` statement instead of nested `if` statements",
+      "count": 4
+    },
+    {
+      "path": "backend/tests/eval_retrieval.py",
+      "code": "B905",
+      "message": "`zip()` without an explicit `strict=` parameter",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/eval_retrieval.py",
+      "code": "E501",
+      "message": "Line too long (112 > 110)",
+      "count": 2
+    },
+    {
+      "path": "backend/tests/eval_retrieval.py",
+      "code": "E501",
+      "message": "Line too long (113 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/eval_retrieval.py",
+      "code": "E501",
+      "message": "Line too long (115 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/eval_retrieval.py",
+      "code": "E501",
+      "message": "Line too long (117 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/eval_retrieval.py",
+      "code": "E501",
+      "message": "Line too long (119 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/eval_retrieval.py",
+      "code": "E501",
+      "message": "Line too long (121 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/eval_retrieval.py",
+      "code": "E501",
+      "message": "Line too long (123 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/eval_retrieval.py",
+      "code": "E501",
+      "message": "Line too long (126 > 110)",
+      "count": 2
+    },
+    {
+      "path": "backend/tests/gatelib.py",
+      "code": "SIM115",
+      "message": "Use a context manager for opening files",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/recall_eval.py",
+      "code": "E701",
+      "message": "Multiple statements on one line (colon)",
+      "count": 4
+    },
+    {
+      "path": "backend/tests/sim_ecommerce.py",
+      "code": "E402",
+      "message": "Module level import not at top of file",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/sim_ecommerce.py",
+      "code": "E501",
+      "message": "Line too long (113 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/sim_ecommerce.py",
+      "code": "E501",
+      "message": "Line too long (116 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/sim_ecommerce.py",
+      "code": "E501",
+      "message": "Line too long (117 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/sim_ecommerce.py",
+      "code": "E501",
+      "message": "Line too long (119 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/sim_ecommerce.py",
+      "code": "E501",
+      "message": "Line too long (120 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/sim_live.py",
+      "code": "E501",
+      "message": "Line too long (114 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/sim_live.py",
+      "code": "E501",
+      "message": "Line too long (115 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/sim_live.py",
+      "code": "E501",
+      "message": "Line too long (134 > 110)",
+      "count": 2
+    },
+    {
+      "path": "backend/tests/sim_live.py",
+      "code": "E741",
+      "message": "Ambiguous variable name: `l`",
+      "count": 4
+    },
+    {
+      "path": "backend/tests/test_acceptability.py",
+      "code": "E501",
+      "message": "Line too long (135 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/test_acceptability.py",
+      "code": "E501",
+      "message": "Line too long (145 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/test_acceptability.py",
+      "code": "E501",
+      "message": "Line too long (147 > 110)",
+      "count": 2
+    },
+    {
+      "path": "backend/tests/test_acceptability.py",
+      "code": "E501",
+      "message": "Line too long (158 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/test_acceptability.py",
+      "code": "E501",
+      "message": "Line too long (185 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/test_ai_disclosure.py",
+      "code": "E501",
+      "message": "Line too long (111 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/test_ai_disclosure.py",
+      "code": "SIM115",
+      "message": "Use a context manager for opening files",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/test_amend.py",
+      "code": "E501",
+      "message": "Line too long (113 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/test_amend.py",
+      "code": "E741",
+      "message": "Ambiguous variable name: `l`",
+      "count": 3
+    },
+    {
+      "path": "backend/tests/test_anonymous_caller_scope.py",
+      "code": "SIM115",
+      "message": "Use a context manager for opening files",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/test_autoaccept.py",
+      "code": "E402",
+      "message": "Module level import not at top of file",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/test_autoaccept.py",
+      "code": "E501",
+      "message": "Line too long (111 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/test_backfill.py",
+      "code": "E741",
+      "message": "Ambiguous variable name: `l`",
+      "count": 4
+    },
+    {
+      "path": "backend/tests/test_backfill.py",
+      "code": "SIM115",
+      "message": "Use a context manager for opening files",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/test_basket_accept.py",
+      "code": "E501",
+      "message": "Line too long (111 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/test_business_day.py",
+      "code": "SIM115",
+      "message": "Use a context manager for opening files",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/test_call_becomes_order.py",
+      "code": "SIM115",
+      "message": "Use a context manager for opening files",
+      "count": 2
+    },
+    {
+      "path": "backend/tests/test_fixtures_grounded.py",
+      "code": "F841",
+      "message": "Local variable `w` is assigned to but never used",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/test_fixtures_grounded.py",
+      "code": "SIM115",
+      "message": "Use a context manager for opening files",
+      "count": 3
+    },
+    {
+      "path": "backend/tests/test_golden.py",
+      "code": "E501",
+      "message": "Line too long (111 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/test_golden.py",
+      "code": "E741",
+      "message": "Ambiguous variable name: `l`",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/test_golden.py",
+      "code": "SIM102",
+      "message": "Use a single `if` statement instead of nested `if` statements",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/test_human_hold.py",
+      "code": "SIM115",
+      "message": "Use a context manager for opening files",
+      "count": 2
+    },
+    {
+      "path": "backend/tests/test_market_voice.py",
+      "code": "SIM115",
+      "message": "Use a context manager for opening files",
+      "count": 3
+    },
+    {
+      "path": "backend/tests/test_medusa_map.py",
+      "code": "E501",
+      "message": "Line too long (112 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/test_outbox.py",
+      "code": "E402",
+      "message": "Module level import not at top of file",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/test_outbox.py",
+      "code": "E501",
+      "message": "Line too long (116 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/test_pipeline_smoke.py",
+      "code": "E501",
+      "message": "Line too long (111 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/test_pipeline_smoke.py",
+      "code": "E501",
+      "message": "Line too long (114 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/test_pipeline_smoke.py",
+      "code": "E501",
+      "message": "Line too long (118 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/test_pipeline_smoke.py",
+      "code": "E501",
+      "message": "Line too long (123 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/test_pipeline_smoke.py",
+      "code": "E501",
+      "message": "Line too long (124 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/test_pipeline_smoke.py",
+      "code": "E702",
+      "message": "Multiple statements on one line (semicolon)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/test_pipeline_smoke.py",
+      "code": "E741",
+      "message": "Ambiguous variable name: `l`",
+      "count": 5
+    },
+    {
+      "path": "backend/tests/test_presence_suite.py",
+      "code": "E702",
+      "message": "Multiple statements on one line (semicolon)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/test_profile.py",
+      "code": "E501",
+      "message": "Line too long (112 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/test_profile.py",
+      "code": "E501",
+      "message": "Line too long (118 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/test_profile.py",
+      "code": "E501",
+      "message": "Line too long (121 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/test_profile.py",
+      "code": "E501",
+      "message": "Line too long (122 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/test_profile.py",
+      "code": "E501",
+      "message": "Line too long (134 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/test_profile.py",
+      "code": "E501",
+      "message": "Line too long (198 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/test_queue.py",
+      "code": "E501",
+      "message": "Line too long (114 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/test_queue.py",
+      "code": "E501",
+      "message": "Line too long (115 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/test_queue.py",
+      "code": "E501",
+      "message": "Line too long (118 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/test_queue.py",
+      "code": "E501",
+      "message": "Line too long (120 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/test_queue.py",
+      "code": "E501",
+      "message": "Line too long (185 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/test_queue.py",
+      "code": "F841",
+      "message": "Local variable `jr` is assigned to but never used",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/test_receipt_wired.py",
+      "code": "SIM115",
+      "message": "Use a context manager for opening files",
+      "count": 2
+    },
+    {
+      "path": "backend/tests/test_routing_allocation.py",
+      "code": "SIM115",
+      "message": "Use a context manager for opening files",
+      "count": 2
+    },
+    {
+      "path": "backend/tests/test_scheduled_tasks.py",
+      "code": "E501",
+      "message": "Line too long (141 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/test_scheduled_tasks.py",
+      "code": "E501",
+      "message": "Line too long (148 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/test_scheduled_tasks.py",
+      "code": "E501",
+      "message": "Line too long (149 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/test_scheduled_tasks.py",
+      "code": "E501",
+      "message": "Line too long (158 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/test_scheduled_tasks.py",
+      "code": "E501",
+      "message": "Line too long (171 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/test_seed_reset.py",
+      "code": "E501",
+      "message": "Line too long (111 > 110)",
+      "count": 2
+    },
+    {
+      "path": "backend/tests/test_seed_reset.py",
+      "code": "E501",
+      "message": "Line too long (141 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/test_seed_reset.py",
+      "code": "E501",
+      "message": "Line too long (143 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/test_seed_reset.py",
+      "code": "E501",
+      "message": "Line too long (160 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/test_seed_reset.py",
+      "code": "E501",
+      "message": "Line too long (175 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/test_seed_reset.py",
+      "code": "E501",
+      "message": "Line too long (181 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/test_testmode.py",
+      "code": "B017",
+      "message": "Do not assert blind exception: `Exception`",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/test_try_chat.py",
+      "code": "B007",
+      "message": "Loop control variable `i` not used within loop body",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/test_try_chat.py",
+      "code": "E501",
+      "message": "Line too long (111 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/test_try_chat.py",
+      "code": "E501",
+      "message": "Line too long (116 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/test_try_chat.py",
+      "code": "E741",
+      "message": "Ambiguous variable name: `l`",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/test_vitals.py",
+      "code": "E501",
+      "message": "Line too long (112 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/test_voice_reply.py",
+      "code": "E702",
+      "message": "Multiple statements on one line (semicolon)",
+      "count": 9
+    },
+    {
+      "path": "backend/tests/test_voice_tenant_routing.py",
+      "code": "SIM115",
+      "message": "Use a context manager for opening files",
+      "count": 2
+    },
+    {
+      "path": "backend/tests/test_workspace_ready.py",
+      "code": "E501",
+      "message": "Line too long (127 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/test_workspace_ready.py",
+      "code": "SIM115",
+      "message": "Use a context manager for opening files",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_app_onboarding.py",
+      "code": "C405",
+      "message": "Unnecessary tuple literal (rewrite as a set literal)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_app_onboarding.py",
+      "code": "E501",
+      "message": "Line too long (112 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_assemble.py",
+      "code": "E501",
+      "message": "Line too long (111 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_assemble.py",
+      "code": "E501",
+      "message": "Line too long (113 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_assemble.py",
+      "code": "E501",
+      "message": "Line too long (127 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_assemble.py",
+      "code": "E501",
+      "message": "Line too long (144 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_assemble.py",
+      "code": "F841",
+      "message": "Local variable `loop_id` is assigned to but never used",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_avisos.py",
+      "code": "SIM115",
+      "message": "Use a context manager for opening files",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_behaviour_confirm.py",
+      "code": "E702",
+      "message": "Multiple statements on one line (semicolon)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_capture_unmatched.py",
+      "code": "E741",
+      "message": "Ambiguous variable name: `l`",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_cascade.py",
+      "code": "E402",
+      "message": "Module level import not at top of file",
+      "count": 3
+    },
+    {
+      "path": "backend/tests/vital_cascade.py",
+      "code": "E501",
+      "message": "Line too long (112 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_cascade.py",
+      "code": "E501",
+      "message": "Line too long (114 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_cascade.py",
+      "code": "E501",
+      "message": "Line too long (115 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_cascade.py",
+      "code": "E501",
+      "message": "Line too long (117 > 110)",
+      "count": 2
+    },
+    {
+      "path": "backend/tests/vital_cascade.py",
+      "code": "E501",
+      "message": "Line too long (119 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_cascade.py",
+      "code": "E501",
+      "message": "Line too long (123 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_cascade.py",
+      "code": "E501",
+      "message": "Line too long (125 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_cascade.py",
+      "code": "E501",
+      "message": "Line too long (129 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_cascade.py",
+      "code": "E501",
+      "message": "Line too long (145 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_cascade.py",
+      "code": "E501",
+      "message": "Line too long (146 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_cascade.py",
+      "code": "E702",
+      "message": "Multiple statements on one line (semicolon)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_cascade_nine.py",
+      "code": "E501",
+      "message": "Line too long (111 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_cascade_nine.py",
+      "code": "E501",
+      "message": "Line too long (113 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_cascade_nine.py",
+      "code": "E501",
+      "message": "Line too long (114 > 110)",
+      "count": 2
+    },
+    {
+      "path": "backend/tests/vital_cascade_nine.py",
+      "code": "E501",
+      "message": "Line too long (115 > 110)",
+      "count": 2
+    },
+    {
+      "path": "backend/tests/vital_cascade_nine.py",
+      "code": "E501",
+      "message": "Line too long (126 > 110)",
+      "count": 2
+    },
+    {
+      "path": "backend/tests/vital_choco.py",
+      "code": "E402",
+      "message": "Module level import not at top of file",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_choco.py",
+      "code": "E501",
+      "message": "Line too long (112 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_choco.py",
+      "code": "E501",
+      "message": "Line too long (122 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_choco.py",
+      "code": "E501",
+      "message": "Line too long (123 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_choco.py",
+      "code": "E702",
+      "message": "Multiple statements on one line (semicolon)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_codes.py",
+      "code": "E501",
+      "message": "Line too long (115 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_cold_tenant.py",
+      "code": "E501",
+      "message": "Line too long (111 > 110)",
+      "count": 3
+    },
+    {
+      "path": "backend/tests/vital_cold_tenant.py",
+      "code": "E501",
+      "message": "Line too long (112 > 110)",
+      "count": 2
+    },
+    {
+      "path": "backend/tests/vital_cold_tenant.py",
+      "code": "E501",
+      "message": "Line too long (113 > 110)",
+      "count": 2
+    },
+    {
+      "path": "backend/tests/vital_cold_tenant.py",
+      "code": "E501",
+      "message": "Line too long (115 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_cold_tenant.py",
+      "code": "E501",
+      "message": "Line too long (120 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_cold_tenant.py",
+      "code": "E501",
+      "message": "Line too long (121 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_cold_tenant.py",
+      "code": "E501",
+      "message": "Line too long (124 > 110)",
+      "count": 2
+    },
+    {
+      "path": "backend/tests/vital_cold_tenant.py",
+      "code": "E741",
+      "message": "Ambiguous variable name: `l`",
+      "count": 2
+    },
+    {
+      "path": "backend/tests/vital_cold_tenant.py",
+      "code": "F841",
+      "message": "Local variable `lead_id` is assigned to but never used",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_cold_tenant.py",
+      "code": "F841",
+      "message": "Local variable `o3` is assigned to but never used",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_confidence.py",
+      "code": "E402",
+      "message": "Module level import not at top of file",
+      "count": 4
+    },
+    {
+      "path": "backend/tests/vital_confidence.py",
+      "code": "E501",
+      "message": "Line too long (112 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_confidence.py",
+      "code": "E501",
+      "message": "Line too long (114 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_confidence.py",
+      "code": "E501",
+      "message": "Line too long (124 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_confidence.py",
+      "code": "E501",
+      "message": "Line too long (129 > 110)",
+      "count": 2
+    },
+    {
+      "path": "backend/tests/vital_confidence.py",
+      "code": "E501",
+      "message": "Line too long (133 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_confidence.py",
+      "code": "E501",
+      "message": "Line too long (141 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_confidence.py",
+      "code": "E501",
+      "message": "Line too long (146 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_confidence.py",
+      "code": "E501",
+      "message": "Line too long (149 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_confidence.py",
+      "code": "E501",
+      "message": "Line too long (152 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_confidence.py",
+      "code": "E501",
+      "message": "Line too long (154 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_confidence.py",
+      "code": "E501",
+      "message": "Line too long (169 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_confidence.py",
+      "code": "E702",
+      "message": "Multiple statements on one line (semicolon)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_context.py",
+      "code": "E702",
+      "message": "Multiple statements on one line (semicolon)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_context.py",
+      "code": "SIM105",
+      "message": "Use `contextlib.suppress(Exception)` instead of `try`-`except`-`pass`",
+      "count": 2
+    },
+    {
+      "path": "backend/tests/vital_cr_auth.py",
+      "code": "E402",
+      "message": "Module level import not at top of file",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_cr_auth.py",
+      "code": "E501",
+      "message": "Line too long (111 > 110)",
+      "count": 2
+    },
+    {
+      "path": "backend/tests/vital_cr_auth.py",
+      "code": "E501",
+      "message": "Line too long (114 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_cr_auth.py",
+      "code": "E501",
+      "message": "Line too long (116 > 110)",
+      "count": 3
+    },
+    {
+      "path": "backend/tests/vital_cr_auth.py",
+      "code": "E501",
+      "message": "Line too long (117 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_cr_auth.py",
+      "code": "E501",
+      "message": "Line too long (118 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_cr_auth.py",
+      "code": "E501",
+      "message": "Line too long (120 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_cr_auth.py",
+      "code": "E501",
+      "message": "Line too long (123 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_cr_auth.py",
+      "code": "E501",
+      "message": "Line too long (124 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_cr_auth.py",
+      "code": "E501",
+      "message": "Line too long (125 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_cr_auth.py",
+      "code": "E702",
+      "message": "Multiple statements on one line (semicolon)",
+      "count": 7
+    },
+    {
+      "path": "backend/tests/vital_cr_control.py",
+      "code": "B904",
+      "message": "Within an `except` clause, raise exceptions with `raise ... from err` or `raise ... from None` to distinguish them from errors in exception handling",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_cr_control.py",
+      "code": "E402",
+      "message": "Module level import not at top of file",
+      "count": 2
+    },
+    {
+      "path": "backend/tests/vital_cr_control.py",
+      "code": "E501",
+      "message": "Line too long (111 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_cr_control.py",
+      "code": "E501",
+      "message": "Line too long (113 > 110)",
+      "count": 3
+    },
+    {
+      "path": "backend/tests/vital_cr_control.py",
+      "code": "E501",
+      "message": "Line too long (114 > 110)",
+      "count": 2
+    },
+    {
+      "path": "backend/tests/vital_cr_control.py",
+      "code": "E501",
+      "message": "Line too long (115 > 110)",
+      "count": 2
+    },
+    {
+      "path": "backend/tests/vital_cr_control.py",
+      "code": "E501",
+      "message": "Line too long (121 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_cr_control.py",
+      "code": "E501",
+      "message": "Line too long (122 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_cr_control.py",
+      "code": "E501",
+      "message": "Line too long (123 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_cr_control.py",
+      "code": "E501",
+      "message": "Line too long (124 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_cr_control.py",
+      "code": "E501",
+      "message": "Line too long (125 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_cr_control.py",
+      "code": "E501",
+      "message": "Line too long (127 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_cr_control.py",
+      "code": "E501",
+      "message": "Line too long (132 > 110)",
+      "count": 2
+    },
+    {
+      "path": "backend/tests/vital_cr_control.py",
+      "code": "E501",
+      "message": "Line too long (136 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_cr_control.py",
+      "code": "E501",
+      "message": "Line too long (138 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_cr_control.py",
+      "code": "E501",
+      "message": "Line too long (139 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_cr_control.py",
+      "code": "E501",
+      "message": "Line too long (140 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_cr_control.py",
+      "code": "E501",
+      "message": "Line too long (147 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_cr_control.py",
+      "code": "E501",
+      "message": "Line too long (151 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_cr_control.py",
+      "code": "E501",
+      "message": "Line too long (152 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_cr_control.py",
+      "code": "E501",
+      "message": "Line too long (154 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_cr_control.py",
+      "code": "E501",
+      "message": "Line too long (157 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_cr_control.py",
+      "code": "E501",
+      "message": "Line too long (160 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_cr_control.py",
+      "code": "E501",
+      "message": "Line too long (192 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_cr_control.py",
+      "code": "E701",
+      "message": "Multiple statements on one line (colon)",
+      "count": 5
+    },
+    {
+      "path": "backend/tests/vital_cr_control.py",
+      "code": "E702",
+      "message": "Multiple statements on one line (semicolon)",
+      "count": 6
+    },
+    {
+      "path": "backend/tests/vital_cr_control.py",
+      "code": "I001",
+      "message": "Import block is un-sorted or un-formatted",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_cr_control.py",
+      "code": "SIM105",
+      "message": "Use `contextlib.suppress(Exception)` instead of `try`-`except`-`pass`",
+      "count": 2
+    },
+    {
+      "path": "backend/tests/vital_cr_read.py",
+      "code": "E402",
+      "message": "Module level import not at top of file",
+      "count": 2
+    },
+    {
+      "path": "backend/tests/vital_cr_read.py",
+      "code": "E501",
+      "message": "Line too long (123 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_cr_read.py",
+      "code": "E501",
+      "message": "Line too long (125 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_cr_read.py",
+      "code": "E501",
+      "message": "Line too long (139 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_cr_read.py",
+      "code": "E702",
+      "message": "Multiple statements on one line (semicolon)",
+      "count": 5
+    },
+    {
+      "path": "backend/tests/vital_cr_tokens.py",
+      "code": "E501",
+      "message": "Line too long (114 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_cr_tokens.py",
+      "code": "E501",
+      "message": "Line too long (122 > 110)",
+      "count": 2
+    },
+    {
+      "path": "backend/tests/vital_cr_tokens.py",
+      "code": "E702",
+      "message": "Multiple statements on one line (semicolon)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_demo_auth.py",
+      "code": "E702",
+      "message": "Multiple statements on one line (semicolon)",
+      "count": 7
+    },
+    {
+      "path": "backend/tests/vital_demo_auth.py",
+      "code": "F401",
+      "message": "`openpyxl` imported but unused; consider using `importlib.util.find_spec` to test for availability",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_demo_doors.py",
+      "code": "F841",
+      "message": "Local variable `gslug` is assigned to but never used",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_demo_learn.py",
+      "code": "E741",
+      "message": "Ambiguous variable name: `l`",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_demo_learn.py",
+      "code": "SIM105",
+      "message": "Use `contextlib.suppress(Exception)` instead of `try`-`except`-`pass`",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_demo_media.py",
+      "code": "E741",
+      "message": "Ambiguous variable name: `l`",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_demo_reap.py",
+      "code": "B007",
+      "message": "Loop control variable `spec` not used within loop body",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_demo_reap.py",
+      "code": "F841",
+      "message": "Local variable `again` is assigned to but never used",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_demo_reap.py",
+      "code": "SIM105",
+      "message": "Use `contextlib.suppress(Exception)` instead of `try`-`except`-`pass`",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_demo_resume.py",
+      "code": "E701",
+      "message": "Multiple statements on one line (colon)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_demo_resume.py",
+      "code": "E702",
+      "message": "Multiple statements on one line (semicolon)",
+      "count": 2
+    },
+    {
+      "path": "backend/tests/vital_directory.py",
+      "code": "E402",
+      "message": "Module level import not at top of file",
+      "count": 5
+    },
+    {
+      "path": "backend/tests/vital_directory.py",
+      "code": "E501",
+      "message": "Line too long (111 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_directory.py",
+      "code": "E501",
+      "message": "Line too long (113 > 110)",
+      "count": 2
+    },
+    {
+      "path": "backend/tests/vital_directory.py",
+      "code": "E501",
+      "message": "Line too long (114 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_directory.py",
+      "code": "E501",
+      "message": "Line too long (115 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_directory.py",
+      "code": "E501",
+      "message": "Line too long (116 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_directory.py",
+      "code": "E501",
+      "message": "Line too long (117 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_directory.py",
+      "code": "E501",
+      "message": "Line too long (131 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_directory.py",
+      "code": "E701",
+      "message": "Multiple statements on one line (colon)",
+      "count": 4
+    },
+    {
+      "path": "backend/tests/vital_directory.py",
+      "code": "E702",
+      "message": "Multiple statements on one line (semicolon)",
+      "count": 5
+    },
+    {
+      "path": "backend/tests/vital_directory_tiers.py",
+      "code": "B905",
+      "message": "`zip()` without an explicit `strict=` parameter",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_directory_tiers.py",
+      "code": "E402",
+      "message": "Module level import not at top of file",
+      "count": 2
+    },
+    {
+      "path": "backend/tests/vital_directory_tiers.py",
+      "code": "E702",
+      "message": "Multiple statements on one line (semicolon)",
+      "count": 3
+    },
+    {
+      "path": "backend/tests/vital_directory_tiers.py",
+      "code": "F841",
+      "message": "Local variable `r3` is assigned to but never used",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_directory_tiers.py",
+      "code": "SIM115",
+      "message": "Use a context manager for opening files",
+      "count": 3
+    },
+    {
+      "path": "backend/tests/vital_doubt.py",
+      "code": "E501",
+      "message": "Line too long (112 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_doubt.py",
+      "code": "E501",
+      "message": "Line too long (126 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_doubt.py",
+      "code": "E501",
+      "message": "Line too long (128 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_doubt.py",
+      "code": "E501",
+      "message": "Line too long (129 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_doubt.py",
+      "code": "E501",
+      "message": "Line too long (138 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_doubt.py",
+      "code": "E701",
+      "message": "Multiple statements on one line (colon)",
+      "count": 3
+    },
+    {
+      "path": "backend/tests/vital_doubt.py",
+      "code": "E731",
+      "message": "Do not assign a `lambda` expression, use a `def`",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_doubt.py",
+      "code": "E741",
+      "message": "Ambiguous variable name: `l`",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_doubt_wire.py",
+      "code": "E402",
+      "message": "Module level import not at top of file",
+      "count": 3
+    },
+    {
+      "path": "backend/tests/vital_doubt_wire.py",
+      "code": "E501",
+      "message": "Line too long (118 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_durability.py",
+      "code": "E501",
+      "message": "Line too long (125 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_duties.py",
+      "code": "E501",
+      "message": "Line too long (111 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_duties.py",
+      "code": "E501",
+      "message": "Line too long (112 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_duties.py",
+      "code": "E501",
+      "message": "Line too long (115 > 110)",
+      "count": 2
+    },
+    {
+      "path": "backend/tests/vital_duties.py",
+      "code": "E501",
+      "message": "Line too long (116 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_duties.py",
+      "code": "E501",
+      "message": "Line too long (126 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_duties.py",
+      "code": "F841",
+      "message": "Local variable `r` is assigned to but never used",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_egress_sandbox.py",
+      "code": "E501",
+      "message": "Line too long (120 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_fabric.py",
+      "code": "E402",
+      "message": "Module level import not at top of file",
+      "count": 4
+    },
+    {
+      "path": "backend/tests/vital_fabric.py",
+      "code": "E501",
+      "message": "Line too long (116 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_fabric.py",
+      "code": "E501",
+      "message": "Line too long (117 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_fabric.py",
+      "code": "E501",
+      "message": "Line too long (119 > 110)",
+      "count": 3
+    },
+    {
+      "path": "backend/tests/vital_fabric.py",
+      "code": "E501",
+      "message": "Line too long (120 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_fabric.py",
+      "code": "E701",
+      "message": "Multiple statements on one line (colon)",
+      "count": 4
+    },
+    {
+      "path": "backend/tests/vital_fabric.py",
+      "code": "E702",
+      "message": "Multiple statements on one line (semicolon)",
+      "count": 6
+    },
+    {
+      "path": "backend/tests/vital_field_law.py",
+      "code": "E501",
+      "message": "Line too long (112 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_followup_fire.py",
+      "code": "E501",
+      "message": "Line too long (111 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_founder.py",
+      "code": "E402",
+      "message": "Module level import not at top of file",
+      "count": 4
+    },
+    {
+      "path": "backend/tests/vital_founder.py",
+      "code": "E501",
+      "message": "Line too long (111 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_founder.py",
+      "code": "E501",
+      "message": "Line too long (145 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_founder.py",
+      "code": "E701",
+      "message": "Multiple statements on one line (colon)",
+      "count": 4
+    },
+    {
+      "path": "backend/tests/vital_founder.py",
+      "code": "E702",
+      "message": "Multiple statements on one line (semicolon)",
+      "count": 4
+    },
+    {
+      "path": "backend/tests/vital_founder.py",
+      "code": "F821",
+      "message": "Undefined name `config`",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_founder.py",
+      "code": "SIM105",
+      "message": "Use `contextlib.suppress(Exception)` instead of `try`-`except`-`pass`",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_gate_full.py",
+      "code": "E501",
+      "message": "Line too long (125 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_golive.py",
+      "code": "E402",
+      "message": "Module level import not at top of file",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_golive.py",
+      "code": "E501",
+      "message": "Line too long (112 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_golive.py",
+      "code": "E701",
+      "message": "Multiple statements on one line (colon)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_golive.py",
+      "code": "E702",
+      "message": "Multiple statements on one line (semicolon)",
+      "count": 3
+    },
+    {
+      "path": "backend/tests/vital_hoy.py",
+      "code": "E402",
+      "message": "Module level import not at top of file",
+      "count": 3
+    },
+    {
+      "path": "backend/tests/vital_hoy.py",
+      "code": "E501",
+      "message": "Line too long (111 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_hoy.py",
+      "code": "E501",
+      "message": "Line too long (112 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_hoy.py",
+      "code": "E501",
+      "message": "Line too long (117 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_hoy.py",
+      "code": "E501",
+      "message": "Line too long (120 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_hoy.py",
+      "code": "E501",
+      "message": "Line too long (121 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_hoy.py",
+      "code": "E702",
+      "message": "Multiple statements on one line (semicolon)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_incall.py",
+      "code": "E501",
+      "message": "Line too long (111 > 110)",
+      "count": 2
+    },
+    {
+      "path": "backend/tests/vital_incall.py",
+      "code": "E501",
+      "message": "Line too long (112 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_incall.py",
+      "code": "E501",
+      "message": "Line too long (113 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_incall.py",
+      "code": "E501",
+      "message": "Line too long (114 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_incall.py",
+      "code": "E501",
+      "message": "Line too long (115 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_incall.py",
+      "code": "E501",
+      "message": "Line too long (116 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_incall.py",
+      "code": "E501",
+      "message": "Line too long (118 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_incall.py",
+      "code": "E501",
+      "message": "Line too long (120 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_incall.py",
+      "code": "E702",
+      "message": "Multiple statements on one line (semicolon)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_ingest.py",
+      "code": "C416",
+      "message": "Unnecessary list comprehension (rewrite using `list()`)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_ingest.py",
+      "code": "E501",
+      "message": "Line too long (116 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_install.py",
+      "code": "E402",
+      "message": "Module level import not at top of file",
+      "count": 5
+    },
+    {
+      "path": "backend/tests/vital_install.py",
+      "code": "E501",
+      "message": "Line too long (112 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_install.py",
+      "code": "E501",
+      "message": "Line too long (119 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_install.py",
+      "code": "E501",
+      "message": "Line too long (124 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_install.py",
+      "code": "E501",
+      "message": "Line too long (126 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_install.py",
+      "code": "E501",
+      "message": "Line too long (136 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_install.py",
+      "code": "E501",
+      "message": "Line too long (151 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_install.py",
+      "code": "E501",
+      "message": "Line too long (152 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_install.py",
+      "code": "E501",
+      "message": "Line too long (157 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_install.py",
+      "code": "E702",
+      "message": "Multiple statements on one line (semicolon)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_intake.py",
+      "code": "E501",
+      "message": "Line too long (112 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_intake.py",
+      "code": "E701",
+      "message": "Multiple statements on one line (colon)",
+      "count": 2
+    },
+    {
+      "path": "backend/tests/vital_intake.py",
+      "code": "E702",
+      "message": "Multiple statements on one line (semicolon)",
+      "count": 2
+    },
+    {
+      "path": "backend/tests/vital_intake.py",
+      "code": "SIM105",
+      "message": "Use `contextlib.suppress(Exception)` instead of `try`-`except`-`pass`",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_intake_link.py",
+      "code": "SIM105",
+      "message": "Use `contextlib.suppress(Exception)` instead of `try`-`except`-`pass`",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_intake_link.py",
+      "code": "SIM115",
+      "message": "Use a context manager for opening files",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_interactive.py",
+      "code": "E402",
+      "message": "Module level import not at top of file",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_interactive.py",
+      "code": "E501",
+      "message": "Line too long (113 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_interactive.py",
+      "code": "E702",
+      "message": "Multiple statements on one line (semicolon)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_kernel_boundary.py",
+      "code": "E501",
+      "message": "Line too long (144 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_kernel_boundary.py",
+      "code": "SIM115",
+      "message": "Use a context manager for opening files",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_lifecycle.py",
+      "code": "E402",
+      "message": "Module level import not at top of file",
+      "count": 5
+    },
+    {
+      "path": "backend/tests/vital_lifecycle.py",
+      "code": "E702",
+      "message": "Multiple statements on one line (semicolon)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_liveness_mechanism.py",
+      "code": "E501",
+      "message": "Line too long (111 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_liveness_mechanism.py",
+      "code": "E501",
+      "message": "Line too long (115 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_liveness_mechanism.py",
+      "code": "E501",
+      "message": "Line too long (123 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_liveness_mechanism.py",
+      "code": "E501",
+      "message": "Line too long (124 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_liveness_mechanism.py",
+      "code": "E501",
+      "message": "Line too long (125 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_liveness_mechanism.py",
+      "code": "E501",
+      "message": "Line too long (132 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_measure.py",
+      "code": "E402",
+      "message": "Module level import not at top of file",
+      "count": 4
+    },
+    {
+      "path": "backend/tests/vital_measure.py",
+      "code": "E501",
+      "message": "Line too long (119 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_measure.py",
+      "code": "E501",
+      "message": "Line too long (124 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_measure.py",
+      "code": "E501",
+      "message": "Line too long (125 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_measure.py",
+      "code": "E702",
+      "message": "Multiple statements on one line (semicolon)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_media_writable.py",
+      "code": "E501",
+      "message": "Line too long (116 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_media_writable.py",
+      "code": "SIM105",
+      "message": "Use `contextlib.suppress(Exception)` instead of `try`-`except`-`pass`",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_memory.py",
+      "code": "E501",
+      "message": "Line too long (116 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_memory.py",
+      "code": "E501",
+      "message": "Line too long (117 > 110)",
+      "count": 2
+    },
+    {
+      "path": "backend/tests/vital_memory.py",
+      "code": "E501",
+      "message": "Line too long (120 > 110)",
+      "count": 2
+    },
+    {
+      "path": "backend/tests/vital_memory.py",
+      "code": "E501",
+      "message": "Line too long (140 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_memory.py",
+      "code": "E501",
+      "message": "Line too long (144 > 110)",
+      "count": 2
+    },
+    {
+      "path": "backend/tests/vital_memory_engines.py",
+      "code": "E501",
+      "message": "Line too long (120 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_memory_engines.py",
+      "code": "E501",
+      "message": "Line too long (130 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_memory_engines.py",
+      "code": "E501",
+      "message": "Line too long (136 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_memory_engines.py",
+      "code": "E501",
+      "message": "Line too long (139 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_memory_engines.py",
+      "code": "E501",
+      "message": "Line too long (145 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_memory_turn.py",
+      "code": "C401",
+      "message": "Unnecessary generator (rewrite as a set comprehension)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_memory_turn.py",
+      "code": "E501",
+      "message": "Line too long (111 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_memory_turn.py",
+      "code": "E501",
+      "message": "Line too long (116 > 110)",
+      "count": 2
+    },
+    {
+      "path": "backend/tests/vital_memory_turn.py",
+      "code": "E501",
+      "message": "Line too long (127 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_memory_turn.py",
+      "code": "E501",
+      "message": "Line too long (128 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_mindcheck.py",
+      "code": "SIM105",
+      "message": "Use `contextlib.suppress(Exception)` instead of `try`-`except`-`pass`",
+      "count": 2
+    },
+    {
+      "path": "backend/tests/vital_nudge.py",
+      "code": "E501",
+      "message": "Line too long (112 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_nudge.py",
+      "code": "E501",
+      "message": "Line too long (119 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_nudge.py",
+      "code": "E501",
+      "message": "Line too long (127 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_onboarded_unpaid.py",
+      "code": "E402",
+      "message": "Module level import not at top of file",
+      "count": 2
+    },
+    {
+      "path": "backend/tests/vital_onboarded_unpaid.py",
+      "code": "E501",
+      "message": "Line too long (132 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_onboarded_unpaid.py",
+      "code": "E501",
+      "message": "Line too long (134 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_onboarded_unpaid.py",
+      "code": "E501",
+      "message": "Line too long (143 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_onboarded_unpaid.py",
+      "code": "E701",
+      "message": "Multiple statements on one line (colon)",
+      "count": 2
+    },
+    {
+      "path": "backend/tests/vital_onboarded_unpaid.py",
+      "code": "E702",
+      "message": "Multiple statements on one line (semicolon)",
+      "count": 6
+    },
+    {
+      "path": "backend/tests/vital_one_mind.py",
+      "code": "E741",
+      "message": "Ambiguous variable name: `l`",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_person.py",
+      "code": "E402",
+      "message": "Module level import not at top of file",
+      "count": 4
+    },
+    {
+      "path": "backend/tests/vital_person.py",
+      "code": "E501",
+      "message": "Line too long (112 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_person.py",
+      "code": "E501",
+      "message": "Line too long (125 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_person.py",
+      "code": "E501",
+      "message": "Line too long (128 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_person.py",
+      "code": "E702",
+      "message": "Multiple statements on one line (semicolon)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_portal.py",
+      "code": "B905",
+      "message": "`zip()` without an explicit `strict=` parameter",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_portal.py",
+      "code": "SIM105",
+      "message": "Use `contextlib.suppress(Exception)` instead of `try`-`except`-`pass`",
+      "count": 4
+    },
+    {
+      "path": "backend/tests/vital_portal.py",
+      "code": "SIM115",
+      "message": "Use a context manager for opening files",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_presence.py",
+      "code": "E402",
+      "message": "Module level import not at top of file",
+      "count": 3
+    },
+    {
+      "path": "backend/tests/vital_presence.py",
+      "code": "E702",
+      "message": "Multiple statements on one line (semicolon)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_projection.py",
+      "code": "E402",
+      "message": "Module level import not at top of file",
+      "count": 5
+    },
+    {
+      "path": "backend/tests/vital_projection.py",
+      "code": "E501",
+      "message": "Line too long (112 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_projection.py",
+      "code": "E501",
+      "message": "Line too long (138 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_projection.py",
+      "code": "E702",
+      "message": "Multiple statements on one line (semicolon)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_pursuit.py",
+      "code": "E402",
+      "message": "Module level import not at top of file",
+      "count": 7
+    },
+    {
+      "path": "backend/tests/vital_pursuit.py",
+      "code": "E501",
+      "message": "Line too long (114 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_range.py",
+      "code": "C408",
+      "message": "Unnecessary `dict()` call (rewrite as a literal)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_reach.py",
+      "code": "E501",
+      "message": "Line too long (115 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_reach.py",
+      "code": "E501",
+      "message": "Line too long (120 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_reach.py",
+      "code": "E501",
+      "message": "Line too long (126 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_reparto.py",
+      "code": "B905",
+      "message": "`zip()` without an explicit `strict=` parameter",
+      "count": 2
+    },
+    {
+      "path": "backend/tests/vital_reparto.py",
+      "code": "SIM115",
+      "message": "Use a context manager for opening files",
+      "count": 2
+    },
+    {
+      "path": "backend/tests/vital_reparto_api.py",
+      "code": "E702",
+      "message": "Multiple statements on one line (semicolon)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_reparto_api.py",
+      "code": "SIM115",
+      "message": "Use a context manager for opening files",
+      "count": 2
+    },
+    {
+      "path": "backend/tests/vital_reparto_caps.py",
+      "code": "SIM115",
+      "message": "Use a context manager for opening files",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_repertoire.py",
+      "code": "E501",
+      "message": "Line too long (112 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_repertoire.py",
+      "code": "E501",
+      "message": "Line too long (117 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_repertoire.py",
+      "code": "E501",
+      "message": "Line too long (118 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_review_why.py",
+      "code": "E402",
+      "message": "Module level import not at top of file",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_review_why.py",
+      "code": "E501",
+      "message": "Line too long (144 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_reviewsheet.py",
+      "code": "E501",
+      "message": "Line too long (116 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_reviewsheet.py",
+      "code": "E501",
+      "message": "Line too long (131 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_reviewsheet.py",
+      "code": "E501",
+      "message": "Line too long (134 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_rls.py",
+      "code": "E501",
+      "message": "Line too long (112 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_rls.py",
+      "code": "E501",
+      "message": "Line too long (116 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_rls.py",
+      "code": "E501",
+      "message": "Line too long (124 > 110)",
+      "count": 2
+    },
+    {
+      "path": "backend/tests/vital_rls.py",
+      "code": "E501",
+      "message": "Line too long (125 > 110)",
+      "count": 2
+    },
+    {
+      "path": "backend/tests/vital_rls.py",
+      "code": "E501",
+      "message": "Line too long (132 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_rls_coverage.py",
+      "code": "E501",
+      "message": "Line too long (111 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_rls_coverage.py",
+      "code": "E501",
+      "message": "Line too long (112 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_runtime_liveness.py",
+      "code": "E501",
+      "message": "Line too long (111 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_runtime_liveness.py",
+      "code": "E501",
+      "message": "Line too long (113 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_runtime_liveness.py",
+      "code": "E501",
+      "message": "Line too long (123 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_runtime_liveness.py",
+      "code": "E501",
+      "message": "Line too long (124 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_schema_drift.py",
+      "code": "C401",
+      "message": "Unnecessary generator (rewrite as a set comprehension)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_schema_drift.py",
+      "code": "E501",
+      "message": "Line too long (113 > 110)",
+      "count": 2
+    },
+    {
+      "path": "backend/tests/vital_schema_drift.py",
+      "code": "E501",
+      "message": "Line too long (114 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_schema_drift.py",
+      "code": "E501",
+      "message": "Line too long (116 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_schema_drift.py",
+      "code": "E501",
+      "message": "Line too long (123 > 110)",
+      "count": 3
+    },
+    {
+      "path": "backend/tests/vital_schema_drift.py",
+      "code": "E501",
+      "message": "Line too long (127 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_schema_drift.py",
+      "code": "E501",
+      "message": "Line too long (156 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_scope_shape.py",
+      "code": "SIM115",
+      "message": "Use a context manager for opening files",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_seedworld.py",
+      "code": "E501",
+      "message": "Line too long (156 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_seedworld.py",
+      "code": "F841",
+      "message": "Local variable `new_mark` is assigned to but never used",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_seedworld.py",
+      "code": "SIM105",
+      "message": "Use `contextlib.suppress(Exception)` instead of `try`-`except`-`pass`",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_seedworld.py",
+      "code": "SIM115",
+      "message": "Use a context manager for opening files",
+      "count": 4
+    },
+    {
+      "path": "backend/tests/vital_senses.py",
+      "code": "E402",
+      "message": "Module level import not at top of file",
+      "count": 3
+    },
+    {
+      "path": "backend/tests/vital_senses.py",
+      "code": "E501",
+      "message": "Line too long (116 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_senses.py",
+      "code": "E501",
+      "message": "Line too long (119 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_senses.py",
+      "code": "E501",
+      "message": "Line too long (122 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_senses.py",
+      "code": "E702",
+      "message": "Multiple statements on one line (semicolon)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_sombra.py",
+      "code": "E501",
+      "message": "Line too long (111 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_sombra.py",
+      "code": "E501",
+      "message": "Line too long (112 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_speech.py",
+      "code": "E501",
+      "message": "Line too long (115 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_speech.py",
+      "code": "E501",
+      "message": "Line too long (119 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_speech.py",
+      "code": "E501",
+      "message": "Line too long (129 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_speech.py",
+      "code": "E702",
+      "message": "Multiple statements on one line (semicolon)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_spine.py",
+      "code": "E501",
+      "message": "Line too long (111 > 110)",
+      "count": 2
+    },
+    {
+      "path": "backend/tests/vital_spine.py",
+      "code": "E501",
+      "message": "Line too long (116 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_spine.py",
+      "code": "E501",
+      "message": "Line too long (120 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_spine.py",
+      "code": "E501",
+      "message": "Line too long (121 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_spine.py",
+      "code": "E501",
+      "message": "Line too long (126 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_spine.py",
+      "code": "E501",
+      "message": "Line too long (127 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_spine.py",
+      "code": "E501",
+      "message": "Line too long (130 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_spine.py",
+      "code": "E501",
+      "message": "Line too long (132 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_spine.py",
+      "code": "E501",
+      "message": "Line too long (136 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_spine.py",
+      "code": "E501",
+      "message": "Line too long (140 > 110)",
+      "count": 2
+    },
+    {
+      "path": "backend/tests/vital_spine.py",
+      "code": "E501",
+      "message": "Line too long (143 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_spine.py",
+      "code": "E501",
+      "message": "Line too long (145 > 110)",
+      "count": 2
+    },
+    {
+      "path": "backend/tests/vital_spine.py",
+      "code": "E501",
+      "message": "Line too long (148 > 110)",
+      "count": 2
+    },
+    {
+      "path": "backend/tests/vital_spine.py",
+      "code": "E501",
+      "message": "Line too long (150 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_spine.py",
+      "code": "E501",
+      "message": "Line too long (169 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_spine.py",
+      "code": "E501",
+      "message": "Line too long (176 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_stage_brief.py",
+      "code": "E501",
+      "message": "Line too long (114 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_stage_brief.py",
+      "code": "E702",
+      "message": "Multiple statements on one line (semicolon)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_stock.py",
+      "code": "E741",
+      "message": "Ambiguous variable name: `l`",
+      "count": 12
+    },
+    {
+      "path": "backend/tests/vital_stripe_spine.py",
+      "code": "E501",
+      "message": "Line too long (111 > 110)",
+      "count": 2
+    },
+    {
+      "path": "backend/tests/vital_stripe_spine.py",
+      "code": "E501",
+      "message": "Line too long (115 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_stripe_spine.py",
+      "code": "E501",
+      "message": "Line too long (116 > 110)",
+      "count": 4
+    },
+    {
+      "path": "backend/tests/vital_stripe_spine.py",
+      "code": "E501",
+      "message": "Line too long (125 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_stripe_spine.py",
+      "code": "E501",
+      "message": "Line too long (127 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_stripe_spine.py",
+      "code": "E501",
+      "message": "Line too long (129 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_stripe_spine.py",
+      "code": "E501",
+      "message": "Line too long (131 > 110)",
+      "count": 2
+    },
+    {
+      "path": "backend/tests/vital_sup_auth.py",
+      "code": "E702",
+      "message": "Multiple statements on one line (semicolon)",
+      "count": 3
+    },
+    {
+      "path": "backend/tests/vital_sup_routes.py",
+      "code": "E501",
+      "message": "Line too long (113 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_sup_routes.py",
+      "code": "E702",
+      "message": "Multiple statements on one line (semicolon)",
+      "count": 4
+    },
+    {
+      "path": "backend/tests/vital_tab_dossier.py",
+      "code": "E402",
+      "message": "Module level import not at top of file",
+      "count": 2
+    },
+    {
+      "path": "backend/tests/vital_tab_dossier.py",
+      "code": "E501",
+      "message": "Line too long (117 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_tab_dossier.py",
+      "code": "E501",
+      "message": "Line too long (121 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_tab_dossier.py",
+      "code": "E501",
+      "message": "Line too long (122 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_tab_dossier.py",
+      "code": "E501",
+      "message": "Line too long (130 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_tab_dossier.py",
+      "code": "E501",
+      "message": "Line too long (137 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_tab_dossier.py",
+      "code": "E501",
+      "message": "Line too long (139 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_tab_dossier.py",
+      "code": "E501",
+      "message": "Line too long (148 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_tab_dossier.py",
+      "code": "E701",
+      "message": "Multiple statements on one line (colon)",
+      "count": 2
+    },
+    {
+      "path": "backend/tests/vital_tab_dossier.py",
+      "code": "E702",
+      "message": "Multiple statements on one line (semicolon)",
+      "count": 4
+    },
+    {
+      "path": "backend/tests/vital_tenant_isolation.py",
+      "code": "E501",
+      "message": "Line too long (111 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_tenant_isolation.py",
+      "code": "E501",
+      "message": "Line too long (112 > 110)",
+      "count": 2
+    },
+    {
+      "path": "backend/tests/vital_tenant_isolation.py",
+      "code": "E501",
+      "message": "Line too long (114 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_tenant_isolation.py",
+      "code": "E741",
+      "message": "Ambiguous variable name: `l`",
+      "count": 2
+    },
+    {
+      "path": "backend/tests/vital_tenant_isolation.py",
+      "code": "SIM105",
+      "message": "Use `contextlib.suppress(OSError)` instead of `try`-`except`-`pass`",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_tenant_isolation.py",
+      "code": "SIM115",
+      "message": "Use a context manager for opening files",
+      "count": 3
+    },
+    {
+      "path": "backend/tests/vital_testworld.py",
+      "code": "E402",
+      "message": "Module level import not at top of file",
+      "count": 2
+    },
+    {
+      "path": "backend/tests/vital_testworld.py",
+      "code": "E501",
+      "message": "Line too long (128 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_testworld.py",
+      "code": "E501",
+      "message": "Line too long (137 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_testworld.py",
+      "code": "E501",
+      "message": "Line too long (175 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_testworld.py",
+      "code": "E501",
+      "message": "Line too long (370 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_testworld.py",
+      "code": "E701",
+      "message": "Multiple statements on one line (colon)",
+      "count": 5
+    },
+    {
+      "path": "backend/tests/vital_testworld.py",
+      "code": "E702",
+      "message": "Multiple statements on one line (semicolon)",
+      "count": 3
+    },
+    {
+      "path": "backend/tests/vital_trackers.py",
+      "code": "SIM105",
+      "message": "Use `contextlib.suppress(Exception)` instead of `try`-`except`-`pass`",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_vibe.py",
+      "code": "E501",
+      "message": "Line too long (115 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_vibe.py",
+      "code": "E702",
+      "message": "Multiple statements on one line (semicolon)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_vocab.py",
+      "code": "SIM115",
+      "message": "Use a context manager for opening files",
+      "count": 3
+    },
+    {
+      "path": "backend/tests/vital_wake.py",
+      "code": "E501",
+      "message": "Line too long (111 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_wake.py",
+      "code": "E501",
+      "message": "Line too long (112 > 110)",
+      "count": 2
+    },
+    {
+      "path": "backend/tests/vital_wake.py",
+      "code": "E501",
+      "message": "Line too long (116 > 110)",
+      "count": 3
+    },
+    {
+      "path": "backend/tests/vital_wake.py",
+      "code": "E501",
+      "message": "Line too long (121 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_wake.py",
+      "code": "E501",
+      "message": "Line too long (122 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_wake.py",
+      "code": "E501",
+      "message": "Line too long (123 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_wake.py",
+      "code": "E501",
+      "message": "Line too long (128 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_wake.py",
+      "code": "E501",
+      "message": "Line too long (140 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_window.py",
+      "code": "B905",
+      "message": "`zip()` without an explicit `strict=` parameter",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_window.py",
+      "code": "SIM115",
+      "message": "Use a context manager for opening files",
+      "count": 1
+    },
+    {
+      "path": "backend/trackers.py",
+      "code": "C416",
+      "message": "Unnecessary dict comprehension (rewrite using `dict()`)",
+      "count": 1
+    },
+    {
+      "path": "backend/transcribe.py",
+      "code": "E501",
+      "message": "Line too long (127 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/transcribe.py",
+      "code": "SIM105",
+      "message": "Use `contextlib.suppress(Exception)` instead of `try`-`except`-`pass`",
+      "count": 1
+    },
+    {
+      "path": "backend/trends.py",
+      "code": "C401",
+      "message": "Unnecessary generator (rewrite as a set comprehension)",
+      "count": 1
+    },
+    {
+      "path": "backend/trends.py",
+      "code": "E501",
+      "message": "Line too long (121 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/triggers.py",
+      "code": "E501",
+      "message": "Line too long (114 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/triggers.py",
+      "code": "E501",
+      "message": "Line too long (120 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/triggers.py",
+      "code": "E501",
+      "message": "Line too long (124 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/triggers.py",
+      "code": "E501",
+      "message": "Line too long (143 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/try_chat.py",
+      "code": "E501",
+      "message": "Line too long (112 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/try_chat.py",
+      "code": "E501",
+      "message": "Line too long (124 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/try_chat.py",
+      "code": "E501",
+      "message": "Line too long (128 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/try_chat.py",
+      "code": "E501",
+      "message": "Line too long (129 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/try_chat.py",
+      "code": "E501",
+      "message": "Line too long (137 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/try_chat.py",
+      "code": "E741",
+      "message": "Ambiguous variable name: `l`",
+      "count": 1
+    },
+    {
+      "path": "backend/twilio_wa.py",
+      "code": "E501",
+      "message": "Line too long (111 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/twilio_wa.py",
+      "code": "E501",
+      "message": "Line too long (134 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/twilio_wa.py",
+      "code": "SIM105",
+      "message": "Use `contextlib.suppress(Exception)` instead of `try`-`except`-`pass`",
+      "count": 1
+    },
+    {
+      "path": "backend/urlfetch.py",
+      "code": "B904",
+      "message": "Within an `except` clause, raise exceptions with `raise ... from err` or `raise ... from None` to distinguish them from errors in exception handling",
+      "count": 4
+    },
+    {
+      "path": "backend/voice.py",
+      "code": "SIM105",
+      "message": "Use `contextlib.suppress(Exception)` instead of `try`-`except`-`pass`",
+      "count": 7
+    },
+    {
+      "path": "backend/voice_fabric.py",
+      "code": "E501",
+      "message": "Line too long (114 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/voice_protocol.py",
+      "code": "E501",
+      "message": "Line too long (112 > 110)",
+      "count": 2
+    },
+    {
+      "path": "backend/voice_protocol.py",
+      "code": "E501",
+      "message": "Line too long (117 > 110)",
+      "count": 2
+    },
+    {
+      "path": "backend/voice_protocol.py",
+      "code": "E501",
+      "message": "Line too long (121 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/voice_protocol.py",
+      "code": "E501",
+      "message": "Line too long (176 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/voice_protocol.py",
+      "code": "E501",
+      "message": "Line too long (192 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/voice_protocol.py",
+      "code": "SIM105",
+      "message": "Use `contextlib.suppress(Exception)` instead of `try`-`except`-`pass`",
+      "count": 1
+    },
+    {
+      "path": "backend/voice_reply.py",
+      "code": "C408",
+      "message": "Unnecessary `dict()` call (rewrite as a literal)",
+      "count": 1
+    },
+    {
+      "path": "backend/voice_reply.py",
+      "code": "E501",
+      "message": "Line too long (111 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/voice_reply.py",
+      "code": "E501",
+      "message": "Line too long (112 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/voice_reply.py",
+      "code": "E501",
+      "message": "Line too long (113 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/voice_reply.py",
+      "code": "E501",
+      "message": "Line too long (115 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/voice_reply.py",
+      "code": "E501",
+      "message": "Line too long (116 > 110)",
+      "count": 2
+    },
+    {
+      "path": "backend/voice_reply.py",
+      "code": "E501",
+      "message": "Line too long (126 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/voice_reply.py",
+      "code": "E501",
+      "message": "Line too long (130 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/voice_reply.py",
+      "code": "SIM105",
+      "message": "Use `contextlib.suppress(Exception)` instead of `try`-`except`-`pass`",
+      "count": 3
+    },
+    {
+      "path": "backend/voice_toggle.py",
+      "code": "E501",
+      "message": "Line too long (112 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/voice_toggle.py",
+      "code": "E501",
+      "message": "Line too long (113 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/voice_turn.py",
+      "code": "E501",
+      "message": "Line too long (122 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/vroom.py",
+      "code": "B904",
+      "message": "Within an `except` clause, raise exceptions with `raise ... from err` or `raise ... from None` to distinguish them from errors in exception handling",
+      "count": 2
+    },
+    {
+      "path": "backend/wa_coexistence.py",
+      "code": "SIM105",
+      "message": "Use `contextlib.suppress(Exception)` instead of `try`-`except`-`pass`",
+      "count": 1
+    },
+    {
+      "path": "backend/wa_onboard.py",
+      "code": "B904",
+      "message": "Within an `except` clause, raise exceptions with `raise ... from err` or `raise ... from None` to distinguish them from errors in exception handling",
+      "count": 1
+    },
+    {
+      "path": "backend/whatsapp_cloud.py",
+      "code": "B904",
+      "message": "Within an `except` clause, raise exceptions with `raise ... from err` or `raise ... from None` to distinguish them from errors in exception handling",
+      "count": 1
+    },
+    {
+      "path": "backend/widget_build.py",
+      "code": "E501",
+      "message": "Line too long (115 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/widget_build.py",
+      "code": "E501",
+      "message": "Line too long (117 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/widget_build.py",
+      "code": "E501",
+      "message": "Line too long (123 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/widget_build.py",
+      "code": "E501",
+      "message": "Line too long (145 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/worker.py",
+      "code": "E501",
+      "message": "Line too long (111 > 110)",
+      "count": 3
+    },
+    {
+      "path": "backend/worker.py",
+      "code": "E501",
+      "message": "Line too long (115 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/worker.py",
+      "code": "E501",
+      "message": "Line too long (121 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/worker.py",
+      "code": "E501",
+      "message": "Line too long (122 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/worker.py",
+      "code": "E501",
+      "message": "Line too long (123 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/worker.py",
+      "code": "E501",
+      "message": "Line too long (128 > 110)",
+      "count": 1
+    },
+    {
+      "path": "backend/worker.py",
+      "code": "SIM102",
+      "message": "Use a single `if` statement instead of nested `if` statements",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-143-order.py",
+      "code": "B023",
+      "message": "Function definition does not bind loop variable `errors`",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-143-order.py",
+      "code": "E701",
+      "message": "Multiple statements on one line (colon)",
+      "count": 2
+    },
+    {
+      "path": "drives/drive-143-order.py",
+      "code": "E702",
+      "message": "Multiple statements on one line (semicolon)",
+      "count": 25
+    },
+    {
+      "path": "drives/drive-189-output-objects.py",
+      "code": "E701",
+      "message": "Multiple statements on one line (colon)",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-189-output-objects.py",
+      "code": "SIM105",
+      "message": "Use `contextlib.suppress(Exception)` instead of `try`-`except`-`pass`",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-189-product.py",
+      "code": "F841",
+      "message": "Local variable `product_editor` is assigned to but never used",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-189-product.py",
+      "code": "SIM105",
+      "message": "Use `contextlib.suppress(Exception)` instead of `try`-`except`-`pass`",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-190-trust-geometry.py",
+      "code": "B905",
+      "message": "`zip()` without an explicit `strict=` parameter",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-190-trust-geometry.py",
+      "code": "F841",
+      "message": "Local variable `quantity` is assigned to but never used",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-190-trust-geometry.py",
+      "code": "SIM105",
+      "message": "Use `contextlib.suppress(Exception)` instead of `try`-`except`-`pass`",
+      "count": 2
+    },
+    {
+      "path": "drives/drive-191-pricing-matrix.py",
+      "code": "E701",
+      "message": "Multiple statements on one line (colon)",
+      "count": 2
+    },
+    {
+      "path": "drives/drive-191-pricing-matrix.py",
+      "code": "E702",
+      "message": "Multiple statements on one line (semicolon)",
+      "count": 36
+    },
+    {
+      "path": "drives/drive-192-rate-note.py",
+      "code": "B023",
+      "message": "Function definition does not bind loop variable `card`",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-192-rate-note.py",
+      "code": "B023",
+      "message": "Function definition does not bind loop variable `errors`",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-192-rate-note.py",
+      "code": "B023",
+      "message": "Function definition does not bind loop variable `page`",
+      "count": 3
+    },
+    {
+      "path": "drives/drive-192-rate-note.py",
+      "code": "E701",
+      "message": "Multiple statements on one line (colon)",
+      "count": 6
+    },
+    {
+      "path": "drives/drive-192-rate-note.py",
+      "code": "E702",
+      "message": "Multiple statements on one line (semicolon)",
+      "count": 36
+    },
+    {
+      "path": "drives/drive-192-rate-note.py",
+      "code": "F841",
+      "message": "Local variable `after` is assigned to but never used",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-192-rate-note.py",
+      "code": "F841",
+      "message": "Local variable `rest` is assigned to but never used",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-192-row-plan.py",
+      "code": "B023",
+      "message": "Function definition does not bind loop variable `errors`",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-192-row-plan.py",
+      "code": "E701",
+      "message": "Multiple statements on one line (colon)",
+      "count": 3
+    },
+    {
+      "path": "drives/drive-192-row-plan.py",
+      "code": "E702",
+      "message": "Multiple statements on one line (semicolon)",
+      "count": 18
+    },
+    {
+      "path": "drives/drive-193-sticky-head.py",
+      "code": "B023",
+      "message": "Function definition does not bind loop variable `errors`",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-193-sticky-head.py",
+      "code": "E701",
+      "message": "Multiple statements on one line (colon)",
+      "count": 2
+    },
+    {
+      "path": "drives/drive-193-sticky-head.py",
+      "code": "E702",
+      "message": "Multiple statements on one line (semicolon)",
+      "count": 13
+    },
+    {
+      "path": "drives/drive-195-copilot.py",
+      "code": "E702",
+      "message": "Multiple statements on one line (semicolon)",
+      "count": 5
+    },
+    {
+      "path": "drives/drive-195-copilot.py",
+      "code": "SIM105",
+      "message": "Use `contextlib.suppress(Exception)` instead of `try`-`except`-`pass`",
+      "count": 2
+    },
+    {
+      "path": "drives/drive-195-retention-notice.py",
+      "code": "SIM105",
+      "message": "Use `contextlib.suppress(Exception)` instead of `try`-`except`-`pass`",
+      "count": 2
+    },
+    {
+      "path": "drives/drive-196-paper-harness.py",
+      "code": "E741",
+      "message": "Ambiguous variable name: `l`",
+      "count": 4
+    },
+    {
+      "path": "drives/drive-196-paper-manifest.py",
+      "code": "B905",
+      "message": "`zip()` without an explicit `strict=` parameter",
+      "count": 5
+    },
+    {
+      "path": "drives/drive-196-paper-manifest.py",
+      "code": "C401",
+      "message": "Unnecessary generator (rewrite as a set comprehension)",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-197-artwork.py",
+      "code": "B904",
+      "message": "Within an `except` clause, raise exceptions with `raise ... from err` or `raise ... from None` to distinguish them from errors in exception handling",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-197-hybrid-composer.py",
+      "code": "SIM105",
+      "message": "Use `contextlib.suppress(Exception)` instead of `try`-`except`-`pass`",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-198-copilot-mind.py",
+      "code": "B904",
+      "message": "Within an `except` clause, raise exceptions with `raise ... from err` or `raise ... from None` to distinguish them from errors in exception handling",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-198-copilot-mind.py",
+      "code": "SIM105",
+      "message": "Use `contextlib.suppress(Exception)` instead of `try`-`except`-`pass`",
+      "count": 3
+    },
+    {
+      "path": "drives/drive-198-copilot-mind.py",
+      "code": "SIM105",
+      "message": "Use `contextlib.suppress(ValueError, TypeError)` instead of `try`-`except`-`pass`",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-199-copilot-with-data.py",
+      "code": "B905",
+      "message": "`zip()` without an explicit `strict=` parameter",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-199-copilot-with-data.py",
+      "code": "SIM105",
+      "message": "Use `contextlib.suppress(Exception)` instead of `try`-`except`-`pass`",
+      "count": 3
+    },
+    {
+      "path": "drives/drive-200-chat-email.py",
+      "code": "SIM105",
+      "message": "Use `contextlib.suppress(Exception)` instead of `try`-`except`-`pass`",
+      "count": 5
+    },
+    {
+      "path": "drives/drive-200-class-gone.py",
+      "code": "E701",
+      "message": "Multiple statements on one line (colon)",
+      "count": 11
+    },
+    {
+      "path": "drives/drive-200-class-gone.py",
+      "code": "E702",
+      "message": "Multiple statements on one line (semicolon)",
+      "count": 9
+    },
+    {
+      "path": "drives/drive-200-class-gone.py",
+      "code": "E741",
+      "message": "Ambiguous variable name: `l`",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-200-library.py",
+      "code": "B023",
+      "message": "Function definition does not bind loop variable `errors`",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-200-library.py",
+      "code": "B905",
+      "message": "`zip()` without an explicit `strict=` parameter",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-203-frames-previews.py",
+      "code": "B023",
+      "message": "Function definition does not bind loop variable `errors`",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-204-copilot-midwidth.py",
+      "code": "B007",
+      "message": "Loop control variable `a_name` not used within loop body",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-204-copilot-midwidth.py",
+      "code": "B007",
+      "message": "Loop control variable `b_name` not used within loop body",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-204-copilot-midwidth.py",
+      "code": "SIM105",
+      "message": "Use `contextlib.suppress(Exception)` instead of `try`-`except`-`pass`",
+      "count": 1
+    },
+    {
+      "path": "drives/integrate.py",
+      "code": "E702",
+      "message": "Multiple statements on one line (semicolon)",
+      "count": 6
+    },
+    {
+      "path": "mock-api/app/__init__.py",
+      "code": "E501",
+      "message": "Line too long (112 > 110)",
+      "count": 1
+    },
+    {
+      "path": "mock-api/app/artwork.py",
+      "code": "B007",
+      "message": "Loop control variable `attempt` not used within loop body",
+      "count": 1
+    },
+    {
+      "path": "mock-api/app/artwork.py",
+      "code": "E501",
+      "message": "Line too long (111 > 110)",
+      "count": 2
+    },
+    {
+      "path": "mock-api/app/artwork.py",
+      "code": "E501",
+      "message": "Line too long (112 > 110)",
+      "count": 1
+    },
+    {
+      "path": "mock-api/app/artwork.py",
+      "code": "E501",
+      "message": "Line too long (114 > 110)",
+      "count": 3
+    },
+    {
+      "path": "mock-api/app/artwork.py",
+      "code": "E501",
+      "message": "Line too long (115 > 110)",
+      "count": 2
+    },
+    {
+      "path": "mock-api/app/artwork.py",
+      "code": "E501",
+      "message": "Line too long (120 > 110)",
+      "count": 3
+    },
+    {
+      "path": "mock-api/app/artwork.py",
+      "code": "E501",
+      "message": "Line too long (123 > 110)",
+      "count": 1
+    },
+    {
+      "path": "mock-api/app/config.py",
+      "code": "E501",
+      "message": "Line too long (111 > 110)",
+      "count": 1
+    },
+    {
+      "path": "mock-api/app/config.py",
+      "code": "E501",
+      "message": "Line too long (112 > 110)",
+      "count": 2
+    },
+    {
+      "path": "mock-api/app/config.py",
+      "code": "E501",
+      "message": "Line too long (113 > 110)",
+      "count": 1
+    },
+    {
+      "path": "mock-api/app/config.py",
+      "code": "E501",
+      "message": "Line too long (115 > 110)",
+      "count": 2
+    },
+    {
+      "path": "mock-api/app/config.py",
+      "code": "E501",
+      "message": "Line too long (117 > 110)",
+      "count": 1
+    },
+    {
+      "path": "mock-api/app/config.py",
+      "code": "E501",
+      "message": "Line too long (119 > 110)",
+      "count": 1
+    },
+    {
+      "path": "mock-api/app/config.py",
+      "code": "E501",
+      "message": "Line too long (120 > 110)",
+      "count": 2
+    },
+    {
+      "path": "mock-api/app/config.py",
+      "code": "E501",
+      "message": "Line too long (121 > 110)",
+      "count": 1
+    },
+    {
+      "path": "mock-api/app/config.py",
+      "code": "E501",
+      "message": "Line too long (125 > 110)",
+      "count": 2
+    },
+    {
+      "path": "mock-api/app/config.py",
+      "code": "E501",
+      "message": "Line too long (131 > 110)",
+      "count": 1
+    },
+    {
+      "path": "mock-api/app/config.py",
+      "code": "E501",
+      "message": "Line too long (136 > 110)",
+      "count": 1
+    },
+    {
+      "path": "mock-api/app/copilot.py",
+      "code": "E501",
+      "message": "Line too long (112 > 110)",
+      "count": 2
+    },
+    {
+      "path": "mock-api/app/copilot.py",
+      "code": "E501",
+      "message": "Line too long (113 > 110)",
+      "count": 1
+    },
+    {
+      "path": "mock-api/app/copilot.py",
+      "code": "E501",
+      "message": "Line too long (114 > 110)",
+      "count": 1
+    },
+    {
+      "path": "mock-api/app/copilot.py",
+      "code": "E501",
+      "message": "Line too long (115 > 110)",
+      "count": 1
+    },
+    {
+      "path": "mock-api/app/copilot.py",
+      "code": "E501",
+      "message": "Line too long (116 > 110)",
+      "count": 1
+    },
+    {
+      "path": "mock-api/app/copilot.py",
+      "code": "E501",
+      "message": "Line too long (118 > 110)",
+      "count": 1
+    },
+    {
+      "path": "mock-api/app/copilot.py",
+      "code": "E501",
+      "message": "Line too long (120 > 110)",
+      "count": 1
+    },
+    {
+      "path": "mock-api/app/copilot.py",
+      "code": "E501",
+      "message": "Line too long (125 > 110)",
+      "count": 1
+    },
+    {
+      "path": "mock-api/app/handwriting.py",
+      "code": "E501",
+      "message": "Line too long (112 > 110)",
+      "count": 2
+    },
+    {
+      "path": "mock-api/app/handwriting.py",
+      "code": "E501",
+      "message": "Line too long (114 > 110)",
+      "count": 2
+    },
+    {
+      "path": "mock-api/app/handwriting.py",
+      "code": "E501",
+      "message": "Line too long (115 > 110)",
+      "count": 2
+    },
+    {
+      "path": "mock-api/app/handwriting.py",
+      "code": "E501",
+      "message": "Line too long (118 > 110)",
+      "count": 1
+    },
+    {
+      "path": "mock-api/app/handwriting.py",
+      "code": "E501",
+      "message": "Line too long (119 > 110)",
+      "count": 1
+    },
+    {
+      "path": "mock-api/app/logging_setup.py",
+      "code": "E501",
+      "message": "Line too long (112 > 110)",
+      "count": 1
+    },
+    {
+      "path": "mock-api/app/logging_setup.py",
+      "code": "E501",
+      "message": "Line too long (113 > 110)",
+      "count": 1
+    },
+    {
+      "path": "mock-api/app/main.py",
+      "code": "E501",
+      "message": "Line too long (111 > 110)",
+      "count": 1
+    },
+    {
+      "path": "mock-api/app/main.py",
+      "code": "E501",
+      "message": "Line too long (140 > 110)",
+      "count": 1
+    },
+    {
+      "path": "mock-api/app/paper.py",
+      "code": "E501",
+      "message": "Line too long (113 > 110)",
+      "count": 1
+    },
+    {
+      "path": "mock-api/app/paper.py",
+      "code": "E501",
+      "message": "Line too long (114 > 110)",
+      "count": 1
+    },
+    {
+      "path": "mock-api/app/paper.py",
+      "code": "E501",
+      "message": "Line too long (115 > 110)",
+      "count": 1
+    },
+    {
+      "path": "mock-api/app/paper.py",
+      "code": "E501",
+      "message": "Line too long (125 > 110)",
+      "count": 1
+    },
+    {
+      "path": "mock-api/app/parsewise.py",
+      "code": "E501",
+      "message": "Line too long (111 > 110)",
+      "count": 2
+    },
+    {
+      "path": "mock-api/app/parsewise.py",
+      "code": "E501",
+      "message": "Line too long (113 > 110)",
+      "count": 2
+    },
+    {
+      "path": "mock-api/app/parsewise.py",
+      "code": "E501",
+      "message": "Line too long (116 > 110)",
+      "count": 1
+    },
+    {
+      "path": "mock-api/app/parsewise.py",
+      "code": "E501",
+      "message": "Line too long (118 > 110)",
+      "count": 2
+    },
+    {
+      "path": "mock-api/app/parsewise.py",
+      "code": "E501",
+      "message": "Line too long (120 > 110)",
+      "count": 4
+    },
+    {
+      "path": "mock-api/app/parsewise.py",
+      "code": "E501",
+      "message": "Line too long (121 > 110)",
+      "count": 1
+    },
+    {
+      "path": "mock-api/app/parsewise.py",
+      "code": "E501",
+      "message": "Line too long (122 > 110)",
+      "count": 1
+    },
+    {
+      "path": "mock-api/app/parsewise.py",
+      "code": "E501",
+      "message": "Line too long (126 > 110)",
+      "count": 1
+    },
+    {
+      "path": "mock-api/app/parsewise.py",
+      "code": "E501",
+      "message": "Line too long (133 > 110)",
+      "count": 1
+    },
+    {
+      "path": "mock-api/app/parsewise.py",
+      "code": "E501",
+      "message": "Line too long (135 > 110)",
+      "count": 1
+    },
+    {
+      "path": "mock-api/app/parsewise.py",
+      "code": "E501",
+      "message": "Line too long (137 > 110)",
+      "count": 1
+    },
+    {
+      "path": "mock-api/app/parsewise.py",
+      "code": "E501",
+      "message": "Line too long (139 > 110)",
+      "count": 1
+    },
+    {
+      "path": "mock-api/app/parsewise.py",
+      "code": "E501",
+      "message": "Line too long (145 > 110)",
+      "count": 1
+    },
+    {
+      "path": "mock-api/app/parsewise.py",
+      "code": "E501",
+      "message": "Line too long (165 > 110)",
+      "count": 1
+    },
+    {
+      "path": "mock-api/app/parsewise.py",
+      "code": "E501",
+      "message": "Line too long (172 > 110)",
+      "count": 1
+    },
+    {
+      "path": "mock-api/app/parsewise.py",
+      "code": "E501",
+      "message": "Line too long (184 > 110)",
+      "count": 1
+    },
+    {
+      "path": "mock-api/app/parsewise.py",
+      "code": "E501",
+      "message": "Line too long (205 > 110)",
+      "count": 1
+    },
+    {
+      "path": "mock-api/app/parsewise.py",
+      "code": "SIM109",
+      "message": "Use `label in (far_code, far_name)` instead of multiple equality comparisons",
+      "count": 1
+    },
+    {
+      "path": "mock-api/app/places.py",
+      "code": "E501",
+      "message": "Line too long (111 > 110)",
+      "count": 1
+    },
+    {
+      "path": "mock-api/app/places.py",
+      "code": "E501",
+      "message": "Line too long (132 > 110)",
+      "count": 1
+    },
+    {
+      "path": "mock-api/app/register.py",
+      "code": "B007",
+      "message": "Loop control variable `other` not used within loop body",
+      "count": 1
+    },
+    {
+      "path": "mock-api/app/register.py",
+      "code": "B905",
+      "message": "`zip()` without an explicit `strict=` parameter",
+      "count": 3
+    },
+    {
+      "path": "mock-api/app/register.py",
+      "code": "E501",
+      "message": "Line too long (111 > 110)",
+      "count": 3
+    },
+    {
+      "path": "mock-api/app/register.py",
+      "code": "E501",
+      "message": "Line too long (112 > 110)",
+      "count": 1
+    },
+    {
+      "path": "mock-api/app/register.py",
+      "code": "E501",
+      "message": "Line too long (113 > 110)",
+      "count": 1
+    },
+    {
+      "path": "mock-api/app/register.py",
+      "code": "E501",
+      "message": "Line too long (114 > 110)",
+      "count": 1
+    },
+    {
+      "path": "mock-api/app/register.py",
+      "code": "E501",
+      "message": "Line too long (117 > 110)",
+      "count": 1
+    },
+    {
+      "path": "mock-api/app/register.py",
+      "code": "E501",
+      "message": "Line too long (119 > 110)",
+      "count": 1
+    },
+    {
+      "path": "mock-api/app/register.py",
+      "code": "E501",
+      "message": "Line too long (123 > 110)",
+      "count": 1
+    },
+    {
+      "path": "mock-api/app/retention.py",
+      "code": "B007",
+      "message": "Loop control variable `path` not used within loop body",
+      "count": 1
+    },
+    {
+      "path": "mock-api/app/retention.py",
+      "code": "E501",
+      "message": "Line too long (111 > 110)",
+      "count": 1
+    },
+    {
+      "path": "mock-api/app/retention.py",
+      "code": "E501",
+      "message": "Line too long (112 > 110)",
+      "count": 1
+    },
+    {
+      "path": "mock-api/app/retention.py",
+      "code": "E501",
+      "message": "Line too long (115 > 110)",
+      "count": 1
+    },
+    {
+      "path": "mock-api/app/retention.py",
+      "code": "E501",
+      "message": "Line too long (116 > 110)",
+      "count": 1
+    },
+    {
+      "path": "mock-api/app/store.py",
+      "code": "E501",
+      "message": "Line too long (115 > 110)",
+      "count": 1
+    },
+    {
+      "path": "mock-api/app/twilio_voice.py",
+      "code": "E501",
+      "message": "Line too long (112 > 110)",
+      "count": 1
+    },
+    {
+      "path": "mock-api/app/twilio_voice.py",
+      "code": "E501",
+      "message": "Line too long (113 > 110)",
+      "count": 2
+    },
+    {
+      "path": "mock-api/app/twilio_voice.py",
+      "code": "E501",
+      "message": "Line too long (114 > 110)",
+      "count": 1
+    },
+    {
+      "path": "mock-api/app/twilio_voice.py",
+      "code": "E501",
+      "message": "Line too long (115 > 110)",
+      "count": 1
+    },
+    {
+      "path": "mock-api/tests/make_fixture_albaran.py",
+      "code": "B905",
+      "message": "`zip()` without an explicit `strict=` parameter",
+      "count": 2
+    },
+    {
+      "path": "mock-api/tests/make_fixture_albaran.py",
+      "code": "E501",
+      "message": "Line too long (113 > 110)",
+      "count": 1
+    },
+    {
+      "path": "mock-api/tests/paper_page.py",
+      "code": "B905",
+      "message": "`zip()` without an explicit `strict=` parameter",
+      "count": 1
+    },
+    {
+      "path": "mock-api/tests/paper_page.py",
+      "code": "E501",
+      "message": "Line too long (111 > 110)",
+      "count": 1
+    },
+    {
+      "path": "mock-api/tests/paper_page.py",
+      "code": "E501",
+      "message": "Line too long (118 > 110)",
+      "count": 1
+    },
+    {
+      "path": "mock-api/tests/record_degraded_reads.py",
+      "code": "E501",
+      "message": "Line too long (111 > 110)",
+      "count": 1
+    },
+    {
+      "path": "mock-api/tests/test_artwork.py",
+      "code": "E402",
+      "message": "Module level import not at top of file",
+      "count": 5
+    },
+    {
+      "path": "mock-api/tests/test_artwork.py",
+      "code": "E501",
+      "message": "Line too long (112 > 110)",
+      "count": 2
+    },
+    {
+      "path": "mock-api/tests/test_contract.py",
+      "code": "E501",
+      "message": "Line too long (111 > 110)",
+      "count": 2
+    },
+    {
+      "path": "mock-api/tests/test_copilot.py",
+      "code": "E501",
+      "message": "Line too long (114 > 110)",
+      "count": 1
+    },
+    {
+      "path": "mock-api/tests/test_copilot.py",
+      "code": "E501",
+      "message": "Line too long (115 > 110)",
+      "count": 1
+    },
+    {
+      "path": "mock-api/tests/test_copilot.py",
+      "code": "E501",
+      "message": "Line too long (116 > 110)",
+      "count": 1
+    },
+    {
+      "path": "mock-api/tests/test_deepgram.py",
+      "code": "E501",
+      "message": "Line too long (111 > 110)",
+      "count": 2
+    },
+    {
+      "path": "mock-api/tests/test_health.py",
+      "code": "C401",
+      "message": "Unnecessary generator (rewrite as a set comprehension)",
+      "count": 1
+    },
+    {
+      "path": "mock-api/tests/test_paper_endpoints.py",
+      "code": "E501",
+      "message": "Line too long (112 > 110)",
+      "count": 2
+    },
+    {
+      "path": "mock-api/tests/test_paper_endpoints.py",
+      "code": "E501",
+      "message": "Line too long (116 > 110)",
+      "count": 1
+    },
+    {
+      "path": "mock-api/tests/test_paper_endpoints.py",
+      "code": "E501",
+      "message": "Line too long (117 > 110)",
+      "count": 1
+    },
+    {
+      "path": "mock-api/tests/test_paper_endpoints.py",
+      "code": "E501",
+      "message": "Line too long (120 > 110)",
+      "count": 1
+    },
+    {
+      "path": "mock-api/tests/test_paper_handwriting.py",
+      "code": "E501",
+      "message": "Line too long (111 > 110)",
+      "count": 1
+    },
+    {
+      "path": "mock-api/tests/test_paper_handwriting.py",
+      "code": "E501",
+      "message": "Line too long (113 > 110)",
+      "count": 1
+    },
+    {
+      "path": "mock-api/tests/test_paper_handwriting.py",
+      "code": "E501",
+      "message": "Line too long (115 > 110)",
+      "count": 1
+    },
+    {
+      "path": "mock-api/tests/test_paper_handwriting.py",
+      "code": "E501",
+      "message": "Line too long (117 > 110)",
+      "count": 1
+    },
+    {
+      "path": "mock-api/tests/test_paper_register.py",
+      "code": "E501",
+      "message": "Line too long (111 > 110)",
+      "count": 1
+    },
+    {
+      "path": "mock-api/tests/test_paper_register.py",
+      "code": "E501",
+      "message": "Line too long (117 > 110)",
+      "count": 1
+    },
+    {
+      "path": "mock-api/tests/test_parse_degraded.py",
+      "code": "E501",
+      "message": "Line too long (115 > 110)",
+      "count": 1
+    },
+    {
+      "path": "mock-api/tests/test_parse_degraded.py",
+      "code": "E501",
+      "message": "Line too long (116 > 110)",
+      "count": 1
+    },
+    {
+      "path": "mock-api/tests/test_retention.py",
+      "code": "E501",
+      "message": "Line too long (115 > 110)",
+      "count": 1
+    },
+    {
+      "path": "tools/artwork-gate.py",
+      "code": "E501",
+      "message": "Line too long (113 > 110)",
+      "count": 1
+    },
+    {
+      "path": "tools/backend-map.py",
+      "code": "E501",
+      "message": "Line too long (112 > 110)",
+      "count": 1
+    },
+    {
+      "path": "tools/backend-map.py",
+      "code": "E731",
+      "message": "Do not assign a `lambda` expression, use a `def`",
+      "count": 1
+    },
+    {
+      "path": "tools/copy-gate.py",
+      "code": "E501",
+      "message": "Line too long (170 > 110)",
+      "count": 1
+    },
+    {
+      "path": "tools/copy-gate.py",
+      "code": "E501",
+      "message": "Line too long (174 > 110)",
+      "count": 1
+    },
+    {
+      "path": "tools/copy-gate.py",
+      "code": "E701",
+      "message": "Multiple statements on one line (colon)",
+      "count": 3
+    },
+    {
+      "path": "tools/copy-gate.py",
+      "code": "E702",
+      "message": "Multiple statements on one line (semicolon)",
+      "count": 2
+    },
+    {
+      "path": "tools/copy-gate.py",
+      "code": "E741",
+      "message": "Ambiguous variable name: `l`",
+      "count": 1
+    },
+    {
+      "path": "tools/degrade.py",
+      "code": "B905",
+      "message": "`zip()` without an explicit `strict=` parameter",
+      "count": 1
+    },
+    {
+      "path": "tools/degrade.py",
+      "code": "C416",
+      "message": "Unnecessary list comprehension (rewrite using `list()`)",
+      "count": 1
+    },
+    {
+      "path": "tools/degrade.py",
+      "code": "E501",
+      "message": "Line too long (111 > 110)",
+      "count": 1
+    },
+    {
+      "path": "tools/degrade.py",
+      "code": "E501",
+      "message": "Line too long (113 > 110)",
+      "count": 2
+    },
+    {
+      "path": "tools/degrade.py",
+      "code": "E501",
+      "message": "Line too long (119 > 110)",
+      "count": 3
+    },
+    {
+      "path": "tools/degrade.py",
+      "code": "E501",
+      "message": "Line too long (120 > 110)",
+      "count": 2
+    },
+    {
+      "path": "tools/degrade.py",
+      "code": "E501",
+      "message": "Line too long (122 > 110)",
+      "count": 2
+    },
+    {
+      "path": "tools/degrade.py",
+      "code": "E501",
+      "message": "Line too long (123 > 110)",
+      "count": 1
+    },
+    {
+      "path": "tools/degrade.py",
+      "code": "E501",
+      "message": "Line too long (127 > 110)",
+      "count": 1
+    },
+    {
+      "path": "tools/degrade.py",
+      "code": "E501",
+      "message": "Line too long (128 > 110)",
+      "count": 1
+    },
+    {
+      "path": "tools/degrade.py",
+      "code": "E501",
+      "message": "Line too long (129 > 110)",
+      "count": 1
+    },
+    {
+      "path": "tools/degrade.py",
+      "code": "E501",
+      "message": "Line too long (131 > 110)",
+      "count": 3
+    },
+    {
+      "path": "tools/degrade.py",
+      "code": "E501",
+      "message": "Line too long (137 > 110)",
+      "count": 1
+    },
+    {
+      "path": "tools/degrade.py",
+      "code": "E501",
+      "message": "Line too long (139 > 110)",
+      "count": 2
+    },
+    {
+      "path": "tools/degrade.py",
+      "code": "E501",
+      "message": "Line too long (141 > 110)",
+      "count": 1
+    },
+    {
+      "path": "tools/env-gate.py",
+      "code": "E501",
+      "message": "Line too long (111 > 110)",
+      "count": 1
+    },
+    {
+      "path": "tools/paper-harness.py",
+      "code": "E501",
+      "message": "Line too long (111 > 110)",
+      "count": 3
+    },
+    {
+      "path": "tools/paper-harness.py",
+      "code": "E501",
+      "message": "Line too long (112 > 110)",
+      "count": 2
+    },
+    {
+      "path": "tools/paper-harness.py",
+      "code": "E501",
+      "message": "Line too long (113 > 110)",
+      "count": 2
+    },
+    {
+      "path": "tools/paper-harness.py",
+      "code": "E501",
+      "message": "Line too long (114 > 110)",
+      "count": 1
+    },
+    {
+      "path": "tools/paper-harness.py",
+      "code": "E501",
+      "message": "Line too long (141 > 110)",
+      "count": 1
+    },
+    {
+      "path": "tools/parse-floor-probe.py",
+      "code": "E501",
+      "message": "Line too long (112 > 110)",
+      "count": 1
+    },
+    {
+      "path": "tools/parse-floor-probe.py",
+      "code": "E501",
+      "message": "Line too long (114 > 110)",
+      "count": 1
+    },
+    {
+      "path": "tools/parse-floor-probe.py",
+      "code": "E501",
+      "message": "Line too long (123 > 110)",
+      "count": 2
+    },
+    {
+      "path": "tools/parse-harness.py",
+      "code": "E501",
+      "message": "Line too long (111 > 110)",
+      "count": 1
+    },
+    {
+      "path": "tools/parse-harness.py",
+      "code": "E501",
+      "message": "Line too long (116 > 110)",
+      "count": 1
+    },
+    {
+      "path": "tools/parse-harness.py",
+      "code": "E501",
+      "message": "Line too long (121 > 110)",
+      "count": 1
+    },
+    {
+      "path": "tools/prod-ip-gate.py",
+      "code": "B904",
+      "message": "Within an `except` clause, raise exceptions with `raise ... from err` or `raise ... from None` to distinguish them from errors in exception handling",
+      "count": 1
+    },
+    {
+      "path": "tools/prod-ip-gate.py",
+      "code": "E501",
+      "message": "Line too long (111 > 110)",
+      "count": 1
+    },
+    {
+      "path": "tools/qr-harness.py",
+      "code": "E501",
+      "message": "Line too long (111 > 110)",
+      "count": 2
+    },
+    {
+      "path": "tools/qr-harness.py",
+      "code": "E501",
+      "message": "Line too long (112 > 110)",
+      "count": 3
+    },
+    {
+      "path": "tools/qr-harness.py",
+      "code": "E501",
+      "message": "Line too long (113 > 110)",
+      "count": 3
+    },
+    {
+      "path": "tools/qr-harness.py",
+      "code": "E501",
+      "message": "Line too long (115 > 110)",
+      "count": 2
+    },
+    {
+      "path": "tools/qr-harness.py",
+      "code": "E501",
+      "message": "Line too long (117 > 110)",
+      "count": 1
+    },
+    {
+      "path": "tools/qr-harness.py",
+      "code": "E501",
+      "message": "Line too long (118 > 110)",
+      "count": 1
+    },
+    {
+      "path": "tools/qr-harness.py",
+      "code": "E501",
+      "message": "Line too long (119 > 110)",
+      "count": 2
+    },
+    {
+      "path": "tools/qr-harness.py",
+      "code": "E501",
+      "message": "Line too long (122 > 110)",
+      "count": 1
+    },
+    {
+      "path": "tools/qr-harness.py",
+      "code": "E501",
+      "message": "Line too long (126 > 110)",
+      "count": 1
+    },
+    {
+      "path": "tools/qr-harness.py",
+      "code": "E501",
+      "message": "Line too long (138 > 110)",
+      "count": 1
+    },
+    {
+      "path": "tools/qr-harness.py",
+      "code": "E501",
+      "message": "Line too long (140 > 110)",
+      "count": 1
+    },
+    {
+      "path": "tools/serve-with-runtime.py",
+      "code": "E501",
+      "message": "Line too long (111 > 110)",
+      "count": 1
+    },
+    {
+      "path": "tools/serve-with-runtime.py",
+      "code": "E501",
+      "message": "Line too long (115 > 110)",
+      "count": 1
+    }
+  ]
+}

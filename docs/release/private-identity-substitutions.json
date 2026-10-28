@@ -1,0 +1,105 @@
+{
+  "scope": "Two confirmed operator phones and one founder email replaced with reserved synthetic fixture identities; installed authority/outbound resource defaults require explicit configuration.",
+  "changed_files": [
+    {
+      "path": ".env.example",
+      "after_sha256": "a7775dac0c34b7bd911c6bf6e514401da1fb0479499fb5840104e94f9b8658fd"
+    },
+    {
+      "path": "backend/narrate.py",
+      "after_sha256": "006eb9930276973a808ac0781622ab4e3981d4307eb98cb94df6165ed1c24fb1"
+    },
+    {
+      "path": "backend/config.py",
+      "after_sha256": "1be2ef701be4cea47e43c983e55fc945342023002fd1a08eee8e8c3354deafae"
+    },
+    {
+      "path": "backend/demo_call.py",
+      "after_sha256": "14de7278cf027c3fa4507c8320c99aaa528cd06e8a753bc99ed46f5f5518dd62"
+    },
+    {
+      "path": "backend/runtime.py",
+      "after_sha256": "3bf7423e285410c21313624912d17e961bc02b88ff7bf39725d7bd7ca7860070"
+    },
+    {
+      "path": "backend/agent_reply.py",
+      "after_sha256": "b8c18949bf28fefc10355f49193358302803e1f99f15e7a1f651342368558253"
+    },
+    {
+      "path": "backend/app.py",
+      "after_sha256": "22cc9a81db3b995a602b566952f41bd69d36b2c86e08e5359b2b9c9f8d90d3b4"
+    },
+    {
+      "path": "backend/seed/contacts.json",
+      "after_sha256": "e1ee5a55603e0aec0636eaa07a6b673c7ec3d4cfec51df6020e67c8dd9ebdd46"
+    },
+    {
+      "path": "backend/brain/seed.py",
+      "after_sha256": "f42e8c1a25e201f647bbcde6d02c4657a29be74978f46c21513ec8d8b6d3e315"
+    },
+    {
+      "path": "backend/brain/pin_watch.py",
+      "after_sha256": "5e89b909f2aeaa3c2066f28992772c1b47515ffdede4f8a0f12f0a69652c0630"
+    },
+    {
+      "path": "backend/brain/billing.py",
+      "after_sha256": "3b549030df43ceebbef2f17c3b74baad491c5dc4594e7dd715f1f4a09432c78c"
+    },
+    {
+      "path": "backend/brain/drip.py",
+      "after_sha256": "5ac44ee655bd04f883d44cd4905e4d85671438a0406bb04c301c6c3c969bc335"
+    },
+    {
+      "path": "backend/brain/teams.py",
+      "after_sha256": "1cbac20d373da50657aa5b60740f7bd3a46805a4ab2203066865c8065e39fc93"
+    },
+    {
+      "path": "backend/tests/conftest.py",
+      "after_sha256": "6cff469c8bc87f791a5573d8ac42ea6b947970c317b401a05a337bb93b3cbdea"
+    },
+    {
+      "path": "backend/tests/vital_seedworld.py",
+      "after_sha256": "2dc20ae6dfa44296ac33ef12e33ee285ddda7649af7fde3fbfbf7783253283cb"
+    },
+    {
+      "path": "backend/tests/vital_scope_shape.py",
+      "after_sha256": "e64db3f55e23cbf6493b28fb3c37680dc4719a6a14992df5fed37b6ac4104e4d"
+    },
+    {
+      "path": "backend/tests/vital_incall.py",
+      "after_sha256": "0b61b2160fe4cd288e9e8cead92c9f8f3e9df3c060c8cdf366254df547dfcffa"
+    },
+    {
+      "path": "backend/tests/sim_live.py",
+      "after_sha256": "ca8752972d8d89fdc1937d08b052909b2450fe10cd036bc51ac053d7329cfdcc"
+    },
+    {
+      "path": "backend/tests/fixtures/golden_cases.json",
+      "after_sha256": "5bcd4c4f547fdac1f4cc2e0945e88893242c67bedd72bb769b561dbd008160b8"
+    },
+    {
+      "path": "drives/drive-cedar-phone.py",
+      "after_sha256": "97f2c2601b93047e221e67ab46498935c75f570e97969fb4589e6a0b2088e9c2"
+    },
+    {
+      "path": "app/src/scenarios/data/cast.ts",
+      "after_sha256": "e38ac49f2a246343ccd95e38d352b2af59681c1513835a9c6eb3ec3469216e13"
+    },
+    {
+      "path": "app/src/prototypes/cedar/EMAIL-IMPLEMENTATION.md",
+      "after_sha256": "13d51c72907864c44aba12560d2f9de5ec204301ee20f995d75e2eaa2c9aa710"
+    },
+    {
+      "path": "app/src/prototypes/cedar/EMAIL-INTEGRATION-SPEC.md",
+      "after_sha256": "eaa158b5ba268ed16067d2015024cf682e2c8a75b6f869d43e900dedde84fcb4"
+    },
+    {
+      "path": "app/src/prototypes/cedar/PHONE-INTEGRATION-SPEC.md",
+      "after_sha256": "11fb43ce81fa09e4ef2fd3c9c36059eeb7f024bb64a518c92c4fc95aa4783bfd"
+    },
+    {
+      "path": "docs/FEED-IA.md",
+      "after_sha256": "8c42836f2e5bfff3f21574e81b03097ecbbb00a3e7cb8a74f426bf0c2b19358f"
+    }
+  ]
+}

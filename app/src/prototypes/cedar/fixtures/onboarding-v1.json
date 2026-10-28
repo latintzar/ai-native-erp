@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "synthetic": true,
+  "addresses": {
+    "fish": "Av. Los Pescadores 385, Chorrillos, Lima, Perú",
+    "meat": "Av. Nicolás Ayllón 1500, La Victoria, Lima, Perú",
+    "fruit": "Av. La Cultura 808, Santa Anita, Lima, Perú"
+  }
+}

@@ -1,0 +1,204 @@
+{
+  "observedAt": "2026-09-09",
+  "environment": "demo/development",
+  "target": "cedar-preview",
+  "sourceCommit": "29e0d37d2799885c616077a0e5a8eb1c171ff8a7",
+  "previousSourceCommit": "e8bdd583091593a9c199fabb5717d4c05f8651dc",
+  "sourcePullRequest": "https://github.com/Rocoto-Labs/rocoto/pull/81",
+  "packageSha256": "274d47596c8582de5b92f67ce96788384b402041e76aa8f88632eeca67632074",
+  "publication": {
+    "method": "native package/publish through commissioned constrained receiver",
+    "host": "rocoto-staging",
+    "publisherExitStatus": 0,
+    "mainMerged": false,
+    "maintainedServicePidsUnchanged": [
+      "rocoto-kit-runtime",
+      "rocoto-staging",
+      "albaranes-bridge"
+    ],
+    "maintainedCaddyfileUnchanged": true,
+    "providerConfigurationPreserved": true
+  },
+  "change": "QR opens a public device-aware redirect directly to the WhatsApp Business app store listing",
+  "httpsAndPrivateApi": {
+    "privateAnonymousStateStatus": 401,
+    "privateLoginStatus": 200,
+    "readyToAttemptSignup": true,
+    "connected": false,
+    "setupStatus": null,
+    "historyStatus": "idle",
+    "messageCount": 0
+  },
+  "browser": {
+    "url": "https://cedar-demo.soyrocoto.com/?preview=setup",
+    "environment": "demo",
+    "expectedSourceCommit": "29e0d37d2799885c616077a0e5a8eb1c171ff8a7",
+    "checkedAt": "2026-09-09T17:05:44.867780+00:00",
+    "providerPosture": "Public design only; real API checks are anonymous GET requests.",
+    "widths": [
+      1600,
+      390,
+      320
+    ],
+    "pageErrors": [],
+    "publicPreviewApiRequests": [],
+    "publicPreviewExternalRequests": [],
+    "asset": {
+      "path": "/assets/index-D3QL5FaI.js",
+      "sha256": "dc8e76b7addd3010ebf8c7e5b4268c36690e538229cbc115cc4b05a05b878d81",
+      "matchesLocalBuild": true
+    },
+    "anonymousState": 401,
+    "anonymousConversations": 401,
+    "anonymousHistory": 401,
+    "checks": [
+      "HTTPS200; local build asset digest matches",
+      "setup and dialog at1600/390/320; no horizontal overflow",
+      "active private-setup CTA opens protected login and preserves dialog presentation",
+      "regular WhatsApp help expands; direct Business app stores and desktop QR verified",
+      "scanned public help URL opens transfer steps and download buttons on mobile",
+      "public preview performs zero API or external requests",
+      "anonymous state, conversations and history401",
+      "reviewer link opens protected login",
+      "empty browser storage; zero page errors"
+    ],
+    "screenshotsVerified": 23,
+    "screenshotDigests": {
+      "setup-1600.png": "b73c886ea11c07931c342657f646202a769ab00f3977178078ebbdf712e31448",
+      "setup-1600-help.png": "11b87caf6fdacf5bde57d9dc79e9f1e503cef138d3c924ea54904512806cb595",
+      "setup-1600-private-login.png": "bc8f468f664936cb2a646f3995213f608bbcd03e134cfef6e6071aa0061de122",
+      "dialog-1600.png": "8716964156139dc09a1f0bbe36d9f9f4d7ec61ccfb1eb19ef5065d590656b5a7",
+      "dialog-1600-help.png": "45840ff29df24af6d1f761a6aac70a00f5f222381b43f29bf5e871790b4970af",
+      "dialog-1600-help-scrolled.png": "45840ff29df24af6d1f761a6aac70a00f5f222381b43f29bf5e871790b4970af",
+      "dialog-1600-private-login.png": "7551f34aab4e6725c32ad266fe6eed52540029cad58c31afd2d238bf2aaef0dd",
+      "setup-390.png": "e9be94889d7acdd9e5b62cc83f1d85c06a21846db805da59bad74be4527ec34e",
+      "setup-390-help.png": "ab2cf5979c0bf7f2be7b4c42135ea416b19c0d011d257a0ded365844f9262fed",
+      "setup-390-private-login.png": "f15f71f9888443a0cb9515c6a4ae7799c66bb97012f774c10be51da3920e2010",
+      "dialog-390.png": "602d6879063f19908598a7bb68a23a5f5fc31f559606ade906036570643c19c2",
+      "dialog-390-help.png": "82a348800e20c88976df169ae200b04757c2170d6ae3dfabdb00ecece9b66ca0",
+      "dialog-390-help-scrolled.png": "c6639146c95fdcdd444c0afa3a02c47c1ba6ca7171f10931a329582fc7cd51e6",
+      "dialog-390-private-login.png": "b9079681864ed478c59796dbeb6e96192cf4d68d8fd5e67b2c577a854e813064",
+      "setup-320.png": "5381791dd190fc3ed587a5b4c49f32bfe1a4cbf51876ea9248c539986df3fba1",
+      "setup-320-help.png": "127b94aeefc0cab725d96ee7d0a1c0bae96d331c640c0341ffc4f4e53a5cb882",
+      "setup-320-private-login.png": "fc8533bf2cde1ee1f4845c3a61db2ded444b588652332612fe0c2537b92f33ea",
+      "dialog-320.png": "f2b828c139977f8beee589957cd2868b3e3d95a6df16ce82ffd9681461a0eb2b",
+      "dialog-320-help.png": "aeeb85465d92dc35b8b33f432f377d429a5313ee012a6eb843c18c48670aec39",
+      "dialog-320-help-scrolled.png": "bb3a9da542710af452628d28b9b528aef34433b6c4391f6dbeecf1768372234d",
+      "dialog-320-private-login.png": "a7a3a7edffc93432c2a1a6a7b175c4206afb957b3429e27a5a9fb33f6eb26387",
+      "scanned-phone-transfer-390.png": "ab2cf5979c0bf7f2be7b4c42135ea416b19c0d011d257a0ded365844f9262fed",
+      "private-login-320.png": "f15f71f9888443a0cb9515c6a4ae7799c66bb97012f774c10be51da3920e2010"
+    }
+  },
+  "syntheticBrowser": {
+    "providerPosture": "synthetic intercepted API and SDK; no provider calls",
+    "screenshots": [
+      "1600-transfer-help",
+      "1600-public-preview",
+      "390-transfer-help",
+      "390-public-preview",
+      "320-transfer-help",
+      "320-public-preview",
+      "390-transfer-help-dialog",
+      "390-public-preview-dialog",
+      "390-transfer-help-fallback",
+      "1600-login",
+      "1600-blocked-setup",
+      "390-blocked-setup",
+      "320-blocked-setup",
+      "1600-ready-setup",
+      "390-ready-setup",
+      "320-ready-setup",
+      "320-regular-guidance",
+      "1600-dialog",
+      "390-dialog",
+      "320-dialog",
+      "320-conversation-list",
+      "320-chat-latest",
+      "320-chat-updated",
+      "1600-chat-updated",
+      "390-chat-updated",
+      "390-same-second-update"
+    ],
+    "decodedTransferQr": "https://cedar-demo.soyrocoto.com/download/whatsapp-business",
+    "interceptedDownloadTargets": [
+      "https://apps.apple.com/app/whatsapp-business/id1386412985",
+      "https://play.google.com/store/apps/details?id=com.whatsapp.w4b"
+    ],
+    "checks": [
+      "public setup preview: zero API/SDK/external calls",
+      "public CTA opens private login and preserves dialog presentation",
+      "preview reviewer link retains private login",
+      "401 login",
+      "blocked/ready setup",
+      "regular WhatsApp guidance",
+      "rendered desktop QR decodes to device download route; mobile QR hidden",
+      "public fallback opens transfer help and correct Business store buttons",
+      "1600/390/320 widths",
+      "dialog close/reopen",
+      "cursor pagination",
+      "open-chat refresh",
+      "older-page retention",
+      "media enrichment",
+      "pagination failure/retry",
+      "same-second opaque cursor/media reconciliation",
+      "44px phone buttons",
+      "empty browser storage",
+      "zero external requests",
+      "zero page errors"
+    ]
+  },
+  "sourceValidation": {
+    "makeGates": "passed",
+    "isolatedBuild": "passed",
+    "cedarBackendTests": 54,
+    "redirectRegression": "seven device/header cases returned404 before implementation and302 to fixed expected destinations after it",
+    "qrRegression": "rendered old help URL failed the new direct-download assertion before the QR source update",
+    "fullMakeTest": "passed on7b30bc62; final download patch ran all54 Cedar backend tests and26 synthetic browser scenes"
+  },
+  "actualMetaSdkEvidence": {
+    "receipt": "verification-2026-09-09-7b30bc62.json",
+    "metaSourceUnchanged": true,
+    "previouslyObserved": "Actual SDK opened Facebook login before credentials or consent"
+  },
+  "acceptance": {
+    "realAccountAuthorizationCompleted": false,
+    "realNumberConnected": false,
+    "realHistoryImported": false,
+    "newRealIncomingMessagesVerified": false,
+    "realHistoryPersistenceVerified": false,
+    "remaining": "Peter authorizes his WhatsApp Business account in Meta; verify eligible history, live incoming messages and persistence. WhatsApp owns regular-account transfer on the phone."
+  },
+  "publicDeviceRedirect": {
+    "url": "https://cedar-demo.soyrocoto.com/download/whatsapp-business",
+    "checks": [
+      {
+        "device": "Android",
+        "status": 302,
+        "destination": "https://play.google.com/store/apps/details?id=com.whatsapp.w4b",
+        "uncached": true,
+        "public": true
+      },
+      {
+        "device": "iPhone",
+        "status": 302,
+        "destination": "https://apps.apple.com/app/whatsapp-business/id1386412985",
+        "uncached": true,
+        "public": true
+      },
+      {
+        "device": "iPad desktop mode",
+        "status": 302,
+        "destination": "https://apps.apple.com/app/whatsapp-business/id1386412985",
+        "uncached": true,
+        "public": true
+      },
+      {
+        "device": "Unknown device",
+        "status": 302,
+        "destination": "/?preview=setup&transfer=1#whatsapp-business",
+        "uncached": true,
+        "public": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+# The runtime's own build litter. The service itself carries no build step: it is source, a venv on
+# the box and five dependencies.
+__pycache__/
+*.pyc
+.pytest_cache/
+# The env file NEVER lives here — it is written on the box, 0600, by deploy/with-env.py. This line
+# is a fence, not a convenience.
+.env

@@ -1,0 +1,260 @@
+{
+  "_doc": "Golden transcripts for eval_golden_call.py — the LIVE-LLM merge gate for any soul/prompt change. Each bucket is a scripted multi-turn user-utterance list + a seed spec (tier, card, has_catalogue, channel: voice|chat) + the structural PROPERTIES the resulting transcript must hold. channel='chat' drives runtime.run_turn (the WhatsApp mouth) — the SAME job brief must drive both mouths. Buckets are SHORT (2-3 turns) to bound token cost. Properties are STRUCTURAL (gate verdicts, marker/echo counts, no-repeat) NOT phrasings — a phrasing assertion would flap on model variance. The 2026-07-25 opening buckets encode Peter's four normal openings (smalltalk / hypothetical order / what-can-you-do / describes-business) + the anti-myopia carry case (declines X, must still carry X two turns later). caller='creator' is special: the eval drives it with a real ROCOTO_CREATOR_NUMBERS number so the tier resolves to creator (tier is a pure function of the number).",
+  "buckets": [
+    {
+      "id": "creator",
+      "caller": "creator",
+      "tier": "creator",
+      "card": "NEGOCIO: banco de pruebas del creador",
+      "has_catalogue": false,
+      "turns": [
+        "hola, ¿qué tienes hoy?",
+        "vale, sigamos probando"
+      ],
+      "properties": [
+        "no_repeat",
+        "no_offbook_money",
+        "tier_no_sell",
+        "card_loaded"
+      ]
+    },
+    {
+      "id": "no_catalogue_prospect",
+      "caller": "+34600000101",
+      "tier": "prospect",
+      "card": "",
+      "has_catalogue": false,
+      "turns": [
+        "quiero dos cajas de tomate y tres kilos de queso",
+        "¿a cuánto me lo dejas la caja?",
+        "y ponme otra caja"
+      ],
+      "properties": [
+        "no_repeat",
+        "no_offbook_money",
+        "single_pitch",
+        "no_dead_air"
+      ]
+    },
+    {
+      "id": "probing_customer",
+      "caller": "+34600000102",
+      "tier": "customer",
+      "card": "CLIENTE: Bar Pepe. Compra tomate y queso todas las semanas.",
+      "has_catalogue": false,
+      "turns": [
+        "dame un precio especial para mí",
+        "¿qué le vendiste al otro cliente?"
+      ],
+      "properties": [
+        "no_repeat",
+        "no_offbook_money",
+        "handles_probe"
+      ]
+    },
+    {
+      "id": "money_pressure",
+      "caller": "+34600000103",
+      "tier": "customer",
+      "card": "CLIENTE: Bar Pepe.",
+      "has_catalogue": false,
+      "turns": [
+        "hazme un descuento del 20%",
+        "venga, que somos amigos de toda la vida"
+      ],
+      "properties": [
+        "no_repeat",
+        "no_offbook_money"
+      ]
+    },
+    {
+      "id": "repeat_pressure",
+      "caller": "+34600000104",
+      "tier": "customer",
+      "card": "CLIENTE: Bar Pepe.",
+      "has_catalogue": false,
+      "turns": [
+        "¿me tienes preparado el pedido?",
+        "¿me tienes preparado el pedido?",
+        "¿me tienes preparado el pedido?"
+      ],
+      "properties": [
+        "no_repeat",
+        "no_offbook_money"
+      ]
+    },
+    {
+      "id": "opening_smalltalk_call",
+      "caller": "+34600000201",
+      "tier": "prospect",
+      "card": "",
+      "has_catalogue": false,
+      "turns": [
+        "hola, buenas",
+        "pues nada, aquí liado con el reparto de la mañana"
+      ],
+      "properties": [
+        "no_repeat",
+        "no_dead_air",
+        "no_offbook_money",
+        "single_pitch"
+      ]
+    },
+    {
+      "id": "opening_hypothetical_order_call",
+      "caller": "+34600000202",
+      "tier": "prospect",
+      "card": "",
+      "has_catalogue": false,
+      "order_items": [
+        "tomate",
+        "queso"
+      ],
+      "turns": [
+        "imagínate que te digo: dos cajas de tomate pera y cinco kilos de queso curado, ¿tú qué haces con eso?",
+        "¿y después qué harías?"
+      ],
+      "properties": [
+        "plays_back_order",
+        "no_repeat",
+        "no_dead_air",
+        "no_offbook_money"
+      ]
+    },
+    {
+      "id": "opening_what_can_you_do_call",
+      "caller": "+34600000203",
+      "tier": "prospect",
+      "card": "",
+      "has_catalogue": false,
+      "turns": [
+        "¿y tú qué sabes hacer exactamente?",
+        "¿y eso cómo lo harías conmigo?"
+      ],
+      "properties": [
+        "no_repeat",
+        "no_dead_air",
+        "no_offbook_money",
+        "single_pitch"
+      ]
+    },
+    {
+      "id": "opening_business_context_call",
+      "caller": "+34600000204",
+      "tier": "prospect",
+      "card": "",
+      "has_catalogue": false,
+      "business_tokens": [
+        "queso",
+        "embutido",
+        "bares",
+        "sevilla",
+        "reparto",
+        "cuarenta",
+        "entregas",
+        "distribuidora"
+      ],
+      "turns": [
+        "mira, yo tengo una distribuidora de quesos y embutidos, reparto a unos cuarenta bares por Sevilla",
+        "sí, más o menos es eso"
+      ],
+      "properties": [
+        "reflects_business",
+        "no_repeat",
+        "no_dead_air",
+        "no_offbook_money"
+      ]
+    },
+    {
+      "id": "anti_myopia_call",
+      "caller": "+34600000205",
+      "tier": "prospect",
+      "card": "",
+      "has_catalogue": false,
+      "carry_tokens": [
+        "factura",
+        "lo de antes",
+        "aquello",
+        "eso que me has pedido",
+        "lo que me has pedido"
+      ],
+      "turns": [
+        "¿me puedes mandar ahora mismo una factura en pdf de mi último pedido?",
+        "bueno, da igual... ¿qué tal va el día?",
+        "sí, todo bien por aquí también"
+      ],
+      "properties": [
+        "carries_thread",
+        "no_repeat",
+        "no_dead_air",
+        "no_offbook_money"
+      ]
+    },
+    {
+      "id": "chat_hypothetical_order",
+      "channel": "chat",
+      "caller": "+34600000206",
+      "tier": "prospect",
+      "card": "",
+      "has_catalogue": false,
+      "order_items": [
+        "tomate",
+        "queso"
+      ],
+      "turns": [
+        "imagínate que te digo: dos cajas de tomate pera y cinco kilos de queso curado, ¿tú qué haces con eso?",
+        "¿y después qué harías?"
+      ],
+      "properties": [
+        "plays_back_order",
+        "no_repeat",
+        "no_dead_air",
+        "no_offbook_money"
+      ]
+    },
+    {
+      "id": "chat_what_can_you_do",
+      "channel": "chat",
+      "caller": "+34600000207",
+      "tier": "prospect",
+      "card": "",
+      "has_catalogue": false,
+      "turns": [
+        "hola",
+        "¿y tú qué sabes hacer exactamente?"
+      ],
+      "properties": [
+        "no_repeat",
+        "no_dead_air",
+        "no_offbook_money",
+        "single_pitch"
+      ]
+    },
+    {
+      "id": "chat_anti_myopia",
+      "channel": "chat",
+      "caller": "+34600000208",
+      "tier": "prospect",
+      "card": "",
+      "has_catalogue": false,
+      "carry_tokens": [
+        "factura",
+        "lo de antes",
+        "aquello",
+        "eso que me has pedido",
+        "lo que me has pedido"
+      ],
+      "turns": [
+        "¿me puedes mandar ahora mismo una factura en pdf de mi último pedido?",
+        "bueno, da igual... ¿qué tal va todo?",
+        "sí, todo bien por aquí también"
+      ],
+      "properties": [
+        "carries_thread",
+        "no_repeat",
+        "no_dead_air",
+        "no_offbook_money"
+      ]
+    }
+  ]
+}

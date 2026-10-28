@@ -1,0 +1,351 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://kit.soyrocoto.com/product-docs/contracts/print-attempt.schema.json",
+  "title": "Rocoto immutable print attempt",
+  "description": "Production target contract. Server verifies tenant/actor authority, captured artifact ownership and all revisions, idempotency, predecessor relation, exact receipt and conservation of subjects/pages/copies. JSON validation alone cannot grant authority or prove physical output. Browser afterprint/close/download is never physical receipt.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "tenant_id",
+    "attempt_id",
+    "job_id",
+    "idempotency_key",
+    "requested_by",
+    "requested_at",
+    "artifact",
+    "subjects",
+    "paper",
+    "copies",
+    "target",
+    "state"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "tenant_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "attempt_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "job_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "idempotency_key": {
+      "type": "string",
+      "minLength": 1
+    },
+    "requested_by": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "display_name"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "display_name": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "requested_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "reprint_of": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "artifact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "sha256",
+        "profile_id",
+        "profile_version",
+        "page_count"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "profile_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "profile_version": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "page_count": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    },
+    "subjects": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "kind",
+          "id",
+          "revision"
+        ],
+        "properties": {
+          "kind": {
+            "enum": [
+              "albaran",
+              "packing",
+              "truck-divider"
+            ]
+          },
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "revision": {
+            "type": "string",
+            "minLength": 1
+          },
+          "truck_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "business_day": {
+            "type": "string",
+            "format": "date"
+          }
+        }
+      }
+    },
+    "paper": {
+      "enum": [
+        "A4",
+        "A5"
+      ]
+    },
+    "copies": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "target": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind"
+      ],
+      "properties": {
+        "kind": {
+          "enum": [
+            "browser",
+            "verified-printer-bridge"
+          ]
+        },
+        "device_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "capability_revision": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "state": {
+      "enum": [
+        "prepared",
+        "failed-before-submit",
+        "submitted-unconfirmed",
+        "provider-accepted",
+        "partially-confirmed",
+        "unknown",
+        "cancelled",
+        "confirmed",
+        "reconciled"
+      ]
+    },
+    "submitted_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "confirmation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "method",
+        "actor",
+        "at",
+        "artifact_sha256",
+        "confirmed_copies"
+      ],
+      "properties": {
+        "method": {
+          "enum": [
+            "human-attestation",
+            "verified-printer-receipt"
+          ]
+        },
+        "actor": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "id",
+            "display_name"
+          ],
+          "properties": {
+            "id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "display_name": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "artifact_sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "confirmed_copies": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "provider_receipt_id": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "method": {
+                "const": "verified-printer-receipt"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "provider_receipt_id"
+            ]
+          }
+        }
+      ]
+    },
+    "failure": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "code",
+        "safe_message",
+        "retry_disposition"
+      ],
+      "properties": {
+        "code": {
+          "enum": [
+            "popup-blocked",
+            "assets-unavailable",
+            "render-failed",
+            "permission-denied",
+            "device-unavailable",
+            "receipt-mismatch",
+            "outcome-unknown"
+          ]
+        },
+        "safe_message": {
+          "type": "string",
+          "minLength": 1
+        },
+        "retry_disposition": {
+          "enum": [
+            "same-prepared-attempt",
+            "reconcile-first",
+            "not-retryable"
+          ]
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "state": {
+            "const": "confirmed"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "submitted_at",
+          "confirmation"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "state": {
+            "const": "failed-before-submit"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "failure"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "target": {
+            "properties": {
+              "kind": {
+                "const": "verified-printer-bridge"
+              }
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "target": {
+            "required": [
+              "device_id",
+              "capability_revision"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

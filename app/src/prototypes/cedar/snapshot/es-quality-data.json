@@ -1,0 +1,2197 @@
+{
+  "locale": "es-ES",
+  "schemaVersion": 1,
+  "entries": [
+    {
+      "source": "src/scenarios/data/cast.ts",
+      "context": "fish.order.deliveryDay",
+      "kind": "scenario-fixture",
+      "english": "Friday 22.08",
+      "spanish": "Viernes 22.08"
+    },
+    {
+      "source": "src/scenarios/data/cast.ts",
+      "context": "fish.order.words[0]",
+      "kind": "scenario-fixture",
+      "english": "Morning. For tomorrow: 12 kg merluza, 3 kg gamba roja, and a caja of pulpo.",
+      "spanish": "Buenos días. Para mañana: 12 kg de merluza, 3 kg de gamba roja y una caja de pulpo."
+    },
+    {
+      "source": "src/scenarios/data/cast.ts",
+      "context": "fish.order.words[1]",
+      "kind": "scenario-fixture",
+      "english": "The merluza for the plancha, so nothing under a kilo if you can.",
+      "spanish": "La merluza es para la plancha, así que nada de menos de un kilo si puede ser."
+    },
+    {
+      "source": "src/scenarios/data/cast.ts",
+      "context": "fish.order.utterances[0]",
+      "kind": "scenario-fixture",
+      "english": "Morning. For tomorrow: 12 kg merluza,",
+      "spanish": "Buenos días. Para mañana: 12 kg de merluza,"
+    },
+    {
+      "source": "src/scenarios/data/cast.ts",
+      "context": "fish.order.utterances[1]",
+      "kind": "scenario-fixture",
+      "english": "3 kg gamba roja, and a caja of pulpo.",
+      "spanish": "3 kg de gamba roja y una caja de pulpo."
+    },
+    {
+      "source": "src/scenarios/data/cast.ts",
+      "context": "fish.order.utterances[2]",
+      "kind": "scenario-fixture",
+      "english": "The merluza for the plancha, so nothing under a kilo if you can.",
+      "spanish": "La merluza es para la plancha, así que nada de menos de un kilo si puede ser."
+    },
+    {
+      "source": "src/scenarios/data/cast.ts",
+      "context": "meat.order.deliveryDay",
+      "kind": "scenario-fixture",
+      "english": "Friday 22.08",
+      "spanish": "Viernes 22.08"
+    },
+    {
+      "source": "src/scenarios/data/cast.ts",
+      "context": "meat.order.words[0]",
+      "kind": "scenario-fixture",
+      "english": "For Friday: half a media canal, two cajas of chorizo sarta, and 4 kg of jamón al corte.",
+      "spanish": "Para el viernes: media canal, dos cajas de chorizo sarta y 4 kg de jamón al corte."
+    },
+    {
+      "source": "src/scenarios/data/cast.ts",
+      "context": "meat.order.words[1]",
+      "kind": "scenario-fixture",
+      "english": "The jamón sliced thin, same as always.",
+      "spanish": "El jamón cortado fino, como siempre."
+    },
+    {
+      "source": "src/scenarios/data/cast.ts",
+      "context": "meat.order.utterances[0]",
+      "kind": "scenario-fixture",
+      "english": "For Friday: half a media canal, two cajas of chorizo sarta,",
+      "spanish": "Para el viernes: media canal, dos cajas de chorizo sarta,"
+    },
+    {
+      "source": "src/scenarios/data/cast.ts",
+      "context": "meat.order.utterances[1]",
+      "kind": "scenario-fixture",
+      "english": "and 4 kg of jamón al corte.",
+      "spanish": "y 4 kg de jamón al corte."
+    },
+    {
+      "source": "src/scenarios/data/cast.ts",
+      "context": "meat.order.utterances[2]",
+      "kind": "scenario-fixture",
+      "english": "The jamón sliced thin, same as always.",
+      "spanish": "El jamón cortado fino, como siempre."
+    },
+    {
+      "source": "src/scenarios/data/cast.ts",
+      "context": "fruit.order.deliveryDay",
+      "kind": "scenario-fixture",
+      "english": "Friday 22.08",
+      "spanish": "Viernes 22.08"
+    },
+    {
+      "source": "src/scenarios/data/cast.ts",
+      "context": "fruit.order.words[0]",
+      "kind": "scenario-fixture",
+      "english": "For tomorrow: 3 cajas of mango de barco, 2 of aguacate Hass, and 6 kg of tomate rama.",
+      "spanish": "Para mañana: 3 cajas de mango de barco, 2 de aguacate Hass y 6 kg de tomate rama."
+    },
+    {
+      "source": "src/scenarios/data/cast.ts",
+      "context": "fruit.order.words[1]",
+      "kind": "scenario-fixture",
+      "english": "El aguacate bien maduro, we plate it on Saturday.",
+      "spanish": "El aguacate bien maduro, lo emplatamos el sábado."
+    },
+    {
+      "source": "src/scenarios/data/cast.ts",
+      "context": "fruit.order.utterances[0]",
+      "kind": "scenario-fixture",
+      "english": "For tomorrow: 3 cajas of mango de barco,",
+      "spanish": "Para mañana: 3 cajas de mango de barco,"
+    },
+    {
+      "source": "src/scenarios/data/cast.ts",
+      "context": "fruit.order.utterances[1]",
+      "kind": "scenario-fixture",
+      "english": "2 of aguacate Hass, and 6 kg of tomate rama.",
+      "spanish": "2 de aguacate Hass y 6 kg de tomate rama."
+    },
+    {
+      "source": "src/scenarios/data/cast.ts",
+      "context": "fruit.order.utterances[2]",
+      "kind": "scenario-fixture",
+      "english": "El aguacate bien maduro, we plate it on Saturday.",
+      "spanish": "El aguacate bien maduro, lo emplatamos el sábado."
+    },
+    {
+      "source": "src/scenarios/data/cast.ts",
+      "context": "fish.trade",
+      "kind": "scenario-fixture",
+      "english": "Fish",
+      "spanish": "Pescado y marisco"
+    },
+    {
+      "source": "src/scenarios/data/cast.ts",
+      "context": "meat.trade",
+      "kind": "scenario-fixture",
+      "english": "Meat",
+      "spanish": "Carne"
+    },
+    {
+      "source": "src/scenarios/data/cast.ts",
+      "context": "fruit.trade",
+      "kind": "scenario-fixture",
+      "english": "Fruit and veg",
+      "spanish": "Fruta y verdura"
+    },
+    {
+      "source": "src/scenarios/data/cast.ts",
+      "context": "VARIATION_PRICES[0].why",
+      "kind": "product-history",
+      "english": "Headless moves as the everyday presentation, under prime whole fish",
+      "spanish": "Sin cabeza es la presentación habitual, por debajo del pescado entero de primera"
+    },
+    {
+      "source": "src/scenarios/data/cast.ts",
+      "context": "VARIATION_PRICES[1].why",
+      "kind": "product-history",
+      "english": "Hook-caught: one fish at a time, unmarked, and the market pays for it",
+      "spanish": "De pincho: una pieza cada vez, sin marcar, y el mercado lo paga"
+    },
+    {
+      "source": "src/scenarios/data/cast.ts",
+      "context": "VARIATION_PRICES[2].why",
+      "kind": "product-history",
+      "english": "Cooked carries the labour and the weight it loses in the pot",
+      "spanish": "Cocido incorpora el trabajo y el peso que pierde en la cocción"
+    },
+    {
+      "source": "src/scenarios/data/cast.ts",
+      "context": "VARIATION_PRICES[3].why",
+      "kind": "product-history",
+      "english": "Rock octopus is firmer and the kitchens ask for it by name",
+      "spanish": "El pulpo de roca es más firme y las cocinas lo piden por su nombre"
+    },
+    {
+      "source": "src/scenarios/data/cast.ts",
+      "context": "VARIATION_PRICES[4].why",
+      "kind": "product-history",
+      "english": "Frozen is a different trade from a Palamós boat the same morning",
+      "spanish": "Congelada es un circuito comercial distinto de una barca de Palamós de esa misma mañana"
+    },
+    {
+      "source": "src/scenarios/data/cast.ts",
+      "context": "VARIATION_PRICES[5].why",
+      "kind": "product-history",
+      "english": "Frozen wings hold, so they go out under the fresh line",
+      "spanish": "Las alitas congeladas se conservan y salen por debajo de la línea fresca"
+    },
+    {
+      "source": "src/scenarios/data/cast.ts",
+      "context": "VARIATION_PRICES[6].why",
+      "kind": "product-history",
+      "english": "Sliced is bench time and the trim that goes with it",
+      "spanish": "Loncheado incorpora tiempo de corte y la merma correspondiente"
+    },
+    {
+      "source": "src/scenarios/data/cast.ts",
+      "context": "VARIATION_PRICES[7].why",
+      "kind": "product-history",
+      "english": "Boned out is the butcher’s hour, carried on the kilo that is left",
+      "spanish": "Deshuesada incorpora la hora del carnicero en el kilo resultante"
+    },
+    {
+      "source": "src/scenarios/data/cast.ts",
+      "context": "VARIATION_PRICES[8].why",
+      "kind": "product-history",
+      "english": "Galician tenderloin is bought as its own thing, not as tenderloin",
+      "spanish": "El solomillo gallego se compra como producto propio, no como un solomillo genérico"
+    },
+    {
+      "source": "src/scenarios/data/cast.ts",
+      "context": "VARIATION_PRICES[9].why",
+      "kind": "product-history",
+      "english": "Ready to eat is a week of ripening room somebody paid for",
+      "spanish": "Listo para comer incorpora una semana de cámara de maduración"
+    },
+    {
+      "source": "src/scenarios/data/cast.ts",
+      "context": "VARIATION_PRICES[10].why",
+      "kind": "product-history",
+      "english": "Green goes to the kitchens that want it firm, and it goes keener",
+      "spanish": "Verde va a las cocinas que lo quieren firme y sale a un precio más ajustado"
+    },
+    {
+      "source": "src/scenarios/data/cast.ts",
+      "context": "VARIATION_PRICES[11].why",
+      "kind": "product-history",
+      "english": "Greek vine is bought for the vine, and it travels further",
+      "spanish": "El rama griego se compra por la rama y aguanta más transporte"
+    },
+    {
+      "source": "src/scenarios/data/cast.ts",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "cash on delivery",
+      "spanish": "pago contra reembolso"
+    },
+    {
+      "source": "src/scenarios/data/cast.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Carrer de Sepúlveda 148, 3r 2a · 08011 Barcelona",
+      "spanish": "Carrer de Sepúlveda 148, 3r 2a · 08011 Barcelona"
+    },
+    {
+      "source": "src/scenarios/data/cast.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "cash on delivery",
+      "spanish": "pago contra reembolso"
+    },
+    {
+      "source": "src/scenarios/data/cast.ts",
+      "context": "ArrayExpression > StringLiteral",
+      "kind": "literal",
+      "english": "Morning. For tomorrow: 12 kg merluza, 3 kg gamba roja, and a caja of pulpo.",
+      "spanish": "Buenos días. Para mañana: 12 kg de merluza, 3 kg de gamba roja y una caja de pulpo."
+    },
+    {
+      "source": "src/scenarios/data/cast.ts",
+      "context": "ArrayExpression > StringLiteral",
+      "kind": "literal",
+      "english": "The merluza for the plancha, so nothing under a kilo if you can.",
+      "spanish": "La merluza es para la plancha, así que nada de menos de un kilo si puede ser."
+    },
+    {
+      "source": "src/scenarios/data/cast.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Morning. For tomorrow: 12 kg merluza,",
+      "spanish": "Buenos días. Para mañana: 12 kg de merluza,"
+    },
+    {
+      "source": "src/scenarios/data/cast.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "3 kg gamba roja, and a caja of pulpo.",
+      "spanish": "3 kg de gamba roja y una caja de pulpo."
+    },
+    {
+      "source": "src/scenarios/data/cast.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "The merluza for the plancha, so nothing under a kilo if you can.",
+      "spanish": "La merluza es para la plancha, así que nada de menos de un kilo si puede ser."
+    },
+    {
+      "source": "src/scenarios/data/cast.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Carrer de Provença 231, 2n 1a · 08008 Barcelona",
+      "spanish": "Carrer de Provença 231, 2n 1a · 08008 Barcelona"
+    },
+    {
+      "source": "src/scenarios/data/cast.ts",
+      "context": "ArrayExpression > StringLiteral",
+      "kind": "literal",
+      "english": "For Friday: half a media canal, two cajas of chorizo sarta, and 4 kg of jamón al corte.",
+      "spanish": "Para el viernes: media canal, dos cajas de chorizo sarta y 4 kg de jamón al corte."
+    },
+    {
+      "source": "src/scenarios/data/cast.ts",
+      "context": "ArrayExpression > StringLiteral",
+      "kind": "literal",
+      "english": "The jamón sliced thin, same as always.",
+      "spanish": "El jamón cortado fino, como siempre."
+    },
+    {
+      "source": "src/scenarios/data/cast.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "For Friday: half a media canal, two cajas of chorizo sarta,",
+      "spanish": "Para el viernes: media canal, dos cajas de chorizo sarta,"
+    },
+    {
+      "source": "src/scenarios/data/cast.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "and 4 kg of jamón al corte.",
+      "spanish": "y 4 kg de jamón al corte."
+    },
+    {
+      "source": "src/scenarios/data/cast.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "The jamón sliced thin, same as always.",
+      "spanish": "El jamón cortado fino, como siempre."
+    },
+    {
+      "source": "src/scenarios/data/cast.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Fruit and veg",
+      "spanish": "Fruta y verdura"
+    },
+    {
+      "source": "src/scenarios/data/cast.ts",
+      "context": "ArrayExpression > StringLiteral",
+      "kind": "literal",
+      "english": "For tomorrow: 3 cajas of mango de barco, 2 of aguacate Hass, and 6 kg of tomate rama.",
+      "spanish": "Para mañana: 3 cajas de mango de barco, 2 de aguacate Hass y 6 kg de tomate rama."
+    },
+    {
+      "source": "src/scenarios/data/cast.ts",
+      "context": "ArrayExpression > StringLiteral",
+      "kind": "literal",
+      "english": "El aguacate bien maduro, we plate it on Saturday.",
+      "spanish": "El aguacate bien maduro, lo emplatamos el sábado."
+    },
+    {
+      "source": "src/scenarios/data/cast.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "For tomorrow: 3 cajas of mango de barco,",
+      "spanish": "Para mañana: 3 cajas de mango de barco,"
+    },
+    {
+      "source": "src/scenarios/data/cast.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "2 of aguacate Hass, and 6 kg of tomate rama.",
+      "spanish": "2 de aguacate Hass y 6 kg de tomate rama."
+    },
+    {
+      "source": "src/scenarios/data/cast.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "El aguacate bien maduro, we plate it on Saturday.",
+      "spanish": "El aguacate bien maduro, lo emplatamos el sábado."
+    },
+    {
+      "source": "src/scenarios/data/cast.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Headless moves as the everyday presentation, under prime whole fish",
+      "spanish": "Sin cabeza es la presentación habitual, por debajo del pescado entero de primera"
+    },
+    {
+      "source": "src/scenarios/data/cast.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Hook-caught: one fish at a time, unmarked, and the market pays for it",
+      "spanish": "De pincho: una pieza cada vez, sin marcar, y el mercado lo paga"
+    },
+    {
+      "source": "src/scenarios/data/cast.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Cooked carries the labour and the weight it loses in the pot",
+      "spanish": "Cocido incorpora el trabajo y el peso que pierde en la cocción"
+    },
+    {
+      "source": "src/scenarios/data/cast.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Rock octopus is firmer and the kitchens ask for it by name",
+      "spanish": "El pulpo de roca es más firme y las cocinas lo piden por su nombre"
+    },
+    {
+      "source": "src/scenarios/data/cast.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Frozen is a different trade from a Palamós boat the same morning",
+      "spanish": "Congelada es un circuito comercial distinto de una barca de Palamós de esa misma mañana"
+    },
+    {
+      "source": "src/scenarios/data/cast.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Frozen wings hold, so they go out under the fresh line",
+      "spanish": "Las alitas congeladas se conservan y salen por debajo de la línea fresca"
+    },
+    {
+      "source": "src/scenarios/data/cast.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Sliced is bench time and the trim that goes with it",
+      "spanish": "Loncheado incorpora tiempo de corte y la merma correspondiente"
+    },
+    {
+      "source": "src/scenarios/data/cast.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Boned out is the butcher’s hour, carried on the kilo that is left",
+      "spanish": "Deshuesada incorpora la hora del carnicero en el kilo resultante"
+    },
+    {
+      "source": "src/scenarios/data/cast.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Galician tenderloin is bought as its own thing, not as tenderloin",
+      "spanish": "El solomillo gallego se compra como producto propio, no como un solomillo genérico"
+    },
+    {
+      "source": "src/scenarios/data/cast.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Ready to eat is a week of ripening room somebody paid for",
+      "spanish": "Listo para comer incorpora una semana de cámara de maduración"
+    },
+    {
+      "source": "src/scenarios/data/cast.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Green goes to the kitchens that want it firm, and it goes keener",
+      "spanish": "Verde va a las cocinas que lo quieren firme y sale a un precio más ajustado"
+    },
+    {
+      "source": "src/scenarios/data/cast.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Greek vine is bought for the vine, and it travels further",
+      "spanish": "El rama griego se compra por la rama y aguanta más transporte"
+    },
+    {
+      "source": "src/scenarios/data/cast.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "same screen",
+      "spanish": "misma pantalla"
+    },
+    {
+      "source": "src/scenarios/data/cast.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "same screen, different content",
+      "spanish": "misma pantalla, contenido diferente"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Which channels orders arrive on",
+      "spanish": "En qué canales llegan los pedidos"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "text, voice notes and photographs to a WhatsApp number",
+      "spanish": "texto, notas de voz y fotografías enviadas a un número de WhatsApp"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "telephone calls, recorded and transcribed",
+      "spanish": "llamadas telefónicas, grabadas y transcritas"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "email, including spreadsheets and PDFs",
+      "spanish": "correo electrónico, incluidas hojas de cálculo y PDF"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "taken face to face at the stall and typed in",
+      "spanish": "recogido cara a cara en el puesto y escrito"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "a web page where the customer types their own order",
+      "spanish": "una página web donde el cliente escribe su propio pedido"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Which orders a person checks before they proceed",
+      "spanish": "Qué pedidos comprueba una persona antes de continuar"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "every order is checked and confirmed by a person",
+      "spanish": "una persona comprueba y confirma cada pedido"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "only orders carrying something the software could not resolve",
+      "spanish": "solo se retienen los pedidos con algún elemento que el software no haya podido resolver"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "senders never seen before are held",
+      "spanish": "los remitentes desconocidos quedan retenidos"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "orders above a value or quantity are held",
+      "spanish": "se retienen los pedidos que superan un valor o una cantidad"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "no order is held; a person reviews afterwards if they wish",
+      "spanish": "no se retiene ningún pedido; una persona lo revisa después si quiere"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "What kinds of work appear in the review list",
+      "spanish": "Qué trabajos aparecen en la lista de revisión"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "approving an order that was interpreted correctly",
+      "spanish": "aprobar un pedido que se ha interpretado correctamente"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "changing lines on an order before it proceeds",
+      "spanish": "cambiar líneas de un pedido antes de que continúe"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "answering a customer's question that is not an order",
+      "spanish": "responder a la pregunta de un cliente que no es un pedido"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "deciding something the software could not decide",
+      "spanish": "decidir algo que el software no ha podido decidir"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "recording a preference discovered during an order",
+      "spanish": "registrar una preferencia descubierta durante un pedido"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "What a customer is allowed to order",
+      "spanish": "Qué puede pedir un cliente"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "catalogue products, exactly as they appear there",
+      "spanish": "productos del catálogo, exactamente como aparecen allí"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "catalogue products with free text a person reads",
+      "spanish": "productos del catálogo con texto libre que lee una persona"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "the customer may name a class the catalogue lacks",
+      "spanish": "el cliente puede nombrar una clase que no existe en el catálogo"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "the customer may name a class that exists for that product",
+      "spanish": "el cliente puede nombrar una clase que existe para ese producto"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "the customer may name a type or variety, recorded as a named field",
+      "spanish": "el cliente puede nombrar un tipo o variedad, registrado como campo con nombre"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "What units a customer is allowed to order in",
+      "spanish": "En qué unidades puede pedir un cliente"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "orders use the catalogue's unit; anything else is held",
+      "spanish": "los pedidos usan la unidad del catálogo; cualquier otra cosa queda retenida"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "orders may use any unit; Rocoto converts on a stored ratio",
+      "spanish": "los pedidos pueden usar cualquier unidad; Rocoto convierte según una equivalencia guardada"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "How precisely a product must be identified",
+      "spanish": "Con qué precisión debe identificarse un producto"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "the product name alone",
+      "spanish": "solo el nombre del producto"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "the product name and its origin or variety",
+      "spanish": "el nombre del producto y su origen o variedad"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "name, origin and grade",
+      "spanish": "nombre, origen y categoría"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "How cost is recorded",
+      "spanish": "Cómo se registra el coste"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "discovered at the market and spoken into the phone",
+      "spanish": "descubierto en el mercado y dictado al teléfono"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "from a supplier's albarán arriving by email",
+      "spanish": "de un albarán del proveedor que llega por correo electrónico"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "from a supplier's albarán arriving on paper with the goods",
+      "spanish": "de un albarán del proveedor que llega en papel con la mercancía"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "an agreed price that holds for weeks or months",
+      "spanish": "un precio acordado que se mantiene durante semanas o meses"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "cost is not recorded in Rocoto at all",
+      "spanish": "el coste no se registra en Rocoto en absoluto"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "How the selling price is arrived at",
+      "spanish": "Cómo se obtiene el precio de venta"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "a written price list, changed occasionally",
+      "spanish": "una lista de precios escrita que cambia de vez en cuando"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "cost plus a percentage",
+      "spanish": "coste más un porcentaje"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "agreed with the customer each time an order is placed",
+      "spanish": "acordado con el cliente cada vez que se hace un pedido"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "prices stay in the accounting system. The default",
+      "spanish": "los precios permanecen en el sistema contable. Es la opción predeterminada"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "How many prices or margins exist",
+      "spanish": "Cuántos precios o márgenes existen"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "one list, or one margin, for every customer",
+      "spanish": "una lista o un margen para cada cliente"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "several, with each customer assigned to one",
+      "spanish": "varias, con cada cliente asignado a una"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Agreements that apply to one customer only",
+      "spanish": "Acuerdos que se aplican a un solo cliente"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "the general rule and the tier decide everything",
+      "spanish": "la regla general y la tarifa lo deciden todo"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "a price agreed for one customer and one product",
+      "spanish": "un precio acordado para un cliente y un producto"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "a price agreed against a quantity over a period",
+      "spanish": "un precio acordado para una cantidad durante un periodo"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "the customer may order an agreed subset",
+      "spanish": "el cliente puede pedir un subconjunto acordado"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "the customer takes that tier's price at order time",
+      "spanish": "el cliente obtiene el precio de esa tarifa al hacer el pedido"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "How stock is recorded",
+      "spanish": "Cómo se registra el stock"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "from purchase documents, digital or paper",
+      "spanish": "a partir de documentos de compra, digitales o en papel"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "somebody states a quantity aloud; no document exists",
+      "spanish": "alguien dice una cantidad en voz alta; no existe ningún documento"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "the list sent to customers each morning IS the stock record",
+      "spanish": "la lista que se envía a los clientes cada mañana ES el registro de existencias"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "no stock position is kept. The default",
+      "spanish": "no se mantiene una posición de stock. Es la opción predeterminada"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Whether batch numbers are recorded — per FAMILY (C-2)",
+      "spanish": "Si se registran números de lote, por FAMILIA (C-2)"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "the word «lote» does not appear",
+      "spanish": "la palabra «lote» no aparece"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "lote and the birth / rearing / slaughter / cutting chain with its plant number",
+      "spanish": "lote y la cadena de nacimiento, cría, sacrificio y despiece con su número de planta"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "C-2 — a per-family profile, so «every line» is the case where no family is `none`",
+      "spanish": "C-2: un perfil por familia; «cada línea» es el caso en que ninguna familia es `none`"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "C-2 — a sector is a preset that picks a family default, never a runtime branch",
+      "spanish": "C-2: un sector es una preselección que elige el valor predeterminado de la familia, nunca una rama de ejecución"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Whether goods are weighed before dispatch",
+      "spanish": "Si se pesan las mercancías antes de enviarlas"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "the quantity ordered is the quantity charged",
+      "spanish": "la cantidad pedida es la cantidad facturada"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "certain products are weighed",
+      "spanish": "se pesan determinados productos"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "everything is weighed",
+      "spanish": "se pesa todo"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Who produces the albarán",
+      "spanish": "Quién produce el albarán"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Rocoto produces it, traceability already filled",
+      "spanish": "Rocoto lo produce, con la trazabilidad ya cumplimentada"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "the company's existing system produces it, from data Rocoto sends",
+      "spanish": "el sistema existente de la empresa lo produce a partir de los datos que envía Rocoto"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "How the albarán reaches the customer",
+      "spanish": "Cómo llega el albarán al cliente"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "printed and handed over with the goods",
+      "spanish": "impreso y entregado con la mercancía"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "a link the customer opens in a web page",
+      "spanish": "un enlace que el cliente abre en una página web"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "as `link`, plus buttons that add it to the customer's own system",
+      "spanish": "como `link`, más botones que lo añaden al sistema del propio cliente"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "authorised once, and every albarán afterwards arrives automatically",
+      "spanish": "se autoriza una vez y todos los albaranes posteriores llegan automáticamente"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "When the albarán is sent to the customer",
+      "spanish": "Cuándo se envía el albarán al cliente"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "the moment the distributor confirms it",
+      "spanish": "en el momento en que lo confirma el distribuidor"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "once the goods are confirmed as delivered",
+      "spanish": "una vez confirmada la entrega de la mercancía"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Who confirms that a delivery happened",
+      "spanish": "Quién confirma que se ha producido una entrega"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "drivers see their stops, mark each delivered, capture a signature",
+      "spanish": "los conductores ven sus paradas, marcan cada entrega y capturan una firma"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "the scheduled slot is treated as the confirmation",
+      "spanish": "la franja programada se considera la confirmación"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "two to four candidates ordered by evidence; one press, stored, never asked again",
+      "spanish": "dos un cuatro candidatos pedida por pruebas; uno pulsa, guardada, never solicitados de nuevo"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "hold and speak; rows appear as words land; a row not held keeps its recording",
+      "spanish": "mantén pulsado y habla; las filas aparecen a medida que llegan las palabras; una fila que no se mantiene conserva su grabación"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "yesterday's values as a one-press start",
+      "spanish": "Ayer's valores como un con una pulsación inicio"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "a quantity divided by dragging a boundary; the sum is invariant",
+      "spanish": "un Cantidad divided por dragging un límite; el sum es invariant"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "one slider moves a set of values and holds the spread",
+      "spanish": "uno slider mueve un conjunto de valores y mantiene el spread"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "one photograph, edges found; unreadable values asked by voice",
+      "spanish": "una fotografía con los bordes detectados; los valores ilegibles se solicitan por voz"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "extracted lines on one side, the original on the other, matching text lit",
+      "spanish": "extracted líneas en uno side, el original en el otro, matching texto lit"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "a spreadsheet for values changed rarely; bulk edit and a stale marker",
+      "spanish": "un spreadsheet para valores cambiado rarely; bulk Editar y una desactualizada marker"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "items awaiting a value, completed in one pass; empty shown empty",
+      "spanish": "items awaiting un valor, completed en uno paso; vacío mostrado vacío"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "two related values on one line; both kept, both shown",
+      "spanish": "dos relacionados valores en uno línea; ambos mantenido, ambos mostrado"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "states what changed and lists what it affects; alters nothing",
+      "spanish": "indica qué cambiado y listas qué lo afecta; alters nada"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "no screen, no menu entry, no disabled button",
+      "spanish": "sin pantalla, entrada de menú ni botón desactivado"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "customer-facing; one file per target system, no account",
+      "spanish": "para el cliente; un archivo por sistema de destino, sin cuenta"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "customer-facing; authorise once, receive every document after",
+      "spanish": "para el cliente; authorise una vez, receive cada Documento después"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "driver-facing; today's stops in route order, each marked delivered",
+      "spanish": "para el conductor; Hoy's se detiene en Ruta pedido, cada marked entregado"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "An order arrives",
+      "spanish": "Llega un pedido"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "what a person must see before an order may proceed, and every field the reading could not settle",
+      "spanish": "lo que una persona debe ver antes de continuar con un pedido y cada campo que la lectura no haya podido resolver"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "how what the distributor paid gets into the product, in four environments",
+      "spanish": "cómo llega al producto lo que pagó el distribuidor, en cuatro entornos"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "how a selling price is arrived at, and what happens when it moves",
+      "spanish": "cómo se obtiene un precio de venta y qué ocurre cuando cambia"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "what is on hand, how it is declared, and what happens when it runs out",
+      "spanish": "qué hay disponible, cómo se declara y qué ocurre cuando se agota"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "that traceability is a property of the batch and never of the line",
+      "spanish": "que la trazabilidad pertenece al lote y nunca a la línea"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "what leaves the warehouse, and the sheet in the picker’s hand",
+      "spanish": "qué sale del almacén y qué contiene la hoja del preparador"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Producing the albarán",
+      "spanish": "Producir el albarán"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "the last editable moment, and the proof the data landed",
+      "spanish": "el último momento editable y la prueba de que los datos han llegado"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Delivering the albarán to the customer",
+      "spanish": "Entregar el albarán al cliente"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "the product's public face — the only screen a restaurant ever opens",
+      "spanish": "la cara pública del producto: la única pantalla que abre un restaurante"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Timing and delivery confirmation",
+      "spanish": "Momento y confirmación de la entrega"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "when the document goes, and who says the goods arrived",
+      "spanish": "cuándo sale el documento y quién confirma que llegó la mercancía"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Customer records",
+      "spanish": "Registros de clientes"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "everything the software learned about a customer, and where it landed",
+      "spanish": "todo lo que el software ha aprendido sobre un cliente y dónde se ha guardado"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Configurations producing no screen",
+      "spanish": "Configuraciones que no producen pantalla"
+    },
+    {
+      "source": "src/scenarios/data/dimensions.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "that a dimension switched off removes the destination rather than greying it",
+      "spanish": "que desactivar una dimensión elimina el destino en vez de dejarlo atenuado"
+    },
+    {
+      "source": "src/scenarios/data/open.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "The day's order list",
+      "spanish": "el day's pedido Lista"
+    },
+    {
+      "source": "src/scenarios/data/open.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Thirteen A-cards, C5, C6, G2, H2, H6 and J1a all sit inside it and not one draws it. It is the screen the distributor looks at all morning.",
+      "spanish": "Las trece tarjetas A, C5, C6, G2, H2, H6 y J1a están dentro de ella, pero ninguna la dibuja. Es la pantalla que el distribuidor consulta durante toda la mañana."
+    },
+    {
+      "source": "src/scenarios/data/open.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "A card that decides the day bar, the row, the row order and the aggregate above them.",
+      "spanish": "un tarjeta que decides el day bar, el fila, el fila pedido y el aggregate arriba ellos."
+    },
+    {
+      "source": "src/scenarios/data/open.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "The catalogue",
+      "spanish": "el catálogo"
+    },
+    {
+      "source": "src/scenarios/data/open.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Products, units, classes, calibres, origins and the tree. Fifteen cards write to it or read from it, and the sector field sets live in it.",
+      "spanish": "Productos, unidades, clases, calibres, orígenes y el árbol. Quince tarjetas escriben en él o lo leen, y en él viven los valores del campo sector."
+    },
+    {
+      "source": "src/scenarios/data/open.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "A card that decides the catalogue's own anatomy, once the field sets are settled by E3.",
+      "spanish": "un tarjeta que decides el catálogo's propia anatomía, una vez el campo establece son Resuelto por E3."
+    },
+    {
+      "source": "src/scenarios/data/open.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "The customer list",
+      "spanish": "el Cliente Lista"
+    },
+    {
+      "source": "src/scenarios/data/open.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "J1a decides one customer. Nobody decides the many.",
+      "spanish": "J1a decidir un cliente. Nadie decidir sobre los muchos."
+    },
+    {
+      "source": "src/scenarios/data/open.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "A card for the landing of the customers area.",
+      "spanish": "un tarjeta para el landing de el clientes area."
+    },
+    {
+      "source": "src/scenarios/data/open.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "The preparation sheet",
+      "spanish": "el preparación hoja"
+    },
+    {
+      "source": "src/scenarios/data/open.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Brief §3 says Rocoto produces two things, and this is the first: it works on day one at every company, with no connection, no prices and no cooperation from any vendor.",
+      "spanish": "El apartado §3 del resumen dice que Rocoto produce dos cosas; esta es la primera: funciona desde el primer día en cualquier empresa, sin conexión, precios ni colaboración de ningún proveedor."
+    },
+    {
+      "source": "src/scenarios/data/open.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "It is drawn.",
+      "spanish": "lo es dibujado."
+    },
+    {
+      "source": "src/scenarios/data/open.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "F0 (C-10) — the sheet is a card in group F, with its grouping as a live control.",
+      "spanish": "F0 (C-10) — el hoja es un tarjeta en grupo F, con su grouping como un activo control."
+    },
+    {
+      "source": "src/scenarios/data/open.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "The batch ledger and the document inbox",
+      "spanish": "el lote ledger y el Documento inbox"
+    },
+    {
+      "source": "src/scenarios/data/open.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Where captured documents and batches live between capture and use. B2, B3, D1s, E3 and G2 all point into it.",
+      "spanish": "dónde captured Documentos y batches activo between captura y utilizan. B2, B3, D1s, E3 y G2 todo point en lo."
+    },
+    {
+      "source": "src/scenarios/data/open.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "A card that decides where a captured document waits and what a batch looks like at rest.",
+      "spanish": "un tarjeta que decides dónde un captured Documento waits y qué un lote consulta like en resto."
+    },
+    {
+      "source": "src/scenarios/data/open.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "The onboarding questionnaire",
+      "spanish": "el onboarding questionnaire"
+    },
+    {
+      "source": "src/scenarios/data/open.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "The 17 dimensions asked in the distributor's own language, as a live structure the UI derives from. It is what makes group K true, and no card draws it.",
+      "spanish": "Las 17 dimensiones expresadas en el lenguaje del propio distribuidor forman la estructura activa de la que parte la interfaz. Son las que hacen verdadero el grupo K y ninguna tarjeta las dibuja."
+    },
+    {
+      "source": "src/scenarios/data/open.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "The puzzle phase, which derives the questionnaire from the assembled reduction.",
+      "spanish": "el puzzle phase, qué derives el questionnaire de el assembled reducción."
+    },
+    {
+      "source": "src/scenarios/data/open.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "D2s sends a list to many customers; D1 models channels as inbound only. Who receives it, on which channel, what the message is, and what a reply to it is.",
+      "spanish": "D2s sends un Lista un muchos clientes; D1 models Canales como inbound solo. quién recibe lo, en qué Canal, qué el mensaje es, y qué un respuesta un lo es."
+    },
+    {
+      "source": "src/scenarios/data/open.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "A founder sentence on who the disponible list goes to and how a reply lands.",
+      "spanish": "un fundador frase en quién el disponible Lista va un y cómo un respuesta llega."
+    },
+    {
+      "source": "src/scenarios/data/open.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Order editing",
+      "spanish": "pedido editing"
+    },
+    {
+      "source": "src/scenarios/data/open.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "D3.edit is a configuration, and the method says editing is unsettled. A3 resolves a line and A13 shows a change's consequences; neither edits an order.",
+      "spanish": "D3.edit es una configuración y el método indica que la edición no está resuelta. A3 resuelve una línea y A13 muestra las consecuencias de un cambio; ninguna de las dos edita un pedido."
+    },
+    {
+      "source": "src/scenarios/data/open.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "A card that decides what editing an order means after it is confirmed.",
+      "spanish": "un tarjeta que decides qué editing un pedido means después lo es confirmado."
+    },
+    {
+      "source": "src/scenarios/data/open.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "D3.reply and the nota de venta",
+      "spanish": "D3.respuesta y el nota de venta"
+    },
+    {
+      "source": "src/scenarios/data/open.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Two things the brief lists and never draws: answering a customer question that is not an order, and the lonja settlement note, which in fish carries cost and traceability origin on one sheet.",
+      "spanish": "El resumen enumera dos cosas que nunca dibuja: responder a una pregunta del cliente que no sea un pedido y la nota de liquidación de la lonja, que en pescado lleva el coste y el origen de trazabilidad en una hoja."
+    },
+    {
+      "source": "src/scenarios/data/open.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "A real nota de venta from one lonja house, and a decision on where a reply lands after the hand-off.",
+      "spanish": "un real nota de venta de uno lonja casa, y una decisión en dónde un respuesta llega después el acción manual-off."
+    },
+    {
+      "source": "src/scenarios/data/open.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "The use-class",
+      "spanish": "el utilizan-clase"
+    },
+    {
+      "source": "src/scenarios/data/open.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "«White fish for the plancha». D3s ranks substitutes by it in fish, and it exists in no dimension — D4 and D6 model identity, not interchangeability.",
+      "spanish": "«Pescado blanco para la plancha». En pescado, D3 ordena los sustitutos según esta preferencia, que no existe como dimensión; D4 y D6 modelan la identidad, no la intercambiabilidad."
+    },
+    {
+      "source": "src/scenarios/data/open.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "A dimension for interchangeability, or a decision that the ranking is learned from history alone.",
+      "spanish": "un dimension para interchangeability, o un decisión que el ranking es aprendido de Historial solo."
+    },
+    {
+      "source": "src/scenarios/data/open.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Who may see cost",
+      "spanish": "quién puede ver Coste"
+    },
+    {
+      "source": "src/scenarios/data/open.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "F3 puts cost and margin on a warehouse phone; F1 shows quantities only; C6 shows cost at the desk. No role or visibility model exists anywhere in the brief.",
+      "spanish": "F3 muestra coste y margen en un teléfono de almacén; F1 muestra solo cantidades; C6 muestra el coste en la mesa. El resumen no define ningún modelo de roles o visibilidad."
+    },
+    {
+      "source": "src/scenarios/data/open.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "A role model, or a founder sentence that the warehouse sees cost.",
+      "spanish": "un rol modelo, o un fundador frase que el almacén sees Coste."
+    },
+    {
+      "source": "src/scenarios/data/open.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "What the ERP does with columns it has no field for",
+      "spanish": "Qué hace el ERP con las columnas para las que no tiene campo"
+    },
+    {
+      "source": "src/scenarios/data/open.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Fish and meat files carry lote and traceability columns the receiving program may have no field for. G3 states the file is ordinary; it does not state what it contains.",
+      "spanish": "Los archivos de pescado y carne llevan columnas de lote y trazabilidad para las que el programa receptor quizá no tenga campo. G3 indica que el archivo es corriente, pero no qué contiene."
+    },
+    {
+      "source": "src/scenarios/data/open.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "One real column map from one real ERP.",
+      "spanish": "uno real columna mapa de uno real ERP."
+    },
+    {
+      "source": "src/scenarios/data/open.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "A van carrying fish or meat is carrying a cold chain, and some distributors record a temperature at the drop. It is in neither D17 nor I3.",
+      "spanish": "un furgoneta que llevan pescado o carne es que llevan un cold chain, y some distributors registro un temperature en el drop. lo es en neither D17 nor I3."
+    },
+    {
+      "source": "src/scenarios/data/open.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "A founder sentence on whether a temperature is recorded at the door.",
+      "spanish": "un fundador frase en whether un temperature es registrado en el puerta."
+    },
+    {
+      "source": "src/scenarios/data/open.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "What happens when a volume commitment is missed",
+      "spanish": "Qué ocurre cuando no se cumple un compromiso de volumen"
+    },
+    {
+      "source": "src/scenarios/data/open.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Revert, invoice the difference, or renegotiate. The brief's own open 6. C10's outcome buttons stand as ghosts inside its positive space until it lands.",
+      "spanish": "revertir, facturar el diferencia, o renegociar. el resumen's propia Abrir 6. C10's resultado botones mantenerse como ghosts dentro de su positive espacio hasta lo llega."
+    },
+    {
+      "source": "src/scenarios/data/open.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "The founder naming the outcome, or naming that it varies and is a configuration.",
+      "spanish": "El fundador debe nombrar el resultado o indicar que varía y que es una configuración."
+    },
+    {
+      "source": "src/scenarios/data/open.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Which cost-control systems accept an import, and in what format",
+      "spanish": "Qué sistemas de control de costes aceptan una importación y en qué formato"
+    },
+    {
+      "source": "src/scenarios/data/open.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "The brief's own open 5. It gates H4, the most commercially valuable card in the catalogue, so H4's buttons are drawn ghosted until it is answered.",
+      "spanish": "el resumen's propia Abrir 5. lo gates H4, el most commercially valuable tarjeta en el catálogo, so H4's botones son dibujado ghosted hasta lo es answered."
+    },
+    {
+      "source": "src/scenarios/data/open.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "A list of target systems the founder can confirm are real, with one file format each.",
+      "spanish": "un Lista de destino sistemas el fundador puede Confirmar son real, con uno Archivo formato cada."
+    },
+    {
+      "source": "src/scenarios/data/open.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "The meat cast",
+      "spanish": "el carne cast"
+    },
+    {
+      "source": "src/scenarios/data/open.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "No meat SKU, supplier or customer was named anywhere, which blocked drawing any meat screen at full fidelity — and a third of the sector thesis with it.",
+      "spanish": "No se nombró ningún SKU, proveedor ni cliente de carne, lo que impidió dibujar una pantalla de carne con toda fidelidad y dejó fuera un tercio de la tesis del sector."
+    },
+    {
+      "source": "src/scenarios/data/open.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "The founder naming the meat products and one meat supplier.",
+      "spanish": "el fundador nombrando el carne productos y uno carne Proveedor."
+    },
+    {
+      "source": "src/scenarios/data/open.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "data/cast.ts (C-9) — provisional names carry a flag, and replacing them is one edit to one file and zero screens.",
+      "spanish": "datos/cast.ts (C-9) — provisional nombres llevar un flag, y replacing ellos es uno Editar un uno Archivo y cero pantallas."
+    },
+    {
+      "source": "src/scenarios/data/open.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "The route",
+      "spanish": "el Ruta"
+    },
+    {
+      "source": "src/scenarios/data/open.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "I3 shows stops «in route order». Who puts them in that order is in no situation.",
+      "spanish": "I3 muestra las paradas «en orden de ruta». Ninguna situación explica quién las ordena así."
+    },
+    {
+      "source": "src/scenarios/data/open.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "A card that decides how a round is composed and ordered.",
+      "spanish": "un tarjeta que decides cómo un round es composed y pedida."
+    },
+    {
+      "source": "src/scenarios/data/open.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "The account's own surfaces",
+      "spanish": "el cuenta's propia surfaces"
+    },
+    {
+      "source": "src/scenarios/data/open.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Settings, plan and people sit outside groups A–K entirely.",
+      "spanish": "Ajustes, plan y personas están fuera de groups un–K entirely."
+    },
+    {
+      "source": "src/scenarios/data/open.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "A decision on whether the account surfaces belong in this catalogue at all.",
+      "spanish": "un decisión en whether el cuenta surfaces belong en este catálogo en todo."
+    },
+    {
+      "source": "src/scenarios/data/threads.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "The spine. Every other thread exists to fill a field on this one.",
+      "spanish": "La columna vertebral. Todos los demás hilos existen para completar un campo de este."
+    },
+    {
+      "source": "src/scenarios/data/threads.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "a message on any live channel",
+      "spanish": "un mensaje en cualquier canal activo"
+    },
+    {
+      "source": "src/scenarios/data/threads.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "an interpreted order and its evidence",
+      "spanish": "un pedido interpretado y sus pruebas"
+    },
+    {
+      "source": "src/scenarios/data/threads.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "a confirmed order",
+      "spanish": "un pedido confirmado"
+    },
+    {
+      "source": "src/scenarios/data/threads.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "one unresolved field on one line",
+      "spanish": "un campo sin resolver en una línea"
+    },
+    {
+      "source": "src/scenarios/data/threads.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "the field, twice — line and record",
+      "spanish": "el campo, dos veces: línea y registro"
+    },
+    {
+      "source": "src/scenarios/data/threads.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "a confirmed order and the customer's tier",
+      "spanish": "un pedido confirmado y la tarifa del cliente"
+    },
+    {
+      "source": "src/scenarios/data/threads.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "line.price stamped, or an empty slot",
+      "spanish": "line.price sellado o un espacio vacío"
+    },
+    {
+      "source": "src/scenarios/data/threads.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "confirmed lines and lots on hand",
+      "spanish": "líneas confirmadas y lotes disponibles"
+    },
+    {
+      "source": "src/scenarios/data/threads.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "line.lots[] and the blended cost",
+      "spanish": "line.lots[] y el coste combinado"
+    },
+    {
+      "source": "src/scenarios/data/threads.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "the day's confirmed lines",
+      "spanish": "las líneas confirmadas del día"
+    },
+    {
+      "source": "src/scenarios/data/threads.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "what the warehouse picks",
+      "spanish": "qué prepara el almacén"
+    },
+    {
+      "source": "src/scenarios/data/threads.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "the grouping",
+      "spanish": "la agrupación"
+    },
+    {
+      "source": "src/scenarios/data/threads.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "picked lines and their lot allocation",
+      "spanish": "líneas preparadas y su asignación de lotes"
+    },
+    {
+      "source": "src/scenarios/data/threads.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "line.sent_qty · line.grade_sold",
+      "spanish": "línea.enviado_qty · línea.grade_vendida"
+    },
+    {
+      "source": "src/scenarios/data/threads.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "order, lots and real weights",
+      "spanish": "pedido, lotes y pesos reales"
+    },
+    {
+      "source": "src/scenarios/data/threads.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "a confirmed albarán",
+      "spanish": "un albarán confirmado"
+    },
+    {
+      "source": "src/scenarios/data/threads.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "a document in the customer's hands",
+      "spanish": "un documento en manos del cliente"
+    },
+    {
+      "source": "src/scenarios/data/threads.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "the albarán and the route",
+      "spanish": "el albarán y la ruta"
+    },
+    {
+      "source": "src/scenarios/data/threads.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "drop.delivered and the signature",
+      "spanish": "drop.delivered y la firma"
+    },
+    {
+      "source": "src/scenarios/data/threads.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "every confirmed order of the day",
+      "spanish": "cada pedido confirmado del día"
+    },
+    {
+      "source": "src/scenarios/data/threads.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "one file, one time, one format",
+      "spanish": "un archivo, un momento y un formato"
+    },
+    {
+      "source": "src/scenarios/data/threads.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "a connection or a file",
+      "spanish": "una conexión o un archivo"
+    },
+    {
+      "source": "src/scenarios/data/threads.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "From the market floor to the price on a line, and back once when the price drifts.",
+      "spanish": "Del suelo del mercado al precio de una línea, y vuelta una vez cuando el precio se desvía."
+    },
+    {
+      "source": "src/scenarios/data/threads.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "this morning's facts",
+      "spanish": "los datos de esta mañana"
+    },
+    {
+      "source": "src/scenarios/data/threads.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "a cost",
+      "spanish": "un coste"
+    },
+    {
+      "source": "src/scenarios/data/threads.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "a day-price on the SKU, or a cost on a lot",
+      "spanish": "un precio diario del SKU o un coste de lote"
+    },
+    {
+      "source": "src/scenarios/data/threads.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "today's cost",
+      "spanish": "el coste de hoy"
+    },
+    {
+      "source": "src/scenarios/data/threads.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "D8.margin × D9",
+      "spanish": "D8.Margen × D9"
+    },
+    {
+      "source": "src/scenarios/data/threads.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "nothing from step 1",
+      "spanish": "nada del paso 1"
+    },
+    {
+      "source": "src/scenarios/data/threads.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "a written price list",
+      "spanish": "una lista de precios escrita"
+    },
+    {
+      "source": "src/scenarios/data/threads.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "D8.list × D9",
+      "spanish": "D8.Lista × D9"
+    },
+    {
+      "source": "src/scenarios/data/threads.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "the tier price and this customer's agreements",
+      "spanish": "el precio de la tarifa y los acuerdos de este cliente"
+    },
+    {
+      "source": "src/scenarios/data/threads.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "a price that moved after orders were stamped",
+      "spanish": "un precio que cambió después de sellar los pedidos"
+    },
+    {
+      "source": "src/scenarios/data/threads.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "a decision per affected order",
+      "spanish": "una decisión por cada pedido afectado"
+    },
+    {
+      "source": "src/scenarios/data/threads.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "cost × real weight × the lot blend",
+      "spanish": "coste × peso real × mezcla de lotes"
+    },
+    {
+      "source": "src/scenarios/data/threads.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "margin per line, per customer, per week",
+      "spanish": "margen por línea, cliente y semana"
+    },
+    {
+      "source": "src/scenarios/data/threads.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "The document that arrives with the goods, and the six fields it leaves behind.",
+      "spanish": "El documento que llega con la mercancía y los seis campos que deja registrados."
+    },
+    {
+      "source": "src/scenarios/data/threads.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "a document, or no gesture at all",
+      "spanish": "un documento o ningún gesto"
+    },
+    {
+      "source": "src/scenarios/data/threads.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "a document attached to a supplier and a day",
+      "spanish": "un documento vinculado a un proveedor y a un día"
+    },
+    {
+      "source": "src/scenarios/data/threads.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "the document",
+      "spanish": "el documento"
+    },
+    {
+      "source": "src/scenarios/data/threads.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "D12 per family",
+      "spanish": "D12 por familia"
+    },
+    {
+      "source": "src/scenarios/data/threads.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "the lot",
+      "spanish": "el lote"
+    },
+    {
+      "source": "src/scenarios/data/threads.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "cost on the lot",
+      "spanish": "coste del lote"
+    },
+    {
+      "source": "src/scenarios/data/threads.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "quantity available to allocate",
+      "spanish": "cantidad disponible para asignar"
+    },
+    {
+      "source": "src/scenarios/data/threads.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "what arrived",
+      "spanish": "lo que llegó"
+    },
+    {
+      "source": "src/scenarios/data/threads.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "today's list, which IS the stock record",
+      "spanish": "la lista de hoy, que ES el registro de existencias"
+    },
+    {
+      "source": "src/scenarios/data/threads.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "the lot's field set",
+      "spanish": "el conjunto de campos del lote"
+    },
+    {
+      "source": "src/scenarios/data/threads.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "the sub-line on a customer's document",
+      "spanish": "la sublínea del documento de un cliente"
+    },
+    {
+      "source": "src/scenarios/data/threads.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "The accumulator. It is the reason mornings get quieter.",
+      "spanish": "El acumulador. Por eso las mañanas son más tranquilas."
+    },
+    {
+      "source": "src/scenarios/data/threads.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "a sender never seen before",
+      "spanish": "un remitente desconocido"
+    },
+    {
+      "source": "src/scenarios/data/threads.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "a customer",
+      "spanish": "un cliente"
+    },
+    {
+      "source": "src/scenarios/data/threads.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "tier · delivery days · address · contacts",
+      "spanish": "tarifa · días de entrega · dirección · contactos"
+    },
+    {
+      "source": "src/scenarios/data/threads.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "two tiers that could both apply",
+      "spanish": "dos tarifas que podrían aplicarse"
+    },
+    {
+      "source": "src/scenarios/data/threads.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "an agreed subset",
+      "spanish": "un subconjunto acordado"
+    },
+    {
+      "source": "src/scenarios/data/threads.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "a negotiation",
+      "spanish": "una negociación"
+    },
+    {
+      "source": "src/scenarios/data/threads.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "an answer given once",
+      "spanish": "una respuesta dada una vez"
+    },
+    {
+      "source": "src/scenarios/data/threads.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "the record",
+      "spanish": "el registro"
+    },
+    {
+      "source": "src/scenarios/data/threads.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "candidates ordered by evidence",
+      "spanish": "candidatos ordenados por pruebas"
+    },
+    {
+      "source": "src/scenarios/data/threads.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "a message that is not an order",
+      "spanish": "un mensaje que no es un pedido"
+    },
+    {
+      "source": "src/scenarios/data/threads.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "an answer, or a hand-off out",
+      "spanish": "una respuesta o una derivación"
+    },
+    {
+      "source": "src/scenarios/data/threads.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "a photo about a delivered albarán",
+      "spanish": "una foto sobre un albarán entregado"
+    },
+    {
+      "source": "src/scenarios/data/threads.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "a credit line into tomorrow's file",
+      "spanish": "una línea de abono en el archivo de mañana"
+    },
+    {
+      "source": "src/scenarios/data/threads.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "the cobro control on a drop row",
+      "spanish": "el control de cobro en una fila de entrega"
+    },
+    {
+      "source": "src/scenarios/data/threads.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "a link",
+      "spanish": "un enlace"
+    },
+    {
+      "source": "src/scenarios/data/threads.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "the albarán inside their own system",
+      "spanish": "el albarán dentro de su propio sistema"
+    },
+    {
+      "source": "src/scenarios/data/threads.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "one write, three readers, up to 48h apart",
+      "spanish": "una escritura, tres lectores, con hasta 48 h de separación"
+    },
+    {
+      "source": "src/scenarios/data/threads.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "the 06:00 collision lives here",
+      "spanish": "la colisión de las 06:00 vive aquí"
+    },
+    {
+      "source": "src/scenarios/data/threads.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "the price drift",
+      "spanish": "la desviación del precio"
+    },
+    {
+      "source": "src/scenarios/data/threads.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "the only backward edge on the map, and U11 mediates it",
+      "spanish": "la única conexión hacia atrás del mapa, mediada por U11"
+    },
+    {
+      "source": "src/scenarios/data/threads.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "the availability list",
+      "spanish": "la lista de disponibilidad"
+    },
+    {
+      "source": "src/scenarios/data/threads.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "the only cycle; D3s and D4s are its collision",
+      "spanish": "el único ciclo; D3s y D4s son su colisión"
+    },
+    {
+      "source": "src/scenarios/data/threads.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "the accumulator; the reason mornings get quieter",
+      "spanish": "el acumulador; el motivo por el que las mañanas son más tranquilas"
+    },
+    {
+      "source": "src/scenarios/data/threads.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "the real weight",
+      "spanish": "el peso real"
+    },
+    {
+      "source": "src/scenarios/data/threads.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "the one number the ERP cannot obtain any other way",
+      "spanish": "el único número que el ERP no puede obtener de otra forma"
+    },
+    {
+      "source": "src/scenarios/data/threads.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "the traceability field set",
+      "spanish": "el conjunto de campos de trazabilidad"
+    },
+    {
+      "source": "src/scenarios/data/threads.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "per family, never per account",
+      "spanish": "por familia, nunca por cuenta"
+    },
+    {
+      "source": "src/scenarios/data/threads.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "the incidencia",
+      "spanish": "la incidencia"
+    },
+    {
+      "source": "src/scenarios/data/threads.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Rocoto captures it; the ERP issues the abono",
+      "spanish": "Rocoto la captura; el ERP emite el abono"
+    },
+    {
+      "source": "src/scenarios/data/threads.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "the cobro",
+      "spanish": "el cobro"
+    },
+    {
+      "source": "src/scenarios/data/threads.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "per customer; sector only changes how many rows light it",
+      "spanish": "por cliente; el sector solo cambia cuántas filas se iluminan"
+    }
+  ]
+}

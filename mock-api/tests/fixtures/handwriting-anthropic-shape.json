@@ -1,0 +1,18 @@
+{
+ "id": "msg_constructed_for_shape",
+ "type": "message",
+ "role": "assistant",
+ "model": "claude-fable-5-1",
+ "content": [
+  {
+   "type": "text",
+   "text": "{\n  \"cells\": {\n    \"s-101·1·finalWeight\": {\n      \"value\": \"11,8\",\n      \"confidence\": 0.96\n    },\n    \"s-101·3·finalWeight\": {\n      \"value\": \"8,2\",\n      \"confidence\": 0.94\n    },\n    \"s-102·2·finalWeight\": {\n      \"value\": \"6,4\",\n      \"confidence\": 0.95\n    },\n    \"s-102·1·qty\": {\n      \"value\": \"5\",\n      \"confidence\": 0.91\n    },\n    \"s-101·2·unit\": {\n      \"value\": \"Caja\",\n      \"confidence\": 0.88\n    }\n  }\n}"
+  }
+ ],
+ "stop_reason": "end_turn",
+ "stop_sequence": null,
+ "usage": {
+  "input_tokens": 1604,
+  "output_tokens": 193
+ }
+}

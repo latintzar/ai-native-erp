@@ -1,0 +1,1057 @@
+[
+  {
+    "id": "PRD-01.01",
+    "title": "Product identity, Related products, Internal category and details editor",
+    "summary": "Port the SKU-first tenant identity header (exact name, retained literal code, one editable Unit with reusable global UnitConversion and per-product override), image-owned exact-SKU artwork action, capability-gated Price/lot/stock directly under Unit, inline Related products picker, Internal category, Requested personalisations, exact order history, bottom grid Stats, Details & changes and archive/restore boundary. Classification and links never replace the tenant record or become manual placement.",
+    "status": "SPECIFIED",
+    "stage": "sheet-ports",
+    "dependsOn": [
+      "FND-03.01",
+      "OBJ-01.01"
+    ],
+    "docRefs": [
+      "PRD-01",
+      "FND-02",
+      "CAT-01",
+      "QLT-02"
+    ],
+    "legacyIds": [
+      "A4.8",
+      "A7.14",
+      "E175"
+    ],
+    "files": {
+      "actual": [
+        "baseweb/src/app/sku-record.ts",
+        "baseweb/src/app/product-card.tsx",
+        "baseweb/src/app/product-sheet-sections.tsx",
+        "baseweb/src/app/product-face.tsx"
+      ],
+      "proposed": [
+        "product/backend/catalogue/sku_commands.py",
+        "product/backend/catalogue/sku_projection.py"
+      ]
+    },
+    "steps": [
+      "Read and edit the exact tenant SKU, retaining original source name, code and mapped Unit data plus field-level before/after history.",
+      "Render reviewed artwork per exact SKU as its image-owned ≥44 px Upload/Replace pencil action, with no visible Illustration field/editor while retaining durable artwork provenance. Render Related products as an inline direct picker of deliberately linked existing catalogue records, each a coded SKU or accepted uncoded sale item, followed by reviewable Internal category. Category co-members do not appear as related products; a library/category/related-product image never looks approved for this SKU.",
+      "Apply unit-lock, archive, restore, dirty-draft, conflict and permission policy at the command boundary. This Product/Stock correction is UI-only: artwork/provider, classification/model and other AI runtime work remain deferred; the image action is a reviewed seam, not a runtime claim."
+    ],
+    "assertions": {
+      "positive": [
+        "Saving a permitted name, code, description, unit or scoped alias creates one revisioned SKU event and leaves old documents unchanged; the order-review Product Sheet shows literal source identity before Related products and Internal category, reviewed per-SKU art and exact row-linked history without flattening records."
+      ],
+      "negative": [
+        "An Internal category/group, Related-products link, reference class, equal-name row, generated illustration or archived record cannot become substitute SKU identity, look like approved artwork or silently merge records."
+      ]
+    },
+    "doneConditions": [
+      "PRD-N01–N06 and PRD-D01–D05 have a named port, status copy, accessible name, and failure/recovery test."
+    ],
+    "requiredEvidence": [
+      "Product edit, archive/restore, duplicate-code review, literal-unit preservation, reviewed-art association, Internal category/Related-products independence and conflict-drive results."
+    ]
+  },
+  {
+    "id": "PRD-01.02",
+    "title": "New product, list intake and existing-product relation",
+    "summary": "Implement manual identity confirmation and file-or-paste list review in one recoverable creation flow. Add one is identity-only (Product name/SKU/Unit); Add a product list is a collective Product name/SKU/Unit plus Include/Skip readback. Internal classification is a quiet later Product Sheet suggestion/default; only the reviewed inline Related products picker may write a direct relation between existing records.",
+    "status": "SPECIFIED",
+    "stage": "sheet-ports",
+    "dependsOn": [
+      "PRD-01.01",
+      "FND-03.01"
+    ],
+    "docRefs": [
+      "PRD-01",
+      "UTL-02",
+      "CAT-01",
+      "INTEL-08",
+      "JNY-01",
+      "JNY-03",
+      "CAT-01.1",
+      "CAT-01.2",
+      "OBJ-02",
+      "CAT-14A",
+      "INTX-11",
+      "SYS-182",
+      "JNY-05"
+    ],
+    "legacyIds": [
+      "A4.7",
+      "A4.8a"
+    ],
+    "files": {
+      "actual": [
+        "baseweb/src/app/product-creation.tsx",
+        "baseweb/src/app/line-notes.tsx",
+        "baseweb/src/app/catalogue.ts",
+        "baseweb/src/app/customer-option.ts"
+      ],
+      "proposed": [
+        "product/backend/catalogue/creation.py",
+        "product/backend/catalogue/adoption.py"
+      ]
+    },
+    "steps": [
+      "Offer Add one product and Add a product list inside the same task frame. A list has one source surface: Drop an Excel or CSV file or Paste a product list. It has no column mapping, Placement, category picker or Related-products candidate before results.",
+      "Persist original wording/session locator separately from a versioned editable interpretation/review result. List review uses one ordered queue with Ready for input, Reading source, Review needed, Ready, Save failed and Added recovery states.",
+      "Use an idempotent reviewed confirmation to create the stable SKU. Ordinary creation/import has no Placement, category picker or Related-products candidate. The inline Related products picker may write one explicit direct link after both records already exist; it never opens a creation route or creates an SKU.",
+      "Keep every duplicate-SKU source row separately reviewable. A duplicate canonical SKU blocks confirmation until the operator corrects or skips the affected row; never merge it automatically. Keep recurring requested preparation and brochure options as candidate notes until an operator explicitly approves scoped product creation; none becomes an SKU by recurrence.",
+      "Implement UTL-N01–N10 manual identity, required SKU and Unit; canonical SKU storage trims outer whitespace, compares case-insensitively, and preserves internal punctuation and leading zeroes. One-product review stays identity-only; bulk rows show/edits only Product name/SKU/Unit plus Include/Skip, while Internal category/artwork/source remain later Product Sheet context. Preserve deliberate existing-related-product picker, file-or-paste return and draft recovery.",
+      "Commit SKU/provenance under one creation request; retry or unknown-outcome lookup returns the same SKU. A Related products link is a later separate reviewed command between existing records. Artwork failure never rolls back or duplicates an admitted SKU. Pricing/stock remain absent until their independent gates."
+    ],
+    "assertions": {
+      "positive": [
+        "A Related products selection writes one RelatedItemLink between two existing catalogue records only. Each endpoint retains its own identity and history; a coded endpoint retains its own SKU and artwork state, while an accepted uncoded endpoint remains uncoded and neutral.",
+        "An operator can create or import a product with Internal category Not organised without changing the existing SKU, stock, tariff, ERP item or customer document.",
+        "A supported file and pasted list share one result queue; a no-history product can be confirmed with an required Unit value and immediately opened as its own Product Sheet.",
+        "A later Edit related products decision changes only the selected direct relation and leaves both endpoint identities and kind-eligible facts independent; it cannot create or promote either record."
+      ],
+      "negative": [
+        "A candidate, typed description, file/paste, automatic result, source grouping, repeat click or similar display name cannot create stock, price, a relation or a duplicate SKU without review or skip.",
+        "No ordinary list item shows a Related-products candidate; recurrence, preview, missing ERP mapping or local panel cannot auto-create a SKU, turn a note into a relation/variation or imply customer acceptance.",
+        "Pricing cancel, artwork failure or partial browser-store write cannot create a second SKU or silently discard original code text."
+      ]
+    },
+    "doneConditions": [
+      "PRD-C01 nested paths cover single product; file list; pasted list; item correction/skip; ready/attention/partial/unavailable/source-unavailable/save-failed/retry; duplicate-SKU correction/skip; dirty navigation; no-placement/no-auto-relation; existing-related-product picker; and return-path recovery.",
+      "JNY-P01–JNY-P02 and JNY-O05 retain their candidate/note distinctions, explicit approval, no-auto-SKU and independent-product-scope tests."
+    ],
+    "requiredEvidence": [
+      "Idempotent single/file/paste creation suite with queue-state trace, source-custody result and exact new-SKU route trace.",
+      "Deterministic Internal-category/artwork-status review fixture, unavailable-review proof, direct-relation creation/edit trace, no-ordinary-related-candidate assertion and safe exact-Albarán use trace.",
+      "Candidate-adoption and product-option traces proving recurrence remains a note until explicit scoped approval."
+    ]
+  },
+  {
+    "id": "PRD-01.03",
+    "title": "Product tariffs, price editor, and independent history",
+    "summary": "Wire the full production price domain to dated tenant/SKU/tariff price events with exact unit/currency semantics, independent histories, customer overrides, and conflict-safe save behavior. The order-review profile keeps this capability designed but disabled until its own commercial evidence gate passes.",
+    "status": "SPECIFIED",
+    "stage": "sheet-ports",
+    "dependsOn": [
+      "PRD-01.01",
+      "COM-01.01",
+      "FND-03.01"
+    ],
+    "docRefs": [
+      "PRD-01",
+      "COM-01",
+      "QLT-02",
+      "JNY-03",
+      "JNY-05"
+    ],
+    "legacyIds": [
+      "A4.5"
+    ],
+    "files": {
+      "actual": [
+        "baseweb/src/app/tiers.ts",
+        "baseweb/src/app/product-sheet-parts.tsx",
+        "baseweb/src/app/stock-tiers.tsx"
+      ],
+      "proposed": [
+        "product/backend/pricing/tariffs.py",
+        "product/backend/pricing/price_commands.py",
+        "product/backend/pricing/history_projection.py"
+      ]
+    },
+    "steps": [
+      "Resolve active tariff and exact SKU before displaying current value, unset state, suggestion, or history.",
+      "Validate positive finite currency values, explicit unit, expected revision, and atomic percentage relationship before write.",
+      "Provide one accurate state for saving, accepted, conflict, denied, failed, and offline-request intent; gate every price control, display and albaran-value consequence behind the release-profile commercial capability so order review has no active price/tariff action or value claim."
+    ],
+    "assertions": {
+      "positive": [
+        "When commercially enabled, a saved price changes only the selected SKU/tariff series and preserves each historical point."
+      ],
+      "negative": [
+        "A missing price cannot display as zero, a related SKU cannot write a value, a conflict cannot last-write-wins silently, and the order-review profile cannot expose a dormant price feature as active."
+      ]
+    },
+    "doneConditions": [
+      "PRD-P01–P06 and customer override controls have independent-tariff, empty, conflict, archive, and keyboard tests."
+    ],
+    "requiredEvidence": [
+      "Tariff history drive, percentage atomicity test, failed-save draft preservation trace, and profile-gate proof that order review has no active pricing/value surface."
+    ]
+  },
+  {
+    "id": "PRD-01.04",
+    "title": "Product stock, lots, and expected-state clarity",
+    "summary": "Wire the full production inventory domain to receipt, physical count, variance, lot, planning-rule, and history records while preserving the distinct meanings of recorded stock, expected delivery, daily estimate, predicted demand, reservation, allocation, dispatched, and available-to-promise. The order-review profile keeps this capability designed but disabled until independent inventory evidence exists.",
+    "status": "SPECIFIED",
+    "stage": "sheet-ports",
+    "dependsOn": [
+      "PRD-01.01",
+      "INV-01.01",
+      "UTL-01.01",
+      "FND-03.01",
+      "LOT-01.07"
+    ],
+    "docRefs": [
+      "PRD-01",
+      "INV-01",
+      "UTL-01",
+      "QLT-02"
+    ],
+    "legacyIds": [
+      "A4.4",
+      "A4.6",
+      "A4.9"
+    ],
+    "files": {
+      "actual": [
+        "baseweb/src/app/incoming.ts",
+        "baseweb/src/app/stock-tiers.tsx",
+        "baseweb/src/app/tiers.ts",
+        "baseweb/src/app/product-sheet-sections.tsx"
+      ],
+      "proposed": [
+        "product/backend/inventory/commands.py",
+        "product/backend/inventory/lots.py",
+        "product/backend/inventory/planning_rules.py"
+      ]
+    },
+    "steps": [
+      "Expose recorded balance only from receipt/count/adjustment evidence and label absent evidence as Still to record.",
+      "Record receive and count as separate idempotent commands with count variance and reviewed lot deductions.",
+      "Keep daily estimates and model forecasts in non-physical planning projections with explicit time, source, and non-promise copy.",
+      "Expose **Assign stock to lots** only for a fixed Recorded balance; it reattributes physical stock between named lots and Unassigned stock with zero net change, never an albarán allocation or delivery promise. Gate stock, lot, supplier-intake and availability surfaces behind the release-profile inventory capability; order review retains source/order facts without presenting inventory as active."
+    ],
+    "assertions": {
+      "positive": [
+        "When inventory is enabled, a physical count of zero persists as zero, a receipt adds stock, and a lot reduction remains traceable."
+      ],
+      "negative": [
+        "A scheduled estimate, supplier expectation, forecast, or related product cannot alter recorded balance or claim available-to-promise without a stated rule; order review cannot imply that a disabled inventory domain has been activated."
+      ]
+    },
+    "doneConditions": [
+      "PRD-S01–S06 and the named **Assign stock to lots** route cover receipt, zero count, variance, partial lot traceability, planning stop, stale revision, and failed-save recovery."
+    ],
+    "requiredEvidence": [
+      "Stock receipt/count/variance drive, lot-allocation test, expected-state copy audit, and profile-gate proof that order review has no active inventory/supplier-intake surface."
+    ]
+  },
+  {
+    "id": "PRD-01.05",
+    "title": "Product order and source-evidence panels",
+    "summary": "Connect exact-SKU operational orders, historical order/source evidence, pagination, unavailable-source state and native-provider return paths without inheriting category/group, Related products or sender-name-only records. Supplier intake remains a separately gated inventory capability; Product Sheet shows only compact exact-SKU Source evidence.",
+    "status": "SPECIFIED",
+    "stage": "sheet-ports",
+    "dependsOn": [
+      "PRD-01.01",
+      "ALB-01.01",
+      "SRC-01.02"
+    ],
+    "docRefs": [
+      "PRD-01",
+      "ALB-01",
+      "SRC-01"
+    ],
+    "legacyIds": [],
+    "files": {
+      "actual": [
+        "baseweb/src/app/source-content.tsx",
+        "baseweb/src/app/source-thread.tsx",
+        "baseweb/src/app/order-open.tsx",
+        "baseweb/src/app/email-thread.tsx"
+      ],
+      "proposed": [
+        "product/backend/catalogue/sku_relations.py",
+        "product/backend/sources/sku_evidence.py"
+      ]
+    },
+    "steps": [
+      "Query exact SKU ID against current/order-history projection with state-specific counts.",
+      "Resolve inbound WhatsApp/email/source cards through explicit exact-SKU evidence links and preserve the native provider return target; do not treat a Product Sheet as a local mailbox, customer-reply transport or supplier inbox. The separately gated Stock update owns a supplier/source feed.",
+      "Page long sets with visible load, failure, retry, and complete-count state."
+    ],
+    "assertions": {
+      "positive": [
+        "Opening a related order or inbound source message returns to the same exact SKU and preserves its context, including the native provider handoff."
+      ],
+      "negative": [
+        "An Internal category/group, Related-products neighbour, sender name, missing source, truncated page or disabled supplier-intake feature cannot be represented as exact-SKU evidence."
+      ]
+    },
+    "doneConditions": [
+      "PRD-O01–O02 and PRD-E01–E04 have exact-scope, empty, unavailable, pagination, and navigation tests."
+    ],
+    "requiredEvidence": [
+      "SKU evidence linkage test, paginated-history test, unavailable-source recovery trace, and native-provider-return proof."
+    ]
+  },
+  {
+    "id": "PRD-01.06",
+    "title": "Product insights and customer-price doors",
+    "summary": "Build the product insight projection from completed exact-SKU lines. The order-review profile enables quantity/order-count/customer evidence and accessible chart/table drilldown; customer-price doors remain a full production capability designed but disabled until commercial evidence exists.",
+    "status": "SPECIFIED",
+    "stage": "sheet-ports",
+    "dependsOn": [
+      "PRD-01.03",
+      "PRD-01.05",
+      "CUS-01.02"
+    ],
+    "docRefs": [
+      "PRD-01",
+      "CUS-01",
+      "COM-01",
+      "QLT-02",
+      "JNY-03",
+      "INTX-11",
+      "SYS-182"
+    ],
+    "legacyIds": [],
+    "files": {
+      "actual": [
+        "baseweb/src/app/insights.ts",
+        "baseweb/src/app/customer-hovercard.tsx",
+        "baseweb/src/app/product-sheet-sections.tsx",
+        "baseweb/src/app/confirmation-policy-door.tsx",
+        "baseweb/src/app/product-card.tsx"
+      ],
+      "proposed": [
+        "product/backend/insights/sku_sales.py",
+        "product/backend/pricing/customer_overrides.py"
+      ]
+    },
+    "steps": [
+      "Aggregate only completed exact-SKU quantity, order-count and customer facts over an explicit date window and tax basis; revenue/value projections require the separately enabled commercial capability.",
+      "Render numeric table equivalents for charts and explain empty/one-observation states without synthetic trends.",
+      "When the commercial capability is separately enabled, open customer price editing with the customer/SKU/tariff scope visible at every confirmation step; otherwise expose no price-edit door.",
+      "When customer confirmation is separately enabled, present its Product Sheet door as a scoped policy entry point without presenting it as a customer message or price result; the order-review profile exposes no outbound confirmation control.",
+      "Implement UTL-I01–I05 chart cards, subtle section grid, exact SKU/tariff/date drilldown and accessible evidence table; sparse evidence never fabricates series."
+    ],
+    "assertions": {
+      "positive": [
+        "Order-review quantity, count and customer bars reconcile to their underlying completed exact-SKU line items.",
+        "When enabled, the product context exposes the customer-confirmations policy summary and opens its named settings surface without changing tariff, customer override, recipient or document."
+      ],
+      "negative": [
+        "Category/group or Related-products buyers, forecasts, decorative values, revenue in the order-review profile, or an empty Explore action cannot appear as measured product insight.",
+        "Opening a dormant door or reading a summary cannot accept a price, bypass Operations authority, send a chat confirmation, or imply that a customer saw a quote."
+      ]
+    },
+    "doneConditions": [
+      "PRD-I01–I05 have reconciliation, empty, one-observation, accessible-chart, and override-scope tests.",
+      "JNY-C01 has state-summary, accessible-name, shared-modal/history restoration, no-side-effect and tenant-scope tests."
+    ],
+    "requiredEvidence": [
+      "Quantity/count/customer insight reconciliation report and accessible table test; commercial/revenue fields remain absent in order-review proof.",
+      "Scoped commercial-door trace across enabled and order-review-disabled states with in-place restoration and no outbound message request."
+    ]
+  },
+  {
+    "id": "PRD-01.07",
+    "title": "Product artwork sheet controls",
+    "summary": "Connect the SKU artwork entry, request intent, upload candidate, review, assignment, retry, and archive states to the separate image-job contract without claiming a provider result early.",
+    "status": "SPECIFIED",
+    "stage": "sheet-ports",
+    "dependsOn": [
+      "PRD-01.01",
+      "INT-02.03"
+    ],
+    "docRefs": [
+      "PRD-01",
+      "INT-02",
+      "INTEL-11"
+    ],
+    "legacyIds": [],
+    "files": {
+      "actual": [
+        "baseweb/src/app/sku-artwork.tsx",
+        "baseweb/src/app/painting-map.ts",
+        "baseweb/src/app/product-face.tsx"
+      ],
+      "proposed": [
+        "product/backend/media/sku_artwork.py",
+        "product/backend/media/review_routes.py"
+      ]
+    },
+    "steps": [
+      "Show the SKU-owned asset association and latest approved candidate independently from Internal-category/group or Related-products presentation art.",
+      "Submit request intent and validated candidate upload through durable review records.",
+      "Surface requested, queued, submitted, candidate, approved, rejected, failed, unavailable, and retryable states honestly."
+    ],
+    "assertions": {
+      "positive": [
+        "An approved candidate is assigned only to its reviewed SKU and retains provenance."
+      ],
+      "negative": [
+        "A local request, provider-unavailable state, Internal-category/group or Related-products asset, or pending replacement cannot masquerade as an approved new image."
+      ]
+    },
+    "doneConditions": [
+      "PRD-A01 state transitions, upload validation, review, archive restriction, and last-approved fallback are tested."
+    ],
+    "requiredEvidence": [
+      "Artwork-state drive, candidate validation result, and review audit trace."
+    ]
+  },
+  {
+    "id": "CUS-01.01",
+    "title": "Customer identity, contact, and relationship sheet",
+    "summary": "Implement the customer record and sheet with durable identity, contacts, addresses, customer aliases, tariff context, active work, editable fields, dossier, archive, and return behavior.",
+    "status": "SPECIFIED",
+    "stage": "sheet-ports",
+    "dependsOn": [
+      "FND-02.01",
+      "OBJ-01.01"
+    ],
+    "docRefs": [
+      "CUS-01",
+      "FND-02",
+      "OBJ-01",
+      "SYS-182",
+      "INTX-11"
+    ],
+    "legacyIds": [
+      "A5.1",
+      "A5.4"
+    ],
+    "files": {
+      "actual": [
+        "baseweb/src/app/customer-profile.tsx",
+        "baseweb/src/app/customer-edits.ts",
+        "baseweb/src/app/new-customer-modal.tsx",
+        "baseweb/src/app/areas/customers.tsx",
+        "baseweb/src/app/customers-made.ts"
+      ],
+      "proposed": [
+        "product/backend/customers/commands.py",
+        "product/backend/customers/projection.py"
+      ]
+    },
+    "steps": [
+      "Define stable customer identity, contact methods, address, status, tariff, and scoped alias relationships.",
+      "Provide a customer editor with field validation, draft recovery, expected revision, and explicit archive/restore consequences.",
+      "Open customer records from orders, product insights, map, and search without replacing the originating object context.",
+      "Implement CUS-E01–E07 fields, transport-specific validation, explicit duplicate choice, tenant-scoped stable creation request and acknowledged persistence before list publication."
+    ],
+    "assertions": {
+      "positive": [
+        "A customer update is scoped to one tenant/customer and appears with actor and revision in its dossier."
+      ],
+      "negative": [
+        "Creating, editing, or archiving a customer cannot overwrite another customer, a product alias, or an earlier order snapshot.",
+        "Legacy unscoped data, name matching, failed persistence or unknown coordinates cannot leak/merge/invent customer facts."
+      ]
+    },
+    "doneConditions": [
+      "Customer identity/contact/editor/archive states have field, permission, conflict, and origin-return coverage."
+    ],
+    "requiredEvidence": [
+      "Customer lifecycle drive, dirty-form recovery test, and related-object navigation trace."
+    ]
+  },
+  {
+    "id": "CUS-01.02",
+    "title": "Customer current work, prices, and dossier insights",
+    "summary": "Build the Customer Sheet's decision-first order work, product memory, customer-price actions, chronological history, and evidence-backed insights without treating an inference as a current commercial fact.",
+    "status": "SPECIFIED",
+    "stage": "sheet-ports",
+    "dependsOn": [
+      "CUS-01.01",
+      "ALB-01.01",
+      "COM-01.02"
+    ],
+    "docRefs": [
+      "CUS-01",
+      "COM-01",
+      "ALB-01",
+      "QLT-02",
+      "JNY-05"
+    ],
+    "legacyIds": [
+      "A5.5",
+      "A5.8"
+    ],
+    "files": {
+      "actual": [
+        "baseweb/src/app/customer-profile.tsx",
+        "baseweb/src/app/knows.ts",
+        "baseweb/src/app/customer-hovercard.tsx",
+        "baseweb/src/app/tiers.ts"
+      ],
+      "proposed": [
+        "product/backend/customers/work_projection.py",
+        "product/backend/customers/insights.py"
+      ]
+    },
+    "steps": [
+      "Order customer content as current work, upcoming/in-flight, historical documents, and compact supported insights.",
+      "Scope product and tariff choices to the exact customer and permitted role.",
+      "Show unknown, no history, loading, provider unavailable, and stale projections with accurate recovery copy."
+    ],
+    "assertions": {
+      "positive": [
+        "A customer-price change affects only the selected customer/SKU/tariff and retains history."
+      ],
+      "negative": [
+        "A profile can neither invent a preference nor use a future observation to explain a historic order."
+      ]
+    },
+    "doneConditions": [
+      "Current-work, history, insights, price override, empty, unavailable, and access-denied states are all driven."
+    ],
+    "requiredEvidence": [
+      "Customer price scope test, chronological dossier test, and insights evidence trace."
+    ]
+  },
+  {
+    "id": "CUS-01.03",
+    "title": "Customer address, map, zone, and route controls",
+    "summary": "Implement address validation, provider-backed place selection, route/zone assignment, map state, fallback, and manual correction without converting a suggested location into a delivery commitment.",
+    "status": "SPECIFIED",
+    "stage": "sheet-ports",
+    "dependsOn": [
+      "CUS-01.01",
+      "INTG-01.04"
+    ],
+    "docRefs": [
+      "CUS-01",
+      "INTG-01",
+      "ADM-01",
+      "QLT-02"
+    ],
+    "legacyIds": [
+      "A5.2",
+      "A5.3",
+      "A5.6"
+    ],
+    "files": {
+      "actual": [
+        "baseweb/src/app/round-map.tsx",
+        "baseweb/src/app/round-map-geo.ts",
+        "baseweb/src/app/pin-map.tsx",
+        "baseweb/src/app/truck-chip.tsx"
+      ],
+      "proposed": [
+        "product/backend/routing/addresses.py",
+        "product/backend/routing/zones.py"
+      ]
+    },
+    "steps": [
+      "Persist normalized address plus original input, provider result state, and manual override reason.",
+      "Calculate zone and route suggestions as reviewable operational facts under effective policy.",
+      "Render provider loading, unavailable, denied, out-of-zone, stale, and manual-entry states without a fake map result."
+    ],
+    "assertions": {
+      "positive": [
+        "A permitted correction records the exact customer address and recomputes future route projections."
+      ],
+      "negative": [
+        "A map suggestion, geocode failure, or route grouping cannot claim a delivered address or rewrite issued documents."
+      ]
+    },
+    "doneConditions": [
+      "Address, provider outage, manual fallback, zone conflict, and mobile map controls have contract tests."
+    ],
+    "requiredEvidence": [
+      "Address-provider contract test, manual fallback trace, and route-policy projection result."
+    ]
+  },
+  {
+    "id": "CUS-01.04",
+    "title": "Customer source, relationship, and operational notices",
+    "summary": "Add customer-scoped source evidence, supplier/customer notices, and action history with explicit scope, consent, and review rather than a generic customer intelligence feed.",
+    "status": "SPECIFIED",
+    "stage": "sheet-ports",
+    "dependsOn": [
+      "CUS-01.01",
+      "SRC-01.02",
+      "INT-01.03"
+    ],
+    "docRefs": [
+      "CUS-01",
+      "SRC-01",
+      "INT-01",
+      "INTEL-02"
+    ],
+    "legacyIds": [
+      "A5.7"
+    ],
+    "files": {
+      "actual": [
+        "baseweb/src/app/briefings.ts",
+        "baseweb/src/app/supplier-forwarding.tsx",
+        "baseweb/src/app/source-thread.tsx"
+      ],
+      "proposed": [
+        "product/backend/customers/evidence.py",
+        "product/backend/notices/customer_notices.py"
+      ]
+    },
+    "steps": [
+      "Link source records to customer decisions with explicit capability and provenance.",
+      "Separate proposal, accepted action, dismissed notice, provider receipt, and unavailable-source state.",
+      "Expose customer-visible versus internal evidence through role-aware projections."
+    ],
+    "assertions": {
+      "positive": [
+        "A permitted notice links back to its exact source and current resolution state."
+      ],
+      "negative": [
+        "A supplier fact, model inference, or unrelated conversation cannot become a customer claim without reviewed scope."
+      ]
+    },
+    "doneConditions": [
+      "Source scope, notice state, dismissal/reopen, and customer visibility tests are green."
+    ],
+    "requiredEvidence": [
+      "Customer notice audit trace and source-linkage test."
+    ]
+  },
+  {
+    "id": "ALB-01.01",
+    "title": "Order and albarán identity, state, and document snapshots",
+    "summary": "Establish the authoritative order/albarán lifecycle, daily numbering, current-work projections, commercial state transitions, and immutable issued snapshots.",
+    "status": "SPECIFIED",
+    "stage": "domain-records",
+    "dependsOn": [
+      "FND-02.01",
+      "FND-02.02",
+      "CUS-01.01",
+      "PRD-01.01"
+    ],
+    "docRefs": [
+      "ALB-01",
+      "FND-02",
+      "DOC-01",
+      "JNY-01",
+      "JNY-02",
+      "JNY-05",
+      "JNY-09"
+    ],
+    "legacyIds": [
+      "A2.2",
+      "A2.3",
+      "A2.5",
+      "A2.9",
+      "A2.10",
+      "A2.11"
+    ],
+    "files": {
+      "actual": [
+        "baseweb/src/app/sale.ts",
+        "baseweb/src/app/day.ts",
+        "baseweb/src/app/areas/sales.tsx",
+        "baseweb/src/app/rows.tsx"
+      ],
+      "proposed": [
+        "product/backend/orders/commands.py",
+        "product/backend/orders/projection.py",
+        "product/backend/documents/snapshots.py"
+      ]
+    },
+    "steps": [
+      "Define order, albarán, line, current-work, cancel, correction, issue, and reprint lifecycle events.",
+      "Allocate tenant/day document numbers atomically and retain frozen document revision references.",
+      "Project queues and counts from authoritative state rather than client-side flags.",
+      "Derive Sales filter/counts and own-day order selection from current actor account/line scope and frozen order identities."
+    ],
+    "assertions": {
+      "positive": [
+        "An issued document retains its customer, SKU, unit, price, total, and revision snapshot after later edits.",
+        "A salesperson can reopen an assigned order and return to the same permitted Sales scope/count basis."
+      ],
+      "negative": [
+        "A duplicate day number, client-computed queue, or later catalogue change cannot rewrite a prior issued albarán.",
+        "A cached filter, same route or similar customer cannot expose or count an unassigned order."
+      ]
+    },
+    "doneConditions": [
+      "Lifecycle, numbering, current-work, cancellation, snapshot, and replay tests pass."
+    ],
+    "requiredEvidence": [
+      "Order-state transition suite, daily-number concurrency test, and document replay report.",
+      "Two-salesperson scoped-filter/count/order-return/revocation trace at 1280×800, 390×844 and 320×740."
+    ]
+  },
+  {
+    "id": "ALB-01.02",
+    "title": "Albarán lines, units, prices, and totals",
+    "summary": "Port the full production line domain for SKU resolution, written phrase, quantity, Unit, rate, tax, packed quantity, lot, note, and calculated total to exact-decimal server commands. The order-review profile enables an unvalued line grammar: exact match, field-check, off-SKU provisional acceptance/rejection, and multiple-exact-SKU choice; price, total and lot controls remain disabled until their independent domains are proven.",
+    "status": "SPECIFIED",
+    "stage": "sheet-ports",
+    "dependsOn": [
+      "ALB-01.01",
+      "COM-01.01",
+      "INV-01.01",
+      "FND-03.01"
+    ],
+    "docRefs": [
+      "ALB-01",
+      "COM-01",
+      "INV-01",
+      "QLT-02",
+      "JNY-01",
+      "JNY-02",
+      "JNY-03",
+      "INTEL-06A",
+      "JNY-05",
+      "JNY-06"
+    ],
+    "legacyIds": [
+      "A3.2",
+      "A3.10",
+      "A3.11",
+      "A3.13",
+      "A3.26"
+    ],
+    "files": {
+      "actual": [
+        "baseweb/src/app/detail.tsx",
+        "baseweb/src/app/chip-entry.tsx",
+        "baseweb/src/app/chip-parse.ts",
+        "baseweb/src/app/units.ts",
+        "baseweb/src/app/albaran-paper-review.tsx"
+      ],
+      "proposed": [
+        "product/backend/orders/line_commands.py",
+        "product/backend/orders/totals.py",
+        "product/backend/orders/unit_policy.py"
+      ]
+    },
+    "steps": [
+      "Separate quantity, Unit, rate, total, packed amount, and lot fields in commands and accessible labels; order review exposes only literal/exact SKU resolution, quantity, unit, approved note and optional final-weight fields.",
+      "Render the active unvalued grammar explicitly: normal exact line; normal line with a red outline/underline only around an ambiguous or abnormal field and its local reason; faded italic off-SKU literal row with accept-as-one-off or reject actions that never create a SKU; compact multiple-choice hybrid when several real SKUs match, with no invented top candidate.",
+      "Calculate totals server-side from exact decimals, price source, currency, tax, and frozen unit revision only when the commercial capability is enabled; otherwise render neither rate nor total.",
+      "Require explicit conversion and reconciliation policy before changing a commercial unit or applying a price; expose JNY-R05 actual quantity/unit-price/weight fields only when working-paper/commercial correction capability is separately enabled."
+    ],
+    "assertions": {
+      "positive": [
+        "In order review, accepting an exact line, field correction, off-SKU one-off, or a selected real SKU preserves literal source wording, actor, revision and unvalued quantity/unit facts.",
+        "When commercial correction is enabled, a permitted line correction accepts one exact actual quantity/unit price under the matching review/print baseline and preserves the before/after commercial facts."
+      ],
+      "negative": [
+        "A client total, unknown unit equivalence, sibling tariff, per-kilo rate, or one-off acceptance cannot be silently carried into a different Unit or create a tenant SKU.",
+        "A photo, field label, unit mismatch, stale baseline, client total, ambiguity highlight, or multiple-choice presentation cannot globally reprice, infer a lot/unit, alter tariff history, fabricate a top candidate, or claim final paper."
+      ]
+    },
+    "doneConditions": [
+      "Every active order-review line control has an exact command, source/evidence, error, conflict, unit and narrow-layout test; full commercial/inventory controls retain their own gated tests.",
+      "Exact/field-check/off-SKU/multiple-choice cases have desktop and mobile accessibility, provenance, accept/reject, no-auto-SKU and no-fake-candidate tests; JNY-R05 retains actual-field tests when separately enabled."
+    ],
+    "requiredEvidence": [
+      "Order-review line-state matrix with exact/field-check/off-SKU/multiple-choice provenance and unvalued-render proof; unit-mismatch and accessibility audit.",
+      "Working-paper actual-field command trace with baseline, revision conflict and no-global-tariff mutation proof when that capability is separately enabled."
+    ]
+  },
+  {
+    "id": "ALB-01.03",
+    "title": "Albarán source provenance, concerns, and corrections",
+    "summary": "Make source evidence, uncertainty, concern lifecycle, corrections, approvals, dismissals, and reopening observable at one exact source card, field, product row or contiguous row group. The full Albarán and condensed order-in-chat use one red boundary and local dismissible reason; native handoff never sends outward.",
+    "status": "SPECIFIED",
+    "stage": "sheet-ports",
+    "dependsOn": [
+      "ALB-01.01",
+      "SRC-01.02",
+      "INT-01.03"
+    ],
+    "docRefs": [
+      "ALB-01",
+      "SRC-01",
+      "INT-01",
+      "INTEL-02",
+      "INTEL-07",
+      "JNY-01",
+      "JNY-02",
+      "JNY-03",
+      "INTEL-06A",
+      "CAT-14A"
+    ],
+    "legacyIds": [
+      "A3.4",
+      "A3.5",
+      "A3.6",
+      "A3.7",
+      "A3.8",
+      "A3.9",
+      "A3.25",
+      "A9.1",
+      "A9.2",
+      "A9.3",
+      "A9.4",
+      "A9.4a",
+      "A9.4b"
+    ],
+    "files": {
+      "actual": [
+        "baseweb/src/app/anxiety.tsx",
+        "baseweb/src/app/dismissals.ts",
+        "baseweb/src/app/thread-trace.ts",
+        "baseweb/src/app/source-content.tsx",
+        "baseweb/src/app/albaran-paper-review.tsx",
+        "baseweb/src/app/line-notes.tsx",
+        "baseweb/src/app/customer-option.ts",
+        "baseweb/src/app/sale.ts"
+      ],
+      "proposed": [
+        "product/backend/concerns/commands.py",
+        "product/backend/orders/source_links.py",
+        "product/backend/orders/corrections.py"
+      ]
+    },
+    "steps": [
+      "Draw one red boundary around the exact source card, field, full product row or contiguous row group; put one short dismissible colleague-style reason immediately above it, with no floating note or generic score.",
+      "On relevant edit or sent message, re-evaluate only that scope: resolve, replace or dismiss a stale reply note and optionally show a brief dismissible acknowledgement while retaining the earlier reason and outcome in disclosure history.",
+      "Use the same scope/reason/lifecycle in the composer tray and condensed order-in-chat card; failed saves, unrelated edits and navigation leave the concern active.",
+      "Render choice ambiguity as a compact question/product hybrid with clear options that reflows to a normal product row on selection; render off-SKU grey italic with Accept once, Edit and Reject.",
+      "Implement JNY-R01–JNY-R03 and JNY-O01–JNY-O04 as revisioned paper-source/concern and Team-note/customerOption review states, preserving literal evidence, scope, approved audience and no direct mutation; an order-review reply tray opens the matching native WhatsApp/email thread and cannot send through Rocoto."
+    ],
+    "assertions": {
+      "positive": [
+        "A reopened concern or reply-attention retains its original evidence and shows the later resolving or dismissal act.",
+        "A permitted reviewer can retain a proposed substitute, approval request/receipt and later final-document revision as distinct linked events when the separately enabled domain permits it.",
+        "A permitted reviewer can retain paper/photo and Team-note/customerOption evidence separately, then make an explicit scoped review/approval whose source, actor, time and revision remain attributable."
+      ],
+      "negative": [
+        "A confidence score, generic explanation, unrelated source, or model output cannot auto-resolve, reprice, mutate an albarán, or replace a reasoned reply attention with a generic flag.",
+        "A similarity match, pending/denied/expired customer approval or stale document revision cannot auto-substitute, finalise, present a replacement as delivered, or hide a multiple-SKU choice.",
+        "A local photo, recurrence, raw note, missing source, stale review, unapproved audience or reply tray cannot apply an actual, resolve a concern, create a SKU or send outward customer text."
+      ]
+    },
+    "doneConditions": [
+      "Line/order concern, source span, local field outline, reply-attention reason/dismiss/reopen/native-handoff, correction, and role-visibility test coverage is complete.",
+      "JNY-02 substitution proposal, customer-approval, expiry, stale-revision and no-final-issue cases pass when that domain is separately enabled.",
+      "JNY-R01–JNY-R03 and JNY-O01–JNY-O04 have stage/source/retry, review/approval/remove, audience/source/actor/time, conflict, accessibility and no-outward-leak tests."
+    ],
+    "requiredEvidence": [
+      "Concern/reply-attention lifecycle test, provenance snapshot, custom-dismissal/native-handoff proof, and correction audit trace.",
+      "Substitution source/proposal/customer-approval/document-revision audit trace when separately enabled.",
+      "Paper/source and Team-note/customerOption lifecycle trace proving no automatic correction or outward text without scoped acceptance."
+    ]
+  },
+  {
+    "id": "ALB-01.04",
+    "title": "Albarán commands, issue flow, and customer document view",
+    "summary": "Wire make, validate, issue, reprint, amend, archive/cancel, compose, and document preview controls to the immutable output contract and appropriate permissions.",
+    "status": "SPECIFIED",
+    "stage": "sheet-ports",
+    "dependsOn": [
+      "ALB-01.01",
+      "ALB-01.02",
+      "DOC-01.01"
+    ],
+    "docRefs": [
+      "ALB-01",
+      "DOC-01",
+      "FND-03",
+      "JNY-02",
+      "JNY-03",
+      "CAT-14A",
+      "JNY-09"
+    ],
+    "legacyIds": [
+      "A3.1",
+      "A3.3",
+      "A3.12",
+      "A3.14",
+      "A3.15",
+      "A3.16"
+    ],
+    "files": {
+      "actual": [
+        "baseweb/src/app/detail.tsx",
+        "baseweb/src/app/print-view.tsx",
+        "baseweb/src/app/shell/printing.tsx",
+        "baseweb/src/app/shell/embeds.tsx",
+        "baseweb/src/app/customer-order-policy.tsx",
+        "baseweb/src/app/customer-option.ts"
+      ],
+      "proposed": [
+        "product/backend/orders/issue.py",
+        "product/backend/documents/render.py",
+        "product/backend/documents/amendments.py"
+      ]
+    },
+    "steps": [
+      "Validate required commercial, legal, stock, and permission facts before issue.",
+      "Create an immutable document revision, offer preview/reprint against that revision, and record amendment links.",
+      "Use state-specific copy for draft, validating, issued, queued, receipt received, failed, and unknown outcome.",
+      "Implement JNY-O06 customer document composition as an approved-customerOption filter, excluding prepNote/raw/unreviewed text across confirmation, customer paper and issued output.",
+      "Require current scoped order authority before a salesperson prepares own-day customer document output or cross-cover work."
+    ],
+    "assertions": {
+      "positive": [
+        "An authorized issue command produces one immutable revision and a retrievable audit entry.",
+        "A customer-facing document projection includes only a matching approved customerOption snapshot and retains its document/policy revision.",
+        "An authorised scoped document review retains only the selected order revisions and customer-view policy."
+      ],
+      "negative": [
+        "A preview, queue submission, client button, or later edit cannot prove issue, print, delivery, or customer receipt.",
+        "Internal preparation text, raw request, unapproved option or later option edit cannot leak into customer output or rewrite issued/sent content.",
+        "A cross-cover proposal, stale scope or client selection cannot issue a document for an unassigned customer."
+      ]
+    },
+    "doneConditions": [
+      "Every albarán primary/menu action has an authorized port, exact copy, state model, and success/failure evidence.",
+      "JNY-O06 has approved/missing/remove, confirmation/paper/ERP exclusion, issued-snapshot and accessibility/copy tests."
+    ],
+    "requiredEvidence": [
+      "Issue/reprint/amendment test, immutable snapshot hash, and permission-denial test.",
+      "Customer-output composition trace proving approved option inclusion and prepNote/raw-note exclusion.",
+      "Scoped output/cross-cover permission-denial and stale-revision trace."
+    ]
+  },
+  {
+    "id": "ALB-01.05",
+    "title": "Albarán navigation, query, and deterministic test theatre",
+    "summary": "Preserve document origin and browser history, build proper sales search, and isolate test/roleplay scenarios from live transport, provider calls, and business projections.",
+    "status": "SPECIFIED",
+    "stage": "sheet-ports",
+    "dependsOn": [
+      "ALB-01.01",
+      "SRC-01.03",
+      "OBJ-01.01"
+    ],
+    "docRefs": [
+      "ALB-01",
+      "SRC-01",
+      "QLT-02",
+      "REL-01"
+    ],
+    "legacyIds": [
+      "A3.27",
+      "A3.29"
+    ],
+    "files": {
+      "actual": [
+        "baseweb/src/app/order-open.tsx",
+        "baseweb/src/app/search.tsx",
+        "baseweb/src/app/test-panel.tsx",
+        "baseweb/src/app/test-chat.tsx"
+      ],
+      "proposed": [
+        "product/backend/testing/scenes.py",
+        "product/backend/orders/search.py"
+      ]
+    },
+    "steps": [
+      "Address routes by stable order/document/source IDs and restore the actual origin on Back/Forward.",
+      "Index tenant-authorized orders, customers, products, and source summaries through a controlled search API.",
+      "Namespace deterministic test data and prohibit outbound transport, provider claims, and live projection contamination."
+    ],
+    "assertions": {
+      "positive": [
+        "A test scene produces a repeatable local result with visible test lineage and no outbound receipt."
+      ],
+      "negative": [
+        "A missing deep-link target, test control, or search result cannot silently substitute another order, source, or live transport."
+      ]
+    },
+    "doneConditions": [
+      "History, deep-link recovery, scoped search, fixture reset, and no-outbound test-theatre tests pass."
+    ],
+    "requiredEvidence": [
+      "Route recovery test, test-lineage trace, and transport-denial log."
+    ]
+  },
+  {
+    "id": "COM-01.01",
+    "title": "Money, tax, unit, and price-resolution authority",
+    "summary": "Create the server-side decimal money, tax, unit-equivalence, price-source, effective-date, and manual-pin rules used consistently by product, customer, order, document, and export commands.",
+    "status": "SPECIFIED",
+    "stage": "domain-records",
+    "dependsOn": [
+      "FND-02.01",
+      "FND-03.01"
+    ],
+    "docRefs": [
+      "COM-01",
+      "FND-03",
+      "QLT-01",
+      "JNY-02",
+      "JNY-03",
+      "SYS-182",
+      "JNY-05"
+    ],
+    "legacyIds": [],
+    "files": {
+      "actual": [
+        "baseweb/src/app/tiers.ts",
+        "baseweb/src/app/units.ts",
+        "baseweb/src/app/sale.ts",
+        "baseweb/src/app/confirmation-policy.ts"
+      ],
+      "proposed": [
+        "product/backend/pricing/money.py",
+        "product/backend/pricing/units.py",
+        "product/backend/pricing/resolver.py"
+      ]
+    },
+    "steps": [
+      "Use exact decimal storage and calculation with currency/unit on every displayed commercial number.",
+      "Resolve price using tenant, SKU, tariff, customer override, effective time, unit, and authorized manual pin.",
+      "Reject unknown or incompatible equivalence rather than converting by guesswork.",
+      "Resolve pinned line > valid customer exact-SKU override > assigned tariff under unit/currency/effective policy; review affected drafts while preserving all issued/sent/output snapshots."
+    ],
+    "assertions": {
+      "positive": [
+        "The same authorized inputs resolve the same price source and server total across sheets and exports."
+      ],
+      "negative": [
+        "Float rounding, client totals, retired tariff reuse, or unit inference cannot change an issued commercial result."
+      ]
+    },
+    "doneConditions": [
+      "Decimal, effective-time, unit, pin, tax, and cross-sheet price-resolution tests pass."
+    ],
+    "requiredEvidence": [
+      "Money/unit property suite and price-resolution trace."
+    ]
+  },
+  {
+    "id": "COM-01.02",
+    "title": "Company tariff registry and commercial-policy controls",
+    "summary": "Implement the tenant tariff registry, retirement, customer allocation, price policy, unit policy, and effective-dated commercial settings without reopening historic commercial facts.",
+    "status": "SPECIFIED",
+    "stage": "administration-activation",
+    "dependsOn": [
+      "COM-01.01",
+      "FND-01.02",
+      "ADM-01.01"
+    ],
+    "docRefs": [
+      "COM-01",
+      "ADM-01",
+      "FND-03",
+      "JNY-03"
+    ],
+    "legacyIds": [],
+    "files": {
+      "actual": [
+        "baseweb/src/app/areas/admin/plan.tsx",
+        "baseweb/src/app/areas/admin/units.tsx",
+        "baseweb/src/app/tiers.ts"
+      ],
+      "proposed": [
+        "product/backend/pricing/tariff_registry.py",
+        "product/backend/admin/commercial_policy.py"
+      ]
+    },
+    "steps": [
+      "Create/reorder/rename/retire tariff identities with affected-record preview and audit.",
+      "Set commercial approval and unit/equivalence policy with explicit effective time.",
+      "Preserve historical tariff IDs and price series after relationship retirement."
+    ],
+    "assertions": {
+      "positive": [
+        "A permitted tariff retirement keeps prior prices and documents readable while blocking new allocation."
+      ],
+      "negative": [
+        "A registry edit cannot silently reprice products, merge tariffs, or erase a customer's historical allocation."
+      ]
+    },
+    "doneConditions": [
+      "Registry lifecycle, effective-date, authority, and affected-record tests are green."
+    ],
+    "requiredEvidence": [
+      "Tariff lifecycle test and commercial-policy audit report."
+    ]
+  }
+]

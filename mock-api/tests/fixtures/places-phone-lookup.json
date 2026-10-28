@@ -1,0 +1,104 @@
+{
+ "+34935563000": {
+  "candidates": [
+   {
+    "formatted_address": "Carrer Major, 76, Sants-Montjuïc, 08040 Barcelona, Espanya",
+    "international_phone_number": "+34 935 56 30 00",
+    "name": "Mercabarna",
+    "place_id": "ChIJ8feMrzGfpBIRqaTJMdzjc-c",
+    "types": [
+     "food",
+     "point_of_interest",
+     "establishment"
+    ]
+   },
+   {
+    "formatted_address": "Carrer Major, 76, Sants-Montjuïc, 08040 Barcelona, Espanya",
+    "international_phone_number": "+34 935 56 30 00",
+    "name": "P2",
+    "place_id": "ChIJFbztGSWfpBIRTUkrWi9-eUc",
+    "types": [
+     "parking",
+     "point_of_interest",
+     "establishment"
+    ]
+   },
+   {
+    "formatted_address": "Carrer Transversal 5, Núm 63, Sants-Montjuïc, 08040 BIOMARKET, Barcelona, Espanya",
+    "international_phone_number": "+34 935 56 30 00",
+    "name": "Mercabarna - Biomarket",
+    "place_id": "ChIJV5L-iXCfpBIRcy6JIWyh-mA",
+    "types": [
+     "grocery_or_supermarket",
+     "food",
+     "point_of_interest",
+     "store",
+     "establishment"
+    ]
+   }
+  ],
+  "status": "OK"
+ },
+ "+34935185053": {
+  "candidates": [
+   {
+    "formatted_address": "Pg. de Gràcia, 24 Bis, Eixample, 08007 Barcelona, Espanya",
+    "international_phone_number": "+34 935 18 50 53",
+    "name": "El Nacional Barcelona",
+    "place_id": "ChIJM5FFbvKipBIRdWugDh577Ao",
+    "types": [
+     "restaurant",
+     "food",
+     "point_of_interest",
+     "establishment"
+    ]
+   },
+   {
+    "formatted_address": "L'Eixample, 24 Bis, Pg. de Gràcia, 24 Bis, l, Eixample, 08007 Barcelona, Spanien",
+    "international_phone_number": "+34 935 18 50 53",
+    "name": "La Taperia",
+    "place_id": "ChIJG-4DC_KipBIRo_Lo_O-cgU4",
+    "types": [
+     "restaurant",
+     "food",
+     "point_of_interest",
+     "establishment"
+    ]
+   },
+   {
+    "formatted_address": "Pg. de Gràcia, 24 Bis, Eixample, 08007 Barcelona, Espanya",
+    "international_phone_number": "+34 935 18 50 53",
+    "name": "La Parada @ El Nacional",
+    "place_id": "ChIJcVKIJ8ijpBIRpLZetGDP6Vg",
+    "types": [
+     "restaurant",
+     "food",
+     "point_of_interest",
+     "establishment"
+    ]
+   }
+  ],
+  "status": "OK"
+ },
+ "searchText:+34935563000": {
+  "places": [
+   {
+    "id": "ChIJ8feMrzGfpBIRqaTJMdzjc-c",
+    "types": [
+     "market",
+     "wholesaler",
+     "food",
+     "point_of_interest",
+     "service",
+     "establishment"
+    ],
+    "internationalPhoneNumber": "+34 935 56 30 00",
+    "formattedAddress": "Carrer Major, 76, Sants-Montjuïc, 08040 Barcelona, Spain",
+    "displayName": {
+     "text": "Mercabarna",
+     "languageCode": "es"
+    }
+   }
+  ]
+ }
+}

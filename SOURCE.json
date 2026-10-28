@@ -1,0 +1,8 @@
+{
+  "project": "Rocoto AI-native ERP",
+  "upstreamCommit": "12d77d610c82a21c602a7706861f043e16607a74",
+  "authority": "artisan-dev:/home/peter/rocoto-repo origin/main",
+  "extractedOn": "2026-10-28",
+  "scope": "Cedar, shared kit, maintained backend, prototype APIs, native collection service and selected specifications",
+  "baseline": "docs/release/source-baseline.json"
+}

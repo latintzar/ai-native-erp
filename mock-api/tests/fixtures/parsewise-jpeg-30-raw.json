@@ -1,0 +1,1220 @@
+{
+ "_": "THE «jpeg-30» READ OF albaran-fixture.png, RECORDED VERBATIM from Parsewise on 2026-09-04T17:08:19 in 112.1 s by tests/record_degraded_reads.py — the same damage tools/parse-harness.py sent when it measured THE-PARSING-SPEC §PAR-08.1 (degrade.py «jpeg-30», seed 7, PNG md5 6835075b6defe36e3c1618fe1c140a76). Nothing here is hand-typed. §PAR-08.2 named the defect this read carries and §PAR-09 owes it a test; tests/test_parse_degraded.py is that test.",
+ "results": [
+  {
+   "id": "45d6f917-d650-4572-981c-0e510816da79",
+   "value_type": "string",
+   "resolution_result": {
+    "id": "a7623af5-b617-44a7-b435-23e3b1a7abf2",
+    "result_name": "Counterparty",
+    "value": "Restaurant Can Sabate",
+    "resolution_status": "Resolved",
+    "justification_for_resolution_status": "Single underlying entity value",
+    "references": {
+     "1": [
+      "albaran.png",
+      1
+     ]
+    },
+    "source_type": "document",
+    "is_web_supplement": false,
+    "created_at": "2026-09-04T17:07:34.110578Z",
+    "updated_at": "2026-09-04T17:07:34.120390Z",
+    "agent_name": "Counterparty",
+    "updated_by_email": null,
+    "web_supplement": null,
+    "latest_review_status": null,
+    "latest_review_comment": "",
+    "latest_review_at": null,
+    "latest_review_by": null
+   },
+   "dimension_instances": [],
+   "extraction_status": "Processed",
+   "agent_id": "5acbcc99-ca5a-45c5-99b9-2c5e201ce7b0",
+   "agent_name": "Counterparty"
+  },
+  {
+   "id": "21722774-9562-40e8-9d73-77e9d99fb8ff",
+   "value_type": "string",
+   "resolution_result": {
+    "id": "6dc39c6e-999b-4794-adba-0fb5880a8dc9",
+    "result_name": "Document date",
+    "value": "2026-09-03",
+    "resolution_status": "Resolved",
+    "justification_for_resolution_status": "Single underlying entity value",
+    "references": {
+     "1": [
+      "albaran.png",
+      1
+     ]
+    },
+    "source_type": "document",
+    "is_web_supplement": false,
+    "created_at": "2026-09-04T17:07:29.118527Z",
+    "updated_at": "2026-09-04T17:07:29.129464Z",
+    "agent_name": "Document date",
+    "updated_by_email": null,
+    "web_supplement": null,
+    "latest_review_status": null,
+    "latest_review_comment": "",
+    "latest_review_at": null,
+    "latest_review_by": null
+   },
+   "dimension_instances": [],
+   "extraction_status": "Processed",
+   "agent_id": "4b29a1de-5334-400c-8598-9f9d954cefa1",
+   "agent_name": "Document date"
+  },
+  {
+   "id": "036b3f35-dc37-4921-b2c8-2c9591580454",
+   "value_type": "string",
+   "resolution_result": {
+    "id": "51463436-00d4-42fa-b134-f6503a9338de",
+    "result_name": "Document number",
+    "value": "2026/0418",
+    "resolution_status": "Resolved",
+    "justification_for_resolution_status": "Single underlying entity value",
+    "references": {
+     "1": [
+      "albaran.png",
+      1
+     ]
+    },
+    "source_type": "document",
+    "is_web_supplement": false,
+    "created_at": "2026-09-04T17:07:24.166500Z",
+    "updated_at": "2026-09-04T17:07:24.198853Z",
+    "agent_name": "Document number",
+    "updated_by_email": null,
+    "web_supplement": null,
+    "latest_review_status": null,
+    "latest_review_comment": "",
+    "latest_review_at": null,
+    "latest_review_by": null
+   },
+   "dimension_instances": [],
+   "extraction_status": "Processed",
+   "agent_id": "b0f8d770-b2a2-4987-893c-1aa5ff7150a7",
+   "agent_name": "Document number"
+  },
+  {
+   "id": "1d9b0bb2-4ef4-4e1c-8c23-fe1c25a49746",
+   "value_type": "number",
+   "resolution_result": {
+    "id": "b4a6fa00-e8f2-49b3-aabb-c89e6fd04e3b",
+    "result_name": "Line number | ALM-002 Almeja fina 4,25 kg 31,40",
+    "value": 4,
+    "resolution_status": "Resolved",
+    "justification_for_resolution_status": "Single underlying entity value",
+    "references": {
+     "1": [
+      "albaran.png",
+      1
+     ]
+    },
+    "source_type": "document",
+    "is_web_supplement": false,
+    "created_at": "2026-09-04T17:08:08.996051Z",
+    "updated_at": "2026-09-04T17:08:09.016585Z",
+    "agent_name": "Line number",
+    "updated_by_email": null,
+    "web_supplement": null,
+    "latest_review_status": null,
+    "latest_review_comment": "",
+    "latest_review_at": null,
+    "latest_review_by": null
+   },
+   "dimension_instances": [
+    {
+     "id": "d45d0691-cbac-4263-9be5-ff28ad48d8ce",
+     "dimension_id": "52c61540-d43b-4517-8061-4be050789a4e",
+     "dimension_value": "ALM-002 Almeja fina 4,25 kg 31,40",
+     "name": "Line"
+    }
+   ],
+   "extraction_status": "Processed",
+   "agent_id": "6aace243-1c9d-42b4-bf64-f31c1fe9ddb4",
+   "agent_name": "Line number"
+  },
+  {
+   "id": "41999421-1e23-4668-923f-42c2f228da29",
+   "value_type": "number",
+   "resolution_result": {
+    "id": "5b473920-34b3-4fd3-9bf5-7a0dd522519e",
+    "result_name": "Line number | MER-001 Merluza grande 12,5 kg 13,50 L-250903",
+    "value": 1,
+    "resolution_status": "Resolved",
+    "justification_for_resolution_status": "Single underlying entity value",
+    "references": {
+     "1": [
+      "albaran.png",
+      1
+     ]
+    },
+    "source_type": "document",
+    "is_web_supplement": false,
+    "created_at": "2026-09-04T17:08:08.198241Z",
+    "updated_at": "2026-09-04T17:08:08.219262Z",
+    "agent_name": "Line number",
+    "updated_by_email": null,
+    "web_supplement": null,
+    "latest_review_status": null,
+    "latest_review_comment": "",
+    "latest_review_at": null,
+    "latest_review_by": null
+   },
+   "dimension_instances": [
+    {
+     "id": "ee8e689e-9fe0-4224-8b97-e198d5cc29a3",
+     "dimension_id": "52c61540-d43b-4517-8061-4be050789a4e",
+     "dimension_value": "MER-001 Merluza grande 12,5 kg 13,50 L-250903",
+     "name": "Line"
+    }
+   ],
+   "extraction_status": "Processed",
+   "agent_id": "6aace243-1c9d-42b4-bf64-f31c1fe9ddb4",
+   "agent_name": "Line number"
+  },
+  {
+   "id": "6c756329-9548-48a5-8ae8-00f43e63ad07",
+   "value_type": "number",
+   "resolution_result": {
+    "id": "3d3ddda2-2efb-40e7-b28e-0973206fbdc4",
+    "result_name": "Line number | GAM-010 Gamba roja 3 caja 92,00 L-250903",
+    "value": 3,
+    "resolution_status": "Resolved",
+    "justification_for_resolution_status": "Single underlying entity value",
+    "references": {
+     "1": [
+      "albaran.png",
+      1
+     ]
+    },
+    "source_type": "document",
+    "is_web_supplement": false,
+    "created_at": "2026-09-04T17:08:07.519321Z",
+    "updated_at": "2026-09-04T17:08:07.538531Z",
+    "agent_name": "Line number",
+    "updated_by_email": null,
+    "web_supplement": null,
+    "latest_review_status": null,
+    "latest_review_comment": "",
+    "latest_review_at": null,
+    "latest_review_by": null
+   },
+   "dimension_instances": [
+    {
+     "id": "2e4ed88d-ecca-4d0d-8477-521ab3af7e68",
+     "dimension_id": "52c61540-d43b-4517-8061-4be050789a4e",
+     "dimension_value": "GAM-010 Gamba roja 3 caja 92,00 L-250903",
+     "name": "Line"
+    }
+   ],
+   "extraction_status": "Processed",
+   "agent_id": "6aace243-1c9d-42b4-bf64-f31c1fe9ddb4",
+   "agent_name": "Line number"
+  },
+  {
+   "id": "6cbc2023-ad9c-4d23-81a4-64f6396e01c4",
+   "value_type": "number",
+   "resolution_result": {
+    "id": "e0968fda-acc2-4de5-bd1d-85de99b5bad1",
+    "result_name": "Line number | PUL-004 Pulpo cocido 21 kg 18,90 L-250902",
+    "value": 2,
+    "resolution_status": "Resolved",
+    "justification_for_resolution_status": "Single underlying entity value",
+    "references": {
+     "1": [
+      "albaran.png",
+      1
+     ]
+    },
+    "source_type": "document",
+    "is_web_supplement": false,
+    "created_at": "2026-09-04T17:08:07.890839Z",
+    "updated_at": "2026-09-04T17:08:07.910021Z",
+    "agent_name": "Line number",
+    "updated_by_email": null,
+    "web_supplement": null,
+    "latest_review_status": null,
+    "latest_review_comment": "",
+    "latest_review_at": null,
+    "latest_review_by": null
+   },
+   "dimension_instances": [
+    {
+     "id": "9eb4b592-0e0a-42a4-8982-78a014d421c7",
+     "dimension_id": "52c61540-d43b-4517-8061-4be050789a4e",
+     "dimension_value": "PUL-004 Pulpo cocido 21 kg 18,90 L-250902",
+     "name": "Line"
+    }
+   ],
+   "extraction_status": "Processed",
+   "agent_id": "6aace243-1c9d-42b4-bf64-f31c1fe9ddb4",
+   "agent_name": "Line number"
+  },
+  {
+   "id": "2389b9e5-1956-4655-830b-b2d26fb3f629",
+   "value_type": "string",
+   "resolution_result": {
+    "id": "70f1d35e-7f8d-4c6f-98ab-01d4998f160e",
+    "result_name": "Lot | MER-001 Merluza grande 12,5 kg 13,50 L-250903",
+    "value": "L-250903",
+    "resolution_status": "Resolved",
+    "justification_for_resolution_status": "Single underlying entity value",
+    "references": {
+     "1": [
+      "albaran.png",
+      1
+     ]
+    },
+    "source_type": "document",
+    "is_web_supplement": false,
+    "created_at": "2026-09-04T17:08:08.630849Z",
+    "updated_at": "2026-09-04T17:08:08.650718Z",
+    "agent_name": "Lot",
+    "updated_by_email": null,
+    "web_supplement": null,
+    "latest_review_status": null,
+    "latest_review_comment": "",
+    "latest_review_at": null,
+    "latest_review_by": null
+   },
+   "dimension_instances": [
+    {
+     "id": "1aaa19e1-f08a-46f5-9189-f3ab55c9bc9f",
+     "dimension_id": "52c61540-d43b-4517-8061-4be050789a4e",
+     "dimension_value": "MER-001 Merluza grande 12,5 kg 13,50 L-250903",
+     "name": "Line"
+    }
+   ],
+   "extraction_status": "Processed",
+   "agent_id": "113cf9d6-3484-454e-bd55-c10fe178378d",
+   "agent_name": "Lot"
+  },
+  {
+   "id": "493e973f-b249-49cb-b2cc-e5dfb404968f",
+   "value_type": "string",
+   "resolution_result": {
+    "id": "cea3d423-156c-42a4-b8e1-351049f4a65e",
+    "result_name": "Lot | GAM-010 Gamba roja 3 caja 92,00 L-250903",
+    "value": "L-250903",
+    "resolution_status": "Resolved",
+    "justification_for_resolution_status": "Single underlying entity value",
+    "references": {
+     "1": [
+      "albaran.png",
+      1
+     ]
+    },
+    "source_type": "document",
+    "is_web_supplement": false,
+    "created_at": "2026-09-04T17:08:08.874150Z",
+    "updated_at": "2026-09-04T17:08:08.893810Z",
+    "agent_name": "Lot",
+    "updated_by_email": null,
+    "web_supplement": null,
+    "latest_review_status": null,
+    "latest_review_comment": "",
+    "latest_review_at": null,
+    "latest_review_by": null
+   },
+   "dimension_instances": [
+    {
+     "id": "76cf2110-4b60-4b9e-b557-2f413b58014f",
+     "dimension_id": "52c61540-d43b-4517-8061-4be050789a4e",
+     "dimension_value": "GAM-010 Gamba roja 3 caja 92,00 L-250903",
+     "name": "Line"
+    }
+   ],
+   "extraction_status": "Processed",
+   "agent_id": "113cf9d6-3484-454e-bd55-c10fe178378d",
+   "agent_name": "Lot"
+  },
+  {
+   "id": "8c9d41e2-212e-4164-94a9-39d6041b5f42",
+   "value_type": "string",
+   "resolution_result": {
+    "id": "99bbf4c0-2c88-4c99-a80a-5a155aabf41a",
+    "result_name": "Lot | PUL-004 Pulpo cocido 21 kg 18,90 L-250902",
+    "value": "L-250902",
+    "resolution_status": "Resolved",
+    "justification_for_resolution_status": "Single underlying entity value",
+    "references": {
+     "1": [
+      "albaran.png",
+      1
+     ]
+    },
+    "source_type": "document",
+    "is_web_supplement": false,
+    "created_at": "2026-09-04T17:08:07.395704Z",
+    "updated_at": "2026-09-04T17:08:07.416008Z",
+    "agent_name": "Lot",
+    "updated_by_email": null,
+    "web_supplement": null,
+    "latest_review_status": null,
+    "latest_review_comment": "",
+    "latest_review_at": null,
+    "latest_review_by": null
+   },
+   "dimension_instances": [
+    {
+     "id": "dd35831b-6e23-46ee-a7b6-4c495b8e9b84",
+     "dimension_id": "52c61540-d43b-4517-8061-4be050789a4e",
+     "dimension_value": "PUL-004 Pulpo cocido 21 kg 18,90 L-250902",
+     "name": "Line"
+    }
+   ],
+   "extraction_status": "Processed",
+   "agent_id": "113cf9d6-3484-454e-bd55-c10fe178378d",
+   "agent_name": "Lot"
+  },
+  {
+   "id": "13590172-5a9a-488b-bae2-050ba86b2d95",
+   "value_type": "string",
+   "resolution_result": {
+    "id": "66837f04-dfeb-4e28-a214-868104405d1a",
+    "result_name": "Product code | ALM-002 Almeja fina 4,25 kg 31,40",
+    "value": "ALM-002",
+    "resolution_status": "Resolved",
+    "justification_for_resolution_status": "Single underlying entity value",
+    "references": {
+     "1": [
+      "albaran.png",
+      1
+     ]
+    },
+    "source_type": "document",
+    "is_web_supplement": false,
+    "created_at": "2026-09-04T17:08:08.012193Z",
+    "updated_at": "2026-09-04T17:08:08.032791Z",
+    "agent_name": "Product code",
+    "updated_by_email": null,
+    "web_supplement": null,
+    "latest_review_status": null,
+    "latest_review_comment": "",
+    "latest_review_at": null,
+    "latest_review_by": null
+   },
+   "dimension_instances": [
+    {
+     "id": "5a187f34-b4a0-4e23-85bf-4cb1274937ec",
+     "dimension_id": "52c61540-d43b-4517-8061-4be050789a4e",
+     "dimension_value": "ALM-002 Almeja fina 4,25 kg 31,40",
+     "name": "Line"
+    }
+   ],
+   "extraction_status": "Processed",
+   "agent_id": "5d84116c-e5e7-448d-a899-630a48dc148c",
+   "agent_name": "Product code"
+  },
+  {
+   "id": "388c8ceb-1d21-41e8-b6e0-89da8e26a716",
+   "value_type": "string",
+   "resolution_result": {
+    "id": "3c95e738-75d8-40e9-b6d2-4ef5badb0fed",
+    "result_name": "Product code | GAM-010 Gamba roja 3 caja 92,00 L-250903",
+    "value": "GAM-010",
+    "resolution_status": "Resolved",
+    "justification_for_resolution_status": "Single underlying entity value",
+    "references": {
+     "1": [
+      "albaran.png",
+      1
+     ]
+    },
+    "source_type": "document",
+    "is_web_supplement": false,
+    "created_at": "2026-09-04T17:08:08.752506Z",
+    "updated_at": "2026-09-04T17:08:08.772399Z",
+    "agent_name": "Product code",
+    "updated_by_email": null,
+    "web_supplement": null,
+    "latest_review_status": null,
+    "latest_review_comment": "",
+    "latest_review_at": null,
+    "latest_review_by": null
+   },
+   "dimension_instances": [
+    {
+     "id": "4f13ad81-8449-4d51-92fb-89e0c8613456",
+     "dimension_id": "52c61540-d43b-4517-8061-4be050789a4e",
+     "dimension_value": "GAM-010 Gamba roja 3 caja 92,00 L-250903",
+     "name": "Line"
+    }
+   ],
+   "extraction_status": "Processed",
+   "agent_id": "5d84116c-e5e7-448d-a899-630a48dc148c",
+   "agent_name": "Product code"
+  },
+  {
+   "id": "6d485b4d-3967-4905-87ab-cdacd4ae12ba",
+   "value_type": "string",
+   "resolution_result": {
+    "id": "4e2669eb-b2fe-4a99-88ee-ca816507848c",
+    "result_name": "Product code | MER-001 Merluza grande 12,5 kg 13,50 L-250903",
+    "value": "MER-001",
+    "resolution_status": "Resolved",
+    "justification_for_resolution_status": "Single underlying entity value",
+    "references": {
+     "1": [
+      "albaran.png",
+      1
+     ]
+    },
+    "source_type": "document",
+    "is_web_supplement": false,
+    "created_at": "2026-09-04T17:08:08.260568Z",
+    "updated_at": "2026-09-04T17:08:08.280013Z",
+    "agent_name": "Product code",
+    "updated_by_email": null,
+    "web_supplement": null,
+    "latest_review_status": null,
+    "latest_review_comment": "",
+    "latest_review_at": null,
+    "latest_review_by": null
+   },
+   "dimension_instances": [
+    {
+     "id": "e639eba1-db38-47a6-92d9-389c243958cd",
+     "dimension_id": "52c61540-d43b-4517-8061-4be050789a4e",
+     "dimension_value": "MER-001 Merluza grande 12,5 kg 13,50 L-250903",
+     "name": "Line"
+    }
+   ],
+   "extraction_status": "Processed",
+   "agent_id": "5d84116c-e5e7-448d-a899-630a48dc148c",
+   "agent_name": "Product code"
+  },
+  {
+   "id": "c6911d6d-f1b6-405b-8d20-a919786ad4bc",
+   "value_type": "string",
+   "resolution_result": {
+    "id": "9196fb61-ba3b-4287-939c-acf9b021cc0c",
+    "result_name": "Product code | PUL-004 Pulpo cocido 21 kg 18,90 L-250902",
+    "value": "PUL-004",
+    "resolution_status": "Resolved",
+    "justification_for_resolution_status": "Single underlying entity value",
+    "references": {
+     "1": [
+      "albaran.png",
+      1
+     ]
+    },
+    "source_type": "document",
+    "is_web_supplement": false,
+    "created_at": "2026-09-04T17:08:07.950621Z",
+    "updated_at": "2026-09-04T17:08:07.970055Z",
+    "agent_name": "Product code",
+    "updated_by_email": null,
+    "web_supplement": null,
+    "latest_review_status": null,
+    "latest_review_comment": "",
+    "latest_review_at": null,
+    "latest_review_by": null
+   },
+   "dimension_instances": [
+    {
+     "id": "6fbfd908-4a28-490b-8c31-798c82988b4b",
+     "dimension_id": "52c61540-d43b-4517-8061-4be050789a4e",
+     "dimension_value": "PUL-004 Pulpo cocido 21 kg 18,90 L-250902",
+     "name": "Line"
+    }
+   ],
+   "extraction_status": "Processed",
+   "agent_id": "5d84116c-e5e7-448d-a899-630a48dc148c",
+   "agent_name": "Product code"
+  },
+  {
+   "id": "62845fba-54bb-4a7d-a7f5-112092722ae6",
+   "value_type": "string",
+   "resolution_result": {
+    "id": "84aa59fb-ab8f-4d62-acb1-4611aac53861",
+    "result_name": "Product name | ALM-002 Almeja fina 4,25 kg 31,40",
+    "value": "Almeja fina",
+    "resolution_status": "Resolved",
+    "justification_for_resolution_status": "Single underlying entity value",
+    "references": {
+     "1": [
+      "albaran.png",
+      1
+     ]
+    },
+    "source_type": "document",
+    "is_web_supplement": false,
+    "created_at": "2026-09-04T17:08:07.643951Z",
+    "updated_at": "2026-09-04T17:08:07.663963Z",
+    "agent_name": "Product name",
+    "updated_by_email": null,
+    "web_supplement": null,
+    "latest_review_status": null,
+    "latest_review_comment": "",
+    "latest_review_at": null,
+    "latest_review_by": null
+   },
+   "dimension_instances": [
+    {
+     "id": "41bbf78c-5e43-47d9-96ab-69c5f4108942",
+     "dimension_id": "52c61540-d43b-4517-8061-4be050789a4e",
+     "dimension_value": "ALM-002 Almeja fina 4,25 kg 31,40",
+     "name": "Line"
+    }
+   ],
+   "extraction_status": "Processed",
+   "agent_id": "c889e94b-a40c-4f4a-8e2d-b0f340827037",
+   "agent_name": "Product name"
+  },
+  {
+   "id": "843541ac-f146-4c9d-8942-7a461a152bbd",
+   "value_type": "string",
+   "resolution_result": {
+    "id": "23bcc564-c0c9-4eb1-897d-26ea8009957c",
+    "result_name": "Product name | PUL-004 Pulpo cocido 21 kg 18,90 L-250902",
+    "value": "Pulpo cocido",
+    "resolution_status": "Resolved",
+    "justification_for_resolution_status": "Single underlying entity value",
+    "references": {
+     "1": [
+      "albaran.png",
+      1
+     ]
+    },
+    "source_type": "document",
+    "is_web_supplement": false,
+    "created_at": "2026-09-04T17:08:08.446568Z",
+    "updated_at": "2026-09-04T17:08:08.465844Z",
+    "agent_name": "Product name",
+    "updated_by_email": null,
+    "web_supplement": null,
+    "latest_review_status": null,
+    "latest_review_comment": "",
+    "latest_review_at": null,
+    "latest_review_by": null
+   },
+   "dimension_instances": [
+    {
+     "id": "97fcef53-a55b-4cb2-ad32-a59657506aa1",
+     "dimension_id": "52c61540-d43b-4517-8061-4be050789a4e",
+     "dimension_value": "PUL-004 Pulpo cocido 21 kg 18,90 L-250902",
+     "name": "Line"
+    }
+   ],
+   "extraction_status": "Processed",
+   "agent_id": "c889e94b-a40c-4f4a-8e2d-b0f340827037",
+   "agent_name": "Product name"
+  },
+  {
+   "id": "9ada1435-a764-4751-a5f8-c7372f35dcd2",
+   "value_type": "string",
+   "resolution_result": {
+    "id": "301838b2-c1a0-4a56-98a1-273247611f9a",
+    "result_name": "Product name | GAM-010 Gamba roja 3 caja 92,00 L-250903",
+    "value": "Gamba roja",
+    "resolution_status": "Resolved",
+    "justification_for_resolution_status": "Single underlying entity value",
+    "references": {
+     "1": [
+      "albaran.png",
+      1
+     ]
+    },
+    "source_type": "document",
+    "is_web_supplement": false,
+    "created_at": "2026-09-04T17:08:08.813488Z",
+    "updated_at": "2026-09-04T17:08:08.832985Z",
+    "agent_name": "Product name",
+    "updated_by_email": null,
+    "web_supplement": null,
+    "latest_review_status": null,
+    "latest_review_comment": "",
+    "latest_review_at": null,
+    "latest_review_by": null
+   },
+   "dimension_instances": [
+    {
+     "id": "2b113ef6-eda0-4038-afa3-aa935f1c534f",
+     "dimension_id": "52c61540-d43b-4517-8061-4be050789a4e",
+     "dimension_value": "GAM-010 Gamba roja 3 caja 92,00 L-250903",
+     "name": "Line"
+    }
+   ],
+   "extraction_status": "Processed",
+   "agent_id": "c889e94b-a40c-4f4a-8e2d-b0f340827037",
+   "agent_name": "Product name"
+  },
+  {
+   "id": "ab530be4-8263-48c4-be42-94c7285a41f7",
+   "value_type": "string",
+   "resolution_result": {
+    "id": "06617fbe-e191-46b1-bd1b-210ad0667f4a",
+    "result_name": "Product name | MER-001 Merluza grande 12,5 kg 13,50 L-250903",
+    "value": "Merluza grande",
+    "resolution_status": "Resolved",
+    "justification_for_resolution_status": "Single underlying entity value",
+    "references": {
+     "1": [
+      "albaran.png",
+      1
+     ]
+    },
+    "source_type": "document",
+    "is_web_supplement": false,
+    "created_at": "2026-09-04T17:08:07.457331Z",
+    "updated_at": "2026-09-04T17:08:07.477138Z",
+    "agent_name": "Product name",
+    "updated_by_email": null,
+    "web_supplement": null,
+    "latest_review_status": null,
+    "latest_review_comment": "",
+    "latest_review_at": null,
+    "latest_review_by": null
+   },
+   "dimension_instances": [
+    {
+     "id": "0ee1564b-41c5-4d50-995f-f1f00fd7956e",
+     "dimension_id": "52c61540-d43b-4517-8061-4be050789a4e",
+     "dimension_value": "MER-001 Merluza grande 12,5 kg 13,50 L-250903",
+     "name": "Line"
+    }
+   ],
+   "extraction_status": "Processed",
+   "agent_id": "c889e94b-a40c-4f4a-8e2d-b0f340827037",
+   "agent_name": "Product name"
+  },
+  {
+   "id": "36a36d62-f4f3-4b8f-b577-17109ee505ba",
+   "value_type": "number",
+   "resolution_result": {
+    "id": "50e20894-0f6c-4832-9f42-3f46ecfe1a35",
+    "result_name": "Quantity | GAM-010 Gamba roja 3 caja 92,00 L-250903",
+    "value": 3,
+    "resolution_status": "Resolved",
+    "justification_for_resolution_status": "Single underlying entity value",
+    "references": {
+     "1": [
+      "albaran.png",
+      1
+     ]
+    },
+    "source_type": "document",
+    "is_web_supplement": false,
+    "created_at": "2026-09-04T17:08:08.935036Z",
+    "updated_at": "2026-09-04T17:08:08.954643Z",
+    "agent_name": "Quantity",
+    "updated_by_email": null,
+    "web_supplement": null,
+    "latest_review_status": null,
+    "latest_review_comment": "",
+    "latest_review_at": null,
+    "latest_review_by": null
+   },
+   "dimension_instances": [
+    {
+     "id": "a9fd6150-9a20-43df-b43f-834a91ce967e",
+     "dimension_id": "52c61540-d43b-4517-8061-4be050789a4e",
+     "dimension_value": "GAM-010 Gamba roja 3 caja 92,00 L-250903",
+     "name": "Line"
+    }
+   ],
+   "extraction_status": "Processed",
+   "agent_id": "877847d7-1c88-4d29-b9be-a8613bc334fb",
+   "agent_name": "Quantity"
+  },
+  {
+   "id": "48da2572-2af4-4333-af18-21d0976ea536",
+   "value_type": "number",
+   "resolution_result": {
+    "id": "dd1f21a3-952b-406f-bb97-4099961536e1",
+    "result_name": "Quantity | MER-001 Merluza grande 12,5 kg 13,50 L-250903",
+    "value": 12.5,
+    "resolution_status": "Resolved",
+    "justification_for_resolution_status": "Single underlying entity value",
+    "references": {
+     "1": [
+      "albaran.png",
+      1
+     ]
+    },
+    "source_type": "document",
+    "is_web_supplement": false,
+    "created_at": "2026-09-04T17:08:07.829554Z",
+    "updated_at": "2026-09-04T17:08:07.849814Z",
+    "agent_name": "Quantity",
+    "updated_by_email": null,
+    "web_supplement": null,
+    "latest_review_status": null,
+    "latest_review_comment": "",
+    "latest_review_at": null,
+    "latest_review_by": null
+   },
+   "dimension_instances": [
+    {
+     "id": "4740bde6-d244-4902-94d0-f368cb5b7770",
+     "dimension_id": "52c61540-d43b-4517-8061-4be050789a4e",
+     "dimension_value": "MER-001 Merluza grande 12,5 kg 13,50 L-250903",
+     "name": "Line"
+    }
+   ],
+   "extraction_status": "Processed",
+   "agent_id": "877847d7-1c88-4d29-b9be-a8613bc334fb",
+   "agent_name": "Quantity"
+  },
+  {
+   "id": "7a10e973-ee3c-4a4a-b1c2-f255682b10dd",
+   "value_type": "number",
+   "resolution_result": {
+    "id": "da7b90b7-07c6-40d8-b14a-a2bb1f45696f",
+    "result_name": "Quantity | ALM-002 Almeja fina 4,25 kg 31,40",
+    "value": 4.25,
+    "resolution_status": "Resolved",
+    "justification_for_resolution_status": "Single underlying entity value",
+    "references": {
+     "1": [
+      "albaran.png",
+      1
+     ]
+    },
+    "source_type": "document",
+    "is_web_supplement": false,
+    "created_at": "2026-09-04T17:08:07.582127Z",
+    "updated_at": "2026-09-04T17:08:07.602334Z",
+    "agent_name": "Quantity",
+    "updated_by_email": null,
+    "web_supplement": null,
+    "latest_review_status": null,
+    "latest_review_comment": "",
+    "latest_review_at": null,
+    "latest_review_by": null
+   },
+   "dimension_instances": [
+    {
+     "id": "bcb16a15-5bce-4e95-b18f-10c282d868cb",
+     "dimension_id": "52c61540-d43b-4517-8061-4be050789a4e",
+     "dimension_value": "ALM-002 Almeja fina 4,25 kg 31,40",
+     "name": "Line"
+    }
+   ],
+   "extraction_status": "Processed",
+   "agent_id": "877847d7-1c88-4d29-b9be-a8613bc334fb",
+   "agent_name": "Quantity"
+  },
+  {
+   "id": "f4076b4a-6c8f-4400-b9f3-dc0d1f8ae157",
+   "value_type": "number",
+   "resolution_result": {
+    "id": "cbc5117c-4704-42d1-a571-eb492b344810",
+    "result_name": "Quantity | PUL-004 Pulpo cocido 21 kg 18,90 L-250902",
+    "value": 21,
+    "resolution_status": "Resolved",
+    "justification_for_resolution_status": "Single underlying entity value",
+    "references": {
+     "1": [
+      "albaran.png",
+      1
+     ]
+    },
+    "source_type": "document",
+    "is_web_supplement": false,
+    "created_at": "2026-09-04T17:08:08.072986Z",
+    "updated_at": "2026-09-04T17:08:08.093095Z",
+    "agent_name": "Quantity",
+    "updated_by_email": null,
+    "web_supplement": null,
+    "latest_review_status": null,
+    "latest_review_comment": "",
+    "latest_review_at": null,
+    "latest_review_by": null
+   },
+   "dimension_instances": [
+    {
+     "id": "045bc18a-1aa2-4bdc-ac7e-5dbaefc1a193",
+     "dimension_id": "52c61540-d43b-4517-8061-4be050789a4e",
+     "dimension_value": "PUL-004 Pulpo cocido 21 kg 18,90 L-250902",
+     "name": "Line"
+    }
+   ],
+   "extraction_status": "Processed",
+   "agent_id": "877847d7-1c88-4d29-b9be-a8613bc334fb",
+   "agent_name": "Quantity"
+  },
+  {
+   "id": "0523a5fc-2d4c-45de-b9f5-ffbdb4457264",
+   "value_type": "string",
+   "resolution_result": {
+    "id": "74020ffa-623f-4e61-97a1-c1e32482b442",
+    "result_name": "Unit | PUL-004 Pulpo cocido 21 kg 18,90 L-250902",
+    "value": "kg",
+    "resolution_status": "Resolved",
+    "justification_for_resolution_status": "Single underlying entity value",
+    "references": {
+     "1": [
+      "albaran.png",
+      1
+     ]
+    },
+    "source_type": "document",
+    "is_web_supplement": false,
+    "created_at": "2026-09-04T17:08:08.507380Z",
+    "updated_at": "2026-09-04T17:08:08.526413Z",
+    "agent_name": "Unit",
+    "updated_by_email": null,
+    "web_supplement": null,
+    "latest_review_status": null,
+    "latest_review_comment": "",
+    "latest_review_at": null,
+    "latest_review_by": null
+   },
+   "dimension_instances": [
+    {
+     "id": "15cc1b6e-d6c5-4b72-86b5-ce1189db933f",
+     "dimension_id": "52c61540-d43b-4517-8061-4be050789a4e",
+     "dimension_value": "PUL-004 Pulpo cocido 21 kg 18,90 L-250902",
+     "name": "Line"
+    }
+   ],
+   "extraction_status": "Processed",
+   "agent_id": "9971f7c4-5477-4aa9-9306-d307096b3de1",
+   "agent_name": "Unit"
+  },
+  {
+   "id": "08c01dd9-3363-44ec-bfdb-236ecf6105a3",
+   "value_type": "string",
+   "resolution_result": {
+    "id": "475ffd43-3c6b-46bf-b24e-9035fc399690",
+    "result_name": "Unit | MER-001 Merluza grande 12,5 kg 13,50 L-250903",
+    "value": "kg",
+    "resolution_status": "Resolved",
+    "justification_for_resolution_status": "Single underlying entity value",
+    "references": {
+     "1": [
+      "albaran.png",
+      1
+     ]
+    },
+    "source_type": "document",
+    "is_web_supplement": false,
+    "created_at": "2026-09-04T17:08:07.705447Z",
+    "updated_at": "2026-09-04T17:08:07.725890Z",
+    "agent_name": "Unit",
+    "updated_by_email": null,
+    "web_supplement": null,
+    "latest_review_status": null,
+    "latest_review_comment": "",
+    "latest_review_at": null,
+    "latest_review_by": null
+   },
+   "dimension_instances": [
+    {
+     "id": "f6da6272-d17d-4cb9-83c8-0a452522168c",
+     "dimension_id": "52c61540-d43b-4517-8061-4be050789a4e",
+     "dimension_value": "MER-001 Merluza grande 12,5 kg 13,50 L-250903",
+     "name": "Line"
+    }
+   ],
+   "extraction_status": "Processed",
+   "agent_id": "9971f7c4-5477-4aa9-9306-d307096b3de1",
+   "agent_name": "Unit"
+  },
+  {
+   "id": "384d8a87-7c47-4976-815a-dda1f3b5e17f",
+   "value_type": "string",
+   "resolution_result": {
+    "id": "d62289fd-13c9-4a55-9f8d-3164afeb72f3",
+    "result_name": "Unit | GAM-010 Gamba roja 3 caja 92,00 L-250903",
+    "value": "caja",
+    "resolution_status": "Resolved",
+    "justification_for_resolution_status": "Single underlying entity value",
+    "references": {
+     "1": [
+      "albaran.png",
+      1
+     ]
+    },
+    "source_type": "document",
+    "is_web_supplement": false,
+    "created_at": "2026-09-04T17:08:08.568404Z",
+    "updated_at": "2026-09-04T17:08:08.587825Z",
+    "agent_name": "Unit",
+    "updated_by_email": null,
+    "web_supplement": null,
+    "latest_review_status": null,
+    "latest_review_comment": "",
+    "latest_review_at": null,
+    "latest_review_by": null
+   },
+   "dimension_instances": [
+    {
+     "id": "e20da674-7b30-4c15-bc2a-5570364162d4",
+     "dimension_id": "52c61540-d43b-4517-8061-4be050789a4e",
+     "dimension_value": "GAM-010 Gamba roja 3 caja 92,00 L-250903",
+     "name": "Line"
+    }
+   ],
+   "extraction_status": "Processed",
+   "agent_id": "9971f7c4-5477-4aa9-9306-d307096b3de1",
+   "agent_name": "Unit"
+  },
+  {
+   "id": "5ca4292f-e316-4ed9-b39e-771650e109b6",
+   "value_type": "string",
+   "resolution_result": {
+    "id": "1d459f62-97ac-4d22-90fe-2b8b76f41750",
+    "result_name": "Unit | ALM-002 Almeja fina 4,25 kg 31,40",
+    "value": "kg",
+    "resolution_status": "Resolved",
+    "justification_for_resolution_status": "Single underlying entity value",
+    "references": {
+     "1": [
+      "albaran.png",
+      1
+     ]
+    },
+    "source_type": "document",
+    "is_web_supplement": false,
+    "created_at": "2026-09-04T17:08:08.322602Z",
+    "updated_at": "2026-09-04T17:08:08.342430Z",
+    "agent_name": "Unit",
+    "updated_by_email": null,
+    "web_supplement": null,
+    "latest_review_status": null,
+    "latest_review_comment": "",
+    "latest_review_at": null,
+    "latest_review_by": null
+   },
+   "dimension_instances": [
+    {
+     "id": "bc9eb9c4-9d72-40fb-b75a-1255b6dfcab8",
+     "dimension_id": "52c61540-d43b-4517-8061-4be050789a4e",
+     "dimension_value": "ALM-002 Almeja fina 4,25 kg 31,40",
+     "name": "Line"
+    }
+   ],
+   "extraction_status": "Processed",
+   "agent_id": "9971f7c4-5477-4aa9-9306-d307096b3de1",
+   "agent_name": "Unit"
+  },
+  {
+   "id": "851eae96-7074-446b-ba37-52f8f7eecd46",
+   "value_type": "number",
+   "resolution_result": {
+    "id": "677bd1c7-e479-49c0-97ec-223745ca0d45",
+    "result_name": "Unit price (EUR) | PUL-004 Pulpo cocido 21 kg 18,90 L-250902",
+    "value": 18.9,
+    "resolution_status": "Resolved",
+    "justification_for_resolution_status": "Single underlying entity value",
+    "references": {
+     "1": [
+      "albaran.png",
+      1
+     ]
+    },
+    "source_type": "document",
+    "is_web_supplement": false,
+    "created_at": "2026-09-04T17:08:07.768739Z",
+    "updated_at": "2026-09-04T17:08:07.788342Z",
+    "agent_name": "Unit price (EUR)",
+    "updated_by_email": null,
+    "web_supplement": null,
+    "latest_review_status": null,
+    "latest_review_comment": "",
+    "latest_review_at": null,
+    "latest_review_by": null
+   },
+   "dimension_instances": [
+    {
+     "id": "0ae39df5-99ec-40ab-9f95-83c8c46a8d7e",
+     "dimension_id": "52c61540-d43b-4517-8061-4be050789a4e",
+     "dimension_value": "PUL-004 Pulpo cocido 21 kg 18,90 L-250902",
+     "name": "Line"
+    }
+   ],
+   "extraction_status": "Processed",
+   "agent_id": "905c3300-70fa-487d-9a2c-e34e20aa8353",
+   "agent_name": "Unit price (EUR)"
+  },
+  {
+   "id": "9af09045-28c4-480b-9c69-4aa73f624b3c",
+   "value_type": "number",
+   "resolution_result": {
+    "id": "4b946f1b-6411-4354-9807-90bb9f5f029b",
+    "result_name": "Unit price (EUR) | MER-001 Merluza grande 12,5 kg 13,50 L-250903",
+    "value": 13.5,
+    "resolution_status": "Resolved",
+    "justification_for_resolution_status": "Single underlying entity value",
+    "references": {
+     "1": [
+      "albaran.png",
+      1
+     ]
+    },
+    "source_type": "document",
+    "is_web_supplement": false,
+    "created_at": "2026-09-04T17:08:08.136862Z",
+    "updated_at": "2026-09-04T17:08:08.156893Z",
+    "agent_name": "Unit price (EUR)",
+    "updated_by_email": null,
+    "web_supplement": null,
+    "latest_review_status": null,
+    "latest_review_comment": "",
+    "latest_review_at": null,
+    "latest_review_by": null
+   },
+   "dimension_instances": [
+    {
+     "id": "1e23c097-1ed9-4211-9ab3-263fdfca7c4a",
+     "dimension_id": "52c61540-d43b-4517-8061-4be050789a4e",
+     "dimension_value": "MER-001 Merluza grande 12,5 kg 13,50 L-250903",
+     "name": "Line"
+    }
+   ],
+   "extraction_status": "Processed",
+   "agent_id": "905c3300-70fa-487d-9a2c-e34e20aa8353",
+   "agent_name": "Unit price (EUR)"
+  },
+  {
+   "id": "af3b0b8b-ace3-4439-ad2e-1c3682ccfd91",
+   "value_type": "number",
+   "resolution_result": {
+    "id": "251ea128-c76d-4b48-83c0-15ef18f1cb78",
+    "result_name": "Unit price (EUR) | ALM-002 Almeja fina 4,25 kg 31,40",
+    "value": 31.4,
+    "resolution_status": "Resolved",
+    "justification_for_resolution_status": "Single underlying entity value",
+    "references": {
+     "1": [
+      "albaran.png",
+      1
+     ]
+    },
+    "source_type": "document",
+    "is_web_supplement": false,
+    "created_at": "2026-09-04T17:08:08.384364Z",
+    "updated_at": "2026-09-04T17:08:08.404528Z",
+    "agent_name": "Unit price (EUR)",
+    "updated_by_email": null,
+    "web_supplement": null,
+    "latest_review_status": null,
+    "latest_review_comment": "",
+    "latest_review_at": null,
+    "latest_review_by": null
+   },
+   "dimension_instances": [
+    {
+     "id": "3979f0c5-fd55-4f16-b60c-dcf5b4efb693",
+     "dimension_id": "52c61540-d43b-4517-8061-4be050789a4e",
+     "dimension_value": "ALM-002 Almeja fina 4,25 kg 31,40",
+     "name": "Line"
+    }
+   ],
+   "extraction_status": "Processed",
+   "agent_id": "905c3300-70fa-487d-9a2c-e34e20aa8353",
+   "agent_name": "Unit price (EUR)"
+  },
+  {
+   "id": "be42c019-1c40-43d3-9c74-8ba27a33b6bc",
+   "value_type": "number",
+   "resolution_result": {
+    "id": "c6d93d54-8c49-4603-a2d1-4481f881f30a",
+    "result_name": "Unit price (EUR) | GAM-010 Gamba roja 3 caja 92,00 L-250903",
+    "value": 92.0,
+    "resolution_status": "Resolved",
+    "justification_for_resolution_status": "Single underlying entity value",
+    "references": {
+     "1": [
+      "albaran.png",
+      1
+     ]
+    },
+    "source_type": "document",
+    "is_web_supplement": false,
+    "created_at": "2026-09-04T17:08:08.692427Z",
+    "updated_at": "2026-09-04T17:08:08.711715Z",
+    "agent_name": "Unit price (EUR)",
+    "updated_by_email": null,
+    "web_supplement": null,
+    "latest_review_status": null,
+    "latest_review_comment": "",
+    "latest_review_at": null,
+    "latest_review_by": null
+   },
+   "dimension_instances": [
+    {
+     "id": "1539ff8c-4954-4bfd-b121-3d34c50659d8",
+     "dimension_id": "52c61540-d43b-4517-8061-4be050789a4e",
+     "dimension_value": "GAM-010 Gamba roja 3 caja 92,00 L-250903",
+     "name": "Line"
+    }
+   ],
+   "extraction_status": "Processed",
+   "agent_id": "905c3300-70fa-487d-9a2c-e34e20aa8353",
+   "agent_name": "Unit price (EUR)"
+  }
+ ],
+ "count": 30,
+ "page": 1,
+ "page_size": 500,
+ "total_pages": 1,
+ "total_rows": 30,
+ "displayed_dimensions": [
+  {
+   "dimension_id": "agent",
+   "dimension_mapping_id": "agent-mapping",
+   "name": "Agent",
+   "order": -1,
+   "are_values_dynamic": false,
+   "values": [
+    "Counterparty",
+    "Document date",
+    "Document number",
+    "Line number",
+    "Lot",
+    "Product code",
+    "Product name",
+    "Quantity",
+    "Unit",
+    "Unit price (EUR)"
+   ]
+  },
+  {
+   "dimension_id": "52c61540-d43b-4517-8061-4be050789a4e",
+   "dimension_mapping_id": "2d297bd9-d96a-40f2-beed-d5908b6fb0c8",
+   "name": "Line",
+   "order": 0,
+   "are_values_dynamic": true,
+   "values": [
+    "ALM-002 Almeja fina 4,25 kg 31,40",
+    "MER-001 Merluza grande 12,5 kg 13,50 L-250903",
+    "GAM-010 Gamba roja 3 caja 92,00 L-250903",
+    "PUL-004 Pulpo cocido 21 kg 18,90 L-250902"
+   ]
+  }
+ ],
+ "agent_ids": [
+  "b0f8d770-b2a2-4987-893c-1aa5ff7150a7",
+  "4b29a1de-5334-400c-8598-9f9d954cefa1",
+  "5d84116c-e5e7-448d-a899-630a48dc148c",
+  "877847d7-1c88-4d29-b9be-a8613bc334fb",
+  "6aace243-1c9d-42b4-bf64-f31c1fe9ddb4",
+  "5acbcc99-ca5a-45c5-99b9-2c5e201ce7b0",
+  "c889e94b-a40c-4f4a-8e2d-b0f340827037",
+  "9971f7c4-5477-4aa9-9306-d307096b3de1",
+  "905c3300-70fa-487d-9a2c-e34e20aa8353",
+  "113cf9d6-3484-454e-bd55-c10fe178378d"
+ ],
+ "recommended_dimension_order": null,
+ "all_dimension_values": {
+  "Agent": [
+   "Counterparty",
+   "Document date",
+   "Document number",
+   "Line number",
+   "Lot",
+   "Product code",
+   "Product name",
+   "Quantity",
+   "Unit",
+   "Unit price (EUR)"
+  ]
+ }
+}

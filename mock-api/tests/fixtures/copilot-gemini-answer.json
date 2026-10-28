@@ -1,0 +1,36 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"reply\": {\n    \"text\": \"Merluza grande is short by 16 kg. Pulpo cocido is short by 8 kg.\"\n  },\n  \"proposals\": [\n    {\n      \"kind\": \"supply-report\",\n      \"product\": \"Merluza grande\",\n      \"orderIds\": [\n        \"s-101\",\n        \"s-102\",\n        \"s-104\"\n      ]\n    },\n    {\n      \"kind\": \"supply-report\",\n      \"product\": \"Pulpo cocido\",\n      \"orderIds\": [\n        \"s-101\",\n        \"s-103\",\n        \"s-106\"\n      ]\n    }\n  ]\n}"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 1530,
+    "candidatesTokenCount": 179,
+    "totalTokenCount": 2356,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1530
+      }
+    ],
+    "thoughtsTokenCount": 647,
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-2.5-flash",
+  "responseId": "KL6basu1L521kdUPktHx2QY",
+  "_recorded": {
+    "model": "gemini-2.5-flash",
+    "endpoint": "v1beta generateContent",
+    "on": "2026-09-05"
+  }
+}

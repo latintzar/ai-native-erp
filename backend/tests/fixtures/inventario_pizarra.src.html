@@ -1,0 +1,69 @@
+<meta charset="utf-8">
+<style>
+  html,body{margin:0;padding:0;background:#0b0b0c;}
+  .scene{width:1400px;height:1050px;position:relative;overflow:hidden;
+    background:
+      radial-gradient(120% 90% at 30% 10%, #6b6257 0%, #3c3731 45%, #1c1a18 100%);
+    perspective:1600px;}
+  /* wall texture */
+  .wall{position:absolute;inset:0;opacity:.45;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='400'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4'/></filter><rect width='400' height='400' filter='url(%23n)' opacity='0.55'/></svg>");}
+  .board{position:absolute;left:112px;top:78px;width:1176px;height:894px;
+    transform:rotateY(-4.2deg) rotateZ(-0.9deg) rotateX(1.4deg);
+    transform-origin:50% 50%;
+    background:#1f3029;
+    background-image:
+      radial-gradient(90% 70% at 22% 18%, rgba(255,255,255,.13), rgba(255,255,255,0) 62%),
+      radial-gradient(60% 60% at 88% 92%, rgba(0,0,0,.42), rgba(0,0,0,0) 70%);
+    border:26px solid #6a4b2c;
+    border-radius:5px;
+    box-shadow:0 40px 90px rgba(0,0,0,.75), inset 0 0 120px rgba(0,0,0,.45);}
+  /* chalk dust smears */
+  .board:before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.30;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='600'><filter id='s'><feTurbulence type='fractalNoise' baseFrequency='0.012' numOctaves='3'/><feColorMatrix type='saturate' values='0'/></filter><rect width='600' height='600' filter='url(%23s)'/></svg>");
+    mix-blend-mode:screen;}
+  .ink{position:absolute;inset:0;padding:52px 62px;color:#eef3ea;
+    font-family:'Z003','URW Chancery L','Nimbus Sans',sans-serif;
+    text-shadow:0 0 2px rgba(255,255,255,.55), 0 1px 0 rgba(255,255,255,.18);}
+  h1{font-size:60px;margin:0 0 4px;letter-spacing:2px;transform:rotate(-.7deg);}
+  h2{font-size:34px;margin:0 0 26px;opacity:.86;transform:rotate(-.35deg);font-weight:400;}
+  .rule{height:3px;background:rgba(238,243,234,.5);margin:0 0 26px;width:96%;
+    transform:rotate(-.5deg);border-radius:3px;}
+  ul{list-style:none;margin:0;padding:0;}
+  li{display:flex;align-items:baseline;font-size:39px;line-height:1.63;white-space:nowrap;}
+  li .n{flex:0 0 auto;}
+  li .d{flex:1 1 auto;margin:0 14px;border-bottom:3px dotted rgba(238,243,234,.42);
+    transform:translateY(-9px);}
+  li .q{flex:0 0 auto;}
+  .grain{position:absolute;inset:0;pointer-events:none;opacity:.16;mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='g'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/></filter><rect width='300' height='300' filter='url(%23g)'/></svg>");}
+  .vig{position:absolute;inset:0;pointer-events:none;
+    background:radial-gradient(75% 62% at 48% 46%, rgba(0,0,0,0) 40%, rgba(0,0,0,.44) 100%);}
+  .flare{position:absolute;left:-6%;top:-14%;width:62%;height:52%;pointer-events:none;
+    background:radial-gradient(closest-side, rgba(255,236,200,.20), rgba(255,236,200,0));}
+</style>
+<div class="scene">
+  <div class="wall"></div>
+  <div class="board">
+    <div class="ink">
+      <h1>EXISTENCIAS &nbsp;·&nbsp; LUNES 27</h1>
+      <h2>CÁMARA 2 &nbsp;—&nbsp; recuento de la mañana</h2>
+      <div class="rule"></div>
+      <ul>
+        <li><span class="n">JAMÓN COCIDO</span><span class="d"></span><span class="q">4 cajas</span></li>
+        <li><span class="n">PALETA COCIDA</span><span class="d"></span><span class="q">12 kg</span></li>
+        <li><span class="n">CHORIZO SARTA</span><span class="d"></span><span class="q">6 cajas</span></li>
+        <li><span class="n">FUET 170</span><span class="d"></span><span class="q">3 cajas</span></li>
+        <li><span class="n">LOMO ADOBADO</span><span class="d"></span><span class="q">18 kg</span></li>
+        <li><span class="n">MORCILLA BURGOS</span><span class="d"></span><span class="q">2 cajas</span></li>
+        <li><span class="n">SALCHICHÓN VELA 55</span><span class="d"></span><span class="q">9 kg</span></li>
+        <li><span class="n">QUESO MANCHEGO</span><span class="d"></span><span class="q">5 piezas</span></li>
+        <li><span class="n">PANCETA ADOBADA</span><span class="d"></span><span class="q">7 kg</span></li>
+        <li><span class="n">SALSA BRAVA</span><span class="d"></span><span class="q">6 barquetas</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="flare"></div>
+  <div class="grain"></div>
+  <div class="vig"></div>
+</div>

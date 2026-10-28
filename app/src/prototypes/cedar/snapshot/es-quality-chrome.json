@@ -1,0 +1,4633 @@
+{
+  "entries": [
+    {
+      "source": "src/prototypes/cedar/detail.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Open settings",
+      "spanish": "Abrir ajustes"
+    },
+    {
+      "source": "src/prototypes/cedar/activation.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Claim the account",
+      "spanish": "Activar la cuenta"
+    },
+    {
+      "source": "src/prototypes/cedar/customer-profile.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Insights",
+      "spanish": "Análisis"
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Claim the account",
+      "spanish": "Activar la cuenta"
+    },
+    {
+      "source": "src/prototypes/cedar/route-meta.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Geography",
+      "spanish": "Zonas y rutas"
+    },
+    {
+      "source": "src/prototypes/cedar/route-meta.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Account",
+      "spanish": "Mi cuenta"
+    },
+    {
+      "source": "src/prototypes/cedar/route-meta.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Your agent",
+      "spanish": "Rocoto"
+    },
+    {
+      "source": "src/prototypes/cedar/route-meta.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "App settings",
+      "spanish": "Ajustes"
+    },
+    {
+      "source": "src/prototypes/cedar/route-meta.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Your business",
+      "spanish": "Tu empresa"
+    },
+    {
+      "source": "src/prototypes/cedar/route-meta.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Your data",
+      "spanish": "Tus datos"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/area.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Geography",
+      "spanish": "Zonas y rutas"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/area.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Account",
+      "spanish": "Mi cuenta"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/area.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Your agent",
+      "spanish": "Rocoto"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/area.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "App settings",
+      "spanish": "Ajustes"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/area.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Your business",
+      "spanish": "Tu empresa"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/area.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Your data",
+      "spanish": "Tus datos"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/printing.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Coming out",
+      "spanish": "En impresión"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/chats.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Owner",
+      "spanish": "Responsable"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/customers.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Account",
+      "spanish": "Mi cuenta"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/stock.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Stock",
+      "spanish": "Catálogo"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/sales.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Owner",
+      "spanish": "Responsable"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/sales.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Owner",
+      "spanish": "Responsable"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/agent.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Your agent",
+      "spanish": "Rocoto"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/data.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Your data",
+      "spanish": "Tus datos"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/app-settings.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "App settings",
+      "spanish": "Ajustes"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/business.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Your business",
+      "spanish": "Tu empresa"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/operations.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Your agent",
+      "spanish": "Rocoto"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/geography.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Geography",
+      "spanish": "Zonas y rutas"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/account.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Account",
+      "spanish": "Mi cuenta"
+    },
+    {
+      "source": "src/prototypes/cedar/detail.tsx",
+      "context": "review",
+      "kind": "template",
+      "english": " by ${sale.read.by}",
+      "spanish": " por ${sale.read.by}"
+    },
+    {
+      "source": "src/prototypes/cedar/line-notes.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "en-GB",
+      "spanish": "es-ES"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/sales.tsx",
+      "context": "review",
+      "kind": "template",
+      "english": " by ${fact.by}",
+      "spanish": " por ${fact.by}"
+    },
+    {
+      "source": "src/prototypes/cedar/anxiety.tsx",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "Rocoto held its reply and asked for the ${born?.owed === 'reply' ? 'reply' : 'edit'}, at ${born?.at}.",
+      "spanish": "Rocoto dejó la respuesta pendiente y pidió ${born?.owed === 'reply' ? 'reply' : 'edit'} a las ${born?.at}."
+    },
+    {
+      "source": "src/prototypes/cedar/anxiety.tsx",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": " · ${f.times}× what they usually take",
+      "spanish": " · ${f.times} veces su cantidad habitual"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/customers.tsx",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": " for “${query.trim()}”",
+      "spanish": " para «${query.trim()}»"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/stock.tsx",
+      "context": "LogicalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": " ${own} of them are this lote’s own.",
+      "spanish": " ${own} corresponden a este lote."
+    },
+    {
+      "source": "src/prototypes/cedar/briefings.ts",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "Pick who it goes to",
+      "spanish": "Elegir destinatarios"
+    },
+    {
+      "source": "src/prototypes/cedar/briefings.ts",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "${first.slice(0, 2).join(', ')} and ${first.length - 2} more",
+      "spanish": "${first.slice(0, 2).join(', ')} y ${first.length - 2} más"
+    },
+    {
+      "source": "src/prototypes/cedar/capability.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Skip this one",
+      "spanish": "Omitir este paso"
+    },
+    {
+      "source": "src/prototypes/cedar/capture.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Type what they said on the phone",
+      "spanish": "Escribe lo que te han pedido por teléfono"
+    },
+    {
+      "source": "src/prototypes/cedar/catalogue.ts",
+      "context": "LogicalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "the reference’s word",
+      "spanish": "el nombre de referencia"
+    },
+    {
+      "source": "src/prototypes/cedar/chip-entry.tsx",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "The document on this line: ${attached}",
+      "spanish": "Documento de esta línea: ${attached}"
+    },
+    {
+      "source": "src/prototypes/cedar/chip-entry.tsx",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "What they usually order",
+      "spanish": "Lo que suele pedir"
+    },
+    {
+      "source": "src/prototypes/cedar/company.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Rocoto puts the closest catalogue line on and says which one it sent.",
+      "spanish": "Rocoto elige el producto más parecido del catálogo e indica cuál ha enviado."
+    },
+    {
+      "source": "src/prototypes/cedar/company.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Rocoto asks them what to do with that line and keeps the rest moving.",
+      "spanish": "Rocoto pregunta al cliente qué hacer con esa línea y continúa con el resto del pedido."
+    },
+    {
+      "source": "src/prototypes/cedar/company.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Their own accounts and book, the tarifas in view, discount up to the ceiling.",
+      "spanish": "Sus clientes y pedidos, con las tarifas visibles y descuentos hasta el límite permitido."
+    },
+    {
+      "source": "src/prototypes/cedar/day.ts",
+      "context": "VariableDeclarator > TemplateLiteral",
+      "kind": "template",
+      "english": "For ${cast.order.deliveryDay}: ${asked(cast, lines)}.",
+      "spanish": "Para ${cast.order.deliveryDay}: ${asked(cast, lines)}."
+    },
+    {
+      "source": "src/prototypes/cedar/day.ts",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "Make the ${productOf(cast, raised.product).name} ${raised.qty + MORE} ${raised.unit}, and leave the ${productOf(cast, dropped.product).name}.",
+      "spanish": "Pon ${raised.qty + MORE} ${raised.unit} de ${productOf(cast, raised.product).name} y deja como está ${productOf(cast, dropped.product).name}."
+    },
+    {
+      "source": "src/prototypes/cedar/day.ts",
+      "context": "ObjectProperty > TemplateLiteral",
+      "kind": "template",
+      "english": "Changed at ${o.changed.at}, after it was recorded",
+      "spanish": "Modificado a las ${o.changed.at}, después de registrarlo"
+    },
+    {
+      "source": "src/prototypes/cedar/detail.tsx",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": " · they usually take ${qtyWords(line.usual, line.unit)}",
+      "spanish": " · suele pedir ${qtyWords(line.usual, line.unit)}"
+    },
+    {
+      "source": "src/prototypes/cedar/dismissals.ts",
+      "context": "ArrayExpression > StringLiteral",
+      "kind": "literal",
+      "english": "They have a big weekend",
+      "spanish": "Tienen más trabajo este fin de semana"
+    },
+    {
+      "source": "src/prototypes/cedar/dismissals.ts",
+      "context": "ArrayExpression > StringLiteral",
+      "kind": "literal",
+      "english": "It’s a national holiday coming up",
+      "spanish": "Se acerca un festivo nacional"
+    },
+    {
+      "source": "src/prototypes/cedar/export-files.ts",
+      "context": "ArrayExpression > StringLiteral",
+      "kind": "literal",
+      "english": "their system",
+      "spanish": "su sistema"
+    },
+    {
+      "source": "src/prototypes/cedar/inbox.tsx",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": " on the ${credited.lot} arrival",
+      "spanish": " en la entrada del lote ${credited.lot}"
+    },
+    {
+      "source": "src/prototypes/cedar/incoming.ts",
+      "context": "ObjectProperty > TemplateLiteral",
+      "kind": "template",
+      "english": "Read off the abono this message carried, against the ${product.name} it credits and the landing it came off.",
+      "spanish": "Leído del abono adjunto a este mensaje y contrastado con ${product.name} y su entrada original."
+    },
+    {
+      "source": "src/prototypes/cedar/incoming.ts",
+      "context": "ObjectProperty > TemplateLiteral",
+      "kind": "template",
+      "english": "${product.name} · ${money(batch.cost, product.unit)}, ${money(before, product.unit)} last landing",
+      "spanish": "${product.name} · ${money(batch.cost, product.unit)}; en la entrada anterior, ${money(before, product.unit)}"
+    },
+    {
+      "source": "src/prototypes/cedar/incoming.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Read off the delivery note this message carried, against your catalogue row and the last landing of the same goods.",
+      "spanish": "Leído del albarán adjunto a este mensaje y contrastado con tu catálogo y la entrada anterior del mismo producto."
+    },
+    {
+      "source": "src/prototypes/cedar/incoming.ts",
+      "context": "ObjectProperty > TemplateLiteral",
+      "kind": "template",
+      "english": "What ${standing.voice.kind === 'rule' ? 'the rule announced' : 'the house counted'} for these goods, against every line on the book that has yet to leave the house.",
+      "spanish": "Cantidad que ${standing.voice.kind === 'rule' ? 'the rule announced' : 'the house counted'} para estos productos, comparada con las líneas que quedan por servir."
+    },
+    {
+      "source": "src/prototypes/cedar/incoming.ts",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "the rule announced",
+      "spanish": "anunció la regla"
+    },
+    {
+      "source": "src/prototypes/cedar/incoming.ts",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "the house counted",
+      "spanish": "contó tu equipo"
+    },
+    {
+      "source": "src/prototypes/cedar/net.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "A line bigger than what that customer usually takes stands for your yes.",
+      "spanish": "Las cantidades que superen lo habitual para ese cliente quedan pendientes de tu aprobación."
+    },
+    {
+      "source": "src/prototypes/cedar/net.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "An order over the ceiling you set stands for your yes.",
+      "spanish": "Los pedidos que superen el límite que has fijado quedan pendientes de tu aprobación."
+    },
+    {
+      "source": "src/prototypes/cedar/net.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "What changed",
+      "spanish": "Qué ha cambiado"
+    },
+    {
+      "source": "src/prototypes/cedar/net.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Checking what changed…",
+      "spanish": "Comprobando los cambios…"
+    },
+    {
+      "source": "src/prototypes/cedar/net.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "A pick or a paper that stopped describing the crate comes back to you.",
+      "spanish": "Si cambia lo preparado, el albarán vuelve a revisión."
+    },
+    {
+      "source": "src/prototypes/cedar/net.ts",
+      "context": "VariableDeclarator > StringLiteral",
+      "kind": "literal",
+      "english": "What counts as a serious mistake is yours to set, and the count follows the definition.",
+      "spanish": "Tú defines qué es un error grave. El recuento sigue ese criterio."
+    },
+    {
+      "source": "src/prototypes/cedar/order-open.tsx",
+      "context": "ObjectProperty > TemplateLiteral",
+      "kind": "template",
+      "english": "The ${reopens} ${reopens === 1 ? 'record' : 'records'} marked Reopens come back for a second pass; the rest stand.",
+      "spanish": "${reopens} ${reopens === 1 ? 'record' : 'records'} vuelven a revisión. El resto permanece igual."
+    },
+    {
+      "source": "src/prototypes/cedar/order-open.tsx",
+      "context": "JSXFragment > JSXText",
+      "kind": "jsx-text",
+      "english": "The change lands on the order’s lines and stops there — the sheet, the delivery note and the\n              file are all still ahead of it.",
+      "spanish": "El cambio se aplica a las líneas del pedido. La hoja, el albarán y el archivo se generarán después."
+    },
+    {
+      "source": "src/prototypes/cedar/pin-map.tsx",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "The drop, on ${where}",
+      "spanish": "Entrega en ${where}"
+    },
+    {
+      "source": "src/prototypes/cedar/print-queue.ts",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "Lands in their ${rail.to} at ${rail.at}",
+      "spanish": "Se envía a ${rail.to} a las ${rail.at}"
+    },
+    {
+      "source": "src/prototypes/cedar/product-card.tsx",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": " · their own · set ${own.at}",
+      "spanish": " · precio propio · fijado a las ${own.at}"
+    },
+    {
+      "source": "src/prototypes/cedar/round-map.tsx",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "The ground this house covers, in ${ZONES.length} runs",
+      "spanish": "Zona de reparto de esta empresa: ${ZONES.length} rutas"
+    },
+    {
+      "source": "src/prototypes/cedar/round-map.tsx",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "The ground this house covers",
+      "spanish": "Zona de reparto de esta empresa"
+    },
+    {
+      "source": "src/prototypes/cedar/sale.ts",
+      "context": "ReturnStatement > TemplateLiteral",
+      "kind": "template",
+      "english": "they asked for “${line.asked}” · filled with ${line.product.name} — ${BECAUSE[line.filledBy ?? 'model']}",
+      "spanish": "pidió «${line.asked}» · servido con ${line.product.name} — ${BECAUSE[line.filledBy ?? 'model']}"
+    },
+    {
+      "source": "src/prototypes/cedar/sale.ts",
+      "context": "ReturnStatement > TemplateLiteral",
+      "kind": "template",
+      "english": "they asked for ${amountWords(said.qty)} ${said.unit}${arithmetic ? ` · ${arithmetic}` : ''}",
+      "spanish": "pidió ${amountWords(said.qty)} ${said.unit}${arithmetic ? ` · ${arithmetic}` : ''}"
+    },
+    {
+      "source": "src/prototypes/cedar/sale.ts",
+      "context": "ArrowFunctionExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "${g.word} rides ${g.product} on ${g.times} of the day’s lines",
+      "spanish": "${g.word} acompaña a ${g.product} en ${g.times} líneas de hoy"
+    },
+    {
+      "source": "src/prototypes/cedar/sale.ts",
+      "context": "ObjectProperty > TemplateLiteral",
+      "kind": "template",
+      "english": "${unread.length} ${many ? 'lines' : 'line'} ${many ? 'need' : 'needs'} an amount",
+      "spanish": "${unread.length} ${many ? 'lines' : 'line'} ${many ? 'need' : 'needs'} una cantidad"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/printing.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "With the goods",
+      "spanish": "Con la mercancía"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/printing.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "For the bay",
+      "spanish": "Para el almacén"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/printing.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "With the van",
+      "spanish": "Para el reparto"
+    },
+    {
+      "source": "src/prototypes/cedar/stage.tsx",
+      "context": "ReturnStatement > TemplateLiteral",
+      "kind": "template",
+      "english": "It goes to ${rail} ${marginWords(wait)} after it is read",
+      "spanish": "Se envía a ${rail} ${marginWords(wait)} después de leerlo"
+    },
+    {
+      "source": "src/prototypes/cedar/stage.tsx",
+      "context": "ObjectProperty > TemplateLiteral",
+      "kind": "template",
+      "english": "Morning — the usual for ${day}, and two extra cajas of gamba.",
+      "spanish": "Buenos días. Lo de siempre para ${day} y dos cajas más de gamba."
+    },
+    {
+      "source": "src/prototypes/cedar/stage.tsx",
+      "context": "ObjectProperty > TemplateLiteral",
+      "kind": "template",
+      "english": "After a margin, it goes at the hour on the line, and an edit starts the margin again.",
+      "spanish": "Se envía a la hora indicada tras el margen de espera. Si editas el pedido, ese margen empieza de nuevo."
+    },
+    {
+      "source": "src/prototypes/cedar/stage.tsx",
+      "context": "ObjectProperty > TemplateLiteral",
+      "kind": "template",
+      "english": "It is ready for ${rail}.",
+      "spanish": "Listo para ${rail}."
+    },
+    {
+      "source": "src/prototypes/cedar/stage.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "After a margin",
+      "spanish": "Tras un margen de espera"
+    },
+    {
+      "source": "src/prototypes/cedar/stage.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Set it to what the stage shows",
+      "spanish": "Aplicar la configuración de esta etapa"
+    },
+    {
+      "source": "src/prototypes/cedar/stock-tiers.tsx",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "as of ${last.at} on ${dayShort(last.day)}",
+      "spanish": "el ${dayShort(last.day)} a las ${last.at}"
+    },
+    {
+      "source": "src/prototypes/cedar/supplier-forwarding.tsx",
+      "context": "JSXAttribute > StringLiteral:aside",
+      "kind": "literal",
+      "english": "The name at the head of their list.",
+      "spanish": "El nombre que aparece en su lista."
+    },
+    {
+      "source": "src/prototypes/cedar/supplier-forwarding.tsx",
+      "context": "JSXAttribute > StringLiteral:aside",
+      "kind": "literal",
+      "english": "The categories whose orders go on their list.",
+      "spanish": "Las categorías que se incluyen en su lista de pedidos."
+    },
+    {
+      "source": "src/prototypes/cedar/supplier-forwarding.tsx",
+      "context": "JSXExpressionContainer > TemplateLiteral",
+      "kind": "template",
+      "english": "A list that closes at ${draft.cutoff} gives them everything since ${draft.cutoff} the day before.",
+      "spanish": "Si la lista se cierra a las ${draft.cutoff}, incluye todo lo recibido desde las ${draft.cutoff} del día anterior."
+    },
+    {
+      "source": "src/prototypes/cedar/supplier-forwarding.tsx",
+      "context": "JSXAttribute > StringLiteral:aside",
+      "kind": "literal",
+      "english": "From the moment you add them, and every day after.",
+      "spanish": "Desde que lo añades, cada día."
+    },
+    {
+      "source": "src/prototypes/cedar/suppliers.ts",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "Closes ${f.next.at} · ${f.waiting} ${plural(f.waiting, 'line')} rolled from ${from}",
+      "spanish": "Cierra a las ${f.next.at} · ${f.waiting} ${plural(f.waiting, 'line')} pendientes desde ${from}"
+    },
+    {
+      "source": "src/prototypes/cedar/suppliers.ts",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "Closes ${f.next.at}",
+      "spanish": "Cierra a las ${f.next.at}"
+    },
+    {
+      "source": "src/prototypes/cedar/supply-broadcast.tsx",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": " Tell us which suits you: ${parts.join(' · ')}.",
+      "spanish": " Dinos cuál te va bien: ${parts.join(' · ')}."
+    },
+    {
+      "source": "src/prototypes/cedar/supply-broadcast.tsx",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": " · ${units(row.served, row.unit)} for them",
+      "spanish": " · ${units(row.served, row.unit)} para este cliente"
+    },
+    {
+      "source": "src/prototypes/cedar/supply-film.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "this afternoon",
+      "spanish": "esta tarde"
+    },
+    {
+      "source": "src/prototypes/cedar/supply-film.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Is there any reason why?",
+      "spanish": "¿Por qué motivo?"
+    },
+    {
+      "source": "src/prototypes/cedar/supply-film.tsx",
+      "context": "JSXExpressionContainer > TemplateLiteral",
+      "kind": "template",
+      "english": "What they can answer: ${answersFor(moment).join(', ')}",
+      "spanish": "Puede responder: ${answersFor(moment).join(', ')}"
+    },
+    {
+      "source": "src/prototypes/cedar/test-chat.tsx",
+      "context": "LogicalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "to the order",
+      "spanish": "al pedido"
+    },
+    {
+      "source": "src/prototypes/cedar/test-panel.tsx",
+      "context": "JSXExpressionContainer > TemplateLiteral",
+      "kind": "template",
+      "english": " · their usual ${qtyWords(p.usual, p.unit)}",
+      "spanish": " · suele pedir ${qtyWords(p.usual, p.unit)}"
+    },
+    {
+      "source": "src/prototypes/cedar/tiers.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "needs a price",
+      "spanish": "pendiente de precio"
+    },
+    {
+      "source": "src/prototypes/cedar/truck-chip.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Which run this order goes on",
+      "spanish": "Ruta de reparto de este pedido"
+    },
+    {
+      "source": "src/prototypes/cedar/truck-chip.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "is this account’s own run.",
+      "spanish": "es la ruta habitual de este cliente."
+    },
+    {
+      "source": "src/rocoto/memory-log/memory-log.tsx",
+      "context": "JSXExpressionContainer > TemplateLiteral",
+      "kind": "template",
+      "english": "${customer} asked for",
+      "spanish": "${customer} pidió"
+    },
+    {
+      "source": "src/rocoto/price-accordion/daily-grid.tsx",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "Set ${tier.name} for ${day}",
+      "spanish": "Fijar ${tier.name} para ${day}"
+    },
+    {
+      "source": "src/rocoto/price-accordion/price-accordion.tsx",
+      "context": "JSXExpressionContainer > TemplateLiteral",
+      "kind": "template",
+      "english": "Set the first price for ${name}",
+      "spanish": "Fijar el primer precio de ${name}"
+    },
+    {
+      "source": "src/rocoto/price-accordion/price-accordion.tsx",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "Drag a tier to change what it is worth beside ${price.anchorName ?? 'the anchor'}. Drag ${price.anchorName ?? 'the anchor'} and the whole set travels with it. Pin a tier to hold a price of its own.",
+      "spanish": "Arrastra una tarifa para cambiar su precio respecto a ${price.anchorName ?? 'the anchor'}. Si mueves ${price.anchorName ?? 'the anchor'}, las demás se ajustan. Fija una tarifa para mantener su precio."
+    },
+    {
+      "source": "src/rocoto/price-accordion/price-accordion.tsx",
+      "context": "LogicalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "the anchor",
+      "spanish": "la tarifa base"
+    },
+    {
+      "source": "src/rocoto/price-accordion/price-accordion.tsx",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "Each tier keeps its own distance from ${price.anchorName ?? 'the anchor'}, and moves when ${price.anchorName ?? 'the anchor'} moves.",
+      "spanish": "Cada tarifa mantiene su diferencia con ${price.anchorName ?? 'the anchor'} y se ajusta cuando cambia ${price.anchorName ?? 'the anchor'}."
+    },
+    {
+      "source": "src/rocoto/price-accordion/price-accordion.tsx",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "${price.days[0]} is open for writing",
+      "spanish": "Puedes editar ${price.days[0]}"
+    },
+    {
+      "source": "src/rocoto/price-accordion/price-accordion.tsx",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "${price.days[0]} stands at the top",
+      "spanish": "${price.days[0]} aparece primero"
+    },
+    {
+      "source": "src/rocoto/price-accordion/ramp.tsx",
+      "context": "JSXExpressionContainer > TemplateLiteral",
+      "kind": "template",
+      "english": "${anchorName}, the anchor every following tier is measured from",
+      "spanish": "${anchorName}, tarifa base para calcular las siguientes"
+    },
+    {
+      "source": "src/rocoto/signature-pad/constants.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Sign on the line with your finger or a pointer.",
+      "spanish": "Firma sobre la línea con el dedo o el cursor."
+    },
+    {
+      "source": "src/rocoto/stock-announcement/constants.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Set stock",
+      "spanish": "Fijar stock"
+    },
+    {
+      "source": "src/rocoto/stock-announcement/constants.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Add to stock",
+      "spanish": "Añadir stock"
+    },
+    {
+      "source": "src/rocoto/stock-announcement/constants.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Stock is now",
+      "spanish": "Stock actual"
+    },
+    {
+      "source": "src/rocoto/stock-announcement/stock-announcement.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Stock becomes",
+      "spanish": "Stock resultante"
+    },
+    {
+      "source": "src/rocoto/stock-announcement/stock-announcement.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Stock stays at",
+      "spanish": "El stock se mantiene en"
+    },
+    {
+      "source": "src/rocoto/voice-button-kit/constants.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Still recording",
+      "spanish": "Grabando…"
+    },
+    {
+      "source": "src/rocoto/voice-button-kit/constants.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Hold to record, release to send",
+      "spanish": "Mantén pulsado para grabar; suelta para enviar"
+    },
+    {
+      "source": "src/prototypes/cedar/detail.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Their",
+      "spanish": "Su"
+    },
+    {
+      "source": "src/prototypes/cedar/anxiety.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "reply",
+      "spanish": "una respuesta"
+    },
+    {
+      "source": "src/prototypes/cedar/anxiety.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "edit",
+      "spanish": "una corrección"
+    },
+    {
+      "source": "src/prototypes/cedar/order-open.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "record",
+      "spanish": "registro"
+    },
+    {
+      "source": "src/prototypes/cedar/order-open.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "records",
+      "spanish": "registros"
+    },
+    {
+      "source": "src/prototypes/cedar/sale.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "line",
+      "spanish": "línea"
+    },
+    {
+      "source": "src/prototypes/cedar/sale.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "lines",
+      "spanish": "líneas"
+    },
+    {
+      "source": "src/prototypes/cedar/sale.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "need",
+      "spanish": "necesitan"
+    },
+    {
+      "source": "src/prototypes/cedar/sale.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "needs",
+      "spanish": "necesita"
+    },
+    {
+      "source": "src/prototypes/cedar/sale.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Your system",
+      "spanish": "Tu sistema"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/sales.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "for",
+      "spanish": "para"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/printing.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "for",
+      "spanish": "para"
+    },
+    {
+      "source": "src/prototypes/cedar/customer-profile.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "settled",
+      "spanish": "resuelto"
+    },
+    {
+      "source": "src/prototypes/cedar/customer-profile.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "settled",
+      "spanish": "resuelto"
+    },
+    {
+      "source": "src/prototypes/cedar/customer-profile.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "open",
+      "spanish": "pendiente"
+    },
+    {
+      "source": "src/rocoto/price-accordion/price-accordion.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Set",
+      "spanish": "Fijar"
+    },
+    {
+      "source": "src/prototypes/cedar/supplier-forwarding.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Next",
+      "spanish": "Siguiente"
+    },
+    {
+      "source": "src/prototypes/cedar/net.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Money",
+      "spanish": "Importe"
+    },
+    {
+      "source": "src/prototypes/cedar/net.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Question",
+      "spanish": "Consulta"
+    },
+    {
+      "source": "src/prototypes/cedar/net.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Amount",
+      "spanish": "Cantidad"
+    },
+    {
+      "source": "src/prototypes/cedar/print-view.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Amount",
+      "spanish": "Cantidad"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/stock.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Stock update",
+      "spanish": "Actualizar stock"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/stock.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Stock update",
+      "spanish": "Actualizar stock"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/agent.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Languages",
+      "spanish": "Idiomas"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/founder.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "House",
+      "spanish": "Empresa"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/founder.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Stage",
+      "spanish": "Etapa"
+    },
+    {
+      "source": "src/prototypes/cedar/company.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "The business, the tarifas, the agent’s dials, the team.",
+      "spanish": "Gestiona la empresa, las tarifas, la configuración de Rocoto y el equipo."
+    },
+    {
+      "source": "src/prototypes/cedar/company.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "A complaint about goods",
+      "spanish": "Incidencia con la mercancía"
+    },
+    {
+      "source": "src/prototypes/cedar/company.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Credit and payment terms",
+      "spanish": "Crédito y condiciones de pago"
+    },
+    {
+      "source": "src/prototypes/cedar/stage.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Your own setting stands:",
+      "spanish": "Tu configuración actual:"
+    },
+    {
+      "source": "src/prototypes/cedar/net.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "A line whose amount arrived unclear stands until it has one.",
+      "spanish": "Una cantidad ambigua queda pendiente de confirmación."
+    },
+    {
+      "source": "src/prototypes/cedar/net.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "A word your list has a row for goes straight on; anything else comes to you.",
+      "spanish": "Si el nombre coincide con tu catálogo, Rocoto añade el producto. Si necesita aclararlo, te lo consulta."
+    },
+    {
+      "source": "src/prototypes/cedar/net.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "A customer’s own question stands until somebody answers it.",
+      "spanish": "Las preguntas del cliente quedan pendientes hasta que alguien responde."
+    },
+    {
+      "source": "src/prototypes/cedar/shell/search-modal.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "walk",
+      "spanish": "navegar"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/search-modal.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "open",
+      "spanish": "abrir"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/search-modal.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "close",
+      "spanish": "cerrar"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/connections.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "What",
+      "spanish": "Qué"
+    },
+    {
+      "source": "src/prototypes/cedar/sale.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "They declined it",
+      "spanish": "El cliente lo ha rechazado"
+    },
+    {
+      "source": "src/prototypes/cedar/tiers.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "need a price",
+      "spanish": "pendientes de precio"
+    },
+    {
+      "source": "src/prototypes/cedar/test-panel.tsx",
+      "context": "review",
+      "kind": "template",
+      "english": "they said “${p.said}” · ${p.forms} forms in the house",
+      "spanish": "dijo «${p.said}» · ${p.forms} opciones en tu catálogo"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/stock.tsx",
+      "context": "LogicalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": " · counted ${timeOf(lot.declaredAt)}",
+      "spanish": " · contado a las ${timeOf(lot.declaredAt)}"
+    },
+    {
+      "source": "src/prototypes/cedar/briefings.ts",
+      "context": "CallExpression > StringLiteral",
+      "kind": "literal",
+      "english": " and ",
+      "spanish": " y "
+    },
+    {
+      "source": "src/prototypes/cedar/capability.tsx",
+      "context": "AssignmentPattern > StringLiteral",
+      "kind": "literal",
+      "english": "Rocoto’s own act",
+      "spanish": "Lo que hace Rocoto por su cuenta"
+    },
+    {
+      "source": "src/prototypes/cedar/detail.tsx",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "${railNames.slice(0, -1).join(', ')} and ${railNames[railNames.length - 1]}",
+      "spanish": "${railNames.slice(0, -1).join(', ')} y ${railNames[railNames.length - 1]}"
+    },
+    {
+      "source": "src/prototypes/cedar/inbox.tsx",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": " and ${rest} more",
+      "spanish": " y ${rest} más"
+    },
+    {
+      "source": "src/prototypes/cedar/print-queue.ts",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "Goes to ${rail.to} by email at ${rail.at}",
+      "spanish": "Se envía a ${rail.to} por correo a las ${rail.at}"
+    },
+    {
+      "source": "src/prototypes/cedar/rules.ts",
+      "context": "ArrowFunctionExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "Kept at par ${formatLevel(rule.level)} ${rule.unit} · replenishes ${rule.replenishAt}",
+      "spanish": "Nivel objetivo: ${formatLevel(rule.level)} ${rule.unit} · reposición a las ${rule.replenishAt}"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/chats.tsx",
+      "context": "BinaryExpression > StringLiteral",
+      "kind": "literal",
+      "english": " open",
+      "spanish": " pendientes"
+    },
+    {
+      "source": "src/prototypes/cedar/stage.tsx",
+      "context": "ReturnStatement > TemplateLiteral",
+      "kind": "template",
+      "english": "It goes to ${rail} as it comes",
+      "spanish": "Se envía a ${rail} en cuanto llega"
+    },
+    {
+      "source": "src/prototypes/cedar/stage.tsx",
+      "context": "ObjectProperty > TemplateLiteral",
+      "kind": "template",
+      "english": "It is with ${rail} already.",
+      "spanish": "Ya está en ${rail}."
+    },
+    {
+      "source": "src/prototypes/cedar/stage.tsx",
+      "context": "ObjectProperty > TemplateLiteral",
+      "kind": "template",
+      "english": "It goes to ${rail} at ${goes}.",
+      "spanish": "Se envía a ${rail} a las ${goes}."
+    },
+    {
+      "source": "src/prototypes/cedar/stage.tsx",
+      "context": "ObjectProperty > TemplateLiteral",
+      "kind": "template",
+      "english": "${rail} · goes at ${goes}",
+      "spanish": "${rail} · envío a las ${goes}"
+    },
+    {
+      "source": "src/prototypes/cedar/stage.tsx",
+      "context": "ObjectProperty > TemplateLiteral",
+      "kind": "template",
+      "english": "When does a delivery note go to ${rail}?",
+      "spanish": "¿Cuándo se envía un albarán a ${rail}?"
+    },
+    {
+      "source": "src/prototypes/cedar/stage.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "As it comes",
+      "spanish": "En cuanto llega"
+    },
+    {
+      "source": "src/prototypes/cedar/stage.tsx",
+      "context": "ObjectProperty > TemplateLiteral",
+      "kind": "template",
+      "english": "It reaches ${rail} once the margin has passed, and an edit starts the margin again.",
+      "spanish": "Llega a ${rail} tras el margen de espera. Si lo editas, ese margen empieza de nuevo."
+    },
+    {
+      "source": "src/prototypes/cedar/stage.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "It goes when you approve it — one by one, or the whole day at once.",
+      "spanish": "Se envía cuando lo apruebas: uno a uno o todos los del día."
+    },
+    {
+      "source": "src/prototypes/cedar/stage.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Your own eagerness, on the system rail. Paper stays a press.",
+      "spanish": "Elige cuándo se envían los datos al sistema. Los documentos se imprimen cuando tú lo indicas."
+    },
+    {
+      "source": "src/prototypes/cedar/supply-broadcast.tsx",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "${product.name} lands short for ${day}. You asked for ${asked} and we have ${units(a.row.served, a.row.unit)} for you.",
+      "spanish": "Para ${day} llegará menos ${product.name}. Pediste ${asked} y tenemos ${units(a.row.served, a.row.unit)} para ti."
+    },
+    {
+      "source": "src/prototypes/cedar/supply-film.tsx",
+      "context": "BinaryExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "Sorry, we've got an issue. Is it okay if we deliver it ${moment}? ",
+      "spanish": "Disculpa, tenemos una incidencia. ¿Te va bien que lo entreguemos ${moment}? "
+    },
+    {
+      "source": "src/prototypes/cedar/supply-film.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "for them",
+      "spanish": "para este cliente"
+    },
+    {
+      "source": "src/prototypes/cedar/test-chat.tsx",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": " · and ${rest} more",
+      "spanish": " · y ${rest} más"
+    },
+    {
+      "source": "src/prototypes/cedar/test-chat.tsx",
+      "context": "CallExpression > StringLiteral",
+      "kind": "literal",
+      "english": " and ",
+      "spanish": " y "
+    },
+    {
+      "source": "src/prototypes/cedar/test-panel.tsx",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": " · feedback kept",
+      "spanish": " · revisión guardada"
+    },
+    {
+      "source": "src/prototypes/cedar/test-panel.tsx",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "Marked correct at ${mark.at} · kept as test data",
+      "spanish": "Marcado como correcto a las ${mark.at} · guardado como dato de prueba"
+    },
+    {
+      "source": "src/prototypes/cedar/test-panel.tsx",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "Corrected at ${mark.at} · kept as test data",
+      "spanish": "Corregido a las ${mark.at} · guardado como dato de prueba"
+    },
+    {
+      "source": "src/prototypes/cedar/truck-chip.tsx",
+      "context": "CallExpression > StringLiteral",
+      "kind": "literal",
+      "english": " and ",
+      "spanish": " y "
+    },
+    {
+      "source": "src/rocoto/captura/captura.tsx",
+      "context": "AssignmentExpression > StringLiteral",
+      "kind": "literal",
+      "english": "cannot read file",
+      "spanish": "No se ha podido leer el archivo"
+    },
+    {
+      "source": "src/rocoto/captura/captura.tsx",
+      "context": "AssignmentExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "cannot process more than ${props.maxFiles} file(s)",
+      "spanish": "Puedes añadir hasta ${props.maxFiles} archivos"
+    },
+    {
+      "source": "src/rocoto/figure/figure.tsx",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "about ${format(value, decimals, locale)}${unit ? ` ${unit}` : ''}",
+      "spanish": "aprox. ${format(value, decimals, locale)}${unit ? ` ${unit}` : ''}"
+    },
+    {
+      "source": "src/rocoto/price-accordion/daily-grid.tsx",
+      "context": "JSXExpressionContainer > TemplateLiteral",
+      "kind": "template",
+      "english": "${name}: price by tier and day",
+      "spanish": "${name}: precio por tarifa y día"
+    },
+    {
+      "source": "src/rocoto/signature-pad/constants.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Signed. Clear it to sign again.",
+      "spanish": "Firmado. Borra la firma para volver a firmar."
+    },
+    {
+      "source": "src/prototypes/cedar/shell/printing.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "and",
+      "spanish": "y"
+    },
+    {
+      "source": "src/prototypes/cedar/insights.ts",
+      "context": "review",
+      "kind": "template",
+      "english": "${IMPORTED_MINT} Every bar is a month that closed — ${months.length ? `${months[0].label}–${months[months.length - 1].label}` : 'the year you sent'}.",
+      "spanish": "${IMPORTED_MINT} Cada barra representa un mes cerrado: ${months.length ? `${months[0].label}–${months[months.length - 1].label}` : 'the year you sent'}.",
+      "file": "es-quality-workflows.json"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/geography.tsx",
+      "context": "review",
+      "kind": "template",
+      "english": "Trucks ${z.trucks.join(' and ')}",
+      "spanish": "Camiones ${z.trucks.join(' and ')}",
+      "file": "es-quality-secondary.json"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/team.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Invite somebody",
+      "spanish": "Invitar a una persona"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/team.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Invite somebody",
+      "spanish": "Invitar a una persona"
+    },
+    {
+      "source": "src/prototypes/cedar/insights.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "the year you sent",
+      "spanish": "el año que has importado"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/geography.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": " and ",
+      "spanish": " y "
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/geography.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "account",
+      "spanish": "cliente"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/geography.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "accounts",
+      "spanish": "clientes"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/geography.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "accounts",
+      "spanish": "clientes"
+    },
+    {
+      "source": "src/prototypes/cedar/knows.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": " and ",
+      "spanish": " y "
+    },
+    {
+      "source": "src/prototypes/cedar/sale.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": " and ",
+      "spanish": " y "
+    },
+    {
+      "source": "src/prototypes/cedar/print-view.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Stop",
+      "spanish": "Parar"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/media.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Play",
+      "spanish": "Reproducir"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/media.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Pause",
+      "spanish": "Pausar"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/theatre-controls.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Play",
+      "spanish": "Reproducir"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/theatre-controls.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Replay",
+      "spanish": "Repetir"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/stock.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Stop",
+      "spanish": "Parar"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/data.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Signed",
+      "spanish": "Firmado"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/business.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Addresses",
+      "spanish": "Direcciones"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/chats.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": " unread",
+      "spanish": " sin leer"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/data.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Today’s takings",
+      "spanish": "Ventas de hoy"
+    },
+    {
+      "source": "src/prototypes/cedar/supplier-forwarding.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "of",
+      "spanish": "de"
+    },
+    {
+      "source": "src/prototypes/cedar/detail.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "of",
+      "spanish": "de"
+    },
+    {
+      "source": "src/prototypes/cedar/capability.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "of",
+      "spanish": "de"
+    },
+    {
+      "source": "src/prototypes/cedar/activation-guide.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "of",
+      "spanish": "de"
+    },
+    {
+      "source": "src/prototypes/cedar/order-open.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "of",
+      "spanish": "de"
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "of",
+      "spanish": "de"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/_parked/dispatch.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "of",
+      "spanish": "de"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/_parked/goods.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "of",
+      "spanish": "de"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/data.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "of",
+      "spanish": "de"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/rail.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Back to ",
+      "spanish": "Volver a "
+    },
+    {
+      "source": "src/prototypes/cedar/shell/rail.tsx",
+      "context": "review",
+      "kind": "template",
+      "english": "Back to ${backTitle}",
+      "spanish": "Volver a ${backTitle}"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/rail.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Sign out opens once a session is signed in.",
+      "spanish": "Cerrar sesión se abre cuando hay una sesión iniciada."
+    },
+    {
+      "source": "src/prototypes/cedar/shell/day-bar.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Rocoto — Sales",
+      "spanish": "Rocoto — Ventas"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/printing.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Prep",
+      "spanish": "Reparto"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/printing.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Prep",
+      "spanish": "Reparto"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/printing.tsx",
+      "context": "review",
+      "kind": "template",
+      "english": "Prep · ${says}",
+      "spanish": "Reparto · ${says}"
+    },
+    {
+      "source": "src/prototypes/cedar/setup-progress.tsx",
+      "context": "review",
+      "kind": "template",
+      "english": "Business setup · ${done} of ${total} complete",
+      "spanish": "Configuración del negocio · ${done} de ${total}"
+    },
+    {
+      "source": "src/prototypes/cedar/setup-progress.tsx",
+      "context": "review",
+      "kind": "template",
+      "english": "${done} of ${total} complete",
+      "spanish": "${done} de ${total}"
+    },
+    {
+      "source": "src/prototypes/cedar/setup-progress.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Balances and payments",
+      "spanish": "Saldos y cobros"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/sales.tsx",
+      "context": "review",
+      "kind": "template",
+      "english": "${seat.count} remaining",
+      "spanish": "quedan ${seat.count}"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/sales.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Choose this day's papers",
+      "spanish": "Elige los papeles de este día"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/sales.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Lines appear here once the paper is read",
+      "spanish": "Las líneas aparecen en cuanto se lee el papel"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/sales.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Your words go here",
+      "spanish": "Aquí van tus palabras"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/sales.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Ready when orders arrive",
+      "spanish": "Listo en cuanto lleguen pedidos"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/sales.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Queued",
+      "spanish": "En cola"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/sales.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Handled automatically",
+      "spanish": "Lo lleva Rocoto"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/printing.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "now",
+      "spanish": "ahora"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/printing.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "of",
+      "spanish": "de"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/printing.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "packing lists printed ·",
+      "spanish": "listas de preparación impresas ·"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/printing.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "delivery notes printed",
+      "spanish": "albaranes impresos"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/printing.tsx",
+      "context": "review",
+      "kind": "template",
+      "english": "Next batch ${nextIn}",
+      "spanish": "Próximo reparto ${nextIn}"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/printing.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Preparation is clear",
+      "spanish": "La preparación está al día"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/printing.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "The next confirmed batch will appear here.",
+      "spanish": "El próximo reparto confirmado aparece aquí."
+    },
+    {
+      "source": "src/prototypes/cedar/shell/printing.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Next delivery batch",
+      "spanish": "Próximo reparto"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/printing.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Next delivery batch",
+      "spanish": "Próximo reparto"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/printing.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "ready now",
+      "spanish": "listo ya"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/printing.tsx",
+      "context": "review",
+      "kind": "template",
+      "english": "in ${minutes} min",
+      "spanish": "en ${minutes} min"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/printing.tsx",
+      "context": "review",
+      "kind": "template",
+      "english": "in ${hours}h${rest ? ` ${rest}m` : ''}",
+      "spanish": "en ${hours} h${rest ? ` ${rest} min` : ''}"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/printing.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "delivery",
+      "spanish": "entrega"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/printing.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Open delivery map",
+      "spanish": "Abrir el mapa de entregas"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/printing.tsx",
+      "context": "review",
+      "kind": "template",
+      "english": "Open map for ${sale.customer.name}",
+      "spanish": "Abrir el mapa de ${sale.customer.name}"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/printing.tsx",
+      "context": "review",
+      "kind": "template",
+      "english": "Delivery Note ${sale.number} · ${sale.customer.name}",
+      "spanish": "Albarán ${sale.number} · ${sale.customer.name}"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/printing.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Apply",
+      "spanish": "Aplicar"
+    },
+    {
+      "source": "src/prototypes/cedar/money-overview.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Receiving bank",
+      "spanish": "Banco de cobro"
+    },
+    {
+      "source": "src/prototypes/cedar/money-overview.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Review receiving account",
+      "spanish": "Revisar la cuenta de cobro"
+    },
+    {
+      "source": "src/prototypes/cedar/money-overview.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Recorded bank receipts",
+      "spanish": "Cobros registrados en el banco"
+    },
+    {
+      "source": "src/prototypes/cedar/money-overview.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Sales projection ·",
+      "spanish": "Previsión de ventas ·"
+    },
+    {
+      "source": "src/prototypes/cedar/money-overview.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "overdue ·",
+      "spanish": "vencidas ·"
+    },
+    {
+      "source": "src/prototypes/cedar/money-overview.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "paid ·",
+      "spanish": "cobrado ·"
+    },
+    {
+      "source": "src/prototypes/cedar/money-overview.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "View balances",
+      "spanish": "Ver saldos"
+    },
+    {
+      "source": "src/prototypes/cedar/money-overview.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Loading bank transactions…",
+      "spanish": "Cargando los movimientos del banco…"
+    },
+    {
+      "source": "src/prototypes/cedar/money-overview.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Money records",
+      "spanish": "Registros de dinero"
+    },
+    {
+      "source": "src/prototypes/cedar/money-overview.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Total repayment",
+      "spanish": "Devolución total"
+    },
+    {
+      "source": "src/prototypes/cedar/money-overview.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Choose how to pay",
+      "spanish": "Elige cómo pagar"
+    },
+    {
+      "source": "src/prototypes/cedar/money-overview.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Record repayment",
+      "spanish": "Registrar la devolución"
+    },
+    {
+      "source": "src/prototypes/cedar/money-overview.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Pay over time",
+      "spanish": "Pagar a plazos"
+    },
+    {
+      "source": "src/prototypes/cedar/money-overview.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Interest free",
+      "spanish": "Sin intereses"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/connections.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Balances and incoming transfers",
+      "spanish": "Saldos y transferencias recibidas"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/connections.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Collect into your bank account",
+      "spanish": "Cobra en tu cuenta bancaria"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/connections.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Powered by NubeFact",
+      "spanish": "Con NubeFact"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/connections.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Messages, orders and history",
+      "spanish": "Mensajes, pedidos e historial"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/connections.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Team numbers",
+      "spanish": "Números del equipo"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/connections.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Assign a team member",
+      "spanish": "Asignar a alguien del equipo"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/connections.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Documents and accounting",
+      "spanish": "Documentos y contabilidad"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/connections.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Supplier inbox",
+      "spanish": "Buzón de proveedores"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/connections.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Accounting system",
+      "spanish": "Sistema contable"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/connections.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Accountant exports",
+      "spanish": "Exportaciones para la gestoría"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/connections.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Add address",
+      "spanish": "Añadir dirección"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/connections.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Add number",
+      "spanish": "Añadir número"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/connections.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Everybody",
+      "spanish": "Todo el equipo"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/connections.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Choose your ERP",
+      "spanish": "Elige tu ERP"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/connections.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Save the number, then choose who answers.",
+      "spanish": "Guarda el número y elige quién contesta."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/connections.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Opening email setup…",
+      "spanish": "Abriendo la configuración del correo…"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/app-settings.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Tariffs, customer discounts and prices on working delivery notes.",
+      "spanish": "Tarifas, descuentos de cliente y precios en los albaranes en curso."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/app-settings.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Invoices, payments and financial overview.",
+      "spanish": "Facturas, cobros y resumen financiero."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/app-settings.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Stock entries, available lots and allocation on delivery notes.",
+      "spanish": "Entradas de género, lotes disponibles y asignación en los albaranes."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/app-settings.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Use pricing in this workspace",
+      "spanish": "Usar precios en este espacio de trabajo"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/app-settings.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Use Money in this workspace",
+      "spanish": "Usar Dinero en este espacio de trabajo"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/app-settings.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Use stock and lots in this workspace",
+      "spanish": "Usar existencias y lotes en este espacio de trabajo"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/app-settings.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "On",
+      "spanish": "Activado"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/app-settings.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Off",
+      "spanish": "Desactivado"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/app-settings.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Choose the page size and default number of copies.",
+      "spanish": "Elige el tamaño de papel y las copias por defecto."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/app-settings.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Choose what appears on every delivery note.",
+      "spanish": "Elige qué aparece en cada albarán."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/app-settings.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Prepared briefings",
+      "spanish": "Resúmenes preparados"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/app-settings.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Provider activation required.",
+      "spanish": "Se activa con el proveedor."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/app-settings.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "The words the app uses.",
+      "spanish": "Las palabras que usa la aplicación."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/app-settings.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "App language",
+      "spanish": "Idioma de la aplicación"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/app-settings.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Spain · EUR",
+      "spanish": "España · EUR"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/app-settings.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Peru · PEN",
+      "spanish": "Perú · PEN"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/app-settings.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Setting",
+      "spanish": "Ajuste"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/app-settings.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Customer delivery notes follow this choice. Hiding prices also hides them in chat confirmations. Internal prices and ERP data stay available.",
+      "spanish": "Los albaranes del cliente siguen esta elección. Al ocultar los precios, también se ocultan en las confirmaciones del chat. Los precios internos y los datos del ERP siguen disponibles."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/app-settings.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Choose full A4 or compact A5. Both include traceability.",
+      "spanish": "Elige A4 completa o A5 compacta. Las dos incluyen la trazabilidad."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/app-settings.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Save plan",
+      "spanish": "Guardar el plan"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/app-settings.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Prepare briefing",
+      "spanish": "Preparar el resumen"
+    },
+    {
+      "source": "src/prototypes/cedar/company.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "An order is waiting for you",
+      "spanish": "Tienes un pedido pendiente"
+    },
+    {
+      "source": "src/prototypes/cedar/company.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Rocoto brought one to the desk instead of answering it.",
+      "spanish": "Rocoto lo ha dejado en el escritorio para que lo mires tú."
+    },
+    {
+      "source": "src/prototypes/cedar/company.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "A customer was handed over",
+      "spanish": "Un cliente ha pasado a una persona"
+    },
+    {
+      "source": "src/prototypes/cedar/company.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Goods arrived",
+      "spanish": "Ha llegado género"
+    },
+    {
+      "source": "src/prototypes/cedar/company.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "A supplier delivery note landed in the incoming log.",
+      "spanish": "Un albarán de proveedor ha entrado en el registro de entradas."
+    },
+    {
+      "source": "src/prototypes/cedar/company.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "The day’s file went out",
+      "spanish": "El archivo del día ha salido"
+    },
+    {
+      "source": "src/prototypes/cedar/company.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Everything the day carried reached your ERP.",
+      "spanish": "Todo lo del día ha llegado a tu ERP."
+    },
+    {
+      "source": "src/prototypes/cedar/company.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "In the app",
+      "spanish": "En la aplicación"
+    },
+    {
+      "source": "src/prototypes/cedar/company.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "A year",
+      "spanish": "Un año"
+    },
+    {
+      "source": "src/prototypes/cedar/company.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "90 days",
+      "spanish": "90 días"
+    },
+    {
+      "source": "src/prototypes/cedar/company.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Send the nearest thing",
+      "spanish": "Enviar lo más parecido"
+    },
+    {
+      "source": "src/prototypes/cedar/company.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Leave the line off",
+      "spanish": "Dejar la línea fuera"
+    },
+    {
+      "source": "src/prototypes/cedar/company.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "On delivery",
+      "spanish": "Al entregar"
+    },
+    {
+      "source": "src/prototypes/cedar/company.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "SEPA direct debit",
+      "spanish": "Domiciliación SEPA"
+    },
+    {
+      "source": "src/prototypes/cedar/company.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Bank transfer",
+      "spanish": "Transferencia bancaria"
+    },
+    {
+      "source": "src/prototypes/cedar/company.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Picking, stock and goods-in.",
+      "spanish": "Preparación, existencias y entradas de género."
+    },
+    {
+      "source": "src/prototypes/cedar/company.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Routes, entregas and cobros on the round.",
+      "spanish": "Rutas, entregas y cobros del reparto."
+    },
+    {
+      "source": "src/prototypes/cedar/shell/printing.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "deliveries",
+      "spanish": "entregas"
+    },
+    {
+      "source": "src/prototypes/cedar/print-queue.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "1 copy",
+      "spanish": "1 copia"
+    },
+    {
+      "source": "src/prototypes/cedar/print-queue.ts",
+      "context": "review",
+      "kind": "template",
+      "english": "${s.copies} copies",
+      "spanish": "${s.copies} copias"
+    },
+    {
+      "source": "src/prototypes/cedar/print-queue.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Choose A4 or A5 before printing",
+      "spanish": "Elige A4 o A5 antes de imprimir"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/app-settings.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Peru reads soles. Spain reads euros.",
+      "spanish": "Perú lee soles. España lee euros."
+    },
+    {
+      "source": "src/prototypes/cedar/briefings.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "The day’s sheet",
+      "spanish": "La hoja del día"
+    },
+    {
+      "source": "src/prototypes/cedar/briefings.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Every stop in the order it is delivered, with the goods under it.",
+      "spanish": "Cada parada en el orden en que se entrega, con el género debajo."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/account.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "The default language is in App settings.",
+      "spanish": "El idioma por defecto está en Ajustes."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/app-settings.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "The market this workspace presents.",
+      "spanish": "El mercado que muestra este espacio de trabajo."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/app-settings.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Asking WhatsApp…",
+      "spanish": "Preguntando a WhatsApp…"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/app-settings.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Asking the phone service…",
+      "spanish": "Preguntando al servicio de teléfono…"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/app-settings.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Asking the mailbox provider…",
+      "spanish": "Preguntando al proveedor del buzón…"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/app-settings.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "One line",
+      "spanish": "Una línea"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/app-settings.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "One mailbox",
+      "spanish": "Un buzón"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/app-settings.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "One account",
+      "spanish": "Una cuenta"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/app-settings.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "This workspace cleared. Allow browser storage to write its defaults, then reset again.",
+      "spanish": "Este espacio de trabajo se ha vaciado. Permite al navegador guardar sus valores por defecto y vuelve a restablecer."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/app-settings.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Reset workspace",
+      "spanish": "Restablecer el espacio de trabajo"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/app-settings.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "This workspace, and the accounts it is connected to.",
+      "spanish": "Este espacio de trabajo y las cuentas conectadas."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/app-settings.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Reset workspace data",
+      "spanish": "Restablecer los datos del espacio de trabajo"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/app-settings.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Orders, Money, setup, language and country reset. Connections stay.",
+      "spanish": "Pedidos, Dinero, configuración, idioma y país vuelven a su estado inicial. Las conexiones se mantienen."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/app-settings.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Reset and disconnect everything",
+      "spanish": "Restablecer y desconectarlo todo"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/app-settings.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "The same reset, and your providers disconnect WhatsApp, phone and email.",
+      "spanish": "El mismo restablecimiento, y tus proveedores desconectan WhatsApp, teléfono y correo."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/app-settings.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "The same reset, and Meta disconnects WhatsApp. Phone and email stay.",
+      "spanish": "El mismo restablecimiento, y Meta desconecta WhatsApp. Teléfono y correo se mantienen."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/app-settings.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Reset this workspace’s data?",
+      "spanish": "¿Restablecer los datos de este espacio de trabajo?"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/app-settings.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Reset this workspace and disconnect every account?",
+      "spanish": "¿Restablecer este espacio de trabajo y desconectar todas las cuentas?"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/app-settings.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Orders, Money, setup progress, drafts, print history and every other record this workspace holds return to their seeded defaults. The app language returns to English and the country returns to Peru. WhatsApp, phone and email keep their connections, so the same accounts are standing when Rocoto reopens.",
+      "spanish": "Pedidos, Dinero, progreso de la configuración, borradores, historial de impresión y todos los demás registros de este espacio de trabajo vuelven a sus valores de ejemplo. El idioma de la aplicación vuelve al inglés y el país, a Perú. WhatsApp, teléfono y correo mantienen sus conexiones, así que las mismas cuentas siguen en pie cuando Rocoto vuelve a abrirse."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/app-settings.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "What each provider answered",
+      "spanish": "Lo que respondió cada proveedor"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/app-settings.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Stopped. Your data stays as it is.",
+      "spanish": "Detenido. Tus datos se quedan como están."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/app-settings.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Open the workspace",
+      "spanish": "Abrir el espacio de trabajo"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/app-settings.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Stop",
+      "spanish": "Detener"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/app-settings.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Close",
+      "spanish": "Cerrar"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/app-settings.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Try again",
+      "spanish": "Inténtalo de nuevo"
+    },
+    {
+      "source": "src/prototypes/cedar/workspace-reset.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Disconnected",
+      "spanish": "Desconectado"
+    },
+    {
+      "source": "src/prototypes/cedar/workspace-reset.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Ready to connect",
+      "spanish": "Listo para conectar"
+    },
+    {
+      "source": "src/prototypes/cedar/workspace-reset.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Stays as it is",
+      "spanish": "Se queda como está"
+    },
+    {
+      "source": "src/prototypes/cedar/workspace-reset.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Still connected",
+      "spanish": "Sigue conectado"
+    },
+    {
+      "source": "src/prototypes/cedar/workspace-reset.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "This account needs another check. Try again.",
+      "spanish": "Esta cuenta necesita otra comprobación. Inténtalo de nuevo."
+    },
+    {
+      "source": "src/prototypes/cedar/whatsapp-connection.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Connect WhatsApp Business to read your chats and answer customer orders.",
+      "spanish": "Conecta WhatsApp Business para leer tus chats y responder los pedidos de tus clientes."
+    },
+    {
+      "source": "src/prototypes/cedar/whatsapp-capability.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Finish setup",
+      "spanish": "Terminar la configuración"
+    },
+    {
+      "source": "src/prototypes/cedar/phone-capability.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Finish setup",
+      "spanish": "Terminar la configuración"
+    },
+    {
+      "source": "src/prototypes/cedar/email-provider.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Finish setup",
+      "spanish": "Terminar la configuración"
+    },
+    {
+      "source": "src/prototypes/cedar/cedar-onboarding.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Continue on",
+      "spanish": "Continuar por"
+    },
+    {
+      "source": "src/prototypes/cedar/cedar-onboarding.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Choose your order channel",
+      "spanish": "Elige tu canal de pedidos"
+    },
+    {
+      "source": "src/prototypes/cedar/connected-inbox.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Add a mailbox",
+      "spanish": "Añadir un buzón"
+    },
+    {
+      "source": "src/prototypes/cedar/connected-inbox.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Open a mailbox above to read the orders it holds.",
+      "spanish": "Abre un buzón de arriba para leer los pedidos que contiene."
+    },
+    {
+      "source": "src/prototypes/cedar/copilot/store.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Checking",
+      "spanish": "Comprobando"
+    },
+    {
+      "source": "src/prototypes/cedar/copilot/store.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Answering from your workspace records",
+      "spanish": "Respondiendo con los registros de tu espacio de trabajo"
+    },
+    {
+      "source": "src/prototypes/cedar/copilot/surface.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Check again",
+      "spanish": "Volver a comprobar"
+    },
+    {
+      "source": "src/prototypes/cedar/onboarding-meta.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Meta’s own setup, drawn from its reference.",
+      "spanish": "La configuración propia de Meta, dibujada a partir de su referencia."
+    },
+    {
+      "source": "src/prototypes/cedar/email-connection.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Open Gmail",
+      "spanish": "Abrir Gmail"
+    },
+    {
+      "source": "src/prototypes/cedar/email-connection.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Open Microsoft",
+      "spanish": "Abrir Microsoft"
+    },
+    {
+      "source": "src/prototypes/cedar/email-connection.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Authorization is finishing",
+      "spanish": "La autorización está terminando"
+    },
+    {
+      "source": "src/prototypes/cedar/email-connection.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Add another",
+      "spanish": "Añadir otro"
+    },
+    {
+      "source": "src/prototypes/cedar/email-connection.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Which mailbox do you use?",
+      "spanish": "¿Qué buzón usas?"
+    },
+    {
+      "source": "src/prototypes/cedar/email-connection.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Sign in to",
+      "spanish": "Inicia sesión en"
+    },
+    {
+      "source": "src/prototypes/cedar/email-connection.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Forward order email to this address",
+      "spanish": "Reenvía el correo de pedidos a esta dirección"
+    },
+    {
+      "source": "src/prototypes/cedar/email-connection.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Mail from your customers appears here.",
+      "spanish": "El correo de tus clientes aparece aquí."
+    },
+    {
+      "source": "src/prototypes/cedar/email-provider.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Gmail, Microsoft or forwarding",
+      "spanish": "Gmail, Microsoft o reenvío"
+    },
+    {
+      "source": "src/prototypes/cedar/email-provider.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Reconnect your mailbox, then try again.",
+      "spanish": "Vuelve a conectar tu buzón e inténtalo de nuevo."
+    },
+    {
+      "source": "src/prototypes/cedar/email-thread.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Connect a mailbox to send from here.",
+      "spanish": "Conecta un buzón para enviar desde aquí."
+    },
+    {
+      "source": "src/prototypes/cedar/shell/chats.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Connect a mailbox to send from here.",
+      "spanish": "Conecta un buzón para enviar desde aquí."
+    },
+    {
+      "source": "src/prototypes/cedar/reply-channel.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "In person",
+      "spanish": "En persona"
+    },
+    {
+      "source": "src/prototypes/cedar/reply-channel.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Reply by email instead",
+      "spanish": "Responder por correo en su lugar"
+    },
+    {
+      "source": "src/prototypes/cedar/reply-channel.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Reply on WhatsApp instead",
+      "spanish": "Responder por WhatsApp en su lugar"
+    },
+    {
+      "source": "src/prototypes/cedar/reply-channel.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Rocoto sends from your own number once Meta confirms it.",
+      "spanish": "Rocoto envía desde tu propio número en cuanto Meta lo confirma."
+    },
+    {
+      "source": "src/prototypes/cedar/reply-channel.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "This reply goes by email.",
+      "spanish": "Esta respuesta va por correo."
+    },
+    {
+      "source": "src/prototypes/cedar/reply-channel.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "This conversation happens by telephone.",
+      "spanish": "Esta conversación es por teléfono."
+    },
+    {
+      "source": "src/prototypes/cedar/shell/chats.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "This conversation happens by telephone.",
+      "spanish": "Esta conversación es por teléfono."
+    },
+    {
+      "source": "src/prototypes/cedar/source-thread.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "This conversation happens by telephone.",
+      "spanish": "Esta conversación es por teléfono."
+    },
+    {
+      "source": "src/prototypes/cedar/call-record.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Incoming call",
+      "spanish": "Llamada entrante"
+    },
+    {
+      "source": "src/prototypes/cedar/call-record.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Outgoing call",
+      "spanish": "Llamada saliente"
+    },
+    {
+      "source": "src/prototypes/cedar/call-record.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Answered · transcript saved",
+      "spanish": "Contestada · transcripción guardada"
+    },
+    {
+      "source": "src/prototypes/cedar/call-record.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Answered",
+      "spanish": "Contestada"
+    },
+    {
+      "source": "src/prototypes/cedar/call-record.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "through the portal",
+      "spanish": "por el portal"
+    },
+    {
+      "source": "src/prototypes/cedar/call-record.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "in person",
+      "spanish": "en persona"
+    },
+    {
+      "source": "src/prototypes/cedar/call-record.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Call",
+      "spanish": "Llamar"
+    },
+    {
+      "source": "src/prototypes/cedar/call-record.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Reply on WhatsApp",
+      "spanish": "Responder por WhatsApp"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/customers.tsx",
+      "context": "review",
+      "kind": "template",
+      "english": "Calls go out from ${phone.callerId}.",
+      "spanish": "Las llamadas salen desde ${phone.callerId}."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/customers.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Finish phone setup to call from Rocoto.",
+      "spanish": "Termina la configuración del teléfono para llamar desde Rocoto."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/customers.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Reading the phone connection.",
+      "spanish": "Leyendo la conexión del teléfono."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/customers.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Connect phone to call from Rocoto.",
+      "spanish": "Conecta el teléfono para llamar desde Rocoto."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/customers.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": " Checking…",
+      "spanish": " Comprobando…"
+    },
+    {
+      "source": "src/prototypes/cedar/phone-controller.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Words appear here during the call.",
+      "spanish": "Las palabras aparecen aquí durante la llamada."
+    },
+    {
+      "source": "src/prototypes/cedar/phone-controller.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "The saved transcript is being prepared.",
+      "spanish": "La transcripción guardada se está preparando."
+    },
+    {
+      "source": "src/prototypes/cedar/phone-controller.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": " · Listening",
+      "spanish": " · Escuchando"
+    },
+    {
+      "source": "src/prototypes/cedar/phone-controller.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Phone call",
+      "spanish": "Llamada de teléfono"
+    },
+    {
+      "source": "src/prototypes/cedar/phone-controller.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Starting call",
+      "spanish": "Iniciando la llamada"
+    },
+    {
+      "source": "src/prototypes/cedar/phone-controller.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Incoming call",
+      "spanish": "Llamada entrante"
+    },
+    {
+      "source": "src/prototypes/cedar/phone-controller.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "On call",
+      "spanish": "En llamada"
+    },
+    {
+      "source": "src/prototypes/cedar/phone-controller.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Call ended",
+      "spanish": "Llamada terminada"
+    },
+    {
+      "source": "src/prototypes/cedar/phone-controller.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Ringing",
+      "spanish": "Sonando"
+    },
+    {
+      "source": "src/prototypes/cedar/phone-controller.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Connecting",
+      "spanish": "Conectando"
+    },
+    {
+      "source": "src/prototypes/cedar/phone-controller.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Current phone call",
+      "spanish": "Llamada de teléfono en curso"
+    },
+    {
+      "source": "src/prototypes/cedar/phone-controller.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Minimise call",
+      "spanish": "Minimizar la llamada"
+    },
+    {
+      "source": "src/prototypes/cedar/phone-controller.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Open call controls",
+      "spanish": "Abrir los controles de la llamada"
+    },
+    {
+      "source": "src/prototypes/cedar/phone-controller.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "End call",
+      "spanish": "Terminar la llamada"
+    },
+    {
+      "source": "src/prototypes/cedar/phone-controller.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Close call",
+      "spanish": "Cerrar la llamada"
+    },
+    {
+      "source": "src/prototypes/cedar/phone-controller.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Unmute",
+      "spanish": "Activar el micrófono"
+    },
+    {
+      "source": "src/prototypes/cedar/phone-controller.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Mute",
+      "spanish": "Silenciar"
+    },
+    {
+      "source": "src/prototypes/cedar/phone-controller.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Decline",
+      "spanish": "Rechazar"
+    },
+    {
+      "source": "src/prototypes/cedar/phone-controller.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "End",
+      "spanish": "Terminar"
+    },
+    {
+      "source": "src/prototypes/cedar/phone-controller.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Saved transcript",
+      "spanish": "Transcripción guardada"
+    },
+    {
+      "source": "src/prototypes/cedar/phone-controller.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Live transcript",
+      "spanish": "Transcripción en directo"
+    },
+    {
+      "source": "src/prototypes/cedar/phone-controller.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Phone calls",
+      "spanish": "Llamadas de teléfono"
+    },
+    {
+      "source": "src/prototypes/cedar/phone-controller.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Call someone",
+      "spanish": "Llamar a alguien"
+    },
+    {
+      "source": "src/prototypes/cedar/phone-controller.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Customer to call",
+      "spanish": "Cliente al que llamar"
+    },
+    {
+      "source": "src/prototypes/cedar/phone-controller.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Number to call",
+      "spanish": "Número al que llamar"
+    },
+    {
+      "source": "src/prototypes/cedar/phone-controller.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Open keypad",
+      "spanish": "Abrir el teclado"
+    },
+    {
+      "source": "src/prototypes/cedar/phone-controller.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Answer call on",
+      "spanish": "Contestar la llamada en"
+    },
+    {
+      "source": "src/prototypes/cedar/phone-controller.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "This browser",
+      "spanish": "Este navegador"
+    },
+    {
+      "source": "src/prototypes/cedar/phone-controller.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "My mobile",
+      "spanish": "Mi móvil"
+    },
+    {
+      "source": "src/prototypes/cedar/phone-controller.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Close keypad",
+      "spanish": "Cerrar el teclado"
+    },
+    {
+      "source": "src/prototypes/cedar/phone-controller.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Your browser and mobile are ringing. The first answer connects the call.",
+      "spanish": "Tu navegador y tu móvil están sonando. La primera respuesta conecta la llamada."
+    },
+    {
+      "source": "src/prototypes/cedar/phone-controller.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Answer here",
+      "spanish": "Contestar aquí"
+    },
+    {
+      "source": "src/prototypes/cedar/phone-controller.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Keypad",
+      "spanish": "Teclado"
+    },
+    {
+      "source": "src/prototypes/cedar/phone-controller.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Use your mobile for audio. Call controls and hang up stay available here.",
+      "spanish": "Usa tu móvil para el audio. Los controles de la llamada y colgar siguen disponibles aquí."
+    },
+    {
+      "source": "src/prototypes/cedar/phone-controller.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Return to conversation",
+      "spanish": "Volver a la conversación"
+    },
+    {
+      "source": "src/prototypes/cedar/phone-controller.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Refresh call",
+      "spanish": "Actualizar la llamada"
+    },
+    {
+      "source": "src/prototypes/cedar/phone-controller.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Connect your phone with Twilio to make calls.",
+      "spanish": "Conecta tu teléfono con Twilio para hacer llamadas."
+    },
+    {
+      "source": "src/prototypes/cedar/phone-controller.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Choose a customer or enter a number",
+      "spanish": "Elige un cliente o escribe un número"
+    },
+    {
+      "source": "src/prototypes/cedar/phone-controller.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Caller ID:",
+      "spanish": "Identificador de llamada:"
+    },
+    {
+      "source": "src/prototypes/cedar/phone-controller.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Checking…",
+      "spanish": "Comprobando…"
+    },
+    {
+      "source": "src/prototypes/cedar/phone-controller.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Answer on",
+      "spanish": "Contestar en"
+    },
+    {
+      "source": "src/prototypes/cedar/phone-controller.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Call",
+      "spanish": "Llamar"
+    },
+    {
+      "source": "src/prototypes/cedar/phone-controller.tsx",
+      "context": "review",
+      "kind": "template",
+      "english": "Key ${digit}",
+      "spanish": "Tecla ${digit}"
+    },
+    {
+      "source": "src/prototypes/cedar/phone-controller.tsx",
+      "context": "review",
+      "kind": "template",
+      "english": "Open conversation with ${who}",
+      "spanish": "Abrir la conversación con ${who}"
+    },
+    {
+      "source": "src/prototypes/cedar/phone-controller.tsx",
+      "context": "review",
+      "kind": "template",
+      "english": "Call ${name}",
+      "spanish": "Llamar a ${name}"
+    },
+    {
+      "source": "src/prototypes/cedar/phone-setup.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "What's your current phone number?",
+      "spanish": "¿Cuál es tu número de teléfono actual?"
+    },
+    {
+      "source": "src/prototypes/cedar/phone-setup.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "What's your mobile number?",
+      "spanish": "¿Cuál es tu número de móvil?"
+    },
+    {
+      "source": "src/prototypes/cedar/phone-setup.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Forward your calls to this number",
+      "spanish": "Desvía tus llamadas a este número"
+    },
+    {
+      "source": "src/prototypes/cedar/phone-setup.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Verify your caller ID",
+      "spanish": "Verifica tu identificador de llamada"
+    },
+    {
+      "source": "src/prototypes/cedar/phone-setup.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Save call transcripts?",
+      "spanish": "¿Guardar las transcripciones de las llamadas?"
+    },
+    {
+      "source": "src/prototypes/cedar/phone-setup.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "This line was disconnected. Connect phone again to place calls.",
+      "spanish": "Esta línea se desconectó. Vuelve a conectar el teléfono para hacer llamadas."
+    },
+    {
+      "source": "src/prototypes/cedar/phone-setup.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Allow browser storage, then save your phone setup.",
+      "spanish": "Permite el almacenamiento del navegador y guarda la configuración del teléfono."
+    },
+    {
+      "source": "src/prototypes/cedar/phone-setup.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Enter your business number with its country code.",
+      "spanish": "Escribe el número de tu negocio con su prefijo de país."
+    },
+    {
+      "source": "src/prototypes/cedar/phone-setup.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Enter your mobile number with its country code.",
+      "spanish": "Escribe tu número de móvil con su prefijo de país."
+    },
+    {
+      "source": "src/prototypes/cedar/phone-setup.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Check the verification call, then refresh its status.",
+      "spanish": "Atiende la llamada de verificación y actualiza su estado."
+    },
+    {
+      "source": "src/prototypes/cedar/phone-setup.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Save phone setup",
+      "spanish": "Guardar la configuración del teléfono"
+    },
+    {
+      "source": "src/prototypes/cedar/phone-setup.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Run forwarding test",
+      "spanish": "Ejecutar la prueba de desvío"
+    },
+    {
+      "source": "src/prototypes/cedar/phone-setup.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Start forwarding test",
+      "spanish": "Iniciar la prueba de desvío"
+    },
+    {
+      "source": "src/prototypes/cedar/phone-setup.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Check forwarding",
+      "spanish": "Comprobar el desvío"
+    },
+    {
+      "source": "src/prototypes/cedar/phone-setup.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Check verification",
+      "spanish": "Comprobar la verificación"
+    },
+    {
+      "source": "src/prototypes/cedar/phone-setup.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Call me to verify",
+      "spanish": "Llamadme para verificar"
+    },
+    {
+      "source": "src/prototypes/cedar/phone-setup.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Prepared",
+      "spanish": "Preparado"
+    },
+    {
+      "source": "src/prototypes/cedar/phone-setup.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Connection needs attention",
+      "spanish": "La conexión necesita atención"
+    },
+    {
+      "source": "src/prototypes/cedar/phone-setup.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": " · Outgoing line",
+      "spanish": " · Línea de salida"
+    },
+    {
+      "source": "src/prototypes/cedar/phone-setup.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Disconnect phone",
+      "spanish": "Desconectar el teléfono"
+    },
+    {
+      "source": "src/prototypes/cedar/phone-setup.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Disconnect line",
+      "spanish": "Desconectar la línea"
+    },
+    {
+      "source": "src/prototypes/cedar/phone-setup.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Add another",
+      "spanish": "Añadir otra"
+    },
+    {
+      "source": "src/prototypes/cedar/phone-setup.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Business phone number",
+      "spanish": "Teléfono del negocio"
+    },
+    {
+      "source": "src/prototypes/cedar/phone-setup.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Mobile phone number",
+      "spanish": "Teléfono móvil"
+    },
+    {
+      "source": "src/prototypes/cedar/phone-setup.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Rocoto number awaiting activation",
+      "spanish": "Número de Rocoto pendiente de activación"
+    },
+    {
+      "source": "src/prototypes/cedar/phone-setup.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Forwarding verified",
+      "spanish": "Desvío verificado"
+    },
+    {
+      "source": "src/prototypes/cedar/phone-setup.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Test call received",
+      "spanish": "Llamada de prueba recibida"
+    },
+    {
+      "source": "src/prototypes/cedar/phone-setup.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Use for outgoing calls",
+      "spanish": "Usar para llamadas salientes"
+    },
+    {
+      "source": "src/prototypes/cedar/phone-setup.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Use test data",
+      "spanish": "Usar datos de prueba"
+    },
+    {
+      "source": "src/prototypes/cedar/phone-setup.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Test data",
+      "spanish": "Datos de prueba"
+    },
+    {
+      "source": "src/prototypes/cedar/phone-setup.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Caller ID verified",
+      "spanish": "Identificador de llamada verificado"
+    },
+    {
+      "source": "src/prototypes/cedar/phone-setup.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Enter this code during the call",
+      "spanish": "Introduce este código durante la llamada"
+    },
+    {
+      "source": "src/prototypes/cedar/phone-setup.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Save call transcripts",
+      "spanish": "Guardar las transcripciones de las llamadas"
+    },
+    {
+      "source": "src/prototypes/cedar/phone-setup.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Check connection again",
+      "spanish": "Volver a comprobar la conexión"
+    },
+    {
+      "source": "src/prototypes/cedar/phone-setup.tsx",
+      "context": "review",
+      "kind": "template",
+      "english": "Call ${source} from ${mobile}",
+      "spanish": "Llama a ${source} desde ${mobile}"
+    },
+    {
+      "source": "src/prototypes/cedar/phone-setup.tsx",
+      "context": "review",
+      "kind": "template",
+      "english": "Start the test, then call ${source} from ${mobile}",
+      "spanish": "Inicia la prueba y llama a ${source} desde ${mobile}"
+    },
+    {
+      "source": "src/prototypes/cedar/money-model.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Offered",
+      "spanish": "Ofrecido"
+    },
+    {
+      "source": "src/prototypes/cedar/money-model.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Upcoming",
+      "spanish": "Próximo"
+    },
+    {
+      "source": "src/prototypes/cedar/money-model.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Payment link sent",
+      "spanish": "Enlace de pago enviado"
+    },
+    {
+      "source": "src/prototypes/cedar/money-model.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Part paid",
+      "spanish": "Pagado en parte"
+    },
+    {
+      "source": "src/prototypes/cedar/money-model.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Paid",
+      "spanish": "Pagado"
+    },
+    {
+      "source": "src/prototypes/cedar/money-model.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Repaying",
+      "spanish": "Devolviendo"
+    },
+    {
+      "source": "src/prototypes/cedar/money-model.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Repaid",
+      "spanish": "Devuelto"
+    },
+    {
+      "source": "src/prototypes/cedar/money-overview.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Payment checks run when you refresh",
+      "spanish": "Las comprobaciones de cobro se ejecutan al actualizar"
+    },
+    {
+      "source": "src/prototypes/cedar/money-overview.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Next payment check queued",
+      "spanish": "Próxima comprobación de cobro en cola"
+    },
+    {
+      "source": "src/prototypes/cedar/money-overview.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "From your invoices and sales",
+      "spanish": "De tus facturas y ventas"
+    },
+    {
+      "source": "src/prototypes/cedar/money-overview.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Working capital opens once your bank is connected.",
+      "spanish": "El capital circulante se abre cuando tu banco está conectado."
+    },
+    {
+      "source": "src/prototypes/cedar/money-overview.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "customers · Outstanding",
+      "spanish": "clientes · Pendiente"
+    },
+    {
+      "source": "src/prototypes/cedar/money-overview.tsx",
+      "context": "review",
+      "kind": "template",
+      "english": "Updated ${new Date(bank.asOf).toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' })}",
+      "spanish": "Actualizado ${new Date(bank.asOf).toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' })}"
+    },
+    {
+      "source": "src/prototypes/cedar/money-credit.tsx",
+      "context": "review",
+      "kind": "template",
+      "english": "${statusWordsOf(status)} · due ${creditDate(invoice.dueAt)}",
+      "spanish": "${statusWordsOf(status)} · vence ${creditDate(invoice.dueAt)}"
+    },
+    {
+      "source": "src/prototypes/cedar/money-bank-activity.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Connect your bank with Prometeo to read your transactions.",
+      "spanish": "Conecta tu banco con Prometeo para leer tus movimientos."
+    },
+    {
+      "source": "src/prototypes/cedar/money-bank-api.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Reconnect the money service, then try again.",
+      "spanish": "Vuelve a conectar el servicio de dinero e inténtalo de nuevo."
+    },
+    {
+      "source": "src/prototypes/cedar/money-bank-capability.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Set up payments",
+      "spanish": "Configurar los cobros"
+    },
+    {
+      "source": "src/prototypes/cedar/money-bank-capability.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Set up invoicing",
+      "spanish": "Configurar la facturación"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/money.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Set up payments",
+      "spanish": "Configurar los cobros"
+    },
+    {
+      "source": "src/prototypes/cedar/money-api.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Refresh the connection to read its provider status.",
+      "spanish": "Actualiza la conexión para leer el estado del proveedor."
+    },
+    {
+      "source": "src/prototypes/cedar/money-api.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Refresh the bank connection to check its payment collectors.",
+      "spanish": "Actualiza la conexión bancaria para comprobar sus medios de cobro."
+    },
+    {
+      "source": "src/prototypes/cedar/money-setup.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "What do you call this account?",
+      "spanish": "¿Cómo llamas a esta cuenta?"
+    },
+    {
+      "source": "src/prototypes/cedar/money-setup.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Authorization sent",
+      "spanish": "Autorización enviada"
+    },
+    {
+      "source": "src/prototypes/cedar/money-setup.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Name your receiving account.",
+      "spanish": "Ponle nombre a tu cuenta de cobro."
+    },
+    {
+      "source": "src/prototypes/cedar/money-setup.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Prometeo activates this account.",
+      "spanish": "Prometeo activa esta cuenta."
+    },
+    {
+      "source": "src/prototypes/cedar/money-setup.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "NubeFact activates this account.",
+      "spanish": "NubeFact activa esta cuenta."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/sales.tsx",
+      "context": "review",
+      "kind": "template",
+      "english": "Saved ${said}.",
+      "spanish": "Guardado ${said}."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/sales.tsx",
+      "context": "review",
+      "kind": "template",
+      "english": "Saved ${said}. Saving the activity stalled.",
+      "spanish": "Guardado ${said}. El registro de la actividad se detuvo."
+    },
+    {
+      "source": "src/prototypes/cedar/output-files.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Order total",
+      "spanish": "Total del pedido"
+    },
+    {
+      "source": "src/prototypes/cedar/print-measures.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "truck divider",
+      "spanish": "separador de camión"
+    },
+    {
+      "source": "src/prototypes/cedar/pin-map.tsx",
+      "context": "review",
+      "kind": "template",
+      "english": "Delivery orders on the map · ${placements.length}",
+      "spanish": "Pedidos de reparto en el mapa · ${placements.length}"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/printing.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "your spreadsheet",
+      "spanish": "tu hoja de cálculo"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/printing.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Every file opens with Delivery and closes with Order total where prices are on.",
+      "spanish": "Cada archivo empieza por Entrega y termina por Total del pedido cuando los precios están activados."
+    },
+    {
+      "source": "src/prototypes/cedar/shell/printing.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Upcoming deliveries ·",
+      "spanish": "Próximas entregas ·"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/printing.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "on the map ·",
+      "spanish": "en el mapa ·"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/printing.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "more after",
+      "spanish": "más tras el"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/printing.tsx",
+      "context": "review",
+      "kind": "template",
+      "english": "${sale.customer.address ?? sale.customer.name} · a typed address",
+      "spanish": "${sale.customer.address ?? sale.customer.name} · dirección escrita"
+    },
+    {
+      "source": "src/prototypes/cedar/print-screen.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "The print screen",
+      "spanish": "La pantalla de impresión"
+    },
+    {
+      "source": "src/prototypes/cedar/print-screen.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Print dialog requested · paper awaiting confirmation.",
+      "spanish": "Diálogo de impresión solicitado · papel pendiente de confirmación."
+    },
+    {
+      "source": "src/prototypes/cedar/print-screen.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "You",
+      "spanish": "Tú"
+    },
+    {
+      "source": "src/prototypes/cedar/print-screen.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Saving this template stalled. Your changes are here.",
+      "spanish": "El guardado de esta plantilla se detuvo. Tus cambios están aquí."
+    },
+    {
+      "source": "src/prototypes/cedar/print-screen.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Print the delivery note",
+      "spanish": "Imprimir el albarán"
+    },
+    {
+      "source": "src/prototypes/cedar/print-screen.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Print the day’s sheet",
+      "spanish": "Imprimir la hoja del día"
+    },
+    {
+      "source": "src/prototypes/cedar/print-screen.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Close the print screen",
+      "spanish": "Cerrar la pantalla de impresión"
+    },
+    {
+      "source": "src/prototypes/cedar/print-screen.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Delivery scope",
+      "spanish": "Alcance de entregas"
+    },
+    {
+      "source": "src/prototypes/cedar/print-screen.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Deliveries to print",
+      "spanish": "Entregas por imprimir"
+    },
+    {
+      "source": "src/prototypes/cedar/print-screen.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Delivery period",
+      "spanish": "Periodo de entrega"
+    },
+    {
+      "source": "src/prototypes/cedar/print-screen.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Range",
+      "spanish": "Rango"
+    },
+    {
+      "source": "src/prototypes/cedar/print-screen.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Selected",
+      "spanish": "Seleccionadas"
+    },
+    {
+      "source": "src/prototypes/cedar/print-screen.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "First delivery day",
+      "spanish": "Primer día de entrega"
+    },
+    {
+      "source": "src/prototypes/cedar/print-screen.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Delivery day",
+      "spanish": "Día de entrega"
+    },
+    {
+      "source": "src/prototypes/cedar/print-screen.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Last delivery day",
+      "spanish": "Último día de entrega"
+    },
+    {
+      "source": "src/prototypes/cedar/print-screen.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Choose deliveries",
+      "spanish": "Elegir entregas"
+    },
+    {
+      "source": "src/prototypes/cedar/print-screen.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Selected deliveries",
+      "spanish": "Entregas seleccionadas"
+    },
+    {
+      "source": "src/prototypes/cedar/print-screen.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Paper",
+      "spanish": "Papel"
+    },
+    {
+      "source": "src/prototypes/cedar/print-screen.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Copies",
+      "spanish": "Copias"
+    },
+    {
+      "source": "src/prototypes/cedar/print-screen.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "1 copy",
+      "spanish": "1 copia"
+    },
+    {
+      "source": "src/prototypes/cedar/print-screen.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Deliveries",
+      "spanish": "Entregas"
+    },
+    {
+      "source": "src/prototypes/cedar/print-screen.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Remaining",
+      "spanish": "Pendientes"
+    },
+    {
+      "source": "src/prototypes/cedar/print-screen.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "All ready",
+      "spanish": "Todas las listas"
+    },
+    {
+      "source": "src/prototypes/cedar/print-screen.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Period",
+      "spanish": "Periodo"
+    },
+    {
+      "source": "src/prototypes/cedar/print-screen.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Choose deliveries ·",
+      "spanish": "Elegir entregas ·"
+    },
+    {
+      "source": "src/prototypes/cedar/print-screen.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Apply ·",
+      "spanish": "Aplicar ·"
+    },
+    {
+      "source": "src/prototypes/cedar/print-screen.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "This scope is complete",
+      "spanish": "Este alcance está completo"
+    },
+    {
+      "source": "src/prototypes/cedar/print-screen.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Choose All ready, another period, or selected deliveries.",
+      "spanish": "Elige Todas las listas, otro periodo o entregas seleccionadas."
+    },
+    {
+      "source": "src/prototypes/cedar/print-screen.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "This template has changes.",
+      "spanish": "Esta plantilla tiene cambios."
+    },
+    {
+      "source": "src/prototypes/cedar/print-screen.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Keep editing",
+      "spanish": "Seguir editando"
+    },
+    {
+      "source": "src/prototypes/cedar/print-screen.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Discard changes",
+      "spanish": "Descartar los cambios"
+    },
+    {
+      "source": "src/prototypes/cedar/print-screen.tsx",
+      "context": "review",
+      "kind": "template",
+      "english": "Saved · revision ${next.revision}",
+      "spanish": "Guardado · revisión ${next.revision}"
+    },
+    {
+      "source": "src/prototypes/cedar/print-screen.tsx",
+      "context": "review",
+      "kind": "template",
+      "english": "Print ${own.length} ${plural(own.length, 'delivery', 'deliveries')}",
+      "spanish": "Imprimir ${own.length} ${plural(own.length, 'delivery', 'deliveries')}"
+    },
+    {
+      "source": "src/prototypes/cedar/print-screen.tsx",
+      "context": "review",
+      "kind": "template",
+      "english": "${left} ${plural(left, 'page')} awaiting print confirmation",
+      "spanish": "${left} ${plural(left, 'page')} pendientes de confirmación de impresión"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/app-settings.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Stopping. Finishing the last check.",
+      "spanish": "Deteniendo. Terminando la última comprobación."
+    },
+    {
+      "source": "src/prototypes/cedar/whatsapp-capability.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "This WhatsApp account is set up for another workspace.",
+      "spanish": "Esta cuenta de WhatsApp está configurada para otro espacio de trabajo."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/app-settings.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "The workspace returns to its seeded defaults. Rocoto then asks Meta to disconnect WhatsApp and releases every phone line and every mailbox, so each setup flow starts at its first screen again. The messages those providers already hold stay with them.",
+      "spanish": "El espacio de trabajo vuelve a sus valores de ejemplo. Rocoto pide entonces a Meta que desconecte WhatsApp y libera todas las líneas de teléfono y todos los buzones, así que cada configuración vuelve a empezar en su primera pantalla. Los mensajes que esos proveedores ya guardan se quedan con ellos."
+    },
+    {
+      "source": "src/prototypes/cedar/email-connection.tsx",
+      "context": "review",
+      "kind": "template",
+      "english": " Rocoto read this mailbox for ${bound} ${bound === 1 ? 'customer' : 'customers'}.",
+      "spanish": " Rocoto ha leído este buzón para ${bound} ${bound === 1 ? 'customer' : 'customers'}."
+    },
+    {
+      "source": "src/prototypes/cedar/email-connection.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "customer",
+      "spanish": "cliente"
+    },
+    {
+      "source": "src/prototypes/cedar/email-connection.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "customers",
+      "spanish": "clientes"
+    },
+    {
+      "source": "src/prototypes/cedar/email-connection.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Reading your mail history",
+      "spanish": "Leyendo tu historial de correo"
+    },
+    {
+      "source": "src/prototypes/cedar/email-setup-state.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Connect your mailbox to read and answer customer email.",
+      "spanish": "Conecta tu buzón para leer y responder el correo de tus clientes."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/connections.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Team numbers open once WhatsApp Business is connected.",
+      "spanish": "Los números del equipo se abren cuando WhatsApp Business está conectado."
+    },
+    {
+      "source": "src/prototypes/cedar/shell/printing.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "at",
+      "spanish": "con"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/printing.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "a typed address",
+      "spanish": "dirección escrita"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/printing.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "typed addresses",
+      "spanish": "direcciones escritas"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/printing.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Every upcoming delivery is at a typed address.",
+      "spanish": "Todas las próximas entregas están en una dirección escrita."
+    },
+    {
+      "source": "src/prototypes/cedar/money-overview.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Bank transactions",
+      "spanish": "Movimientos bancarios"
+    },
+    {
+      "source": "src/prototypes/cedar/demo-welcome.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Allow browser storage, then open the workspace.",
+      "spanish": "Permite el almacenamiento del navegador y abre el espacio de trabajo."
+    },
+    {
+      "source": "src/prototypes/cedar/demo-welcome.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Main receiving account",
+      "spanish": "Cuenta principal de cobro"
+    },
+    {
+      "source": "src/prototypes/cedar/demo-welcome.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Allow browser storage, then save the setup.",
+      "spanish": "Permite el almacenamiento del navegador y guarda la configuración."
+    },
+    {
+      "source": "src/prototypes/cedar/demo-welcome.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Allow browser storage, then begin setup.",
+      "spanish": "Permite el almacenamiento del navegador y empieza la configuración."
+    },
+    {
+      "source": "src/prototypes/cedar/demo-welcome.tsx",
+      "context": "review",
+      "kind": "template",
+      "english": "Welcome, ${config.owner.name}",
+      "spanish": "Hola, ${config.owner.name}"
+    },
+    {
+      "source": "src/prototypes/cedar/demo-welcome.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "About this workspace",
+      "spanish": "Sobre este espacio de trabajo"
+    },
+    {
+      "source": "src/prototypes/cedar/demo-welcome.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "This development workspace combines prepared example records with the accounts you choose to connect. Test-data setup rehearses provider screens. Live messages and provider actions use your connected accounts.",
+      "spanish": "Este espacio de trabajo de desarrollo combina registros de ejemplo preparados con las cuentas que decidas conectar. La configuración con datos de prueba ensaya las pantallas de los proveedores. Los mensajes reales y las acciones con proveedores usan tus cuentas conectadas."
+    },
+    {
+      "source": "src/prototypes/cedar/demo-welcome.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Set up your business",
+      "spanish": "Configura tu negocio"
+    },
+    {
+      "source": "src/prototypes/cedar/demo-welcome.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Connect messages and banking",
+      "spanish": "Conecta mensajes y banco"
+    },
+    {
+      "source": "src/prototypes/cedar/demo-welcome.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Connect your order channel",
+      "spanish": "Conecta tu canal de pedidos"
+    },
+    {
+      "source": "src/prototypes/cedar/demo-welcome.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Open workspace",
+      "spanish": "Abrir el espacio de trabajo"
+    },
+    {
+      "source": "src/prototypes/cedar/demo-welcome.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Orders, customers and money",
+      "spanish": "Pedidos, clientes y dinero"
+    },
+    {
+      "source": "src/prototypes/cedar/demo-welcome.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Orders and customers",
+      "spanish": "Pedidos y clientes"
+    },
+    {
+      "source": "src/prototypes/cedar/cedar-onboarding.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "WhatsApp Business",
+      "spanish": "WhatsApp Business"
+    },
+    {
+      "source": "src/prototypes/cedar/cedar-onboarding.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Where do orders arrive?",
+      "spanish": "¿Por dónde llegan los pedidos?"
+    },
+    {
+      "source": "src/prototypes/cedar/cedar-onboarding.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Connect your order channel",
+      "spanish": "Conecta tu canal de pedidos"
+    },
+    {
+      "source": "src/prototypes/cedar/cedar-onboarding.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Connect your bank account",
+      "spanish": "Conecta tu cuenta bancaria"
+    },
+    {
+      "source": "src/prototypes/cedar/cedar-onboarding.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Product catalogue",
+      "spanish": "Catálogo de productos"
+    },
+    {
+      "source": "src/prototypes/cedar/cedar-onboarding.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Invoice history",
+      "spanish": "Historial de facturas"
+    },
+    {
+      "source": "src/prototypes/cedar/cedar-onboarding.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Your workspace is ready",
+      "spanish": "Tu espacio de trabajo está listo"
+    },
+    {
+      "source": "src/prototypes/cedar/cedar-onboarding.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Enter the address or number your customers use.",
+      "spanish": "Escribe la dirección o el número que usan tus clientes."
+    },
+    {
+      "source": "src/prototypes/cedar/cedar-onboarding.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Enter your business email address.",
+      "spanish": "Escribe el correo de tu negocio."
+    },
+    {
+      "source": "src/prototypes/cedar/cedar-onboarding.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Enter your business phone number with its country code.",
+      "spanish": "Escribe el teléfono de tu negocio con su prefijo de país."
+    },
+    {
+      "source": "src/prototypes/cedar/cedar-onboarding.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Allow browser storage, then save this channel again.",
+      "spanish": "Permite el almacenamiento del navegador y guarda este canal de nuevo."
+    },
+    {
+      "source": "src/prototypes/cedar/cedar-onboarding.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Allow browser storage, then finish your workspace setup.",
+      "spanish": "Permite el almacenamiento del navegador y termina la configuración de tu espacio de trabajo."
+    },
+    {
+      "source": "src/prototypes/cedar/cedar-onboarding.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Opening phone setup…",
+      "spanish": "Abriendo la configuración del teléfono…"
+    },
+    {
+      "source": "src/prototypes/cedar/cedar-onboarding.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Opening email setup…",
+      "spanish": "Abriendo la configuración del correo…"
+    },
+    {
+      "source": "src/prototypes/cedar/cedar-onboarding.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Opening invoice upload…",
+      "spanish": "Abriendo la subida de facturas…"
+    },
+    {
+      "source": "src/prototypes/cedar/cedar-onboarding.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Finish setup",
+      "spanish": "Terminar la configuración"
+    },
+    {
+      "source": "src/prototypes/cedar/cedar-onboarding.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Main receiving account",
+      "spanish": "Cuenta principal de cobro"
+    },
+    {
+      "source": "src/prototypes/cedar/cedar-onboarding.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Connect WhatsApp Business",
+      "spanish": "Conectar WhatsApp Business"
+    },
+    {
+      "source": "src/prototypes/cedar/cedar-onboarding.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Add the products and prices customers order.",
+      "spanish": "Añade los productos y precios que piden tus clientes."
+    },
+    {
+      "source": "src/prototypes/cedar/cedar-onboarding.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Opening product catalogue…",
+      "spanish": "Abriendo el catálogo de productos…"
+    },
+    {
+      "source": "src/prototypes/cedar/cedar-onboarding.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Bring earlier customer and supplier invoices into your records.",
+      "spanish": "Incorpora las facturas anteriores de clientes y proveedores a tus registros."
+    },
+    {
+      "source": "src/prototypes/cedar/cedar-onboarding.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Upload invoices",
+      "spanish": "Subir facturas"
+    },
+    {
+      "source": "src/prototypes/cedar/cedar-onboarding.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Open workspace",
+      "spanish": "Abrir el espacio de trabajo"
+    },
+    {
+      "source": "src/prototypes/cedar/cedar-onboarding.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Business details",
+      "spanish": "Datos del negocio"
+    },
+    {
+      "source": "src/prototypes/cedar/cedar-onboarding.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Product catalogue",
+      "spanish": "Catálogo de productos"
+    },
+    {
+      "source": "src/prototypes/cedar/cedar-onboarding.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Invoice history",
+      "spanish": "Historial de facturas"
+    },
+    {
+      "source": "src/prototypes/cedar/setup-progress.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Communication",
+      "spanish": "Comunicación"
+    },
+    {
+      "source": "src/prototypes/cedar/setup-progress.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "WhatsApp, email or phone",
+      "spanish": "WhatsApp, correo o teléfono"
+    },
+    {
+      "source": "src/prototypes/cedar/setup-progress.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Business details and imports",
+      "spanish": "Datos del negocio e importaciones"
+    },
+    {
+      "source": "src/prototypes/cedar/setup-progress.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Business details",
+      "spanish": "Datos del negocio"
+    },
+    {
+      "source": "src/prototypes/cedar/setup-progress.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Product catalogue",
+      "spanish": "Catálogo de productos"
+    },
+    {
+      "source": "src/prototypes/cedar/setup-progress.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Invoice history",
+      "spanish": "Historial de facturas"
+    },
+    {
+      "source": "src/prototypes/cedar/setup-progress.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Open setup",
+      "spanish": "Abrir la configuración"
+    },
+    {
+      "source": "src/prototypes/cedar/pin-map.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Show all",
+      "spanish": "Ver todo"
+    },
+    {
+      "source": "src/prototypes/cedar/pin-map.tsx",
+      "context": "review",
+      "kind": "template",
+      "english": "${cluster.members.length} deliveries here",
+      "spanish": "${cluster.members.length} entregas aquí"
+    },
+    {
+      "source": "src/prototypes/cedar/chase-dialog.tsx",
+      "context": "JSXAttribute > StringLiteral:title",
+      "kind": "literal",
+      "english": "Chase now",
+      "spanish": "Reclamar ahora"
+    },
+    {
+      "source": "src/prototypes/cedar/chase-dialog.tsx",
+      "context": "JSXAttribute > StringLiteral:aria-label",
+      "kind": "literal",
+      "english": "Reminder message",
+      "spanish": "Mensaje del recordatorio"
+    },
+    {
+      "source": "src/prototypes/cedar/chase-dialog.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Payment link",
+      "spanish": "Enlace de pago"
+    },
+    {
+      "source": "src/prototypes/cedar/chase-dialog.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Open payment link",
+      "spanish": "Abrir enlace de pago"
+    },
+    {
+      "source": "src/prototypes/cedar/chase-dialog.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "The payment link arrives with this reminder.",
+      "spanish": "El enlace de pago va con este recordatorio."
+    },
+    {
+      "source": "src/prototypes/cedar/chase.ts",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "Reminder 1 of ${CHASE_STEPS} · softer",
+      "spanish": "Recordatorio 1 de ${CHASE_STEPS} · suave"
+    },
+    {
+      "source": "src/prototypes/cedar/chase.ts",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "Reminder 2 of ${CHASE_STEPS} · firmer",
+      "spanish": "Recordatorio 2 de ${CHASE_STEPS} · más firme"
+    },
+    {
+      "source": "src/prototypes/cedar/chase.ts",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "Reminder 3 of ${CHASE_STEPS} · firmer",
+      "spanish": "Recordatorio 3 de ${CHASE_STEPS} · más firme"
+    },
+    {
+      "source": "src/prototypes/cedar/chase.ts",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "Pay here: ${input.link}.",
+      "spanish": "Paga aquí: ${input.link}."
+    },
+    {
+      "source": "src/prototypes/cedar/chase.ts",
+      "context": "ReturnStatement > StringLiteral",
+      "kind": "literal",
+      "english": "due now",
+      "spanish": "toca ahora"
+    },
+    {
+      "source": "src/prototypes/cedar/chase.ts",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "next in ${Math.floor(minutes / 60)} h",
+      "spanish": "siguiente en ${Math.floor(minutes / 60)} h"
+    },
+    {
+      "source": "src/prototypes/cedar/chase.ts",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "next in ${minutes} min",
+      "spanish": "siguiente en ${minutes} min"
+    },
+    {
+      "source": "src/prototypes/cedar/chase.ts",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "Chased ${hour}",
+      "spanish": "Reclamado ${hour}"
+    },
+    {
+      "source": "src/prototypes/cedar/chase.ts",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "Chased ${at.toLocaleDateString('en-GB', DAY_FORMAT)} ${hour}",
+      "spanish": "Reclamado ${at.toLocaleDateString('en-GB', DAY_FORMAT)} ${hour}"
+    },
+    {
+      "source": "src/prototypes/cedar/money-credit.tsx",
+      "context": "ReturnStatement > TemplateLiteral",
+      "kind": "template",
+      "english": "${statusWordsOf(status)} · due ${creditDate(invoice.dueAt)}",
+      "spanish": "${statusWordsOf(status)} · vence ${creditDate(invoice.dueAt)}"
+    },
+    {
+      "source": "src/prototypes/cedar/money-credit.tsx",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "Date to confirm",
+      "spanish": "Fecha por confirmar"
+    },
+    {
+      "source": "src/prototypes/cedar/money-credit.tsx",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "${row.overdueDays} ${row.overdueDays === 1 ? 'day' : 'days'} overdue",
+      "spanish": "${row.overdueDays} ${row.overdueDays === 1 ? 'día' : 'días'} de retraso"
+    },
+    {
+      "source": "src/prototypes/cedar/money-credit.tsx",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "Due ${creditDate(row.invoice.dueAt)}",
+      "spanish": "Vence ${creditDate(row.invoice.dueAt)}"
+    },
+    {
+      "source": "src/prototypes/cedar/money-credit.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Outstanding balance",
+      "spanish": "Saldo pendiente"
+    },
+    {
+      "source": "src/prototypes/cedar/money-credit.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Customer credit appears here with outstanding invoices.",
+      "spanish": "El crédito del cliente aparece aquí con sus facturas pendientes."
+    },
+    {
+      "source": "src/prototypes/cedar/money-credit.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Unpaid orders",
+      "spanish": "Pedidos por cobrar"
+    },
+    {
+      "source": "src/prototypes/cedar/money-credit.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Customer credit",
+      "spanish": "Crédito de clientes"
+    },
+    {
+      "source": "src/prototypes/cedar/money-credit.tsx",
+      "context": "JSXAttribute > StringLiteral:aria-label",
+      "kind": "literal",
+      "english": "Sort unpaid orders",
+      "spanish": "Ordenar pedidos por cobrar"
+    },
+    {
+      "source": "src/prototypes/cedar/money-credit.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Nearest deadline",
+      "spanish": "Vencimiento más cercano"
+    },
+    {
+      "source": "src/prototypes/cedar/money-credit.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Biggest owed",
+      "spanish": "Mayor importe"
+    },
+    {
+      "source": "src/prototypes/cedar/money-credit.tsx",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "unpaid order",
+      "spanish": "pedido por cobrar"
+    },
+    {
+      "source": "src/prototypes/cedar/money-credit.tsx",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "unpaid orders",
+      "spanish": "pedidos por cobrar"
+    },
+    {
+      "source": "src/prototypes/cedar/money-credit.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Chase now",
+      "spanish": "Reclamar ahora"
+    },
+    {
+      "source": "src/prototypes/cedar/money-credit.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Needs a call",
+      "spanish": "Toca llamar"
+    },
+    {
+      "source": "src/prototypes/cedar/money-credit.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Pay over time",
+      "spanish": "Pagar a plazos"
+    },
+    {
+      "source": "src/prototypes/cedar/money-credit.tsx",
+      "context": "JSXExpressionContainer > TemplateLiteral",
+      "kind": "template",
+      "english": "Auto-chase interval for ${documentNumber(invoice)}",
+      "spanish": "Intervalo del reclamo automático de ${documentNumber(invoice)}"
+    },
+    {
+      "source": "src/prototypes/cedar/money-credit.tsx",
+      "context": "LogicalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "Reminders every ${every} h",
+      "spanish": "Recordatorios cada ${every} h"
+    },
+    {
+      "source": "src/prototypes/cedar/money-credit.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Unpaid orders appear here with their customer and next deadline.",
+      "spanish": "Los pedidos por cobrar aparecen aquí con su cliente y su próximo vencimiento."
+    },
+    {
+      "source": "src/prototypes/cedar/money-credit.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "By customer",
+      "spanish": "Por cliente"
+    },
+    {
+      "source": "src/prototypes/cedar/money-credit.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Outstanding invoices appear here with their customer and next deadline.",
+      "spanish": "Las facturas pendientes aparecen aquí con su cliente y su próximo vencimiento."
+    },
+    {
+      "source": "src/prototypes/cedar/chase.ts",
+      "context": "ReturnStatement > TemplateLiteral",
+      "kind": "template",
+      "english": "Hi ${input.customerName}, your order ${input.documentNumber} for ${input.amountText} is due ${input.dueText}.${pay} Thank you.",
+      "spanish": "Hola ${input.customerName}, tu pedido ${input.documentNumber} de ${input.amountText} vence ${input.dueText}.${pay} Gracias."
+    },
+    {
+      "source": "src/prototypes/cedar/chase.ts",
+      "context": "ReturnStatement > TemplateLiteral",
+      "kind": "template",
+      "english": "Hi ${input.customerName}, order ${input.documentNumber} for ${input.amountText} was due ${input.dueText}. A late fee of ${input.feeText} applies from ${input.feeDateText}.${pay}",
+      "spanish": "Hola ${input.customerName}, el pedido ${input.documentNumber} de ${input.amountText} venció ${input.dueText}. Desde ${input.feeDateText} se aplica un recargo de ${input.feeText}.${pay}"
+    },
+    {
+      "source": "src/prototypes/cedar/money-model.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Payment link sent",
+      "spanish": "Enlace de pago enviado"
+    },
+    {
+      "source": "src/prototypes/cedar/money-model.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Part paid",
+      "spanish": "Pago parcial"
+    },
+    {
+      "source": "src/prototypes/cedar/money-model.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Due",
+      "spanish": "Vence"
+    },
+    {
+      "source": "src/prototypes/cedar/money-model.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Overdue",
+      "spanish": "Vencido"
+    }
+  ]
+}

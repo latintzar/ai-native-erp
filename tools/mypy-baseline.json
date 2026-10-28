@@ -1,0 +1,2603 @@
+{
+  "tool": "mypy",
+  "tool_version": "2.3.1",
+  "roots": [
+    "backend",
+    "mock-api",
+    "tools",
+    "drives",
+    "deploy"
+  ],
+  "total": 660,
+  "distinct": 431,
+  "how": "python3 tools/py-gate.py types --update",
+  "what": "every finding that existed when this file was written. The gate fails on a finding that is not here, and on an entry here that no longer happens. It only counts down.",
+  "findings": [
+    {
+      "path": "backend/actions.py",
+      "code": "assignment",
+      "message": "Incompatible types in assignment (expression has type \"dict[str, str]\", target has type \"Sequence[str]\")",
+      "count": 1
+    },
+    {
+      "path": "backend/agent_reply.py",
+      "code": "arg-type",
+      "message": "Argument 1 to \"join\" of \"str\" has incompatible type \"Literal[True] | list[Any]\"; expected \"Iterable[str]\"",
+      "count": 1
+    },
+    {
+      "path": "backend/agent_reply.py",
+      "code": "arg-type",
+      "message": "Argument 1 to \"join\" of \"str\" has incompatible type \"object\"; expected \"Iterable[str]\"",
+      "count": 1
+    },
+    {
+      "path": "backend/agent_reply.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"gaps\"",
+      "count": 1
+    },
+    {
+      "path": "backend/ai_disclosure.py",
+      "code": "assignment",
+      "message": "Incompatible types in assignment (expression has type \"int\", variable has type \"str\")",
+      "count": 1
+    },
+    {
+      "path": "backend/ai_disclosure.py",
+      "code": "operator",
+      "message": "Unsupported operand types for <= (\"int\" and \"str\")",
+      "count": 1
+    },
+    {
+      "path": "backend/ai_disclosure.py",
+      "code": "operator",
+      "message": "Unsupported operand types for <= (\"str\" and \"int\")",
+      "count": 1
+    },
+    {
+      "path": "backend/api_v1.py",
+      "code": "arg-type",
+      "message": "Argument 1 to \"problem\" has incompatible type \"**dict[str, object]\"; expected \"int\"",
+      "count": 3
+    },
+    {
+      "path": "backend/api_v1.py",
+      "code": "arg-type",
+      "message": "Argument 1 to \"problem\" has incompatible type \"**dict[str, object]\"; expected \"str\"",
+      "count": 3
+    },
+    {
+      "path": "backend/api_v1.py",
+      "code": "union-attr",
+      "message": "Item \"None\" of \"Any | None\" has no attribute \"acquire\"",
+      "count": 3
+    },
+    {
+      "path": "backend/app.py",
+      "code": "arg-type",
+      "message": "Argument 1 to \"_process_media\" has incompatible type \"Any | datetime | dict[str, Any] | list[Any | str] | str\"; expected \"str\"",
+      "count": 1
+    },
+    {
+      "path": "backend/app.py",
+      "code": "arg-type",
+      "message": "Argument 1 to \"get\" of \"dict\" has incompatible type \"int | None\"; expected \"int\"",
+      "count": 1
+    },
+    {
+      "path": "backend/app.py",
+      "code": "arg-type",
+      "message": "Argument 1 to \"send_held_notice\" has incompatible type \"Any | None\"; expected \"str\"",
+      "count": 1
+    },
+    {
+      "path": "backend/app.py",
+      "code": "arg-type",
+      "message": "Argument 1 to \"set_gate_mode\" has incompatible type \"Any | None\"; expected \"str\"",
+      "count": 1
+    },
+    {
+      "path": "backend/app.py",
+      "code": "arg-type",
+      "message": "Argument 2 to \"_do_process_media\" has incompatible type \"None\"; expected \"str\"",
+      "count": 1
+    },
+    {
+      "path": "backend/app.py",
+      "code": "arg-type",
+      "message": "Argument 2 to \"dispatch_async\" has incompatible type \"Any | None\"; expected \"str\"",
+      "count": 1
+    },
+    {
+      "path": "backend/app.py",
+      "code": "assignment",
+      "message": "Incompatible default for parameter \"payload\" (default has type \"None\", parameter has type \"dict[Any, Any]\")",
+      "count": 1
+    },
+    {
+      "path": "backend/app.py",
+      "code": "assignment",
+      "message": "Incompatible types in assignment (expression has type \"Any | list[Any] | None\", variable has type \"list[Any]\")",
+      "count": 1
+    },
+    {
+      "path": "backend/app.py",
+      "code": "assignment",
+      "message": "Incompatible types in assignment (expression has type \"ElevenBridge\", variable has type \"None\")",
+      "count": 1
+    },
+    {
+      "path": "backend/app.py",
+      "code": "assignment",
+      "message": "Incompatible types in assignment (expression has type \"dict[str, Any] | None\", variable has type \"dict[str, Any]\")",
+      "count": 1
+    },
+    {
+      "path": "backend/app.py",
+      "code": "assignment",
+      "message": "Incompatible types in assignment (expression has type \"timezone\", variable has type \"ZoneInfo\")",
+      "count": 1
+    },
+    {
+      "path": "backend/app.py",
+      "code": "attr-defined",
+      "message": "\"object\" has no attribute \"append\"",
+      "count": 7
+    },
+    {
+      "path": "backend/app.py",
+      "code": "attr-defined",
+      "message": "\"object\" has no attribute \"get\"",
+      "count": 1
+    },
+    {
+      "path": "backend/app.py",
+      "code": "index",
+      "message": "Value of type \"dict[Any, Any] | None\" is not indexable",
+      "count": 1
+    },
+    {
+      "path": "backend/app.py",
+      "code": "union-attr",
+      "message": "Item \"None\" of \"Any | None\" has no attribute \"isoformat\"",
+      "count": 1
+    },
+    {
+      "path": "backend/app.py",
+      "code": "union-attr",
+      "message": "Item \"None\" of \"Any | dict[Any, Any] | None\" has no attribute \"items\"",
+      "count": 1
+    },
+    {
+      "path": "backend/app.py",
+      "code": "union-attr",
+      "message": "Item \"None\" of \"ElevenBridge | None\" has no attribute \"_took_over\"",
+      "count": 1
+    },
+    {
+      "path": "backend/app.py",
+      "code": "union-attr",
+      "message": "Item \"None\" of \"ElevenBridge | None\" has no attribute \"call_sid\"",
+      "count": 3
+    },
+    {
+      "path": "backend/app.py",
+      "code": "union-attr",
+      "message": "Item \"None\" of \"ElevenBridge | None\" has no attribute \"caller\"",
+      "count": 3
+    },
+    {
+      "path": "backend/app.py",
+      "code": "union-attr",
+      "message": "Item \"None\" of \"ElevenBridge | None\" has no attribute \"el_dropped\"",
+      "count": 1
+    },
+    {
+      "path": "backend/app.py",
+      "code": "union-attr",
+      "message": "Item \"None\" of \"ElevenBridge | None\" has no attribute \"finish\"",
+      "count": 1
+    },
+    {
+      "path": "backend/app.py",
+      "code": "union-attr",
+      "message": "Item \"None\" of \"ElevenBridge | None\" has no attribute \"msg_id\"",
+      "count": 5
+    },
+    {
+      "path": "backend/app.py",
+      "code": "union-attr",
+      "message": "Item \"None\" of \"ElevenBridge | None\" has no attribute \"on_twilio_event\"",
+      "count": 1
+    },
+    {
+      "path": "backend/app.py",
+      "code": "union-attr",
+      "message": "Item \"None\" of \"dict[Any, Any] | None\" has no attribute \"get\"",
+      "count": 16
+    },
+    {
+      "path": "backend/app.py",
+      "code": "union-attr",
+      "message": "Item \"None\" of \"dict[Any, Any] | None\" has no attribute \"setdefault\"",
+      "count": 1
+    },
+    {
+      "path": "backend/app.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"checkboxes\" (hint: \"checkboxes: dict[<type>, <type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/app.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"past\" (hint: \"past: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/app.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"upcoming\" (hint: \"upcoming: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/assemble.py",
+      "code": "union-attr",
+      "message": "Item \"None\" of \"Any | dict[Any, Any] | None\" has no attribute \"get\"",
+      "count": 1
+    },
+    {
+      "path": "backend/assemble.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"lc_boxes\" (hint: \"lc_boxes: dict[<type>, <type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/avisos.py",
+      "code": "arg-type",
+      "message": "Argument 1 to \"fallback_options\" has incompatible type \"Any | str | None\"; expected \"str\"",
+      "count": 2
+    },
+    {
+      "path": "backend/brain/auth.py",
+      "code": "arg-type",
+      "message": "Argument 1 to \"dict\" has incompatible type \"Collection[str]\"; expected \"Iterable[tuple[Any, Any]]\"",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/auth.py",
+      "code": "assignment",
+      "message": "Incompatible types in assignment (expression has type \"dict[Any, Any] | None\", variable has type \"dict[Any, Any]\")",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/auth.py",
+      "code": "attr-defined",
+      "message": "\"Collection[str]\" has no attribute \"replace\"",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/catalogue.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"by_code\" (hint: \"by_code: dict[<type>, <type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/catalogue.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"by_name\" (hint: \"by_name: dict[<type>, <type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/context.py",
+      "code": "union-attr",
+      "message": "Item \"None\" of \"Any | None\" has no attribute \"strftime\"",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/embed.py",
+      "code": "call-overload",
+      "message": "No overload variant of \"getattr\" matches argument types \"Any\", \"object\"",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/embed.py",
+      "code": "call-overload",
+      "message": "No overload variant of \"list\" matches argument type \"object\"",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/golive.py",
+      "code": "arg-type",
+      "message": "Argument 1 to \"normalize\" has incompatible type \"int | Any | str | None\"; expected \"str\"",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/lead_notify.py",
+      "code": "union-attr",
+      "message": "Item \"None\" of \"Any | dict[Any, Any] | None\" has no attribute \"get\"",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/livecall.py",
+      "code": "arg-type",
+      "message": "Argument 1 to \"call_update\" has incompatible type \"Any | None\"; expected \"str\"",
+      "count": 2
+    },
+    {
+      "path": "backend/brain/livecall.py",
+      "code": "arg-type",
+      "message": "Argument 1 to \"enrich_location\" has incompatible type \"Any | None\"; expected \"str\"",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/matcher.py",
+      "code": "arg-type",
+      "message": "Argument 2 to \"_fetch_sku\" has incompatible type \"str | None\"; expected \"str\"",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/matcher.py",
+      "code": "assignment",
+      "message": "Incompatible types in assignment (expression has type \"dict[str, Any]\", variable has type \"float\")",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/matcher.py",
+      "code": "dict-item",
+      "message": "Unpacked dict entry 0 has incompatible type \"float\"; expected \"SupportsKeysAndGetItem[str, Any]\"",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/matcher.py",
+      "code": "index",
+      "message": "Value of type \"float\" is not indexable",
+      "count": 2
+    },
+    {
+      "path": "backend/brain/matcher.py",
+      "code": "syntax",
+      "message": "Syntax error in type annotation",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/onboarding.py",
+      "code": "arg-type",
+      "message": "Argument 1 to \"_dig\" has incompatible type \"Any | dict[Any, Any] | None\"; expected \"dict[Any, Any]\"",
+      "count": 4
+    },
+    {
+      "path": "backend/brain/onboarding.py",
+      "code": "assignment",
+      "message": "Incompatible types in assignment (expression has type \"Any | None\", variable has type \"str\")",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/onboarding.py",
+      "code": "index",
+      "message": "Value of type \"Any | dict[Any, Any] | None\" is not indexable",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/onboarding.py",
+      "code": "union-attr",
+      "message": "Item \"None\" of \"Any | dict[Any, Any] | None\" has no attribute \"get\"",
+      "count": 3
+    },
+    {
+      "path": "backend/brain/onboarding_ext.py",
+      "code": "arg-type",
+      "message": "Argument 1 to \"_transcript_text\" has incompatible type \"Any | dict[Any, Any] | None\"; expected \"dict[Any, Any]\"",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/onboarding_ext.py",
+      "code": "union-attr",
+      "message": "Item \"None\" of \"Any | dict[Any, Any] | None\" has no attribute \"get\"",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/onboarding_ext.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"state\" (hint: \"state: dict[<type>, <type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/pipeline.py",
+      "code": "name-defined",
+      "message": "Name \"actions\" is not defined",
+      "count": 2
+    },
+    {
+      "path": "backend/brain/pipeline.py",
+      "code": "return-value",
+      "message": "Incompatible return value type (got \"object\", expected \"dict[str, Any] | None\")",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/pipeline.py",
+      "code": "syntax",
+      "message": "Syntax error in type annotation",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/pipeline.py",
+      "code": "union-attr",
+      "message": "Item \"None\" of \"dict[str, Any] | None\" has no attribute \"get\"",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/pricing_quote.py",
+      "code": "union-attr",
+      "message": "Item \"None\" of \"Any | dict[Any, Any] | None\" has no attribute \"get\"",
+      "count": 9
+    },
+    {
+      "path": "backend/brain/profile.py",
+      "code": "return-value",
+      "message": "Incompatible return value type (got \"dict[str, Any] | None\", expected \"dict[str, Any]\")",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/profile.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"present\"",
+      "count": 2
+    },
+    {
+      "path": "backend/brain/range.py",
+      "code": "arg-type",
+      "message": "Argument 1 to \"maketrans\" of \"str\" has incompatible type \"dict[str, str]\"; expected \"dict[int, str | int | None] | dict[str, str | int | None] | dict[str | int, str | int | None]\"",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/seed.py",
+      "code": "arg-type",
+      "message": "Argument 1 to \"join\" of \"str\" has incompatible type \"list[Any | None]\"; expected \"Iterable[str]\"",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/seed.py",
+      "code": "assignment",
+      "message": "Incompatible types in assignment (expression has type \"dict[str, int]\", target has type \"int\")",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/setupfee.py",
+      "code": "misc",
+      "message": "Cannot infer type of lambda",
+      "count": 2
+    },
+    {
+      "path": "backend/brain/stock.py",
+      "code": "arg-type",
+      "message": "Argument 5 to \"call_tool\" has incompatible type \"Collection[str]\"; expected \"str\"",
+      "count": 2
+    },
+    {
+      "path": "backend/brain/stripe_subs.py",
+      "code": "misc",
+      "message": "Assignment to variable \"e\" outside except: block",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/stripe_subs.py",
+      "code": "misc",
+      "message": "Trying to read deleted variable \"e\"",
+      "count": 9
+    },
+    {
+      "path": "backend/brain/tasks.py",
+      "code": "dict-item",
+      "message": "Dict entry 2 has incompatible type \"str\": \"int\"; expected \"str\": \"str\"",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/tasks.py",
+      "code": "dict-item",
+      "message": "Dict entry 3 has incompatible type \"str\": \"int\"; expected \"str\": \"str\"",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/testdata.py",
+      "code": "arg-type",
+      "message": "Argument 1 to \"_to_products\" has incompatible type \"Any | None\"; expected \"list[Any]\"",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/understand.py",
+      "code": "return-value",
+      "message": "Incompatible return value type (got \"tuple[Any, Any | list[Any] | None, str]\", expected \"tuple[str | None, list[dict[Any, Any]], str]\")",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/understand.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"state\" (hint: \"state: dict[<type>, <type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/validators.py",
+      "code": "syntax",
+      "message": "Syntax error in type annotation",
+      "count": 3
+    },
+    {
+      "path": "backend/brain/vocab.py",
+      "code": "arg-type",
+      "message": "Argument \"extra\" to \"plan_catalogue\" has incompatible type \"dict[Any, list[str]]\"; expected \"dict[str, Sequence[str]] | None\"",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/vocab.py",
+      "code": "arg-type",
+      "message": "Argument 1 to \"int\" has incompatible type \"Any | None\"; expected \"str | Buffer | SupportsInt | SupportsIndex | SupportsTrunc\"",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/window.py",
+      "code": "operator",
+      "message": "Unsupported left operand type for < (\"None\")",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/window.py",
+      "code": "operator",
+      "message": "Unsupported left operand type for > (\"None\")",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/window.py",
+      "code": "operator",
+      "message": "Unsupported left operand type for >= (\"None\")",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/window.py",
+      "code": "operator",
+      "message": "Unsupported operand types for < (\"int\" and \"None\")",
+      "count": 2
+    },
+    {
+      "path": "backend/brain/window.py",
+      "code": "operator",
+      "message": "Unsupported operand types for <= (\"int\" and \"None\")",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/window.py",
+      "code": "operator",
+      "message": "Unsupported operand types for > (\"int\" and \"None\")",
+      "count": 2
+    },
+    {
+      "path": "backend/brain/window.py",
+      "code": "operator",
+      "message": "Unsupported operand types for >= (\"int\" and \"None\")",
+      "count": 1
+    },
+    {
+      "path": "backend/brain/window.py",
+      "code": "return-value",
+      "message": "Incompatible return value type (got \"Any | None\", expected \"str\")",
+      "count": 1
+    },
+    {
+      "path": "backend/business_day.py",
+      "code": "arg-type",
+      "message": "Argument \"rollover_hour\" to \"today\" has incompatible type \"object\"; expected \"int\"",
+      "count": 1
+    },
+    {
+      "path": "backend/business_day.py",
+      "code": "arg-type",
+      "message": "Argument \"tz\" to \"today\" has incompatible type \"object\"; expected \"str\"",
+      "count": 1
+    },
+    {
+      "path": "backend/confidence.py",
+      "code": "arg-type",
+      "message": "Argument 1 to \"sum\" has incompatible type \"list[Any | None]\"; expected \"Iterable[bool]\"",
+      "count": 1
+    },
+    {
+      "path": "backend/confidence.py",
+      "code": "type-var",
+      "message": "Value of type variable \"SupportsRichComparisonT\" of \"max\" cannot be \"Any | None\"",
+      "count": 1
+    },
+    {
+      "path": "backend/confidence.py",
+      "code": "type-var",
+      "message": "Value of type variable \"SupportsRichComparisonT\" of \"min\" cannot be \"Any | None\"",
+      "count": 1
+    },
+    {
+      "path": "backend/cr_control.py",
+      "code": "assignment",
+      "message": "Incompatible types in assignment (expression has type \"list[dict[Any, Any]]\", target has type \"str\")",
+      "count": 4
+    },
+    {
+      "path": "backend/cr_control.py",
+      "code": "attr-defined",
+      "message": "\"object\" has no attribute \"append\"",
+      "count": 1
+    },
+    {
+      "path": "backend/db.py",
+      "code": "union-attr",
+      "message": "Item \"None\" of \"Any | None\" has no attribute \"acquire\"",
+      "count": 50
+    },
+    {
+      "path": "backend/delivery.py",
+      "code": "arg-type",
+      "message": "Argument 1 to \"int\" has incompatible type \"Any | None\"; expected \"str | Buffer | SupportsInt | SupportsIndex | SupportsTrunc\"",
+      "count": 1
+    },
+    {
+      "path": "backend/demo_auth.py",
+      "code": "union-attr",
+      "message": "Item \"None\" of \"Any | dict[Any, Any] | None\" has no attribute \"get\"",
+      "count": 2
+    },
+    {
+      "path": "backend/directory.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"alias_map\" (hint: \"alias_map: dict[<type>, <type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/eleven.py",
+      "code": "assignment",
+      "message": "Incompatible types in assignment (expression has type \"None\", variable has type Module)",
+      "count": 1
+    },
+    {
+      "path": "backend/eleven.py",
+      "code": "attr-defined",
+      "message": "\"None\" has no attribute \"__aiter__\" (not async iterable)",
+      "count": 1
+    },
+    {
+      "path": "backend/eleven.py",
+      "code": "attr-defined",
+      "message": "\"None\" has no attribute \"send\"",
+      "count": 2
+    },
+    {
+      "path": "backend/gate.py",
+      "code": "arg-type",
+      "message": "Argument 1 to \"_num\" has incompatible type \"str | Any | None\"; expected \"str\"",
+      "count": 1
+    },
+    {
+      "path": "backend/historial.py",
+      "code": "assignment",
+      "message": "Incompatible types in assignment (expression has type \"bool\", target has type \"str\")",
+      "count": 1
+    },
+    {
+      "path": "backend/memory.py",
+      "code": "misc",
+      "message": "Generator has incompatible item type \"int\"; expected \"bool\"",
+      "count": 1
+    },
+    {
+      "path": "backend/memory.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"evictable_lines\" (hint: \"evictable_lines: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/memory.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"pinned_lines\" (hint: \"pinned_lines: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/orders.py",
+      "code": "list-item",
+      "message": "List item 0 has incompatible type \"dict[str, str]\"; expected \"str\"",
+      "count": 1
+    },
+    {
+      "path": "backend/orders_tool.py",
+      "code": "assignment",
+      "message": "Incompatible types in assignment (expression has type \"None\", variable has type Module)",
+      "count": 1
+    },
+    {
+      "path": "backend/pedidos_meter.py",
+      "code": "call-arg",
+      "message": "Unexpected keyword argument \"lang\" for \"_email_shell\"",
+      "count": 1
+    },
+    {
+      "path": "backend/reach.py",
+      "code": "arg-type",
+      "message": "Argument 1 to \"get\" of \"dict\" has incompatible type \"Any | None\"; expected \"str\"",
+      "count": 1
+    },
+    {
+      "path": "backend/reparto_api.py",
+      "code": "assignment",
+      "message": "Incompatible types in assignment (expression has type \"timezone\", variable has type \"ZoneInfo\")",
+      "count": 1
+    },
+    {
+      "path": "backend/review.py",
+      "code": "assignment",
+      "message": "Incompatible types in assignment (expression has type \"timezone\", variable has type \"ZoneInfo\")",
+      "count": 1
+    },
+    {
+      "path": "backend/review.py",
+      "code": "dict-item",
+      "message": "Dict entry 2 has incompatible type \"str\": \"list[int]\"; expected \"str\": \"int\"",
+      "count": 1
+    },
+    {
+      "path": "backend/review.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"acts\" (hint: \"acts: set[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/runtime.py",
+      "code": "arg-type",
+      "message": "Argument 1 to \"notes\" has incompatible type \"dict[Any, Any] | None\"; expected \"dict[Any, Any]\"",
+      "count": 1
+    },
+    {
+      "path": "backend/runtime.py",
+      "code": "arg-type",
+      "message": "Argument 2 to \"send_text_reply\" has incompatible type \"object\"; expected \"str\"",
+      "count": 1
+    },
+    {
+      "path": "backend/scripts/reprice_stripe_pedidos.py",
+      "code": "assignment",
+      "message": "Incompatible types in assignment (expression has type \"str\", variable has type \"int\")",
+      "count": 1
+    },
+    {
+      "path": "backend/spine.py",
+      "code": "arg-type",
+      "message": "Argument 4 to \"apply_world_update\" has incompatible type \"str | None\"; expected \"str\"",
+      "count": 1
+    },
+    {
+      "path": "backend/sup_api.py",
+      "code": "arg-type",
+      "message": "Argument 1 to \"_scalars\" has incompatible type \"Any | dict[Any, Any] | None\"; expected \"dict[Any, Any]\"",
+      "count": 3
+    },
+    {
+      "path": "backend/sup_api.py",
+      "code": "arg-type",
+      "message": "Argument 1 to \"get\" of \"dict\" has incompatible type \"int | None\"; expected \"int\"",
+      "count": 2
+    },
+    {
+      "path": "backend/sup_api.py",
+      "code": "call-arg",
+      "message": "Too many positional arguments for \"set_range\"",
+      "count": 1
+    },
+    {
+      "path": "backend/sup_api.py",
+      "code": "dict-item",
+      "message": "Dict entry 1 has incompatible type \"str\": \"list[dict[str, Any]]\"; expected \"str\": \"str\"",
+      "count": 1
+    },
+    {
+      "path": "backend/sup_api.py",
+      "code": "list-item",
+      "message": "List item 0 has incompatible type \"str\"; expected \"float\"",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/e2e_sup_routes_live.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"R\" (hint: \"R: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/eval_retrieval.py",
+      "code": "assignment",
+      "message": "Incompatible types in assignment (expression has type \"tuple[Any, Any]\", variable has type \"str\")",
+      "count": 4
+    },
+    {
+      "path": "backend/tests/eval_retrieval.py",
+      "code": "index",
+      "message": "Invalid index type \"str\" for \"dict[tuple[Any, Any], Any]\"; expected type \"tuple[Any, Any]\"",
+      "count": 6
+    },
+    {
+      "path": "backend/tests/rehearsal_dirty.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"R\" (hint: \"R: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/rehearsal_dirty.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"ROUGH\" (hint: \"ROUGH: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/rehearsal_url_e2e.py",
+      "code": "union-attr",
+      "message": "Item \"None\" of \"dict[Any, Any] | None\" has no attribute \"get\"",
+      "count": 12
+    },
+    {
+      "path": "backend/tests/rehearsal_url_e2e.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"merged\"",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/sim_live.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"FAILS\" (hint: \"FAILS: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/test_amend.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"FAILS\" (hint: \"FAILS: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/test_cancel.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"FAILS\" (hint: \"FAILS: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/test_cancel.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"_SAID\" (hint: \"_SAID: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/test_events.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"FAILS\" (hint: \"FAILS: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/test_golden.py",
+      "code": "assignment",
+      "message": "Incompatible types in assignment (expression has type \"int\", variable has type \"bool\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/test_golden.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"by_bucket\"",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/test_pipeline_smoke.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"FAILS\" (hint: \"FAILS: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/test_profile.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"FAILS\" (hint: \"FAILS: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/test_queue.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"FAILS\" (hint: \"FAILS: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/test_try_chat.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"R\" (hint: \"R: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_app_onboarding.py",
+      "code": "assignment",
+      "message": "Incompatible types in assignment (expression has type \"dict[Any, Any]\", variable has type \"str\")",
+      "count": 10
+    },
+    {
+      "path": "backend/tests/vital_app_onboarding.py",
+      "code": "index",
+      "message": "Invalid index type \"str\" for \"str\"; expected type \"SupportsIndex | slice[SupportsIndex | None, SupportsIndex | None, SupportsIndex | None]\"",
+      "count": 17
+    },
+    {
+      "path": "backend/tests/vital_app_onboarding.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"R\" (hint: \"R: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_app_onboarding.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"SKIPPED\" (hint: \"SKIPPED: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_avisos.py",
+      "code": "attr-defined",
+      "message": "Module has no attribute \"emit_sense\"",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_avisos.py",
+      "code": "operator",
+      "message": "Unsupported right operand type for in (\"str | None\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_avisos.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"EVENTS\" (hint: \"EVENTS: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_avisos.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"R\" (hint: \"R: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_avisos.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"SKIPPED\" (hint: \"SKIPPED: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_behaviour_confirm.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"R\" (hint: \"R: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_billing.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"R\" (hint: \"R: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_capture_unmatched.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"R\" (hint: \"R: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_capture_unmatched.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"SKIPPED\" (hint: \"SKIPPED: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_cascade_nine.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"R\" (hint: \"R: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_choco.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"R\" (hint: \"R: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_codes.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"R\" (hint: \"R: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_cold_tenant.py",
+      "code": "arg-type",
+      "message": "Argument 1 to \"status\" has incompatible type \"Any | None\"; expected \"str\"",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_cold_tenant.py",
+      "code": "arg-type",
+      "message": "Argument 2 to \"catalogue_ready\" has incompatible type \"Any | None\"; expected \"str\"",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_cold_tenant.py",
+      "code": "arg-type",
+      "message": "Argument 2 to \"ck\" has incompatible type \"list[Any] | Any\"; expected \"bool\"",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_cold_tenant.py",
+      "code": "arg-type",
+      "message": "Argument 2 to \"ck\" has incompatible type \"list[dict[Any, Any]] | bool\"; expected \"bool\"",
+      "count": 2
+    },
+    {
+      "path": "backend/tests/vital_cold_tenant.py",
+      "code": "arg-type",
+      "message": "Argument 3 to \"ck\" has incompatible type \"Any | None\"; expected \"str\"",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_cold_tenant.py",
+      "code": "index",
+      "message": "Value of type \"dict[str, Any] | None\" is not indexable",
+      "count": 5
+    },
+    {
+      "path": "backend/tests/vital_cold_tenant.py",
+      "code": "index",
+      "message": "Value of type \"tuple[str, str, list[str]] | None\" is not indexable",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_cold_tenant.py",
+      "code": "operator",
+      "message": "Unsupported left operand type for + (\"None\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_cold_tenant.py",
+      "code": "union-attr",
+      "message": "Item \"None\" of \"Any | None\" has no attribute \"get\"",
+      "count": 2
+    },
+    {
+      "path": "backend/tests/vital_cold_tenant.py",
+      "code": "union-attr",
+      "message": "Item \"None\" of \"dict[str, Any] | None\" has no attribute \"get\"",
+      "count": 2
+    },
+    {
+      "path": "backend/tests/vital_confidence.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"R\" (hint: \"R: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_context.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"R\" (hint: \"R: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_cr_auth.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"R\" (hint: \"R: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_cr_control.py",
+      "code": "assignment",
+      "message": "Incompatible types in assignment (expression has type \"SimpleNamespace\", target has type Module)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_cr_control.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"FAILS\" (hint: \"FAILS: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_cr_control.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"R\" (hint: \"R: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_cr_control.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"_CALLS\" (hint: \"_CALLS: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_cr_read.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"R\" (hint: \"R: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_cr_tokens.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"R\" (hint: \"R: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_demo_auth.py",
+      "code": "misc",
+      "message": "Assignment to variable \"ex\" outside except: block",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_demo_auth.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"R\" (hint: \"R: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_demo_doors.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"R\" (hint: \"R: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_demo_learn.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"R\" (hint: \"R: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_demo_lineage.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"R\" (hint: \"R: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_demo_media.py",
+      "code": "return-value",
+      "message": "Incompatible return value type (got \"dict[str, Any] | None\", expected \"dict[Any, Any]\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_demo_media.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"R\" (hint: \"R: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_demo_reap.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"R\" (hint: \"R: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_demo_resume.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"fails\" (hint: \"fails: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_demo_url.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"R\" (hint: \"R: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_directory.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"R\" (hint: \"R: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_directory_tiers.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"R\" (hint: \"R: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_directory_tiers.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"out\" (hint: \"out: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_doubt.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"fail\" (hint: \"fail: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_doubt_wire.py",
+      "code": "arg-type",
+      "message": "Argument 1 to \"normalize\" has incompatible type \"Sequence[Collection[str]]\"; expected \"str\"",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_doubt_wire.py",
+      "code": "assignment",
+      "message": "Incompatible types in assignment (expression has type \"None\", variable has type \"def call_tool(model: str, system: str, user: str, tool: dict[str, Any], tool_name: str, *, max_tokens: int = ..., fallback: str | None = ...) -> Coroutine[Any, Any, dict[str, Any] | None]\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_doubt_wire.py",
+      "code": "index",
+      "message": "Value of type \"Collection[str]\" is not indexable",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_doubt_wire.py",
+      "code": "index",
+      "message": "Value of type \"dict[str, str] | None\" is not indexable",
+      "count": 20
+    },
+    {
+      "path": "backend/tests/vital_doubt_wire.py",
+      "code": "operator",
+      "message": "Unsupported operand types for in (\"object\" and \"str\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_doubt_wire.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"fail\" (hint: \"fail: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_durability.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"R\" (hint: \"R: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_duties.py",
+      "code": "assignment",
+      "message": "Incompatible types in assignment (expression has type \"_FakeDB\", target has type Module)",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_egress_sandbox.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"R\" (hint: \"R: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_fabric.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"R\" (hint: \"R: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_followup_fire.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"R\" (hint: \"R: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_founder.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"R\" (hint: \"R: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_gate_full.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"R\" (hint: \"R: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_gate_full.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"R_\" (hint: \"R_: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_golive.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"R\" (hint: \"R: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_hoy.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"R\" (hint: \"R: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_incall.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"R\" (hint: \"R: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_ingest.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"R\" (hint: \"R: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_ingest.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"SKIPPED\" (hint: \"SKIPPED: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_install.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"R\" (hint: \"R: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_intake.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"R\" (hint: \"R: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_interactive.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"R\" (hint: \"R: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_invitations.py",
+      "code": "index",
+      "message": "Value of type \"dict[str, Any] | None\" is not indexable",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_journey.py",
+      "code": "arg-type",
+      "message": "Argument 2 to \"ck\" has incompatible type \"dict[str, Any] | Any | None\"; expected \"bool\"",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_journey.py",
+      "code": "arg-type",
+      "message": "Argument 2 to \"ck\" has incompatible type \"dict[str, Any] | Any | bool | None\"; expected \"bool\"",
+      "count": 2
+    },
+    {
+      "path": "backend/tests/vital_lifecycle.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"R\" (hint: \"R: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_liveness_mechanism.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"R\" (hint: \"R: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_measure.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"R\" (hint: \"R: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_memory_engines.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"R\" (hint: \"R: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_memory_turn.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"R\" (hint: \"R: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_mindcheck.py",
+      "code": "misc",
+      "message": "Invalid base class",
+      "count": 2
+    },
+    {
+      "path": "backend/tests/vital_mindcheck.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"R\" (hint: \"R: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_mindcheck.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"SKIPPED\" (hint: \"SKIPPED: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_nudge.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"R\" (hint: \"R: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_onboarded_unpaid.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"R\" (hint: \"R: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_one_mind.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"R\" (hint: \"R: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_order_always_files.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"R\" (hint: \"R: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_person.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"R\" (hint: \"R: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_portal.py",
+      "code": "arg-type",
+      "message": "Argument 1 to \"_order_total\" has incompatible type \"list[object]\"; expected \"list[dict[str, Any]]\"",
+      "count": 2
+    },
+    {
+      "path": "backend/tests/vital_portal.py",
+      "code": "assignment",
+      "message": "Incompatible types in assignment (expression has type \"set[str | Constant]\", variable has type \"set[Constant]\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_portal.py",
+      "code": "assignment",
+      "message": "Incompatible types in assignment (expression has type \"tuple[str, str, str, str, str, str, str, str]\", variable has type \"tuple[str, str, str, str, str, str, str]\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_portal.py",
+      "code": "misc",
+      "message": "Set comprehension has incompatible type Set[str | bytes | int | float | complex | EllipsisType | None]; expected Set[Constant]",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_portal.py",
+      "code": "type-var",
+      "message": "Value of type variable \"SupportsRichComparisonT\" of \"sorted\" cannot be \"Constant\"",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_portal.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"R\" (hint: \"R: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_portal.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"SKIPPED\" (hint: \"SKIPPED: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_presence.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"R\" (hint: \"R: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_projection.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"R\" (hint: \"R: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_pursuit.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"R\" (hint: \"R: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_range.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"R\" (hint: \"R: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_range.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"SKIPPED\" (hint: \"SKIPPED: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_reach.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"R\" (hint: \"R: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_reflexes.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"R\" (hint: \"R: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_reparto.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"R\" (hint: \"R: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_reparto.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"SKIPPED\" (hint: \"SKIPPED: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_reparto_api.py",
+      "code": "union-attr",
+      "message": "Item \"None\" of \"Match[str] | None\" has no attribute \"group\"",
+      "count": 2
+    },
+    {
+      "path": "backend/tests/vital_reparto_api.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"R\" (hint: \"R: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_reparto_api.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"ROUTE_ROW\"",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_reparto_api.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"SETTLED\" (hint: \"SETTLED: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_reparto_caps.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"R\" (hint: \"R: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_repertoire.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"R\" (hint: \"R: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_review_rule.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"R\" (hint: \"R: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_review_why.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"R\" (hint: \"R: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_review_why.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"SKIPPED\" (hint: \"SKIPPED: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_reviewsheet.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"R\" (hint: \"R: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_rls_coverage.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"R\" (hint: \"R: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_runtime_liveness.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"R\" (hint: \"R: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_schema_drift.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"R\" (hint: \"R: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_seedworld.py",
+      "code": "misc",
+      "message": "Generator has incompatible item type \"int\"; expected \"bool\"",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_seedworld.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"R\" (hint: \"R: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_seedworld.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"SKIPPED\" (hint: \"SKIPPED: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_seedworld.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"_alias_index\" (hint: \"_alias_index: dict[<type>, <type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_senses.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"R\" (hint: \"R: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_sombra.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"R\" (hint: \"R: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_sombra.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"_MIND_CALLS\" (hint: \"_MIND_CALLS: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_speech.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"R\" (hint: \"R: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_stage_brief.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"R\" (hint: \"R: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_stock.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"R\" (hint: \"R: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_stock.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"SKIPPED\" (hint: \"SKIPPED: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_stock.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"_seen\" (hint: \"_seen: dict[<type>, <type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_stripe_spine.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"R\" (hint: \"R: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_sup_auth.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"R\" (hint: \"R: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_sup_routes.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"R\" (hint: \"R: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_tab_dossier.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"R\" (hint: \"R: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_team.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"R\" (hint: \"R: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_team.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"SKIPPED\" (hint: \"SKIPPED: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_tenant_isolation.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"R\" (hint: \"R: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_term_split.py",
+      "code": "index",
+      "message": "Value of type \"Any | None\" is not indexable",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_testworld.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"R\" (hint: \"R: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_trackers.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"R\" (hint: \"R: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_vibe.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"R\" (hint: \"R: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_vocab.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"R\" (hint: \"R: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_wake.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"R\" (hint: \"R: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_window.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"R\" (hint: \"R: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_window.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"SKIPPED\" (hint: \"SKIPPED: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/tests/vital_window.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"_refusals\" (hint: \"_refusals: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "backend/twilio_wa.py",
+      "code": "assignment",
+      "message": "Incompatible types in assignment (expression has type \"int\", target has type \"str\")",
+      "count": 1
+    },
+    {
+      "path": "backend/twilio_wa.py",
+      "code": "assignment",
+      "message": "Incompatible types in assignment (expression has type \"list[str]\", target has type \"str\")",
+      "count": 2
+    },
+    {
+      "path": "backend/urlfetch.py",
+      "code": "return-value",
+      "message": "Incompatible return value type (got \"list[str | int]\", expected \"list[str]\")",
+      "count": 1
+    },
+    {
+      "path": "backend/voice.py",
+      "code": "attr-defined",
+      "message": "\"None\" has no attribute \"__aiter__\" (not async iterable)",
+      "count": 1
+    },
+    {
+      "path": "backend/voice_fabric.py",
+      "code": "assignment",
+      "message": "Incompatible default for parameter \"run\" (default has type \"None\", parameter has type \"Callable[..., Awaitable[dict[Any, Any] | None]]\")",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-143-order.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"BAD\" (hint: \"BAD: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-143-order.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"OK\" (hint: \"OK: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-183-viewports.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"BAD\" (hint: \"BAD: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-183-viewports.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"OK\" (hint: \"OK: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-184-messages-outbound.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"BAD\" (hint: \"BAD: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-184-messages-outbound.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"GOOD\" (hint: \"GOOD: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-189-output-objects.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"BAD\" (hint: \"BAD: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-189-output-objects.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"EVIDENCE\" (hint: \"EVIDENCE: dict[<type>, <type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-189-output-objects.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"OK\" (hint: \"OK: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-189-product.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"GREEN\" (hint: \"GREEN: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-189-product.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"RED\" (hint: \"RED: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-191-capture-and-qr.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"GREEN\" (hint: \"GREEN: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-191-capture-and-qr.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"RED\" (hint: \"RED: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-191-pricing-matrix.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"GREEN\" (hint: \"GREEN: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-191-pricing-matrix.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"RED\" (hint: \"RED: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-191-stock-batches.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"checks\" (hint: \"checks: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-191-stock-photo-session.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"GREEN\" (hint: \"GREEN: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-191-stock-photo-session.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"RED\" (hint: \"RED: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-192-rate-note.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"GREEN\" (hint: \"GREEN: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-192-rate-note.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"RED\" (hint: \"RED: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-192-row-plan.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"GREEN\" (hint: \"GREEN: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-192-row-plan.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"RED\" (hint: \"RED: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-193-sticky-head.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"GREEN\" (hint: \"GREEN: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-193-sticky-head.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"RED\" (hint: \"RED: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-194-product-fields.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"GREEN\" (hint: \"GREEN: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-194-product-fields.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"RED\" (hint: \"RED: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-195-copilot.py",
+      "code": "list-item",
+      "message": "List item 0 has incompatible type \"tuple[int, ...]\"; expected \"tuple[int, int]\"",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-195-copilot.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"GREEN\" (hint: \"GREEN: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-195-copilot.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"RED\" (hint: \"RED: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-196-day-tiles.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"GREEN\" (hint: \"GREEN: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-196-day-tiles.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"RED\" (hint: \"RED: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-196-paper-harness.py",
+      "code": "union-attr",
+      "message": "Item \"None\" of \"Match[str] | None\" has no attribute \"group\"",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-196-paper-manifest.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"GREEN\" (hint: \"GREEN: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-196-paper-manifest.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"MANIFEST_POSTS\" (hint: \"MANIFEST_POSTS: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-196-paper-manifest.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"RED\" (hint: \"RED: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-196-red-flags.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"GREEN\" (hint: \"GREEN: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-196-red-flags.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"RED\" (hint: \"RED: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-197-artwork.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"GREEN\" (hint: \"GREEN: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-197-artwork.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"RED\" (hint: \"RED: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-197-hybrid-composer.py",
+      "code": "list-item",
+      "message": "List item 0 has incompatible type \"tuple[int, ...]\"; expected \"tuple[int, int]\"",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-197-hybrid-composer.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"GREEN\" (hint: \"GREEN: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-197-hybrid-composer.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"RED\" (hint: \"RED: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-197-uncoded-section.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"GREEN\" (hint: \"GREEN: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-197-uncoded-section.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"RED\" (hint: \"RED: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-198-copilot-mind.py",
+      "code": "list-item",
+      "message": "List item 0 has incompatible type \"tuple[int, ...]\"; expected \"tuple[int, int]\"",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-198-parsing-qr.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"GREEN\" (hint: \"GREEN: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-198-parsing-qr.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"MANIFEST_CALLS\" (hint: \"MANIFEST_CALLS: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-198-parsing-qr.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"MANIFEST_POSTS\" (hint: \"MANIFEST_POSTS: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-198-parsing-qr.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"PAPER_CALLS\" (hint: \"PAPER_CALLS: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-198-parsing-qr.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"PARSE_CALLS\" (hint: \"PARSE_CALLS: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-198-parsing-qr.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"RED\" (hint: \"RED: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-199-copilot-with-data.py",
+      "code": "list-item",
+      "message": "List item 0 has incompatible type \"tuple[int, ...]\"; expected \"tuple[int, int]\"",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-199-copilot-with-data.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"GREEN\" (hint: \"GREEN: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-199-copilot-with-data.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"RED\" (hint: \"RED: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-199-runtime.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"GREEN\" (hint: \"GREEN: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-199-runtime.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"RED\" (hint: \"RED: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-199-voice-real.py",
+      "code": "return-value",
+      "message": "Incompatible return value type (got \"list[object]\", expected \"list[dict[Any, Any]]\")",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-200-chat-email.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"GREEN\" (hint: \"GREEN: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-200-chat-email.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"RED\" (hint: \"RED: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-200-class-gone.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"GREEN\" (hint: \"GREEN: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-200-class-gone.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"RED\" (hint: \"RED: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-200-day-seats.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"GREEN\" (hint: \"GREEN: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-200-day-seats.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"RED\" (hint: \"RED: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-200-intake-doors.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"GREEN\" (hint: \"GREEN: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-200-intake-doors.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"PARSE_CALLS\" (hint: \"PARSE_CALLS: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-200-intake-doors.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"RED\" (hint: \"RED: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-200-library.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"GREEN\" (hint: \"GREEN: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-200-library.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"RED\" (hint: \"RED: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-200-live-fields.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"GREEN\" (hint: \"GREEN: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-200-live-fields.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"RED\" (hint: \"RED: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-200-print-screen.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"GREEN\" (hint: \"GREEN: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-200-print-screen.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"RED\" (hint: \"RED: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-200-qr-library.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"GREEN\" (hint: \"GREEN: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-200-qr-library.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"RED\" (hint: \"RED: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-200-template-model.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"GREEN\" (hint: \"GREEN: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-200-template-model.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"RED\" (hint: \"RED: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-201-degradation.py",
+      "code": "arg-type",
+      "message": "Argument 1 to \"module_from_spec\" has incompatible type \"ModuleSpec | None\"; expected \"ModuleSpec\"",
+      "count": 2
+    },
+    {
+      "path": "drives/drive-201-degradation.py",
+      "code": "union-attr",
+      "message": "Item \"None\" of \"Loader | Any | None\" has no attribute \"exec_module\"",
+      "count": 2
+    },
+    {
+      "path": "drives/drive-201-degradation.py",
+      "code": "union-attr",
+      "message": "Item \"None\" of \"ModuleSpec | None\" has no attribute \"loader\"",
+      "count": 2
+    },
+    {
+      "path": "drives/drive-201-degradation.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"GREEN\" (hint: \"GREEN: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-201-degradation.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"RED\" (hint: \"RED: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-202-phone-targets.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"EXCUSED\" (hint: \"EXCUSED: dict[<type>, <type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-202-phone-targets.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"GREEN\" (hint: \"GREEN: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-202-phone-targets.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"RED\" (hint: \"RED: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-203-frames-previews.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"GREEN\" (hint: \"GREEN: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-203-frames-previews.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"RED\" (hint: \"RED: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-204-copilot-midwidth.py",
+      "code": "list-item",
+      "message": "List item 0 has incompatible type \"tuple[int, ...]\"; expected \"tuple[int, int]\"",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-204-copilot-midwidth.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"GREEN\" (hint: \"GREEN: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "drives/drive-204-copilot-midwidth.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"RED\" (hint: \"RED: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "drives/integrate.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"FAILS\" (hint: \"FAILS: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "drives/integrate.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"OKS\" (hint: \"OKS: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "drives/run-190-public-proof.py",
+      "code": "misc",
+      "message": "Generator has incompatible item type \"int\"; expected \"bool\"",
+      "count": 2
+    },
+    {
+      "path": "drives/run-191-public-proof.py",
+      "code": "arg-type",
+      "message": "Argument 1 to \"int\" has incompatible type \"int | None\"; expected \"str | Buffer | SupportsInt | SupportsIndex | SupportsTrunc\"",
+      "count": 1
+    },
+    {
+      "path": "drives/run-191-public-proof.py",
+      "code": "index",
+      "message": "Value of type \"object\" is not indexable",
+      "count": 2
+    },
+    {
+      "path": "drives/run-191-public-proof.py",
+      "code": "index",
+      "message": "Value of type \"tuple[int, int] | None\" is not indexable",
+      "count": 1
+    },
+    {
+      "path": "drives/run-191-public-proof.py",
+      "code": "misc",
+      "message": "Generator has incompatible item type \"int\"; expected \"bool\"",
+      "count": 3
+    },
+    {
+      "path": "drives/run-192-public-proof.py",
+      "code": "arg-type",
+      "message": "Argument 1 to \"int\" has incompatible type \"int | None\"; expected \"str | Buffer | SupportsInt | SupportsIndex | SupportsTrunc\"",
+      "count": 1
+    },
+    {
+      "path": "drives/run-192-public-proof.py",
+      "code": "index",
+      "message": "Value of type \"object\" is not indexable",
+      "count": 2
+    },
+    {
+      "path": "drives/run-192-public-proof.py",
+      "code": "index",
+      "message": "Value of type \"tuple[int, int] | None\" is not indexable",
+      "count": 1
+    },
+    {
+      "path": "drives/run-192-public-proof.py",
+      "code": "misc",
+      "message": "Generator has incompatible item type \"int\"; expected \"bool\"",
+      "count": 3
+    },
+    {
+      "path": "drives/run-193-public-proof.py",
+      "code": "arg-type",
+      "message": "Argument 1 to \"int\" has incompatible type \"int | None\"; expected \"str | Buffer | SupportsInt | SupportsIndex | SupportsTrunc\"",
+      "count": 1
+    },
+    {
+      "path": "drives/run-193-public-proof.py",
+      "code": "index",
+      "message": "Invalid index type \"str\" for \"dict[Literal['ROCOTO_DIST', 'ROCOTO_SHOTS', 'ROCOTO_URL'], str]\"; expected type \"Literal['ROCOTO_DIST', 'ROCOTO_SHOTS', 'ROCOTO_URL']\"",
+      "count": 1
+    },
+    {
+      "path": "drives/run-193-public-proof.py",
+      "code": "index",
+      "message": "Value of type \"object\" is not indexable",
+      "count": 2
+    },
+    {
+      "path": "drives/run-193-public-proof.py",
+      "code": "index",
+      "message": "Value of type \"tuple[int, int] | None\" is not indexable",
+      "count": 1
+    },
+    {
+      "path": "drives/run-193-public-proof.py",
+      "code": "misc",
+      "message": "Generator has incompatible item type \"int\"; expected \"bool\"",
+      "count": 3
+    },
+    {
+      "path": "mock-api/app/artwork.py",
+      "code": "arg-type",
+      "message": "Argument 1 to \"swap_subject\" has incompatible type \"Collection[str]\"; expected \"str\"",
+      "count": 1
+    },
+    {
+      "path": "mock-api/app/copilot.py",
+      "code": "union-attr",
+      "message": "Item \"None\" of \"Any | dict[Any, Any] | None\" has no attribute \"get\"",
+      "count": 7
+    },
+    {
+      "path": "mock-api/app/paper.py",
+      "code": "arg-type",
+      "message": "Argument 1 to \"add\" of \"set\" has incompatible type \"tuple[str, str | int]\"; expected \"tuple[str, int]\"",
+      "count": 1
+    },
+    {
+      "path": "mock-api/app/register.py",
+      "code": "index",
+      "message": "Value of type \"Any | None\" is not indexable",
+      "count": 4
+    },
+    {
+      "path": "mock-api/app/register.py",
+      "code": "return-value",
+      "message": "Incompatible return value type (got \"tuple[dict[str, float], list[tuple[Any | None, str]]]\", expected \"tuple[dict[str, float], list[tuple[dict[str, float], str]]]\")",
+      "count": 1
+    },
+    {
+      "path": "mock-api/app/twilio_voice.py",
+      "code": "assignment",
+      "message": "Incompatible types in assignment (expression has type \"int\", target has type \"str\")",
+      "count": 2
+    },
+    {
+      "path": "mock-api/tests/make_fixture_albaran.py",
+      "code": "return-value",
+      "message": "Incompatible return value type (got \"list[tuple[str, str, str, str, str, str]]\", expected \"list[tuple[str, ...]]\")",
+      "count": 1
+    },
+    {
+      "path": "mock-api/tests/test_paper_register.py",
+      "code": "misc",
+      "message": "List comprehension has incompatible type List[tuple[str, str | int, str]]; expected List[tuple[str, int, str]]",
+      "count": 1
+    },
+    {
+      "path": "tools/copy-gate.py",
+      "code": "assignment",
+      "message": "Incompatible types in assignment (expression has type \"str\", variable has type \"Path\")",
+      "count": 1
+    },
+    {
+      "path": "tools/env-gate.py",
+      "code": "arg-type",
+      "message": "Argument 1 to \"add\" of \"set\" has incompatible type \"str | bytes | int | float | complex | EllipsisType | None\"; expected \"str\"",
+      "count": 3
+    },
+    {
+      "path": "tools/env-gate.py",
+      "code": "return-value",
+      "message": "Incompatible return value type (got \"tuple[bool, list[expr]]\", expected \"tuple[bool, list[AST]]\")",
+      "count": 1
+    },
+    {
+      "path": "tools/env-gate.py",
+      "code": "str-bytes-safe",
+      "message": "If x = b'abc' then f\"{x}\" or \"{}\".format(x) produces \"b'abc'\", not \"abc\". If this is desired behavior, use f\"{x!r}\" or \"{!r}\".format(x). Otherwise, decode the bytes",
+      "count": 1
+    },
+    {
+      "path": "tools/paper-harness.py",
+      "code": "operator",
+      "message": "Unsupported operand types for * (\"int\" and \"None\")",
+      "count": 2
+    },
+    {
+      "path": "tools/paper-harness.py",
+      "code": "operator",
+      "message": "Unsupported operand types for + (\"str\" and \"float\")",
+      "count": 1
+    },
+    {
+      "path": "tools/paper-harness.py",
+      "code": "str-format",
+      "message": "Incompatible types in string interpolation (expression has type \"str | float | None\", placeholder has type \"int | float | SupportsInt\")",
+      "count": 1
+    },
+    {
+      "path": "tools/paper-harness.py",
+      "code": "str-format",
+      "message": "Incompatible types in string interpolation (expression has type \"str | float\", placeholder has type \"int | float | SupportsFloat\")",
+      "count": 1
+    },
+    {
+      "path": "tools/paper-harness.py",
+      "code": "str-format",
+      "message": "Incompatible types in string interpolation (expression has type \"str | int | float\", placeholder has type \"int | float | SupportsFloat\")",
+      "count": 1
+    },
+    {
+      "path": "tools/parse-floor-probe.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"per_agent\" (hint: \"per_agent: dict[<type>, <type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "tools/parse-harness.py",
+      "code": "assignment",
+      "message": "Incompatible types in assignment (expression has type \"int\", variable has type \"bool\")",
+      "count": 1
+    },
+    {
+      "path": "tools/parse-harness.py",
+      "code": "attr-defined",
+      "message": "\"object\" has no attribute \"append\"",
+      "count": 1
+    },
+    {
+      "path": "tools/parse-harness.py",
+      "code": "misc",
+      "message": "Generator has incompatible item type \"object\"; expected \"bool\"",
+      "count": 2
+    },
+    {
+      "path": "tools/parse-harness.py",
+      "code": "operator",
+      "message": "Unsupported operand types for + (\"object\" and \"int\")",
+      "count": 2
+    },
+    {
+      "path": "tools/prod-ip-gate.py",
+      "code": "assignment",
+      "message": "Incompatible types in assignment (expression has type \"str\", variable has type \"bytes\")",
+      "count": 1
+    },
+    {
+      "path": "tools/prod-ip-gate.py",
+      "code": "str-bytes-safe",
+      "message": "If x = b'abc' then f\"{x}\" or \"{}\".format(x) produces \"b'abc'\", not \"abc\". If this is desired behavior, use f\"{x!r}\" or \"{!r}\".format(x). Otherwise, decode the bytes",
+      "count": 1
+    },
+    {
+      "path": "tools/qr-harness.py",
+      "code": "attr-defined",
+      "message": "\"Callable[[Any, Any, ThreadingTCPServer], BaseRequestHandler]\" has no attribute \"log_message\"",
+      "count": 1
+    },
+    {
+      "path": "tools/qr-harness.py",
+      "code": "union-attr",
+      "message": "Item \"None\" of \"Match[str] | None\" has no attribute \"group\"",
+      "count": 3
+    },
+    {
+      "path": "tools/qr-harness.py",
+      "code": "var-annotated",
+      "message": "Need type annotation for \"drawn\" (hint: \"drawn: list[<type>] = ...\")",
+      "count": 1
+    },
+    {
+      "path": "tools/serve-with-runtime.py",
+      "code": "str-bytes-safe",
+      "message": "If x = b'abc' then f\"{x}\" or \"{}\".format(x) produces \"b'abc'\", not \"abc\". If this is desired behavior, use f\"{x!r}\" or \"{!r}\".format(x). Otherwise, decode the bytes",
+      "count": 1
+    }
+  ]
+}

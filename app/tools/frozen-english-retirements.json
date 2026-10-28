@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "entries": [
+    {
+      "file": "es-quality-chrome.json",
+      "source": "src/prototypes/cedar/money-overview.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "View balances",
+      "sourceRevision": "598b5357154993c8e2d629d4158b772a2a266374",
+      "reason": "Gap brief item 1 replaces the customer-credit summary with unpaid orders and a Paid section while Spanish tables remain frozen."
+    },
+    {
+      "file": "es-quality-chrome.json",
+      "source": "src/prototypes/cedar/money-overview.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "customers \u00b7 Outstanding",
+      "sourceRevision": "598b5357154993c8e2d629d4158b772a2a266374",
+      "reason": "Gap brief item 1 replaces the customer-credit summary with unpaid orders and a Paid section while Spanish tables remain frozen."
+    },
+    {
+      "file": "es-quality-chrome.json",
+      "source": "src/prototypes/cedar/money-credit.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Customer credit",
+      "sourceRevision": "598b5357154993c8e2d629d4158b772a2a266374",
+      "reason": "Gap brief item 1 replaces the customer-credit summary with unpaid orders and a Paid section while Spanish tables remain frozen."
+    },
+    {
+      "source": "src/prototypes/cedar/money-credit.tsx",
+      "context": "JSXExpressionContainer > TemplateLiteral",
+      "kind": "template",
+      "english": "Auto-chase interval for ${documentNumber(invoice)}",
+      "file": "es-quality-chrome.json",
+      "sourceRevision": "9cf20a78b10bb19812fb1914a2717bf106d9af58",
+      "reason": "Order first contact now anchors the fixed 24, 48 and 72 hour reminder policy."
+    },
+    {
+      "source": "src/prototypes/cedar/money-credit.tsx",
+      "context": "LogicalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "Reminders every ${every} h",
+      "file": "es-quality-chrome.json",
+      "sourceRevision": "9cf20a78b10bb19812fb1914a2717bf106d9af58",
+      "reason": "Order first contact now anchors the fixed 24, 48 and 72 hour reminder policy."
+    }
+  ]
+}

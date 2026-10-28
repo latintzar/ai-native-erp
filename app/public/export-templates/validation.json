@@ -1,0 +1,119 @@
+{
+  "prototype_version": "0.2-human-only",
+  "fictitious": true,
+  "date": "2026-08-31",
+  "stock_cutoff": "05:30, before sales",
+  "files": [
+    {
+      "filename": "01-existencias-por-lote.xlsx",
+      "sheets": [
+        "Existencias"
+      ],
+      "bytes": 8388
+    },
+    {
+      "filename": "02-ventas-por-cliente.xlsx",
+      "sheets": [
+        "Ventas por cliente"
+      ],
+      "bytes": 9234
+    },
+    {
+      "filename": "03-entrada-diaria-stock-y-ventas.xlsx",
+      "sheets": [
+        "Existencias",
+        "Ventas por cliente"
+      ],
+      "bytes": 12678
+    },
+    {
+      "filename": "04-entradas-de-compra.xlsx",
+      "sheets": [
+        "Entradas · lectura"
+      ],
+      "bytes": 9614
+    },
+    {
+      "filename": "05-clientes.xlsx",
+      "sheets": [
+        "Clientes · lectura"
+      ],
+      "bytes": 8119
+    },
+    {
+      "filename": "06-productos.xlsx",
+      "sheets": [
+        "Productos · lectura"
+      ],
+      "bytes": 8575
+    },
+    {
+      "filename": "07-precios-por-tarifa.xlsx",
+      "sheets": [
+        "Precios · lectura"
+      ],
+      "bytes": 9175
+    }
+  ],
+  "counts": {
+    "stock_product_lot_rows": 9,
+    "commercial_sale_lines": 8,
+    "sale_lot_rows": 9,
+    "receipt_lot_rows": 8,
+    "customer_rows": 4,
+    "product_rows": 9,
+    "sku_tariff_rows": 16
+  },
+  "checks": [
+    "Commercial (albaran,line) keys unique: 8 lines / 4 orders.",
+    "Every confirmed sales line equals sum of allocated lots; same unit as stock.",
+    "Confirmed lot allocations do not exceed opening stock.",
+    "Customer 00012 retains two distinct orders / delivery notes.",
+    "Pending quantity/price never replaced by zero.",
+    "01-existencias-por-lote.xlsx: reopened; 1 working sheet(s), codes/nulls and compact layout passed.",
+    "02-ventas-por-cliente.xlsx: reopened; 1 working sheet(s), codes/nulls and compact layout passed.",
+    "03-entrada-diaria-stock-y-ventas.xlsx: reopened; 2 working sheet(s), codes/nulls and compact layout passed.",
+    "04-entradas-de-compra.xlsx: reopened; 1 working sheet(s), codes/nulls and compact layout passed.",
+    "05-clientes.xlsx: reopened; 1 working sheet(s), codes/nulls and compact layout passed.",
+    "06-productos.xlsx: reopened; 1 working sheet(s), codes/nulls and compact layout passed.",
+    "07-precios-por-tarifa.xlsx: reopened; 1 working sheet(s), codes/nulls and compact layout passed."
+  ],
+  "known_pending": {
+    "stock": "00401 / lote 00081 quantity absent",
+    "sales": "A-00043 line 01 final quantity, price, allocation absent",
+    "receipts": "0000049 quantity absent; 0000781 line 02 cost absent",
+    "customers": "cli-ej-004 ERP code absent; all other mapping codes fictitious/unvalidated",
+    "products": "00111 and 00401 pack factor absent; prd-ej-099 SKU absent",
+    "prices": "T-02 / 00111 and both 00401 prices absent; source end dates absent"
+  },
+  "runtime_audit": {
+    "method": "In-memory transform of current manual-exports.ts; fixture incoming readers; real ExcelJS byte write/read; VM arrays rehosted for ExcelJS instanceof Array.",
+    "sheet_counts": {
+      "sales-customers": 1,
+      "stock-lots": 1,
+      "purchase-receipts": 1,
+      "daily-pack": 2,
+      "customers": 1,
+      "products": 1,
+      "tariff-prices": 1
+    },
+    "passed": [
+      "Unequal lots 7.25 and 5.125 kg retain their quantities; commercial row remains 2 cajas and price 50 once.",
+      "Missing allocations remain explicitly pending.",
+      "Third stock lot retained by dynamic columns.",
+      "Mixed kg/caja totals blank; original movements inline; guarded mixed-unit numeric fold was never invoked.",
+      "Current sales XLSX bytes reopen with text codes 00101 and 000081, numeric 2, blank final price, all lot text, notes and frozen headers.",
+      "Business fields lead; internal Rocoto ID absent from sales."
+    ]
+  },
+  "rendered_pdf_pages": {
+    "01-existencias-por-lote.pdf": 1,
+    "02-ventas-por-cliente.pdf": 3,
+    "03-entrada-diaria-stock-y-ventas.pdf": 4,
+    "04-entradas-de-compra.pdf": 2,
+    "05-clientes.pdf": 1,
+    "06-productos.pdf": 1,
+    "07-precios-por-tarifa.pdf": 2
+  },
+  "preview_pages": "First working page, no guide pages."
+}

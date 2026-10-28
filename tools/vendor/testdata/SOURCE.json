@@ -1,0 +1,17 @@
+{
+  "commit": "69336a3d7ef30c2621b275bfc9a3b22a628dab14",
+  "path": "tools/testdata",
+  "repository": "https://github.com/Rocoto-Labs/company",
+  "sha256": {
+    "README.md": "0335b720af6a2d0ff8c36b64bb564a0924f77cab57625d27e6c1efec8f204628",
+    "adapters/fixtures.py": "8018de09abc942c11408e655ac5e677db8bcf58b7c604d7ddb73da6f386b3804",
+    "examples/kittens/README.md": "e229d9bee14d3bff6fd01ca8ee659191989fe08255e4da5a6432a1fa483a1894",
+    "examples/kittens/adapter.py": "49dff52aa7f8c4de3a70b10511deec0f5ef56df4c90755681abe5705bc049332",
+    "examples/kittens/scenarios/two-households.json": "3240db0603e19fd3df1872b2ed262bb20f781aaac61a92adb2d631722e4a5314",
+    "examples/kittens/testdata.json": "91150673c98b7f13968fd4a997013bece68a7f7c7ebde07b02c32648222a994a",
+    "pyproject.toml": "69ccc6eef351451b7d2ead25fd8f0e7279bbe91ed9bce440a1dd760213fe38eb",
+    "testdata.py": "29ce60f5cc3b508b310f4ba27015dc3b8bc58f84e1d402b51bab2631f99c578a",
+    "tests/test_lifecycle.py": "19a60f99273086c40c1a69aadb55e39e3558903936a963d1210df4eca037a11b"
+  },
+  "version": "1.0.0"
+}

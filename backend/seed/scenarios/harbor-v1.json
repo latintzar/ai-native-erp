@@ -1,0 +1,24 @@
+{
+  "id": "harbor-v1",
+  "version": 1,
+  "synthetic": true,
+  "clock": "2026-09-01T09:00:00Z",
+  "account": {
+    "name": "Harbor Synthetic Produce",
+    "operator_name": "Robin Example",
+    "operator_email": "robin@example.invalid"
+  },
+  "catalogue": [
+    {"code": "SYN-APPLE", "name": "Synthetic orchard apples", "family": "Fruit", "base_unit": "kg", "price": 2.5},
+    {"code": "SYN-PEAR", "name": "Synthetic orchard pears", "family": "Fruit", "base_unit": "kg", "price": 3.25},
+    {"code": "SYN-CARROT", "name": "Synthetic garden carrots", "family": "Vegetables", "base_unit": "kg", "price": 1.8}
+  ],
+  "customers": [
+    {"id": "cafe", "name": "Example Harbor Cafe", "phone": "+12025550101", "email": "cafe@example.invalid"},
+    {"id": "kitchen", "name": "Example Garden Kitchen", "phone": "+12025550102", "email": "kitchen@example.invalid"}
+  ],
+  "orders": [
+    {"id": "review", "customer": "cafe", "days_ago": 0, "delivery_days": 1, "status": "needs_review", "lines": [{"code": "SYN-APPLE", "qty": 4}, {"code": "SYN-PEAR", "qty": 2}], "expected_value_cents": 1650},
+    {"id": "ready", "customer": "kitchen", "days_ago": 1, "delivery_days": 0, "status": "approved", "lines": [{"code": "SYN-CARROT", "qty": 5}], "expected_value_cents": 900}
+  ]
+}

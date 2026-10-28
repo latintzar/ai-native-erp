@@ -1,0 +1,24 @@
+# The file layout every editor and every session agrees on. The Node and Python versions live
+# beside it in .nvmrc and .python-version, and the CI workflow pins the same two.
+root = true
+
+[*]
+# two spaces is what the repo writes today in ts, tsx, js, mjs, json, yml, yaml, md, css, html
+# and sh; the two exceptions below are Python and a Makefile recipe.
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+indent_size = 2
+
+[*.py]
+indent_size = 4
+
+[Makefile]
+# a recipe line starts with a tab; make reads nothing else
+indent_style = tab
+
+[*.md]
+# two trailing spaces are a line break in Markdown, and files here use them
+trim_trailing_whitespace = false

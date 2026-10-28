@@ -1,0 +1,43 @@
+{
+  "session": {
+    "id": "session-e198",
+    "messages": [
+      { "role": "person", "text": "Morning. What is on the book?", "at": "2025-08-25T07:10:00.000Z" },
+      { "role": "copilot", "text": "Six orders for Monday 25.08. Two of them carry a flag.", "at": "2025-08-25T07:10:02.000Z" }
+    ]
+  },
+  "context": {
+    "day": "2025-08-25",
+    "area": "sales",
+    "document": null,
+    "orders": [
+      { "id": "s-101", "number": "A-2451", "customer": "Bar Nàutic", "customerId": "c-nautic", "state": "confirmed",
+        "flags": [], "lines": [
+          { "product": "Merluza grande", "qty": 12, "unit": "kg" },
+          { "product": "Pulpo cocido", "qty": 6, "unit": "kg" } ] },
+      { "id": "s-102", "number": "A-2452", "customer": "Restaurant Els Pescadors", "customerId": "c-pescadors", "state": "request",
+        "flags": ["check the quantity · 12× their usual"], "lines": [
+          { "product": "Merluza grande", "qty": 40, "unit": "kg" } ] },
+      { "id": "s-103", "number": "A-2453", "customer": "Cal Trempat", "customerId": "c-trempat", "state": "confirmed",
+        "flags": [], "lines": [
+          { "product": "Pulpo cocido", "qty": 9, "unit": "kg" },
+          { "product": "Gamba roja", "qty": 3, "unit": "kg" } ] },
+      { "id": "s-104", "number": "A-2454", "customer": "Peixateria Maresme", "customerId": "c-maresme", "state": "confirmed",
+        "flags": [], "lines": [
+          { "product": "Merluza grande", "qty": 8, "unit": "kg" } ] },
+      { "id": "s-105", "number": "A-2455", "customer": "Hotel Miramar", "customerId": "c-miramar", "state": "request",
+        "flags": ["Gamba roja needs its amount"], "lines": [
+          { "product": "Gamba roja", "qty": 0, "unit": "kg" } ] },
+      { "id": "s-106", "number": "A-2456", "customer": "Taverna del Port", "customerId": "c-port", "state": "confirmed",
+        "flags": [], "lines": [
+          { "product": "Pulpo cocido", "qty": 4, "unit": "kg" } ] }
+    ],
+    "stock": [
+      { "product": "Merluza grande", "available": 44, "unit": "kg" },
+      { "product": "Pulpo cocido", "available": 11, "unit": "kg", "expected": "8 kg on Tuesday's lonja run" },
+      { "product": "Gamba roja", "available": 3, "unit": "kg" }
+    ],
+    "customer": null
+  },
+  "ask": "What is short for tomorrow?"
+}

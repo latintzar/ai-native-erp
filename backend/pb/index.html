@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>Playbook</title>
+<!--
+  THE PUBLIC HALF, AND IT IS EMPTY ON PURPOSE.
+
+  Everything this tool actually contains — the talk track, the objection answers, the pricing
+  model, the scope-fee floor — lives in pb.js, which app.py serves ONLY to a live control-room
+  session. This file is the login gate and nothing else: no account data, no numbers, and no
+  comment describing either. If you are adding something here, ask whether a prospect reading
+  view-source should have it. The answer is almost always no, and then it belongs in pb.js.
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/api/crm/room/asset/tokens.css">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Inter',system-ui,sans-serif;background:var(--rocoto-bg,#FAF7F3);
+       color:var(--rocoto-fg,#1A1413);-webkit-font-smoothing:antialiased}
+  .boot{min-height:100dvh;display:flex;align-items:center;justify-content:center;padding:24px}
+  .boot-card{width:100%;max-width:340px;text-align:center}
+  .boot-card h1{font-size:19px;font-weight:600;letter-spacing:-.01em}
+  .boot-card p{margin-top:8px;font-size:14px;line-height:1.5;color:var(--rocoto-muted,#6F665C)}
+  .boot-orb{width:40px;height:40px;margin:0 auto 14px;border-radius:999px;
+    background:radial-gradient(circle at 34% 28%,var(--rocoto-hero-accent,#E2707D),var(--rocoto-saffron,#C01B2C) 68%)}
+  .boot-btn{margin-top:20px;width:100%;min-height:46px;border-radius:10px;cursor:pointer;
+    border:1px solid var(--rocoto-border,rgba(26,20,19,.14));background:#fff;
+    font:600 15px/1 'Inter',system-ui,sans-serif;color:inherit}
+  .boot-btn:disabled{opacity:.5;cursor:default}
+  .boot-err{margin-top:14px;font-size:13.5px;color:var(--rocoto-danger-text,#831521)}
+</style>
+</head>
+<body>
+<div id="app" aria-busy="true">
+  <div class="boot"><div class="boot-card"><div class="boot-orb"></div><p>…</p></div></div>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="/api/crm/room/asset/vendor/supabase.min.js"></script>
+<script>
+(async function () {
+  'use strict';
+  var publicIdentity;
+try {
+  var configuration = await fetch('/api/config', {credentials:'same-origin'});
+  publicIdentity = (await configuration.json()).identity || {};
+} catch (_) { publicIdentity = {}; }
+var SUPABASE_URL = publicIdentity.supabaseUrl || '';
+var SUPABASE_ANON = publicIdentity.supabaseAnonKey || '';
+if (!SUPABASE_URL || !SUPABASE_ANON) {
+  document.getElementById('app').textContent = 'Configure your identity provider to sign in.';
+  document.getElementById('app').removeAttribute('aria-busy');
+  return;
+}
+  var sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON, {
+    auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: true, flowType: 'pkce' },
+  });
+  var app = document.getElementById('app');
+
+  function gate(err) {
+    app.removeAttribute('aria-busy');
+    app.innerHTML =
+      '<div class="boot"><div class="boot-card">' +
+      '<div class="boot-orb"></div><h1>Playbook</h1>' +
+      '<p>Sign in with the Rocoto Google account.</p>' +
+      '<button class="boot-btn" id="gbtn">Continue with Google</button>' +
+      (err ? '<div class="boot-err">' + err + '</div>' : '') +
+      '</div></div>';
+    document.getElementById('gbtn').onclick = function () {
+      this.disabled = true;
+      sb.auth.signInWithOAuth({ provider: 'google',
+        options: { redirectTo: location.origin + location.pathname } });
+    };
+  }
+
+  // The bundle arrives only after /api/crm/me says yes; the browser sends the cr_sid cookie with
+  // both requests because they are same-origin.
+  function loadTool(me) {
+    var css = document.createElement('link');
+    css.rel = 'stylesheet'; css.href = '/api/crm/playbook/asset/pb.css';
+    document.head.appendChild(css);
+    var js = document.createElement('script');
+    js.src = '/api/crm/playbook/asset/pb.js';
+    js.onload = function () { window.__pbStart(me, sb); };
+    js.onerror = function () { gate('The tool could not load.'); };
+    document.body.appendChild(js);
+  }
+
+  sb.auth.getSession().then(function (res) {
+    var s = res && res.data && res.data.session;
+    if (!(s && s.access_token)) return null;
+    return fetch('/api/crm/login', {
+      method: 'POST', credentials: 'include',
+      headers: { 'Authorization': 'Bearer ' + s.access_token, 'Content-Type': 'application/json' },
+    }).then(function (r) {
+      try { history.replaceState({}, '', location.pathname); } catch (e) {}
+      if (r.status === 403) {
+        return sb.auth.signOut().then(function () {
+          gate('That account has no access.'); throw { handled: true };
+        });
+      }
+      return null;
+    });
+  }).then(function () {
+    return fetch('/api/crm/me', { credentials: 'include' }).then(function (r) {
+      return r.ok ? r.json() : null;
+    });
+  }).then(function (me) {
+    if (me && me.ok) loadTool(me); else gate();
+  }).catch(function (e) { if (!(e && e.handled)) gate(); });
+})();
+</script>
+</body>
+</html>

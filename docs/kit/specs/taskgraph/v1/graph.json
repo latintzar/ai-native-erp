@@ -1,0 +1,702 @@
+{
+  "schemaVersion": "1.0",
+  "title": "Historical Rocoto production build task graph",
+  "authority": "Historical implementation inventory retained from the earlier kit. Paths, policies and statuses below describe that snapshot. Current subject contracts are indexed in docs/INDEX.md; the kit-to-product plan and GitHub issues govern current work. Reconcile individual tasks with those contracts before reuse.",
+  "statusValues": [
+    "SPECIFIED",
+    "KIT",
+    "WIRED",
+    "PRODUCTION"
+  ],
+  "statusDefinitions": {
+    "SPECIFIED": "Contracted work with no claim that a production connection exists.",
+    "KIT": "A design-kit interaction or presentation has been checked; it is not a tenant-safe runtime implementation.",
+    "WIRED": "An implemented runtime boundary has named contract evidence in a controlled environment.",
+    "PRODUCTION": "A release-gated runtime boundary has live operational evidence; this status never authorizes a deployment by itself."
+  },
+  "policies": [
+    "Stages express dependency order only. They do not shrink scope, grant production authority, or mark an earlier stage as a separate product.",
+    "Every command is server-authorized, tenant-scoped, idempotent where retryable, revision-checked where mutable, and auditable.",
+    "A client-side flag, a successful-looking control, or a queued job is never proof of an accepted command, external receipt, or completed provider action.",
+    "Interaction patterns are local to their surface. There is no global limit on actions or menus; every action must instead have a named owner, state model, accessible name, and evidence path.",
+    "Unknown, pending, unavailable, failed, denied, and empty are distinct states. Copy must name the known fact without inventing business data or provider completion.",
+    "The graph covers the full production system. An unmet external dependency is a visible blocked condition with a recovery path, not an omitted task or a fabricated success state. A release profile distinguishes capability that is designed, enabled for a tenant, and proven by independent runtime evidence; a built screen or configured connector is neither an enabled capability nor proof of a completed external action.",
+    "The `order-review` launch profile enables literal tenant SKU review, reviewed exact-SKU art, explicit accepted uncoded sale-item records, inbound source review, explicit line resolution, reasoned reply attention, unvalued albarans, native provider handoff and print/file output. An uncoded sale item is only admitted from an explicitly accepted off-SKU Albarán line; it retains literal wording/unit and cannot silently become SKU/ERP/stock/tariff master data. Direct related-item links may join coded or uncoded records, are sparse/reciprocal/non-transitive, and never follow category/repetition. Pricing/tariffs, stock/inventory/lots/supplier intake, customer outbound and ERP automation remain designed production leaves, visibly disabled until their own evidence gates pass. Navbar Export, Sales-day and Albarán output doors share one gallery-template → configured-saved-copy → immutable-output-attempt contract. A scheduled subcontractor order-list email, if enabled, is a first-class Export destination with its own recipient rule, attachment/template, schedule, history and truthful provider-receipt contract; it is never customer messaging. WhatsApp starts forward-only at accepted connection time and never exposes earlier history. Only the explicit public-document allowlist may be rendered. Historical operating notes, source conversations, credentials, host details, and fixture content remain outside publication.",
+    "Raw inbound email bodies and incoming file bytes are transient only in Rocoto. Original custody stays with the provider/user. Rocoto persists authorized source references, minimal reviewed business facts and actor/parser lineage; it cannot reconstruct a missing original from a summary. THE-SOURCE-PRIVACY-SPEC governs fetch, cache, logging, model input, deletion and legacy cleanup.",
+    "E188 closes the English-kit physical UI grammar: inset one-destination rows, unvalued order projections, exact quantity/unit lines, one draft-and-apply filter apparatus, and phone keyboard/thumb navigation. No E188 UI/UX item is deferred. The separately ordered next architecture phase is Runtime/model-to-smartify-runtime/UI-embedded intelligence/Copilot execution; this does not remove or authorize any production leaf."
+  ],
+  "coreDocuments": [
+    {
+      "path": "notes/INDEX.md",
+      "title": "Documentation index"
+    },
+    {
+      "path": "notes/THE-ARCHITECTURE.md",
+      "title": "Architecture"
+    },
+    {
+      "path": "notes/THE-SYSTEM-SPEC.md",
+      "title": "System specification"
+    },
+    {
+      "path": "notes/THE-OBJECT-MAP.md",
+      "title": "Object map"
+    },
+    {
+      "path": "notes/THE-INTERACTION-SPEC.md",
+      "title": "Interaction specification"
+    },
+    {
+      "path": "notes/THE-JOURNEYS-SPEC.md",
+      "title": "Cross-system journey acceptance"
+    },
+    {
+      "path": "notes/THE-PRODUCT-SHEET-SPEC.md",
+      "title": "Product sheet"
+    },
+    {
+      "path": "notes/THE-STOCK-LOTS-SPEC.md",
+      "title": "Stock and lots specification"
+    },
+    {
+      "path": "notes/THE-CATALOGUE-CONTRACT-SPEC.md",
+      "title": "Catalogue contract"
+    },
+    {
+      "path": "notes/THE-INTELLIGENCE-SPEC.md",
+      "title": "Intelligence contract"
+    },
+    {
+      "path": "notes/WIRING-BOOT.md",
+      "title": "Build entry point"
+    },
+    {
+      "path": "notes/THE-WIRING-PLAN.md",
+      "title": "Build order"
+    },
+    {
+      "path": "notes/THE-WIRING-INDEX.md",
+      "title": "Build index"
+    },
+    {
+      "path": "notes/THE-WIRING-TASKLIST.md",
+      "title": "Task list"
+    },
+    {
+      "path": "notes/THE-UNITS-SPEC.md",
+      "title": "Units and equivalences"
+    },
+    {
+      "path": "notes/THE-SOURCE-PRIVACY-SPEC.md",
+      "title": "Source privacy and provider custody"
+    },
+    {
+      "path": "notes/RELEASE-181.md",
+      "title": "English kit release and evidence"
+    },
+    {
+      "path": "notes/RELEASE-183.md",
+      "title": "E182 connected kit workflow narrative"
+    }
+  ],
+  "docRefs": {
+    "FND-01": {
+      "title": "Tenant identity, authentication, and authorization",
+      "document": "notes/THE-SYSTEM-SPEC.md",
+      "anchor": "fnd-01"
+    },
+    "FND-02": {
+      "title": "Canonical records, identity, history, and lifecycle",
+      "document": "notes/THE-SYSTEM-SPEC.md",
+      "anchor": "fnd-02"
+    },
+    "FND-03": {
+      "title": "Commands, events, projections, and audit",
+      "document": "notes/THE-SYSTEM-SPEC.md",
+      "anchor": "fnd-03"
+    },
+    "OBJ-01": {
+      "title": "Shared object-sheet contract",
+      "document": "notes/THE-SYSTEM-SPEC.md",
+      "anchor": "obj-01"
+    },
+    "PRD-01": {
+      "title": "Product Sheet",
+      "document": "notes/THE-SYSTEM-SPEC.md",
+      "anchor": "prd-01"
+    },
+    "CUS-01": {
+      "title": "Customer Sheet",
+      "document": "notes/THE-SYSTEM-SPEC.md",
+      "anchor": "cus-01"
+    },
+    "ALB-01": {
+      "title": "Albarán Sheet",
+      "document": "notes/THE-SYSTEM-SPEC.md",
+      "anchor": "alb-01"
+    },
+    "CAT-01": {
+      "title": "Catalogue admission, Internal category, Related items and artwork",
+      "document": "notes/THE-SYSTEM-SPEC.md",
+      "anchor": "cat-01"
+    },
+    "SRC-01": {
+      "title": "Imports, supplier sources, and related email",
+      "document": "notes/THE-SYSTEM-SPEC.md",
+      "anchor": "src-01"
+    },
+    "INV-01": {
+      "title": "Stock, lots, availability, and stock update",
+      "document": "notes/THE-SYSTEM-SPEC.md",
+      "anchor": "inv-01"
+    },
+    "COM-01": {
+      "title": "Tariffs, units, taxes, money, and price history",
+      "document": "notes/THE-SYSTEM-SPEC.md",
+      "anchor": "com-01"
+    },
+    "DOC-01": {
+      "title": "Delivery, print, documents, and output",
+      "document": "notes/THE-SYSTEM-SPEC.md",
+      "anchor": "doc-01"
+    },
+    "UTL-01": {
+      "title": "Stock update utility",
+      "document": "notes/THE-SYSTEM-SPEC.md",
+      "anchor": "stock-update-utility-utl-01"
+    },
+    "UTL-02": {
+      "title": "New product utility",
+      "document": "notes/THE-SYSTEM-SPEC.md",
+      "anchor": "utl-02"
+    },
+    "UTL-03": {
+      "title": "Catalogue import utility",
+      "document": "notes/THE-SYSTEM-SPEC.md",
+      "anchor": "upload-utility-utl-03"
+    },
+    "UTL-04": {
+      "title": "Export utility",
+      "document": "notes/THE-SYSTEM-SPEC.md",
+      "anchor": "export-utility-utl-04-and-output-jobs"
+    },
+    "INT-01": {
+      "title": "Intelligence boundary",
+      "document": "notes/THE-SYSTEM-SPEC.md",
+      "anchor": "int-01-and-int-02-intelligence-boundary"
+    },
+    "INT-02": {
+      "title": "Artwork and image generation boundary",
+      "document": "notes/THE-SYSTEM-SPEC.md",
+      "anchor": "int-01-and-int-02-intelligence-boundary"
+    },
+    "INTG-01": {
+      "title": "Integrations and synchronization",
+      "document": "notes/THE-SYSTEM-SPEC.md",
+      "anchor": "intg-01"
+    },
+    "ADM-01": {
+      "title": "Administration, billing, data, and settings",
+      "document": "notes/THE-SYSTEM-SPEC.md",
+      "anchor": "adm-01"
+    },
+    "OPS-01": {
+      "title": "Realtime, presence, concurrency, offline, and operations",
+      "document": "notes/THE-SYSTEM-SPEC.md",
+      "anchor": "ops-01"
+    },
+    "QLT-01": {
+      "title": "Security, privacy, and audit",
+      "document": "notes/THE-SYSTEM-SPEC.md",
+      "anchor": "qlt-01"
+    },
+    "QLT-02": {
+      "title": "Accessibility, performance, reliability, and recovery UX",
+      "document": "notes/THE-SYSTEM-SPEC.md",
+      "anchor": "qlt-02"
+    },
+    "ACT-01": {
+      "title": "Onboarding, migration, activation, and support",
+      "document": "notes/THE-SYSTEM-SPEC.md",
+      "anchor": "act-01"
+    },
+    "REL-01": {
+      "title": "Observability, evaluation, test evidence, and release gates",
+      "document": "notes/THE-SYSTEM-SPEC.md",
+      "anchor": "rel-01"
+    },
+    "INTEL-00": {
+      "title": "Intelligence scope",
+      "document": "notes/THE-INTELLIGENCE-SPEC.md",
+      "anchor": "intel-00-what-this-system-is-and-is-not"
+    },
+    "INTEL-01": {
+      "title": "Intelligence boundaries",
+      "document": "notes/THE-INTELLIGENCE-SPEC.md",
+      "anchor": "intel-01-non-negotiable-boundaries"
+    },
+    "INTEL-02": {
+      "title": "Evidence and context",
+      "document": "notes/THE-INTELLIGENCE-SPEC.md",
+      "anchor": "intel-02-authoritative-records-evidence-and-context"
+    },
+    "INTEL-03": {
+      "title": "Execution path",
+      "document": "notes/THE-INTELLIGENCE-SPEC.md",
+      "anchor": "intel-03-one-execution-path-for-people-and-models"
+    },
+    "INTEL-04": {
+      "title": "Approved runtime",
+      "document": "notes/THE-INTELLIGENCE-SPEC.md",
+      "anchor": "intel-04-release-registry-and-approved-runtime"
+    },
+    "INTEL-05": {
+      "title": "Transport and versioning",
+      "document": "notes/THE-INTELLIGENCE-SPEC.md",
+      "anchor": "intel-05-transport-contracts-idempotency-and-versioning"
+    },
+    "INTEL-06": {
+      "title": "Finished-albarán prediction",
+      "document": "notes/THE-INTELLIGENCE-SPEC.md",
+      "anchor": "intel-06-finished-albaran-prediction"
+    },
+    "INTEL-07": {
+      "title": "Concern lifecycle",
+      "document": "notes/THE-INTELLIGENCE-SPEC.md",
+      "anchor": "intel-07-concerns-exact-scope-dismissal-acknowledgement-reopen"
+    },
+    "INTEL-08": {
+      "title": "Interactive catalogue intelligence",
+      "document": "notes/THE-INTELLIGENCE-SPEC.md",
+      "anchor": "intel-08-interactive-catalogue-and-variant-intelligence"
+    },
+    "INTEL-09": {
+      "title": "Supplier shortage announcement",
+      "document": "notes/THE-INTELLIGENCE-SPEC.md",
+      "anchor": "intel-09-supplier-shortage-to-real-announcement"
+    },
+    "INTEL-10": {
+      "title": "Autonomy, budgets, and recovery",
+      "document": "notes/THE-INTELLIGENCE-SPEC.md",
+      "anchor": "intel-10-autonomy-concurrency-budgets-cancellation-and-recovery"
+    },
+    "INTEL-11": {
+      "title": "Ideogram artwork",
+      "document": "notes/THE-INTELLIGENCE-SPEC.md",
+      "anchor": "intel-11-ideogram-artwork-sku-owned-asynchronous-verified"
+    },
+    "INTEL-12": {
+      "title": "Intelligence privacy and provenance",
+      "document": "notes/THE-INTELLIGENCE-SPEC.md",
+      "anchor": "intel-12-privacy-provenance-retention-and-operator-access"
+    },
+    "INTEL-13": {
+      "title": "Intelligence evaluation and security",
+      "document": "notes/THE-INTELLIGENCE-SPEC.md",
+      "anchor": "intel-13-observability-fixtures-evaluations-and-security-tests"
+    },
+    "INTEL-14": {
+      "title": "Intelligence release targets",
+      "document": "notes/THE-INTELLIGENCE-SPEC.md",
+      "anchor": "intel-14-design-targets-and-release-gates"
+    },
+    "INTEL-15": {
+      "title": "Intelligence rollout and rollback",
+      "document": "notes/THE-INTELLIGENCE-SPEC.md",
+      "anchor": "intel-15-rollout-rollback-and-ownership"
+    },
+    "INTEL-16": {
+      "title": "Intelligence task matrix",
+      "document": "notes/THE-INTELLIGENCE-SPEC.md",
+      "anchor": "intel-16-builder-tasks-and-acceptance-matrix"
+    },
+    "INTEL-17": {
+      "title": "Operator assistant and reviewed actions",
+      "document": "notes/THE-INTELLIGENCE-SPEC.md",
+      "anchor": "intel-17"
+    },
+    "INTEL-18": {
+      "title": "Reserved intelligence extension 18",
+      "document": "notes/THE-INTELLIGENCE-SPEC.md",
+      "anchor": "intel-18"
+    },
+    "INTEL-19": {
+      "title": "Reserved intelligence extension 19",
+      "document": "notes/THE-INTELLIGENCE-SPEC.md",
+      "anchor": "intel-19"
+    },
+    "INTEL-20": {
+      "title": "Reserved intelligence extension 20",
+      "document": "notes/THE-INTELLIGENCE-SPEC.md",
+      "anchor": "intel-20"
+    },
+    "INTX-01": {
+      "title": "Shared interaction specification",
+      "document": "notes/THE-INTERACTION-SPEC.md",
+      "anchor": "intx-01"
+    },
+    "E188": {
+      "title": "E188 list-card, tabular-line, filter and mobile-work contract",
+      "document": "notes/THE-INTERACTION-SPEC.md",
+      "anchor": "intx-12-e188-list-line-filter-and-mobile-work-contract"
+    },
+    "LOT-01": {
+      "title": "Stock and lot split contract",
+      "document": "notes/THE-STOCK-LOTS-SPEC.md",
+      "anchor": "lot-01"
+    },
+    "JNY-01": {
+      "title": "Phone source with seven product lines to approved receipt or draft",
+      "document": "notes/THE-JOURNEYS-SPEC.md",
+      "anchor": "jny-01-phone-source-with-seven-product-lines-to-an-approved-receipt-or-draft"
+    },
+    "JNY-02": {
+      "title": "Working paper to actual kg/price review and final albaran",
+      "document": "notes/THE-JOURNEYS-SPEC.md",
+      "anchor": "jny-02-working-paper-to-actual-kg-price-review-and-final-albaran"
+    },
+    "JNY-03": {
+      "title": "Four SKU price changes and truthful in-chat confirmation",
+      "document": "notes/THE-JOURNEYS-SPEC.md",
+      "anchor": "jny-03-four-sku-price-changes-and-truthful-in-chat-confirmation"
+    },
+    "CAT-01.1": {
+      "title": "Recurring customer options and preparation notes",
+      "document": "notes/THE-SYSTEM-SPEC.md",
+      "anchor": "cat-01-1-recurring-customer-options-and-preparation-notes"
+    },
+    "CAT-01.2": {
+      "title": "Option quote, acceptance, and change control",
+      "document": "notes/THE-SYSTEM-SPEC.md",
+      "anchor": "cat-01-2-option-quote-acceptance-and-change-control"
+    },
+    "UTL-01.1": {
+      "title": "Sequential Stock update handoff",
+      "document": "notes/THE-SYSTEM-SPEC.md",
+      "anchor": "utl-01-1-sequential-stock-update-handoff"
+    },
+    "UTL-02.1": {
+      "title": "Product-request policy and ERP representation",
+      "document": "notes/THE-SYSTEM-SPEC.md",
+      "anchor": "utl-02-1-product-request-policy-and-erp-representation"
+    },
+    "ADM-01.1": {
+      "title": "Customer-request, confirmation, and ERP policy controls",
+      "document": "notes/THE-SYSTEM-SPEC.md",
+      "anchor": "adm-01-1-customer-request-confirmation-and-erp-policy-controls"
+    },
+    "OBJ-02": {
+      "title": "Primary objects and their owners",
+      "document": "notes/THE-OBJECT-MAP.md",
+      "anchor": "obj-02-primary-objects-and-their-owners"
+    },
+    "INTEL-06A": {
+      "title": "Corrected-paper review and final-print state",
+      "document": "notes/THE-INTELLIGENCE-SPEC.md",
+      "anchor": "intel-06a-corrected-paper-review-and-final-print-state"
+    },
+    "CAT-14A": {
+      "title": "Order note and product-option review",
+      "document": "notes/THE-CATALOGUE-CONTRACT-SPEC.md",
+      "anchor": "cat-14a-order-note-and-product-option-review"
+    },
+    "INTX-11": {
+      "title": "Connected task anatomy",
+      "document": "notes/THE-INTERACTION-SPEC.md",
+      "anchor": "intx-11-connected-task-anatomy"
+    },
+    "SYS-182": {
+      "title": "Connected production contracts",
+      "document": "notes/THE-SYSTEM-SPEC.md",
+      "anchor": "sys-182-connected-production-contracts"
+    },
+    "JNY-05": {
+      "title": "New SKU to price, customer quote, albarán edit and reprint",
+      "document": "notes/THE-JOURNEYS-SPEC.md",
+      "anchor": "jny-05-new-sku-to-price-customer-quote-albaran-edit-and-reprint"
+    },
+    "JNY-06": {
+      "title": "Operator-reported shortage to reviewed impact, customer copy and partial/unknown delivery",
+      "document": "notes/THE-JOURNEYS-SPEC.md",
+      "anchor": "jny-06-operator-reported-shortage-to-reviewed-impact-customer-copy-and-partial-unknown-delivery"
+    },
+    "JNY-07": {
+      "title": "Template gallery to configured copy, scoped output and history",
+      "document": "notes/THE-JOURNEYS-SPEC.md",
+      "anchor": "jny-07-template-gallery-to-configured-copy-scoped-output-and-history"
+    },
+    "JNY-08": {
+      "title": "First-time setup to controlled activation",
+      "document": "notes/THE-JOURNEYS-SPEC.md",
+      "anchor": "jny-08-first-time-setup-to-controlled-activation"
+    },
+    "JNY-09": {
+      "title": "Salesperson-scoped day to authorised output activity",
+      "document": "notes/THE-JOURNEYS-SPEC.md",
+      "anchor": "jny-09-salesperson-scoped-day-to-authorised-output-activity"
+    }
+  },
+  "stages": [
+    {
+      "id": "foundation",
+      "title": "Foundation",
+      "purpose": "Establish tenant-safe commands, event history, projections, and shared sheet behavior before domain writes."
+    },
+    {
+      "id": "domain-records",
+      "title": "Domain records",
+      "purpose": "Implement durable product, customer, order, source, stock, money, and output records."
+    },
+    {
+      "id": "sheet-ports",
+      "title": "Sheet ports",
+      "purpose": "Connect every named sheet control to its command/read model, exact copy, state, and recovery behavior."
+    },
+    {
+      "id": "automation-services",
+      "title": "Automation and services",
+      "purpose": "Add bounded intelligence, image jobs, asynchronous output, and external adapters after source and command boundaries exist."
+    },
+    {
+      "id": "administration-activation",
+      "title": "Administration and activation",
+      "purpose": "Complete settings, onboarding, billing, data lifecycle, and support controls for an operating tenant."
+    },
+    {
+      "id": "assurance-release",
+      "title": "Assurance and release",
+      "purpose": "Prove security, accessibility, resilience, recovery, cutover, and release evidence before any production permission."
+    }
+  ],
+  "taskFiles": [
+    "tasks/foundation.json",
+    "tasks/sheets.json",
+    "tasks/catalogue-source-inventory.json",
+    "tasks/intelligence-integrations.json",
+    "tasks/admin-operations-release.json",
+    "tasks/lots.json"
+  ],
+  "inventoryFiles": [
+    "ui-controls.json",
+    "obligations.json",
+    "copy-inventory.json",
+    "evidence.json",
+    "journey-acceptance.json"
+  ],
+  "requiredLegacyIds": [
+    "A0.1",
+    "A0.2",
+    "A0.3",
+    "A0.4",
+    "A0.5",
+    "A0.6",
+    "A0.7",
+    "A0.8",
+    "A0.9",
+    "A0.10",
+    "A0.11",
+    "A0.12",
+    "A0.13",
+    "A0.14",
+    "A1.1",
+    "A1.2",
+    "A1.3",
+    "A1.4",
+    "A1.5",
+    "A2.1",
+    "A2.2",
+    "A2.3",
+    "A2.4",
+    "A2.5",
+    "A2.6",
+    "A2.7",
+    "A2.8",
+    "A2.9",
+    "A2.10",
+    "A2.11",
+    "A2.14",
+    "A3.1",
+    "A3.2",
+    "A3.3",
+    "A3.4",
+    "A3.5",
+    "A3.6",
+    "A3.7",
+    "A3.8",
+    "A3.9",
+    "A3.10",
+    "A3.11",
+    "A3.12",
+    "A3.13",
+    "A3.14",
+    "A3.15",
+    "A3.16",
+    "A3.25",
+    "A3.26",
+    "A3.27",
+    "A3.28",
+    "A3.29",
+    "A3.30",
+    "A4.1",
+    "A4.2",
+    "A4.3",
+    "A4.4",
+    "A4.5",
+    "A4.6",
+    "A4.7",
+    "A4.8",
+    "A4.8a",
+    "A4.9",
+    "A4.10",
+    "A5.1",
+    "A5.2",
+    "A5.3",
+    "A5.4",
+    "A5.5",
+    "A5.6",
+    "A5.7",
+    "A5.8",
+    "A6.0",
+    "A6.1",
+    "A6.2",
+    "A6.3",
+    "A6.4",
+    "A6.5",
+    "A6.6",
+    "A6.7",
+    "A6.8",
+    "A6.9",
+    "A6.10",
+    "A6.11",
+    "A6.12",
+    "A6.13",
+    "A7.1",
+    "A7.2",
+    "A7.3",
+    "A7.4",
+    "A7.5",
+    "A7.6",
+    "A7.7",
+    "A7.8",
+    "A7.9",
+    "A7.10",
+    "A7.11",
+    "A7.12",
+    "A7.14",
+    "A7.15",
+    "A7.16",
+    "A8.1",
+    "A8.2",
+    "A8.3",
+    "A8.4",
+    "A8.5",
+    "A8.6",
+    "A8.7",
+    "A8.8",
+    "A8.9",
+    "A8.10",
+    "A8.13",
+    "A8.14",
+    "A8.15",
+    "A9.1",
+    "A9.2",
+    "A9.3",
+    "A9.4",
+    "A9.4a",
+    "A9.4b",
+    "A9.5",
+    "A9.6",
+    "A9.7",
+    "A10.1",
+    "A10.2",
+    "A10.3",
+    "A10.4",
+    "A10.5",
+    "A11.1",
+    "A11.2",
+    "A11.3",
+    "A11.4",
+    "B1.1",
+    "B1.2",
+    "B1.3",
+    "B1.4",
+    "B2.1",
+    "B2.2",
+    "B2.3",
+    "B3.1",
+    "B3.2",
+    "B3.143",
+    "B3.144",
+    "B4.1",
+    "B4.2",
+    "B4.3",
+    "B5.1",
+    "B5.2",
+    "B5.3",
+    "C1.1",
+    "C1.2",
+    "C2.1",
+    "C2.2",
+    "C3.1",
+    "C3.2",
+    "C4.1",
+    "C4.2",
+    "C4.3",
+    "C4.4",
+    "D1.6",
+    "E175",
+    "E176",
+    "E177",
+    "X1",
+    "X2",
+    "X3",
+    "X4",
+    "X5",
+    "X6",
+    "X7",
+    "X8",
+    "X9"
+  ],
+  "publicArtifacts": [
+    {
+      "path": "specs/intelligence/v1/command-envelope.schema.json",
+      "title": "Command envelope schema",
+      "kind": "schema"
+    },
+    {
+      "path": "specs/intelligence/v1/event-envelope.schema.json",
+      "title": "Event envelope schema",
+      "kind": "schema"
+    },
+    {
+      "path": "specs/intelligence/v1/proposal-envelope.schema.json",
+      "title": "Proposal envelope schema",
+      "kind": "schema"
+    },
+    {
+      "path": "specs/intelligence/v1/image-job.schema.json",
+      "title": "Image job schema",
+      "kind": "schema"
+    },
+    {
+      "path": "specs/intelligence/v1/prompt-contracts.v1.json",
+      "title": "Prompt contracts",
+      "kind": "contract"
+    },
+    {
+      "path": "specs/intelligence/v1/evaluation-manifest.v1.json",
+      "title": "Evaluation manifest",
+      "kind": "fixture-manifest"
+    },
+    {
+      "path": "specs/intelligence/v1/assistant-action.schema.json",
+      "title": "Reviewed assistant action and receipt schema",
+      "kind": "schema"
+    },
+    {
+      "path": "specs/output/v1/print-attempt.schema.json",
+      "title": "Immutable print attempt and confirmation schema",
+      "kind": "schema"
+    }
+  ]
+}

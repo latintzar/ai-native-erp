@@ -1,0 +1,311 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:rocoto:situations:intelligence:command-envelope:v1",
+  "title": "Rocoto Intelligence-Originated Command Envelope v1",
+  "description": "A command enters the authoritative domain path after proposal review. Schema validation alone never authorizes it.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "api_version",
+    "command_id",
+    "command_type",
+    "tenant_id",
+    "actor",
+    "origin",
+    "idempotency_key",
+    "semantic_fingerprint",
+    "expected_revisions",
+    "authorization",
+    "payload",
+    "issued_at"
+  ],
+  "properties": {
+    "api_version": {"const": "2026-08-31/v1"},
+    "command_id": {"$ref": "#/$defs/opaqueId"},
+    "command_type": {
+      "enum": [
+        "albaran.apply_prediction",
+        "concern.raise",
+        "concern.dismiss",
+        "concern.resolve",
+        "catalogue.classification.apply",
+        "catalogue.classification.undo",
+        "product_sku.create_from_review",
+        "artwork.request",
+        "artwork.review",
+        "notification.dispatch"
+      ]
+    },
+    "tenant_id": {"$ref": "#/$defs/tenantId"},
+    "actor": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["actor_type", "actor_id", "role_snapshot_id"],
+      "properties": {
+        "actor_type": {"enum": ["user", "service"]},
+        "actor_id": {"$ref": "#/$defs/opaqueId"},
+        "role_snapshot_id": {"$ref": "#/$defs/opaqueId"}
+      }
+    },
+    "origin": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "correlation_id"],
+      "properties": {
+        "kind": {"enum": ["human_form", "proposal_review", "system_policy"]},
+        "proposal_id": {"$ref": "#/$defs/opaqueId"},
+        "run_id": {"$ref": "#/$defs/opaqueId"},
+        "review_id": {"$ref": "#/$defs/opaqueId"},
+        "correlation_id": {"$ref": "#/$defs/opaqueId"}
+      }
+    },
+    "idempotency_key": {"type": "string", "pattern": "^[A-Za-z0-9_-]{16,200}$"},
+    "semantic_fingerprint": {"$ref": "#/$defs/hash"},
+    "expected_revisions": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 1000,
+      "items": {"$ref": "#/$defs/revisionPrecondition"}
+    },
+    "authorization": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["mode", "policy_bundle_id"],
+      "properties": {
+        "mode": {"enum": ["human_approved", "delegated_policy", "system_maintenance"]},
+        "approval_id": {"$ref": "#/$defs/opaqueId"},
+        "policy_bundle_id": {"$ref": "#/$defs/opaqueId"},
+        "delegation_id": {"$ref": "#/$defs/opaqueId"},
+        "budget_authorization_id": {"$ref": "#/$defs/opaqueId"}
+      }
+    },
+    "payload": {
+      "oneOf": [
+        {"$ref": "#/$defs/applyPredictionPayload"},
+        {"$ref": "#/$defs/raiseConcernPayload"},
+        {"$ref": "#/$defs/dismissConcernPayload"},
+        {"$ref": "#/$defs/resolveConcernPayload"},
+        {"$ref": "#/$defs/classificationPayload"},
+        {"$ref": "#/$defs/classificationUndoPayload"},
+        {"$ref": "#/$defs/createSkuPayload"},
+        {"$ref": "#/$defs/artworkRequestPayload"},
+        {"$ref": "#/$defs/artworkReviewPayload"},
+        {"$ref": "#/$defs/notificationDispatchPayload"}
+      ]
+    },
+    "issued_at": {"type": "string", "format": "date-time"}
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"command_type": {"const": "notification.dispatch"}}, "required": ["command_type"]},
+      "then": {"properties": {"authorization": {"properties": {"mode": {"const": "human_approved"}}, "required": ["mode", "approval_id"]}}}
+    },
+    {
+      "if": {"properties": {"command_type": {"const": "concern.resolve"}}, "required": ["command_type"]},
+      "then": {"properties": {"authorization": {"properties": {"mode": {"const": "human_approved"}}, "required": ["mode", "approval_id"]}}}
+    },
+    {
+      "if": {"properties": {"command_type": {"const": "artwork.review"}}, "required": ["command_type"]},
+      "then": {"properties": {"authorization": {"properties": {"mode": {"const": "human_approved"}}, "required": ["mode", "approval_id"]}}}
+    }
+  ],
+  "$defs": {
+    "opaqueId": {"type": "string", "pattern": "^[A-Za-z][A-Za-z0-9_-]{2,127}$"},
+    "tenantId": {"type": "string", "pattern": "^ten_[A-Za-z0-9_-]{3,120}$"},
+    "hash": {"type": "string", "pattern": "^sha256:[a-f0-9]{64}$"},
+    "revisionPrecondition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["object_type", "object_id", "revision"],
+      "properties": {
+        "object_type": {"type": "string", "minLength": 1, "maxLength": 80},
+        "object_id": {"$ref": "#/$defs/opaqueId"},
+        "revision": {"type": "integer", "minimum": 1}
+      }
+    },
+    "evidenceIds": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 100,
+      "items": {"$ref": "#/$defs/opaqueId"}
+    },
+    "applyPredictionPayload": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "document_id", "proposal_id", "accepted_candidate_line_ids", "evidence_ids"],
+      "properties": {
+        "kind": {"const": "albaran.apply_prediction"},
+        "document_id": {"$ref": "#/$defs/opaqueId"},
+        "proposal_id": {"$ref": "#/$defs/opaqueId"},
+        "accepted_candidate_line_ids": {"type": "array", "minItems": 1, "maxItems": 500, "items": {"$ref": "#/$defs/opaqueId"}},
+        "operator_edits_ref": {"$ref": "#/$defs/opaqueId"},
+        "evidence_ids": {"$ref": "#/$defs/evidenceIds"}
+      },
+      "description": "The command handler resolves tariffs and validates units. It does not accept model-supplied prices or lots."
+    },
+    "concernTarget": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["object_type", "object_id", "revision"],
+      "properties": {
+        "object_type": {"enum": ["albaran", "order", "order_line", "source_thread", "field", "line_group"]},
+        "object_id": {"$ref": "#/$defs/opaqueId"},
+        "revision": {"type": "integer", "minimum": 1}
+      }
+    },
+    "raiseConcernPayload": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "concern_kind", "target", "predicate_id", "release_id", "statement", "evidence_ids"],
+      "properties": {
+        "kind": {"const": "concern.raise"},
+        "concern_kind": {"enum": ["response", "check", "supply"]},
+        "target": {"$ref": "#/$defs/concernTarget"},
+        "predicate_id": {"$ref": "#/$defs/opaqueId"},
+        "release_id": {"$ref": "#/$defs/opaqueId"},
+        "statement": {"type": "string", "minLength": 1, "maxLength": 700},
+        "evidence_ids": {"$ref": "#/$defs/evidenceIds"}
+      }
+    },
+    "dismissConcernPayload": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "concern_id", "concern_revision", "dismissed_evidence_ids"],
+      "properties": {
+        "kind": {"const": "concern.dismiss"},
+        "concern_id": {"$ref": "#/$defs/opaqueId"},
+        "concern_revision": {"type": "integer", "minimum": 1},
+        "dismissal_kind": {"enum": ["not_applicable", "known_exception", "insufficient_evidence", "duplicate", "operator_judgement", "other"], "default": "operator_judgement", "description": "Optional internal classification; never a user-facing reason selector. The server supplies the default and preserves the exact operator_note."},
+        "operator_note": {"type": "string", "maxLength": 2000, "description": "The optional custom text typed by the operator; no preset answers or generated replacement."},
+        "dismissed_evidence_ids": {"$ref": "#/$defs/evidenceIds"}
+      }
+    },
+    "resolveConcernPayload": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "concern_id", "concern_revision", "evaluated_predicate_id", "evaluated_evidence_ids", "causal_event_ids"],
+      "properties": {
+        "kind": {"const": "concern.resolve"},
+        "concern_id": {"$ref": "#/$defs/opaqueId"},
+        "concern_revision": {"type": "integer", "minimum": 1},
+        "evaluated_predicate_id": {"$ref": "#/$defs/opaqueId"},
+        "evaluated_evidence_ids": {"$ref": "#/$defs/evidenceIds"},
+        "causal_event_ids": {"type": "array", "minItems": 1, "maxItems": 100, "items": {"$ref": "#/$defs/opaqueId"}}
+      },
+      "description": "Only a server predicate evaluation after a relevant accepted event may create this command."
+    },
+    "classificationChange": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["sku_id", "sku_revision", "before", "after", "evidence_ids"],
+      "properties": {
+        "sku_id": {"$ref": "#/$defs/opaqueId"},
+        "sku_revision": {"type": "integer", "minimum": 1},
+        "before": {"$ref": "#/$defs/classificationState"},
+        "after": {"$ref": "#/$defs/classificationState"},
+        "evidence_ids": {"$ref": "#/$defs/evidenceIds"}
+      }
+    },
+    "classificationState": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["category_id", "family_id"],
+      "properties": {
+        "category_id": {"type": ["string", "null"], "maxLength": 128},
+        "family_id": {"type": ["string", "null"], "maxLength": 128}
+      }
+    },
+    "classificationPayload": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "proposal_id", "changes", "operator_reason"],
+      "properties": {
+        "kind": {"const": "catalogue.classification.apply"},
+        "proposal_id": {"$ref": "#/$defs/opaqueId"},
+        "changes": {"type": "array", "minItems": 1, "maxItems": 500, "items": {"$ref": "#/$defs/classificationChange"}},
+        "operator_reason": {"type": "string", "minLength": 1, "maxLength": 2000}
+      }
+    },
+    "classificationUndoPayload": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "undo_of_event_id", "changes", "operator_reason"],
+      "properties": {
+        "kind": {"const": "catalogue.classification.undo"},
+        "undo_of_event_id": {"$ref": "#/$defs/opaqueId"},
+        "changes": {"type": "array", "minItems": 1, "maxItems": 500, "items": {"$ref": "#/$defs/classificationChange"}},
+        "operator_reason": {"type": "string", "minLength": 1, "maxLength": 2000}
+      }
+    },
+    "createSkuPayload": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "interpretation_proposal_id", "source_evidence_ids", "display_description", "family_id", "attribute_review_ids", "visual_description_revision"],
+      "properties": {
+        "kind": {"const": "product_sku.create_from_review"},
+        "interpretation_proposal_id": {"$ref": "#/$defs/opaqueId"},
+        "source_evidence_ids": {"$ref": "#/$defs/evidenceIds"},
+        "display_description": {"type": "string", "minLength": 1, "maxLength": 500},
+        "family_id": {"type": ["string", "null"], "maxLength": 128},
+        "attribute_review_ids": {"type": "array", "maxItems": 100, "items": {"$ref": "#/$defs/opaqueId"}},
+        "visual_description_revision": {"$ref": "#/$defs/opaqueId"}
+      },
+      "description": "This intentionally contains no price, stock, lot, or artwork association. Those remain independent domain facts."
+    },
+    "artworkRequestPayload": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "sku_id", "sku_revision", "visual_description_revision", "style_profile_id", "style_version", "budget_authorization_id"],
+      "properties": {
+        "kind": {"const": "artwork.request"},
+        "sku_id": {"$ref": "#/$defs/opaqueId"},
+        "sku_revision": {"type": "integer", "minimum": 1},
+        "visual_description_revision": {"$ref": "#/$defs/opaqueId"},
+        "style_profile_id": {"$ref": "#/$defs/opaqueId"},
+        "style_version": {"type": "string", "minLength": 1, "maxLength": 128},
+        "budget_authorization_id": {"$ref": "#/$defs/opaqueId"}
+      }
+    },
+    "artworkReviewPayload": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "image_job_id", "candidate_asset_id", "sku_id", "sku_revision", "decision"],
+      "properties": {
+        "kind": {"const": "artwork.review"},
+        "image_job_id": {"$ref": "#/$defs/opaqueId"},
+        "candidate_asset_id": {"$ref": "#/$defs/opaqueId"},
+        "sku_id": {"$ref": "#/$defs/opaqueId"},
+        "sku_revision": {"type": "integer", "minimum": 1},
+        "decision": {"enum": ["approve", "reject"]},
+        "reason": {"type": "string", "maxLength": 2000}
+      }
+    },
+    "notificationDispatchPayload": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "supply_assessment_proposal_id", "draft_id", "draft_revision", "channel", "recipient_ids", "body_hash"],
+      "properties": {
+        "kind": {"const": "notification.dispatch"},
+        "supply_assessment_proposal_id": {"$ref": "#/$defs/opaqueId"},
+        "draft_id": {"$ref": "#/$defs/opaqueId"},
+        "draft_revision": {"type": "integer", "minimum": 1},
+        "channel": {"enum": ["email", "whatsapp", "sms", "other"]},
+        "recipient_ids": {"type": "array", "minItems": 1, "maxItems": 10000, "items": {"$ref": "#/$defs/opaqueId"}},
+        "body_hash": {"$ref": "#/$defs/hash"}
+      },
+      "description": "The authorized dispatch handler resolves addresses, consent and suppression state. It stores one receipt per recipient."
+    },
+    "commandReceipt": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["command_id", "status", "event_ids", "aggregate_revisions", "accepted_at"],
+      "properties": {
+        "command_id": {"$ref": "#/$defs/opaqueId"},
+        "status": {"enum": ["accepted", "already_applied", "rejected", "blocked", "conflict"]},
+        "event_ids": {"type": "array", "items": {"$ref": "#/$defs/opaqueId"}},
+        "aggregate_revisions": {"type": "array", "items": {"$ref": "#/$defs/revisionPrecondition"}},
+        "accepted_at": {"type": "string", "format": "date-time"}
+      }
+    }
+  }
+}

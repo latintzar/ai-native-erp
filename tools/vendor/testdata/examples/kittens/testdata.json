@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "product": "kitten-sitting",
+  "adapter": ["python3", "adapter.py"],
+  "environments": ["development"],
+  "effects": "capture",
+  "scenarios": {
+    "two-households": "scenarios/two-households.json"
+  }
+}

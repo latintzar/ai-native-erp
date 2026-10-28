@@ -1,0 +1,515 @@
+{
+  "observedAt": "2026-09-09",
+  "environment": "demo/development",
+  "target": "cedar-preview",
+  "sourceCommit": "693055d3913001809808ae72e1fc5bfda9b64402",
+  "previousSourceCommit": "703500b1c9f1c5c52dbca84b41a93818e9d48fef",
+  "sourcePullRequest": "https://github.com/Rocoto-Labs/rocoto/pull/81",
+  "packageSha256": "a48f2de1744054797b4c6667d592ce7c5f71148ada797c7195b2f9185dbf6bf2",
+  "change": "Outlined WhatsApp Business and WhatsApp choices with separate app-store links; regular users confirm their chats are in Business before opening Meta. One privacy disclosure.",
+  "publication": {
+    "method": "native package/publish through commissioned constrained receiver",
+    "host": "rocoto-staging",
+    "publisherExitStatus": 0,
+    "mainMerged": false,
+    "maintainedServicePidsBeforeAndAfter": {
+      "rocoto-kit-runtime": 66172,
+      "rocoto-staging": 66165,
+      "albaranes-bridge": 65534
+    },
+    "maintainedCaddyfileSha256BeforeAndAfter": "6c9f548a761bb8469ac18de5bfc34b8de79709f9fed880822f66b6a65fa7fc22",
+    "activeRelease": "releases/693055d3913001809808ae72e1fc5bfda9b64402",
+    "providerConfigurationPreserved": true,
+    "providerConfigurationPreservationEvidence": "Source-only constrained publisher; target manifest, dependencies, provider environment and private state configuration unchanged."
+  },
+  "validation": {
+    "makeGates": "passed",
+    "makeTest": "passed",
+    "backendTests": 297,
+    "mockApiTests": 258,
+    "cedarBackendTests": 82,
+    "repositoryUnitTests": 101,
+    "javascriptTestFiles": 8,
+    "existingSkippedTests": 5,
+    "appChoiceRedEvidence": "/tmp/cedar-app-choice-red.log",
+    "syntheticReceipt": "/tmp/cedar-app-choice-synthetic/receipt.json",
+    "syntheticSourceMatchesPublishedCommit": true,
+    "finalCopyTypeThemeCopyRuffLinkChecks": "passed",
+    "desktopAndPhoneImagesReviewed": true
+  },
+  "syntheticBrowser": {
+    "providerPosture": "synthetic intercepted API and SDK; no provider calls",
+    "sourceHead": "b7083d7ffc28a301b11e1fadd3d5758fac1b8bda",
+    "bundleSha256": {
+      "assets/index-zExrnAIw.js": "695206cd10740b65c475f27c27c66d03ac4416a3d99aaa5359cf35d86c1a119d"
+    },
+    "screenshots": [
+      "1600-session-retry",
+      "1600-meta-error-retry",
+      "1600-desktop-customer-setup",
+      "1600-desktop-download",
+      "1600-desktop-transfer",
+      "390-phone-customer-setup",
+      "390-phone-download",
+      "390-phone-transfer",
+      "320-phone-customer-setup",
+      "320-phone-download",
+      "320-phone-transfer",
+      "390-phone-dialog-customer-setup",
+      "390-phone-dialog-download",
+      "390-phone-dialog-transfer",
+      "320-desktop-customer-setup",
+      "320-desktop-download",
+      "320-desktop-transfer",
+      "1024-ipad-customer-setup",
+      "1024-ipad-download",
+      "1024-ipad-transfer",
+      "390-android-customer-setup",
+      "390-android-download",
+      "390-android-transfer",
+      "390-unknown-device-fallback",
+      "390-cookie-retry",
+      "1600-blocked-setup",
+      "390-blocked-setup",
+      "320-blocked-setup",
+      "1600-ready-setup",
+      "390-ready-setup",
+      "320-ready-setup",
+      "320-regular-guidance",
+      "1600-dialog",
+      "390-dialog",
+      "320-dialog",
+      "320-verified-account-interrupted",
+      "320-conversation-list",
+      "320-chat-latest",
+      "320-chat-updated",
+      "1600-chat-updated",
+      "390-chat-updated",
+      "390-same-second-update",
+      "390-expired-account-cleared"
+    ],
+    "decodedTransferQr": "https://cedar-demo.soyrocoto.com/download/whatsapp-business",
+    "interceptedDownloadTargets": [
+      "https://play.google.com/store/apps/details?id=com.whatsapp.w4b",
+      "https://play.google.com/store/apps/details?id=com.whatsapp",
+      "https://apps.apple.com/app/whatsapp-business/id1386412985",
+      "https://apps.apple.com/app/whatsapp-messenger/id310633997",
+      "https://cedar-demo.soyrocoto.com/download/whatsapp-business",
+      "https://apps.apple.com/app/whatsapp-business/id1386412985",
+      "https://apps.apple.com/app/whatsapp-messenger/id310633997",
+      "https://cedar-demo.soyrocoto.com/download/whatsapp-business",
+      "https://apps.apple.com/app/whatsapp-business/id1386412985",
+      "https://apps.apple.com/app/whatsapp-messenger/id310633997",
+      "https://cedar-demo.soyrocoto.com/download/whatsapp-business",
+      "https://play.google.com/store/apps/details?id=com.whatsapp.w4b",
+      "https://play.google.com/store/apps/details?id=com.whatsapp",
+      "https://apps.apple.com/app/whatsapp-business/id1386412985",
+      "https://apps.apple.com/app/whatsapp-messenger/id310633997",
+      "https://cedar-demo.soyrocoto.com/download/whatsapp-business",
+      "https://play.google.com/store/apps/details?id=com.whatsapp.w4b",
+      "https://play.google.com/store/apps/details?id=com.whatsapp",
+      "https://cedar-demo.soyrocoto.com/download/whatsapp-business",
+      "https://apps.apple.com/app/whatsapp-business/id1386412985",
+      "https://play.google.com/store/apps/details?id=com.whatsapp.w4b"
+    ],
+    "appStoreLinks": [
+      {
+        "device": "desktop",
+        "link": "business-store-link",
+        "destination": "https://play.google.com/store/apps/details?id=com.whatsapp.w4b"
+      },
+      {
+        "device": "desktop",
+        "link": "whatsapp-store-link",
+        "destination": "https://play.google.com/store/apps/details?id=com.whatsapp"
+      },
+      {
+        "device": "phone",
+        "link": "business-store-link",
+        "destination": "https://apps.apple.com/app/whatsapp-business/id1386412985"
+      },
+      {
+        "device": "phone",
+        "link": "whatsapp-store-link",
+        "destination": "https://apps.apple.com/app/whatsapp-messenger/id310633997"
+      },
+      {
+        "device": "phone",
+        "link": "business-store-link",
+        "destination": "https://apps.apple.com/app/whatsapp-business/id1386412985"
+      },
+      {
+        "device": "phone",
+        "link": "whatsapp-store-link",
+        "destination": "https://apps.apple.com/app/whatsapp-messenger/id310633997"
+      },
+      {
+        "device": "phone",
+        "link": "business-store-link",
+        "destination": "https://apps.apple.com/app/whatsapp-business/id1386412985"
+      },
+      {
+        "device": "phone",
+        "link": "whatsapp-store-link",
+        "destination": "https://apps.apple.com/app/whatsapp-messenger/id310633997"
+      },
+      {
+        "device": "desktop",
+        "link": "business-store-link",
+        "destination": "https://play.google.com/store/apps/details?id=com.whatsapp.w4b"
+      },
+      {
+        "device": "desktop",
+        "link": "whatsapp-store-link",
+        "destination": "https://play.google.com/store/apps/details?id=com.whatsapp"
+      },
+      {
+        "device": "ipad",
+        "link": "business-store-link",
+        "destination": "https://apps.apple.com/app/whatsapp-business/id1386412985"
+      },
+      {
+        "device": "ipad",
+        "link": "whatsapp-store-link",
+        "destination": "https://apps.apple.com/app/whatsapp-messenger/id310633997"
+      },
+      {
+        "device": "android",
+        "link": "business-store-link",
+        "destination": "https://play.google.com/store/apps/details?id=com.whatsapp.w4b"
+      },
+      {
+        "device": "android",
+        "link": "whatsapp-store-link",
+        "destination": "https://play.google.com/store/apps/details?id=com.whatsapp"
+      }
+    ],
+    "localImagePaths": [
+      "/assets/whatsapp-business-xHcdpNNT.webp",
+      "/assets/whatsapp-glyph-IGOQMY3b.png",
+      "/brand/rocoto-mark.svg"
+    ],
+    "sdkChoices": [
+      {
+        "gesture": "Business click",
+        "setup": {}
+      },
+      {
+        "gesture": "Business retry",
+        "setup": {}
+      },
+      {
+        "gesture": "Business Enter",
+        "setup": {}
+      },
+      {
+        "gesture": "confirmed transfer click",
+        "setup": {}
+      }
+    ],
+    "checks": [
+      "browser session failure/retry before state and SDK",
+      "every entry including preview opens actual customer setup without an access code",
+      "Meta popup requires a synchronous user click",
+      "two app choices with bundled icons and no Cedar phone entry",
+      "Business choice passes empty setup; Meta owns account and phone selection",
+      "app-store sublinks have separate keyboard focus and preserve setup without SDK login",
+      "provider error/cancel returns to app choices without code/connect/history writes",
+      "cookie rejection bounded renewal and explicit retry",
+      "verified account state recovered after provider setup error",
+      "long connection pauses polling and discards an older in-flight 401 during cookie rotation",
+      "verified browser account survives reload",
+      "expired account clears visible history before bootstrap retry",
+      "blocked/ready setup",
+      "separate download and phone-transfer steps with one primary action",
+      "regular app choice guides transfer without account classification or Meta login",
+      "explicit transfer confirmation launches Meta; direct URL/reload preserves only the public step",
+      "Meta owns history consent; connection request enables eligible history",
+      "step heading focus and secondary back navigation",
+      "rendered desktop QR decodes to device download route, including narrow desktop",
+      "phone and desktop-mode iPad smart-download opens a new tab and advances",
+      "unknown-device fallback offers QR and correct Business store choices without a redirect loop",
+      "1600/390/320 widths",
+      "dialog close/reopen",
+      "cursor pagination",
+      "open-chat refresh",
+      "older-page retention",
+      "media enrichment",
+      "pagination failure/retry",
+      "same-second opaque cursor/media reconciliation",
+      "44px phone buttons",
+      "empty browser storage",
+      "zero external requests",
+      "zero page errors"
+    ],
+    "sourceFiles": [
+      {
+        "path": "app/src/prototypes/cedar/connections/browser-drive.py",
+        "sha256": "4c5a46a21583674475447d63f7da5e6c44d49629fc0e64b11e2ea7993f6c4fae"
+      },
+      {
+        "path": "app/src/prototypes/cedar/connections/app.tsx",
+        "sha256": "50fc8b3bc7595e2bceb7ac59ba746d2bd6519702e0f99a0c2390a94f3c46217f"
+      },
+      {
+        "path": "app/src/prototypes/cedar/connections/meta.ts",
+        "sha256": "90d55ecb734925df4662663dc31333dfb137932ce4239d8473be01515384ec42"
+      },
+      {
+        "path": "app/src/prototypes/cedar/connections/hooks.ts",
+        "sha256": "ece2b726ef413fdbb8f5fe3c1bb6dd85b606c6a3fe663228677dafc73f5dfa16"
+      },
+      {
+        "path": "app/src/prototypes/cedar/connections/api.ts",
+        "sha256": "c94110e3ed3096d2e2dfd16917028ee1849a1c845daa558a9adb0138f7464d73"
+      }
+    ]
+  },
+  "browser": {
+    "url": "https://cedar-demo.soyrocoto.com",
+    "environment": "demo",
+    "expectedSourceCommit": "693055d3913001809808ae72e1fc5bfda9b64402",
+    "checkedAt": "2026-09-09T19:11:19.791519+00:00",
+    "providerPosture": "Real SDK; anonymous session bootstrap only. Meta authorization and account writes blocked.",
+    "widths": [
+      1600,
+      390,
+      320
+    ],
+    "deviceCases": [
+      "desktop1600",
+      "phone390",
+      "phone320",
+      "desktop320"
+    ],
+    "screenshots": [
+      "/tmp/cedar-demo-live/693055d3-20260909T191119Z/setup-1600.png",
+      "/tmp/cedar-demo-live/693055d3-20260909T191119Z/setup-1600-privacy.png",
+      "/tmp/cedar-demo-live/693055d3-20260909T191119Z/setup-1600-download.png",
+      "/tmp/cedar-demo-live/693055d3-20260909T191119Z/setup-1600-app-stores.png",
+      "/tmp/cedar-demo-live/693055d3-20260909T191119Z/setup-1600-transfer.png",
+      "/tmp/cedar-demo-live/693055d3-20260909T191119Z/setup-1600-transfer-reloaded.png",
+      "/tmp/cedar-demo-live/693055d3-20260909T191119Z/dialog-1600.png",
+      "/tmp/cedar-demo-live/693055d3-20260909T191119Z/dialog-1600-privacy.png",
+      "/tmp/cedar-demo-live/693055d3-20260909T191119Z/dialog-1600-download.png",
+      "/tmp/cedar-demo-live/693055d3-20260909T191119Z/dialog-1600-app-stores.png",
+      "/tmp/cedar-demo-live/693055d3-20260909T191119Z/dialog-1600-transfer.png",
+      "/tmp/cedar-demo-live/693055d3-20260909T191119Z/dialog-1600-transfer-reloaded.png",
+      "/tmp/cedar-demo-live/693055d3-20260909T191119Z/setup-390.png",
+      "/tmp/cedar-demo-live/693055d3-20260909T191119Z/setup-390-privacy.png",
+      "/tmp/cedar-demo-live/693055d3-20260909T191119Z/setup-390-download.png",
+      "/tmp/cedar-demo-live/693055d3-20260909T191119Z/setup-390-app-stores.png",
+      "/tmp/cedar-demo-live/693055d3-20260909T191119Z/setup-390-transfer.png",
+      "/tmp/cedar-demo-live/693055d3-20260909T191119Z/setup-390-transfer-reloaded.png",
+      "/tmp/cedar-demo-live/693055d3-20260909T191119Z/dialog-390.png",
+      "/tmp/cedar-demo-live/693055d3-20260909T191119Z/dialog-390-privacy.png",
+      "/tmp/cedar-demo-live/693055d3-20260909T191119Z/dialog-390-download.png",
+      "/tmp/cedar-demo-live/693055d3-20260909T191119Z/dialog-390-app-stores.png",
+      "/tmp/cedar-demo-live/693055d3-20260909T191119Z/dialog-390-transfer.png",
+      "/tmp/cedar-demo-live/693055d3-20260909T191119Z/dialog-390-transfer-reloaded.png",
+      "/tmp/cedar-demo-live/693055d3-20260909T191119Z/setup-320.png",
+      "/tmp/cedar-demo-live/693055d3-20260909T191119Z/setup-320-privacy.png",
+      "/tmp/cedar-demo-live/693055d3-20260909T191119Z/setup-320-download.png",
+      "/tmp/cedar-demo-live/693055d3-20260909T191119Z/setup-320-app-stores.png",
+      "/tmp/cedar-demo-live/693055d3-20260909T191119Z/setup-320-transfer.png",
+      "/tmp/cedar-demo-live/693055d3-20260909T191119Z/setup-320-transfer-reloaded.png",
+      "/tmp/cedar-demo-live/693055d3-20260909T191119Z/dialog-320.png",
+      "/tmp/cedar-demo-live/693055d3-20260909T191119Z/dialog-320-privacy.png",
+      "/tmp/cedar-demo-live/693055d3-20260909T191119Z/dialog-320-download.png",
+      "/tmp/cedar-demo-live/693055d3-20260909T191119Z/dialog-320-app-stores.png",
+      "/tmp/cedar-demo-live/693055d3-20260909T191119Z/dialog-320-transfer.png",
+      "/tmp/cedar-demo-live/693055d3-20260909T191119Z/dialog-320-transfer-reloaded.png",
+      "/tmp/cedar-demo-live/693055d3-20260909T191119Z/setup-320-desktop.png",
+      "/tmp/cedar-demo-live/693055d3-20260909T191119Z/setup-320-desktop-privacy.png",
+      "/tmp/cedar-demo-live/693055d3-20260909T191119Z/setup-320-desktop-download.png",
+      "/tmp/cedar-demo-live/693055d3-20260909T191119Z/setup-320-desktop-app-stores.png",
+      "/tmp/cedar-demo-live/693055d3-20260909T191119Z/setup-320-desktop-transfer.png",
+      "/tmp/cedar-demo-live/693055d3-20260909T191119Z/setup-320-desktop-transfer-reloaded.png",
+      "/tmp/cedar-demo-live/693055d3-20260909T191119Z/dialog-320-desktop.png",
+      "/tmp/cedar-demo-live/693055d3-20260909T191119Z/dialog-320-desktop-privacy.png",
+      "/tmp/cedar-demo-live/693055d3-20260909T191119Z/dialog-320-desktop-download.png",
+      "/tmp/cedar-demo-live/693055d3-20260909T191119Z/dialog-320-desktop-app-stores.png",
+      "/tmp/cedar-demo-live/693055d3-20260909T191119Z/dialog-320-desktop-transfer.png",
+      "/tmp/cedar-demo-live/693055d3-20260909T191119Z/dialog-320-desktop-transfer-reloaded.png",
+      "/tmp/cedar-demo-live/693055d3-20260909T191119Z/scanned-phone-download-390.png",
+      "/tmp/cedar-demo-live/693055d3-20260909T191119Z/scanned-phone-transfer-390.png",
+      "/tmp/cedar-demo-live/693055d3-20260909T191119Z/scanned-phone-390-transfer-reloaded.png"
+    ],
+    "pageErrorCount": 0,
+    "sessionBootstrapRequests": 18,
+    "blockedRequests": [],
+    "externalGetPaths": [
+      "https://connect.facebook.net/en_US/sdk.js",
+      "https://connect.facebook.net/en_US/bundle/sdk.js/",
+      "https://connect.facebook.net/app_config/json/1427034652248456/",
+      "https://connect.facebook.net/en_US/sdk.js",
+      "https://connect.facebook.net/en_US/bundle/sdk.js/",
+      "https://connect.facebook.net/en_US/sdk.js",
+      "https://connect.facebook.net/en_US/bundle/sdk.js/",
+      "https://connect.facebook.net/en_US/sdk.js",
+      "https://connect.facebook.net/en_US/bundle/sdk.js/",
+      "https://connect.facebook.net/en_US/sdk.js",
+      "https://connect.facebook.net/en_US/bundle/sdk.js/",
+      "https://connect.facebook.net/app_config/json/1427034652248456/",
+      "https://connect.facebook.net/en_US/sdk.js",
+      "https://connect.facebook.net/en_US/bundle/sdk.js/",
+      "https://connect.facebook.net/en_US/sdk.js",
+      "https://connect.facebook.net/en_US/bundle/sdk.js/",
+      "https://connect.facebook.net/en_US/sdk.js",
+      "https://connect.facebook.net/en_US/bundle/sdk.js/",
+      "https://connect.facebook.net/en_US/sdk.js",
+      "https://connect.facebook.net/en_US/bundle/sdk.js/",
+      "https://connect.facebook.net/app_config/json/1427034652248456/",
+      "https://connect.facebook.net/en_US/sdk.js",
+      "https://connect.facebook.net/en_US/bundle/sdk.js/",
+      "https://connect.facebook.net/en_US/sdk.js",
+      "https://connect.facebook.net/en_US/bundle/sdk.js/",
+      "https://connect.facebook.net/en_US/sdk.js",
+      "https://connect.facebook.net/en_US/bundle/sdk.js/",
+      "https://connect.facebook.net/en_US/sdk.js",
+      "https://connect.facebook.net/en_US/bundle/sdk.js/",
+      "https://connect.facebook.net/app_config/json/1427034652248456/",
+      "https://connect.facebook.net/en_US/sdk.js",
+      "https://connect.facebook.net/en_US/bundle/sdk.js/",
+      "https://connect.facebook.net/en_US/sdk.js",
+      "https://connect.facebook.net/en_US/bundle/sdk.js/",
+      "https://connect.facebook.net/en_US/sdk.js",
+      "https://connect.facebook.net/en_US/bundle/sdk.js/",
+      "https://connect.facebook.net/en_US/sdk.js",
+      "https://connect.facebook.net/en_US/bundle/sdk.js/",
+      "https://connect.facebook.net/app_config/json/1427034652248456/",
+      "https://connect.facebook.net/en_US/sdk.js",
+      "https://connect.facebook.net/en_US/bundle/sdk.js/"
+    ],
+    "mobileStoreHandoffs": [
+      {
+        "from": "https://cedar-demo.soyrocoto.com/download/whatsapp-business",
+        "status": 302,
+        "to": "https://apps.apple.com/app/whatsapp-business/id1386412985"
+      },
+      {
+        "from": "https://cedar-demo.soyrocoto.com/download/whatsapp-business",
+        "status": 302,
+        "to": "https://apps.apple.com/app/whatsapp-business/id1386412985"
+      },
+      {
+        "from": "https://cedar-demo.soyrocoto.com/download/whatsapp-business",
+        "status": 302,
+        "to": "https://apps.apple.com/app/whatsapp-business/id1386412985"
+      },
+      {
+        "from": "https://cedar-demo.soyrocoto.com/download/whatsapp-business",
+        "status": 302,
+        "to": "https://apps.apple.com/app/whatsapp-business/id1386412985"
+      },
+      {
+        "from": "https://cedar-demo.soyrocoto.com/download/whatsapp-business",
+        "status": 302,
+        "to": "https://apps.apple.com/app/whatsapp-business/id1386412985"
+      }
+    ],
+    "accountProof": "pending customer Meta authorization",
+    "storageKeyNames": {
+      "localStorageKeys": [
+        "fbapc_1427034652248456"
+      ],
+      "sessionStorageKeys": []
+    },
+    "sdkStorageAttribution": "/tmp/cedar-meta-sdk-storage-evidence.json",
+    "storageValuesInspected": false,
+    "cedarBrowserStorageAbsent": true,
+    "decodedQrUrl": "https://cedar-demo.soyrocoto.com/download/whatsapp-business",
+    "transferStepReloadPreservesExplicitMetaAction": true,
+    "asset": {
+      "path": "/assets/index-zExrnAIw.js",
+      "sha256": "695206cd10740b65c475f27c27c66d03ac4416a3d99aaa5359cf35d86c1a119d",
+      "matchesLocalBuild": true
+    },
+    "unboundStateBlank": true,
+    "unboundPrivateEndpoints": 401,
+    "anonymousState": 401,
+    "anonymousConversations": 401,
+    "anonymousHistory": 401,
+    "appleNativeStoreHandoff": {
+      "status": 301,
+      "location": "itms-appss://apps.apple.com/app/whatsapp-business/id1386412985",
+      "physicalDeviceInstallationVerified": false
+    },
+    "cookie": {
+      "name": "__Host-cedar_session",
+      "domain": "cedar-demo.soyrocoto.com",
+      "path": "/",
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Strict"
+    },
+    "actualSdkLoaded": true,
+    "checks": [
+      "HTTPS200 and asset digest matches local build",
+      "Connection, download and transfer steps in page/dialog at1600/390/320; no horizontal overflow",
+      "Actual Meta SDK loads; two app choices have official app-store sibling links and Business icon",
+      "WhatsApp choice opens transfer help; Meta Business launch remains untouched by layout QA",
+      "Transfer readiness CTA is one explicit Meta-launch action; transfer step reload retains URL and keeps Meta unopened",
+      "Cedar checkboxes absent; Meta retains account authorization and history consent",
+      "One Privacy and chat sharing disclosure opens and closes in page and dialog",
+      "Separate download/transfer actions, optional app stores, decoded QR, phone UA navigation, narrow desktop QR and device redirects verified",
+      "Unbound state blank; anonymous and unbound chat APIs401",
+      "Secure host-only HttpOnly SameSiteStrict cookie; only independently attributed Meta SDK cache key",
+      "All non-bootstrap browser POSTs blocked; zero page errors"
+    ]
+  },
+  "metaPopup": {
+    "sourceRevision": "693055d3913001809808ae72e1fc5bfda9b64402",
+    "checkedAt": "2026-09-09T19:11:19.885626+00:00",
+    "scope": "Real customer bootstrap, actual Meta SDK and login popup before credentials or consent",
+    "accountProof": "pending customer Meta authorization",
+    "sessionBootstrapRequests": 1,
+    "blockedRequests": [
+      {
+        "method": "POST",
+        "url": "https://www.facebook.com/ajax/qm/"
+      },
+      {
+        "method": "GET",
+        "url": "https://www.instagram.com/accounts/xuserid/"
+      },
+      {
+        "method": "POST",
+        "url": "https://www.facebook.com/ajax/bz"
+      }
+    ],
+    "pageErrorCount": 0,
+    "actualSdkLoaded": true,
+    "unboundStateBlank": true,
+    "storageKeyNames": {
+      "localStorageKeys": [
+        "fbapc_1427034652248456"
+      ],
+      "sessionStorageKeys": []
+    },
+    "sdkStorageAttribution": "/tmp/cedar-meta-sdk-storage-evidence.json",
+    "storageValuesInspected": false,
+    "cedarBrowserStorageAbsent": true,
+    "popupUrl": "https://www.facebook.com/login.php",
+    "popupHost": "www.facebook.com",
+    "visibleRecognizedMessages": [
+      "log into facebook",
+      "password",
+      "cookies"
+    ],
+    "loginFieldsPresent": true,
+    "stoppedBeforeFacebookLogin": true,
+    "stoppedBeforeNumberSelectionAndConsent": true,
+    "screenshot": "/tmp/cedar-demo-live/693055d3-meta-popup-20260909T191119Z/facebook-login-empty.png",
+    "sessionCookieFlagsVerified": true,
+    "stoppedBeforeAuthorizationCode": true
+  },
+  "acceptancePending": [
+    "Customer completes actual Meta authorization and eligible coexistence signup",
+    "Selected-account subscription and callback routing readback",
+    "Actual permitted history import, incoming messages and persistence",
+    "Newly transferred regular-to-Business account eligibility and availability of its older chats",
+    "Physical phone installation and chat transfer"
+  ],
+  "providerScope": "Synthetic SDK/API tests and real pre-login browser evidence are distinct; no account authorization, code exchange, subscription or history import performed by this verification."
+}

@@ -1,0 +1,3314 @@
+{
+  "generatedFrom": "Babel AST",
+  "partition": "settings-export-admin",
+  "entries": [
+    {
+      "source": "src/prototypes/cedar/areas/admin/account.tsx",
+      "context": "JSXAttribute > StringLiteral:label",
+      "kind": "literal",
+      "english": "Your name",
+      "spanish": "Tu nombre"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/account.tsx",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "The person this account belongs to.",
+      "spanish": "La persona a la que pertenece esta cuenta."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/account.tsx",
+      "context": "JSXAttribute > StringLiteral:label",
+      "kind": "literal",
+      "english": "What you may do here",
+      "spanish": "Lo que puedes hacer aquí"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/account.tsx",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "${ROLE_LABEL[me.role]} · admin",
+      "spanish": "${ROLE_LABEL[me.role]} · administrador"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/account.tsx",
+      "context": "JSXAttribute > StringLiteral:label",
+      "kind": "literal",
+      "english": "Your phone",
+      "spanish": "Tu teléfono"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/account.tsx",
+      "context": "JSXAttribute > StringLiteral:placeholder",
+      "kind": "literal",
+      "english": "Add a number",
+      "spanish": "Añade un número"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/account.tsx",
+      "context": "JSXAttribute > StringLiteral:label",
+      "kind": "literal",
+      "english": "How you read the app",
+      "spanish": "Cómo lees la aplicación"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/account.tsx",
+      "context": "JSXAttribute > StringLiteral:title",
+      "kind": "literal",
+      "english": "Signing out",
+      "spanish": "Cerrando sesión"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/account.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Sign out",
+      "spanish": "Cerrar sesión"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/agent.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Your agent",
+      "spanish": "Tu agente"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/agent.tsx",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "an hour",
+      "spanish": "una hora"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/agent.tsx",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "half an hour",
+      "spanish": "media hora"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/agent.tsx",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "ten minutes",
+      "spanish": "diez minutos"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/agent.tsx",
+      "context": "ReturnStatement > TemplateLiteral",
+      "kind": "template",
+      "english": "It goes to ${rail} as it comes",
+      "spanish": "Pasa a ${rail} según llega"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/agent.tsx",
+      "context": "ReturnStatement > TemplateLiteral",
+      "kind": "template",
+      "english": "It goes to ${rail} when you press",
+      "spanish": "Pasa a ${rail} cuando lo confirmas"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/agent.tsx",
+      "context": "ObjectProperty > TemplateLiteral",
+      "kind": "template",
+      "english": "When does a delivery note go to ${rail}?",
+      "spanish": "¿Cuándo pasa un albarán a ${rail}?"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/agent.tsx",
+      "context": "ObjectProperty > TemplateLiteral",
+      "kind": "template",
+      "english": "This sets when a delivery note goes to ${rail}. Paper prints when you press.",
+      "spanish": "Esto define cuándo pasa un albarán a ${rail}. El documento se imprime cuando lo confirmas."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/agent.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "As it comes",
+      "spanish": "Según llega"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/agent.tsx",
+      "context": "ObjectProperty > TemplateLiteral",
+      "kind": "template",
+      "english": "It reaches ${rail} the moment Rocoto has read it.",
+      "spanish": "Llega a ${rail} en cuanto Rocoto lo ha leído."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/agent.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "After a margin",
+      "spanish": "Después de un margen"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/agent.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "When you approve it",
+      "spanish": "Cuando lo apruebes"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/agent.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "It goes when you approve it — one by one, or the whole day at once.",
+      "spanish": "Pasa cuando lo apruebas, uno a uno o todo el día de una vez."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/agent.tsx",
+      "context": "ObjectProperty > TemplateLiteral",
+      "kind": "template",
+      "english": "When it goes to ${rail}",
+      "spanish": "Cuándo pasa a ${rail}"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/agent.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Let them go as they come",
+      "spanish": "Déjalos pasar según llegan"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/agent.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Let them go after a margin",
+      "spanish": "Déjalos pasar después de un margen"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/agent.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Keep them under your press",
+      "spanish": "Déjalos pendientes de tu confirmación"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/agent.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Your own house",
+      "spanish": "Tu propia empresa"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/agent.tsx",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "Put it back",
+      "spanish": "Restaurarlo"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/agent.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "delivery notes have gone to",
+      "spanish": "albaranes han pasado a"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/agent.tsx",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "in a single morning",
+      "spanish": "en una sola mañana"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/agent.tsx",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "over ${run.days} mornings",
+      "spanish": "en ${run.days} mañanas"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/agent.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": ", and every\n                  one of them stood as it went.",
+      "spanish": ", y cada uno quedó registrado al pasar."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/agent.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Choose customers",
+      "spanish": "Elige clientes"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/agent.tsx",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "Everyone in your book",
+      "spanish": "Todas las cuentas de tu registro"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/agent.tsx",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "The customers you name",
+      "spanish": "Los clientes que indiques"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/agent.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Open it to everyone",
+      "spanish": "Ábrelo para todos"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/agent.tsx",
+      "context": "JSXAttribute > StringLiteral:label",
+      "kind": "literal",
+      "english": "Live for",
+      "spanish": "Activo para"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/agent.tsx",
+      "context": "JSXExpressionContainer > TemplateLiteral",
+      "kind": "template",
+      "english": "All ${cast.customers.length} of your accounts",
+      "spanish": "Las ${cast.customers.length} cuentas de tu registro"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/agent.tsx",
+      "context": "JSXExpressionContainer > TemplateLiteral",
+      "kind": "template",
+      "english": "Live for ${liveAccounts.length} of ${COHORT_CAP}",
+      "spanish": "Activo para ${liveAccounts.length} de ${COHORT_CAP}"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/agent.tsx",
+      "context": "JSXExpressionContainer > TemplateLiteral",
+      "kind": "template",
+      "english": "Open ${c.name}",
+      "spanish": "Abrir ${c.name}"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/agent.tsx",
+      "context": "JSXAttribute > StringLiteral:label",
+      "kind": "literal",
+      "english": "The channel they reach",
+      "spanish": "El canal al que llegan"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/agent.tsx",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "Every one of these reaches a person first.",
+      "spanish": "Cada uno de estos llega primero a una persona."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/agent.tsx",
+      "context": "JSXAttribute > StringLiteral:title",
+      "kind": "literal",
+      "english": "How it speaks",
+      "spanish": "Cómo se comunica"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/agent.tsx",
+      "context": "JSXAttribute > StringLiteral:label",
+      "kind": "literal",
+      "english": "The name it answers by",
+      "spanish": "El nombre con el que responde"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/agent.tsx",
+      "context": "JSXAttribute > StringLiteral:sub",
+      "kind": "literal",
+      "english": "What a customer hears on the phone and reads on WhatsApp.",
+      "spanish": "Lo que un cliente oye por teléfono y lee en WhatsApp."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/agent.tsx",
+      "context": "JSXAttribute > StringLiteral:label",
+      "kind": "literal",
+      "english": "The name the agent answers by",
+      "spanish": "El nombre con el que responde el agente"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/agent.tsx",
+      "context": "JSXAttribute > StringLiteral:placeholder",
+      "kind": "literal",
+      "english": "Name it",
+      "spanish": "Ponle un nombre"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/agent.tsx",
+      "context": "JSXAttribute > StringLiteral:sub",
+      "kind": "literal",
+      "english": "The languages it holds a conversation in.",
+      "spanish": "Los idiomas en los que mantiene una conversación."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/agent.tsx",
+      "context": "JSXAttribute > StringLiteral:label",
+      "kind": "literal",
+      "english": "Tú or usted",
+      "spanish": "Tú o usted"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/agent.tsx",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "Pick somebody",
+      "spanish": "Elige a una persona"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/agent.tsx",
+      "context": "JSXAttribute > StringLiteral:label",
+      "kind": "literal",
+      "english": "The line it says meanwhile",
+      "spanish": "El mensaje provisional"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/agent.tsx",
+      "context": "JSXAttribute > StringLiteral:sub",
+      "kind": "literal",
+      "english": "What a customer hears while somebody is being reached.",
+      "spanish": "Lo que oye un cliente mientras se contacta con alguien."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/agent.tsx",
+      "context": "JSXAttribute > StringLiteral:label",
+      "kind": "literal",
+      "english": "Tone and authority",
+      "spanish": "Tono y autoridad"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/agent.tsx",
+      "context": "JSXExpressionContainer > TemplateLiteral",
+      "kind": "template",
+      "english": "The ${CHECK_COUNT_WORD} checks",
+      "spanish": "Las ${CHECK_COUNT_WORD} comprobaciones"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/agent.tsx",
+      "context": "LogicalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "Always on",
+      "spanish": "Siempre activo"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/agent.tsx",
+      "context": "JSXAttribute > StringLiteral:title",
+      "kind": "literal",
+      "english": "Go through them one at a time",
+      "spanish": "Revisarlas una a una"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/agent.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Answer them one by one",
+      "spanish": "Responderlas una a una"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/agent.tsx",
+      "context": "ObjectProperty > TemplateLiteral",
+      "kind": "template",
+      "english": "All ${cast.customers.length} accounts in your book",
+      "spanish": "Las ${cast.customers.length} cuentas de tu registro"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/agent.tsx",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "On its own: ${alone.join(' · ')}",
+      "spanish": "Por su cuenta: ${alone.join(' · ')}"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/agent.tsx",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "Every message reaches a person first",
+      "spanish": "Cada mensaje llega primero a una persona"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/agent.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Turn it on for everyone",
+      "spanish": "Activarlo para todos"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/agent.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Keep the named list",
+      "spanish": "Mantener la lista indicada"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/agent.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "The margin",
+      "spanish": "El margen"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/agent.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "An edit starts the margin again, so the corrected one travels.",
+      "spanish": "Una modificación reinicia el margen para que se envíe la versión corregida."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/app-settings.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "App settings",
+      "spanish": "App ajustes"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/app-settings.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "With prices",
+      "spanish": "Con precios"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/app-settings.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Goods only",
+      "spanish": "Solo mercancía"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/app-settings.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "A4, the full sheet",
+      "spanish": "A4, hoja completa"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/app-settings.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "A5, the compact half",
+      "spanish": "A5, mitad compacta"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/app-settings.tsx",
+      "context": "JSXAttribute > StringLiteral:label",
+      "kind": "literal",
+      "english": "Prices on the delivery note",
+      "spanish": "Precios en el albarán"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/app-settings.tsx",
+      "context": "JSXAttribute > StringLiteral:label",
+      "kind": "literal",
+      "english": "The delivery note’s structure",
+      "spanish": "Estructura del albarán"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/app-settings.tsx",
+      "context": "JSXAttribute > StringLiteral:sub",
+      "kind": "literal",
+      "english": "A full A4 sheet, or the compact A5 half.",
+      "spanish": "Una hoja A4 completa o el formato A5 compacto."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/app-settings.tsx",
+      "context": "JSXAttribute > StringLiteral:title",
+      "kind": "literal",
+      "english": "What reaches you",
+      "spanish": "Lo que te llega"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/app-settings.tsx",
+      "context": "JSXAttribute > StringLiteral:label",
+      "kind": "literal",
+      "english": "The briefing",
+      "spanish": "El resumen"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/app-settings.tsx",
+      "context": "JSXAttribute > StringLiteral:title",
+      "kind": "literal",
+      "english": "Rules you left running",
+      "spanish": "Reglas que has dejado activas"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/app-settings.tsx",
+      "context": "JSXAttribute > StringLiteral:lead",
+      "kind": "literal",
+      "english": "Each rule announces its level daily, into the product’s ledger.",
+      "spanish": "Cada regla anuncia su nivel a diario en el registro del producto."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/app-settings.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Rules are written in Stock, on the product card.",
+      "spanish": "Las reglas se escriben en Existencias, en la ficha del producto."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/app-settings.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "What comes out of the printer",
+      "spanish": "Lo que sale de la impresora"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/app-settings.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "What goes",
+      "spanish": "Lo que se envía"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/app-settings.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "What lands with them",
+      "spanish": "Lo que les llega"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/app-settings.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "At what hour",
+      "spanish": "A qué hora"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/app-settings.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "To whom",
+      "spanish": "A quién"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/app-settings.tsx",
+      "context": "ObjectProperty > TemplateLiteral",
+      "kind": "template",
+      "english": "${m.name} gets the briefing",
+      "spanish": "${m.name} recibe el resumen"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/business.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Your business",
+      "spanish": "Tu empresa"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/business.tsx",
+      "context": "JSXExpressionContainer > TemplateLiteral",
+      "kind": "template",
+      "english": "${name} · open the map",
+      "spanish": "${name} · abrir el mapa"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/business.tsx",
+      "context": "JSXExpressionContainer > TemplateLiteral",
+      "kind": "template",
+      "english": "Where ${name} is",
+      "spanish": "Dónde está ${name}"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/business.tsx",
+      "context": "CallExpression > StringLiteral",
+      "kind": "literal",
+      "english": "Zones covered",
+      "spanish": "Zonas cubiertas"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/business.tsx",
+      "context": "CallExpression > StringLiteral",
+      "kind": "literal",
+      "english": "Rails in and out",
+      "spanish": "Canales de entrada y salida"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/business.tsx",
+      "context": "CallExpression > StringLiteral",
+      "kind": "literal",
+      "english": "Settings Rocoto acts on alone",
+      "spanish": "Ajustes que Rocoto aplica por su cuenta"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/business.tsx",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "Add the registry entry",
+      "spanish": "Añadir el registro"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/business.tsx",
+      "context": "JSXAttribute > StringLiteral:label",
+      "kind": "literal",
+      "english": "The name you trade under",
+      "spanish": "El nombre comercial"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/business.tsx",
+      "context": "JSXAttribute > StringLiteral:placeholder",
+      "kind": "literal",
+      "english": "Add it",
+      "spanish": "Añadir"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/business.tsx",
+      "context": "JSXAttribute > StringLiteral:label",
+      "kind": "literal",
+      "english": "What this house trades in",
+      "spanish": "A qué se dedica esta empresa"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/business.tsx",
+      "context": "JSXAttribute > StringLiteral:title",
+      "kind": "literal",
+      "english": "Fiscal identity",
+      "spanish": "Identificación fiscal"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/business.tsx",
+      "context": "JSXAttribute > StringLiteral:placeholder",
+      "kind": "literal",
+      "english": "Add the address",
+      "spanish": "Añadir la dirección"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/business.tsx",
+      "context": "JSXAttribute > StringLiteral:sub",
+      "kind": "literal",
+      "english": "Where Rocoto’s own invoices are made out to.",
+      "spanish": "Donde se emiten las facturas de Rocoto."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/business.tsx",
+      "context": "JSXAttribute > StringLiteral:title",
+      "kind": "literal",
+      "english": "Getting paid",
+      "spanish": "Cobros"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/business.tsx",
+      "context": "JSXAttribute > StringLiteral:placeholder",
+      "kind": "literal",
+      "english": "Add the account",
+      "spanish": "Añadir la cuenta"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/business.tsx",
+      "context": "JSXAttribute > StringLiteral:title",
+      "kind": "literal",
+      "english": "Public contact",
+      "spanish": "Contacto público"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/business.tsx",
+      "context": "JSXAttribute > StringLiteral:placeholder",
+      "kind": "literal",
+      "english": "Add the number",
+      "spanish": "Añadir el número"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/business.tsx",
+      "context": "JSXAttribute > StringLiteral:title",
+      "kind": "literal",
+      "english": "Your trade",
+      "spanish": "Tu actividad"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/business.tsx",
+      "context": "JSXAttribute > StringLiteral:sub",
+      "kind": "literal",
+      "english": "Catalogue, trazabilidad, and the hour your morning opens.",
+      "spanish": "Catálogo, trazabilidad y la hora a la que empieza tu jornada."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/business.tsx",
+      "context": "JSXAttribute > StringLiteral:label",
+      "kind": "literal",
+      "english": "Delivery Note sign-off",
+      "spanish": "Pie del albarán"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/business.tsx",
+      "context": "JSXAttribute > StringLiteral:sub",
+      "kind": "literal",
+      "english": "The line at the foot of every delivery note you print.",
+      "spanish": "La línea al pie de cada albarán que imprimes."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/business.tsx",
+      "context": "JSXAttribute > StringLiteral:placeholder",
+      "kind": "literal",
+      "english": "Write one",
+      "spanish": "Escribe uno"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/business.tsx",
+      "context": "JSXAttribute > StringLiteral:ariaLabel",
+      "kind": "literal",
+      "english": "What you sell",
+      "spanish": "Lo que vendes"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/business.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Drawn with",
+      "spanish": "Creado con"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/business.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Your morning opens at",
+      "spanish": "Tu mañana empieza a las"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/connections.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "A file you download",
+      "spanish": "Un archivo que descargas"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/connections.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Today’s file",
+      "spanish": "Archivo de hoy"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/connections.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Add a number",
+      "spanish": "Añade un número"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/connections.tsx",
+      "context": "JSXAttribute > StringLiteral:aria-label",
+      "kind": "literal",
+      "english": "The number",
+      "spanish": "El número"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/connections.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Add it",
+      "spanish": "Añadir"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/connections.tsx",
+      "context": "JSXAttribute > StringLiteral:ariaLabel",
+      "kind": "literal",
+      "english": "Who answers this number",
+      "spanish": "Quién responde a este número"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/connections.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Who answers",
+      "spanish": "Quién responde"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/connections.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "hands over on this line reaches them first.",
+      "spanish": "se transfiere en esta línea y llega primero a esa persona."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/connections.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Take this line off",
+      "spanish": "Quitar esta línea"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/data.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Your data",
+      "spanish": "Tus datos"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/data.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "vs. the day before",
+      "spanish": "frente al día anterior"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/data.tsx",
+      "context": "JSXExpressionContainer > TemplateLiteral",
+      "kind": "template",
+      "english": "Open ${r.name}",
+      "spanish": "Abrir ${r.name}"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/data.tsx",
+      "context": "JSXExpressionContainer > TemplateLiteral",
+      "kind": "template",
+      "english": "Open ${reading.name}",
+      "spanish": "Abrir ${reading.name}"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/data.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Your customers",
+      "spanish": "Tus clientes"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/data.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Every account, with what each takes and when.",
+      "spanish": "Todas las cuentas, con lo que pide cada una y cuándo."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/data.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Your orders and delivery notes",
+      "spanish": "Tus pedidos y albaranes"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/data.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Every document, with its lines, lotes and stamps.",
+      "spanish": "Todos los documentos, con sus líneas, lotes y sellos."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/data.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Your conversations",
+      "spanish": "Tus conversaciones"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/data.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "What was said, on WhatsApp and on the phone.",
+      "spanish": "Lo que se dijo por WhatsApp y por teléfono."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/data.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Your catalogue",
+      "spanish": "Tu catálogo"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/data.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Every product, with its code, unit and pack.",
+      "spanish": "Todos los productos, con su código, unidad y envase."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/data.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Your prices",
+      "spanish": "Tus precios"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/data.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Every tarifa and every price, day by day.",
+      "spanish": "Cada tarifa y cada precio, día a día."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/data.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Your suppliers and goods in",
+      "spanish": "Tus proveedores y entradas de mercancía"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/data.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Every lote that landed, with its cost and day.",
+      "spanish": "Cada lote recibido, con su coste y fecha."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/data.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Read as it arrived",
+      "spanish": "Leído tal como llegó"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/data.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Confirmed alone",
+      "spanish": "Confirmados automáticamente"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/data.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Held for a person",
+      "spanish": "Pendientes de una persona"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/data.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Settled after a hold",
+      "spanish": "Resueltos tras una espera"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/data.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Holds somebody has already answered",
+      "spanish": "Pendientes a los que alguien ya ha respondido"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/data.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Put right by hand",
+      "spanish": "Corregidos a mano"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/data.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Every word put back, unit flipped, note written and amount filled, counted by the document it happened on.",
+      "spanish": "Cada palabra corregida, unidad convertida, nota escrita e importe completado, contado por documento."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/data.tsx",
+      "context": "JSXAttribute > StringLiteral:label",
+      "kind": "literal",
+      "english": "Serious mistakes",
+      "spanish": "Errores importantes"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/data.tsx",
+      "context": "JSXAttribute > StringLiteral:value",
+      "kind": "literal",
+      "english": "Yours to set",
+      "spanish": "Los defines tú"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/data.tsx",
+      "context": "JSXAttribute > StringLiteral:title",
+      "kind": "literal",
+      "english": "Your numbers",
+      "spanish": "Tus cifras"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/data.tsx",
+      "context": "JSXAttribute > StringLiteral:label",
+      "kind": "literal",
+      "english": "Today’s takings",
+      "spanish": "Cobros de hoy"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/data.tsx",
+      "context": "JSXAttribute > StringLiteral:label",
+      "kind": "literal",
+      "english": "Orders a day",
+      "spanish": "Pedidos al día"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/data.tsx",
+      "context": "JSXAttribute > StringLiteral:label",
+      "kind": "literal",
+      "english": "Average order value",
+      "spanish": "Valor medio del pedido"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/data.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Your weeks",
+      "spanish": "Tus semanas"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/data.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Your seasons",
+      "spanish": "Tus temporadas"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/data.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "A year of delivery notes draws your seasons, month by month.",
+      "spanish": "Un año de albaranes muestra tus temporadas, mes a mes."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/data.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Bring your history",
+      "spanish": "Importa tu historial"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/data.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Your best customers",
+      "spanish": "Tus mejores clientes"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/data.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "The most profitable",
+      "spanish": "Los más rentables"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/data.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Need attention",
+      "spanish": "Necesitan atención"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/data.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "See all",
+      "spanish": "Ver todos"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/data.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "in your book",
+      "spanish": "en tu registro"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/data.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Read over each customer’s last five delivery notes and the delivery notes of",
+      "spanish": "Leer over cada customer’s last five albaranes y el albaranes de"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/data.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": ". One reading per customer: the one that most wants a call.",
+      "spanish": ". Una lectura por cliente: la que más necesita una llamada."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/data.tsx",
+      "context": "JSXAttribute > StringLiteral:title",
+      "kind": "literal",
+      "english": "Your products",
+      "spanish": "Tus productos"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/data.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "What you sell most",
+      "spanish": "Lo que más vendes"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/data.tsx",
+      "context": "JSXAttribute > StringLiteral:title",
+      "kind": "literal",
+      "english": "Take it all with you",
+      "spanish": "Llévatelo todo"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/data.tsx",
+      "context": "JSXAttribute > StringLiteral:title",
+      "kind": "literal",
+      "english": "How long conversations are kept",
+      "spanish": "Cuánto tiempo se conservan las conversaciones"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/data.tsx",
+      "context": "JSXAttribute > StringLiteral:title",
+      "kind": "literal",
+      "english": "The agreement",
+      "spanish": "El acuerdo"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/data.tsx",
+      "context": "JSXAttribute > StringLiteral:label",
+      "kind": "literal",
+      "english": "Data processing agreement",
+      "spanish": "Acuerdo de tratamiento de datos"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/founder.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "The app runs on this one",
+      "spanish": "La aplicación funciona con este"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/founder.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "The app is here",
+      "spanish": "La aplicación está aquí"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/founder.tsx",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "Open at ${target.name}",
+      "spanish": "Abrir en ${target.name}"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/founder.tsx",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "Open a stage",
+      "spanish": "Abrir una etapa"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/founder.tsx",
+      "context": "JSXExpressionContainer > TemplateLiteral",
+      "kind": "template",
+      "english": "Rocoto opens on ${target.lands}.",
+      "spanish": "Rocoto abre con ${target.lands}."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/founder.tsx",
+      "context": "JSXExpressionContainer > TemplateLiteral",
+      "kind": "template",
+      "english": "Stay at ${standing.name}",
+      "spanish": "Mantener ${standing.name}"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/founder.tsx",
+      "context": "JSXAttribute > StringLiteral:title",
+      "kind": "literal",
+      "english": "Seeded data",
+      "spanish": "Datos iniciales"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/founder.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Reset this house",
+      "spanish": "Restablecer esta empresa"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/founder.tsx",
+      "context": "JSXExpressionContainer > TemplateLiteral",
+      "kind": "template",
+      "english": "${here.house.name} goes back to its seed.",
+      "spanish": "${here.house.name} vuelve a sus datos iniciales."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/founder.tsx",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "Move to ${target.cast.house.name}",
+      "spanish": "Mover a ${target.cast.house.name}"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/founder.tsx",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "Move house",
+      "spanish": "Mover empresa"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/founder.tsx",
+      "context": "JSXExpressionContainer > TemplateLiteral",
+      "kind": "template",
+      "english": "${BRINGS} arrive with it.",
+      "spanish": "${BRINGS} llegan con ella."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/founder.tsx",
+      "context": "JSXExpressionContainer > TemplateLiteral",
+      "kind": "template",
+      "english": "Stay on ${here.house.name}",
+      "spanish": "Mantener ${here.house.name}"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/founder.tsx",
+      "context": "JSXExpressionContainer > TemplateLiteral",
+      "kind": "template",
+      "english": "Reset ${here.house.name}",
+      "spanish": "Restablecer ${here.house.name}"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/founder.tsx",
+      "context": "JSXExpressionContainer > TemplateLiteral",
+      "kind": "template",
+      "english": "${BRINGS} go back to their seeded values.",
+      "spanish": "${BRINGS} vuelven a sus valores iniciales."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/founder.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "The seed takes the place of the work done in this house.",
+      "spanish": "Los datos iniciales sustituyen al trabajo realizado en esta empresa."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/founder.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Return it to its seed",
+      "spanish": "Devolver a los datos iniciales"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/founder.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Keep this house as it is",
+      "spanish": "Mantener esta empresa tal como está"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/geography.tsx",
+      "context": "JSXAttribute > StringLiteral:label",
+      "kind": "literal",
+      "english": "What this house calls this run",
+      "spanish": "Cómo llama esta empresa a esta ruta"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/geography.tsx",
+      "context": "JSXAttribute > StringLiteral:placeholder",
+      "kind": "literal",
+      "english": "Name the run",
+      "spanish": "Nombra la ruta"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/geography.tsx",
+      "context": "JSXAttribute > StringLiteral:label",
+      "kind": "literal",
+      "english": "The vans that run it",
+      "spanish": "Las furgonetas que la recorren"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/geography.tsx",
+      "context": "JSXExpressionContainer > TemplateLiteral",
+      "kind": "template",
+      "english": "${company.zones.length} runs",
+      "spanish": "${company.zones.length} rutas"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/geography.tsx",
+      "context": "JSXAttribute > StringLiteral:label",
+      "kind": "literal",
+      "english": "Smallest order",
+      "spanish": "Pedido mínimo"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/geography.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Delivery days",
+      "spanish": "Días de entrega"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/geography.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "The van goes out",
+      "spanish": "La furgoneta sale"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/geography.tsx",
+      "context": "JSXAttribute > StringLiteral:title",
+      "kind": "literal",
+      "english": "Who holds this ground",
+      "spanish": "Quién lleva esta zona"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/geography.tsx",
+      "context": "JSXAttribute > StringLiteral:sub",
+      "kind": "literal",
+      "english": "The comercial your customers on this run already know.",
+      "spanish": "El comercial que tus clientes de esta ruta ya conocen."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/geography.tsx",
+      "context": "JSXAttribute > StringLiteral:title",
+      "kind": "literal",
+      "english": "Accounts on this run",
+      "spanish": "Cuentas de esta ruta"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/geography.tsx",
+      "context": "JSXExpressionContainer > TemplateLiteral",
+      "kind": "template",
+      "english": "Open ${c.name}",
+      "spanish": "Abrir ${c.name}"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/geography.tsx",
+      "context": "JSXAttribute > StringLiteral:sub",
+      "kind": "literal",
+      "english": "On this run.",
+      "spanish": "En esta ruta."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/geography.tsx",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "Truck ${z.trucks[0]}",
+      "spanish": "Camión ${z.trucks[0]}"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/geography.tsx",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "Trucks ${z.trucks.join(' and ')}",
+      "spanish": "Camiones ${z.trucks.join(' and ')}"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/geography.tsx",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "Trucks ${z.trucks.join(' · ')}",
+      "spanish": "Camiones ${z.trucks.join(' · ')}"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/operations.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "The hours Rocoto gives a customer who asks.",
+      "spanish": "Los horarios que Rocoto da a un cliente que pregunta."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/operations.tsx",
+      "context": "JSXAttribute > StringLiteral:title",
+      "kind": "literal",
+      "english": "Your hours",
+      "spanish": "Tus horarios"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/operations.tsx",
+      "context": "JSXAttribute > StringLiteral:label",
+      "kind": "literal",
+      "english": "Orders for tomorrow",
+      "spanish": "Pedidos para mañana"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/operations.tsx",
+      "context": "JSXExpressionContainer > TemplateLiteral",
+      "kind": "template",
+      "english": "The van loads at ${loadHour(company.hours.warehouse)}. Later orders go out the morning after.",
+      "spanish": "La furgoneta carga a las ${loadHour(company.hours.warehouse)}. Los pedidos posteriores salen a la mañana siguiente."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/operations.tsx",
+      "context": "JSXAttribute > StringLiteral:label",
+      "kind": "literal",
+      "english": "The hour you stop taking tomorrow’s orders",
+      "spanish": "La hora a la que dejas de aceptar pedidos para mañana"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/operations.tsx",
+      "context": "JSXAttribute > StringLiteral:title",
+      "kind": "literal",
+      "english": "When you go out",
+      "spanish": "Cuándo sales"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/operations.tsx",
+      "context": "JSXAttribute > StringLiteral:label",
+      "kind": "literal",
+      "english": "Days by zone",
+      "spanish": "Días por zona"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/operations.tsx",
+      "context": "JSXAttribute > StringLiteral:sub",
+      "kind": "literal",
+      "english": "Set in Geography, on each zone’s own band.",
+      "spanish": "Se configura en Geografía, en la sección de cada zona."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/operations.tsx",
+      "context": "JSXExpressionContainer > TemplateLiteral",
+      "kind": "template",
+      "english": "${company.zones.length} zones",
+      "spanish": "${company.zones.length} zonas"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/operations.tsx",
+      "context": "JSXAttribute > StringLiteral:title",
+      "kind": "literal",
+      "english": "The calls you make once",
+      "spanish": "Las decisiones que tomas una vez"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/operations.tsx",
+      "context": "JSXAttribute > StringLiteral:label",
+      "kind": "literal",
+      "english": "What goes out instead",
+      "spanish": "Lo que se aplica"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/operations.tsx",
+      "context": "JSXAttribute > StringLiteral:label",
+      "kind": "literal",
+      "english": "How much Rocoto answers alone",
+      "spanish": "Cuánto responde Rocoto por su cuenta"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/operations.tsx",
+      "context": "JSXAttribute > StringLiteral:value",
+      "kind": "literal",
+      "english": "Your agent",
+      "spanish": "Tu agente"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/operations.tsx",
+      "context": "JSXAttribute > StringLiteral:title",
+      "kind": "literal",
+      "english": "Your back office",
+      "spanish": "Tu oficina"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/operations.tsx",
+      "context": "JSXAttribute > StringLiteral:label",
+      "kind": "literal",
+      "english": "Which system it reaches",
+      "spanish": "A qué sistema llega"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/operations.tsx",
+      "context": "JSXAttribute > StringLiteral:ariaLabel",
+      "kind": "literal",
+      "english": "How the house runs",
+      "spanish": "Cómo funciona la empresa"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/operations.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Your call, made once. Rocoto carries it out on every order it touches.",
+      "spanish": "Tu decisión, tomada una vez. Rocoto la aplica a cada pedido que gestiona."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "JSXExpressionContainer > TemplateLiteral",
+      "kind": "template",
+      "english": "${used} of ${bundle} orders used this month",
+      "spanish": "${used} de ${bundle} pedidos utilizados este mes"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "ArrayExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "Made out to   ${company.legalName}",
+      "spanish": "Made out a ${company.legalName}"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "ArrayExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "CIF           ${company.taxId}",
+      "spanish": "CIF ${company.taxId}"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "ArrayExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "Billed at     ${company.billingAddress}",
+      "spanish": "Billed a ${company.billingAddress}"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "ArrayExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "Term          ${inv.period}",
+      "spanish": "Term ${inv.period}"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "ArrayExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "Rate          ${euros(band.rate)} /mo · ${cents(band.perOrder)} an order",
+      "spanish": "Rate ${euros(band.rate)} /mo · ${cents(band.perOrder)} an pedido"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "ArrayExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "People        ${company.members.length} on the account",
+      "spanish": "People ${company.members.length} en la cuenta"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "3 months",
+      "spanish": "3 meses"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "ObjectProperty > TemplateLiteral",
+      "kind": "template",
+      "english": "${company.members.length} on the account",
+      "spanish": "${company.members.length} en la cuenta"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Per order",
+      "spanish": "Por pedido"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "ObjectProperty > TemplateLiteral",
+      "kind": "template",
+      "english": "${cents(band.perOrder)} beyond the bundle",
+      "spanish": "${cents(band.perOrder)} beyond el bundle"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Download it",
+      "spanish": "Descargarlo"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Saved as",
+      "spanish": "Guardado como"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Your plan",
+      "spanish": "Tu plan"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Without IVA.",
+      "spanish": "Sin IVA."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "JSXAttribute > StringLiteral:title",
+      "kind": "literal",
+      "english": "Your trial month",
+      "spanish": "Tu mes de prueba"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "JSXAttribute > StringLiteral:label",
+      "kind": "literal",
+      "english": "Cargo delivered",
+      "spanish": "Cargo realizado"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "JSXExpressionContainer > TemplateLiteral",
+      "kind": "template",
+      "english": "${count(delivered)} orders",
+      "spanish": "${count(delivered)} pedidos"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "JSXAttribute > StringLiteral:title",
+      "kind": "literal",
+      "english": "This month",
+      "spanish": "Este mes"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "JSXAttribute > StringLiteral:label",
+      "kind": "literal",
+      "english": "Orders used",
+      "spanish": "Pedidos utilizados"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "JSXAttribute > StringLiteral:label",
+      "kind": "literal",
+      "english": "Your bundle",
+      "spanish": "Tu paquete"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "JSXAttribute > StringLiteral:label",
+      "kind": "literal",
+      "english": "Beyond the bundle",
+      "spanish": "Fuera del paquete"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "JSXAttribute > StringLiteral:label",
+      "kind": "literal",
+      "english": "Prepaid this month",
+      "spanish": "Pagado por adelantado este mes"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "JSXAttribute > StringLiteral:label",
+      "kind": "literal",
+      "english": "People on the account",
+      "spanish": "Personas en la cuenta"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "You prepay the bundle at the month’s start, at 10% under the per-order rate.",
+      "spanish": "Pagas por adelantado el paquete al principio del mes, un 10 % por debajo de la tarifa por pedido."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Orders above the bundle run at the per-order rate.",
+      "spanish": "Los pedidos que superan el paquete se cobran a la tarifa por pedido."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Your card settles them at month’s end.",
+      "spanish": "Tu tarjeta los liquida al final del mes."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "JSXAttribute > StringLiteral:title",
+      "kind": "literal",
+      "english": "Paying for it",
+      "spanish": "Pago"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "JSXAttribute > StringLiteral:label",
+      "kind": "literal",
+      "english": "The card that pays",
+      "spanish": "La tarjeta de pago"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "JSXAttribute > StringLiteral:label",
+      "kind": "literal",
+      "english": "The last four digits of the card that pays",
+      "spanish": "Los cuatro últimos dígitos de la tarjeta de pago"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "JSXAttribute > StringLiteral:placeholder",
+      "kind": "literal",
+      "english": "Add a card",
+      "spanish": "Añadir una tarjeta"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "JSXAttribute > StringLiteral:label",
+      "kind": "literal",
+      "english": "Made out to",
+      "spanish": "A nombre de"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "JSXAttribute > StringLiteral:label",
+      "kind": "literal",
+      "english": "Billing address",
+      "spanish": "Dirección de facturación"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "JSXAttribute > StringLiteral:placeholder",
+      "kind": "literal",
+      "english": "Add the address",
+      "spanish": "Añadir la dirección"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "JSXAttribute > StringLiteral:label",
+      "kind": "literal",
+      "english": "Manage subscription",
+      "spanish": "Gestionar suscripción"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "JSXAttribute > StringLiteral:sub",
+      "kind": "literal",
+      "english": "Your card, your invoices and the term, on Stripe.",
+      "spanish": "Tu tarjeta, tu facturas y el term, en Stripe."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "JSXAttribute > StringLiteral:title",
+      "kind": "literal",
+      "english": "Your invoices",
+      "spanish": "Tus facturas"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "The quarter you are in.",
+      "spanish": "El trimestre actual."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Download them",
+      "spanish": "Descargarlas"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "This opens your account on Stripe, where the card, the term and the receipts live.\n              Rocoto mints that link for",
+      "spanish": "Esto abre tu cuenta en Stripe, donde están la tarjeta, el periodo y los recibos. Rocoto crea ese enlace para"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "when the account is live.",
+      "spanish": "cuando la cuenta esté activa."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Back to the plan",
+      "spanish": "Volver al plan"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/team.tsx",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "truck ${member.truck}",
+      "spanish": "camión ${member.truck}"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/team.tsx",
+      "context": "JSXExpressionContainer > TemplateLiteral",
+      "kind": "template",
+      "english": "Open ${member.name}",
+      "spanish": "Abrir ${member.name}"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/team.tsx",
+      "context": "JSXExpressionContainer > TemplateLiteral",
+      "kind": "template",
+      "english": "Open ${member.name} — their role, their run and their van",
+      "spanish": "Abrir ${member.name}: su función, su ruta y su furgoneta"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/team.tsx",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "${holds} accounts",
+      "spanish": "${holds} cuentas"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/team.tsx",
+      "context": "JSXExpressionContainer > TemplateLiteral",
+      "kind": "template",
+      "english": "Open ${member.name} — their phone and their address",
+      "spanish": "Abrir ${member.name}: su teléfono y su dirección"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/team.tsx",
+      "context": "JSXAttribute > StringLiteral:title",
+      "kind": "literal",
+      "english": "Waiting on them",
+      "spanish": "Pendiente de esa persona"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/team.tsx",
+      "context": "JSXAttribute > StringLiteral:sub",
+      "kind": "literal",
+      "english": "Where the invite went.",
+      "spanish": "Dónde se envió la invitación."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/team.tsx",
+      "context": "JSXAttribute > StringLiteral:label",
+      "kind": "literal",
+      "english": "Their profile",
+      "spanish": "Su perfil"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/team.tsx",
+      "context": "JSXAttribute > StringLiteral:sub",
+      "kind": "literal",
+      "english": "Their name, their number and their photo are theirs to give.",
+      "spanish": "Su nombre, número y foto los aporta esa persona."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/team.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Send it again",
+      "spanish": "Enviar de nuevo"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/team.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Take the invite back",
+      "spanish": "Retirar la invitación"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/team.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Sent again to",
+      "spanish": "Enviada de nuevo a"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/team.tsx",
+      "context": "JSXAttribute > StringLiteral:label",
+      "kind": "literal",
+      "english": "What they are called",
+      "spanish": "Cómo se llama"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/team.tsx",
+      "context": "JSXAttribute > StringLiteral:placeholder",
+      "kind": "literal",
+      "english": "Their name",
+      "spanish": "Su nombre"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/team.tsx",
+      "context": "JSXAttribute > StringLiteral:title",
+      "kind": "literal",
+      "english": "What they may do",
+      "spanish": "Qué puede hacer"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/team.tsx",
+      "context": "JSXAttribute > StringLiteral:label",
+      "kind": "literal",
+      "english": "Can edit the business",
+      "spanish": "Puede editar la empresa"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/team.tsx",
+      "context": "JSXAttribute > StringLiteral:sub",
+      "kind": "literal",
+      "english": "The business, the tarifas and the agent’s dials.",
+      "spanish": "La empresa, las tarifas y los ajustes del agente."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/team.tsx",
+      "context": "JSXExpressionContainer > TemplateLiteral",
+      "kind": "template",
+      "english": "${member.name} can edit the business",
+      "spanish": "${member.name} puede editar la empresa"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/team.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "holds the only edit right. Give it to somebody else first.",
+      "spanish": "tiene el único permiso de edición. Primero debes dárselo a otra persona."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/team.tsx",
+      "context": "JSXAttribute > StringLiteral:title",
+      "kind": "literal",
+      "english": "Their book",
+      "spanish": "Su registro"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/team.tsx",
+      "context": "JSXAttribute > StringLiteral:label",
+      "kind": "literal",
+      "english": "Accounts held",
+      "spanish": "Cuentas asignadas"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/team.tsx",
+      "context": "JSXExpressionContainer > TemplateLiteral",
+      "kind": "template",
+      "english": "Open ${c.name}",
+      "spanish": "Abrir ${c.name}"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/team.tsx",
+      "context": "JSXAttribute > StringLiteral:sub",
+      "kind": "literal",
+      "english": "Theirs to answer.",
+      "spanish": "Las que debe responder."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/team.tsx",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "The first ${BOOK_PREVIEW} of them",
+      "spanish": "Los primeros ${BOOK_PREVIEW}"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/team.tsx",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "All ${book.length} of them",
+      "spanish": "Las ${book.length}"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/team.tsx",
+      "context": "JSXExpressionContainer > TemplateLiteral",
+      "kind": "template",
+      "english": "Every account ${member.name.split(/\\s+/)[0]} answers for.",
+      "spanish": "Todas las cuentas a las que responde ${member.name.split(/\\s+/)[0]}."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/team.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Their zone’s band",
+      "spanish": "La sección de su zona"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/team.tsx",
+      "context": "JSXAttribute > StringLiteral:title",
+      "kind": "literal",
+      "english": "How they are reached",
+      "spanish": "Cómo se contacta con esa persona"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/team.tsx",
+      "context": "JSXAttribute > StringLiteral:label",
+      "kind": "literal",
+      "english": "The number the day reaches them on",
+      "spanish": "El número al que se le contacta durante la jornada"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/team.tsx",
+      "context": "JSXAttribute > StringLiteral:placeholder",
+      "kind": "literal",
+      "english": "Add a number",
+      "spanish": "Añade un número"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/team.tsx",
+      "context": "JSXAttribute > StringLiteral:sub",
+      "kind": "literal",
+      "english": "Where the invite goes, and where the day reaches them.",
+      "spanish": "Dónde llega la invitación y dónde se contacta con esa persona durante la jornada."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/team.tsx",
+      "context": "JSXAttribute > StringLiteral:label",
+      "kind": "literal",
+      "english": "The address paperwork reaches them at",
+      "spanish": "La dirección a la que llega la documentación"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/team.tsx",
+      "context": "JSXAttribute > StringLiteral:placeholder",
+      "kind": "literal",
+      "english": "Add an address",
+      "spanish": "Añadir an dirección"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/team.tsx",
+      "context": "JSXAttribute > StringLiteral:sub",
+      "kind": "literal",
+      "english": "Where paperwork reaches them.",
+      "spanish": "Dónde llega la documentación."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/team.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "off the team",
+      "spanish": "fuera del equipo"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/team.tsx",
+      "context": "JSXAttribute > StringLiteral:ariaLabel",
+      "kind": "literal",
+      "english": "Invite somebody",
+      "spanish": "Invitar a alguien"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/team.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "They fill in their own name, number and photo when they accept.",
+      "spanish": "Completan su nombre, número y foto al aceptar."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/team.tsx",
+      "context": "JSXAttribute > StringLiteral:aria-label",
+      "kind": "literal",
+      "english": "Their email",
+      "spanish": "Su correo electrónico"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/team.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Send the invite",
+      "spanish": "Enviar invitación"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/units.tsx",
+      "context": "JSXAttribute > StringLiteral:aria-label",
+      "kind": "literal",
+      "english": "Unit name",
+      "spanish": "Nombre de la unidad"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/units.tsx",
+      "context": "JSXAttribute > StringLiteral:title",
+      "kind": "literal",
+      "english": "Product units",
+      "spanish": "Unidades de producto"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/units.tsx",
+      "context": "JSXAttribute > StringLiteral:placeholder",
+      "kind": "literal",
+      "english": "Find a product",
+      "spanish": "Buscar un producto"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/units.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Try another product name.",
+      "spanish": "Prueba con otro nombre de producto."
+    },
+    {
+      "source": "src/prototypes/cedar/catalogue-export.tsx",
+      "context": "ArrayExpression > StringLiteral",
+      "kind": "literal",
+      "english": "Current price",
+      "spanish": "Precio actual"
+    },
+    {
+      "source": "src/prototypes/cedar/catalogue-export.tsx",
+      "context": "ArrayExpression > StringLiteral",
+      "kind": "literal",
+      "english": "Rocoto SKU",
+      "spanish": "SKU de Rocoto"
+    },
+    {
+      "source": "src/prototypes/cedar/catalogue-export.tsx",
+      "context": "ArrayExpression > StringLiteral",
+      "kind": "literal",
+      "english": "Original SKU",
+      "spanish": "SKU original"
+    },
+    {
+      "source": "src/prototypes/cedar/catalogue-export.tsx",
+      "context": "ArrayExpression > StringLiteral",
+      "kind": "literal",
+      "english": "Family ID",
+      "spanish": "ID de familia"
+    },
+    {
+      "source": "src/prototypes/cedar/catalogue-export.tsx",
+      "context": "ArrayExpression > StringLiteral",
+      "kind": "literal",
+      "english": "Parent SKU",
+      "spanish": "SKU principal"
+    },
+    {
+      "source": "src/prototypes/cedar/catalogue-export.tsx",
+      "context": "ArrayExpression > StringLiteral",
+      "kind": "literal",
+      "english": "Illustration reference",
+      "spanish": "Referencia de ilustración"
+    },
+    {
+      "source": "src/prototypes/cedar/catalogue-export.tsx",
+      "context": "ArrayExpression > StringLiteral",
+      "kind": "literal",
+      "english": "Imported row",
+      "spanish": "Fila importada"
+    },
+    {
+      "source": "src/prototypes/cedar/catalogue-export.tsx",
+      "context": "ArrayExpression > StringLiteral",
+      "kind": "literal",
+      "english": "Import recorded at",
+      "spanish": "Importación registrada el"
+    },
+    {
+      "source": "src/prototypes/cedar/catalogue-export.tsx",
+      "context": "CallExpression > StringLiteral",
+      "kind": "literal",
+      "english": "Original file",
+      "spanish": "Archivo original"
+    },
+    {
+      "source": "src/prototypes/cedar/catalogue-export.tsx",
+      "context": "CallExpression > StringLiteral",
+      "kind": "literal",
+      "english": "Your spreadsheet layout",
+      "spanish": "Estructura de tu hoja"
+    },
+    {
+      "source": "src/prototypes/cedar/catalogue-export.tsx",
+      "context": "CallExpression > StringLiteral",
+      "kind": "literal",
+      "english": "Standard CSV",
+      "spanish": "CSV estándar"
+    },
+    {
+      "source": "src/prototypes/cedar/catalogue-export.tsx",
+      "context": "CallExpression > StringLiteral",
+      "kind": "literal",
+      "english": "Rocoto CSV",
+      "spanish": "CSV de Rocoto"
+    },
+    {
+      "source": "src/prototypes/cedar/config.ts",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "Fish lots reach the buyer with the goods, so the delivery note prints them or points at the supplier document.",
+      "spanish": "Los lotes de pescado llegan al comprador con la mercancía; el albarán los imprime o remite al documento del proveedor."
+    },
+    {
+      "source": "src/prototypes/cedar/config.ts",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "The lot or remesa reference reaches the buyer, so the delivery note prints it or points at the supplier document.",
+      "spanish": "La referencia de lote o remesa llega al comprador; el albarán la imprime o remite al documento del proveedor."
+    },
+    {
+      "source": "src/prototypes/cedar/config.ts",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "origin+category",
+      "spanish": "origen+categoría"
+    },
+    {
+      "source": "src/prototypes/cedar/config.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "A line releases once its lote is on it.",
+      "spanish": "Una línea se completa cuando incluye su lote."
+    },
+    {
+      "source": "src/prototypes/cedar/config.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "A line releases once it records which box label carries the reference.",
+      "spanish": "Una línea se completa cuando registra qué etiqueta de caja lleva la referencia."
+    },
+    {
+      "source": "src/prototypes/cedar/config.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "A line releases on origen and categoría; the lote rides along when there is one.",
+      "spanish": "Una línea se completa con origen y categoría; el lote se incluye cuando existe."
+    },
+    {
+      "source": "src/prototypes/cedar/config.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "WhatsApp leads the capture",
+      "spanish": "WhatsApp lidera la captura"
+    },
+    {
+      "source": "src/prototypes/cedar/config.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Calls lead the capture",
+      "spanish": "Las llamadas lideran la captura"
+    },
+    {
+      "source": "src/prototypes/cedar/config.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Voice leads the capture",
+      "spanish": "La voz lidera la captura"
+    },
+    {
+      "source": "src/prototypes/cedar/config.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "The reps’ own orders lead the capture",
+      "spanish": "Los pedidos de los comerciales lideran la captura"
+    },
+    {
+      "source": "src/prototypes/cedar/config.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Prices lead with the list",
+      "spanish": "Los precios empiezan por la lista"
+    },
+    {
+      "source": "src/prototypes/cedar/config.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Prices lead with the tiers",
+      "spanish": "Los precios empiezan por los tramos"
+    },
+    {
+      "source": "src/prototypes/cedar/config.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Prices lead with the anchor and its offsets",
+      "spanish": "Los precios empiezan por el valor de referencia y sus ajustes"
+    },
+    {
+      "source": "src/prototypes/cedar/config.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Every line opens with the scale",
+      "spanish": "Cada línea empieza por la escala"
+    },
+    {
+      "source": "src/prototypes/cedar/config.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Lines that vary by weight open with the scale",
+      "spanish": "Las líneas que varían por peso empiezan por la escala"
+    },
+    {
+      "source": "src/prototypes/cedar/config.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "The scale opens on the line that asks for it",
+      "spanish": "La escala se abre en la línea que la necesita"
+    },
+    {
+      "source": "src/prototypes/cedar/config.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Goods leads with la captura",
+      "spanish": "La mercancía empieza por la captura"
+    },
+    {
+      "source": "src/prototypes/cedar/config.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Goods leads with the Stock Announcement",
+      "spanish": "La mercancía empieza por el aviso de Existencias"
+    },
+    {
+      "source": "src/prototypes/cedar/config.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Goods leads with the email feed and its override chips",
+      "spanish": "La mercancía empieza por el flujo de correo y sus controles manuales"
+    },
+    {
+      "source": "src/prototypes/cedar/config.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "The reps",
+      "spanish": "Los comerciales"
+    },
+    {
+      "source": "src/prototypes/cedar/config.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Lote printed",
+      "spanish": "Lote impreso"
+    },
+    {
+      "source": "src/prototypes/cedar/config.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Lote by document",
+      "spanish": "Lote por documento"
+    },
+    {
+      "source": "src/prototypes/cedar/config.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "The delivery note prints the lote on every line it has one for",
+      "spanish": "El albarán imprime el lote en cada línea que lo tiene"
+    },
+    {
+      "source": "src/prototypes/cedar/config.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "The delivery note points at the supplier document, and the pointer opens it",
+      "spanish": "El albarán remite al documento del proveedor y el enlace lo abre"
+    },
+    {
+      "source": "src/prototypes/cedar/config.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "The delivery note carries origen and categoría; the lote rides along when there is one",
+      "spanish": "El albarán incluye origen y categoría; el lote se añade cuando existe"
+    },
+    {
+      "source": "src/prototypes/cedar/config.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "The delivery note prints each line’s price and the total.",
+      "spanish": "El albarán imprime el precio de cada línea y el total."
+    },
+    {
+      "source": "src/prototypes/cedar/config.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "The delivery note prints the goods, and the invoice carries the amounts.",
+      "spanish": "El albarán imprime la mercancía y la factura incluye los importes."
+    },
+    {
+      "source": "src/prototypes/cedar/config.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "With prices",
+      "spanish": "Con precios"
+    },
+    {
+      "source": "src/prototypes/cedar/config.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Goods only",
+      "spanish": "Solo mercancía"
+    },
+    {
+      "source": "src/prototypes/cedar/config.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "The full A4 sheet: the lote in its own column, and room around the lines.",
+      "spanish": "La hoja A4 completa: el lote en su propia columna y espacio entre las líneas."
+    },
+    {
+      "source": "src/prototypes/cedar/config.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "The compact A5 half sheet: the lote under the name, and the same trazabilidad.",
+      "spanish": "La mitad compacta A5: el lote bajo el nombre y la misma trazabilidad."
+    },
+    {
+      "source": "src/prototypes/cedar/config.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "A4, full",
+      "spanish": "A4, completa"
+    },
+    {
+      "source": "src/prototypes/cedar/config.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "A5, compact",
+      "spanish": "A5, compacta"
+    },
+    {
+      "source": "src/prototypes/cedar/config.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "the day’s file",
+      "spanish": "el archivo del día"
+    },
+    {
+      "source": "src/prototypes/cedar/config.ts",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "Today opens on the whole queue",
+      "spanish": "Hoy se abre toda la cola"
+    },
+    {
+      "source": "src/prototypes/cedar/config.ts",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "Today opens on the flagged orders",
+      "spanish": "Hoy se abren los pedidos marcados"
+    },
+    {
+      "source": "src/prototypes/cedar/config.ts",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "The whole queue",
+      "spanish": "Toda la cola"
+    },
+    {
+      "source": "src/prototypes/cedar/config.ts",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "Flagged orders",
+      "spanish": "Pedidos marcados"
+    },
+    {
+      "source": "src/prototypes/cedar/config.ts",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "Dispatch leads with the day’s rounds",
+      "spanish": "El reparto empieza por las rutas del día"
+    },
+    {
+      "source": "src/prototypes/cedar/config.ts",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "Dispatch leads with the rounds the agency collects",
+      "spanish": "El reparto empieza por las rutas que recoge la agencia"
+    },
+    {
+      "source": "src/prototypes/cedar/config.ts",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "Dispatch leads with the pickups, and la entrega stays on the delivery note",
+      "spanish": "El reparto prioriza las recogidas y la entrega permanece en el albarán"
+    },
+    {
+      "source": "src/prototypes/cedar/config.ts",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "Today’s file",
+      "spanish": "Archivo de hoy"
+    },
+    {
+      "source": "src/prototypes/cedar/config.ts",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "Today’s file, for ${ERP_LABEL[c.erp.target]}",
+      "spanish": "Archivo de hoy para ${ERP_LABEL[c.erp.target]}"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/area.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Your business",
+      "spanish": "Tu empresa"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/area.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Your agent",
+      "spanish": "Tu agente"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/area.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "App settings",
+      "spanish": "App ajustes"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/area.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Your data",
+      "spanish": "Tus datos"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/chats.tsx",
+      "context": "JSXAttribute > StringLiteral:aria-label",
+      "kind": "literal",
+      "english": "Sent and delivered",
+      "spanish": "Enviado y entregado"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/chats.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Waiting on you",
+      "spanish": "Pendiente de ti"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/chats.tsx",
+      "context": "JSXAttribute > StringLiteral:aria-label",
+      "kind": "literal",
+      "english": "Which conversations",
+      "spanish": "Qué conversaciones"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/chats.tsx",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "Owner — ${held.name}",
+      "spanish": "Responsable: ${held.name}"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/chats.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Find a conversation",
+      "spanish": "Buscar una conversación"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/chats.tsx",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "0 conversations match “${query.trim()}”. Try the customer’s own name.",
+      "spanish": "Ninguna conversación coincide con «${query.trim()}». Prueba con el nombre del cliente."
+    },
+    {
+      "source": "src/prototypes/cedar/shell/chats.tsx",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "${held.name}’s conversations are all answered.",
+      "spanish": "Todas las conversaciones de ${held.name} tienen respuesta."
+    },
+    {
+      "source": "src/prototypes/cedar/shell/chats.tsx",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "Every conversation is answered.",
+      "spanish": "Todas las conversaciones tienen respuesta."
+    },
+    {
+      "source": "src/prototypes/cedar/shell/chats.tsx",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "${held.name} holds 0 conversations today.",
+      "spanish": "${held.name} no tiene conversaciones pendientes hoy."
+    },
+    {
+      "source": "src/prototypes/cedar/shell/chats.tsx",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "The day’s conversations start here.",
+      "spanish": "Las conversaciones del día empiezan aquí."
+    },
+    {
+      "source": "src/prototypes/cedar/shell/chats.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Rocoto read it as",
+      "spanish": "Rocoto lo leyó como"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/chats.tsx",
+      "context": "JSXExpressionContainer > TemplateLiteral",
+      "kind": "template",
+      "english": "React ${emoji}",
+      "spanish": "Reaccionar ${emoji}"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/chats.tsx",
+      "context": "JSXAttribute > StringLiteral:aria-label",
+      "kind": "literal",
+      "english": "Reply to this",
+      "spanish": "Responder a esto"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/chats.tsx",
+      "context": "JSXAttribute > StringLiteral:aria-label",
+      "kind": "literal",
+      "english": "React to this",
+      "spanish": "Reaccionar a esto"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/chats.tsx",
+      "context": "JSXAttribute > StringLiteral:aria-label",
+      "kind": "literal",
+      "english": "Write to the conversation instead",
+      "spanish": "Escribir en la conversación"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/chats.tsx",
+      "context": "JSXAttribute > StringLiteral:label",
+      "kind": "literal",
+      "english": "Previous planned order",
+      "spanish": "Pedido planificado anterior"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/chats.tsx",
+      "context": "JSXAttribute > StringLiteral:label",
+      "kind": "literal",
+      "english": "Next planned order",
+      "spanish": "Pedido planificado siguiente"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/chats.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "To confirm",
+      "spanish": "Por confirmar"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/chats.tsx",
+      "context": "JSXAttribute > StringLiteral:aria-label",
+      "kind": "literal",
+      "english": "Attach a photo",
+      "spanish": "Adjuntar una foto"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/chats.tsx",
+      "context": "JSXAttribute > StringLiteral:label",
+      "kind": "literal",
+      "english": "Put the chats away",
+      "spanish": "Ocultar los chats"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/chats.tsx",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "Write as ${cast.house.name}",
+      "spanish": "Escribir como ${cast.house.name}"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/chats.tsx",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "Reply to ${replyTo.who}",
+      "spanish": "Responder a ${replyTo.who}"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/chats.tsx",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "Write to ${thread.customer.name}",
+      "spanish": "Escribir a ${thread.customer.name}"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/chats.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Pick a conversation.",
+      "spanish": "Elige una conversación."
+    },
+    {
+      "source": "src/prototypes/cedar/shell/chats.tsx",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "Chats — ${unread} ${unread === 1 ? 'reply' : 'replies'} owed",
+      "spanish": "Chats: ${unread} ${unread === 1 ? 'reply' : 'replies'} pendientes"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/embeds.tsx",
+      "context": "ReturnStatement > TemplateLiteral",
+      "kind": "template",
+      "english": "Read as ${sale.lines.length} ${sale.lines.length === 1 ? 'line' : 'lines'} · ${sale.deliveryDay}",
+      "spanish": "Leído como ${sale.lines.length} ${sale.lines.length === 1 ? 'line' : 'lines'} · ${sale.deliveryDay}"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/embeds.tsx",
+      "context": "LogicalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "Waiting on you",
+      "spanish": "Pendiente de ti"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/embeds.tsx",
+      "context": "ObjectProperty > TemplateLiteral",
+      "kind": "template",
+      "english": "Opened the order for ${sale.deliveryDay}",
+      "spanish": "Se abrió el pedido para ${sale.deliveryDay}"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/embeds.tsx",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "· took ${dropped.product.name} off",
+      "spanish": "· se quitó ${dropped.product.name}"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/embeds.tsx",
+      "context": "ObjectProperty > TemplateLiteral",
+      "kind": "template",
+      "english": "Raised ${raised.product.name} to ${qtyWords(c.raised.qty + c.more, c.raised.unit)}${took}",
+      "spanish": "Aumentó ${raised.product.name} a ${qtyWords(c.raised.qty + c.more, c.raised.unit)}${took}"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/embeds.tsx",
+      "context": "LogicalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "Open the delivery note",
+      "spanish": "Abrir el albarán"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/embeds.tsx",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "Rocoto asked",
+      "spanish": "Rocoto preguntó"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/embeds.tsx",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "needs its amount",
+      "spanish": "needs its importe"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/embeds.tsx",
+      "context": "JSXAttribute > StringLiteral:label",
+      "kind": "literal",
+      "english": "Rocoto answered it",
+      "spanish": "Rocoto respondió"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/embeds.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Today’s price",
+      "spanish": "Precio de hoy"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/embeds.tsx",
+      "context": "JSXAttribute > StringLiteral:label",
+      "kind": "literal",
+      "english": "Why this is waiting",
+      "spanish": "Por qué está pendiente"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/embeds.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Put it on",
+      "spanish": "Put it en"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/embeds.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Set it",
+      "spanish": "Configurar"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/embeds.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "We can get it",
+      "spanish": "We puede get it"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/embeds.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "This one goes as it stands",
+      "spanish": "Este pasa tal como está"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/embeds.tsx",
+      "context": "JSXAttribute > StringLiteral:label",
+      "kind": "literal",
+      "english": "Rocoto writes it",
+      "spanish": "Rocoto lo escribe"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/embeds.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Rocoto answers",
+      "spanish": "Rocoto respuestas"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/embeds.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Message them yourself",
+      "spanish": "Escríbeles tú mismo"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/media.tsx",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "The line alone",
+      "spanish": "Solo la línea"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/media.tsx",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "Read it all",
+      "spanish": "Leerlo todo"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/media.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Transcribing…",
+      "spanish": "Transcribiendo…"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/media.tsx",
+      "context": "JSXAttribute > StringLiteral:label",
+      "kind": "literal",
+      "english": "Scrub the recording",
+      "spanish": "Desplazarse por la grabación"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/media.tsx",
+      "context": "JSXExpressionContainer > TemplateLiteral",
+      "kind": "template",
+      "english": "${testid}-transcript",
+      "spanish": "${testid} -transcripción"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/media.tsx",
+      "context": "JSXExpressionContainer > TemplateLiteral",
+      "kind": "template",
+      "english": "${testid}-transcribing",
+      "spanish": "${testid} -transcribing"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/media.tsx",
+      "context": "JSXExpressionContainer > TemplateLiteral",
+      "kind": "template",
+      "english": "${testid}-reading",
+      "spanish": "${testid} -reading"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/media.tsx",
+      "context": "JSXExpressionContainer > TemplateLiteral",
+      "kind": "template",
+      "english": "${testid}-reading-pending",
+      "spanish": "${testid} -reading-pendiente"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/media.tsx",
+      "context": "LogicalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "The picture",
+      "spanish": "La imagen"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/open-items.tsx",
+      "context": "JSXAttribute > StringLiteral:aria-label",
+      "kind": "literal",
+      "english": "Open delivery notes",
+      "spanish": "Abrir albaranes"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/open-items.tsx",
+      "context": "JSXExpressionContainer > TemplateLiteral",
+      "kind": "template",
+      "english": "Close ${chip.customer}",
+      "spanish": "Cerrar ${chip.customer}"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/open-items.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Back to the list",
+      "spanish": "Volver a la lista"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/open.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "OPEN ·",
+      "spanish": "ABIERTO ·"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/printing.tsx",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "Truck ${only[0]}",
+      "spanish": "Camión ${only[0]}"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/printing.tsx",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "The delivery run",
+      "spanish": "El entrega ruta"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/printing.tsx",
+      "context": "ReturnStatement > StringLiteral",
+      "kind": "literal",
+      "english": "On your press",
+      "spanish": "Con tu confirmación"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/printing.tsx",
+      "context": "ReturnStatement > StringLiteral",
+      "kind": "literal",
+      "english": "With today’s file",
+      "spanish": "Con el archivo de hoy"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/printing.tsx",
+      "context": "ReturnStatement > StringLiteral",
+      "kind": "literal",
+      "english": "As they come",
+      "spanish": "Según llegan"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/printing.tsx",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "At ${clockAfter(now, grants.dispatchWait)}",
+      "spanish": "A las ${clockAfter(now, grants.dispatchWait)}"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/printing.tsx",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "After ${grants.dispatchWait} min",
+      "spanish": "Después de ${grants.dispatchWait} min"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/printing.tsx",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "1 copy",
+      "spanish": "1 copia"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/printing.tsx",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "1 page",
+      "spanish": "1 página"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/printing.tsx",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "${job.pages} pages",
+      "spanish": "${job.pages} páginas"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/printing.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "more on the same file.",
+      "spanish": "más en el mismo archivo."
+    },
+    {
+      "source": "src/prototypes/cedar/shell/printing.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Packing lists",
+      "spanish": "Listas de preparación"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/printing.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "The day’s sheet",
+      "spanish": "Hoja del día"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/printing.tsx",
+      "context": "LogicalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "Waiting on the first",
+      "spanish": "Pendiente del primero"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/printing.tsx",
+      "context": "JSXAttribute > StringLiteral:label",
+      "kind": "literal",
+      "english": "To print",
+      "spanish": "Por imprimir"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/printing.tsx",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "Owed since ${state.lastPrintAt}",
+      "spanish": "Pendiente desde ${state.lastPrintAt}"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/printing.tsx",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "Waiting on the first press",
+      "spanish": "Pendiente de la primera impresión"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/printing.tsx",
+      "context": "JSXAttribute > StringLiteral:label",
+      "kind": "literal",
+      "english": "Coming out",
+      "spanish": "Saliendo"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/printing.tsx",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "To send",
+      "spanish": "Por enviar"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/printing.tsx",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "With the ${world.erp.fileAt} file",
+      "spanish": "Con el archivo ${world.erp.fileAt}"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/printing.tsx",
+      "context": "JSXExpressionContainer > TemplateLiteral",
+      "kind": "template",
+      "english": "In ${world.erp.name}",
+      "spanish": "En ${world.erp.name}"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/printing.tsx",
+      "context": "JSXAttribute > StringLiteral:label",
+      "kind": "literal",
+      "english": "Changed since",
+      "spanish": "Cambiado desde"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/printing.tsx",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "${owed} of ${round.length} remaining",
+      "spanish": "${owed} de ${round.length} remaining"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/printing.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Coming up",
+      "spanish": "Próximas"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/printing.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Behind you",
+      "spanish": "Anterior"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/printing.tsx",
+      "context": "JSXAttribute > StringLiteral:label",
+      "kind": "literal",
+      "english": "Which day",
+      "spanish": "Qué día"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/printing.tsx",
+      "context": "JSXAttribute > StringLiteral:title",
+      "kind": "literal",
+      "english": "The packing lists",
+      "spanish": "Listas de preparación"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/printing.tsx",
+      "context": "JSXAttribute > StringLiteral:title",
+      "kind": "literal",
+      "english": "The email",
+      "spanish": "El correo"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/printing.tsx",
+      "context": "ArrayExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "${state.toPrint.length} to print",
+      "spanish": "${state.toPrint.length} a imprimir"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/printing.tsx",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "${state.newSincePrint.length} new since the last print",
+      "spanish": "${state.newSincePrint.length} new since el last imprimir"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/printing.tsx",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "${state.review.length} for review",
+      "spanish": "${state.review.length} para review"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/rail.tsx",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "Shut the rail",
+      "spanish": "Cerrar el canal"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/rail.tsx",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "Open the rail",
+      "spanish": "Abrir la barra lateral"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/rail.tsx",
+      "context": "JSXAttribute > StringLiteral:aria-label",
+      "kind": "literal",
+      "english": "Find anything",
+      "spanish": "Buscar cualquier cosa"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/rail.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Sign out",
+      "spanish": "Cerrar sesión"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/rail.tsx",
+      "context": "JSXExpressionContainer > TemplateLiteral",
+      "kind": "template",
+      "english": "${owner} — your account",
+      "spanish": "${owner}: tu cuenta"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/rail.tsx",
+      "context": "JSXExpressionContainer > TemplateLiteral",
+      "kind": "template",
+      "english": "Back to ${backTitle}",
+      "spanish": "Back a ${backTitle}"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/search-modal.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Where you work",
+      "spanish": "Dónde trabajas"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/search-modal.tsx",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "${cast.trade} · standing",
+      "spanish": "${cast.trade} · activo"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/search-modal.tsx",
+      "context": "JSXExpressionContainer > TemplateLiteral",
+      "kind": "template",
+      "english": "Try another word for “${query.trim()}”",
+      "spanish": "Prueba con otra palabra para «${query.trim()}»"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/search-modal.tsx",
+      "context": "JSXExpressionContainer > TemplateLiteral",
+      "kind": "template",
+      "english": "Put the whole list back",
+      "spanish": "Restaurar toda la lista"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/search-modal.tsx",
+      "context": "LogicalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "Find anything",
+      "spanish": "Buscar cualquier cosa"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/theatre-controls.tsx",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "Incoming order",
+      "spanish": "Pedido entrante"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/theatre-controls.tsx",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "Question for the desk",
+      "spanish": "Pregunta para la oficina"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/theatre-controls.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Order added",
+      "spanish": "Pedido añadido"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/theatre-controls.tsx",
+      "context": "LogicalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "In progress",
+      "spanish": "En curso"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/theatre.ts",
+      "context": "ObjectProperty > TemplateLiteral",
+      "kind": "template",
+      "english": "Could you send 4 ${product.unit} of ${product.name} for tomorrow?",
+      "spanish": "¿Podrías enviar 4 ${product.unit} de ${product.name} para mañana?"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/theatre.ts",
+      "context": "ObjectProperty > TemplateLiteral",
+      "kind": "template",
+      "english": "Rocoto is reading ${customer.name}’s order.",
+      "spanish": "Rocoto está leyendo el pedido de ${customer.name}."
+    },
+    {
+      "source": "src/prototypes/cedar/shell/theatre.ts",
+      "context": "ObjectProperty > TemplateLiteral",
+      "kind": "template",
+      "english": "Please make that 6 ${product.unit} of ${product.name} instead.",
+      "spanish": "Mejor prepara 6 ${product.unit} de ${product.name}."
+    },
+    {
+      "source": "src/prototypes/cedar/shell/theatre.ts",
+      "context": "ObjectProperty > TemplateLiteral",
+      "kind": "template",
+      "english": "Can you confirm whether ${product.name} is available for tomorrow?",
+      "spanish": "¿Puedes confirmar si ${product.name} está disponible para mañana?"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/theatre.ts",
+      "context": "ObjectProperty > TemplateLiteral",
+      "kind": "template",
+      "english": "Rocoto is checking the question.",
+      "spanish": "Rocoto está comprobando la pregunta."
+    },
+    {
+      "source": "src/prototypes/cedar/shell/theatre.ts",
+      "context": "ObjectProperty > TemplateLiteral",
+      "kind": "template",
+      "english": "Rocoto left this question for the desk.",
+      "spanish": "Rocoto ha dejado esta pregunta para la oficina."
+    },
+    {
+      "source": "src/prototypes/cedar/shell/theatre.ts",
+      "context": "ReturnStatement > StringLiteral",
+      "kind": "literal",
+      "english": "Order added to Sales.",
+      "spanish": "Pedido añadido a Ventas."
+    },
+    {
+      "source": "src/prototypes/cedar/shell/theatre.ts",
+      "context": "ReturnStatement > TemplateLiteral",
+      "kind": "template",
+      "english": "Order amended to 6 ${scene.product.unit} of ${scene.product.name}.",
+      "spanish": "Pedido modificado a 6 ${scene.product.unit} de ${scene.product.name}."
+    },
+    {
+      "source": "src/prototypes/cedar/shell/threads.ts",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "Voice note · ${clock(turn.voice.durationMs)}",
+      "spanish": "Nota de voz · ${clock(turn.voice.durationMs)}"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/threads.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "A written order on a notepad page",
+      "spanish": "Un pedido escrito en una página de bloc"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/threads.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "ORDER — Thursday. 6 cajas tomate rama. 2 kg gamba roja. 1 caja pulpo. Leave it at the back door.",
+      "spanish": "PEDIDO — jueves. 6 cajas de tomate rama. 2 kg de gamba roja. 1 caja de pulpo. Déjalo en la puerta trasera."
+    },
+    {
+      "source": "src/prototypes/cedar/shell/threads.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "A lot label photographed on the box",
+      "spanish": "Una etiqueta de lote fotografiada en la caja"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/threads.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "LOT L-2208. MERLUZA · RUBIO. 21.08 · 3.200 kg. ORIGIN FAO 27.",
+      "spanish": "LOTE L-2208. MERLUZA · RUBIO. 21.08 · 3.200 kg. ORIGEN FAO 27."
+    }
+  ],
+  "review": {
+    "technicalEntriesRemoved": 110,
+    "reviewed": "Shell, chat, embeds, media, printing and admin phrases checked; technical tokens excluded."
+  }
+}

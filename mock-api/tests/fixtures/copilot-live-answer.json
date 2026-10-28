@@ -1,0 +1,60 @@
+{
+  "reply": {
+    "text": "Merluza grande is short by 16 kg for tomorrow. Pulpo cocido is short by 8 kg for tomorrow."
+  },
+  "proposals": [
+    {
+      "kind": "supply-report",
+      "orderIds": [
+        "s-101",
+        "s-102",
+        "s-104"
+      ],
+      "product": "Merluza grande"
+    },
+    {
+      "kind": "supply-report",
+      "orderIds": [
+        "s-101",
+        "s-103",
+        "s-106"
+      ],
+      "product": "Pulpo cocido"
+    },
+    {
+      "kind": "drafts",
+      "drafts": [
+        {
+          "orderId": "s-101",
+          "customer": "Bar Nàutic",
+          "text": "Hello Bar Nàutic. We have a shortage of Merluza grande and Pulpo cocido for your order A-2451. We are working to cover it."
+        },
+        {
+          "orderId": "s-102",
+          "customer": "Restaurant Els Pescadors",
+          "text": "Hello Restaurant Els Pescadors. We have a shortage of Merluza grande for your order A-2452. We are working to cover it."
+        },
+        {
+          "orderId": "s-103",
+          "customer": "Cal Trempat",
+          "text": "Hello Cal Trempat. We have a shortage of Pulpo cocido for your order A-2453. We are working to cover it."
+        },
+        {
+          "orderId": "s-104",
+          "customer": "Peixateria Maresme",
+          "text": "Hello Peixateria Maresme. We have a shortage of Merluza grande for your order A-2454. We are working to cover it."
+        },
+        {
+          "orderId": "s-106",
+          "customer": "Taverna del Port",
+          "text": "Hello Taverna del Port. We have a shortage of Pulpo cocido for your order A-2456. We are working to cover it."
+        }
+      ]
+    }
+  ],
+  "evidence": {
+    "model": "gemini-2.5-flash",
+    "ms": 13012,
+    "tokens": 4379
+  }
+}

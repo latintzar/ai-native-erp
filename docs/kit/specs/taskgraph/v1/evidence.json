@@ -1,0 +1,391 @@
+{
+  "schemaVersion": "1.0",
+  "authority": "Required evidence describes future proof. Actual evidence records only executed, attributable proof. Kit evidence is bounded presentation support and never changes a task status.",
+  "actualEvidence": [],
+  "kitEvidence": [
+    {
+      "taskId": "PRD-01.01",
+      "source": "baseweb/src/app/product-card.tsx",
+      "scope": "Current design-kit product identity and details presentation only; excludes tenant resolution, server authorization, draft conflict, archive/restore command and audit proof.",
+      "result": "Presentation support observed; no runtime acceptance claimed."
+    },
+    {
+      "taskId": "CUS-01.01",
+      "source": "baseweb/src/app/customer-profile.tsx",
+      "scope": "Current design-kit customer profile presentation only; excludes authoritative customer/contact command paths and permissions.",
+      "result": "Presentation support observed; no runtime acceptance claimed."
+    },
+    {
+      "taskId": "ALB-01.02",
+      "source": "baseweb/src/app/sale.ts",
+      "scope": "Current design-kit order/albar\u00e1n line presentation only; excludes issued-document snapshots, pricing authority, inventory allocation and command evidence.",
+      "result": "Presentation support observed; no runtime acceptance claimed."
+    },
+    {
+      "taskId": "CAT-01.03",
+      "source": "baseweb/src/app/catalogue.ts",
+      "scope": "Current catalogue navigation presentation only; excludes tenant-authorized catalogue query, persistence and export evidence.",
+      "result": "Presentation support observed; no runtime acceptance claimed."
+    },
+    {
+      "taskId": "OBJ-01.01",
+      "source": "baseweb/src/app",
+      "scope": "Shared visual shell/panels/forms only; excludes runtime contract enforcement, durable draft persistence and accessibility verification.",
+      "result": "Presentation support observed; no runtime acceptance claimed."
+    },
+    {
+      "taskId": "ADM-01.06",
+      "source": "baseweb/src/app/confirmation-policy-door.tsx",
+      "scope": "Current design-kit Product Sheet confirmation-policy door and settings-surface navigation only; excludes server route authorization, persistent settings command, tenant scope and outbound effects.",
+      "result": "Presentation support observed; no runtime acceptance claimed."
+    },
+    {
+      "taskId": "PRD-01.06",
+      "source": "baseweb/src/app/confirmation-policy-door.tsx",
+      "scope": "Current design-kit product-context confirmation-policy summary and navigation door only; excludes customer-price command acceptance, recipient selection, customer delivery and issued-document effect.",
+      "result": "Presentation support observed; no runtime acceptance claimed."
+    },
+    {
+      "taskId": "ADM-01.01",
+      "source": "baseweb/src/app/customer-order-policy.tsx",
+      "scope": "Current design-kit customer-confirmation settings, four-line local preview, all eight gate-combination presentation and failed-write preservation only; excludes tenant authorization, server policy revision, durable command acceptance, current-price contract enforcement, outbound message delivery and customer receipt.",
+      "result": "A local design-kit journey run exercised the four independent current-price facts and eight settings combinations at desktop and phone widths; no runtime acceptance claimed."
+    },
+    {
+      "taskId": "ADM-01.03",
+      "source": "baseweb/src/app/customer-order-policy.tsx",
+      "scope": "Current design-kit recurring-request and ERP-line policy presentation plus local reload retention only; excludes approved catalogue admission, ERP mapping validation, live synchronization and command audit proof.",
+      "result": "A local design-kit journey run exercised remembered recurring-note and ERP-line choices; no runtime acceptance claimed."
+    },
+    {
+      "taskId": "COM-01.01",
+      "source": "baseweb/src/app/confirmation-policy.ts",
+      "scope": "Current design-kit current-day customer/tariff preview selection for four independently priced SKU lines only; excludes agreed-price contract acceptance, tax/legal calculation, price command authorization, audit and customer delivery.",
+      "result": "A local design-kit journey run exercised independent current-price selection and no cross-customer borrowing; no runtime acceptance claimed."
+    },
+    {
+      "taskId": "ALB-01.04",
+      "source": "baseweb/src/app/customer-order-policy.tsx",
+      "scope": "Current design-kit explanation that hidden albar\u00e1n prices suppress customer confirmation money while preserving the remembered inclusion preference and internal price context only; excludes issued-document generation, customer view, delivery and legal-document proof.",
+      "result": "A local design-kit journey run exercised the hidden-albar\u00e1n price gate; no runtime acceptance claimed."
+    },
+    {
+      "taskId": "ALB-01.03",
+      "source": "baseweb/src/app/albaran-paper-review.tsx",
+      "scope": "Current design-kit paper-stage/photo-retry/review-completion presentation only; excludes tenant media service, malware/quarantine receipt, server command authorization, accepted amendment and physical-print proof.",
+      "result": "Presentation support observed; no runtime acceptance claimed."
+    },
+    {
+      "taskId": "ALB-01.03",
+      "source": "baseweb/src/app/line-notes.tsx",
+      "scope": "Current design-kit Team-note/customerOption review and approval presentation only; excludes server-side audience approval, immutable event receipt, customer delivery and ERP handoff.",
+      "result": "Presentation support observed; no runtime acceptance claimed."
+    },
+    {
+      "taskId": "ALB-01.02",
+      "source": "baseweb/src/app/detail.tsx",
+      "scope": "Current design-kit actual quantity/unit-price field presentation only; excludes commercial command authorization, unit/lot validation, accepted amendment and audit proof.",
+      "result": "Presentation support observed; no runtime acceptance claimed."
+    },
+    {
+      "taskId": "DOC-01.02",
+      "source": "baseweb/src/app/albaran-paper-review.tsx",
+      "scope": "Current design-kit Finish review/later-print gate presentation only; excludes durable print queue, provider/printer receipt and physical completion proof.",
+      "result": "Presentation support observed; no runtime acceptance claimed."
+    },
+    {
+      "taskId": "PRD-01.02",
+      "source": "baseweb/src/app/line-notes.tsx",
+      "scope": "Current design-kit product-option candidate route presentation only; excludes authorized SKU creation, catalogue review ledger, price/stock initialization and ERP result.",
+      "result": "Presentation support observed; no runtime acceptance claimed."
+    },
+    {
+      "taskId": "ALB-01.04",
+      "source": "baseweb/src/app/customer-option.ts",
+      "scope": "Current design-kit approved customerOption safety-filter presentation only; excludes server audience enforcement, issued snapshot, outbound receipt and ERP delivery proof.",
+      "result": "Presentation support observed; no runtime acceptance claimed."
+    },
+    {
+      "taskId": "UTL-01.01",
+      "source": "drives/drive-180-phone-stock.py",
+      "scope": "Browser-local seven-SKU Stock update presentation only; excludes tenant/server authorization, durable inventory event/outbox, cross-device concurrency, source intake, real SKU provisioning and production stock acceptance.",
+      "result": "53 local browser checks passed: exact code/no-match boundary, manual New product route, seven independent receipts, named plus Unassigned lots, interruption/storage-failure retry, no next-item carry-over, final totals, direct-sheet control, 390 px layout and no runtime errors. No runtime acceptance claimed."
+    },
+    {
+      "taskId": "PRD-01.04",
+      "source": "drives/drive-180-phone-stock.py",
+      "scope": "Browser-local Product stock and direct-sheet stock-editor presentation only; excludes tenant/server authorization, durable inventory event/outbox, cross-device concurrency, source intake, real SKU provisioning and production stock acceptance.",
+      "result": "53 local browser checks passed: exact code/no-match boundary, manual New product route, seven independent receipts, named plus Unassigned lots, interruption/storage-failure retry, no next-item carry-over, final totals, direct-sheet control, 390 px layout and no runtime errors. No runtime acceptance claimed."
+    },
+    {
+      "taskId": "OBJ-01.01",
+      "source": "drives/drive-181-workspace.py",
+      "release": "E181",
+      "scope": "Isolated synthetic English-kit browser journey at desktop/phone sizes; no production authorization, provider send, ERP, durable server command or physical-print acceptance. See RELEASE-181 for the exact tested surfaces and remaining boundaries.",
+      "result": "38 passing checks on the combined E181 candidate; no failed checks or uncaught errors in this drive."
+    },
+    {
+      "taskId": "CAT-01.03",
+      "source": "drives/drive-181-workspace.py",
+      "release": "E181",
+      "scope": "Isolated synthetic English-kit browser journey at desktop/phone sizes; no production authorization, provider send, ERP, durable server command or physical-print acceptance. See RELEASE-181 for the exact tested surfaces and remaining boundaries.",
+      "result": "38 passing checks on the combined E181 candidate; no failed checks or uncaught errors in this drive."
+    },
+    {
+      "taskId": "SRC-01.02",
+      "source": "drives/drive-181-workspace.py",
+      "release": "E181",
+      "scope": "Isolated synthetic English-kit browser journey at desktop/phone sizes; no production authorization, provider send, ERP, durable server command or physical-print acceptance. See RELEASE-181 for the exact tested surfaces and remaining boundaries.",
+      "result": "38 passing checks on the combined E181 candidate; no failed checks or uncaught errors in this drive."
+    },
+    {
+      "taskId": "UTL-04.01",
+      "source": "drives/drive-181-workspace.py",
+      "release": "E181",
+      "scope": "Isolated synthetic English-kit browser journey at desktop/phone sizes; no production authorization, provider send, ERP, durable server command or physical-print acceptance. See RELEASE-181 for the exact tested surfaces and remaining boundaries.",
+      "result": "38 passing checks on the combined E181 candidate; no failed checks or uncaught errors in this drive."
+    },
+    {
+      "taskId": "CUS-01.01",
+      "source": "drives/drive-148-customer.py",
+      "release": "E181",
+      "scope": "Isolated synthetic English-kit browser journey at desktop/phone sizes; no production authorization, provider send, ERP, durable server command or physical-print acceptance. See RELEASE-181 for the exact tested surfaces and remaining boundaries.",
+      "result": "69 passing checks on the combined E181 candidate; no failed checks or uncaught errors in this drive."
+    },
+    {
+      "taskId": "CUS-01.02",
+      "source": "drives/drive-148-customer.py",
+      "release": "E181",
+      "scope": "Isolated synthetic English-kit browser journey at desktop/phone sizes; no production authorization, provider send, ERP, durable server command or physical-print acceptance. See RELEASE-181 for the exact tested surfaces and remaining boundaries.",
+      "result": "69 passing checks on the combined E181 candidate; no failed checks or uncaught errors in this drive."
+    },
+    {
+      "taskId": "PRD-01.01",
+      "source": "drives/drive-176-edges.py",
+      "release": "E181",
+      "scope": "Isolated synthetic English-kit browser journey at desktop/phone sizes; no production authorization, provider send, ERP, durable server command or physical-print acceptance. See RELEASE-181 for the exact tested surfaces and remaining boundaries.",
+      "result": "42 passing checks on the combined E181 candidate; no failed checks or uncaught errors in this drive."
+    },
+    {
+      "taskId": "PRD-01.07",
+      "source": "drives/drive-176-edges.py",
+      "release": "E181",
+      "scope": "Isolated synthetic English-kit browser journey at desktop/phone sizes; no production authorization, provider send, ERP, durable server command or physical-print acceptance. See RELEASE-181 for the exact tested surfaces and remaining boundaries.",
+      "result": "42 passing checks on the combined E181 candidate; no failed checks or uncaught errors in this drive."
+    },
+    {
+      "taskId": "CAT-01.01",
+      "source": "drives/drive-176-edges.py",
+      "release": "E181",
+      "scope": "Isolated synthetic English-kit browser journey at desktop/phone sizes; no production authorization, provider send, ERP, durable server command or physical-print acceptance. See RELEASE-181 for the exact tested surfaces and remaining boundaries.",
+      "result": "42 passing checks on the combined E181 candidate; no failed checks or uncaught errors in this drive."
+    },
+    {
+      "taskId": "PRD-01.01",
+      "source": "drives/drive-176-sheet.py",
+      "release": "E181",
+      "scope": "Isolated synthetic English-kit browser journey at desktop/phone sizes; no production authorization, provider send, ERP, durable server command or physical-print acceptance. See RELEASE-181 for the exact tested surfaces and remaining boundaries.",
+      "result": "56 passing checks on the combined E181 candidate; no failed checks or uncaught errors in this drive."
+    },
+    {
+      "taskId": "PRD-01.02",
+      "source": "drives/drive-176-sheet.py",
+      "release": "E181",
+      "scope": "Isolated synthetic English-kit browser journey at desktop/phone sizes; no production authorization, provider send, ERP, durable server command or physical-print acceptance. See RELEASE-181 for the exact tested surfaces and remaining boundaries.",
+      "result": "56 passing checks on the combined E181 candidate; no failed checks or uncaught errors in this drive."
+    },
+    {
+      "taskId": "PRD-01.04",
+      "source": "drives/drive-176-sheet.py",
+      "release": "E181",
+      "scope": "Isolated synthetic English-kit browser journey at desktop/phone sizes; no production authorization, provider send, ERP, durable server command or physical-print acceptance. See RELEASE-181 for the exact tested surfaces and remaining boundaries.",
+      "result": "56 passing checks on the combined E181 candidate; no failed checks or uncaught errors in this drive."
+    },
+    {
+      "taskId": "CAT-01.03",
+      "source": "drives/drive-178-catalogue.py",
+      "release": "E181",
+      "scope": "Isolated synthetic English-kit browser journey at desktop/phone sizes; no production authorization, provider send, ERP, durable server command or physical-print acceptance. See RELEASE-181 for the exact tested surfaces and remaining boundaries.",
+      "result": "75 passing checks on the combined E181 candidate; no failed checks or uncaught errors in this drive."
+    },
+    {
+      "taskId": "SRC-01.02",
+      "source": "drives/drive-178-catalogue.py",
+      "release": "E181",
+      "scope": "Isolated synthetic English-kit browser journey at desktop/phone sizes; no production authorization, provider send, ERP, durable server command or physical-print acceptance. See RELEASE-181 for the exact tested surfaces and remaining boundaries.",
+      "result": "75 passing checks on the combined E181 candidate; no failed checks or uncaught errors in this drive."
+    },
+    {
+      "taskId": "OBJ-01.01",
+      "source": "drives/drive-178-connected.py",
+      "release": "E181",
+      "scope": "Isolated synthetic English-kit browser journey at desktop/phone sizes; no production authorization, provider send, ERP, durable server command or physical-print acceptance. See RELEASE-181 for the exact tested surfaces and remaining boundaries.",
+      "result": "26 passing checks on the combined E181 candidate; no failed checks or uncaught errors in this drive."
+    },
+    {
+      "taskId": "CUS-01.01",
+      "source": "drives/drive-178-connected.py",
+      "release": "E181",
+      "scope": "Isolated synthetic English-kit browser journey at desktop/phone sizes; no production authorization, provider send, ERP, durable server command or physical-print acceptance. See RELEASE-181 for the exact tested surfaces and remaining boundaries.",
+      "result": "26 passing checks on the combined E181 candidate; no failed checks or uncaught errors in this drive."
+    },
+    {
+      "taskId": "UTL-01.01",
+      "source": "drives/drive-180-phone-stock.py",
+      "release": "E181",
+      "scope": "Isolated synthetic English-kit browser journey at desktop/phone sizes; no production authorization, provider send, ERP, durable server command or physical-print acceptance. See RELEASE-181 for the exact tested surfaces and remaining boundaries.",
+      "result": "53 passing checks on the combined E181 candidate; no failed checks or uncaught errors in this drive."
+    },
+    {
+      "taskId": "PRD-01.04",
+      "source": "drives/drive-180-phone-stock.py",
+      "release": "E181",
+      "scope": "Isolated synthetic English-kit browser journey at desktop/phone sizes; no production authorization, provider send, ERP, durable server command or physical-print acceptance. See RELEASE-181 for the exact tested surfaces and remaining boundaries.",
+      "result": "53 passing checks on the combined E181 candidate; no failed checks or uncaught errors in this drive."
+    },
+    {
+      "taskId": "COM-01.01",
+      "source": "drives/drive-180-price-journey.py",
+      "release": "E181",
+      "scope": "Isolated synthetic English-kit browser journey at desktop/phone sizes; no production authorization, provider send, ERP, durable server command or physical-print acceptance. See RELEASE-181 for the exact tested surfaces and remaining boundaries.",
+      "result": "50 passing checks on the combined E181 candidate; no failed checks or uncaught errors in this drive."
+    },
+    {
+      "taskId": "ADM-01.01",
+      "source": "drives/drive-180-price-journey.py",
+      "release": "E181",
+      "scope": "Isolated synthetic English-kit browser journey at desktop/phone sizes; no production authorization, provider send, ERP, durable server command or physical-print acceptance. See RELEASE-181 for the exact tested surfaces and remaining boundaries.",
+      "result": "50 passing checks on the combined E181 candidate; no failed checks or uncaught errors in this drive."
+    },
+    {
+      "taskId": "ALB-01.03",
+      "source": "drives/drive-158-notes.py",
+      "release": "E181",
+      "scope": "Isolated synthetic English-kit browser journey at desktop/phone sizes; no production authorization, provider send, ERP, durable server command or physical-print acceptance. See RELEASE-181 for the exact tested surfaces and remaining boundaries.",
+      "result": "40 passing checks on the combined E181 candidate; no failed checks or uncaught errors in this drive."
+    },
+    {
+      "taskId": "CAT-01.02",
+      "source": "drives/drive-158-notes.py",
+      "release": "E181",
+      "scope": "Isolated synthetic English-kit browser journey at desktop/phone sizes; no production authorization, provider send, ERP, durable server command or physical-print acceptance. See RELEASE-181 for the exact tested surfaces and remaining boundaries.",
+      "result": "40 passing checks on the combined E181 candidate; no failed checks or uncaught errors in this drive."
+    },
+    {
+      "taskId": "CAT-01.01",
+      "source": "drives/drive-163-catalogue-export.py",
+      "release": "E181",
+      "scope": "Isolated synthetic English-kit browser journey at desktop/phone sizes; no production authorization, provider send, ERP, durable server command or physical-print acceptance. See RELEASE-181 for the exact tested surfaces and remaining boundaries.",
+      "result": "60 passing checks on the combined E181 candidate; no failed checks or uncaught errors in this drive."
+    },
+    {
+      "taskId": "ALB-01.03",
+      "source": "drives/drive-180-paper-review.py",
+      "release": "E181",
+      "scope": "Isolated synthetic English-kit browser journey at desktop/phone sizes; no production authorization, provider send, ERP, durable server command or physical-print acceptance. See RELEASE-181 for the exact tested surfaces and remaining boundaries.",
+      "result": "46 passing checks on the combined E181 candidate; no failed checks or uncaught errors in this drive."
+    },
+    {
+      "taskId": "DOC-01.03",
+      "source": "drives/drive-180-paper-review.py",
+      "release": "E181",
+      "scope": "Isolated synthetic English-kit browser journey at desktop/phone sizes; no production authorization, provider send, ERP, durable server command or physical-print acceptance. See RELEASE-181 for the exact tested surfaces and remaining boundaries.",
+      "result": "46 passing checks on the combined E181 candidate; no failed checks or uncaught errors in this drive."
+    },
+    {
+      "taskId": "SRC-01.01",
+      "source": "drives/drive-181-email-privacy.py",
+      "release": "E181",
+      "scope": "Isolated synthetic English-kit browser journey at desktop/phone sizes; no production authorization, provider send, ERP, durable server command or physical-print acceptance. See RELEASE-181 for the exact tested surfaces and remaining boundaries.",
+      "result": "31 passing checks on the combined E181 candidate; no failed checks or uncaught errors in this drive."
+    },
+    {
+      "taskId": "SRC-01.02",
+      "source": "drives/drive-181-email-privacy.py",
+      "release": "E181",
+      "scope": "Isolated synthetic English-kit browser journey at desktop/phone sizes; no production authorization, provider send, ERP, durable server command or physical-print acceptance. See RELEASE-181 for the exact tested surfaces and remaining boundaries.",
+      "result": "31 passing checks on the combined E181 candidate; no failed checks or uncaught errors in this drive."
+    },
+    {
+      "taskId": "CAT-01.01",
+      "source": "drives/drive-181-email-privacy.py",
+      "release": "E181",
+      "scope": "Isolated synthetic English-kit browser journey at desktop/phone sizes; no production authorization, provider send, ERP, durable server command or physical-print acceptance. See RELEASE-181 for the exact tested surfaces and remaining boundaries.",
+      "result": "31 passing checks on the combined E181 candidate; no failed checks or uncaught errors in this drive."
+    },
+    {
+      "taskId": "COM-01.01",
+      "source": "drives/drive-181-units-domain.cjs",
+      "release": "E181",
+      "scope": "In-memory unit store only: exact/inverse/chained factors, nominal/catch-weight null factors, exact SKU isolation, custom kind reload, revision conflict and failed local persistence. Not server-side unit/stock/price acceptance.",
+      "result": "35 passing domain checks."
+    },
+    {
+      "taskId": "PRD-01.02",
+      "source": "drives/drive-182-creation.py",
+      "release": "E182",
+      "scope": "Isolated synthetic English-kit browser evidence only; excludes server authorization, live provider/model/ERP effects, physical print proof and production acceptance. See RELEASE-182.",
+      "result": "78 passing creation/customer checks: identity-first SKU and variation writes, retry identity, custom units, unclassified legacy products, explicit price handoff, insights and customer persistence. No runtime acceptance claimed."
+    },
+    {
+      "taskId": "INT-01.07",
+      "source": "drives/drive-182-assistant.py",
+      "release": "E182",
+      "scope": "Isolated synthetic English-kit browser evidence only; excludes server authorization, live provider/model/ERP effects, physical print proof and production acceptance. See RELEASE-182.",
+      "result": "51 passing Assistant checks: persisted history, zero-availability report, reviewed affected orders/copy, stock handoff, classification review and phone geometry. No runtime acceptance claimed."
+    },
+    {
+      "taskId": "CUS-01.01",
+      "source": "drives/drive-182-customer-email.py",
+      "release": "E182",
+      "scope": "Isolated synthetic English-kit browser evidence only; excludes server authorization, live provider/model/ERP effects, physical print proof and production acceptance. See RELEASE-182.",
+      "result": "26 passing customer/email checks: saved recipient identity, no fabricated sent receipt, memory-only unverified draft and exact communication-history source routing. No runtime acceptance claimed."
+    },
+    {
+      "taskId": "DOC-01.02",
+      "source": "drives/drive-182-printing.py",
+      "release": "E182",
+      "scope": "Isolated synthetic English-kit browser evidence only; excludes server authorization, live provider/model/ERP effects, physical print proof and production acceptance. See RELEASE-182.",
+      "result": "62 passing native-print checks: immutable generated copy, A4/A5 source paper, semantic actor/time trail, explicit confirmation, reprint lineage, three-copy all-day capacity and durable blocked-popup retry. No runtime acceptance claimed."
+    },
+    {
+      "taskId": "PRD-01.01",
+      "source": "drives/drive-176-sheet.py",
+      "release": "E182",
+      "scope": "Isolated synthetic English-kit browser evidence only; excludes server authorization, live provider/model/ERP effects, physical print proof and production acceptance. See RELEASE-182.",
+      "result": "56 passing product-sheet checks: canonical sections, independent variant identity/pricing/artwork/stock, original SKU and customer alias dossier, archive/restore and price history. No runtime acceptance claimed."
+    },
+    {
+      "taskId": "OBJ-01.03",
+      "source": "drives/drive-188-surface-grammar.py",
+      "scope": "Current E188 browser-kit list, line and phone-work presentation only; excludes runtime authorization, model execution, provider execution and Copilot execution.",
+      "result": "E188 candidate browser evidence is release-bound and does not alter task status."
+    },
+    {
+      "taskId": "CAT-01.03",
+      "source": "drives/drive-188-surface-grammar.py",
+      "scope": "Current E188 browser-kit catalogue filter and inset-row presentation only; excludes tenant query authorization and durable preference service execution.",
+      "result": "E188 candidate browser evidence is release-bound and does not alter task status."
+    },
+    {
+      "taskId": "DOC-01.03",
+      "source": "drives/drive-188-export-filters.py",
+      "scope": "Current E188 browser-kit Export filter presentation only; excludes output-job authorization, artifact creation, provider delivery and physical-print proof.",
+      "result": "E188 candidate browser evidence is release-bound and does not alter task status."
+    },
+    {
+      "taskId": "QLT-02.01",
+      "source": "drives/drive-183-viewports.py",
+      "scope": "Current E188 browser-kit viewport and keyboard presentation only; excludes runtime completion.",
+      "result": "E188 candidate browser evidence is release-bound and does not alter task status."
+    },
+    {
+      "taskId": "LOT-01.07",
+      "source": "drives/drive-178-lots.py",
+      "release": "E182",
+      "scope": "Isolated synthetic English-kit browser evidence only; excludes server authorization, live provider/model/ERP effects, physical print proof and production acceptance. See RELEASE-182.",
+      "result": "50 passing stock/lot checks: validated receipt/count allocation, named and unassigned lots, slider splits, storage/concurrency failure recovery and phone layout. No runtime acceptance claimed."
+    }
+  ],
+  "statusRule": "A task may leave SPECIFIED only when actualEvidence contains a scoped source/release/drive/result record for that exact task. Kit evidence never qualifies."
+}

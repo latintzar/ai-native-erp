@@ -1,0 +1,195 @@
+{
+  "locale": "es-ES",
+  "schemaVersion": 1,
+  "entries": [
+    {
+      "source": "src/prototypes/cedar/customer-profile.tsx",
+      "context": "JSXAttribute > StringLiteral:aria-label",
+      "kind": "literal",
+      "english": "Frequent products",
+      "spanish": "Productos habituales"
+    },
+    {
+      "source": "src/prototypes/cedar/customer-profile.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Frequent products",
+      "spanish": "Productos habituales"
+    },
+    {
+      "source": "src/prototypes/cedar/customer-profile.tsx",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "Quantity pending",
+      "spanish": "Cantidad pendiente"
+    },
+    {
+      "source": "src/prototypes/cedar/customer-profile.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "What changed",
+      "spanish": "Qué cambió"
+    },
+    {
+      "source": "src/prototypes/cedar/customer-profile.tsx",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "Monthly order value",
+      "spanish": "Valor mensual de los pedidos"
+    },
+    {
+      "source": "src/prototypes/cedar/customer-profile.tsx",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "Order value",
+      "spanish": "Valor del pedido"
+    },
+    {
+      "source": "src/prototypes/cedar/customer-profile.tsx",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "Monthly orders",
+      "spanish": "Pedidos mensuales"
+    },
+    {
+      "source": "src/prototypes/cedar/customer-profile.tsx",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "Recent orders",
+      "spanish": "Pedidos recientes"
+    },
+    {
+      "source": "src/prototypes/cedar/insights.ts",
+      "context": "ObjectProperty > TemplateLiteral",
+      "kind": "template",
+      "english": "Asked for ${off.product.name.toLowerCase()}",
+      "spanish": "Pidió ${off.product.name.toLowerCase()}"
+    },
+    {
+      "source": "src/prototypes/cedar/insights.ts",
+      "context": "ObjectProperty > TemplateLiteral",
+      "kind": "template",
+      "english": "Outside your catalogue, on the delivery note of ${shortOf(cast, s.day)}.",
+      "spanish": "Fuera de tu catálogo, en el albarán del ${shortOf(cast, s.day)}."
+    },
+    {
+      "source": "src/prototypes/cedar/insights.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Open complaint",
+      "spanish": "Abrir incidencia"
+    },
+    {
+      "source": "src/prototypes/cedar/insights.ts",
+      "context": "ObjectProperty > TemplateLiteral",
+      "kind": "template",
+      "english": "Complaint on ${past.day}",
+      "spanish": "Incidencia del ${past.day}"
+    },
+    {
+      "source": "src/prototypes/cedar/knows-web.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Where their words land",
+      "spanish": "Dónde encajan sus palabras"
+    },
+    {
+      "source": "src/prototypes/cedar/knows-web.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Whose words land here",
+      "spanish": "De quién son las palabras que encajan aquí"
+    },
+    {
+      "source": "src/prototypes/cedar/knows-web.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "What you fill it with",
+      "spanish": "Con qué lo completas"
+    },
+    {
+      "source": "src/prototypes/cedar/knows-web.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Which branches resolve to it",
+      "spanish": "Qué ramas resuelven aquí"
+    },
+    {
+      "source": "src/prototypes/cedar/knows-web.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Open a name",
+      "spanish": "Abrir un nombre"
+    },
+    {
+      "source": "src/prototypes/cedar/knows-web.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "The thicker the line, the more often it happened.",
+      "spanish": "Cuanto más gruesa la línea, más veces ocurrió."
+    },
+    {
+      "source": "src/prototypes/cedar/knows-web.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Open their profile",
+      "spanish": "Abrir su perfil"
+    },
+    {
+      "source": "src/prototypes/cedar/knows-web.tsx",
+      "context": "JSXAttribute > StringLiteral:head",
+      "kind": "literal",
+      "english": "Your customers",
+      "spanish": "Tus clientes"
+    },
+    {
+      "source": "src/prototypes/cedar/knows-web.tsx",
+      "context": "JSXAttribute > StringLiteral:head",
+      "kind": "literal",
+      "english": "What you sell",
+      "spanish": "Lo que vendéis"
+    },
+    {
+      "source": "src/prototypes/cedar/knows-web.tsx",
+      "context": "JSXAttribute > StringLiteral:label",
+      "kind": "literal",
+      "english": "Your customers",
+      "spanish": "Tus clientes"
+    },
+    {
+      "source": "src/prototypes/cedar/knows-web.tsx",
+      "context": "JSXAttribute > StringLiteral:ariaLabel",
+      "kind": "literal",
+      "english": "Reading your delivery notes",
+      "spanish": "Leyendo tus albaranes"
+    },
+    {
+      "source": "src/prototypes/cedar/knows-web.tsx",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "Bring it in",
+      "spanish": "Importarlo"
+    },
+    {
+      "source": "src/prototypes/cedar/knows.ts",
+      "context": "ObjectProperty > TemplateLiteral",
+      "kind": "template",
+      "english": "Fridays, ${customer.name} takes about ${amount(qty)} ${product.unit} of ${product.name}.",
+      "spanish": "Los viernes, ${customer.name} suele pedir unos ${amount(qty)} ${product.unit} de ${product.name}."
+    },
+    {
+      "source": "src/prototypes/cedar/knows.ts",
+      "context": "ObjectProperty > TemplateLiteral",
+      "kind": "template",
+      "english": "Their menu added ${menu.dish} on ${found}.",
+      "spanish": "Su carta añadió ${menu.dish} el ${found}."
+    },
+    {
+      "source": "src/prototypes/cedar/knows.ts",
+      "context": "ObjectProperty > TemplateLiteral",
+      "kind": "template",
+      "english": "Their listing was edited on ${found}",
+      "spanish": "Su ficha se actualizó el ${found}."
+    }
+  ]
+}

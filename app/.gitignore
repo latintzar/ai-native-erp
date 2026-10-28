@@ -1,0 +1,2 @@
+# Isolated English-only build; never commit generated bundles.
+dist-export-review/

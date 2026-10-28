@@ -1,0 +1,112 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:rocoto:situations:intelligence:event-envelope:v1",
+  "title": "Rocoto Intelligence Durable Event and Outbox Envelope v1",
+  "description": "Authoritative post-validation event. This envelope is written by the domain transaction, not by a model or browser.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "api_version",
+    "event_id",
+    "event_type",
+    "tenant_id",
+    "aggregate",
+    "sequence",
+    "actor",
+    "causation_id",
+    "correlation_id",
+    "payload_schema_id",
+    "payload_hash",
+    "safe_payload",
+    "occurred_at"
+  ],
+  "properties": {
+    "api_version": {"const": "2026-08-31/v1"},
+    "event_id": {"$ref": "#/$defs/opaqueId"},
+    "event_type": {
+      "enum": [
+        "intelligence.run.queued",
+        "intelligence.run.started",
+        "intelligence.run.completed",
+        "intelligence.run.blocked",
+        "intelligence.proposal.created",
+        "intelligence.proposal.reviewed",
+        "intelligence.proposal.superseded",
+        "albaran.prediction.applied",
+        "concern.raised",
+        "concern.dismissed",
+        "concern.resolved",
+        "concern.reopened",
+        "catalogue.classification.applied",
+        "catalogue.classification.undone",
+        "product_sku.created_from_review",
+        "artwork.requested",
+        "artwork.submitted",
+        "artwork.candidate.ingested",
+        "artwork.reviewed",
+        "artwork.approved",
+        "artwork.rejected",
+        "artwork.superseded",
+        "artwork.failed",
+        "notification.dispatch.requested",
+        "notification.recipient.accepted",
+        "notification.recipient.rejected",
+        "notification.recipient.failed",
+        "notification.recipient.delivered",
+        "notification.recipient.unknown"
+      ]
+    },
+    "tenant_id": {"$ref": "#/$defs/tenantId"},
+    "aggregate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["object_type", "object_id", "revision"],
+      "properties": {
+        "object_type": {"type": "string", "minLength": 1, "maxLength": 80},
+        "object_id": {"$ref": "#/$defs/opaqueId"},
+        "revision": {"type": "integer", "minimum": 1}
+      }
+    },
+    "sequence": {"type": "integer", "minimum": 1, "description": "Monotonic within aggregate."},
+    "actor": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["actor_type", "actor_id"],
+      "properties": {
+        "actor_type": {"enum": ["user", "service", "provider"]},
+        "actor_id": {"$ref": "#/$defs/opaqueId"}
+      }
+    },
+    "causation_id": {"$ref": "#/$defs/opaqueId"},
+    "correlation_id": {"$ref": "#/$defs/opaqueId"},
+    "payload_schema_id": {"type": "string", "minLength": 1, "maxLength": 300},
+    "payload_hash": {"$ref": "#/$defs/hash"},
+    "safe_payload": {
+      "type": "object",
+      "description": "Minimal redacted projection-safe data. No raw prompt, source body, contact address, credential, provider URL, or internal storage location."
+    },
+    "private_payload_ref": {"$ref": "#/$defs/opaqueId"},
+    "outbox": {"$ref": "#/$defs/outbox"},
+    "occurred_at": {"type": "string", "format": "date-time"}
+  },
+  "$defs": {
+    "opaqueId": {"type": "string", "pattern": "^[A-Za-z][A-Za-z0-9_-]{2,127}$"},
+    "tenantId": {"type": "string", "pattern": "^ten_[A-Za-z0-9_-]{3,120}$"},
+    "hash": {"type": "string", "pattern": "^sha256:[a-f0-9]{64}$"},
+    "outbox": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["outbox_id", "effect_type", "status", "idempotency_key", "attempt", "created_at"],
+      "properties": {
+        "outbox_id": {"$ref": "#/$defs/opaqueId"},
+        "effect_type": {"enum": ["projection", "provider_image_poll", "provider_image_webhook", "channel_dispatch", "notification"]},
+        "status": {"enum": ["pending", "processing", "accepted", "failed", "retry_wait", "dead_letter", "cancelled"]},
+        "idempotency_key": {"type": "string", "pattern": "^[A-Za-z0-9_-]{16,200}$"},
+        "attempt": {"type": "integer", "minimum": 0},
+        "next_attempt_at": {"type": "string", "format": "date-time"},
+        "provider_receipt_id": {"$ref": "#/$defs/opaqueId"},
+        "created_at": {"type": "string", "format": "date-time"}
+      }
+    }
+  }
+}

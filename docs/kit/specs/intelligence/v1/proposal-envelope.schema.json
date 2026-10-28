@@ -1,0 +1,1127 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:rocoto:situations:intelligence:proposal-envelope:v1",
+  "title": "Rocoto Intelligence Proposal Envelope v1",
+  "description": "A reviewable model or human-originated proposition. It is never an authoritative domain mutation.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "api_version",
+    "proposal_id",
+    "proposal_revision",
+    "proposal_type",
+    "tenant_id",
+    "run_id",
+    "release",
+    "state",
+    "target",
+    "context",
+    "evidence",
+    "operator_explanation",
+    "revision_preconditions",
+    "payload",
+    "created_at"
+  ],
+  "properties": {
+    "api_version": {
+      "const": "2026-08-31/v1"
+    },
+    "proposal_id": {
+      "$ref": "#/$defs/opaqueId"
+    },
+    "proposal_revision": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "proposal_type": {
+      "enum": [
+        "fulfilment_prediction",
+        "concern_assessment",
+        "catalogue_feedback",
+        "variant_interpretation",
+        "supply_assessment"
+      ]
+    },
+    "tenant_id": {
+      "$ref": "#/$defs/tenantId"
+    },
+    "run_id": {
+      "$ref": "#/$defs/opaqueId"
+    },
+    "release": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "release_id",
+        "model_id",
+        "prompt_template_id",
+        "prompt_hash",
+        "output_schema_id"
+      ],
+      "properties": {
+        "release_id": {
+          "$ref": "#/$defs/opaqueId"
+        },
+        "model_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        },
+        "prompt_template_id": {
+          "$ref": "#/$defs/opaqueId"
+        },
+        "prompt_hash": {
+          "$ref": "#/$defs/hash"
+        },
+        "output_schema_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 300
+        }
+      }
+    },
+    "state": {
+      "enum": [
+        "draft",
+        "ready_for_review",
+        "accepted",
+        "dismissed",
+        "superseded",
+        "expired",
+        "blocked",
+        "cancelled"
+      ]
+    },
+    "target": {
+      "$ref": "#/$defs/target"
+    },
+    "context": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "context_id",
+        "fingerprint",
+        "effective_at",
+        "redaction_policy_id"
+      ],
+      "properties": {
+        "context_id": {
+          "$ref": "#/$defs/opaqueId"
+        },
+        "fingerprint": {
+          "$ref": "#/$defs/hash"
+        },
+        "effective_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "redaction_policy_id": {
+          "$ref": "#/$defs/opaqueId"
+        }
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 100,
+      "items": {
+        "$ref": "#/$defs/evidenceRef"
+      }
+    },
+    "operator_explanation": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 20,
+      "items": {
+        "$ref": "#/$defs/explanationClaim"
+      },
+      "description": "Short evidence-linked explanation. It must not contain hidden reasoning, raw prompt text, or unredacted source material."
+    },
+    "revision_preconditions": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 100,
+      "items": {
+        "$ref": "#/$defs/revisionPrecondition"
+      }
+    },
+    "payload": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/fulfilmentPrediction"
+        },
+        {
+          "$ref": "#/$defs/concernAssessment"
+        },
+        {
+          "$ref": "#/$defs/catalogueFeedback"
+        },
+        {
+          "$ref": "#/$defs/variantInterpretation"
+        },
+        {
+          "$ref": "#/$defs/supplyAssessment"
+        }
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "expires_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "supersedes_proposal_id": {
+      "$ref": "#/$defs/opaqueId"
+    }
+  },
+  "$defs": {
+    "opaqueId": {
+      "type": "string",
+      "pattern": "^[A-Za-z][A-Za-z0-9_-]{2,127}$"
+    },
+    "tenantId": {
+      "type": "string",
+      "pattern": "^ten_[A-Za-z0-9_-]{3,120}$"
+    },
+    "hash": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "target": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "object_type",
+        "object_id",
+        "revision"
+      ],
+      "properties": {
+        "object_type": {
+          "enum": [
+            "albaran",
+            "order",
+            "order_line",
+            "source_thread",
+            "catalogue",
+            "product_family",
+            "product_sku",
+            "supplier_issue"
+          ]
+        },
+        "object_id": {
+          "$ref": "#/$defs/opaqueId"
+        },
+        "revision": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    },
+    "revisionPrecondition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "object_type",
+        "object_id",
+        "revision"
+      ],
+      "properties": {
+        "object_type": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80
+        },
+        "object_id": {
+          "$ref": "#/$defs/opaqueId"
+        },
+        "revision": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    },
+    "evidenceRef": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "evidence_id",
+        "kind",
+        "source_id",
+        "source_revision",
+        "content_hash",
+        "locator",
+        "access_class"
+      ],
+      "properties": {
+        "evidence_id": {
+          "$ref": "#/$defs/opaqueId"
+        },
+        "kind": {
+          "enum": [
+            "source_field",
+            "source_span",
+            "document_line",
+            "historical_outcome",
+            "catalogue_fact",
+            "inventory_fact",
+            "tariff_fact",
+            "customer_preference",
+            "operator_correction",
+            "supplier_assessment",
+            "policy_result",
+            "stock_balance",
+            "daily_stock_estimate",
+            "supplier_confirmation"
+          ]
+        },
+        "source_id": {
+          "$ref": "#/$defs/opaqueId"
+        },
+        "source_revision": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "content_hash": {
+          "$ref": "#/$defs/hash"
+        },
+        "locator": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "locator_type",
+            "value"
+          ],
+          "properties": {
+            "locator_type": {
+              "enum": [
+                "field",
+                "line",
+                "event",
+                "span_hash",
+                "row",
+                "record"
+              ]
+            },
+            "value": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 300
+            }
+          }
+        },
+        "access_class": {
+          "enum": [
+            "public_reference",
+            "tenant_operational",
+            "restricted_contact",
+            "sensitive_document"
+          ]
+        },
+        "safe_display_excerpt": {
+          "type": "string",
+          "maxLength": 500
+        }
+      }
+    },
+    "explanationClaim": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "claim",
+        "claim_status",
+        "evidence_ids"
+      ],
+      "properties": {
+        "claim": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 700
+        },
+        "claim_status": {
+          "enum": [
+            "observed",
+            "inferred",
+            "missing",
+            "requires_confirmation"
+          ]
+        },
+        "evidence_ids": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 20,
+          "items": {
+            "$ref": "#/$defs/opaqueId"
+          }
+        }
+      }
+    },
+    "quantity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "value",
+        "basis",
+        "evidence_ids"
+      ],
+      "properties": {
+        "value": {
+          "type": "string",
+          "pattern": "^-?[0-9]+(?:\\.[0-9]+)?$"
+        },
+        "basis": {
+          "enum": [
+            "explicit_source",
+            "declared_conversion"
+          ]
+        },
+        "evidence_ids": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 10,
+          "items": {
+            "$ref": "#/$defs/opaqueId"
+          }
+        }
+      },
+      "description": "Quantity is absent when unsupported. The model must not infer a number."
+    },
+    "unit": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "unit_id",
+        "basis",
+        "evidence_ids"
+      ],
+      "properties": {
+        "unit_id": {
+          "$ref": "#/$defs/opaqueId"
+        },
+        "basis": {
+          "enum": [
+            "explicit_source",
+            "declared_conversion",
+            "existing_line"
+          ]
+        },
+        "evidence_ids": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 10,
+          "items": {
+            "$ref": "#/$defs/opaqueId"
+          }
+        }
+      },
+      "description": "Unit is absent when unknown. Price and lot are deliberately absent from model payloads."
+    },
+    "fulfilmentLine": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "candidate_line_id",
+        "line_action",
+        "source_evidence_ids",
+        "confidence_band",
+        "requires_confirmation",
+        "availability_assessment"
+      ],
+      "properties": {
+        "candidate_line_id": {
+          "$ref": "#/$defs/opaqueId"
+        },
+        "line_action": {
+          "enum": [
+            "carry_through",
+            "substitute",
+            "add",
+            "omit",
+            "unresolved"
+          ]
+        },
+        "source_line_id": {
+          "$ref": "#/$defs/opaqueId"
+        },
+        "source_evidence_ids": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 20,
+          "items": {
+            "$ref": "#/$defs/opaqueId"
+          }
+        },
+        "target_sku_id": {
+          "$ref": "#/$defs/opaqueId"
+        },
+        "quantity": {
+          "$ref": "#/$defs/quantity"
+        },
+        "unit": {
+          "$ref": "#/$defs/unit"
+        },
+        "confidence_band": {
+          "enum": [
+            "high",
+            "medium",
+            "low",
+            "unknown"
+          ]
+        },
+        "requires_confirmation": {
+          "type": "boolean"
+        },
+        "explanation_evidence_ids": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 20,
+          "items": {
+            "$ref": "#/$defs/opaqueId"
+          }
+        },
+        "availability_assessment": {
+          "$ref": "#/$defs/availabilityAssessment"
+        }
+      }
+    },
+    "fulfilmentPrediction": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "document_id",
+        "document_revision",
+        "candidate_lines",
+        "unresolved_item_ids",
+        "concern_candidates"
+      ],
+      "properties": {
+        "kind": {
+          "const": "fulfilment_prediction"
+        },
+        "document_id": {
+          "$ref": "#/$defs/opaqueId"
+        },
+        "document_revision": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "candidate_lines": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 500,
+          "items": {
+            "$ref": "#/$defs/fulfilmentLine"
+          }
+        },
+        "unresolved_item_ids": {
+          "type": "array",
+          "maxItems": 100,
+          "items": {
+            "$ref": "#/$defs/opaqueId"
+          }
+        },
+        "concern_candidates": {
+          "type": "array",
+          "maxItems": 100,
+          "items": {
+            "$ref": "#/$defs/concernCandidate"
+          }
+        }
+      }
+    },
+    "concernCandidate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "concern_kind",
+        "target",
+        "statement",
+        "predicate_id",
+        "evidence_ids"
+      ],
+      "properties": {
+        "concern_kind": {
+          "enum": [
+            "response",
+            "check",
+            "supply"
+          ]
+        },
+        "target": {
+          "$ref": "#/$defs/target"
+        },
+        "statement": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 700
+        },
+        "predicate_id": {
+          "$ref": "#/$defs/opaqueId"
+        },
+        "evidence_ids": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 20,
+          "items": {
+            "$ref": "#/$defs/opaqueId"
+          }
+        }
+      }
+    },
+    "concernAssessment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "concerns"
+      ],
+      "properties": {
+        "kind": {
+          "const": "concern_assessment"
+        },
+        "concerns": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 100,
+          "items": {
+            "$ref": "#/$defs/concernCandidate"
+          }
+        }
+      }
+    },
+    "catalogueChange": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "sku_id",
+        "sku_revision",
+        "before",
+        "after",
+        "evidence_ids"
+      ],
+      "properties": {
+        "sku_id": {
+          "$ref": "#/$defs/opaqueId"
+        },
+        "sku_revision": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "before": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "category_id",
+            "family_id"
+          ],
+          "properties": {
+            "category_id": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "family_id": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "after": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "category_id",
+            "family_id"
+          ],
+          "properties": {
+            "category_id": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "family_id": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "evidence_ids": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 20,
+          "items": {
+            "$ref": "#/$defs/opaqueId"
+          }
+        }
+      }
+    },
+    "catalogueFeedback": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "changes",
+        "excluded_ambiguous_sku_ids",
+        "undo_payload_fingerprint"
+      ],
+      "properties": {
+        "kind": {
+          "const": "catalogue_feedback"
+        },
+        "changes": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 500,
+          "items": {
+            "$ref": "#/$defs/catalogueChange"
+          }
+        },
+        "excluded_ambiguous_sku_ids": {
+          "type": "array",
+          "maxItems": 500,
+          "items": {
+            "$ref": "#/$defs/opaqueId"
+          }
+        },
+        "undo_payload_fingerprint": {
+          "$ref": "#/$defs/hash"
+        }
+      }
+    },
+    "variantInterpretation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "original_evidence_ids",
+        "proposed_display_description",
+        "attribute_candidates",
+        "family_candidates",
+        "missing_facts",
+        "alternatives",
+        "visual_description_ready"
+      ],
+      "properties": {
+        "kind": {
+          "const": "variant_interpretation"
+        },
+        "original_evidence_ids": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 20,
+          "items": {
+            "$ref": "#/$defs/opaqueId"
+          }
+        },
+        "proposed_display_description": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 500
+        },
+        "attribute_candidates": {
+          "type": "array",
+          "maxItems": 100,
+          "items": {
+            "$ref": "#/$defs/attributeCandidate"
+          }
+        },
+        "family_candidates": {
+          "type": "array",
+          "maxItems": 20,
+          "items": {
+            "$ref": "#/$defs/familyCandidate"
+          }
+        },
+        "missing_facts": {
+          "type": "array",
+          "maxItems": 50,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 300
+          }
+        },
+        "alternatives": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 20,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 500
+          }
+        },
+        "visual_description_ready": {
+          "type": "boolean"
+        }
+      }
+    },
+    "attributeCandidate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "attribute_id",
+        "value",
+        "evidence_ids",
+        "status"
+      ],
+      "properties": {
+        "attribute_id": {
+          "$ref": "#/$defs/opaqueId"
+        },
+        "value": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 300
+        },
+        "evidence_ids": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 20,
+          "items": {
+            "$ref": "#/$defs/opaqueId"
+          }
+        },
+        "status": {
+          "enum": [
+            "observed",
+            "inferred",
+            "ambiguous",
+            "missing"
+          ]
+        }
+      }
+    },
+    "familyCandidate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "family_id",
+        "evidence_ids",
+        "confidence_band"
+      ],
+      "properties": {
+        "family_id": {
+          "$ref": "#/$defs/opaqueId"
+        },
+        "evidence_ids": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 20,
+          "items": {
+            "$ref": "#/$defs/opaqueId"
+          }
+        },
+        "confidence_band": {
+          "enum": [
+            "high",
+            "medium",
+            "low",
+            "unknown"
+          ]
+        }
+      }
+    },
+    "supplyImpact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "object_type",
+        "object_id",
+        "object_revision",
+        "impact_status",
+        "evidence_ids"
+      ],
+      "properties": {
+        "object_type": {
+          "enum": [
+            "product_sku",
+            "stock_position",
+            "order",
+            "customer"
+          ]
+        },
+        "object_id": {
+          "$ref": "#/$defs/opaqueId"
+        },
+        "object_revision": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "impact_status": {
+          "enum": [
+            "affected",
+            "possibly_affected",
+            "not_affected",
+            "unknown"
+          ]
+        },
+        "evidence_ids": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 20,
+          "items": {
+            "$ref": "#/$defs/opaqueId"
+          }
+        }
+      }
+    },
+    "recipientDraft": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "recipient_id",
+        "recipient_revision",
+        "channel",
+        "reason_evidence_ids",
+        "body",
+        "body_hash"
+      ],
+      "properties": {
+        "recipient_id": {
+          "$ref": "#/$defs/opaqueId"
+        },
+        "recipient_revision": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "channel": {
+          "enum": [
+            "email",
+            "whatsapp",
+            "sms",
+            "other"
+          ]
+        },
+        "reason_evidence_ids": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 20,
+          "items": {
+            "$ref": "#/$defs/opaqueId"
+          }
+        },
+        "body": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 5000
+        },
+        "body_hash": {
+          "$ref": "#/$defs/hash"
+        }
+      },
+      "description": "Recipient id is an internal reference. Contact address is resolved only by the authorized dispatch handler."
+    },
+    "supplyAssessment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "supplier_issue_evidence_ids",
+        "impacts",
+        "gaps",
+        "recipient_drafts",
+        "availability_assertions"
+      ],
+      "properties": {
+        "kind": {
+          "const": "supply_assessment"
+        },
+        "supplier_issue_evidence_ids": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 20,
+          "items": {
+            "$ref": "#/$defs/opaqueId"
+          }
+        },
+        "impacts": {
+          "type": "array",
+          "maxItems": 1000,
+          "items": {
+            "$ref": "#/$defs/supplyImpact"
+          }
+        },
+        "gaps": {
+          "type": "array",
+          "maxItems": 100,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 500
+          }
+        },
+        "recipient_drafts": {
+          "type": "array",
+          "maxItems": 1000,
+          "items": {
+            "$ref": "#/$defs/recipientDraft"
+          }
+        },
+        "availability_assertions": {
+          "type": "array",
+          "maxItems": 1000,
+          "items": {
+            "$ref": "#/$defs/availabilityAssessment"
+          }
+        }
+      }
+    },
+    "availabilityAssessment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "state_kind",
+        "label",
+        "as_of",
+        "expires_at",
+        "evidence_ids",
+        "validation_status"
+      ],
+      "properties": {
+        "state_kind": {
+          "enum": [
+            "recorded_balance",
+            "daily_stock_estimate",
+            "supplier_confirmed_inbound",
+            "unknown"
+          ]
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80
+        },
+        "as_of": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "expires_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "evidence_ids": {
+          "type": "array",
+          "minItems": 0,
+          "maxItems": 20,
+          "items": {
+            "$ref": "#/$defs/opaqueId"
+          }
+        },
+        "validation_status": {
+          "enum": [
+            "validated",
+            "stale",
+            "expired",
+            "unknown"
+          ]
+        },
+        "quantity": {
+          "$ref": "#/$defs/quantity"
+        },
+        "unit": {
+          "$ref": "#/$defs/unit"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "state_kind": {
+                "const": "recorded_balance"
+              }
+            },
+            "required": [
+              "state_kind"
+            ]
+          },
+          "then": {
+            "properties": {
+              "label": {
+                "const": "Recorded balance"
+              },
+              "evidence_ids": {
+                "minItems": 1
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "state_kind": {
+                "const": "daily_stock_estimate"
+              }
+            },
+            "required": [
+              "state_kind"
+            ]
+          },
+          "then": {
+            "properties": {
+              "label": {
+                "const": "Daily stock estimate"
+              },
+              "evidence_ids": {
+                "minItems": 1
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "state_kind": {
+                "const": "supplier_confirmed_inbound"
+              }
+            },
+            "required": [
+              "state_kind"
+            ]
+          },
+          "then": {
+            "properties": {
+              "label": {
+                "const": "Supplier-confirmed inbound"
+              },
+              "evidence_ids": {
+                "minItems": 1
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "state_kind": {
+                "const": "unknown"
+              }
+            },
+            "required": [
+              "state_kind"
+            ]
+          },
+          "then": {
+            "properties": {
+              "label": {
+                "const": "Availability not confirmed"
+              },
+              "evidence_ids": {
+                "maxItems": 0
+              }
+            }
+          }
+        }
+      ],
+      "description": "Availability is distinct from a model recommendation. Every non-unknown state must be source-backed and time-bounded. Daily stock estimate is planning only, not actual stock or supplier-confirmed inbound."
+    }
+  }
+}

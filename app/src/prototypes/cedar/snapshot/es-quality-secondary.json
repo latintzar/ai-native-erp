@@ -1,0 +1,1266 @@
+{
+  "locale": "es-ES",
+  "schemaVersion": 1,
+  "entries": [
+    {
+      "source": "src/prototypes/cedar/areas/admin/business.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Where Rocoto’s own invoices are made out to.",
+      "spanish": "La dirección fiscal para las facturas de Rocoto."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/team.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Add an address",
+      "spanish": "Añadir una dirección"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/team.tsx",
+      "context": "review",
+      "kind": "template",
+      "english": "The first ${BOOK_PREVIEW} of them",
+      "spanish": "Las primeras ${BOOK_PREVIEW}"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/team.tsx",
+      "context": "review",
+      "kind": "template",
+      "english": "All ${book.length} of them",
+      "spanish": "Las ${book.length} cuentas"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/printing.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "The delivery run",
+      "spanish": "Ruta de reparto"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/printing.tsx",
+      "context": "review",
+      "kind": "template",
+      "english": "${owed} of ${round.length} remaining",
+      "spanish": "Quedan ${owed} de ${round.length}"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/printing.tsx",
+      "context": "review",
+      "kind": "template",
+      "english": "${state.newSincePrint.length} new since the last print",
+      "spanish": "${state.newSincePrint.length} nuevos desde la última impresión"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/printing.tsx",
+      "context": "review",
+      "kind": "template",
+      "english": "${state.review.length} for review",
+      "spanish": "${state.review.length} para revisar"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/printing.tsx",
+      "context": "review",
+      "kind": "template",
+      "english": "Today · ${dayLabelFromId(id)}",
+      "spanish": "Hoy · ${dayLabelFromId(id)}"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/printing.tsx",
+      "context": "review",
+      "kind": "template",
+      "english": "${owed} of ${round.length}",
+      "spanish": "${owed} de ${round.length}"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/printing.tsx",
+      "context": "review",
+      "kind": "template",
+      "english": "Look at ${dayLabelFromId(id)}",
+      "spanish": "Ver ${dayLabelFromId(id)}"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/printing.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "With today’s file",
+      "spanish": "Con el archivo de hoy"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/printing.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "On your press",
+      "spanish": "Al confirmar"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/business.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Rails in and out",
+      "spanish": "Flujos de entrada y salida"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/business.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Delivery Note sign-off",
+      "spanish": "Texto al pie del albarán"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/team.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "The business, the tarifas and the agent’s dials.",
+      "spanish": "La empresa, las tarifas y los ajustes del agente."
+    },
+    {
+      "source": "src/prototypes/cedar/shell/printing.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Coming out",
+      "spanish": "En impresión"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/printing.tsx",
+      "context": "review",
+      "kind": "template",
+      "english": "With the ${world.erp.fileAt} file",
+      "spanish": "Con el archivo de las ${world.erp.fileAt}"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/printing.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "The email",
+      "spanish": "Correo electrónico"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/printing.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "The day’s sheet",
+      "spanish": "Hoja del día"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/printing.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Waiting on the first",
+      "spanish": "Pendiente desde el primero"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/printing.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Waiting on the first press",
+      "spanish": "Pendiente de la primera impresión"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/account.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Account",
+      "spanish": "Cuenta"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/account.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "What you may do here",
+      "spanish": "Tus permisos"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/account.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Language",
+      "spanish": "Idioma"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/account.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "How you read the app",
+      "spanish": "Cómo lees la aplicación"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/account.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Signing out",
+      "spanish": "Cerrar sesión"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/founder.tsx",
+      "context": "review",
+      "kind": "template",
+      "english": "Open at ${target.name}",
+      "spanish": "Abrir en ${target.name}"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/founder.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Open a stage",
+      "spanish": "Abrir una etapa"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/founder.tsx",
+      "context": "review",
+      "kind": "template",
+      "english": "Rocoto opens on ${target.lands}.",
+      "spanish": "Rocoto se abre en ${target.lands}."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/founder.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Seeded data",
+      "spanish": "Datos iniciales"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/founder.tsx",
+      "context": "review",
+      "kind": "template",
+      "english": "${here.house.name} goes back to its seed.",
+      "spanish": "${here.house.name} vuelve a sus datos iniciales."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/founder.tsx",
+      "context": "review",
+      "kind": "template",
+      "english": "${BRINGS} arrive with it.",
+      "spanish": "Con ella llegan ${BRINGS}."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/founder.tsx",
+      "context": "review",
+      "kind": "template",
+      "english": "Move to ${target.cast.house.name}",
+      "spanish": "Cambiar a ${target.cast.house.name}"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/founder.tsx",
+      "context": "review",
+      "kind": "template",
+      "english": "Stay on ${here.house.name}",
+      "spanish": "Seguir con ${here.house.name}"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/founder.tsx",
+      "context": "review",
+      "kind": "template",
+      "english": "Reset ${here.house.name}",
+      "spanish": "Restablecer ${here.house.name}"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/founder.tsx",
+      "context": "review",
+      "kind": "template",
+      "english": "${BRINGS} go back to their seeded values.",
+      "spanish": "${BRINGS} vuelven a sus valores iniciales."
+    },
+    {
+      "source": "src/prototypes/cedar/activation.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Fresh invite",
+      "spanish": "Invitación pendiente"
+    },
+    {
+      "source": "src/prototypes/cedar/activation.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "A link exists for one address. The account opens on their first press.",
+      "spanish": "Hay un enlace para una dirección. La cuenta se activa cuando lo abre por primera vez."
+    },
+    {
+      "source": "src/prototypes/cedar/activation.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Claimed",
+      "spanish": "Cuenta activada"
+    },
+    {
+      "source": "src/prototypes/cedar/activation.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Uploading",
+      "spanish": "Cargando datos"
+    },
+    {
+      "source": "src/prototypes/cedar/activation.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Processing",
+      "spanish": "Procesando"
+    },
+    {
+      "source": "src/prototypes/cedar/activation.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Ready return",
+      "spanish": "Listo para revisar"
+    },
+    {
+      "source": "src/prototypes/cedar/activation.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Marked through, the mail gone, and the year read back is waiting to be opened.",
+      "spanish": "La revisión está completada, los correos enviados y el histórico analizado; ya está listo para abrir."
+    },
+    {
+      "source": "src/prototypes/cedar/activation.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Mid-testing",
+      "spanish": "En pruebas"
+    },
+    {
+      "source": "src/prototypes/cedar/activation.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "The return was read and the walk is done. Rocoto answers inside test threads.",
+      "spanish": "La revisión está hecha y el recorrido completado. Rocoto responde en conversaciones de prueba."
+    },
+    {
+      "source": "src/prototypes/cedar/activation.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Live-bounded",
+      "spanish": "En marcha con clientes seleccionados"
+    },
+    {
+      "source": "src/prototypes/cedar/activation.ts",
+      "context": "review",
+      "kind": "template",
+      "english": "${STAGE_COHORT} named accounts are live on WhatsApp, and the rest of the book comes to you.",
+      "spanish": "${STAGE_COHORT} clientes seleccionados ya están activos en WhatsApp y el resto de clientes te llega a ti."
+    },
+    {
+      "source": "src/prototypes/cedar/activation.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Mature in-use app",
+      "spanish": "Aplicación en uso"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/geography.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Geography",
+      "spanish": "Zonas y rutas"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/geography.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Mon",
+      "spanish": "lun"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/geography.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Tue",
+      "spanish": "mar"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/geography.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Wed",
+      "spanish": "mié"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/geography.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Thu",
+      "spanish": "jue"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/geography.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Fri",
+      "spanish": "vie"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/geography.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Sat",
+      "spanish": "sáb"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/geography.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Sun",
+      "spanish": "dom"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/geography.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "What this house calls this run",
+      "spanish": "Nombre de esta ruta"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/geography.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Name the run",
+      "spanish": "Escribe el nombre de la ruta"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/geography.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "The vans that run it",
+      "spanish": "Vehículos asignados"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/geography.tsx",
+      "context": "review",
+      "kind": "template",
+      "english": "${company.zones.length} runs",
+      "spanish": "${company.zones.length} rutas"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/geography.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Cut-off",
+      "spanish": "Hora límite"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/geography.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Smallest order",
+      "spanish": "Pedido mínimo"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/geography.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Carriage on us from",
+      "spanish": "Portes incluidos a partir de"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/geography.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Who holds this ground",
+      "spanish": "Responsable de esta zona"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/geography.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Accounts on this run",
+      "spanish": "Clientes de esta ruta"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/geography.tsx",
+      "context": "review",
+      "kind": "template",
+      "english": "Truck ${z.trucks[0]}",
+      "spanish": "Camión ${z.trucks[0]}"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/geography.tsx",
+      "context": "review",
+      "kind": "template",
+      "english": "Trucks ${z.trucks.join(' and ')}",
+      "spanish": "Camiones ${z.trucks.join(' y ')}"
+    },
+    {
+      "source": "src/prototypes/cedar/activation-guide.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Write the way they write. Rocoto answers with the memory it read out of your year.",
+      "spanish": "Escribe como escriben ellos. Rocoto responde con lo que ha aprendido de tu histórico."
+    },
+    {
+      "source": "src/prototypes/cedar/activation.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "When it asks, when it holds, what it confirms, what it does with a word off your list.",
+      "spanish": "Cuándo pregunta, cuándo detiene un pedido, qué confirma y qué hace con una palabra que no está en tu catálogo."
+    },
+    {
+      "source": "src/prototypes/cedar/activation.ts",
+      "context": "review",
+      "kind": "template",
+      "english": "${consequential} of ${CONSEQUENTIAL.length} answered · ${answeredCount(grants)} settings answered in all.",
+      "spanish": "${consequential} de ${CONSEQUENTIAL.length} respondidos · ${answeredCount(grants)} ajustes definidos en total."
+    },
+    {
+      "source": "src/prototypes/cedar/activation.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Turn Rocoto on",
+      "spanish": "Activar Rocoto"
+    },
+    {
+      "source": "src/prototypes/cedar/activation.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Go live for your first customers",
+      "spanish": "Activa Rocoto para tus primeros clientes"
+    },
+    {
+      "source": "src/prototypes/cedar/activation.ts",
+      "context": "review",
+      "kind": "template",
+      "english": "Up to ${COHORT_CAP}, chosen by you. Rocoto answers those accounts and everything else keeps coming to you.",
+      "spanish": "Hasta ${COHORT_CAP}, elegidos por ti. Rocoto responde a esos clientes y el resto te sigue llegando a ti."
+    },
+    {
+      "source": "src/prototypes/cedar/activation.ts",
+      "context": "review",
+      "kind": "template",
+      "english": "${live} of ${COHORT_CAP} live since ${hour(cohort.at)}.",
+      "spanish": "${live} de ${COHORT_CAP} activos desde las ${hour(cohort.at)}."
+    },
+    {
+      "source": "src/prototypes/cedar/activation.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "If Rocoto had handled your last year",
+      "spanish": "Si Rocoto hubiera gestionado tu último año"
+    },
+    {
+      "source": "src/prototypes/cedar/activation.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "orders read",
+      "spanish": "pedidos leídos"
+    },
+    {
+      "source": "src/prototypes/cedar/activation.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "came to you",
+      "spanish": "te llegó a ti"
+    },
+    {
+      "source": "src/prototypes/cedar/activation.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "went through in a day",
+      "spanish": "gestionados en un día"
+    },
+    {
+      "source": "src/prototypes/cedar/activation.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Customers live",
+      "spanish": "Clientes activos"
+    },
+    {
+      "source": "src/prototypes/cedar/activation.ts",
+      "context": "review",
+      "kind": "template",
+      "english": "Out of ${count(cast.customers.length)} accounts in your book.",
+      "spanish": "De los ${count(cast.customers.length)} clientes de tu cartera."
+    },
+    {
+      "source": "src/prototypes/cedar/activation.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Went through untouched",
+      "spanish": "Tramitados sin cambios"
+    },
+    {
+      "source": "src/prototypes/cedar/activation.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "The rate starts with the day’s first order.",
+      "spanish": "El indicador se calcula desde el primer pedido del día."
+    },
+    {
+      "source": "src/prototypes/cedar/activation.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Waiting for you",
+      "spanish": "Pendientes de ti"
+    },
+    {
+      "source": "src/prototypes/cedar/activation.ts",
+      "context": "review",
+      "kind": "template",
+      "english": "Of today’s ${count(today.length)} orders, the ones standing for an answer.",
+      "spanish": "De los ${count(today.length)} pedidos de hoy, los que están pendientes de respuesta."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/data.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "This week",
+      "spanish": "Esta semana"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/data.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Read over each customer’s last five delivery notes and the delivery notes of",
+      "spanish": "Se revisan los últimos cinco albaranes de cada cliente y los albaranes de"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/data.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Where a count comes from",
+      "spanish": "Cómo se calcula esta cifra"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/app-settings.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Printing",
+      "spanish": "Impresión"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/app-settings.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Prices on the delivery note",
+      "spanish": "Precios en el albarán"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/app-settings.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "The delivery note’s structure",
+      "spanish": "Formato del albarán"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/app-settings.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "A full A4 sheet, or the compact A5 half.",
+      "spanish": "Una hoja A4 completa o el formato A5 compacto."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/app-settings.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "What reaches you",
+      "spanish": "Avisos"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/app-settings.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Rules you left running",
+      "spanish": "Reglas activas"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/app-settings.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Each rule announces its level daily, into the product’s ledger.",
+      "spanish": "Cada regla registra a diario su nivel en el historial del producto."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/operations.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Your hours",
+      "spanish": "Tus horarios"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/operations.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Orders for tomorrow",
+      "spanish": "Pedidos para mañana"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/operations.tsx",
+      "context": "review",
+      "kind": "template",
+      "english": "The van loads at ${loadHour(company.hours.warehouse)}. Later orders go out the morning after.",
+      "spanish": "La furgoneta carga a las ${loadHour(company.hours.warehouse)}. Los pedidos posteriores salen a la mañana siguiente."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/operations.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "The hour you stop taking tomorrow’s orders",
+      "spanish": "Hora límite para los pedidos de mañana"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/operations.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "When you go out",
+      "spanish": "Días de reparto"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/operations.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Days by zone",
+      "spanish": "Días por zona"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/operations.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Set in Geography, on each zone’s own band.",
+      "spanish": "Se configura en Zonas y rutas, dentro de cada zona."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/operations.tsx",
+      "context": "review",
+      "kind": "template",
+      "english": "${company.zones.length} zones",
+      "spanish": "${company.zones.length} zonas"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/operations.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "The calls you make once",
+      "spanish": "Decisiones que se aplican siempre"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/operations.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "What goes out instead",
+      "spanish": "Qué se entrega como sustitución"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/operations.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "How much Rocoto answers alone",
+      "spanish": "Qué puede responder Rocoto por su cuenta"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/operations.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Your agent",
+      "spanish": "Tu agente"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/operations.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Your back office",
+      "spanish": "Tu gestión interna"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/operations.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Which system it reaches",
+      "spanish": "A qué sistema se envían los datos"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/operations.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Connections",
+      "spanish": "Conexiones"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Your trial month",
+      "spanish": "Tu mes de prueba"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Cargo delivered",
+      "spanish": "Pedidos gestionados"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Paid",
+      "spanish": "Pagado"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Ends",
+      "spanish": "Termina"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "This month",
+      "spanish": "Este mes"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Orders used",
+      "spanish": "Pedidos utilizados"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Your bundle",
+      "spanish": "Tu paquete"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Beyond the bundle",
+      "spanish": "Fuera del paquete"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Prepaid this month",
+      "spanish": "Pagado por adelantado este mes"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "People on the account",
+      "spanish": "Personas en la cuenta"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Paying for it",
+      "spanish": "Pago"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "The card that pays",
+      "spanish": "Tarjeta de pago"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "What the three months come off, up front.",
+      "spanish": "La tarjeta en la que se cobran los tres meses por adelantado."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Made out to",
+      "spanish": "A nombre de"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Billing address",
+      "spanish": "Dirección de facturación"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/team.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Role",
+      "spanish": "Función"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/team.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Run",
+      "spanish": "Ruta"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/team.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Zone",
+      "spanish": "Zona"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/team.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Invite somebody",
+      "spanish": "Invitar a alguien"
+    },
+    {
+      "source": "src/prototypes/cedar/config.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Prices lead with the day’s grid",
+      "spanish": "Los precios se muestran en la tabla del día"
+    },
+    {
+      "source": "src/prototypes/cedar/config.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "The camera is the front door at the bay",
+      "spanish": "La cámara es la entrada de mercancía en el muelle"
+    },
+    {
+      "source": "src/prototypes/cedar/config.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "The email inbox is the front door",
+      "spanish": "El correo electrónico es la entrada de mercancía"
+    },
+    {
+      "source": "src/prototypes/cedar/config.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "The camera and the inbox share the front door",
+      "spanish": "La cámara y el correo comparten la entrada de mercancía"
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "review",
+      "kind": "template",
+      "english": "${amount(l.qty)} ${l.unit} across ${count(l.albaranes)} delivery notes",
+      "spanish": "${amount(l.qty)} ${l.unit} en ${count(l.albaranes)} albaranes"
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Open the agent settings",
+      "spanish": "Abrir los ajustes del agente"
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Choose them",
+      "spanish": "Elegir clientes"
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "WhatsApp on your phone keeps working",
+      "spanish": "WhatsApp en tu teléfono sigue funcionando"
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "You answer from it exactly as you do today.",
+      "spanish": "Sigues respondiendo desde ahí como hasta ahora."
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Your number stays yours",
+      "spanish": "Tu número sigue siendo tuyo"
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "It is registered to your own business, and it stays that way.",
+      "spanish": "Está registrado a nombre de tu empresa y seguirá así."
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Disappearing messages, view-once and live location switch off",
+      "spanish": "Se desactivan los mensajes temporales, la visualización única y la ubicación en directo"
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Meta switches these three off on a connected number.",
+      "spanish": "Meta desactiva estas tres funciones en un número conectado."
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Post-analysis",
+      "spanish": "Después del análisis"
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "The year is read. The reading is waiting to be opened.",
+      "spanish": "El histórico ya está analizado. Puedes abrir los resultados."
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Months-in",
+      "spanish": "Meses en marcha"
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Months in. The whole book is live and every day’s orders are running.",
+      "spanish": "Ya han pasado varios meses. Todos los clientes están activos y los pedidos diarios se gestionan con Rocoto."
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "This month",
+      "spanish": "Este mes"
+    },
+    {
+      "source": "src/scenarios/data/cast.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Fish",
+      "spanish": "Pescado"
+    },
+    {
+      "source": "src/scenarios/data/cast.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Meat",
+      "spanish": "Carne"
+    },
+    {
+      "source": "src/scenarios/data/cast.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Fruit and veg",
+      "spanish": "Fruta y verdura"
+    },
+    {
+      "source": "src/prototypes/cedar/activation-guide.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "One thread a customer. Rocoto reads them, writes the delivery note, and brings you what it ",
+      "spanish": "Una conversación por cliente. Rocoto las lee, prepara el albarán y te lleva lo que "
+    },
+    {
+      "source": "src/prototypes/cedar/activation-guide.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "spotlight has to find it there.",
+      "spanish": "foco debe encontrarla ahí."
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Every month of the year you sent — each account’s own delivery weekdays counted on the ",
+      "spanish": "Todos los meses del histórico enviado, con los días de entrega de cada cliente calculados según el "
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "calendar, each delivery note at what one of theirs comes to.",
+      "spanish": "calendario y cada albarán asignado a su día de entrega."
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "review",
+      "kind": "template",
+      "english": "What ${customer.name} takes, folded down the product column of their own ",
+      "spanish": "Lo que compra ${customer.name}, desglosado por producto a partir de sus "
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Delivery notes first — a year of them. They carry customer, product, quantity, ",
+      "spanish": "Primero, los albaranes: un año completo. Incluyen cliente, producto, cantidad, "
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "unit and date, which is every prior at once.",
+      "spanish": "unidad y fecha: toda la información necesaria de una vez."
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "A short walk through the app. One thing at a time — press the real control or the ",
+      "spanish": "Un recorrido breve por la aplicación. Una cosa cada vez: pulsa el control real o el "
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Write as one of your own customers writes, and watch what comes back. Test ",
+      "spanish": "Escribe como uno de tus clientes y observa la respuesta. Prueba "
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "review",
+      "kind": "template",
+      "english": "Up to ${COHORT_CAP} accounts, chosen by you. It stays under the agent settings, so ",
+      "spanish": "Hasta ${COHORT_CAP} clientes, elegidos por ti. Esta selección se mantiene en los ajustes del agente, para que "
+    },
+    {
+      "source": "src/prototypes/cedar/activation.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Read across your twelve biggest accounts and the five lines that move most, over the ",
+      "spanish": "Calculado con tus doce clientes principales y las cinco líneas con mayor movimiento, durante el "
+    },
+    {
+      "source": "src/prototypes/cedar/activation.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "this month",
+      "spanish": "este mes"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/agent.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "the margin",
+      "spanish": "el margen"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/team.tsx",
+      "context": "review",
+      "kind": "template",
+      "english": " · ${waiting} invited",
+      "spanish": " · ${waiting} invitaciones pendientes"
+    },
+    {
+      "source": "src/prototypes/cedar/insights.ts",
+      "context": "review",
+      "kind": "template",
+      "english": "The delivery notes of ${spanOf(cast, days)}, counted one day at a time.",
+      "spanish": "Los albaranes de ${spanOf(cast, days)}, calculados día a día."
+    },
+    {
+      "source": "src/prototypes/cedar/insights.ts",
+      "context": "review",
+      "kind": "template",
+      "english": "What each day has come to, ${spanOf(cast, days)}.",
+      "spanish": "Importe de cada día, ${spanOf(cast, days)}."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/data.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Signed",
+      "spanish": "Firmado"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Jul",
+      "spanish": "jul"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Apr",
+      "spanish": "abr"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Jan",
+      "spanish": "ene"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/team.tsx",
+      "context": "review",
+      "kind": "template",
+      "english": "${holds} accounts",
+      "spanish": "${holds} clientes"
+    },
+    {
+      "source": "src/prototypes/cedar/activation-guide.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "The conversations open out, and the work stays behind them.",
+      "spanish": "Las conversaciones se abren a pantalla completa y el trabajo queda detrás."
+    },
+    {
+      "source": "src/prototypes/cedar/activation-guide.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "And a control fixed to the viewport",
+      "spanish": "Y un control fijo en la pantalla"
+    },
+    {
+      "source": "src/prototypes/cedar/activation.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Your own login, on your own email.",
+      "spanish": "Tu acceso, con tu propia dirección de correo."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/data.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "How long conversations are kept",
+      "spanish": "Tiempo de conservación de las conversaciones"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/geography.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": " and ",
+      "spanish": " y "
+    },
+    {
+      "source": "src/prototypes/cedar/company.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Ask the customer",
+      "spanish": "Preguntar al cliente"
+    },
+    {
+      "source": "src/prototypes/cedar/company.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "The rest of the order goes out, and the delivery note says the line was short.",
+      "spanish": "El resto del pedido se tramita y el albarán indica que esa línea llegó con menos cantidad."
+    },
+    {
+      "source": "src/prototypes/cedar/company.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Rocoto passed a conversation to somebody on the team.",
+      "spanish": "Rocoto ha derivado una conversación a una persona del equipo."
+    },
+    {
+      "source": "src/prototypes/cedar/company.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Everything a customer said stays until you ask for it to go.",
+      "spanish": "Todo lo que ha dicho un cliente se conserva hasta que solicites eliminarlo."
+    }
+  ]
+}

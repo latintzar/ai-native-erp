@@ -1,0 +1,163 @@
+{
+  "_": "THE CLEAN READ OF albaran-fixture.png, RECORDED (THE-PARSING-SPEC PAR-08). Read from the live runtime at https://kit.soyrocoto.com/api/parse, kind=albaran, 2026-09-04, in 188 s. drive-201-degradation.py compares a DEGRADED read against these rows, so its Parsewise leg needs one live call and not two. Nothing here is hand-typed: it is what the provider returned, and PAR-06.2 is where it was checked against the paper by eye.",
+  "at": "2026-09-04T15:39:58",
+  "seconds": 188.1,
+  "provider": "parsewise",
+  "confidence": 1.0,
+  "columns": [
+    "Product code",
+    "Product name",
+    "Quantity",
+    "Unit",
+    "Unit price (EUR)",
+    "Lot"
+  ],
+  "evidence": {
+    "pages": 1,
+    "tables": 1
+  },
+  "clean": [
+    {
+      "name": "Merluza grande",
+      "raw": "MER-001 | Merluza grande | 12,5 | kg | 13,50 | L-250903",
+      "qty": 12.5,
+      "unit": "kg",
+      "price": 13.5,
+      "lot": "L-250903"
+    },
+    {
+      "name": "Pulpo cocido",
+      "raw": "PUL-004 | Pulpo cocido | 21 | kg | 18,90 | L-250902",
+      "qty": 21.0,
+      "unit": "kg",
+      "price": 18.9,
+      "lot": "L-250902"
+    },
+    {
+      "name": "Gamba roja",
+      "raw": "GAM-010 | Gamba roja | 3 | caja | 92,00 | L-250903",
+      "qty": 3.0,
+      "unit": "caja",
+      "price": 92.0,
+      "lot": "L-250903"
+    },
+    {
+      "name": "Almeja fina",
+      "raw": "ALM-002 Almeja fina 4,25 kg 31,40",
+      "qty": 4.25,
+      "unit": "kg",
+      "price": 31.4
+    }
+  ],
+  "_defects": "AND THE TWO READS §PAR-08.2 FOUND THE DEFECTS IN, as https://kit.soyrocoto.com/api/parse answered them on 2026-09-04 — code 12180c4db7ad, the shaping this round replaced. They are the key the fix is measured against: «jpeg-30» carries four correct lines in ALPHABETICAL order (the «Line number» agent did not resolve and nothing said so) and «dirt-05» carries EIGHT rows for a four-line note (one agent keyed its instances by product name, the rest by the printed line). ⚠ Both are non-deterministic provider behaviours: re-reading the same damaged pixels on the same day returned neither defect (tests/record_degraded_reads.py, parsewise-jpeg-30-raw.json · parsewise-dirt-05-raw.json), which is precisely why the defect lives in a recording and not in a live call.",
+  "jpeg-30": {
+    "at": "2026-09-04T15:46:51",
+    "seconds": 136.9,
+    "rows": [
+      {
+        "name": "Almeja fina",
+        "raw": "ALM-002 Almeja fina",
+        "qty": 4.25,
+        "unit": "kg",
+        "price": 31.4
+      },
+      {
+        "name": "Gamba roja",
+        "raw": "GAM-010 Gamba roja",
+        "qty": 3.0,
+        "unit": "caja",
+        "price": 92.0,
+        "lot": "L-250903"
+      },
+      {
+        "name": "Merluza grande",
+        "raw": "MER-001 Merluza grande",
+        "qty": 12.5,
+        "unit": "kg",
+        "price": 13.5,
+        "lot": "L-250903"
+      },
+      {
+        "name": "Pulpo cocido",
+        "raw": "PUL-004 Pulpo cocido",
+        "qty": 21.0,
+        "unit": "kg",
+        "price": 18.9,
+        "lot": "L-250902"
+      }
+    ],
+    "evidence": {
+      "pages": 1,
+      "tables": 1
+    },
+    "confidence": 1.0,
+    "header": {
+      "Counterparty": "Restaurant Can Sabate",
+      "Document date": "2026-09-03",
+      "Document number": "2026/0418"
+    }
+  },
+  "dirt-05": {
+    "at": "2026-09-04T15:48:43",
+    "seconds": 112.7,
+    "rows": [
+      {
+        "name": "MER-001",
+        "raw": "MER-001 Merluza grande",
+        "qty": 12.5,
+        "unit": "kg",
+        "price": 13.5,
+        "lot": "L-250903"
+      },
+      {
+        "name": "PUL-004",
+        "raw": "PUL-004 Pulpo cocido",
+        "qty": 21.0,
+        "unit": "kg",
+        "price": 18.9,
+        "lot": "L-250902"
+      },
+      {
+        "name": "GAM-010",
+        "raw": "GAM-010 Gamba roja",
+        "qty": 3.0,
+        "unit": "caja",
+        "price": 92.0,
+        "lot": "L-250903"
+      },
+      {
+        "name": "ALM-002",
+        "raw": "ALM-002 Almeja fina",
+        "qty": 4.25,
+        "unit": "kg",
+        "price": 31.4
+      },
+      {
+        "name": "Gamba roja",
+        "raw": "3"
+      },
+      {
+        "name": "Almeja fina",
+        "raw": "4"
+      },
+      {
+        "name": "Merluza grande",
+        "raw": "1"
+      },
+      {
+        "name": "Pulpo cocido",
+        "raw": "2"
+      }
+    ],
+    "evidence": {
+      "pages": 1,
+      "tables": 1
+    },
+    "confidence": 1.0,
+    "header": {
+      "Counterparty": "Restaurant Can Sabate",
+      "Document date": "2026-09-03",
+      "Document number": "2026/0418"
+    }
+  }
+}

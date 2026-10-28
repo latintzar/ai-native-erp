@@ -1,0 +1,278 @@
+{
+  "observedAt": "2026-09-09T21:50:22.398623Z",
+  "surface": "Cedar WhatsApp demo",
+  "target": "cedar-preview",
+  "logicalEnvironment": "development/demo",
+  "physicalHost": "rocoto-staging",
+  "publicOrigin": "https://cedar-demo.soyrocoto.com",
+  "sourceCommit": "488387524963eac1a426729182e53e42c55f877d",
+  "previousSourceCommit": "c46f10595129bad5c0c2180ff33b865eb8d77517",
+  "sourcePullRequest": "https://github.com/Rocoto-Labs/rocoto/pull/81",
+  "packageSha256": "3375d63d757edfaa1e260fc7790c0db2daa2fa4630edfe0158be2568a2569481",
+  "change": "Resolve real history contact identities, repair two retained batches, show connection progress and retain session recovery.",
+  "publication": {
+    "method": "Commissioned native development package/publish receiver",
+    "exitStatus": 0,
+    "activeRelease": "releases/488387524963eac1a426729182e53e42c55f877d",
+    "servicePid": 91356,
+    "serviceStartedAt": "2026-09-09T21:48:31Z",
+    "mainMerged": false,
+    "providerEnvironmentDigestUnchanged": true,
+    "providerConfigurationChanged": false,
+    "caddyfileSha256BeforeAndAfter": "6c9f548a761bb8469ac18de5bfc34b8de79709f9fed880822f66b6a65fa7fc22",
+    "maintainedServices": {
+      "rocoto-staging": {
+        "pid": 66165,
+        "unchangedFromEarlierReceipt": true
+      },
+      "albaranes-bridge": {
+        "pid": 65534,
+        "unchangedFromEarlierReceipt": true
+      },
+      "rocoto-kit-runtime": {
+        "pid": 90639,
+        "startedAt": "2026-09-09T21:41:20Z",
+        "note": "Changed since the earlier receipt, before this publication; this task did not restart it."
+      }
+    }
+  },
+  "validation": {
+    "makeGates": "passed",
+    "makeTest": "passed",
+    "cedarBackendTests": 112,
+    "syntheticBrowserScreenshots": 51,
+    "syntheticBrowserChecks": 40,
+    "syntheticBrowserReceipt": "/tmp/cedar-progress-browser/receipt.json",
+    "regressionsDemonstratedRedThenGreen": true,
+    "independentReview": "Mapping conflicts and transaction races fixed and verified; UI recovery and exact two-row replay reviewed.",
+    "logs": [
+      "/tmp/cedar-history-progress-gates.log",
+      "/tmp/cedar-history-progress-tests.log",
+      "/tmp/cedar-history-context-red.log",
+      "/tmp/cedar-history-context-review-red.log",
+      "/tmp/cedar-history-context-full-green.log",
+      "/tmp/cedar-spinner-red.log"
+    ]
+  },
+  "actualHttpsUiProbe": {
+    "kind": "Deployed HTTPS bundle; fresh real unbound session; synthetic intercepted SDK and code401",
+    "providerCallsPerformed": false,
+    "realAuthorizationPerformed": false,
+    "diagnosticWritesPerformed": false,
+    "servedScript": "/assets/index-__Af7xUL.js",
+    "servedScriptSha256": "dd95111c5a314c71e3a57ed110330099ef7849ea9434d9faa276febccc487993",
+    "matchesPackage": true,
+    "screenshots": 5,
+    "checks": [
+      "1600/390 clear spinner and current step",
+      "secondary Pause disposes attempt",
+      "code401 stays intercepted; real session bootstrap recovers",
+      "recovery notice survives remount",
+      "explicit retry clears recovery notice",
+      "late callback and FINISH grant no account access",
+      "exact deployed script digest",
+      "zero page errors and zero browser persistent storage"
+    ],
+    "pageErrors": 0,
+    "receipt": "/tmp/cedar-progress-live-48838752/receipt.json"
+  },
+  "actualProviderAcceptance": {
+    "observedAt": "2026-09-09T21:50:22.398623Z",
+    "logicalEnvironment": "development/demo",
+    "surface": "Cedar WhatsApp demo",
+    "runtimeRelease": "488387524963eac1a426729182e53e42c55f877d",
+    "account": {
+      "linked": true,
+      "coexistenceVerified": true,
+      "connectedAt": "2026-09-09T21:29:30.692034Z",
+      "activeBoundSessionCount": 1
+    },
+    "setup": {
+      "status": "ready",
+      "step": "complete",
+      "complete": true
+    },
+    "history": {
+      "providerStatus": "complete",
+      "effectiveStatus": "complete",
+      "providerProgress": 100,
+      "historicalMessageCount": 2212,
+      "liveMessageCount": 2,
+      "historicalDateBounds": {
+        "oldestAt": "2026-03-16T16:20:12Z",
+        "newestAt": "2026-09-09T21:24:09Z"
+      },
+      "overallDateBounds": {
+        "oldestAt": "2026-03-16T16:20:12Z",
+        "newestAt": "2026-09-09T21:35:17Z"
+      }
+    },
+    "counts": {
+      "inbox": 50,
+      "messages": 2214,
+      "contacts": 444,
+      "operations": 3,
+      "identity_waits": 0,
+      "conversations": 112,
+      "pendingInbox": 0,
+      "failedInbox": 0
+    },
+    "acceptedProviderOperations": [
+      {
+        "operation": "contacts",
+        "state": "accepted",
+        "attemptedAt": "2026-09-09T21:29:33.159537Z",
+        "acceptedAt": "2026-09-09T21:29:34.897356Z"
+      },
+      {
+        "operation": "history",
+        "state": "accepted",
+        "attemptedAt": "2026-09-09T21:29:34.902431Z",
+        "acceptedAt": "2026-09-09T21:29:36.472325Z"
+      },
+      {
+        "operation": "subscription",
+        "state": "accepted",
+        "attemptedAt": "2026-09-09T21:29:30.711249Z",
+        "acceptedAt": "2026-09-09T21:29:32.339994Z"
+      }
+    ],
+    "capturedWebhookFieldCounts": {
+      "smb_app_state_sync": 2,
+      "history": 44,
+      "smb_message_echoes": 2,
+      "messages": 2
+    },
+    "actualLiveAndEchoEvidence": [
+      {
+        "field": "smb_message_echoes",
+        "receivedAt": "2026-09-09T21:34:33.932914Z",
+        "processed": true,
+        "projectionError": false,
+        "messageCount": 1,
+        "projectionEvidence": [
+          {
+            "providerTimestamp": "2026-09-09T21:34:31Z",
+            "projected": true,
+            "historical": false,
+            "direction": "outbound"
+          }
+        ]
+      },
+      {
+        "field": "messages",
+        "receivedAt": "2026-09-09T21:34:34.309796Z",
+        "processed": true,
+        "projectionError": false,
+        "messageCount": 0,
+        "projectionEvidence": []
+      },
+      {
+        "field": "smb_message_echoes",
+        "receivedAt": "2026-09-09T21:35:18.740043Z",
+        "processed": true,
+        "projectionError": false,
+        "messageCount": 1,
+        "projectionEvidence": [
+          {
+            "providerTimestamp": "2026-09-09T21:35:17Z",
+            "projected": true,
+            "historical": false,
+            "direction": "outbound"
+          }
+        ]
+      },
+      {
+        "field": "messages",
+        "receivedAt": "2026-09-09T21:35:20.451823Z",
+        "processed": true,
+        "projectionError": false,
+        "messageCount": 0,
+        "projectionEvidence": []
+      }
+    ],
+    "replayVerification": {
+      "mode": "read_only_verification",
+      "baselinePath": "/var/lib/rocoto-cedar-demo/operator-backups/20260909T214745Z-ecced313-baseline.json",
+      "beforeCounts": {
+        "contacts": 444,
+        "conversations": 60,
+        "failedInbox": 2,
+        "inbox": 50,
+        "messages": 1322,
+        "operations": 3,
+        "pendingInbox": 2
+      },
+      "afterCounts": {
+        "inbox": 50,
+        "messages": 2214,
+        "contacts": 444,
+        "operations": 3,
+        "conversations": 112,
+        "pendingInbox": 0,
+        "failedInbox": 0
+      },
+      "beforeObservedAt": "2026-09-09T21:47:45.816225+00:00",
+      "afterObservedAt": "2026-09-09T21:50:52.173213+00:00",
+      "originalInboxBodiesUnchanged": true,
+      "originalInboxBodyCount": 50,
+      "newInboxBodyCount": 0,
+      "providerOperationMetadataAndBodiesUnchanged": true,
+      "recoveredUniqueMessageCount": 892
+    },
+    "proofScope": {
+      "observedReal": [
+        "Guarded Meta coexistence onboarding produced a verified account binding and active account session.",
+        "Account-specific subscription, contacts and history operations were accepted on 2026-09-09 at the recorded times.",
+        "Eligible history projected into the private viewer store, with provider progress 100 and zero pending or failed projections.",
+        "Two actual WhatsApp Business app outgoing-message echoes arrived and projected.",
+        "Local replay recovered captured messages while retaining every original inbox body and all provider operation metadata unchanged."
+      ],
+      "remainingUnproved": [
+        "An actual incoming customer message arriving after connection and displaying in the browser.",
+        "A message sent from Cedar itself; the current viewer is read-only.",
+        "A total expected count supplied by Meta proving that every eligible historical message was delivered."
+      ],
+      "accountDataExposure": "Receipt contains aggregate counts, timestamps and code release identity; account names, phone numbers, provider asset IDs, tokens and message content are excluded."
+    }
+  },
+  "userObserved": {
+    "actualMetaCoexistenceAndHistorySharingCompleted": true,
+    "realHistoryVisible": true,
+    "normalMetaPopupClosed": true,
+    "refreshingMetaPopupInterruptedEarlierAttempt": true
+  },
+  "limitations": [
+    "This proves the selected owner-account journey. Separate-customer permissions and freshly transferred regular-app history require their own runs.",
+    "Real inbound message display, Cedar sending and attachment retrieval remain unverified.",
+    "Provider progress 100 and local zero failures establish observed completion; Meta supplies no expected total proving every eligible message arrived.",
+    "Cedar cannot prevent refresh on the Meta-owned page. The original rejected signup cause was not isolated.",
+    "Full Cedar product integration, email, Twilio/Deepgram and product release have their own implementation and acceptance scope."
+  ],
+  "sourceFiles": [
+    {
+      "path": "app/src/prototypes/cedar/connections/app.tsx",
+      "sha256": "e3446cb1f6e98eccab384408732a5d7f6ca92f035fd1cc132dcd16b07359c190"
+    },
+    {
+      "path": "app/src/prototypes/cedar/connections/browser-drive.py",
+      "sha256": "ed7d0f12a2bec3d4605c6815b97a90192686eea78babf76556a7314c145cce84"
+    },
+    {
+      "path": "app/src/prototypes/cedar/connections/proof/storage.py",
+      "sha256": "48d2349dd003d1dc3c3c29aae1a5a5c737e7ee1252d20c07511fd3294ff0ebcd"
+    },
+    {
+      "path": "app/src/prototypes/cedar/connections/proof/test_service.py",
+      "sha256": "0ea45cd6e1383317b2d35859fd238630d62530f6a472a172409615dfcdc0514e"
+    },
+    {
+      "path": "app/src/prototypes/cedar/connections/meta.ts",
+      "sha256": "26fc4cfd2e6d3b1cae2090c832ac666540608702f21f86d9cb1619b3b06f16ce"
+    },
+    {
+      "path": "app/src/prototypes/cedar/connections/hooks.ts",
+      "sha256": "ece2b726ef413fdbb8f5fe3c1bb6dd85b606c6a3fe663228677dafc73f5dfa16"
+    }
+  ]
+}

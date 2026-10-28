@@ -1,0 +1,29 @@
+# Local development data persists in this checkout's Compose project. Tests create a
+# separate, uniquely named project and remove it when the command finishes.
+x-postgres: &postgres
+  image: pgvector/pgvector:pg16 # same PostgreSQL major and extensions as CI
+  environment:
+    POSTGRES_USER: rocoto
+    POSTGRES_PASSWORD: rocoto
+    POSTGRES_DB: rocoto
+  ports:
+    - "127.0.0.1::5432"
+  healthcheck:
+    test: ["CMD-SHELL", "pg_isready -U rocoto -d rocoto"]
+    interval: 1s
+    timeout: 5s
+    retries: 30
+
+services:
+  db:
+    <<: *postgres
+    volumes:
+      - development-data:/var/lib/postgresql/data
+  test-db:
+    <<: *postgres
+    profiles: [test]
+    tmpfs:
+      - /var/lib/postgresql/data
+
+volumes:
+  development-data:

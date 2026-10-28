@@ -1,0 +1,35 @@
+{
+ "candidates": [
+  {
+   "content": {
+    "parts": [
+     {
+      "text": "{\n  \"cells\": {\n    \"s-101·1·finalWeight\": {\n      \"value\": \"11.8\",\n      \"confidence\": 1.0\n    },\n    \"s-101·3·finalWeight\": {\n      \"value\": \"8.2\",\n      \"confidence\": 1.0\n    },\n    \"s-102·2·finalWeight\": {\n      \"value\": \"6.4\",\n      \"confidence\": 1.0\n    },\n    \"s-102·1·qty\": {\n      \"value\": \"5\",\n      \"confidence\": 1.0\n    },\n    \"s-101·2·unit\": {\n      \"value\": \"caja\",\n      \"confidence\": 1.0\n    }\n  }\n}"
+     }
+    ],
+    "role": "model"
+   },
+   "finishReason": "STOP",
+   "index": 0
+  }
+ ],
+ "usageMetadata": {
+  "promptTokenCount": 1604,
+  "candidatesTokenCount": 193,
+  "totalTokenCount": 2326,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 314
+   },
+   {
+    "modality": "IMAGE",
+    "tokenCount": 1290
+   }
+  ],
+  "thoughtsTokenCount": 529,
+  "serviceTier": "standard"
+ },
+ "modelVersion": "gemini-2.5-flash",
+ "responseId": "Vy2baoTVMsnBvdIPwcapmAI"
+}

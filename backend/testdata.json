@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "product": "rocoto-backend",
+  "environments": [
+    "development"
+  ],
+  "effects": "capture",
+  "adapter": [
+    "python3",
+    "testdata_adapter.py"
+  ],
+  "scenarios": {
+    "harbor-v1": "seed/scenarios/harbor-v1.json"
+  },
+  "inputs": [
+    "*.py",
+    "brain/**/*.py",
+    "seed/**/*.py",
+    "schema_runtime.sql",
+    "schema_rls.sql",
+    "operator_schema.sql",
+    "alembic.ini",
+    "requirements.in",
+    "requirements.txt",
+    "migrations/**/*.py",
+    "migrations/**/*.sql",
+    "migrations/**/*.json",
+    "migrations/script.py.mako"
+  ]
+}

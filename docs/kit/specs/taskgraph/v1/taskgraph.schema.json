@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rocoto.example/specs/taskgraph/v1/taskgraph.schema.json",
+  "title": "Rocoto production build task graph source",
+  "description": "Schema for graph.json and reusable task leaves. Actual execution proof is deliberately separate in evidence.json.",
+  "type": "object",
+  "required": ["schemaVersion", "title", "authority", "statusValues", "statusDefinitions", "policies", "coreDocuments", "docRefs", "stages", "taskFiles", "inventoryFiles", "requiredLegacyIds", "publicArtifacts"],
+  "properties": {
+    "schemaVersion": {"const": "1.0"},
+    "title": {"type": "string", "minLength": 1},
+    "authority": {"type": "string", "minLength": 24},
+    "statusValues": {"type": "array", "items": {"enum": ["SPECIFIED", "KIT", "WIRED", "PRODUCTION"]}, "uniqueItems": true, "minItems": 4},
+    "statusDefinitions": {"type": "object", "required": ["SPECIFIED", "KIT", "WIRED", "PRODUCTION"], "additionalProperties": {"type": "string", "minLength": 12}},
+    "policies": {"type": "array", "items": {"type": "string", "minLength": 12}, "minItems": 1},
+    "coreDocuments": {"type": "array", "items": {"$ref": "#/$defs/document"}, "minItems": 1, "uniqueItems": true},
+    "docRefs": {"type": "object", "additionalProperties": {"$ref": "#/$defs/docRef"}},
+    "stages": {"type": "array", "items": {"$ref": "#/$defs/stage"}, "minItems": 1},
+    "taskFiles": {"type": "array", "items": {"type": "string", "pattern": "^tasks/[a-z0-9-]+\\.json$"}, "uniqueItems": true, "minItems": 1},
+    "inventoryFiles": {"type": "array", "items": {"type": "string", "pattern": "^[a-z0-9-]+\\.json$"}, "uniqueItems": true, "minItems": 1},
+    "requiredLegacyIds": {"type": "array", "items": {"type": "string", "pattern": "^[A-Z][A-Z]?[0-9]+(?:\\.[0-9A-Za-z]+)?$"}, "uniqueItems": true},
+    "publicArtifacts": {"type": "array", "items": {"$ref": "#/$defs/artifact"}, "minItems": 1}
+  },
+  "$defs": {
+    "document": {"type": "object", "required": ["path", "title"], "properties": {"path": {"type": "string", "pattern": "^notes/[A-Z0-9-]+\\.md$"}, "title": {"type": "string", "minLength": 1}}, "additionalProperties": false},
+    "docRef": {"type": "object", "required": ["title", "document", "anchor"], "properties": {"title": {"type": "string", "minLength": 1}, "document": {"type": "string", "pattern": "^notes/[A-Z0-9-]+\\.md$"}, "anchor": {"type": "string", "pattern": "^[a-z0-9-]+$"}}, "additionalProperties": false},
+    "stage": {"type": "object", "required": ["id", "title", "purpose"], "properties": {"id": {"type": "string", "pattern": "^[a-z0-9-]+$"}, "title": {"type": "string", "minLength": 1}, "purpose": {"type": "string", "minLength": 12}}, "additionalProperties": false},
+    "artifact": {"type": "object", "required": ["path", "title", "kind"], "properties": {"path": {"type": "string", "pattern": "^specs/(?:intelligence|output)/v1/[a-z0-9.-]+\\.json$"}, "title": {"type": "string", "minLength": 1}, "kind": {"enum": ["schema", "contract", "fixture-manifest"]}}, "additionalProperties": false},
+    "files": {"type": "object", "required": ["actual", "proposed"], "properties": {"actual": {"type": "array", "items": {"type": "string", "minLength": 1}}, "proposed": {"type": "array", "items": {"type": "string", "minLength": 1}}}, "additionalProperties": false},
+    "task": {"type": "object", "required": ["id", "title", "summary", "status", "stage", "dependsOn", "docRefs", "legacyIds", "files", "steps", "assertions", "doneConditions", "requiredEvidence"], "properties": {"id": {"type": "string", "pattern": "^[A-Z]+-[0-9]+\\.[0-9]+$"}, "title": {"type": "string", "minLength": 1}, "summary": {"type": "string", "minLength": 20}, "status": {"enum": ["SPECIFIED", "KIT", "WIRED", "PRODUCTION"]}, "stage": {"type": "string", "pattern": "^[a-z0-9-]+$"}, "dependsOn": {"type": "array", "items": {"type": "string", "pattern": "^[A-Z]+-[0-9]+\\.[0-9]+$"}, "uniqueItems": true}, "docRefs": {"type": "array", "items": {"type": "string"}, "minItems": 1, "uniqueItems": true}, "legacyIds": {"type": "array", "items": {"type": "string"}, "uniqueItems": true}, "files": {"$ref": "#/$defs/files"}, "steps": {"type": "array", "items": {"type": "string", "minLength": 12}, "minItems": 2}, "assertions": {"type": "object", "required": ["positive", "negative"], "properties": {"positive": {"type": "array", "items": {"type": "string", "minLength": 12}, "minItems": 1}, "negative": {"type": "array", "items": {"type": "string", "minLength": 12}, "minItems": 1}}, "additionalProperties": false}, "doneConditions": {"type": "array", "items": {"type": "string", "minLength": 12}, "minItems": 1}, "requiredEvidence": {"type": "array", "items": {"type": "string", "minLength": 12}, "minItems": 1}}, "additionalProperties": false}
+  },
+  "additionalProperties": false
+}

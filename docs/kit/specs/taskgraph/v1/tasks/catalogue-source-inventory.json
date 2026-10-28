@@ -1,0 +1,1008 @@
+[
+  {
+    "id": "CAT-01.01",
+    "title": "Catalogue intake source identity and one review queue",
+    "summary": "Accept one transient file or pasted catalogue text into one ordered review queue, preserve literal source-item identity and expose a collective Product name/SKU/Unit readback with explicit Include/Skip. Internal classification may persist as a quiet suggestion/default for later Product Sheet review; it is never a per-row intake chore. There is no pre-result mapping, manual Placement, automatic Related products link or commercial adoption.",
+    "status": "SPECIFIED",
+    "stage": "domain-records",
+    "dependsOn": [
+      "FND-01.01",
+      "FND-03.01",
+      "SRC-01.01"
+    ],
+    "docRefs": [
+      "CAT-01",
+      "SRC-01",
+      "UTL-03",
+      "QLT-01",
+      "JNY-01"
+    ],
+    "legacyIds": [
+      "A4.1",
+      "A7.15"
+    ],
+    "files": {
+      "actual": [
+        "baseweb/src/app/catalogue-export.tsx",
+        "baseweb/src/app/areas/stock.tsx",
+        "baseweb/src/app/catalogue.ts"
+      ],
+      "proposed": [
+        "product/backend/catalogue/imports.py",
+        "product/backend/storage/import_artifacts.py",
+        "product/backend/catalogue/parser.py"
+      ]
+    },
+    "steps": [
+      "Open a session-scoped CatalogueIntakeSession from Add a product list with exactly one source choice: Drop a file or Paste a product list. Retain raw bytes/text only in the active session; persist only a minimum checksum/external reference or text fingerprint after review. Excel/CSV enter review; a selected PDF yields Automatic PDF review · Ready to connect and Choose Excel or CSV, or paste the list, without storage or queue admission.",
+      "Render the ordered CatalogueIntakeReviewQueue before any record adoption. Every item keeps a row/text locator and original wording beside only its editable Product name, SKU, Unit and explicit Include/Skip decision, plus duplicate/required-field state. Keep classification/artwork/source as retained evidence or quiet defaults for later Product Sheet review; do not render them as per-row intake work or mapping controls before results.",
+      "Use the exact queue states Ready for input, Reading source, Review needed, Ready, Save failed and Added. Each names only its valid recovery: correct, skip, retry, reselect/paste again, return to the unchanged manual draft or open one added SKU.",
+      "Create tenant SKU projections only from explicit accepted items, preserving duplicate display names, literal external codes and literal supplied unit evidence. Source grouping may appear as evidence for a reviewable Internal category; it never writes a group or a RelatedItemLink.",
+      "Keep source/review seams limited to catalogue.intake.opened, catalogue.intake.source.accepted, catalogue.intake.review.ready, catalogue.intake.item.decided, catalogue.intake.completed and sku.created. They are UI/audit names, not a parser/model/worker/runtime design."
+    ],
+    "assertions": {
+      "positive": [
+        "A supported file and pasted catalogue text each enter the same ordered queue, keep original locator/wording visible, and use the same literal review grammar without a mapping screen.",
+        "A deterministic fixture can preserve a quiet internal classification suggestion/default without making it a visible per-row review task or claiming an automated source or background process.",
+        "An explicitly added item creates one exact SKU whose unit/source/history remain independent and can later be used as one safe Albarán line."
+      ],
+      "negative": [
+        "A file/paste, queue acknowledgement, source grouping, automatic result or retry cannot silently rename, merge, create a RelatedItemLink, convert an unknown unit, approve artwork, set price/stock or create an Albarán/customer-visible fact.",
+        "Reload, retry, logs, traces, queues, browser caches and IndexedDB cannot retain raw inbound bytes or pasted text; derived review facts cannot impersonate an original source."
+      ]
+    },
+    "doneConditions": [
+      "Nested E186 journeys pass: single product; file list; pasted list; ready/attention/partial/unavailable/source-unavailable/save-failed/retry/skip recovery; collective Product name/SKU/Unit plus Include/Skip readback; duplicate protection; no automatic relation; later Product Sheet classification/artwork review; later explicit Add variation; and accepted SKU exact-Albarán use.",
+      "Desktop and phone task-frame proofs cover 1920×1080, 1536×864, 1366×768, 360×800, 390×844 and 393×873 with keyboard, touch, Back/Forward, reload/interruption and phone-keyboard recovery."
+    ],
+    "requiredEvidence": [
+      "File-and-paste intake state drive with source-custody scan, state screenshots and no-mapping-before-results assertion.",
+      "Deterministic-review fixture trace, unavailable-review trace, explicit SKU confirmation/idempotency trace, direct-relation noncreation trace and exact-Albarán use trace."
+    ]
+  },
+  {
+    "id": "CAT-01.02",
+    "title": "Reference classification, Internal category, Related products and reviewed enrichment",
+    "summary": "Use the universal reference as a versioned classifier and vocabulary while retaining each tenant coded SKU or explicitly accepted uncoded sale item’s literal identity, independent facts, reviewable Internal category, reviewed direct Related products links between existing records, evidence and review outcome.",
+    "status": "SPECIFIED",
+    "stage": "domain-records",
+    "dependsOn": [
+      "CAT-01.01",
+      "FND-02.01"
+    ],
+    "docRefs": [
+      "CAT-01",
+      "FND-02",
+      "INTEL-08",
+      "INTEL-02",
+      "JNY-01",
+      "JNY-03",
+      "CAT-01.1",
+      "CAT-01.2",
+      "OBJ-02"
+    ],
+    "legacyIds": [
+      "A4.2"
+    ],
+    "files": {
+      "actual": [
+        "baseweb/src/app/catalogue.ts",
+        "baseweb/src/app/reference-data.ts",
+        "baseweb/src/app/reference-lexicon.ts"
+      ],
+      "proposed": [
+        "product/backend/catalogue/classification.py",
+        "product/backend/catalogue/related_item_links.py",
+        "product/backend/catalogue/enrichment.py"
+      ]
+    },
+    "steps": [
+      "Version the canonical reference, reviewable Internal category result, source evidence, confidence/abstention where present and human-review decision; E186 records no model/provider mechanism.",
+      "Create a RelatedItemLink only through the reviewed inline Related products picker between two existing coded SKU or accepted uncoded records; it never opens New product or creates an SKU. Make reciprocal display explicit and prohibit transitive inference, a hidden base SKU and commercial inheritance.",
+      "Allow corrected enrichment only through reviewable adoption commands separate from order reasoning. Ordinary New product/file/paste review may be created with Internal category Not organised and has no Related-products candidate step or automatic category/group write.",
+      "Keep recurring preparation, brochure and customer-option wording as evidence-bound line notes until an explicit reviewed product-adoption or approved mapped-variation command; recurrence alone never changes catalogue identity.",
+      "Admit an UncodedSaleItem only by explicit KeepAcceptedOffSkuLineInProducts from an accepted ProvisionalOrderLine. Preserve literal wording/unit and exact request evidence; do not create an SKU code, tariff, stock/lot, ERP master or alias. Requested personalisations deep-link to the exact Albarán line and Back restores the Products return token."
+    ],
+    "assertions": {
+      "positive": [
+        "A reviewed Internal category leaves each SKU’s source row, name, code, tariff, stock, art and history independently addressable.",
+        "A deliberate RelatedItemLink leaves both endpoint records independently addressable; each endpoint may be a coded SKU or accepted uncoded sale item. It creates no category membership or shared price, stock, artwork or history.",
+        "A reviewed mapped variation preserves the base-item/note or approved-variation distinction, its approval evidence and its customer-visible document consequence.",
+        "An accepted uncoded item keeps literal wording/unit, opens exact request history and may use a deliberate cross-kind RelatedItemLink without becoming a coded SKU or copying commercial facts."
+      ],
+      "negative": [
+        "A reference class, generic label, alias, source grouping or model output cannot enrol a SKU, assert an unknown attribute, create a RelatedItemLink or merge equal names.",
+        "Repeated requests, a catalogue suggestion, a copied note or an unavailable mapping cannot silently create or harden a SKU, merge an option into a product, replace source wording or create a relation.",
+        "An off-SKU phrase, recurrence, category, customer, source grouping, similarity or relation cannot silently admit or promote an UncodedSaleItem or make it a SKU/ERP/stock/tariff master."
+      ]
+    },
+    "doneConditions": [
+      "Classification, Internal-category review, deliberate Related-products link, exact-artwork truth, alternative, archive and source-evidence cases are green; category/group and direct relation remain independent.",
+      "Recurring-note, explicit-adoption, approved-mapped-variation, missing-mapping and customer-visible distinction cases are covered without automatic SKU admission or relation creation.",
+      "Accepted off-SKU → deliberate uncoded-record admission → exact Requests/Back restoration and coded↔uncoded relation fixtures pass without hidden promotion."
+    ],
+    "requiredEvidence": [
+      "Reviewed classification trace, independent-variant regression, and reference-version audit.",
+      "Recurring-option regression trace showing unchanged catalogue identity until explicit approved adoption or mapping."
+    ]
+  },
+  {
+    "id": "CAT-01.03",
+    "title": "Catalogue navigation, search, and viewer preferences",
+    "summary": "Serve tenant-authorized catalogue rows with tenant/source-order default plus optional Category and A–Z presentations, scoped search, explicit Related-products filter, archive visibility, exact catalogue-record navigation and viewer-only preferences.",
+    "status": "SPECIFIED",
+    "stage": "sheet-ports",
+    "dependsOn": [
+      "CAT-01.01",
+      "CAT-01.02",
+      "PRD-01.01"
+    ],
+    "docRefs": [
+      "CAT-01",
+      "PRD-01",
+      "FND-01",
+      "QLT-02",
+      "E188"
+    ],
+    "legacyIds": [
+      "A4.10"
+    ],
+    "files": {
+      "actual": [
+        "baseweb/src/app/catalogue.ts",
+        "baseweb/src/app/areas/stock.tsx",
+        "baseweb/src/app/search.tsx",
+        "baseweb/src/app/navigation.ts"
+      ],
+      "proposed": [
+        "product/backend/catalogue/query.py",
+        "product/backend/catalogue/preferences.py"
+      ]
+    },
+    "steps": [
+      "Query literal names, external codes and reviewed customer aliases before applying presentation mode.",
+      "Preserve tenant/source order in default Stock rows and render no Internal category there. Filters may apply Category or A–Z; Related products remains an independent direct-link filter and category co-membership never creates a relation.",
+      "Use one compact Filters trigger with draft Sort by (Source order default, Category or A–Z), Items, Status and Related product values; Apply changes the list atomically and Clear returns canonical source-order defaults.",
+      "Persist only viewer preference; tenant catalogue membership, Internal category review and RelatedItemLink changes remain command authority.",
+      "Return from an exact Product Sheet or intake outcome to the preserved query, ordering, scroll and explicit Related-products filter; no queue context changes a viewer preference or catalogue membership."
+    ],
+    "assertions": {
+      "positive": [
+        "A matching SKU opens its exact Product Sheet and returns to the prior query, ordering, scroll context and, when filtered, explicit Related-products context.",
+        "Draft filter changes leave the applied list unchanged until Apply; Clear restores Source order, SKUs, Current and Any item."
+      ],
+      "negative": [
+        "An image alias, search match, preference, category sort or Related-products filter cannot add inventory, create a link, change membership or reveal another tenant.",
+        "A draft choice, parallel sort/archive control or closed sheet cannot silently alter the applied catalogue scope."
+      ]
+    },
+    "doneConditions": [
+      "Search, archive, alias scope, independent category/Related-products navigation, intake-return, mobile return and preference-isolation tests pass.",
+      "Desktop popover and phone bottom-sheet draft/Apply/Clear, compact applied summary and return-context tests pass."
+    ],
+    "requiredEvidence": [
+      "Catalogue query suite, return-path trace, and tenant-preference isolation test.",
+      "E188 filter draft-versus-applied and inset-row geometry trace at desktop and phone widths."
+    ]
+  },
+  {
+    "id": "CAT-01.04",
+    "title": "Catalogue export formats and provenance",
+    "summary": "Generate labelled house, standard, and augmented exports from retained sources and current authorized projections without pretending a derived file is the original import.",
+    "status": "SPECIFIED",
+    "stage": "automation-services",
+    "dependsOn": [
+      "CAT-01.01",
+      "COM-01.01",
+      "FND-03.01"
+    ],
+    "docRefs": [
+      "CAT-01",
+      "UTL-04",
+      "DOC-01",
+      "QLT-01"
+    ],
+    "legacyIds": [],
+    "files": {
+      "actual": [
+        "baseweb/src/app/catalogue-export.tsx",
+        "baseweb/src/app/export-model.ts",
+        "baseweb/src/app/export-files.ts"
+      ],
+      "proposed": [
+        "product/backend/catalogue/export_jobs.py",
+        "product/backend/catalogue/export_formats.py"
+      ]
+    },
+    "steps": [
+      "Label original, house, standard, and augmented file types and keep their provenance distinct.",
+      "Use formula-neutralized cells, documented encoding/quoting, stable SKU fields, current known facts, and source-row metadata.",
+      "Write generated-file request, filter, revision, actor, checksum, retention, and download authorization records."
+    ],
+    "assertions": {
+      "positive": [
+        "A derived export identifies its format, generation time, SKU rows, and provenance without changing imported source values."
+      ],
+      "negative": [
+        "A generated file cannot be labelled original, omit duplicate same-name SKU identity, or expose an unauthorized tenant's data."
+      ]
+    },
+    "doneConditions": [
+      "Original/house/standard/augmented export and formula/quoting/authorization contract tests pass."
+    ],
+    "requiredEvidence": [
+      "Export artifact manifest, checksum test, and cross-tenant download denial trace."
+    ]
+  },
+  {
+    "id": "CAT-01.05",
+    "title": "Large catalogue import/export performance and failure truth",
+    "summary": "Move large parse, validation, source retention, and export work into bounded jobs with declared limits, progress, cancellation, retry, memory, and tenant-isolation evidence.",
+    "status": "SPECIFIED",
+    "stage": "automation-services",
+    "dependsOn": [
+      "CAT-01.01",
+      "CAT-01.04",
+      "OPS-01.01"
+    ],
+    "docRefs": [
+      "CAT-01",
+      "OPS-01",
+      "QLT-02",
+      "REL-01"
+    ],
+    "legacyIds": [
+      "A7.16"
+    ],
+    "files": {
+      "actual": [
+        "baseweb/src/app/catalogue-export.tsx",
+        "baseweb/src/app/live-value.tsx"
+      ],
+      "proposed": [
+        "product/backend/catalogue/import_jobs.py",
+        "product/backend/catalogue/export_jobs.py",
+        "product/backend/metrics/catalogue_jobs.py"
+      ]
+    },
+    "steps": [
+      "Declare size, row, type, duration, concurrency, and retention limits before accepting job work.",
+      "Persist job progress, partial accepted/skipped/ambiguous/failed facts, cancellation, and retriable error identity.",
+      "Measure parse, projection, export, queue, memory, and denial behavior under representative large inputs."
+    ],
+    "assertions": {
+      "positive": [
+        "A large accepted job advances through durable states and produces a retrievable tenant-scoped result."
+      ],
+      "negative": [
+        "A malformed, cancelled, oversized, or storage-failed job cannot claim completion, leak mappings, or consume an unbounded request."
+      ]
+    },
+    "doneConditions": [
+      "Declared performance limits and adversarial import/export job tests are recorded against the release budget."
+    ],
+    "requiredEvidence": [
+      "Job benchmark report, failure-state trace, and queue/memory metrics."
+    ]
+  },
+  {
+    "id": "SRC-01.01",
+    "title": "Inbound source envelope, retention, and quarantine",
+    "summary": "Register an authorized external source envelope and transient fetch/scan/parse lifecycle; persist safe references/metadata and minimal derived business facts, never raw emails or incoming file bytes. WhatsApp is forward-only from accepted connection time and contributes no prior-history source.",
+    "status": "SPECIFIED",
+    "stage": "domain-records",
+    "dependsOn": [
+      "FND-01.01",
+      "FND-01.03",
+      "FND-03.01"
+    ],
+    "docRefs": [
+      "SRC-01",
+      "QLT-01",
+      "INTEL-02",
+      "JNY-01"
+    ],
+    "legacyIds": [],
+    "files": {
+      "actual": [
+        "baseweb/src/app/source-content.tsx",
+        "baseweb/src/app/email-thread.tsx",
+        "baseweb/src/app/capture.tsx"
+      ],
+      "proposed": [
+        "product/backend/sources/envelope.py",
+        "product/backend/sources/quarantine.py",
+        "product/backend/storage/source_objects.py"
+      ]
+    },
+    "steps": [
+      "Assign source/tenant/connection identity, allowed metadata/checksum, provider/user reference and access state; no Rocoto raw-object store.",
+      "Scan/quarantine before broad parsing or attachment-derived action and retain scan outcome.",
+      "Allow source retrieval only through authorized audited commands and honest unavailable/redacted state.",
+      "Prove no-store cache policy, redacted logs/traces/model telemetry/queues, per-fetch authorization and memory expiry. WhatsApp setup/source flows never request, ingest, backfill, display or imply pre-connection history; only explicitly supplied delivery notes and product, customer or catalogue files may be historical inputs. Offer explicit legacy raw-byte removal without silent deletion."
+    ],
+    "assertions": {
+      "positive": [
+        "An accepted source has an external reference, processing lineage and current access state, including reselect/reconnect recovery."
+      ],
+      "negative": [
+        "An unverified webhook, unsupported media, unscanned attachment, or unscoped source cannot enter a business projection."
+      ]
+    },
+    "doneConditions": [
+      "Source validation, quarantine, retention, retrieval authorization, and unavailable-state tests pass."
+    ],
+    "requiredEvidence": [
+      "Source envelope trace, quarantine test, and audited download decision.",
+      "Durable-store/cache/log audit proving no raw incoming content; provider retention review, legacy cleanup and revocation tests."
+    ]
+  },
+  {
+    "id": "SRC-01.02",
+    "title": "Source conversations, attachments, and product/email linkage",
+    "summary": "Project authorized post-connection source threads and attachments with exact message/part linkage, readable provenance, access state, and related-object navigation for Customer, Product, and Albarán sheets; never project prior WhatsApp history.",
+    "status": "SPECIFIED",
+    "stage": "sheet-ports",
+    "dependsOn": [
+      "SRC-01.01",
+      "FND-02.02",
+      "OBJ-01.01"
+    ],
+    "docRefs": [
+      "SRC-01",
+      "PRD-01",
+      "ALB-01",
+      "QLT-01",
+      "JNY-01",
+      "JNY-02"
+    ],
+    "legacyIds": [
+      "A6.4",
+      "A6.12"
+    ],
+    "files": {
+      "actual": [
+        "baseweb/src/app/source-thread.tsx",
+        "baseweb/src/app/source-content.tsx",
+        "baseweb/src/app/email-thread.tsx",
+        "baseweb/src/app/shell/media.tsx"
+      ],
+      "proposed": [
+        "product/backend/sources/thread_projection.py",
+        "product/backend/sources/attachments.py"
+      ]
+    },
+    "steps": [
+      "Retain opaque source/part/attachment aliases, authorized source-to-object relations and minimum approved metadata only; no raw bodies, original bytes or source filenames.",
+      "Require exact reviewed SKU/customer/order link evidence; do not use supplier-name, category/group or Related-products shortcuts.",
+      "Model unread, missing, deleted/redacted, malware-blocked, provider-unavailable, and retry states."
+    ],
+    "assertions": {
+      "positive": [
+        "Opening a source record preserves its exact object return path and displays its retained access status."
+      ],
+      "negative": [
+        "A referenced-but-unread attachment, unrelated thread, or inaccessible source cannot support an automatic draft or business assertion."
+      ]
+    },
+    "doneConditions": [
+      "Thread/attachment/source-link, unavailable, redaction, and return-navigation tests are green."
+    ],
+    "requiredEvidence": [
+      "Source relation audit, attachment-state test, and deep-link recovery trace."
+    ]
+  },
+  {
+    "id": "SRC-01.03",
+    "title": "Test, simulation, and fixture isolation",
+    "summary": "Provide deterministic test and roleplay execution that uses namespaced tenant-safe fixtures, source lineage, reset rules, and no external transport or live provider success claim.",
+    "status": "SPECIFIED",
+    "stage": "automation-services",
+    "dependsOn": [
+      "SRC-01.01",
+      "FND-03.01",
+      "FND-03.03"
+    ],
+    "docRefs": [
+      "SRC-01",
+      "OPS-01",
+      "REL-01",
+      "INTEL-13"
+    ],
+    "legacyIds": [
+      "A6.1",
+      "A6.13"
+    ],
+    "files": {
+      "actual": [
+        "baseweb/src/app/test-chat.tsx",
+        "baseweb/src/app/test-panel.tsx",
+        "baseweb/src/app/shell/theatre-controls.tsx",
+        "baseweb/src/app/shell/theatre.ts"
+      ],
+      "proposed": [
+        "product/backend/testing/lineage.py",
+        "product/backend/testing/fixtures.py",
+        "product/backend/testing/no_outbound.py"
+      ]
+    },
+    "steps": [
+      "Attach immutable test lineage to scenario source, commands, jobs, projections, and rendered outcomes.",
+      "Route test transports to a hard no-outbound adapter and make fixture reset idempotent and tenant-contained.",
+      "Show simulated, pending, accepted, unavailable, and failed states without borrowing any real provider receipt."
+    ],
+    "assertions": {
+      "positive": [
+        "A reset scene replays deterministically and leaves production data, transport, billing, and provider state untouched."
+      ],
+      "negative": [
+        "A test flag, fixture, or browser request cannot cause a real send, connector cursor advance, or production data mutation."
+      ]
+    },
+    "doneConditions": [
+      "Test lineage, transport denial, fixture reset, and deterministic replay tests pass."
+    ],
+    "requiredEvidence": [
+      "No-outbound adapter log, fixture reset report, and deterministic result hash."
+    ]
+  },
+  {
+    "id": "INV-01.01",
+    "title": "Inventory ledger, lots, allocation, and availability projections",
+    "summary": "Build append-only receipt/count/adjustment/reservation/allocation/dispatch records and typed stock projections per tenant, SKU, location, unit, and lot.",
+    "status": "SPECIFIED",
+    "stage": "domain-records",
+    "dependsOn": [
+      "FND-02.02",
+      "PRD-01.01",
+      "COM-01.01"
+    ],
+    "docRefs": [
+      "INV-01",
+      "PRD-01",
+      "ALB-01",
+      "QLT-01",
+      "JNY-01",
+      "JNY-06"
+    ],
+    "legacyIds": [],
+    "files": {
+      "actual": [
+        "baseweb/src/app/incoming.ts",
+        "baseweb/src/app/stock-tiers.tsx",
+        "baseweb/src/app/tiers.ts"
+      ],
+      "proposed": [
+        "product/backend/inventory/ledger.py",
+        "product/backend/inventory/allocation.py",
+        "product/backend/inventory/projections.py"
+      ]
+    },
+    "steps": [
+      "Record physical movement and planning separately with source, unit, lot, location, actor, and expected revision.",
+      "Calculate recorded balance, reservations, allocations, dispatch, and available-to-promise as typed projections.",
+      "Preserve unassigned reductions and unknown lot/supplier facts instead of fabricating traceability."
+    ],
+    "assertions": {
+      "positive": [
+        "Multiple receipts for one lot aggregate safely and each depletion is subtracted once."
+      ],
+      "negative": [
+        "A rule, estimate, negative quantity, incompatible unit, or sibling SKU cannot silently alter physical balance or allocation."
+      ]
+    },
+    "doneConditions": [
+      "Receipt/count/variance/lot/allocation/archive/duplicate-command tests pass with reconciliation evidence."
+    ],
+    "requiredEvidence": [
+      "Inventory replay, lot reconciliation, and exact-SKU allocation test report."
+    ]
+  },
+  {
+    "id": "UTL-01.01",
+    "title": "Stock update utility command surface",
+    "summary": "Ship the focused Receive stock and Record a stock count utility with exact labels, validation, review, recovery, permission, and return-to-SKU behavior rather than a generic stock edit.",
+    "status": "SPECIFIED",
+    "stage": "sheet-ports",
+    "dependsOn": [
+      "INV-01.01",
+      "OBJ-01.01"
+    ],
+    "docRefs": [
+      "UTL-01",
+      "INV-01",
+      "PRD-01",
+      "QLT-02",
+      "JNY-01",
+      "UTL-01.1"
+    ],
+    "legacyIds": [],
+    "files": {
+      "actual": [
+        "baseweb/src/app/product-sheet-sections.tsx",
+        "baseweb/src/app/incoming.ts",
+        "baseweb/src/app/sku-record.ts"
+      ],
+      "proposed": [
+        "product/backend/inventory/update_utility.py"
+      ]
+    },
+    "steps": [
+      "Open from the exact active SKU and show its recorded balance, unit, and stock revision before editing.",
+      "Validate quantity/count/lot/deduction fields and preserve draft plus idempotency identity after failure.",
+      "Return accepted projection and source links to the originating Product Sheet without altering unrelated units or lots.",
+      "Implement UTL-B01, UTL-B03–UTL-B06 as a sequential exact-SKU chooser handoff: one canonical receipt/count command and LOT-01 split per item, acknowledged Save & next return to an empty chooser, distinct Save and finish/direct-sheet actions, and current-item draft retention on failure/cancel."
+    ],
+    "assertions": {
+      "positive": [
+        "A saved count reports before/after/variance and a saved receipt reports only the actual arrival.",
+        "A permitted operator resolves one exact SKU, accepts one independent movement, then reaches an empty next chooser with no inherited product, quantity, lot, source or validation state."
+      ],
+      "negative": [
+        "A blank lot, stale revision, invalid deduction, or failed write cannot show a successful physical update.",
+        "A similar-name match, Save & next click, failed movement or cancel cannot create a bulk transaction, move stock, advance to another item or retain an earlier item’s draft facts."
+      ]
+    },
+    "doneConditions": [
+      "The stock utility has control-level keyboard, validation, conflict, permission, and recovery coverage.",
+      "UTL-B01 and UTL-B03–UTL-B06 have exact-code, receipt/count, lot-split, idempotency, failure/cancel, direct-sheet separation, mobile/keyboard and no-inheritance tests."
+    ],
+    "requiredEvidence": [
+      "Stock utility drive, retained-draft failure test, and stable-return-route trace.",
+      "Sequential Stock update drive covering independent movement receipts, empty next chooser, current-item draft retention and no fabricated batch event."
+    ]
+  },
+  {
+    "id": "UTL-02.01",
+    "title": "New product utility",
+    "summary": "Provide the shared PRD-C01 New product workflow from toolbar, unknown-SKU, source, customer wording or order context. Add one and Add a product list share exact identity and review-result grammar; the list accepts one file (Excel/CSV reviewable; PDF explicitly unavailable) or pasted text into the same queue without pre-result mapping. Neither creates a SKU, relation or commercial fact before explicit confirmation.",
+    "status": "SPECIFIED",
+    "stage": "sheet-ports",
+    "dependsOn": [
+      "PRD-01.02",
+      "CAT-01.02",
+      "OBJ-01.01"
+    ],
+    "docRefs": [
+      "UTL-02",
+      "PRD-01",
+      "CAT-01",
+      "INTEL-08",
+      "JNY-01",
+      "UTL-02.1",
+      "CAT-01.1",
+      "CAT-01.2",
+      "OBJ-02"
+    ],
+    "legacyIds": [],
+    "files": {
+      "actual": [
+        "baseweb/src/app/product-creation.tsx",
+        "baseweb/src/app/line-notes.tsx",
+        "baseweb/src/app/catalogue.ts"
+      ],
+      "proposed": [
+        "product/backend/catalogue/new_product_utility.py"
+      ]
+    },
+    "steps": [
+      "Offer contained Add one product and Add a product list paths. The list surface offers Drop a file or Paste a product list, then one ordered review queue. Retain origin, original wording, source/row locator, each separately reviewable duplicate-SKU source row and PRD-C01 entry context; do not render mapping controls before results. Excel/CSV enter review; PDF shows Automatic PDF review · Ready to connect and is not stored or queued.",
+      "Require Product name, SKU and Unit. Canonical SKU storage trims leading/trailing whitespace, compares case-insensitively for duplicates, and preserves internal punctuation and leading zeroes. One-product review is identity-only; bulk readback is collective and each row shows/edits only Product name, SKU, Unit and Include/Skip. Internal category may remain a quiet stored suggestion/default for later Product Sheet review, but no intake route shows category, artwork status or Source & history as a per-row task. Do not show Placement, a category picker or Related-products candidates in ordinary creation/import.",
+      "Expose Ready for input, Reading source, Review needed, Ready, Save failed and Added with explicit correct/skip/retry/reselect/paste/return recovery.",
+      "Permit Save proposal to create or update a CatalogueProposal only; it may remain deferred indefinitely and cannot create a SKU, RelatedItemLink, tariff, stock, art, order line or ERP master.",
+      "Require a separate authorized, revision-checked, idempotent SKU-confirmation command before creating/adopting a sellable SKU, then return to its own Product Sheet. Only the reviewed inline Related products picker may write a direct relation between existing records; it never creates an SKU or opens a modal.",
+      "Make UTL-B02 the only unknown-SKU recovery from Stock update: New product opens the same PRD-C01 workflow with literal phrase/source context retained as evidence but no selected or prefilled SKU, quantity, price, stock or automatic adoption."
+    ],
+    "assertions": {
+      "positive": [
+        "A confirmed ordinary PRD-C01 review yields one stable SKU and its own Product Sheet; a reviewed inline related-products choice yields only its one direct link after both records exist.",
+        "An unknown stock-update phrase opens New product at the same review boundary, retaining literal source context while leaving stock and existing SKU identity unchanged; Save proposal may finish without an SKU.",
+        "A file list and pasted list have the same queue, correction/skip/retry/reselect recovery and explicit exact-SKU confirmation; neither produces a relation candidate."
+      ],
+      "negative": [
+        "A suggestion, source phrase, opening action, source grouping or duplicate match cannot establish price, stock, category placement, Related products or SKU identity by itself; duplicate canonical SKU rows block confirmation until corrected or skipped.",
+        "No-match recovery or a saved CatalogueProposal cannot create/preselect a SKU, prefill stock/price, infer a box/kg conversion, create a relation or turn the request into a receipt without independent reviewed commands."
+      ]
+    },
+    "doneConditions": [
+      "New product PRD-C01 toolbar, unknown-SKU, Add a product list file and pasted-text entries; queue-state/recovery, proposal save/defer, duplicate choice, correction, confirmation, retry, no-placement/no-auto-relation and return-path tests pass.",
+      "UTL-B02 has no-match, multi-match, New product route, no-prefill, review/return and no-stock-write tests."
+    ],
+    "requiredEvidence": [
+      "New product PRD-C01 drive covering toolbar, unknown-SKU, file/paste review queues, saved-proposal versus confirmed-SKU traces and idempotent confirmation trace.",
+      "Unknown-SKU Stock update handoff trace proving PRD-C01 routing, source-phrase retention, saved-proposal separation and no automatic SKU/stock creation."
+    ]
+  },
+  {
+    "id": "UTL-03.01",
+    "title": "Catalogue file-or-paste intake review queue",
+    "summary": "Provide one Add a product list surface with Drop a file or Paste a product list; Excel/CSV enter review and PDF has explicit unavailable recovery, session-only source custody, an ordered review queue and explicit recovery. The collective readback exposes only Product name, SKU, Unit and Include/Skip per row; internal classification may remain a quiet later-review default. There is no column mapping before results.",
+    "status": "SPECIFIED",
+    "stage": "sheet-ports",
+    "dependsOn": [
+      "CAT-01.01",
+      "OBJ-01.01",
+      "OPS-01.01"
+    ],
+    "docRefs": [
+      "UTL-03",
+      "CAT-01",
+      "SRC-01",
+      "QLT-02"
+    ],
+    "legacyIds": [],
+    "files": {
+      "actual": [
+        "baseweb/src/app/catalogue-export.tsx",
+        "baseweb/src/app/areas/stock.tsx",
+        "baseweb/src/app/live-value.tsx"
+      ],
+      "proposed": [
+        "product/backend/catalogue/import_utility.py"
+      ]
+    },
+    "steps": [
+      "Offer one source choice at a time: a file or pasted product list. Excel/CSV enter review. A selected PDF shows Automatic PDF review · Ready to connect with Choose Excel or CSV, or paste the list; do not store, parse or queue it. Validate type/size or empty text, show session-only custody and retain a checksum/reference or text fingerprint only after review.",
+      "Render Ready for input, Reading source, Review needed, Ready, Save failed and Added. Every state names its valid recovery and makes no parser/model/provider claim.",
+      "Render original name/SKU/unit and source-row/text locator exactly beside returned Product name/SKU/Unit, duplicate/required-field state and Include/Skip decision. Every source row remains separately reviewable; duplicate canonical SKUs block confirmation until corrected or skipped. Source grouping and any internal classification remain retained evidence/defaults for later Product Sheet review; they cannot write Internal category or Related products automatically.",
+      "Keep raw file bytes/pasted text transient. Retry/reselect/paste again only when source is actually available; preserve current decisions through a save failure without duplicate SKU creation."
+    ],
+    "assertions": {
+      "positive": [
+        "A supported Excel or CSV file and pasted product text each reach the same ordered review queue and show original/source locator beside literal readback without mapping controls.",
+        "A confirmed item preserves exact source identity and opens its own exact SKU Product Sheet; its original source remains session/provider-custodied."
+      ],
+      "negative": [
+        "A parsed preview, automatic result, source grouping, absent original or queue acknowledgement cannot be labelled completed import, exact download, accepted placement, Related products link, artwork approval, price, stock or Albarán/customer-visible fact.",
+        "A selected PDF cannot enter the queue, retain source bytes or imply automatic review; its only outcome is the named reselect/paste recovery."
+      ]
+    },
+    "doneConditions": [
+      "Every file-or-paste control has explicit validation, progress, ready/review-needed/failure/retry/skip state, session-custody, responsive and accessible-copy coverage; no mapping control appears before results."
+    ],
+    "requiredEvidence": [
+      "File-and-paste intake state drive, original-retention/storage scan, responsive task-frame evidence and deterministic-review/unavailable-review traces."
+    ]
+  },
+  {
+    "id": "DOC-01.01",
+    "title": "Document rendering, revision, and print-ready artifact authority",
+    "summary": "Render immutable issue/reprint artifacts from frozen order facts with versioned format/profile, exact page/sheet counts, audit, retention, and explicit file/print evidence.",
+    "status": "SPECIFIED",
+    "stage": "automation-services",
+    "dependsOn": [
+      "FND-02.02",
+      "COM-01.01"
+    ],
+    "docRefs": [
+      "DOC-01",
+      "ALB-01",
+      "COM-01",
+      "QLT-01",
+      "JNY-02",
+      "SYS-182",
+      "INTX-11",
+      "JNY-05",
+      "JNY-07",
+      "JNY-09"
+    ],
+    "legacyIds": [
+      "A8.6",
+      "A8.15"
+    ],
+    "files": {
+      "actual": [
+        "baseweb/src/app/print-view.tsx",
+        "baseweb/src/app/print-layout.ts",
+        "baseweb/src/app/print-queue.ts",
+        "baseweb/src/app/shell/printing.tsx",
+        "baseweb/src/app/browser-print.tsx",
+        "baseweb/src/app/print-artifacts.ts"
+      ],
+      "proposed": [
+        "product/backend/documents/render.py",
+        "product/backend/documents/artifacts.py",
+        "product/backend/documents/profiles.py"
+      ]
+    },
+    "steps": [
+      "Select a frozen order revision and effective document/print profile before rendering.",
+      "Store artifact checksum, page count, format, copy count, actor, and selected business day where applicable.",
+      "Differentiate rendered, queued, submitted, printer receipt, file delivered, failed, and unknown outcome.",
+      "Freeze actual albarán, packing and truck-divider content/config/profile once per attempt; paginate unscaled A4/A5 output with loaded assets and immutable retries.",
+      "Before a browser-print request, acknowledge a tenant-scoped immutable generated outgoing document artifact containing complete renderer HTML/CSS/base, source/version identity, paper/copies, request actor and UTC time, job/attempt identity and reprint linkage.",
+      "Keep generated outgoing copies separate from provider-owned raw incoming email/files: never retain raw email, attachments or supplier source material in the artifact store. The browser kit adapter is bounded local persistence; production requires an authenticated tenant-scoped OutputJob/artifact service with durable provenance and acknowledgement.",
+      "Before a browser-print request, acknowledge a tenant-scoped immutable generated outgoing document artifact containing complete renderer HTML/CSS/base, including CSSOM-inserted stylesheet rules, source/version identity, paper/copies, request actor and UTC time, job/attempt identity and reprint linkage.",
+      "Give each logical browser output a durable runKey. The immutable artifact key may be reused only when every guarded fact is identical; an explicit reprint receives a new runKey and immutable reprintOf parent, never overwriting or relabelling the prior outgoing copy.",
+      "Keep generated outgoing copies as exact Rocoto-rendered outgoing documents, separate from provider-owned raw incoming email/files: never retain raw email, attachments or supplier source material in the artifact store. The browser kit adapter is bounded local persistence; production requires an authenticated tenant-scoped OutputJob/artifact service with durable provenance and acknowledgement.",
+      "Freeze the salesperson-scoped day selection, actor/time, document revision, paper/copies and run/reprint identity in the immutable outgoing artifact.",
+      "Implement a versioned output profile for optional albarán final-weight/unit-price/line-total fields and packing one/two-column layout, mandatory truck grouping, and route/customer/order-value/lifetime-value sort; freeze the chosen columns and sort values in every artifact."
+    ],
+    "assertions": {
+      "positive": [
+        "A reprint returns the requested immutable revision with the correct profile and trace.",
+        "A scoped reprint opens the frozen prior artifact with actor/time and lineage intact.",
+        "A one- or two-column packing profile renders whole order blocks inside one truck run and the captured layout survives retry, reload and reprint."
+      ],
+      "negative": [
+        "A browser preview, queue entry, or changed preference cannot prove a physical print or alter a prior artifact.",
+        "Current provider/config/price changes during retry cannot alter a captured print artifact.",
+        "A raw email, incoming attachment, supplier file or unscoped generated document cannot enter or be read from the outgoing-artifact store.",
+        "A later order edit, broader live filter or reprint cannot rewrite a prior scoped artifact.",
+        "A two-column layout cannot split one order across lanes, mix truck runs, or reread a later live layout preference during retry or reprint."
+      ]
+    },
+    "doneConditions": [
+      "Revision render, profile, page count, retry, and artifact-retention tests pass."
+    ],
+    "requiredEvidence": [
+      "Artifact manifest, immutable checksum comparison, and print-state trace.",
+      "Scoped artifact checksum/actor/source-version/reprint linkage evidence.",
+      "One/two-column packing fixture proving whole-order lanes, one truck per paper, captured-profile recovery and matching page counts."
+    ]
+  },
+  {
+    "id": "DOC-01.02",
+    "title": "Print queue, daily run, and printer-provider state",
+    "summary": "Operate per-tenant print jobs for selected documents/day runs with ordered groups, clear job states, retry/cancel, provider receipts, and no claim of physical completion without evidence.",
+    "status": "SPECIFIED",
+    "stage": "automation-services",
+    "dependsOn": [
+      "DOC-01.01",
+      "OPS-01.01",
+      "INTG-01.05"
+    ],
+    "docRefs": [
+      "DOC-01",
+      "INTG-01",
+      "OPS-01",
+      "QLT-02",
+      "JNY-02",
+      "INTEL-06A",
+      "SYS-182",
+      "INTX-11",
+      "JNY-05",
+      "JNY-09"
+    ],
+    "legacyIds": [
+      "A8.1",
+      "A8.2",
+      "A8.5"
+    ],
+    "files": {
+      "actual": [
+        "baseweb/src/app/print-queue.ts",
+        "baseweb/src/app/shell/printing.tsx",
+        "baseweb/src/app/areas/sales.tsx",
+        "baseweb/src/app/albaran-paper-review.tsx",
+        "baseweb/src/app/browser-print.tsx",
+        "baseweb/src/app/print-activity.tsx"
+      ],
+      "proposed": [
+        "product/backend/printing/jobs.py",
+        "product/backend/printing/adapters.py"
+      ]
+    },
+    "steps": [
+      "Create a job from named documents and selected revision/profile/copies with deterministic ordering.",
+      "Track submitted, accepted, provider receipt, failed, cancelled, retrying, and unknown states per document/job.",
+      "Show printer configuration separately from the job evidence and tenant authority.",
+      "Implement JNY-R04 final-paper gating: new/replacement Finish review requires an available source and matching document/source reference; a matching accepted review survives transient byte expiry. A later canonical print snapshot is required; keep queue/provider receipt separate.",
+      "Implement EXP-P01–P09 shared print service for toolbar, day run, preview and keyboard; prevent concurrent orphan requests and preserve blocked-attempt retries.",
+      "Remove timer/afterprint completion. Capture unconfirmed browser submission, explicit actor attestation or verified receipt, changed-since-print coverage and deliberate new reprint identity.",
+      "Acknowledge immutable generated output and persist requested/printing state before invoking the native browser dialog; a blocked popup retries the same attempt. Native browser printing chooses the printer, while setup offers only A4/A5 and copies—never invent a printer name.",
+      "Show activity beside output status with requested and confirmed actor/UTC time, frozen source/version, paper/copies, attempt/reprint linkage and an Open copy action for the immutable artifact.",
+      "Remove timer/afterprint/download completion. Keep submission unconfirmed until an explicit actor attestation or verified production receipt; record changed-since-print so confirmation of an old copy stays historical and cannot make newer edits fresh.",
+      "After reload, the kit may retain an honestly unknown day/packing physical outcome when its in-memory confirmation closure is unavailable. Production must reconcile a persistent tenant-scoped OutputJob and receipt/event identities before confirmation.",
+      "After reload, recover a run by runKey and reopen its exact saved artifact for the same attempt; show any deliberate reprint through its reprintOf parent rather than rebuilding content from current data.",
+      "Show activity beside output status with requested and confirmed actor/UTC time, frozen source/version, paper/copies, runKey/attempt/reprint linkage and an Open copy action for the immutable artifact; surface the linked Previous request where a reprint has one.",
+      "After reload, the kit may recover a day/packing outcome only from a persisted, validated generated packing capture and day identity plus the original operator acknowledgement/idempotency record. Legacy jobs lacking that snapshot remain honestly unconfirmed. Production must reconcile a persistent tenant-scoped OutputJob and receipt/event identities before confirmation.",
+      "Run own-day output only from selected permitted documents; retain requested/unknown state, same-attempt retry and linked reprint activity across reload.",
+      "Expose visible lifecycle status and an Activity icon as the same chronological trail; keep direct Print, Flag/Unflag and Archive out of three-dot overflow, reserving it for rare secondary actions. Flag/Unflag are durable Albarán actor/time ledger events, independent of Viewed/read, and both render in Activity."
+    ],
+    "assertions": {
+      "positive": [
+        "A failed document retry preserves the original artifact and reports the exact remaining work.",
+        "A completed review followed by a later accepted print snapshot yields Final paper while retaining the earlier working snapshot and output state.",
+        "Confirmed older output stays historical after a new edit; same-revision reprint adds an attempt/copies without another document or invoice.",
+        "A bounded authorised cross-cover can create a separately auditable scoped day run.",
+        "Status and Activity open the same trail; direct Print, Flag/Unflag and Archive remain independently reachable and never depend on a three-dot menu. Flag/Unflag retain actor/time and do not mutate Viewed/read or output state."
+      ],
+      "negative": [
+        "A queue submission, browser download, or stale printer health cannot display as printed.",
+        "An old print, missing finish flag, pending review, queue request or browser dialog cannot yield Final paper, physical-print proof or customer delivery claim.",
+        "Browser print closure, elapsed time or renderer success cannot mark physical completion, dispatch, archive or invoke email/ERP side effects.",
+        "Browser print closure, elapsed time, afterprint, download or renderer success cannot mark physical completion, dispatch, archive or invoke email/ERP side effects.",
+        "A waiting, unacknowledged or failed-to-persist attempt cannot be confirmed or reissued as a new attempt; stale-copy confirmation cannot clear the newer revision.",
+        "No native-browser flow may claim a named physical printer or a verified receipt it cannot obtain.",
+        "A runKey recovery or explicit reprint cannot rebuild from edited live data, overwrite an existing immutable artifact, or erase the previous-request linkage.",
+        "A print dialog, download, popup retry or expired coverage cannot prove physical completion or widen output scope."
+      ]
+    },
+    "doneConditions": [
+      "Daily-run ordering, cancellation, partial failure, provider receipt, and cross-tenant denial tests pass.",
+      "JNY-R04 tests unavailable source blocking new/replacement review, accepted-review survival after byte expiry, document/source invalidation, finish, later print, queue failure/retry and no-final shortcut."
+    ],
+    "requiredEvidence": [
+      "Print-job state trace, partial-retry test, and printer adapter receipt fixture.",
+      "Review-to-later-print state trace with distinct print/provider receipt evidence.",
+      "Captured-content hash comparison before/after live edits, popup-blocked same-attempt retry, concurrent presses, A4/A5 pagination and human/connector confirmation trace.",
+      "Captured-content hash comparison before/after live edits, artifact reopen after reload, popup-blocked same-attempt retry, concurrent presses, A4/A5/copies and human/connector confirmation trace.",
+      "Activity/status trace of request and confirmation actor/UTC time, source/version and reprint link; kit post-reload unknown day/packing outcome versus production OutputJob receipt reconciliation.",
+      "Activity/status trace of request and confirmation actor/UTC time, source/version and reprint link; eleven focused domain checks for persisted validated packing captures/day IDs, operator acknowledgement/idempotency and legacy absent-snapshot unconfirmed recovery, versus production OutputJob receipt reconciliation.",
+      "Popup-blocked same-attempt retry, old-copy-after-edit, cross-cover expiry and 1280×800/390×844/320×740 activity evidence."
+    ]
+  },
+  {
+    "id": "DOC-01.03",
+    "title": "Export centre, output jobs, and download history",
+    "summary": "Build date/revision-aware output selection, job creation, status, downloadable artifact history, export profile, and explicit source/format compatibility for daily files.",
+    "status": "SPECIFIED",
+    "stage": "automation-services",
+    "dependsOn": [
+      "CAT-01.04",
+      "DOC-01.01",
+      "OPS-01.01"
+    ],
+    "docRefs": [
+      "DOC-01",
+      "UTL-04",
+      "CAT-01",
+      "QLT-02",
+      "SYS-182",
+      "INTX-11",
+      "JNY-07",
+      "E188"
+    ],
+    "legacyIds": [
+      "A8.3",
+      "A8.4",
+      "A8.10",
+      "A8.13"
+    ],
+    "files": {
+      "actual": [
+        "baseweb/src/app/export-files.ts",
+        "baseweb/src/app/export-model.ts",
+        "baseweb/src/app/areas/admin/data.tsx",
+        "baseweb/src/app/export-library.tsx",
+        "baseweb/src/app/custom-export-builder.tsx"
+      ],
+      "proposed": [
+        "product/backend/exports/jobs.py",
+        "product/backend/exports/history.py",
+        "product/backend/exports/profiles.py"
+      ]
+    },
+    "steps": [
+      "Select active/archived/review-blocked rows with explicit policy, date, revision, and generated format.",
+      "Create immutable generated artifact/history records and authorize download separately from job completion.",
+      "Render queued, generating, ready, expired, failed, cancelled, and unknown state with recovery actions.",
+      "Implement EXP-B01–B09 contained template cards, adjacent support/builder actions, column-owned selectors and drag/keyboard reorder, template draft/save/version plus Gallery template → Use template → configure saved-copy parity; use the same saved-copy identity, selectors and activity status in Export Centre and day-level print/download shortcuts.",
+      "Use one E188 Export Filters apparatus: a contained desktop popover or phone bottom sheet keeps day, salesperson, period and scope draft-only until Apply; Clear returns canonical scope and only applied scope may drive preview, count or output capture.",
+      "Build a centred Export center with explicit Print, Email and Files destinations. Each destination starts with a responsive one-to-four-plus saved-copy grid and **Edit saved copies**; Templates opens only default/organisation/custom gallery cards compatible with the active destination and **Use template** creates a configured copy. The Email gallery includes Subcontractor delivery pack and Daily albaranes to accounting; **Build your own with Copilot** may deposit only a user-owned configurable proposal/template or saved copy after review. Every copy records name, destination, source template/version, scope/filter chips, permitted fields/columns, settings and connection profile; immutable output attempts retain the selected saved-copy/template revisions without mutating either.",
+      "Keep Email as a first-class recipient/channel/revision/schedule review destination; provider setup is separate. Scheduled Email uses a separately versioned schedule object with recipient rule, attachment/template revision, connection profile, cadence/timezone, next run, paused/active state and history, with explicit Edit/Pause/Resume/Remove actions. Send history is a hover/card action outside the editor. Final rendered draft and unusual/new change note are pre-send review seams only; any AI proposal/runtime is deferred. Requested, submitted, provider-accepted, delivery-unavailable, failed and receipt states remain distinct."
+    ],
+    "assertions": {
+      "positive": [
+        "A generated file is retrievable with its exact profile, revision set, checksum, and audit record."
+      ],
+      "negative": [
+        "A count badge, stale list, queue state, or generic CSV label cannot hide excluded records or claim ERP acceptance.",
+        "Saving a template or saved copy, scheduling Email, or starting a download cannot claim a generated file, local disk save, email delivery or ERP receipt.",
+        "A draft Export filter, closing the filter, or a stale applied scope cannot change an output job or masquerade as a generated artifact.",
+        "A template or saved-copy selection cannot rewrite an output attempt, and opening Email, configuring a schedule or reaching a due time cannot claim a recipient, provider acceptance or delivery."
+      ]
+    },
+    "doneConditions": [
+      "Date, revision, profile, history, expiry, failure, and tenant-download tests are complete.",
+      "E188 desktop/phone Filters draft, Apply, Clear, close-without-Apply and applied-scope capture tests are complete."
+    ],
+    "requiredEvidence": [
+      "Export history manifest, download-authorization trace, and format validation result.",
+      "E188 applied-scope versus draft browser trace with no output-attempt change before Apply."
+    ]
+  },
+  {
+    "id": "DOC-01.04",
+    "title": "Document email, supplier forwarding, and ERP delivery state",
+    "summary": "Deliver customer documents and related forwarding/export work through explicit authorized jobs with recipient, revision, schedule, provider receipt, failure, retry, and audit semantics.",
+    "status": "SPECIFIED",
+    "stage": "automation-services",
+    "dependsOn": [
+      "DOC-01.01",
+      "INTG-01.02",
+      "INTG-01.03"
+    ],
+    "docRefs": [
+      "DOC-01",
+      "INTG-01",
+      "QLT-01",
+      "JNY-03"
+    ],
+    "legacyIds": [
+      "A8.7",
+      "A8.8",
+      "A8.9",
+      "A8.14"
+    ],
+    "files": {
+      "actual": [
+        "baseweb/src/app/supplier-forwarding.tsx",
+        "baseweb/src/app/email-thread.tsx",
+        "baseweb/src/app/export-files.ts"
+      ],
+      "proposed": [
+        "product/backend/delivery/email_jobs.py",
+        "product/backend/delivery/forwarding.py",
+        "product/backend/integrations/erp_delivery.py"
+      ]
+    },
+    "steps": [
+      "Capture exact intended document revision, recipient, schedule, consent/policy, and delivery channel before submission.",
+      "Require external connector adapter receipt/reconciliation before reporting provider acceptance or synchronization.",
+      "Retry boundedly with an immutable attempt history and clear manual intervention state.",
+      "Surface Email in Export center as a direct destination with recipient, channel, document revision, schedule and policy review; a scheduled Email copy carries recipient rule, attachment/template, next run, history and Edit/Pause/Resume/Remove controls. Opening it, creating a schedule or reaching a due time never records a send, provider acceptance or delivery."
+    ],
+    "assertions": {
+      "positive": [
+        "A delivered document job records its selected revision, recipient, attempts, and provider receipt."
+      ],
+      "negative": [
+        "An inbox connection, scheduling intent, browser action, or queue state cannot imply outbound send, forwarding, or ERP synchronization."
+      ]
+    },
+    "doneConditions": [
+      "Email/forward/ERP delivery receipt, retry, revoke, permission, and provider-failure tests pass."
+    ],
+    "requiredEvidence": [
+      "Delivery-job audit, mock adapter receipt, and revocation failure trace."
+    ]
+  },
+  {
+    "id": "UTL-04.01",
+    "title": "Export utility command surface",
+    "summary": "Provide the focused export utility with exact data scope, selected format, profile, retention, download state, accessibility labels, and honest partial/failed outcomes.",
+    "status": "SPECIFIED",
+    "stage": "sheet-ports",
+    "dependsOn": [
+      "DOC-01.03",
+      "OBJ-01.02"
+    ],
+    "docRefs": [
+      "UTL-04",
+      "DOC-01",
+      "QLT-02"
+    ],
+    "legacyIds": [],
+    "files": {
+      "actual": [
+        "baseweb/src/app/export-files.ts",
+        "baseweb/src/app/export-model.ts",
+        "baseweb/src/app/shell/printing.tsx"
+      ],
+      "proposed": [
+        "product/backend/exports/utility.py"
+      ]
+    },
+    "steps": [
+      "Make source, rows, date/revision, format, profile, and recipient/download purpose visible before request.",
+      "Disable unavailable combinations with the reason and preserve a valid draft through validation or job failure.",
+      "Use the generated artifact/history record for ready/download/retry state rather than a temporary browser assumption."
+    ],
+    "assertions": {
+      "positive": [
+        "An authorized user can request and later retrieve exactly the generated artifact described by the utility."
+      ],
+      "negative": [
+        "A disabled, unavailable, expired, partial, or failed output state cannot become a generic successful download message."
+      ]
+    },
+    "doneConditions": [
+      "Export utility control and exact-copy inventory is mapped to state/recovery contract tests."
+    ],
+    "requiredEvidence": [
+      "Export utility state drive and accessible-name audit."
+    ]
+  }
+]

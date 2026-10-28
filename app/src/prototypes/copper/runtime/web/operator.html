@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Copper payment integration prototype</title>
+  <link rel="stylesheet" href="/assets/style.css">
+  <script src="/assets/operator.js" defer></script>
+</head>
+<body>
+  <main class="operator">
+    <header><h1>Payment integration prototype</h1><p>Document payment links through Izipay, Mercado Pago and Flow.</p></header>
+    <section aria-labelledby="access-title">
+      <h2 id="access-title">Operator access</h2>
+      <form id="access-form" class="inline-form">
+        <label>Operator token<input id="operator-token" type="password" autocomplete="off" required></label>
+        <button type="submit">Connect</button>
+      </form>
+      <p id="access-state" role="status" aria-live="polite">Enter the token commissioned for this runtime.</p>
+    </section>
+    <div id="workspace" hidden>
+      <section aria-labelledby="evidence-title">
+        <h2 id="evidence-title">Verification evidence</h2>
+        <p id="evidence"></p><p id="activation"></p>
+        <button id="reload" type="button">Refresh sellers and requests</button>
+      </section>
+      <div class="columns">
+        <section aria-labelledby="seller-title">
+          <h2 id="seller-title">Seller connection</h2>
+          <form id="seller-form">
+            <label>Seller name<input id="seller-name" required maxlength="100" autocomplete="organization"></label>
+            <label>Provider<select id="provider" required></select></label>
+            <label>Environment<select id="seller-environment"><option value="sandbox">Sandbox</option><option value="live">Live</option></select></label>
+            <p><a id="provider-registration" target="_blank" rel="noopener noreferrer">Provider account setup</a></p>
+            <fieldset id="credentials"><legend>Provider credentials</legend></fieldset>
+            <button type="submit">Save seller connection</button>
+          </form>
+          <div id="oauth-section" hidden>
+            <h3>Mercado Pago seller authorization</h3>
+            <p>Use the seller name and environment above to authorize through Mercado Pago.</p>
+            <button id="oauth-start" type="button">Authorize Mercado Pago seller</button>
+          </div>
+          <p id="seller-state" role="status" aria-live="polite"></p>
+        </section>
+        <section aria-labelledby="request-title">
+          <h2 id="request-title">Document payment request</h2>
+          <form id="request-form">
+            <label>Seller<select id="request-seller" required></select></label>
+            <label>Document reference<input id="document-id" required maxlength="100" placeholder="Invoice F001-123"></label>
+            <label>Description<input id="description" required maxlength="100"></label>
+            <label>Amount in céntimos (PEN)<input id="amount-minor" type="number" min="1" max="200000" step="1" required inputmode="numeric" aria-describedby="amount-help"></label>
+            <p id="amount-help" class="hint">12345 céntimos = S/ 123.45. Maximum S/ 2,000.</p>
+            <label>Buyer email<input id="payer-email" type="email" required maxlength="100" autocomplete="email"></label>
+            <label>Checkout<select id="checkout-mode"><option value="hosted">Provider payment page</option><option value="yape">Yape in Rocoto · Mercado Pago</option></select></label>
+            <details id="address-details">
+              <summary>Izipay billing and shipping details</summary>
+              <p>Enter the buyer’s actual data as JSON objects with text values, using the provider field names.</p>
+              <p class="hint">Each object requires firstName, lastName, email, phoneNumber, street, postalCode, city, state, country (PE), documentType and document.</p>
+              <label>Billing JSON<textarea id="billing" rows="4" spellcheck="false" placeholder="{}"></textarea></label>
+              <label>Shipping JSON<textarea id="shipping" rows="4" spellcheck="false" placeholder="{}"></textarea></label>
+            </details>
+            <button id="create-request" type="submit">Create payment link</button>
+          </form>
+          <p id="request-state" role="status" aria-live="polite"></p>
+        </section>
+      </div>
+      <section aria-labelledby="requests-title">
+        <h2 id="requests-title">Payment requests</h2>
+        <p id="requests-empty">Create a request to see its link and provider-confirmed status.</p>
+        <div class="table-wrap"><table id="requests-table" hidden><caption class="visually-hidden">Document payment requests and verification status</caption><thead><tr><th scope="col">Document</th><th scope="col">Seller</th><th scope="col">Amount</th><th scope="col">Status</th><th scope="col">Checkout</th><th scope="col">Actions</th></tr></thead><tbody id="requests-body"></tbody></table></div>
+      </section>
+      <p id="workspace-state" role="status" aria-live="polite"></p>
+    </div>
+  </main>
+</body>
+</html>

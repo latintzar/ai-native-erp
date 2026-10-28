@@ -1,0 +1,7 @@
+# Dedicated development/demo origin. The machine also hosts the separate staging environment.
+cedar-demo.soyrocoto.com {
+    encode zstd gzip
+    header X-Robots-Tag "noindex, nofollow"
+    header Referrer-Policy "no-referrer"
+    reverse_proxy 127.0.0.1:8793
+}

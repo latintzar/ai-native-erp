@@ -1,0 +1,540 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:rocoto:situations:intelligence:image-job:v1",
+  "title": "Rocoto SKU Artwork Job v1",
+  "description": "A versioned asynchronous image-generation record. It represents one SKU visual revision and never grants an asset to a family or sibling SKU.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "api_version",
+    "image_job_id",
+    "tenant_id",
+    "sku",
+    "state",
+    "state_version",
+    "request_fingerprint",
+    "prompt_contract",
+    "provider",
+    "budget",
+    "attempts",
+    "candidate_assets",
+    "created_at",
+    "updated_at"
+  ],
+  "properties": {
+    "api_version": {
+      "const": "2026-08-31/v1"
+    },
+    "image_job_id": {
+      "$ref": "#/$defs/opaqueId"
+    },
+    "tenant_id": {
+      "$ref": "#/$defs/tenantId"
+    },
+    "sku": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "sku_id",
+        "sku_revision",
+        "visual_description_revision"
+      ],
+      "properties": {
+        "sku_id": {
+          "$ref": "#/$defs/opaqueId"
+        },
+        "sku_revision": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "visual_description_revision": {
+          "$ref": "#/$defs/opaqueId"
+        }
+      }
+    },
+    "state": {
+      "enum": [
+        "missing",
+        "requested",
+        "policy_check",
+        "blocked",
+        "queued",
+        "submitted",
+        "awaiting_result",
+        "ingesting",
+        "review_pending",
+        "approved",
+        "rejected",
+        "cancel_requested",
+        "cancelled",
+        "retry_wait",
+        "failed",
+        "dead_letter",
+        "superseded",
+        "stale_review_required",
+        "budget_review_required",
+        "paused"
+      ]
+    },
+    "state_version": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Optimistic concurrency revision for state transitions."
+    },
+    "request_fingerprint": {
+      "$ref": "#/$defs/hash"
+    },
+    "backfill_batch_id": {
+      "$ref": "#/$defs/opaqueId"
+    },
+    "prompt_contract": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "prompt_template_id",
+        "prompt_hash",
+        "style_profile_id",
+        "style_version",
+        "style_hash",
+        "options_hash",
+        "reference_assets"
+      ],
+      "properties": {
+        "prompt_template_id": {
+          "$ref": "#/$defs/opaqueId"
+        },
+        "prompt_hash": {
+          "$ref": "#/$defs/hash"
+        },
+        "style_profile_id": {
+          "$ref": "#/$defs/opaqueId"
+        },
+        "style_version": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "style_hash": {
+          "$ref": "#/$defs/hash"
+        },
+        "options_hash": {
+          "$ref": "#/$defs/hash"
+        },
+        "reference_assets": {
+          "type": "array",
+          "maxItems": 8,
+          "items": {
+            "$ref": "#/$defs/referenceAsset"
+          }
+        }
+      },
+      "description": "Raw prompt text and provider multipart bodies are transient, restricted execution inputs and are not retained in this job, ordinary projections, logs, retries, evaluations, or browser storage. The job retains only hashes, approved safe descriptors, and reference-asset identifiers."
+    },
+    "provider": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "adapter_id",
+        "model_id",
+        "request_receipt_state",
+        "endpoint_variant"
+      ],
+      "properties": {
+        "adapter_id": {
+          "const": "ideogram-v4-async@1"
+        },
+        "model_id": {
+          "const": "ideogram-v4"
+        },
+        "request_receipt_state": {
+          "enum": [
+            "not_submitted",
+            "accepted",
+            "rejected",
+            "unknown"
+          ]
+        },
+        "generation_id": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 300
+        },
+        "provider_receipt_id": {
+          "$ref": "#/$defs/opaqueId"
+        },
+        "webhook_receipt_id": {
+          "$ref": "#/$defs/opaqueId"
+        },
+        "reported_cost_usd_micros": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "reported_safety_state": {
+          "enum": [
+            "unknown",
+            "safe",
+            "unsafe",
+            "not_reported"
+          ]
+        },
+        "endpoint_variant": {
+          "enum": [
+            "standard",
+            "transparent_background"
+          ],
+          "description": "standard = POST https://api.ideogram.ai/v1/ideogram-v4/async/generate; transparent_background = POST https://api.ideogram.ai/v1/ideogram-v4/async/generate-transparent. Both accept multipart/form-data, return generation_id, poll at GET /v1/generations/{generation_id}, and may receive an HTTPS webhook_url."
+        }
+      },
+      "description": "Internal provenance for the pinned Ideogram V4 async adapter. `model_id` is Rocoto provenance, not an API body field: the selected endpoint fixes the provider model. The executor sends multipart/form-data with Api-Key only from the secret-managed server, never from a browser."
+    },
+    "budget": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "authorization_id",
+        "max_cost_usd_micros",
+        "expires_at",
+        "status"
+      ],
+      "properties": {
+        "authorization_id": {
+          "$ref": "#/$defs/opaqueId"
+        },
+        "max_cost_usd_micros": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "expires_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "status": {
+          "enum": [
+            "reserved",
+            "approved",
+            "exhausted",
+            "expired",
+            "review_required"
+          ]
+        }
+      }
+    },
+    "attempts": {
+      "type": "array",
+      "maxItems": 20,
+      "items": {
+        "$ref": "#/$defs/attempt"
+      }
+    },
+    "candidate_assets": {
+      "type": "array",
+      "maxItems": 8,
+      "items": {
+        "$ref": "#/$defs/candidateAsset"
+      }
+    },
+    "previous_approved_association_id": {
+      "$ref": "#/$defs/opaqueId"
+    },
+    "approved_association_id": {
+      "$ref": "#/$defs/opaqueId"
+    },
+    "invalidated_by": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "reason",
+        "at"
+      ],
+      "properties": {
+        "reason": {
+          "enum": [
+            "visual_description_changed",
+            "sku_revision_changed",
+            "policy_changed",
+            "cancelled",
+            "other"
+          ]
+        },
+        "event_id": {
+          "$ref": "#/$defs/opaqueId"
+        },
+        "at": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "failure": {
+      "$ref": "#/$defs/failure"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "$defs": {
+    "opaqueId": {
+      "type": "string",
+      "pattern": "^[A-Za-z][A-Za-z0-9_-]{2,127}$"
+    },
+    "tenantId": {
+      "type": "string",
+      "pattern": "^ten_[A-Za-z0-9_-]{3,120}$"
+    },
+    "hash": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "referenceAsset": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "asset_id",
+        "checksum",
+        "rights_status",
+        "review_status"
+      ],
+      "properties": {
+        "asset_id": {
+          "$ref": "#/$defs/opaqueId"
+        },
+        "checksum": {
+          "$ref": "#/$defs/hash"
+        },
+        "rights_status": {
+          "enum": [
+            "approved",
+            "restricted",
+            "unknown",
+            "not_allowed"
+          ]
+        },
+        "review_status": {
+          "enum": [
+            "approved",
+            "rejected",
+            "pending"
+          ]
+        }
+      }
+    },
+    "attempt": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "attempt_number",
+        "state",
+        "started_at"
+      ],
+      "properties": {
+        "attempt_number": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "state": {
+          "enum": [
+            "queued",
+            "submitted",
+            "awaiting_result",
+            "retry_wait",
+            "failed",
+            "cancelled",
+            "completed"
+          ]
+        },
+        "started_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "ended_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "next_attempt_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "retry_class": {
+          "enum": [
+            "none",
+            "timeout",
+            "rate_limited",
+            "provider_unavailable",
+            "operator_retry",
+            "non_retryable"
+          ]
+        },
+        "provider_generation_id": {
+          "type": "string",
+          "maxLength": 300
+        },
+        "error_code": {
+          "type": "string",
+          "maxLength": 200
+        }
+      }
+    },
+    "candidateAsset": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "candidate_asset_id",
+        "checksum",
+        "storage_object_id",
+        "ingest_status",
+        "review_status",
+        "source_generation_id",
+        "created_at"
+      ],
+      "properties": {
+        "candidate_asset_id": {
+          "$ref": "#/$defs/opaqueId"
+        },
+        "checksum": {
+          "$ref": "#/$defs/hash"
+        },
+        "storage_object_id": {
+          "$ref": "#/$defs/opaqueId"
+        },
+        "mime_type": {
+          "enum": [
+            "image/png",
+            "image/jpeg",
+            "image/webp"
+          ]
+        },
+        "width": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 20000
+        },
+        "height": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 20000
+        },
+        "ingest_status": {
+          "enum": [
+            "stored",
+            "rejected",
+            "quarantined",
+            "duplicate"
+          ]
+        },
+        "review_status": {
+          "enum": [
+            "pending",
+            "approved",
+            "rejected",
+            "superseded",
+            "stale"
+          ]
+        },
+        "source_generation_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 300
+        },
+        "provider_safety_state": {
+          "enum": [
+            "safe",
+            "unsafe",
+            "unknown",
+            "not_reported"
+          ]
+        },
+        "scan_status": {
+          "enum": [
+            "pending",
+            "passed",
+            "failed",
+            "quarantined"
+          ]
+        },
+        "review": {
+          "$ref": "#/$defs/review"
+        },
+        "created_at": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "review": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "decision",
+        "actor_id",
+        "reviewed_at"
+      ],
+      "properties": {
+        "decision": {
+          "enum": [
+            "approve",
+            "reject",
+            "request_retry"
+          ]
+        },
+        "actor_id": {
+          "$ref": "#/$defs/opaqueId"
+        },
+        "reviewed_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "reason": {
+          "type": "string",
+          "maxLength": 2000
+        }
+      }
+    },
+    "failure": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "class",
+        "at"
+      ],
+      "properties": {
+        "class": {
+          "enum": [
+            "timeout",
+            "rate_limited",
+            "provider_unavailable",
+            "provider_rejected",
+            "content_policy",
+            "invalid_webhook",
+            "invalid_result",
+            "storage_failure",
+            "budget_exceeded",
+            "stale_target",
+            "cancelled",
+            "unknown"
+          ]
+        },
+        "safe_code": {
+          "type": "string",
+          "maxLength": 200
+        },
+        "retryable": {
+          "type": "boolean"
+        },
+        "at": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    }
+  }
+}

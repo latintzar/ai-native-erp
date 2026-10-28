@@ -1,0 +1,22 @@
+{
+  "synthetic": true,
+  "version": 1,
+  "id": "kitten-sitting-two-households",
+  "clock": "2030-01-15T08:00:00Z",
+  "households": [
+    {
+      "id": "household-alder",
+      "name": "Alder demonstration household",
+      "email": "alder@example.invalid",
+      "kittens": [{"id": "kitten-miso", "name": "Miso"}],
+      "bookings": [{"id": "booking-alder", "kitten_id": "kitten-miso", "starts_at": "2030-01-15T09:00:00Z"}]
+    },
+    {
+      "id": "household-birch",
+      "name": "Birch demonstration household",
+      "email": "birch@example.invalid",
+      "kittens": [{"id": "kitten-pip", "name": "Pip"}],
+      "bookings": [{"id": "booking-birch", "kitten_id": "kitten-pip", "starts_at": "2030-01-16T10:00:00Z"}]
+    }
+  ]
+}

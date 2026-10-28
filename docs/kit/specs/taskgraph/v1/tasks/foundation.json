@@ -1,0 +1,578 @@
+[
+  {
+    "id": "FND-01.01",
+    "title": "Tenant identity and membership boundary",
+    "summary": "Create the authoritative tenant, member, role, sector, and lifecycle records that every protected read, command, file, job, and subscription resolves before domain work.",
+    "status": "SPECIFIED",
+    "stage": "foundation",
+    "dependsOn": [],
+    "docRefs": [
+      "FND-01",
+      "FND-02",
+      "QLT-01"
+    ],
+    "legacyIds": [
+      "A0.1",
+      "A0.6",
+      "A0.7"
+    ],
+    "files": {
+      "actual": [
+        "baseweb/src/app/company.ts",
+        "baseweb/src/app/config.ts",
+        "baseweb/src/app/net.ts"
+      ],
+      "proposed": [
+        "product/backend/identity/tenants.py",
+        "product/backend/identity/memberships.py",
+        "product/backend/api/auth_context.py"
+      ]
+    },
+    "steps": [
+      "Define immutable tenant and membership IDs with archive and transfer rules.",
+      "Resolve tenant context once at the API edge and reject absent or contradictory scope.",
+      "Expose a read model that can represent an empty tenant without seeded business data."
+    ],
+    "assertions": {
+      "positive": [
+        "A permitted member reads only their tenant projection after a tenant switch."
+      ],
+      "negative": [
+        "A supplied tenant ID cannot expose another tenant's record, file, job, or subscription."
+      ]
+    },
+    "doneConditions": [
+      "Cross-tenant read, write, search, file, and subscription denial tests pass with audit evidence."
+    ],
+    "requiredEvidence": [
+      "Tenant-context contract tests, migration record, and a scoped request trace."
+    ]
+  },
+  {
+    "id": "FND-01.02",
+    "title": "Authentication, session, and role-capability commands",
+    "summary": "Implement sign-in, sign-out, session renewal, membership selection, role changes, revocation, and capability evaluation as server-enforced operations.",
+    "status": "SPECIFIED",
+    "stage": "foundation",
+    "dependsOn": [
+      "FND-01.01"
+    ],
+    "docRefs": [
+      "FND-01",
+      "FND-03",
+      "QLT-01"
+    ],
+    "legacyIds": [
+      "A0.5",
+      "A0.8",
+      "A0.9",
+      "A0.10"
+    ],
+    "files": {
+      "actual": [
+        "baseweb/src/app/grants.ts",
+        "baseweb/src/app/areas/admin/team.tsx",
+        "baseweb/src/app/route-meta.ts"
+      ],
+      "proposed": [
+        "product/backend/identity/sessions.py",
+        "product/backend/identity/capabilities.py",
+        "product/backend/api/session_routes.py"
+      ]
+    },
+    "steps": [
+      "Model role capabilities separately from client navigation labels.",
+      "Require fresh authority for owner and account-recovery actions.",
+      "Invalidate command and subscription access immediately after suspension, removal, or session revoke."
+    ],
+    "assertions": {
+      "positive": [
+        "A role change changes the next authorized command decision and records actor, reason, and revision."
+      ],
+      "negative": [
+        "A stale browser session cannot retain a revoked capability or self-escalate."
+      ]
+    },
+    "doneConditions": [
+      "Role, revocation, break-glass expiry, and session-renewal integration tests are green."
+    ],
+    "requiredEvidence": [
+      "Authorization decision log, session-revocation trace, and controlled role-transition test."
+    ]
+  },
+  {
+    "id": "FND-01.03",
+    "title": "Actor, consent, and access-audit envelope",
+    "summary": "Attach authenticated actor, tenant, request, causation, device/session, and declared test lineage to each protected operation without persisting credentials in business records.",
+    "status": "SPECIFIED",
+    "stage": "foundation",
+    "dependsOn": [
+      "FND-01.01",
+      "FND-01.02"
+    ],
+    "docRefs": [
+      "FND-01",
+      "FND-03",
+      "QLT-01",
+      "INTEL-12"
+    ],
+    "legacyIds": [
+      "A0.11",
+      "A0.12",
+      "A0.13"
+    ],
+    "files": {
+      "actual": [
+        "baseweb/src/app/trace.ts",
+        "baseweb/src/app/capability.tsx"
+      ],
+      "proposed": [
+        "product/backend/audit/envelope.py",
+        "product/backend/audit/reader.py",
+        "product/backend/policy/consent.py"
+      ]
+    },
+    "steps": [
+      "Define an append-only audit envelope and redacted searchable summary.",
+      "Require a declared actor and tenant for commands, source reads, exports, and support access.",
+      "Model read-state and presence as scoped preferences, never universal authorization or truth."
+    ],
+    "assertions": {
+      "positive": [
+        "An authorized privileged read emits an auditable, redacted access event."
+      ],
+      "negative": [
+        "A missing actor, unknown test lineage, or stale support grant cannot execute a protected act."
+      ]
+    },
+    "doneConditions": [
+      "Audit rows retain actor, tenant, command, outcome, and correlation without secret material."
+    ],
+    "requiredEvidence": [
+      "Audit query test, redaction test, and expired-support-access test."
+    ]
+  },
+  {
+    "id": "FND-02.01",
+    "title": "Canonical record envelopes and identity lifecycle",
+    "summary": "Establish durable IDs, revisions, archive/redaction rules, retained original identity, and explicit relationships for every system object before any projection is treated as canonical.",
+    "status": "SPECIFIED",
+    "stage": "foundation",
+    "dependsOn": [
+      "FND-01.01",
+      "FND-01.03"
+    ],
+    "docRefs": [
+      "FND-02",
+      "OBJ-01",
+      "QLT-01"
+    ],
+    "legacyIds": [
+      "A0.14",
+      "A2.1"
+    ],
+    "files": {
+      "actual": [
+        "baseweb/src/app/sku-record.ts",
+        "baseweb/src/app/sale.ts",
+        "baseweb/src/app/customers-made.ts"
+      ],
+      "proposed": [
+        "product/backend/records/envelope.py",
+        "product/backend/records/lifecycle.py",
+        "product/backend/migrations/001_records.sql"
+      ]
+    },
+    "steps": [
+      "Define stable IDs, revisions, source identity, archive, restore, redaction, and foreign-key retention rules.",
+      "Create explicit tenant-scoped record tables rather than overloading display names or family keys.",
+      "Snapshot immutable commercial facts at the document boundary."
+    ],
+    "assertions": {
+      "positive": [
+        "An archived SKU remains reachable from earlier orders with its prior identity intact."
+      ],
+      "negative": [
+        "Renaming, archive, or redaction cannot silently reuse an ID or rewrite an issued commercial snapshot."
+      ]
+    },
+    "doneConditions": [
+      "Identity, archive, restore, and redaction migrations prove referential integrity and tenant scope."
+    ],
+    "requiredEvidence": [
+      "Schema migration, lifecycle contract tests, and historical-snapshot replay."
+    ]
+  },
+  {
+    "id": "FND-02.02",
+    "title": "Event streams, folds, and replayable projections",
+    "summary": "Build the event/outbox/projection spine so screens read tenant-authorized materialized facts and historical replay cannot import later knowledge into an earlier business state.",
+    "status": "SPECIFIED",
+    "stage": "foundation",
+    "dependsOn": [
+      "FND-02.01"
+    ],
+    "docRefs": [
+      "FND-02",
+      "FND-03",
+      "OPS-01",
+      "REL-01"
+    ],
+    "legacyIds": [
+      "A2.4",
+      "A2.6",
+      "A2.7",
+      "A2.8"
+    ],
+    "files": {
+      "actual": [
+        "baseweb/src/app/rows.tsx",
+        "baseweb/src/app/day.ts",
+        "baseweb/src/app/attention-labels.tsx"
+      ],
+      "proposed": [
+        "product/backend/events/store.py",
+        "product/backend/projections/runner.py",
+        "product/backend/projections/replay.py"
+      ]
+    },
+    "steps": [
+      "Publish versioned domain events and transactional outbox records after accepted commands.",
+      "Build tenant-scoped projectors with cursor, sequence, reset, and rebuild behavior.",
+      "Store the effective revision and time used by an order, output, and intelligence projection."
+    ],
+    "assertions": {
+      "positive": [
+        "Rebuilding a projection yields the same count, hashes, sequence, and document snapshots."
+      ],
+      "negative": [
+        "A late price, alias, or model decision cannot change a replayed historical document."
+      ]
+    },
+    "doneConditions": [
+      "Event ordering, idempotent outbox, projector lag, and replay parity tests pass."
+    ],
+    "requiredEvidence": [
+      "Projection rebuild report, replay fixture result, and outbox reconciliation trace."
+    ]
+  },
+  {
+    "id": "FND-03.01",
+    "title": "Command protocol, idempotency, and acknowledged outcomes",
+    "summary": "Standardize command envelopes, validation, expected revision, idempotency lookup, typed errors, and acknowledgement semantics across every write path.",
+    "status": "SPECIFIED",
+    "stage": "foundation",
+    "dependsOn": [
+      "FND-01.03",
+      "FND-02.01"
+    ],
+    "docRefs": [
+      "FND-03",
+      "QLT-02",
+      "REL-01"
+    ],
+    "legacyIds": [
+      "A0.2",
+      "A0.3",
+      "A0.4"
+    ],
+    "files": {
+      "actual": [
+        "baseweb/src/app/net.ts",
+        "baseweb/src/app/live-value.tsx",
+        "baseweb/src/app/tick.tsx"
+      ],
+      "proposed": [
+        "product/backend/commands/envelope.py",
+        "product/backend/commands/idempotency.py",
+        "product/backend/api/errors.py"
+      ]
+    },
+    "steps": [
+      "Define command ID, tenant, actor, expected revision, payload schema, and causal reference fields.",
+      "Persist idempotency outcome before responding so unknown outcomes can be resolved safely.",
+      "Return typed validation, permission, conflict, pending, failed, and retryable states to every port."
+    ],
+    "assertions": {
+      "positive": [
+        "A repeated request ID returns the same accepted outcome without duplicate business effects."
+      ],
+      "negative": [
+        "A client cannot choose a total, force a stale overwrite, or display success before an accepted response."
+      ]
+    },
+    "doneConditions": [
+      "All command handlers share envelope validation and unknown-outcome lookup coverage."
+    ],
+    "requiredEvidence": [
+      "Idempotency replay test, revision-conflict test, and client acknowledgement trace."
+    ]
+  },
+  {
+    "id": "FND-03.02",
+    "title": "Schema expansion, backfill, and compensating recovery",
+    "summary": "Make production schema change additive, observable, reversible by compensation where needed, and safe to roll forward during partial failure or a paused migration.",
+    "status": "SPECIFIED",
+    "stage": "foundation",
+    "dependsOn": [
+      "FND-02.02",
+      "FND-03.01"
+    ],
+    "docRefs": [
+      "FND-03",
+      "ACT-01",
+      "REL-01"
+    ],
+    "legacyIds": [
+      "X9"
+    ],
+    "files": {
+      "actual": [
+        "baseweb/src/app/stage.tsx",
+        "baseweb/src/app/snapshot/provenance.ts"
+      ],
+      "proposed": [
+        "product/backend/migrations/",
+        "product/backend/migrations/backfill_runner.py",
+        "product/backend/recovery/compensate.py"
+      ]
+    },
+    "steps": [
+      "Write expand-only migrations with validation checkpoints and rollback or compensating-event plans.",
+      "Run chunked, resumable backfills with tenant/test lineage and durable progress.",
+      "Gate contract activation on parity checks rather than migration completion alone."
+    ],
+    "assertions": {
+      "positive": [
+        "An interrupted backfill resumes the same cursor and preserves valid prior work."
+      ],
+      "negative": [
+        "A migration cannot silently reinterpret historical prices, units, stock, documents, or source bytes."
+      ]
+    },
+    "doneConditions": [
+      "Isolated forward migration, restore, parity, and compensating recovery exercises are recorded."
+    ],
+    "requiredEvidence": [
+      "Migration manifest, checkpointed backfill trace, and recovery drill result."
+    ]
+  },
+  {
+    "id": "FND-03.03",
+    "title": "Realtime, offline drafts, and concurrent-edit recovery",
+    "summary": "Deliver authorized projection notifications, cursor catch-up, constrained offline drafts, and server-resolved concurrent editing without treating presence as a lock.",
+    "status": "SPECIFIED",
+    "stage": "foundation",
+    "dependsOn": [
+      "FND-03.01",
+      "FND-02.02"
+    ],
+    "docRefs": [
+      "FND-03",
+      "OPS-01",
+      "QLT-02",
+      "JNY-01"
+    ],
+    "legacyIds": [],
+    "files": {
+      "actual": [
+        "baseweb/src/app/live-value.tsx",
+        "baseweb/src/app/shell/theatre.ts",
+        "baseweb/src/app/navigation.ts"
+      ],
+      "proposed": [
+        "product/backend/realtime/topics.py",
+        "product/backend/realtime/cursors.py",
+        "product/backend/sync/offline_queue.py"
+      ]
+    },
+    "steps": [
+      "Publish authorized projection notices with cursors and refetch protected detail through normal reads.",
+      "Partition local drafts and confirmed cache by tenant and preserve command/idempotency identity.",
+      "Disable high-risk offline commands and provide exact conflict or uncertain-outcome recovery.",
+      "Recover an interrupted source review as a tenant-scoped draft with lineage, idempotency identity and current-revision recheck; it cannot replay stock/document/message consequences offline."
+    ],
+    "assertions": {
+      "positive": [
+        "A reconnect catches up a permitted projection and preserves a valid unsent low-risk draft.",
+        "An interrupted phone-source draft reopens with its unresolved rows and requires current-revision review before a later accepted command."
+      ],
+      "negative": [
+        "Offline mode cannot issue documents, send externally, change prices or stock, or force-apply a stale command.",
+        "An offline/reopened source draft cannot infer box-to-kg conversion, duplicate a receipt, issue a document or claim seven accepted rows."
+      ]
+    },
+    "doneConditions": [
+      "Reconnect, cursor-gap, conflict, and tenant-cache isolation tests are green.",
+      "JNY-01 interrupted-entry/reopen, source-revision conflict, tenant-isolation and no-duplicate-command cases pass."
+    ],
+    "requiredEvidence": [
+      "Offline/reconnect test trace, cursor recovery report, and concurrent-editor test.",
+      "Source-review draft recovery trace with tenant isolation, stale revision denial and idempotent retry evidence."
+    ]
+  },
+  {
+    "id": "OBJ-01.01",
+    "title": "Shared sheet, form, menu, and error-state contract",
+    "summary": "Implement the reusable interaction boundary for Product, Customer, and Albarán sheets: one stable object ID, named layers, pending drafts, permission, loading, empty, error, conflict, archive, and recovery states.",
+    "status": "SPECIFIED",
+    "stage": "foundation",
+    "dependsOn": [
+      "FND-03.01",
+      "FND-03.03"
+    ],
+    "docRefs": [
+      "OBJ-01",
+      "PRD-01",
+      "CUS-01",
+      "ALB-01",
+      "QLT-02",
+      "INTX-11"
+    ],
+    "legacyIds": [
+      "A3.28",
+      "E176"
+    ],
+    "files": {
+      "actual": [
+        "baseweb/src/app/order-open.tsx",
+        "baseweb/src/app/shell/open.tsx",
+        "baseweb/src/app/product-sheet-parts.tsx",
+        "baseweb/src/app/customer-profile.tsx",
+        "baseweb/src/app/workflow-dialog.tsx",
+        "baseweb/src/rocoto/overlay-card/overlay-card.tsx"
+      ],
+      "proposed": [
+        "product/backend/api/sheet_projections.py",
+        "product/backend/contracts/sheets.py"
+      ]
+    },
+    "steps": [
+      "Define object-addressed sheet routes, layered Back/Forward behavior, and return context.",
+      "Standardize editable draft lifecycle, authoritative acknowledgement, conflict, and recovery language.",
+      "Make each surface render its own state matrix rather than a shared fake object template.",
+      "Implement UTL-M01–M08: shared 800×600 viewport-clamped frame, one scroll, fixed actions, icon Back/Close and named substeps.",
+      "Preserve edited drafts across nested steps, upload handoff, Close/Back/Escape and assistant coverage of customer chat; reconcile unknown saves by original request ID.",
+      "Render select, menu and popover portals through the owning task card child-layer contract above that card; preserve focus/escape semantics and keep one task dialog rather than opening a competing modal."
+    ],
+    "assertions": {
+      "positive": [
+        "Opening a related object and returning restores the correct origin, selection, query, scroll, and valid draft."
+      ],
+      "negative": [
+        "A sheet cannot silently switch object identity, discard a failed draft, or substitute related-object data."
+      ]
+    },
+    "doneConditions": [
+      "All three sheet contracts have keyboard, narrow-screen, loading, error, conflict, archive, and deleted/redacted tests.",
+      "Every task-frame control has desktop, phone, keyboard, reduced-motion, dirty-close and unavailable-provider evidence."
+    ],
+    "requiredEvidence": [
+      "Controlled sheet-state drive, accessible interaction audit, and browser-history trace."
+    ]
+  },
+  {
+    "id": "OBJ-01.02",
+    "title": "Per-control exact-copy and accessible-name framework",
+    "summary": "Bind canonical label tables to controls, tabs, menus, form fields, provider states, errors, and incomplete states so copy is precise, localized safely, and testable without altering business values.",
+    "status": "SPECIFIED",
+    "stage": "foundation",
+    "dependsOn": [
+      "OBJ-01.01"
+    ],
+    "docRefs": [
+      "OBJ-01",
+      "QLT-02",
+      "PRD-01"
+    ],
+    "legacyIds": [
+      "E177"
+    ],
+    "files": {
+      "actual": [
+        "baseweb/src/app/snapshot/spanish-dictionary.ts",
+        "baseweb/src/app/snapshot/spanish-source-transform.ts",
+        "baseweb/src/app/anchors.tsx"
+      ],
+      "proposed": [
+        "product/backend/presentation/copy_registry.py",
+        "product/backend/presentation/locales.py"
+      ]
+    },
+    "steps": [
+      "Register each user-facing control with stable ID, visible label, accessible name, object scope, and state-specific copy.",
+      "Separate templated UI copy from tenant names, source text, identifiers, quantities, currencies, and user-entered values.",
+      "Require review for missing locale strings and render an honest owed-translation state rather than corrupting data."
+    ],
+    "assertions": {
+      "positive": [
+        "A control's accessible name names its object, action, and current state where needed."
+      ],
+      "negative": [
+        "A translation pipeline cannot rewrite business data, invent a provider receipt, or silently fall back as a completed locale."
+      ]
+    },
+    "doneConditions": [
+      "Copy inventory, locale extraction, accessible-name checks, and missing-state copy tests are all linked to control IDs."
+    ],
+    "requiredEvidence": [
+      "Copy inventory diff, locale build report, and screen-reader label test."
+    ]
+  },
+  {
+    "id": "OBJ-01.03",
+    "title": "Responsive and assistive interaction baseline",
+    "summary": "Make the three sheet archetypes and all nested menus, tables, charts, forms, and status announcements usable with keyboard, screen reader, touch, and narrow viewport recovery.",
+    "status": "SPECIFIED",
+    "stage": "foundation",
+    "dependsOn": [
+      "OBJ-01.01",
+      "OBJ-01.02"
+    ],
+    "docRefs": [
+      "OBJ-01",
+      "QLT-02",
+      "JNY-01",
+      "JNY-07",
+      "E188"
+    ],
+    "legacyIds": [],
+    "files": {
+      "actual": [
+        "baseweb/src/app/shell/viewport.ts",
+        "baseweb/src/app/shell/bottom-nav.tsx",
+        "baseweb/src/app/product-sheet-sections.tsx"
+      ],
+      "proposed": [
+        "product/backend/contracts/accessibility.py"
+      ]
+    },
+    "steps": [
+      "Set shared focus, Escape, Enter, dialog, live-region, touch-target, and reduced-motion rules.",
+      "Provide tabular/text alternatives for charts and semantic descriptions for non-decorative artwork.",
+      "Test loading, unavailable, error, conflict, permission, and recovery announcements at desktop and narrow viewport.",
+      "Make source-review recovery, unknown unit/identity validation and reopened-draft conflict states reachable with named status, focus return and narrow-viewport reading order.",
+      "Keep E188 list focus/current geometry inside the one inset destination; on phone keep the focused field, value and next/save action reachable above visualViewport and thumb-dock bounds."
+    ],
+    "assertions": {
+      "positive": [
+        "Keyboard-only users can complete an authorized sheet command and hear its confirmed outcome.",
+        "A keyboard/touch user can read an unknown SKU/box-kg gap, reopen the scoped draft and reach the permitted review action without losing source context."
+      ],
+      "negative": [
+        "Focus cannot disappear behind a sheet, a mobile overlay, a chart, or a pending provider state.",
+        "A mobile overlay, error announcement or interrupted review cannot hide the unresolved source fact, lose focus or imply accepted stock.",
+        "Full-width hover paint, a clipped quantity/unit terminal, or keyboard-obscured action cannot pass E188 interaction evidence."
+      ]
+    },
+    "doneConditions": [
+      "WCAG 2.2 AA checks and manual keyboard/screen-reader paths cover every control inventory state.",
+      "JNY-01 unknown-unit and interrupted-entry states have accessible names, focus recovery and 390/320 px no-overflow tests.",
+      "E188 list, long-line, visualViewport and thumb-dock cases pass at the named desktop and phone viewports."
+    ],
+    "requiredEvidence": [
+      "Accessibility report, narrow viewport evidence, and manual assistive-technology checklist.",
+      "Assistive-technology and narrow-viewport source-review recovery checklist."
+    ]
+  }
+]

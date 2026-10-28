@@ -1,0 +1,14 @@
+# THE TOOL TESTS THAT ARE RED ON MAIN, and why each is out. EMPTY, and meant to stay that way.
+#
+# `tools/run-tool-tests.sh` runs every `tools/test-*.mjs` this file does not name, and stops at the
+# first failure, so a new test file is picked up the day it lands. A line here is a file name; it
+# takes a test OUT of CI and out of `make test`, so a line costs coverage every day it stands.
+#
+# Adding one is a last resort, and it carries its reason on the line above it and a row on the
+# board. Deleting the line is how a test comes back — and the test comes back GREEN FOR THE RIGHT
+# REASON: it asserts what the product does now, never what it used to do.
+#
+# The three that stood here — test-chip-parse.mjs, test-packing-output.mjs and
+# test-print-queue-history.mjs — were fixed and released in the same pull request that emptied this
+# file: the class assertion follows FEED-IA §197.2, the packing module is compiled to disk by
+# `tools/ts-module.mjs` instead of to a `data:` URL, and the print seam names `discountOn`.

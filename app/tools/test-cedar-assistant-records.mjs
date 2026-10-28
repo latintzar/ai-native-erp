@@ -1,0 +1,13 @@
+import assert from 'node:assert/strict';
+import {loadTypeScript} from './ts-module.mjs';
+const {workspaceAnswer}=loadTypeScript('src/prototypes/cedar/copilot/workspace-answer.ts','cedar-assistant-records');
+const today='2026-09-10';
+const sale=(id,day,figure,extra={})=>({id,day,figure,number:id,customer:{id:'c1',name:'Can Solé'},lines:[{id:'line'}],...extra});
+const rows=[sale('a',today,300),sale('b',today,200),sale('c','2026-09-11',700),sale('d',today,999,{messageOnly:true}),sale('e',today,1000,{archived:true})];
+assert.match(workspaceAnswer('How are sales today?',rows,today).text,/2 orders.*S\/ 500\.00/);
+assert.match(workspaceAnswer('And tomorrow?',rows,today).text,/1 order.*S\/ 700\.00/);
+assert.equal(workspaceAnswer('Print today’s packing list',rows,today).proposals.length,2);
+assert.match(workspaceAnswer('Which conversations need a reply?',rows.map(row=>row.id==='d'?{...row,needsReply:{kind:'ask'}}:row),today).text,/1 conversation needs/);
+assert.equal(workspaceAnswer('Pay this invoice now',rows,today),undefined,'local record queries never imply a payment action');
+assert.equal(workspaceAnswer('Delete every account',rows,today),undefined,'unrecognised instructions remain a conversation');
+console.log('6 Cedar assistant record-query checks passed');

@@ -1,0 +1,693 @@
+{
+  "_comment": [
+    "Backend catalogue inputs for the existing Pedidos billing implementation.",
+    "Recovered from tag v0.196.0, commit 76d7ab50653dde26089c3f620233172e8856e1b1, apps/rocoto/product/pricing.json.",
+    "All data values are preserved. Historical explanatory comments remain in that Git source.",
+    "This input supports provisioning and offline checks; runtime billing continues to use brain/pedidos_billing.py.",
+    "Historical live/sellable flags and customer copy describe this implementation, not current product readiness or a new offer.",
+    "Current commercial intent: https://github.com/Rocoto-Labs/company/blob/main/decisions/2026-08-31-two-week-trial-commercial-model.md",
+    "Release readiness: ../docs/ENGINEERING-READINESS.md. See backend/README.md for ownership and validation."
+  ],
+  "currency": "eur",
+  "model": "seat_band_plus_per_order",
+  "default_code": "PEQ",
+  "live": {
+    "ventas": true,
+    "compras": true,
+    "reparto": true,
+    "radar": true
+  },
+  "plans": [
+    {
+      "code": "PEQ",
+      "name": {
+        "es": "Pequeño",
+        "en": "Small"
+      },
+      "who": {
+        "es": "Hasta 3 personas atendiendo pedidos",
+        "en": "Up to 3 people handling orders"
+      },
+      "seats": 3,
+      "base": 199,
+      "per_order_cents": 60,
+      "compras": 99,
+      "anual": 1990,
+      "sellable": true
+    },
+    {
+      "code": "MED",
+      "name": {
+        "es": "Mediano",
+        "en": "Medium"
+      },
+      "who": {
+        "es": "Hasta 10 personas atendiendo pedidos",
+        "en": "Up to 10 people handling orders"
+      },
+      "seats": 10,
+      "base": 499,
+      "per_order_cents": 50,
+      "compras": 249,
+      "anual": 4990,
+      "sellable": true
+    },
+    {
+      "code": "GRA",
+      "name": {
+        "es": "Grande",
+        "en": "Large"
+      },
+      "who": {
+        "es": "Sin límite de personas, varios almacenes y marcas",
+        "en": "Unlimited people, several warehouses and brands"
+      },
+      "seats": null,
+      "base": 1499,
+      "per_order_cents": 40,
+      "compras": 749,
+      "anual": 14990,
+      "sellable": true
+    }
+  ],
+  "rates": {
+    "reparto_van": 39,
+    "radar_pct": 15,
+    "integracion_day": 700
+  },
+  "routing": {
+    "sales_orders_over": 8000
+  },
+  "units": {
+    "per_month": {
+      "es": "/mes",
+      "en": "/month"
+    },
+    "per_order": {
+      "es": "por pedido",
+      "en": "per order"
+    },
+    "per_van": {
+      "es": "por furgoneta",
+      "en": "per van"
+    },
+    "per_day": {
+      "es": "al día",
+      "en": "a day"
+    }
+  },
+  "modules": {
+    "ventas": {
+      "id": "ventas",
+      "name": {
+        "es": "Ventas",
+        "en": "Sales"
+      },
+      "tagline": {
+        "es": "Los pedidos de tus clientes",
+        "en": "Your customers' orders"
+      },
+      "lead": null,
+      "price": {
+        "row": {
+          "es": "desde {PEQ_base}/mes + {PEQ_rate}/pedido",
+          "en": "from {PEQ_base}/month + {PEQ_rate}/order"
+        },
+        "detail": {
+          "es": "Una cuota según tu equipo, más un precio por pedido",
+          "en": "One fee for your team, plus a price per order"
+        }
+      },
+      "bullets": {
+        "es": [
+          {
+            "lead": "",
+            "text": "Toma de pedidos por WhatsApp, correo o teléfono"
+          },
+          {
+            "lead": "",
+            "text": "Memoria de clientes"
+          },
+          {
+            "lead": "",
+            "text": "Ajustes de comportamiento por cliente"
+          },
+          {
+            "lead": "",
+            "text": "Tarifas variables y precios por cliente"
+          },
+          {
+            "lead": "",
+            "text": "Cola compartida, o cada cliente con su comercial: tú eliges"
+          },
+          {
+            "lead": "",
+            "text": "Correos programados"
+          },
+          {
+            "lead": "",
+            "text": "Modelos de exportación de documentos"
+          },
+          {
+            "lead": "",
+            "text": "Integración con ERPs en la nube"
+          }
+        ],
+        "en": [
+          {
+            "lead": "",
+            "text": "Orders taken over WhatsApp, email or the phone"
+          },
+          {
+            "lead": "",
+            "text": "Customer memory"
+          },
+          {
+            "lead": "",
+            "text": "Per-customer behaviour settings"
+          },
+          {
+            "lead": "",
+            "text": "Variable rates and per-customer prices"
+          },
+          {
+            "lead": "",
+            "text": "A shared queue, or each customer with their own rep: you choose"
+          },
+          {
+            "lead": "",
+            "text": "Scheduled emails"
+          },
+          {
+            "lead": "",
+            "text": "Document export templates"
+          },
+          {
+            "lead": "",
+            "text": "Integration with cloud ERPs"
+          }
+        ]
+      },
+      "note": null,
+      "without": null
+    },
+    "compras": {
+      "id": "compras",
+      "name": {
+        "es": "Compras",
+        "en": "Purchasing"
+      },
+      "tagline": {
+        "es": "Tus pedidos a proveedores",
+        "en": "Your orders to suppliers"
+      },
+      "lead": {
+        "es": "Lo mismo que Ventas, pero con tus proveedores.",
+        "en": "The same as Sales, with your suppliers."
+      },
+      "price": {
+        "row": {
+          "es": "desde {PEQ_compras}/mes",
+          "en": "from {PEQ_compras}/month"
+        },
+        "detail": {
+          "es": "{PEQ_compras} · {MED_compras} · {GRA_compras} al mes, según el plan que tengas",
+          "en": "{PEQ_compras} · {MED_compras} · {GRA_compras} a month, depending on your plan"
+        }
+      },
+      "bullets": {
+        "es": [
+          {
+            "lead": "",
+            "text": "Tarifas variables"
+          },
+          {
+            "lead": "",
+            "text": "Sugerencias diarias de lo que comprar"
+          },
+          {
+            "lead": "",
+            "text": "Alerta de pedidos raros en el momento de entrar"
+          },
+          {
+            "lead": "",
+            "text": "Ayuda con proveedores"
+          },
+          {
+            "lead": "",
+            "text": "Envío de pedidos a sub-proveedores"
+          },
+          {
+            "lead": "",
+            "text": "Gestión de alternativas en caso de problemas"
+          }
+        ],
+        "en": [
+          {
+            "lead": "",
+            "text": "Variable rates"
+          },
+          {
+            "lead": "",
+            "text": "Daily suggestions of what to buy"
+          },
+          {
+            "lead": "",
+            "text": "An alert on odd orders the moment they come in"
+          },
+          {
+            "lead": "",
+            "text": "Help with suppliers"
+          },
+          {
+            "lead": "",
+            "text": "Orders sent on to sub-suppliers"
+          },
+          {
+            "lead": "",
+            "text": "Alternatives handled when something goes wrong"
+          }
+        ]
+      },
+      "note": null,
+      "without": {
+        "title": {
+          "es": "Si no lo contratas",
+          "en": "If you leave it out"
+        },
+        "intro": {
+          "es": "Ventas funciona igual. Lo que cambia:",
+          "en": "Sales works the same. What changes:"
+        },
+        "bullets": {
+          "es": [
+            {
+              "lead": "",
+              "text": "Comunicación manual de problemas"
+            },
+            {
+              "lead": "",
+              "text": "Seguimiento automático de los cambios que comuniques"
+            },
+            {
+              "lead": "",
+              "text": "Stock a cero o fijo"
+            }
+          ],
+          "en": [
+            {
+              "lead": "",
+              "text": "You tell people about problems yourself"
+            },
+            {
+              "lead": "",
+              "text": "Automatic follow-up on the changes you do communicate"
+            },
+            {
+              "lead": "",
+              "text": "Stock stays at zero or fixed"
+            }
+          ]
+        }
+      }
+    },
+    "reparto": {
+      "id": "reparto",
+      "name": {
+        "es": "Reparto",
+        "en": "Delivery"
+      },
+      "tagline": {
+        "es": "Del almacén a la puerta",
+        "en": "From the warehouse to the door"
+      },
+      "lead": null,
+      "price": {
+        "row": {
+          "es": "{van}/furgoneta al mes",
+          "en": "{van}/van a month"
+        },
+        "detail": {
+          "es": "{van} por furgoneta al mes",
+          "en": "{van} per van per month"
+        }
+      },
+      "bullets": {
+        "es": [
+          {
+            "lead": "",
+            "text": "Rutas optimizadas, abiertas en Waze o Google Maps"
+          },
+          {
+            "lead": "",
+            "text": "Aplicación para repartidores"
+          },
+          {
+            "lead": "",
+            "text": "Comunicación al cliente sobre el estado de su entrega, en tiempo real"
+          },
+          {
+            "lead": "",
+            "text": "Seguimiento de pagos"
+          },
+          {
+            "lead": "",
+            "text": "Comunicación interna con los repartidores"
+          },
+          {
+            "lead": "",
+            "text": "Redistribución automática en caso de enfermedad"
+          }
+        ],
+        "en": [
+          {
+            "lead": "",
+            "text": "Optimised routes, opened in Waze or Google Maps"
+          },
+          {
+            "lead": "",
+            "text": "An app for the drivers"
+          },
+          {
+            "lead": "",
+            "text": "The customer hears where their delivery is, in real time"
+          },
+          {
+            "lead": "",
+            "text": "Payment tracking"
+          },
+          {
+            "lead": "",
+            "text": "Internal messaging with the drivers"
+          },
+          {
+            "lead": "",
+            "text": "Routes redistributed automatically when someone falls ill"
+          }
+        ]
+      },
+      "note": null,
+      "without": {
+        "title": {
+          "es": "Si no lo contratas",
+          "en": "If you leave it out"
+        },
+        "intro": {
+          "es": "Ventas funciona igual. Lo que cambia:",
+          "en": "Sales works the same. What changes:"
+        },
+        "bullets": {
+          "es": [
+            {
+              "lead": "",
+              "text": "Comunicación manual de la ubicación del pedido"
+            },
+            {
+              "lead": "",
+              "text": "Rutas manuales"
+            },
+            {
+              "lead": "",
+              "text": "Sin seguimiento del estado de entrega"
+            }
+          ],
+          "en": [
+            {
+              "lead": "",
+              "text": "You tell the customer where the order is yourself"
+            },
+            {
+              "lead": "",
+              "text": "Manual routes"
+            },
+            {
+              "lead": "",
+              "text": "No delivery status tracking"
+            }
+          ]
+        }
+      }
+    },
+    "radar": {
+      "id": "radar",
+      "name": {
+        "es": "Radar",
+        "en": "Radar"
+      },
+      "tagline": {
+        "es": "Lo que pasa fuera, aplicado a lo tuyo",
+        "en": "What happens outside, applied to your business"
+      },
+      "lead": {
+        "es": "Es vigilancia automática: Rocoto mira el mundo por ti y lo cruza con lo tuyo.",
+        "en": "Automatic monitoring: Rocoto watches the world for you and matches it to your business."
+      },
+      "price": {
+        "row": {
+          "es": "+{radar_pct} sobre tu factura",
+          "en": "+{radar_pct} on your bill"
+        },
+        "detail": {
+          "es": "+{radar_pct} sobre lo que ya tengas",
+          "en": "+{radar_pct} on top of what you already have"
+        }
+      },
+      "bullets": {
+        "es": [
+          {
+            "lead": "En Ventas",
+            "text": "vigilancia de menús, aperturas y cambios"
+          },
+          {
+            "lead": "En Ventas",
+            "text": "recetas que suben en redes sociales"
+          },
+          {
+            "lead": "En Compras",
+            "text": "problemas en noticias que afectan a tus compras"
+          },
+          {
+            "lead": "En Compras",
+            "text": "comunicados a clientes en caso de retrasos globales"
+          },
+          {
+            "lead": "En Reparto",
+            "text": "tráfico, obras y cortes que afectan a tus rutas"
+          },
+          {
+            "lead": "En Reparto",
+            "text": "aviso a los clientes de esa ruta, uno por uno"
+          }
+        ],
+        "en": [
+          {
+            "lead": "In Sales",
+            "text": "menus, openings and changes, watched"
+          },
+          {
+            "lead": "In Sales",
+            "text": "recipes climbing on social media"
+          },
+          {
+            "lead": "In Purchasing",
+            "text": "news of trouble that reaches what you buy"
+          },
+          {
+            "lead": "In Purchasing",
+            "text": "messages to customers when a delay hits everyone"
+          },
+          {
+            "lead": "In Delivery",
+            "text": "traffic, roadworks and closures on your routes"
+          },
+          {
+            "lead": "In Delivery",
+            "text": "the customers on that route told, one by one"
+          }
+        ]
+      },
+      "note": {
+        "es": "Se activa una vez y cubre todos los módulos que tengas contratados. Si un mes vendes poco, cuesta poco.",
+        "en": "You turn it on once and it covers every module you have. In a quiet month it costs little."
+      },
+      "without": {
+        "title": {
+          "es": "Si no lo contratas",
+          "en": "If you leave it out"
+        },
+        "intro": {
+          "es": "Todo funciona igual, pero sin señales de fuera:",
+          "en": "Everything works the same, with signals from outside left out:"
+        },
+        "bullets": {
+          "es": [
+            {
+              "lead": "",
+              "text": "Los avisos los sigues recibiendo tú, por tu cuenta"
+            },
+            {
+              "lead": "",
+              "text": "Avisar a los clientes afectados es manual"
+            }
+          ],
+          "en": [
+            {
+              "lead": "",
+              "text": "The warnings keep reaching you, on your own"
+            },
+            {
+              "lead": "",
+              "text": "Telling the affected customers is manual"
+            }
+          ]
+        }
+      }
+    },
+    "integraciones": {
+      "id": "integraciones",
+      "name": {
+        "es": "Integraciones",
+        "en": "Integrations"
+      },
+      "tagline": {
+        "es": "Conectar con tu programa de facturación",
+        "en": "Connecting to your invoicing software"
+      },
+      "lead": {
+        "es": "Con los ERPs en la nube conectamos nosotros, sin coste. Si tu programa está instalado en un ordenador, como Sage 50, hace falta trabajo a medida y se cobra por días.",
+        "en": "With cloud ERPs we connect it ourselves, at no cost. If your software sits on a computer, like Sage 50, it takes bespoke work and is billed by the day."
+      },
+      "price": {
+        "row": {
+          "es": "{day} /día",
+          "en": "{day} /day"
+        },
+        "detail": {
+          "es": "Nativas incluidas · a medida, {day} al día",
+          "en": "Native ones included · bespoke, {day} a day"
+        }
+      },
+      "bullets": {
+        "es": [
+          {
+            "lead": "",
+            "text": "Mientras tanto, exportas el pedido en tu formato y lo importas"
+          },
+          {
+            "lead": "",
+            "text": "Cuando la integración nativa esté lista, deja de costar"
+          }
+        ],
+        "en": [
+          {
+            "lead": "",
+            "text": "Meanwhile you export the order in your own format and import it"
+          },
+          {
+            "lead": "",
+            "text": "Once the native integration is ready, it stops costing anything"
+          }
+        ]
+      },
+      "note": null,
+      "without": null
+    }
+  },
+  "bundles": {
+    "title": {
+      "es": "Pagar pedidos por adelantado",
+      "en": "Pay for orders up front"
+    },
+    "sub": {
+      "es": "Opcional. Compras una bolsa de pedidos más barata que la tarifa de tu plan y se va consumiendo según entran. Válida 12 meses.",
+      "en": "Optional. You buy a batch of orders cheaper than your plan's rate and it runs down as they come in. Valid for 12 months."
+    },
+    "saving": {
+      "es": "{pct} % más barato que tu tarifa",
+      "en": "{pct}% cheaper than your rate"
+    },
+    "covers": {
+      "es": "te cubre {span}",
+      "en": "covers {span}"
+    },
+    "span": {
+      "months": {
+        "es": "{n} meses",
+        "en": "{n} months"
+      },
+      "month": {
+        "es": "1 mes",
+        "en": "1 month"
+      },
+      "days": {
+        "es": "{n} días",
+        "en": "{n} days"
+      },
+      "day": {
+        "es": "1 día",
+        "en": "1 day"
+      },
+      "cap": {
+        "es": "los {n} meses de validez",
+        "en": "all {n} months it is valid"
+      }
+    },
+    "valid_months": 12,
+    "rows": [
+      {
+        "qty": 1000
+      },
+      {
+        "qty": 3000
+      },
+      {
+        "qty": 5000
+      },
+      {
+        "qty": 10000
+      }
+    ],
+    "discount_pct": 10
+  },
+  "billing": {
+    "anual_free_months": 2,
+    "footer": {
+      "es": [
+        "Precios sin IVA",
+        "La cuota y los módulos se pagan por trimestres, por adelantado",
+        "Los pedidos se facturan a mes vencido"
+      ],
+      "en": [
+        "Prices exclude VAT",
+        "The fee and the modules are paid by the quarter, up front",
+        "Orders are billed at the end of the month"
+      ]
+    }
+  },
+  "availability": {
+    "buckets": {
+      "now": {
+        "es": "Lo que cuesta al mes",
+        "en": "What a month costs"
+      }
+    }
+  },
+  "retired": [
+    {
+      "code": "S",
+      "note": "Ceiling model, 249 €/mes up to 1.500 pedidos. Stripe prices exist and are untouched; kept in BANDS as sellable:false so a tenant already on it keeps a correct ceiling and webhook upsert."
+    },
+    {
+      "code": "M",
+      "note": "Ceiling model, 449 €/mes up to 5.000 pedidos. Same treatment as S."
+    },
+    {
+      "code": "L",
+      "note": "Ceiling model, never sold. Stripe prices exist and are untouched since 2026-08-12."
+    },
+    {
+      "code": "XL",
+      "note": "Ceiling model, never sold. Stripe prices exist and are untouched since 2026-08-12."
+    }
+  ]
+}

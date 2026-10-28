@@ -1,0 +1,361 @@
+{
+  "observedAt": "2026-09-09",
+  "environment": "demo/development",
+  "target": "cedar-preview",
+  "sourceCommit": "703500b1c9f1c5c52dbca84b41a93818e9d48fef",
+  "previousSourceCommit": "1805bf55ffa7b9bcfa106c809a3f88443b5767b7",
+  "sourcePullRequest": "https://github.com/Rocoto-Labs/rocoto/pull/81",
+  "packageSha256": "d38abee18ce9b01746f839c01bac5f4bade7ba5749507768e8d441cdbf7c6182",
+  "change": "One main action per setup step: connect through Meta, or download WhatsApp Business and transfer chats first. Meta owns account selection and history consent.",
+  "publication": {
+    "method": "native package/publish through commissioned constrained receiver",
+    "host": "rocoto-staging",
+    "publisherExitStatus": 0,
+    "mainMerged": false,
+    "maintainedServicePidsUnchanged": [
+      "rocoto-kit-runtime",
+      "rocoto-staging",
+      "albaranes-bridge"
+    ],
+    "maintainedCaddyfileUnchanged": true,
+    "providerConfigurationPreserved": true,
+    "providerConfigurationPreservationEvidence": "Source-only constrained publisher; manifest and dependencies unchanged. Environment remains root0600 and private state service-owned0700.",
+    "activeService": "rocoto-cedar-demo",
+    "activeReleaseVerified": true
+  },
+  "browser": {
+    "url": "https://cedar-demo.soyrocoto.com",
+    "environment": "demo",
+    "expectedSourceCommit": "703500b1c9f1c5c52dbca84b41a93818e9d48fef",
+    "checkedAt": "2026-09-09T18:22:35.226369+00:00",
+    "providerPosture": "Real SDK; anonymous session bootstrap only. Meta authorization and account writes blocked.",
+    "widths": [
+      1600,
+      390,
+      320
+    ],
+    "deviceCases": [
+      "desktop1600",
+      "phone390",
+      "phone320",
+      "desktop320"
+    ],
+    "pageErrorCount": 0,
+    "sessionBootstrapRequests": 9,
+    "blockedRequests": [],
+    "externalGetPaths": [
+      "https://connect.facebook.net/en_US/sdk.js",
+      "https://connect.facebook.net/en_US/bundle/sdk.js/",
+      "https://connect.facebook.net/app_config/json/1427034652248456/",
+      "https://connect.facebook.net/en_US/sdk.js",
+      "https://connect.facebook.net/en_US/bundle/sdk.js/",
+      "https://connect.facebook.net/en_US/sdk.js",
+      "https://connect.facebook.net/en_US/bundle/sdk.js/",
+      "https://connect.facebook.net/app_config/json/1427034652248456/",
+      "https://connect.facebook.net/en_US/sdk.js",
+      "https://connect.facebook.net/en_US/bundle/sdk.js/",
+      "https://connect.facebook.net/en_US/sdk.js",
+      "https://connect.facebook.net/en_US/bundle/sdk.js/",
+      "https://connect.facebook.net/app_config/json/1427034652248456/",
+      "https://connect.facebook.net/en_US/sdk.js",
+      "https://connect.facebook.net/en_US/bundle/sdk.js/",
+      "https://connect.facebook.net/en_US/sdk.js",
+      "https://connect.facebook.net/en_US/bundle/sdk.js/",
+      "https://connect.facebook.net/app_config/json/1427034652248456/",
+      "https://connect.facebook.net/en_US/sdk.js",
+      "https://connect.facebook.net/en_US/bundle/sdk.js/",
+      "https://connect.facebook.net/en_US/sdk.js",
+      "https://connect.facebook.net/en_US/bundle/sdk.js/",
+      "https://connect.facebook.net/app_config/json/1427034652248456/"
+    ],
+    "mobileStoreHandoffs": [
+      {
+        "from": "https://cedar-demo.soyrocoto.com/download/whatsapp-business",
+        "status": 302,
+        "to": "https://apps.apple.com/app/whatsapp-business/id1386412985"
+      },
+      {
+        "from": "https://cedar-demo.soyrocoto.com/download/whatsapp-business",
+        "status": 302,
+        "to": "https://apps.apple.com/app/whatsapp-business/id1386412985"
+      },
+      {
+        "from": "https://cedar-demo.soyrocoto.com/download/whatsapp-business",
+        "status": 302,
+        "to": "https://apps.apple.com/app/whatsapp-business/id1386412985"
+      },
+      {
+        "from": "https://cedar-demo.soyrocoto.com/download/whatsapp-business",
+        "status": 302,
+        "to": "https://apps.apple.com/app/whatsapp-business/id1386412985"
+      },
+      {
+        "from": "https://cedar-demo.soyrocoto.com/download/whatsapp-business",
+        "status": 302,
+        "to": "https://apps.apple.com/app/whatsapp-business/id1386412985"
+      }
+    ],
+    "accountProof": "pending customer Meta authorization",
+    "storageKeyNames": {
+      "localStorageKeys": [
+        "fbapc_1427034652248456"
+      ],
+      "sessionStorageKeys": []
+    },
+    "storageValuesInspected": false,
+    "cedarBrowserStorageAbsent": true,
+    "decodedQrUrl": "https://cedar-demo.soyrocoto.com/download/whatsapp-business",
+    "asset": {
+      "path": "/assets/index-B4zpnloj.js",
+      "sha256": "43e8f1d73c0edd2ab43d5571900e145dda6522a9086bee13a7cb70e3837be41a",
+      "matchesLocalBuild": true
+    },
+    "unboundStateBlank": true,
+    "unboundPrivateEndpoints": 401,
+    "anonymousState": 401,
+    "anonymousConversations": 401,
+    "anonymousHistory": 401,
+    "appleNativeStoreHandoff": {
+      "status": 301,
+      "location": "itms-appss://apps.apple.com/app/whatsapp-business/id1386412985",
+      "physicalDeviceInstallationVerified": false
+    },
+    "cookie": {
+      "name": "__Host-cedar_session",
+      "domain": "cedar-demo.soyrocoto.com",
+      "path": "/",
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Strict"
+    },
+    "actualSdkLoaded": true,
+    "checks": [
+      "HTTPS200 and asset digest matches local build",
+      "Connection, download and transfer steps in page/dialog at1600/390/320; no horizontal overflow",
+      "Actual Meta SDK loads and customer CTA enables; Meta owns history consent; Cedar checkbox absent",
+      "Separate download/transfer actions, optional app stores, decoded QR, phone UA navigation, narrow desktop QR and device redirects verified",
+      "Unbound state blank; anonymous and unbound chat APIs401",
+      "Secure host-only HttpOnly SameSiteStrict cookie; only independently attributed Meta SDK cache key",
+      "All non-bootstrap browser POSTs blocked; zero page errors"
+    ],
+    "screenshotsCaptured": 34,
+    "screenshotDigests": {
+      "setup-1600.png": "6f11b77a1d4ab8d9bf05ed309f52a3b6150e208d6a5f2780b400ac02a2a7294f",
+      "setup-1600-download.png": "4fb23813e5d134bff53bb857b4c9c23a46d77b666754b9a3400b5273c940c2da",
+      "setup-1600-app-stores.png": "09e36ac6b24513fba76465957ebe72549ef58cd077949829d69af4901efe06b5",
+      "setup-1600-transfer.png": "a190a3e436e489088fd62d624730f58ede3869772b34c55212763872d8d3b38c",
+      "dialog-1600.png": "823f7209f493758550b9b45daa385600619a0a37d5245f4a2e53388a9b10642f",
+      "dialog-1600-download.png": "1ecebacab2a0ea5512821db0b9ab7d8d2ad7e0c195bcf2a0fb2088f5e4853cb6",
+      "dialog-1600-app-stores.png": "31a4f86e952925a8dbd17716271552f8b6f6996d9be4cb33e323f6d2915cc429",
+      "dialog-1600-transfer.png": "13bf2bf573eeb8ce1ac05cf653b5467ebd08ff8dd7fa1ccf27b4842b7b2da1ce",
+      "setup-390.png": "de4e08d768e330387c8b790985e9c64f443437423dd473c9dc9cff6a53238a14",
+      "setup-390-download.png": "dd0989237dff296de68ef94fd64cdfe4910bf4cd76f4c0d9f7f3f7af55586d8d",
+      "setup-390-app-stores.png": "d15ee3a982bb1731438c6d76906a91e82401cd3409cef52680bd48eab11076b5",
+      "setup-390-transfer.png": "cac1afccfe72db513929ef282a883d5f136593123eedc29d3eb18b4deeeb73ff",
+      "dialog-390.png": "0d02a5dbff7d9f9927bf258a622de27e3824ea39ef49a784ccc7ab20f9d96e98",
+      "dialog-390-download.png": "7a75b9aa8cdc8a5fedc6b05e87256e6dcc1147e626ad8660278a641475ae5e4e",
+      "dialog-390-app-stores.png": "13e536d371ebca140c1d66c32888bfed23b85badf13c938eaf785071e7266672",
+      "dialog-390-transfer.png": "c9dafd76222d385c970fbc9466bfbefc6a7ab39589055b3344108a84a57906f7",
+      "setup-320.png": "f730628ae20b244902f30eb26c9501576a63851edf6b1b5e9310d74448754d32",
+      "setup-320-download.png": "385b29621eef93f3203be78934b3244f1f0a407995ac3ef0c1c87856d0c55e71",
+      "setup-320-app-stores.png": "6eec49a0b197e055b8fb92723cbad99e717cc4c021254dd2b8aacd3242a190d0",
+      "setup-320-transfer.png": "985734dc6e9bb161256ac61f97a1bb1f01e76055a65e953dd0ed97cbe358e667",
+      "dialog-320.png": "86c84ef1e9be73392db3639f04e2b62d65d64014c44ff91e4c53bde5b60ad086",
+      "dialog-320-download.png": "59dfb9c626ce535967be5a8a1aafbc1da5f2ef66520f1f2fe17f7c1f488ec829",
+      "dialog-320-app-stores.png": "daea009f98167cd31d7df795a7d2184f9f10ffb6070716dc132f275a3b25f804",
+      "dialog-320-transfer.png": "723e40a3f35227244976fdefdfd73aa4812a2dfe1d219b6082401e214a57acf9",
+      "setup-320-desktop.png": "f730628ae20b244902f30eb26c9501576a63851edf6b1b5e9310d74448754d32",
+      "setup-320-desktop-download.png": "62ce120b79c6c2cbc58b9225cfa8b34ab9188819a92ef0583f27ba15bd63ed96",
+      "setup-320-desktop-app-stores.png": "a8f19766304cefe5fbf58b4d7eabf6636a63db509ea1c1e20156890213a79391",
+      "setup-320-desktop-transfer.png": "af642d0cab08ea142b7b176fc562b97a85345adb3b19cb34ef292b47f4ccfdcc",
+      "dialog-320-desktop.png": "945f3c14ae3caf558ff28179b58727ae6b0b440da978cc58b25a3a02545d3b1e",
+      "dialog-320-desktop-download.png": "bd0f5e51bfb5690283adc368dedc3b975581b9c2d1153dabaca3d66722d68b0f",
+      "dialog-320-desktop-app-stores.png": "ea05f34a3f34c24ba2d736f9f6be3713afeed7896fcb14eff76e9accd319540e",
+      "dialog-320-desktop-transfer.png": "17fed9d39c3b506c75b408d4a9e94ecfa3900963320741eefccf59dfe2dba4f7",
+      "scanned-phone-download-390.png": "bf5201ff4392269c36233b86f342006397576ea61bae00b56fa427cbf543051e",
+      "scanned-phone-transfer-390.png": "cac1afccfe72db513929ef282a883d5f136593123eedc29d3eb18b4deeeb73ff"
+    }
+  },
+  "actualMetaSdkEvidence": {
+    "sourceRevision": "703500b1c9f1c5c52dbca84b41a93818e9d48fef",
+    "checkedAt": "2026-09-09T18:20:09.211722+00:00",
+    "scope": "Real customer bootstrap, actual Meta SDK and login popup before credentials or consent",
+    "accountProof": "pending customer Meta authorization",
+    "sessionBootstrapRequests": 1,
+    "blockedRequests": [
+      {
+        "method": "POST",
+        "url": "https://www.facebook.com/ajax/qm/"
+      },
+      {
+        "method": "GET",
+        "url": "https://www.instagram.com/accounts/xuserid/"
+      },
+      {
+        "method": "POST",
+        "url": "https://www.facebook.com/ajax/bz"
+      }
+    ],
+    "pageErrorCount": 0,
+    "actualSdkLoaded": true,
+    "unboundStateBlank": true,
+    "storageKeyNames": {
+      "localStorageKeys": [
+        "fbapc_1427034652248456"
+      ],
+      "sessionStorageKeys": []
+    },
+    "storageValuesInspected": false,
+    "cedarBrowserStorageAbsent": true,
+    "popupUrl": "https://www.facebook.com/login.php",
+    "popupHost": "www.facebook.com",
+    "visibleRecognizedMessages": [
+      "log into facebook",
+      "password",
+      "cookies"
+    ],
+    "loginFieldsPresent": true,
+    "stoppedBeforeFacebookLogin": true,
+    "stoppedBeforeNumberSelectionAndConsent": true,
+    "sessionCookieFlagsVerified": true,
+    "stoppedBeforeAuthorizationCode": true,
+    "screenshotSha256": "a0e2e50321cbd26cec70b9fba8bfec6978f212ad4fe7df44f8a20ef178a454f1"
+  },
+  "metaSdkStorageEvidence": {
+    "checkedAt": "2026-09-09T17:30:13.614790+00:00",
+    "origin": "https://cedar-demo.soyrocoto.com",
+    "method": "Fresh empty document supplied in browser; only actual Meta SDK loaded and initialized. Cedar application JavaScript absent. Values never read.",
+    "before": {
+      "localStorageKeys": [],
+      "sessionStorageKeys": []
+    },
+    "after": {
+      "localStorageKeys": [
+        "fbapc_1427034652248456"
+      ],
+      "sessionStorageKeys": []
+    },
+    "sdk": "https://connect.facebook.net/en_US/sdk.js",
+    "appId": "1427034652248456"
+  },
+  "syntheticBrowser": {
+    "providerPosture": "synthetic intercepted API and SDK; no provider calls",
+    "screenshots": [
+      "1600-session-retry",
+      "1600-desktop-customer-setup",
+      "1600-desktop-download",
+      "1600-desktop-transfer",
+      "390-phone-customer-setup",
+      "390-phone-download",
+      "390-phone-transfer",
+      "320-phone-customer-setup",
+      "320-phone-download",
+      "320-phone-transfer",
+      "390-phone-dialog-customer-setup",
+      "390-phone-dialog-download",
+      "390-phone-dialog-transfer",
+      "320-desktop-customer-setup",
+      "320-desktop-download",
+      "320-desktop-transfer",
+      "1024-ipad-customer-setup",
+      "1024-ipad-download",
+      "1024-ipad-transfer",
+      "390-unknown-device-fallback",
+      "390-cookie-retry",
+      "1600-blocked-setup",
+      "390-blocked-setup",
+      "320-blocked-setup",
+      "1600-ready-setup",
+      "390-ready-setup",
+      "320-ready-setup",
+      "320-regular-guidance",
+      "1600-dialog",
+      "390-dialog",
+      "320-dialog",
+      "320-verified-account-interrupted",
+      "320-conversation-list",
+      "320-chat-latest",
+      "320-chat-updated",
+      "1600-chat-updated",
+      "390-chat-updated",
+      "390-same-second-update",
+      "390-expired-account-cleared"
+    ],
+    "decodedTransferQr": "https://cedar-demo.soyrocoto.com/download/whatsapp-business",
+    "interceptedDownloadTargets": [
+      "https://cedar-demo.soyrocoto.com/download/whatsapp-business",
+      "https://cedar-demo.soyrocoto.com/download/whatsapp-business",
+      "https://cedar-demo.soyrocoto.com/download/whatsapp-business",
+      "https://cedar-demo.soyrocoto.com/download/whatsapp-business",
+      "https://apps.apple.com/app/whatsapp-business/id1386412985",
+      "https://play.google.com/store/apps/details?id=com.whatsapp.w4b"
+    ],
+    "checks": [
+      "browser session failure/retry before state and SDK",
+      "every entry including preview opens actual customer setup without an access code",
+      "Meta popup requires a synchronous user click",
+      "cookie rejection bounded renewal and explicit retry",
+      "verified account state recovered after provider setup error",
+      "long connection pauses polling and discards an older in-flight 401 during cookie rotation",
+      "verified browser account survives reload",
+      "expired account clears visible history before bootstrap retry",
+      "blocked/ready setup",
+      "separate download and phone-transfer steps with one primary action",
+      "Meta owns history consent; connection request enables eligible history",
+      "step heading focus and secondary back navigation",
+      "rendered desktop QR decodes to device download route, including narrow desktop",
+      "phone and desktop-mode iPad smart-download opens a new tab and advances",
+      "unknown-device fallback offers QR and correct Business store choices without a redirect loop",
+      "1600/390/320 widths",
+      "dialog close/reopen",
+      "cursor pagination",
+      "open-chat refresh",
+      "older-page retention",
+      "media enrichment",
+      "pagination failure/retry",
+      "same-second opaque cursor/media reconciliation",
+      "44px phone buttons",
+      "empty browser storage",
+      "zero external requests",
+      "zero page errors"
+    ]
+  },
+  "sourceValidation": {
+    "makeGates": "passed",
+    "fullMakeTest": "passed",
+    "maintainedBackendTests": 297,
+    "prototypeRuntimeTests": 258,
+    "cedarBackendTests": 82,
+    "repositoryUnitTests": 101,
+    "javascriptTestFiles": 8,
+    "existingSkippedTests": 5,
+    "isolatedBuild": "passed for final committed source",
+    "independentReview": "No remaining consequential UI blocker; source frozen before exact-build browser drive.",
+    "sequentialFlowRegression": "Duplicate checkbox expected0 observed1 before rebuild; final build passes all39 synthetic scenes.",
+    "visualInspection": "Final live desktop1600 connect, phone390 download and transfer screenshots inspected; synthetic desktop/mobile screens reviewed."
+  },
+  "liveTestCorrection": {
+    "initialFailure": "Mobile smoke expected a popup document after the download click.",
+    "observedCause": "Actual Cedar302 redirects to Apple. Apple returns301 to itms-appss:// for the iPhone user agent; headless Chromium lacks a native App Store and aborts document navigation.",
+    "correction": "Assert the actual click-triggered302 and requested Apple destination, plus the independently observed Apple301 native-store location. Preserve synthetic new-tab navigation checks separately.",
+    "productCodeChanged": false,
+    "physicalPhoneInstallationVerified": false
+  },
+  "ci": {
+    "sourceCommit": "703500b1c9f1c5c52dbca84b41a93818e9d48fef",
+    "run": "https://github.com/Rocoto-Labs/rocoto/actions/runs/34388244243",
+    "gates": "passed",
+    "deps": "passed",
+    "vitals": "queued at receipt creation",
+    "requiredGatesPreserved": true,
+    "companyZeroOverageCapPreserved": true
+  },
+  "acceptance": {
+    "realAccountAuthorizationCompleted": false,
+    "realNumberConnected": false,
+    "realHistoryImported": false,
+    "newRealIncomingMessagesVerified": false,
+    "realHistoryPersistenceVerified": false,
+    "remaining": "A customer completes Meta signup and history consent in the browser; verify exact account routing, eligible imported history, incoming messages and persistence. Peter offered one real Business account for this first run."
+  }
+}

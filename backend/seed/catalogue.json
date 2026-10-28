@@ -1,0 +1,1315 @@
+{
+  "_comment": "CATÁLOGO MAYORISTA es-ES — la lista de una charcutería/cárnicas de Mercamadrid (empresa INVENTADA: Cárnicas Aldonza; jamás un nombre real). Escrito como se imprime en el albarán: MAYÚSCULAS, sin preposiciones, con el CALIBRE / FORMATO / ENVASE dentro del propio nombre, porque en este oficio la duda no suele ser QUÉ producto sino QUÉ calibre (PRODUCT-SPEC §5.7). base_unit: kg | unit | case. pack_factor = unidades por caja en lo que se vende por unidad. variable_weight = se cobra por kilo y el peso exacto se cierra al expedir (piezas enteras). in_assortment=false = fila cargada pero hoy no vendible. Las claves _dimension_pairs / _near_duplicates / _learnable_mentions / _gaps son DOCUMENTACIÓN + banco de pruebas (tests/vital_seedworld.py); el cargador (brain.seed.load_catalogue) sólo lee `skus`.",
+  "_dimension_pairs": {
+    "_note": "Mismo producto, distinta DIMENSIÓN (calibre / formato / envase). Estas parejas tienen que clasificarse DIMENSIONLESS en doubt._same_product — que compara las dos primeras palabras SIN dígitos del nombre. Se verifica ejecutando la función real en tests/vital_seedworld.py (S2), nunca una copia de su lógica.",
+    "pairs": [
+      [
+        "sku-chorizo-sarta-500",
+        "sku-chorizo-sarta-1k"
+      ],
+      [
+        "sku-chorizo-cular-pieza",
+        "sku-chorizo-cular-lon"
+      ],
+      [
+        "sku-salchichon-vela-40",
+        "sku-salchichon-vela-55"
+      ],
+      [
+        "sku-fuet-170",
+        "sku-fuet-500"
+      ],
+      [
+        "sku-lomo-embuchado-cana",
+        "sku-lomo-embuchado-lon"
+      ],
+      [
+        "sku-jamon-cocido-pieza",
+        "sku-jamon-cocido-lon"
+      ],
+      [
+        "sku-paleta-cocida-pieza",
+        "sku-paleta-cocida-lon"
+      ],
+      [
+        "sku-pechuga-pavo-pieza",
+        "sku-pechuga-pavo-lon"
+      ],
+      [
+        "sku-bacon-plancha",
+        "sku-bacon-lon"
+      ],
+      [
+        "sku-panceta-adobada-pieza",
+        "sku-panceta-adobada-lon"
+      ],
+      [
+        "sku-jamon-serrano-pieza",
+        "sku-jamon-serrano-lon"
+      ],
+      [
+        "sku-pollo-entero-12",
+        "sku-pollo-entero-18"
+      ],
+      [
+        "sku-manchego-pieza",
+        "sku-manchego-cuna"
+      ],
+      [
+        "sku-salchicha-fina",
+        "sku-salchicha-gruesa"
+      ]
+    ]
+  },
+  "_near_duplicates": {
+    "_note": "Productos DISTINTOS que suenan igual al pedirlos: la duda es AMBIGUOUS (dos candidatos reales), nunca DIMENSIONLESS (la misma cosa en otro formato). `two_candidate` dice si lo que dice el cliente se reduce a EXACTAMENTE dos filas: eso es la elección múltiple de verdad (§5.7a, tope de 3 botones = 2 candidatos + «Ninguno, te digo»). Los que valen `false` empatan a MÁS de dos filas y por eso, según la misma ley, NO son ambiguos sino UNKNOWN: van al comercial, no al cliente. Están aquí porque el par de productos es real y hay que verlo, no porque se pregunten.",
+    "pairs": [
+      {
+        "a": "sku-morcilla-burgos",
+        "b": "sku-morcilla-cebolla",
+        "say": "morcilla",
+        "two_candidate": true
+      },
+      {
+        "a": "sku-chorizo-picante-vela",
+        "b": "sku-chorizo-dulce-vela",
+        "say": "chorizo de vela",
+        "two_candidate": true
+      },
+      {
+        "a": "sku-mortadela-bolona",
+        "b": "sku-mortadela-aceituna",
+        "say": "mortadela",
+        "two_candidate": true
+      },
+      {
+        "a": "sku-oreja-fresca",
+        "b": "sku-oreja-cocida",
+        "say": "oreja",
+        "two_candidate": true
+      },
+      {
+        "a": "sku-lomo-embuchado-cana",
+        "b": "sku-lomo-adobado",
+        "say": "lomo",
+        "two_candidate": false
+      },
+      {
+        "a": "sku-chorizo-fresco",
+        "b": "sku-chorizo-criollo",
+        "say": "chorizo para asar",
+        "two_candidate": false
+      }
+    ]
+  },
+  "_learnable_mentions": {
+    "_note": "Lo que dicen los clientes y que el catálogo NO trae como alias A PROPÓSITO: es el cliente quien lo enseña (§5.7). Precargarlos como sku_aliases mataría el bucle — la pregunta no llegaría a hacerse nunca. brain/seed.py siembra UNA de estas ya resuelta (para que se vea el bucle cerrarse) y UNA todavía abierta.",
+    "mentions": [
+      {
+        "say": "el jamoncito",
+        "true_sku": "sku-jamon-cocido-pieza",
+        "against": "sku-jamon-serrano-pieza",
+        "kind": "ambiguous"
+      },
+      {
+        "say": "jamón york",
+        "true_sku": "sku-paleta-cocida-pieza",
+        "against": "sku-jamon-cocido-pieza",
+        "kind": "ambiguous"
+      },
+      {
+        "say": "las de siempre",
+        "true_sku": "sku-morcilla-burgos",
+        "against": "sku-morcilla-cebolla",
+        "kind": "ambiguous"
+      },
+      {
+        "say": "la de cabeza",
+        "true_sku": "sku-queso-cabeza",
+        "against": "sku-mortadela-bolona",
+        "kind": "thin"
+      }
+    ]
+  },
+  "_gaps": {
+    "_note": "Huecos DELIBERADOS: cosas que un bar de Madrid pide y que esta casa no lleva. Tienen que dar CERO candidatos → UNKNOWN → al comercial, nunca una pregunta al cliente (tres opciones equivocadas son peor que el silencio).",
+    "mentions": [
+      "anchoas del cantábrico",
+      "langostinos cocidos",
+      "huevos camperos",
+      "pan de cristal",
+      "aceite de oliva 5 litros"
+    ]
+  },
+  "tenant_id": "sancho",
+  "skus": [
+    {
+      "id": "sku-chorizo-sarta-500",
+      "code": "EMB-CHS-050",
+      "name": "CHORIZO SARTA EXTRA 500 G",
+      "family": "embutido_curado",
+      "base_unit": "unit",
+      "pack_factor": 10,
+      "variable_weight": false,
+      "price": 4.2,
+      "in_assortment": true,
+      "image": "/img/pp_chorizo.jpg",
+      "aliases": [
+        "chorizo sarta",
+        "sarta de chorizo",
+        "chorizo de sarta",
+        "chorizo en sarta"
+      ]
+    },
+    {
+      "id": "sku-chorizo-sarta-1k",
+      "code": "EMB-CHS-100",
+      "name": "CHORIZO SARTA EXTRA 1 KG",
+      "family": "embutido_curado",
+      "base_unit": "unit",
+      "pack_factor": 8,
+      "variable_weight": false,
+      "price": 7.9,
+      "in_assortment": true,
+      "image": "/img/pp_chorizo.jpg",
+      "aliases": [
+        "sarta de kilo",
+        "chorizo sarta kilo",
+        "sarta grande"
+      ]
+    },
+    {
+      "id": "sku-chorizo-cular-pieza",
+      "code": "EMB-CHC-PZA",
+      "name": "CHORIZO CULAR EXTRA PIEZA",
+      "family": "embutido_curado",
+      "base_unit": "kg",
+      "pack_factor": 1,
+      "variable_weight": true,
+      "price": 13.9,
+      "in_assortment": true,
+      "image": "/img/p_chorizo.jpg",
+      "aliases": [
+        "chorizo cular",
+        "cular",
+        "chorizo de cular",
+        "chorizo pieza"
+      ]
+    },
+    {
+      "id": "sku-chorizo-cular-lon",
+      "code": "EMB-CHC-L10",
+      "name": "CHORIZO CULAR EXTRA LONCHEADO 100 G",
+      "family": "embutido_curado",
+      "base_unit": "unit",
+      "pack_factor": 20,
+      "variable_weight": false,
+      "price": 2.35,
+      "in_assortment": true,
+      "image": "/img/p_chorizo.jpg",
+      "aliases": [
+        "chorizo loncheado",
+        "cular loncheado",
+        "chorizo en lonchas",
+        "sobre de chorizo"
+      ]
+    },
+    {
+      "id": "sku-chorizo-picante-vela",
+      "code": "EMB-CHP-045",
+      "name": "CHORIZO PICANTE VELA 45 MM",
+      "family": "embutido_curado",
+      "base_unit": "kg",
+      "pack_factor": 1,
+      "variable_weight": false,
+      "price": 11.4,
+      "in_assortment": true,
+      "image": "/img/pp_chorizo.jpg",
+      "aliases": [
+        "chorizo picante",
+        "vela picante",
+        "chorizo vela picante",
+        "picante de vela"
+      ]
+    },
+    {
+      "id": "sku-chorizo-dulce-vela",
+      "code": "EMB-CHD-045",
+      "name": "CHORIZO DULCE VELA 45 MM",
+      "family": "embutido_curado",
+      "base_unit": "kg",
+      "pack_factor": 1,
+      "variable_weight": false,
+      "price": 11.1,
+      "in_assortment": true,
+      "image": "/img/pp_chorizo.jpg",
+      "aliases": [
+        "chorizo dulce",
+        "vela dulce",
+        "chorizo vela dulce",
+        "dulce de vela"
+      ]
+    },
+    {
+      "id": "sku-salchichon-vela-40",
+      "code": "EMB-SAV-040",
+      "name": "SALCHICHÓN VELA 40 MM",
+      "family": "embutido_curado",
+      "base_unit": "kg",
+      "pack_factor": 1,
+      "variable_weight": false,
+      "price": 10.6,
+      "in_assortment": true,
+      "image": "/img/p_salchichon.jpg",
+      "aliases": [
+        "salchichón vela",
+        "vela de salchichón",
+        "salchichón del 40",
+        "salchichón fino"
+      ]
+    },
+    {
+      "id": "sku-salchichon-vela-55",
+      "code": "EMB-SAV-055",
+      "name": "SALCHICHÓN VELA 55 MM",
+      "family": "embutido_curado",
+      "base_unit": "kg",
+      "pack_factor": 1,
+      "variable_weight": false,
+      "price": 10.9,
+      "in_assortment": true,
+      "image": "/img/p_salchichon.jpg",
+      "aliases": [
+        "salchichón del 55",
+        "vela gorda",
+        "salchichón grueso"
+      ]
+    },
+    {
+      "id": "sku-salchichon-cular",
+      "code": "EMB-SAC-PZA",
+      "name": "SALCHICHÓN CULAR EXTRA PIEZA",
+      "family": "embutido_curado",
+      "base_unit": "kg",
+      "pack_factor": 1,
+      "variable_weight": true,
+      "price": 14.5,
+      "in_assortment": true,
+      "image": "/img/pp_salchichon.jpg",
+      "aliases": [
+        "salchichón cular",
+        "cular de salchichón",
+        "salchichón pieza"
+      ]
+    },
+    {
+      "id": "sku-fuet-170",
+      "code": "EMB-FUE-017",
+      "name": "FUET EXTRA 170 G",
+      "family": "embutido_curado",
+      "base_unit": "unit",
+      "pack_factor": 12,
+      "variable_weight": false,
+      "price": 1.95,
+      "in_assortment": true,
+      "image": "/img/pp_fuet.jpg",
+      "aliases": [
+        "fuet",
+        "fuets",
+        "fuet pequeño",
+        "fuet de 170"
+      ]
+    },
+    {
+      "id": "sku-fuet-500",
+      "code": "EMB-FUE-050",
+      "name": "FUET EXTRA 500 G",
+      "family": "embutido_curado",
+      "base_unit": "unit",
+      "pack_factor": 10,
+      "variable_weight": false,
+      "price": 4.9,
+      "in_assortment": true,
+      "image": "/img/pp_fuet.jpg",
+      "aliases": [
+        "fuet grande",
+        "fuet de medio kilo",
+        "fuet de 500"
+      ]
+    },
+    {
+      "id": "sku-lomo-embuchado-cana",
+      "code": "EMB-LOE-090",
+      "name": "LOMO EMBUCHADO CAÑA 900 G",
+      "family": "embutido_curado",
+      "base_unit": "unit",
+      "pack_factor": 6,
+      "variable_weight": false,
+      "price": 19.8,
+      "in_assortment": true,
+      "image": "/img/pp_loin.jpg",
+      "aliases": [
+        "lomo embuchado",
+        "caña de lomo",
+        "lomo embuchado entero",
+        "embuchado"
+      ]
+    },
+    {
+      "id": "sku-lomo-embuchado-lon",
+      "code": "EMB-LOE-L10",
+      "name": "LOMO EMBUCHADO LONCHEADO 100 G",
+      "family": "embutido_curado",
+      "base_unit": "unit",
+      "pack_factor": 20,
+      "variable_weight": false,
+      "price": 3.4,
+      "in_assortment": true,
+      "image": "/img/pp_loin.jpg",
+      "aliases": [
+        "lomo loncheado",
+        "sobre de lomo",
+        "lomo en lonchas"
+      ]
+    },
+    {
+      "id": "sku-morcon",
+      "code": "EMB-MOR-PZA",
+      "name": "MORCÓN EXTRA PIEZA",
+      "family": "embutido_curado",
+      "base_unit": "kg",
+      "pack_factor": 1,
+      "variable_weight": true,
+      "price": 15.2,
+      "in_assortment": true,
+      "image": "/img/pp_chorizo.jpg",
+      "aliases": [
+        "morcón",
+        "morcón extremeño",
+        "morcón de pieza"
+      ]
+    },
+    {
+      "id": "sku-sobrasada",
+      "code": "EMB-SOB-050",
+      "name": "SOBRASADA MALLORCA HERRADURA 500 G",
+      "family": "embutido_curado",
+      "base_unit": "unit",
+      "pack_factor": 10,
+      "variable_weight": false,
+      "price": 5.6,
+      "in_assortment": true,
+      "image": "/img/pp_sobrasada.jpg",
+      "aliases": [
+        "sobrasada",
+        "sobrasada mallorquina",
+        "herradura de sobrasada"
+      ]
+    },
+    {
+      "id": "sku-salchichon-iberico",
+      "code": "IBE-SAI-PZA",
+      "name": "SALCHICHÓN IBÉRICO BELLOTA PIEZA",
+      "family": "iberico",
+      "base_unit": "kg",
+      "pack_factor": 1,
+      "variable_weight": true,
+      "price": 26.5,
+      "in_assortment": true,
+      "image": "/img/p_seleccion.jpg",
+      "aliases": [
+        "salchichón ibérico",
+        "salchichón de bellota",
+        "ibérico de salchichón"
+      ]
+    },
+    {
+      "id": "sku-chorizo-iberico",
+      "code": "IBE-CHI-PZA",
+      "name": "CHORIZO IBÉRICO BELLOTA PIEZA",
+      "family": "iberico",
+      "base_unit": "kg",
+      "pack_factor": 1,
+      "variable_weight": true,
+      "price": 25.8,
+      "in_assortment": true,
+      "image": "/img/p_seleccion.jpg",
+      "aliases": [
+        "chorizo ibérico",
+        "chorizo de bellota",
+        "ibérico de chorizo"
+      ]
+    },
+    {
+      "id": "sku-jamon-serrano-pieza",
+      "code": "IBE-JAS-PZA",
+      "name": "JAMÓN SERRANO RESERVA PIEZA",
+      "family": "iberico",
+      "base_unit": "kg",
+      "pack_factor": 1,
+      "variable_weight": true,
+      "price": 9.8,
+      "in_assortment": true,
+      "image": "/img/p_jamon.jpg",
+      "aliases": [
+        "jamón serrano",
+        "serrano",
+        "jamón de reserva",
+        "pieza de serrano"
+      ]
+    },
+    {
+      "id": "sku-jamon-serrano-lon",
+      "code": "IBE-JAS-L10",
+      "name": "JAMÓN SERRANO RESERVA LONCHEADO 100 G",
+      "family": "iberico",
+      "base_unit": "unit",
+      "pack_factor": 20,
+      "variable_weight": false,
+      "price": 2.6,
+      "in_assortment": true,
+      "image": "/img/p_jamon.jpg",
+      "aliases": [
+        "serrano loncheado",
+        "sobre de serrano",
+        "jamón serrano en lonchas"
+      ]
+    },
+    {
+      "id": "sku-jamon-iberico-pieza",
+      "code": "IBE-JAI-PZA",
+      "name": "JAMÓN IBÉRICO CEBO PIEZA",
+      "family": "iberico",
+      "base_unit": "kg",
+      "pack_factor": 1,
+      "variable_weight": true,
+      "price": 24.0,
+      "in_assortment": true,
+      "image": "/img/p_jamon.jpg",
+      "aliases": [
+        "jamón ibérico",
+        "ibérico de cebo",
+        "pata ibérica"
+      ]
+    },
+    {
+      "id": "sku-paleta-iberica-pieza",
+      "code": "IBE-PAI-PZA",
+      "name": "PALETA IBÉRICA CEBO PIEZA",
+      "family": "iberico",
+      "base_unit": "kg",
+      "pack_factor": 1,
+      "variable_weight": true,
+      "price": 16.4,
+      "in_assortment": true,
+      "image": "/img/p_jamon.jpg",
+      "aliases": [
+        "paleta ibérica",
+        "paletilla ibérica",
+        "paletilla"
+      ]
+    },
+    {
+      "id": "sku-lomo-iberico",
+      "code": "IBE-LOI-PZA",
+      "name": "LOMO IBÉRICO BELLOTA PIEZA",
+      "family": "iberico",
+      "base_unit": "kg",
+      "pack_factor": 1,
+      "variable_weight": true,
+      "price": 38.0,
+      "in_assortment": true,
+      "image": "/img/p_seleccion.jpg",
+      "aliases": [
+        "lomo ibérico",
+        "lomo de bellota",
+        "caña ibérica"
+      ]
+    },
+    {
+      "id": "sku-secreto-iberico",
+      "code": "IBE-SEC-FRE",
+      "name": "SECRETO IBÉRICO",
+      "family": "iberico",
+      "base_unit": "kg",
+      "pack_factor": 1,
+      "variable_weight": false,
+      "price": 12.5,
+      "in_assortment": true,
+      "image": "/img/carne.jpg",
+      "aliases": [
+        "secreto",
+        "secreto ibérico",
+        "secreto de cerdo"
+      ]
+    },
+    {
+      "id": "sku-presa-iberica",
+      "code": "IBE-PRE-FRE",
+      "name": "PRESA IBÉRICA",
+      "family": "iberico",
+      "base_unit": "kg",
+      "pack_factor": 1,
+      "variable_weight": false,
+      "price": 14.0,
+      "in_assortment": true,
+      "image": "/img/carne.jpg",
+      "aliases": [
+        "presa",
+        "presa ibérica",
+        "presa de paleta"
+      ]
+    },
+    {
+      "id": "sku-pluma-iberica",
+      "code": "IBE-PLU-FRE",
+      "name": "PLUMA IBÉRICA",
+      "family": "iberico",
+      "base_unit": "kg",
+      "pack_factor": 1,
+      "variable_weight": false,
+      "price": 13.2,
+      "in_assortment": false,
+      "image": "/img/carne.jpg",
+      "aliases": [
+        "pluma",
+        "pluma ibérica"
+      ]
+    },
+    {
+      "id": "sku-jamon-cocido-pieza",
+      "code": "COC-JAC-PZA",
+      "name": "JAMÓN COCIDO EXTRA PIEZA",
+      "family": "cocidos",
+      "base_unit": "kg",
+      "pack_factor": 1,
+      "variable_weight": true,
+      "price": 7.2,
+      "in_assortment": true,
+      "image": "/img/cocidos.jpg",
+      "aliases": [
+        "jamón cocido",
+        "cocido extra",
+        "jamón cocido pieza",
+        "pieza de cocido"
+      ]
+    },
+    {
+      "id": "sku-jamon-cocido-lon",
+      "code": "COC-JAC-L50",
+      "name": "JAMÓN COCIDO EXTRA LONCHEADO 500 G",
+      "family": "cocidos",
+      "base_unit": "unit",
+      "pack_factor": 8,
+      "variable_weight": false,
+      "price": 4.95,
+      "in_assortment": true,
+      "image": "/img/cocidos.jpg",
+      "aliases": [
+        "cocido loncheado",
+        "jamón cocido en lonchas",
+        "bandeja de cocido"
+      ]
+    },
+    {
+      "id": "sku-paleta-cocida-pieza",
+      "code": "COC-PAC-PZA",
+      "name": "PALETA COCIDA PIEZA",
+      "family": "cocidos",
+      "base_unit": "kg",
+      "pack_factor": 1,
+      "variable_weight": true,
+      "price": 4.6,
+      "in_assortment": true,
+      "image": "/img/cocidos.jpg",
+      "aliases": [
+        "paleta cocida",
+        "paleta",
+        "fiambre de paleta"
+      ]
+    },
+    {
+      "id": "sku-paleta-cocida-lon",
+      "code": "COC-PAC-L50",
+      "name": "PALETA COCIDA LONCHEADA 500 G",
+      "family": "cocidos",
+      "base_unit": "unit",
+      "pack_factor": 8,
+      "variable_weight": false,
+      "price": 3.3,
+      "in_assortment": true,
+      "image": "/img/cocidos.jpg",
+      "aliases": [
+        "paleta loncheada",
+        "paleta en lonchas",
+        "bandeja de paleta"
+      ]
+    },
+    {
+      "id": "sku-mortadela-bolona",
+      "code": "COC-MOB-PZA",
+      "name": "MORTADELA BOLOÑA PIEZA",
+      "family": "cocidos",
+      "base_unit": "kg",
+      "pack_factor": 1,
+      "variable_weight": true,
+      "price": 3.9,
+      "in_assortment": true,
+      "image": "/img/cocidos.jpg",
+      "aliases": [
+        "mortadela boloña",
+        "boloña",
+        "mortadela lisa"
+      ]
+    },
+    {
+      "id": "sku-mortadela-aceituna",
+      "code": "COC-MOA-PZA",
+      "name": "MORTADELA ACEITUNA PIEZA",
+      "family": "cocidos",
+      "base_unit": "kg",
+      "pack_factor": 1,
+      "variable_weight": true,
+      "price": 4.1,
+      "in_assortment": true,
+      "image": "/img/cocidos.jpg",
+      "aliases": [
+        "mortadela con aceitunas",
+        "mortadela aceituna",
+        "mortadela de aceituna"
+      ]
+    },
+    {
+      "id": "sku-choped-pork",
+      "code": "COC-CHO-PZA",
+      "name": "CHÓPED PORK PIEZA",
+      "family": "cocidos",
+      "base_unit": "kg",
+      "pack_factor": 1,
+      "variable_weight": true,
+      "price": 3.4,
+      "in_assortment": false,
+      "image": "/img/cocidos.jpg",
+      "aliases": [
+        "chóped",
+        "chóped pork",
+        "chopped"
+      ]
+    },
+    {
+      "id": "sku-pechuga-pavo-pieza",
+      "code": "COC-PEP-PZA",
+      "name": "PECHUGA PAVO EXTRA PIEZA",
+      "family": "cocidos",
+      "base_unit": "kg",
+      "pack_factor": 1,
+      "variable_weight": true,
+      "price": 8.1,
+      "in_assortment": true,
+      "image": "/img/cocidos.jpg",
+      "aliases": [
+        "pechuga de pavo",
+        "pavo cocido",
+        "fiambre de pavo"
+      ]
+    },
+    {
+      "id": "sku-pechuga-pavo-lon",
+      "code": "COC-PEP-L50",
+      "name": "PECHUGA PAVO EXTRA LONCHEADA 500 G",
+      "family": "cocidos",
+      "base_unit": "unit",
+      "pack_factor": 8,
+      "variable_weight": false,
+      "price": 5.4,
+      "in_assortment": true,
+      "image": "/img/cocidos.jpg",
+      "aliases": [
+        "pavo loncheado",
+        "pechuga de pavo en lonchas",
+        "bandeja de pavo"
+      ]
+    },
+    {
+      "id": "sku-queso-cabeza",
+      "code": "COC-QCA-PZA",
+      "name": "QUESO CABEZA PIEZA",
+      "family": "cocidos",
+      "base_unit": "kg",
+      "pack_factor": 1,
+      "variable_weight": true,
+      "price": 5.8,
+      "in_assortment": true,
+      "image": "/img/cocidos.jpg",
+      "aliases": [
+        "queso de cabeza",
+        "cabeza de jabalí",
+        "queso de cabeza de cerdo"
+      ]
+    },
+    {
+      "id": "sku-bacon-plancha",
+      "code": "COC-BAC-PLA",
+      "name": "BACON AHUMADO PLANCHA",
+      "family": "cocidos",
+      "base_unit": "kg",
+      "pack_factor": 1,
+      "variable_weight": false,
+      "price": 5.1,
+      "in_assortment": true,
+      "image": "/img/pp_bacon.jpg",
+      "aliases": [
+        "bacon",
+        "beicon",
+        "bacon ahumado",
+        "plancha de bacon"
+      ]
+    },
+    {
+      "id": "sku-bacon-lon",
+      "code": "COC-BAC-L50",
+      "name": "BACON AHUMADO LONCHEADO 500 G",
+      "family": "cocidos",
+      "base_unit": "unit",
+      "pack_factor": 10,
+      "variable_weight": false,
+      "price": 3.6,
+      "in_assortment": true,
+      "image": "/img/pp_bacon.jpg",
+      "aliases": [
+        "bacon loncheado",
+        "bacon en lonchas",
+        "bandeja de bacon"
+      ]
+    },
+    {
+      "id": "sku-chorizo-fresco",
+      "code": "FRE-CHF-SAR",
+      "name": "CHORIZO FRESCO SARTA",
+      "family": "fresco",
+      "base_unit": "kg",
+      "pack_factor": 1,
+      "variable_weight": false,
+      "price": 6.4,
+      "in_assortment": true,
+      "image": "/img/pp_chorizo_fresh.jpg",
+      "aliases": [
+        "chorizo fresco",
+        "chorizo crudo",
+        "chorizo para freír",
+        "chorizo blando"
+      ]
+    },
+    {
+      "id": "sku-chorizo-criollo",
+      "code": "FRE-CHR-PAR",
+      "name": "CHORIZO CRIOLLO PARRILLA",
+      "family": "fresco",
+      "base_unit": "kg",
+      "pack_factor": 1,
+      "variable_weight": false,
+      "price": 7.1,
+      "in_assortment": true,
+      "image": "/img/pp_chorizo_fresh.jpg",
+      "aliases": [
+        "chorizo criollo",
+        "criollo",
+        "chorizo de parrilla",
+        "criollo para brasa"
+      ]
+    },
+    {
+      "id": "sku-longaniza-fresca",
+      "code": "FRE-LON-FRE",
+      "name": "LONGANIZA FRESCA",
+      "family": "fresco",
+      "base_unit": "kg",
+      "pack_factor": 1,
+      "variable_weight": false,
+      "price": 6.1,
+      "in_assortment": true,
+      "image": "/img/pp_sausage_fresh.jpg",
+      "aliases": [
+        "longaniza",
+        "longaniza fresca",
+        "longaniza para freír"
+      ]
+    },
+    {
+      "id": "sku-salchicha-fina",
+      "code": "FRE-SAL-FIN",
+      "name": "SALCHICHA FRESCA FINA",
+      "family": "fresco",
+      "base_unit": "kg",
+      "pack_factor": 1,
+      "variable_weight": false,
+      "price": 5.2,
+      "in_assortment": true,
+      "image": "/img/pp_sausage_fresh.jpg",
+      "aliases": [
+        "salchicha fina",
+        "salchicha delgada",
+        "salchichita"
+      ]
+    },
+    {
+      "id": "sku-salchicha-gruesa",
+      "code": "FRE-SAL-GRU",
+      "name": "SALCHICHA FRESCA GRUESA",
+      "family": "fresco",
+      "base_unit": "kg",
+      "pack_factor": 1,
+      "variable_weight": false,
+      "price": 5.4,
+      "in_assortment": true,
+      "image": "/img/pp_sausage_fresh.jpg",
+      "aliases": [
+        "salchicha gruesa",
+        "salchicha gorda",
+        "salchicha de calibre"
+      ]
+    },
+    {
+      "id": "sku-butifarra",
+      "code": "FRE-BUT-FRE",
+      "name": "BUTIFARRA FRESCA",
+      "family": "fresco",
+      "base_unit": "kg",
+      "pack_factor": 1,
+      "variable_weight": false,
+      "price": 6.8,
+      "in_assortment": true,
+      "image": "/img/pp_botifarra.jpg",
+      "aliases": [
+        "butifarra",
+        "butifarra catalana",
+        "butifarra blanca"
+      ]
+    },
+    {
+      "id": "sku-morcilla-burgos",
+      "code": "FRE-MOB-040",
+      "name": "MORCILLA BURGOS ARROZ 400 G",
+      "family": "fresco",
+      "base_unit": "unit",
+      "pack_factor": 12,
+      "variable_weight": false,
+      "price": 2.1,
+      "in_assortment": true,
+      "image": "/img/pp_morcilla.jpg",
+      "aliases": [
+        "morcilla de burgos",
+        "morcilla de arroz",
+        "burgos"
+      ]
+    },
+    {
+      "id": "sku-morcilla-cebolla",
+      "code": "FRE-MOC-HER",
+      "name": "MORCILLA CEBOLLA HERRADURA",
+      "family": "fresco",
+      "base_unit": "kg",
+      "pack_factor": 1,
+      "variable_weight": false,
+      "price": 5.3,
+      "in_assortment": true,
+      "image": "/img/pp_morcilla.jpg",
+      "aliases": [
+        "morcilla de cebolla",
+        "morcilla dulce",
+        "morcilla de herradura"
+      ]
+    },
+    {
+      "id": "sku-panceta-adobada-pieza",
+      "code": "FRE-PAA-PZA",
+      "name": "PANCETA ADOBADA PIEZA",
+      "family": "fresco",
+      "base_unit": "kg",
+      "pack_factor": 1,
+      "variable_weight": true,
+      "price": 5.4,
+      "in_assortment": true,
+      "image": "/img/pp_panceta.jpg",
+      "aliases": [
+        "panceta adobada",
+        "panceta",
+        "adobada de panceta"
+      ]
+    },
+    {
+      "id": "sku-panceta-adobada-lon",
+      "code": "FRE-PAA-L50",
+      "name": "PANCETA ADOBADA LONCHEADA 500 G",
+      "family": "fresco",
+      "base_unit": "unit",
+      "pack_factor": 10,
+      "variable_weight": false,
+      "price": 3.7,
+      "in_assortment": true,
+      "image": "/img/pp_panceta.jpg",
+      "aliases": [
+        "panceta loncheada",
+        "panceta en lonchas",
+        "bandeja de panceta"
+      ]
+    },
+    {
+      "id": "sku-lomo-adobado",
+      "code": "FRE-LOA-PZA",
+      "name": "LOMO ADOBADO PIEZA",
+      "family": "fresco",
+      "base_unit": "kg",
+      "pack_factor": 1,
+      "variable_weight": true,
+      "price": 7.6,
+      "in_assortment": true,
+      "image": "/img/p_lomo.jpg",
+      "aliases": [
+        "lomo adobado",
+        "lomo en adobo",
+        "adobado de lomo",
+        "cinta adobada"
+      ]
+    },
+    {
+      "id": "sku-costilla-adobada",
+      "code": "FRE-COA-C05",
+      "name": "COSTILLA ADOBADA CAJA 5 KG",
+      "family": "fresco",
+      "base_unit": "case",
+      "pack_factor": 1,
+      "variable_weight": false,
+      "price": 27.5,
+      "in_assortment": true,
+      "image": "/img/pp_ribs.jpg",
+      "aliases": [
+        "costilla adobada",
+        "costillas adobadas",
+        "caja de costilla"
+      ]
+    },
+    {
+      "id": "sku-chuleta-sajonia",
+      "code": "FRE-CHU-SAJ",
+      "name": "CHULETA SAJONIA",
+      "family": "fresco",
+      "base_unit": "kg",
+      "pack_factor": 1,
+      "variable_weight": false,
+      "price": 6.9,
+      "in_assortment": true,
+      "image": "/img/carne.jpg",
+      "aliases": [
+        "chuleta sajonia",
+        "sajonia",
+        "chuleta ahumada"
+      ]
+    },
+    {
+      "id": "sku-solomillo-cerdo",
+      "code": "FRE-SOL-CER",
+      "name": "SOLOMILLO CERDO",
+      "family": "fresco",
+      "base_unit": "kg",
+      "pack_factor": 1,
+      "variable_weight": false,
+      "price": 9.4,
+      "in_assortment": true,
+      "image": "/img/carne.jpg",
+      "aliases": [
+        "solomillo",
+        "solomillo de cerdo",
+        "solomillos"
+      ]
+    },
+    {
+      "id": "sku-pollo-entero-12",
+      "code": "AVE-POE-012",
+      "name": "POLLO ENTERO 1,2 KG",
+      "family": "aves",
+      "base_unit": "unit",
+      "pack_factor": 8,
+      "variable_weight": false,
+      "price": 3.1,
+      "in_assortment": true,
+      "image": "/img/carne.jpg",
+      "aliases": [
+        "pollo entero",
+        "pollo",
+        "pollo pequeño"
+      ]
+    },
+    {
+      "id": "sku-pollo-entero-18",
+      "code": "AVE-POE-018",
+      "name": "POLLO ENTERO 1,8 KG",
+      "family": "aves",
+      "base_unit": "unit",
+      "pack_factor": 6,
+      "variable_weight": false,
+      "price": 4.45,
+      "in_assortment": true,
+      "image": "/img/carne.jpg",
+      "aliases": [
+        "pollo grande",
+        "pollo de kilo ocho"
+      ]
+    },
+    {
+      "id": "sku-pechuga-pollo",
+      "code": "AVE-PEP-FIL",
+      "name": "PECHUGA POLLO FILETEADA",
+      "family": "aves",
+      "base_unit": "kg",
+      "pack_factor": 1,
+      "variable_weight": false,
+      "price": 6.2,
+      "in_assortment": true,
+      "image": "/img/carne.jpg",
+      "aliases": [
+        "pechuga de pollo",
+        "pechuga fileteada",
+        "filetes de pollo"
+      ]
+    },
+    {
+      "id": "sku-muslo-pollo",
+      "code": "AVE-MUP-FRE",
+      "name": "MUSLO POLLO",
+      "family": "aves",
+      "base_unit": "kg",
+      "pack_factor": 1,
+      "variable_weight": false,
+      "price": 3.3,
+      "in_assortment": true,
+      "image": "/img/carne.jpg",
+      "aliases": [
+        "muslo de pollo",
+        "muslos",
+        "contramuslo"
+      ]
+    },
+    {
+      "id": "sku-alita-pollo",
+      "code": "AVE-ALP-C05",
+      "name": "ALITA POLLO CAJA 5 KG",
+      "family": "aves",
+      "base_unit": "case",
+      "pack_factor": 1,
+      "variable_weight": false,
+      "price": 14.5,
+      "in_assortment": true,
+      "image": "/img/carne.jpg",
+      "aliases": [
+        "alitas",
+        "alitas de pollo",
+        "caja de alitas"
+      ]
+    },
+    {
+      "id": "sku-oreja-fresca",
+      "code": "CAS-ORF-FRE",
+      "name": "OREJA FRESCA CERDO",
+      "family": "casqueria",
+      "base_unit": "kg",
+      "pack_factor": 1,
+      "variable_weight": false,
+      "price": 3.2,
+      "in_assortment": true,
+      "image": "/img/pp_offal.jpg",
+      "aliases": [
+        "oreja fresca",
+        "oreja cruda",
+        "orejas frescas"
+      ]
+    },
+    {
+      "id": "sku-oreja-cocida",
+      "code": "CAS-ORC-COC",
+      "name": "OREJA COCIDA CERDO",
+      "family": "casqueria",
+      "base_unit": "kg",
+      "pack_factor": 1,
+      "variable_weight": false,
+      "price": 4.6,
+      "in_assortment": true,
+      "image": "/img/pp_offal.jpg",
+      "aliases": [
+        "oreja cocida",
+        "oreja hecha",
+        "orejas cocidas"
+      ]
+    },
+    {
+      "id": "sku-morro-cerdo",
+      "code": "CAS-MOR-FRE",
+      "name": "MORRO CERDO",
+      "family": "casqueria",
+      "base_unit": "kg",
+      "pack_factor": 1,
+      "variable_weight": false,
+      "price": 3.4,
+      "in_assortment": true,
+      "image": "/img/pp_offal.jpg",
+      "aliases": [
+        "morro",
+        "morro de cerdo",
+        "morros"
+      ]
+    },
+    {
+      "id": "sku-manita-cerdo",
+      "code": "CAS-MAN-UDS",
+      "name": "MANITA CERDO",
+      "family": "casqueria",
+      "base_unit": "unit",
+      "pack_factor": 20,
+      "variable_weight": false,
+      "price": 0.85,
+      "in_assortment": true,
+      "image": "/img/pp_offal.jpg",
+      "aliases": [
+        "manitas",
+        "manita de cerdo",
+        "pies de cerdo",
+        "manos de cerdo"
+      ]
+    },
+    {
+      "id": "sku-careta-cerdo",
+      "code": "CAS-CAR-FRE",
+      "name": "CARETA CERDO",
+      "family": "casqueria",
+      "base_unit": "kg",
+      "pack_factor": 1,
+      "variable_weight": false,
+      "price": 2.9,
+      "in_assortment": true,
+      "image": "/img/pp_offal.jpg",
+      "aliases": [
+        "careta",
+        "careta de cerdo"
+      ]
+    },
+    {
+      "id": "sku-callos-ternera",
+      "code": "CAS-CAL-LIM",
+      "name": "CALLOS TERNERA LIMPIOS",
+      "family": "casqueria",
+      "base_unit": "kg",
+      "pack_factor": 1,
+      "variable_weight": false,
+      "price": 6.5,
+      "in_assortment": true,
+      "image": "/img/pp_offal.jpg",
+      "aliases": [
+        "callos",
+        "callos de ternera",
+        "callos limpios"
+      ]
+    },
+    {
+      "id": "sku-lengua-cerdo",
+      "code": "CAS-LEN-FRE",
+      "name": "LENGUA CERDO",
+      "family": "casqueria",
+      "base_unit": "kg",
+      "pack_factor": 1,
+      "variable_weight": false,
+      "price": 4.8,
+      "in_assortment": true,
+      "image": "/img/pp_offal.jpg",
+      "aliases": [
+        "lengua",
+        "lengua de cerdo",
+        "lenguas"
+      ]
+    },
+    {
+      "id": "sku-tocino-iberico",
+      "code": "CAS-TOC-SAL",
+      "name": "TOCINO IBÉRICO SALADO",
+      "family": "casqueria",
+      "base_unit": "kg",
+      "pack_factor": 1,
+      "variable_weight": false,
+      "price": 4.2,
+      "in_assortment": true,
+      "image": "/img/pp_offal.jpg",
+      "aliases": [
+        "tocino",
+        "tocino salado",
+        "tocino ibérico"
+      ]
+    },
+    {
+      "id": "sku-manchego-pieza",
+      "code": "QUE-MAC-PZA",
+      "name": "QUESO MANCHEGO CURADO PIEZA 3 KG",
+      "family": "quesos",
+      "base_unit": "kg",
+      "pack_factor": 1,
+      "variable_weight": true,
+      "price": 12.5,
+      "in_assortment": true,
+      "image": "/img/p_seleccion.jpg",
+      "aliases": [
+        "queso manchego",
+        "manchego curado",
+        "pieza de manchego"
+      ]
+    },
+    {
+      "id": "sku-manchego-cuna",
+      "code": "QUE-MAC-C25",
+      "name": "QUESO MANCHEGO CURADO CUÑA 250 G",
+      "family": "quesos",
+      "base_unit": "unit",
+      "pack_factor": 12,
+      "variable_weight": false,
+      "price": 3.6,
+      "in_assortment": true,
+      "image": "/img/p_seleccion.jpg",
+      "aliases": [
+        "cuña de manchego",
+        "manchego en cuña",
+        "cuña de queso"
+      ]
+    },
+    {
+      "id": "sku-queso-cabra-rulo",
+      "code": "QUE-CAB-100",
+      "name": "QUESO CABRA RULO 1 KG",
+      "family": "quesos",
+      "base_unit": "unit",
+      "pack_factor": 6,
+      "variable_weight": false,
+      "price": 8.9,
+      "in_assortment": true,
+      "image": "/img/p_seleccion.jpg",
+      "aliases": [
+        "rulo de cabra",
+        "queso de cabra",
+        "rulo"
+      ]
+    },
+    {
+      "id": "sku-queso-oveja",
+      "code": "QUE-OVE-PZA",
+      "name": "QUESO OVEJA SEMICURADO PIEZA",
+      "family": "quesos",
+      "base_unit": "kg",
+      "pack_factor": 1,
+      "variable_weight": true,
+      "price": 10.2,
+      "in_assortment": false,
+      "image": "/img/p_seleccion.jpg",
+      "aliases": [
+        "queso de oveja",
+        "oveja semicurado",
+        "semicurado de oveja"
+      ]
+    }
+  ]
+}

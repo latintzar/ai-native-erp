@@ -1,0 +1,1887 @@
+{
+  "schemaVersion": "1.0",
+  "authority": "A production obligation is complete only when its mapped leaf has a truthful non-SPECIFIED status and required evidence is complemented by actual evidence. All entries remain visible while specified.",
+  "directives": [
+    {
+      "id": "FND-01",
+      "title": "FND-01 production boundary",
+      "taskIds": [
+        "FND-01.01",
+        "FND-01.02",
+        "FND-01.03"
+      ],
+      "sourceDocument": "notes/THE-SYSTEM-SPEC.md"
+    },
+    {
+      "id": "FND-02",
+      "title": "FND-02 production boundary",
+      "taskIds": [
+        "FND-02.01",
+        "FND-02.02"
+      ],
+      "sourceDocument": "notes/THE-SYSTEM-SPEC.md"
+    },
+    {
+      "id": "FND-03",
+      "title": "FND-03 production boundary",
+      "taskIds": [
+        "FND-03.01",
+        "FND-03.02",
+        "FND-03.03"
+      ],
+      "sourceDocument": "notes/THE-SYSTEM-SPEC.md"
+    },
+    {
+      "id": "OBJ-01",
+      "title": "OBJ-01 production boundary",
+      "taskIds": [
+        "OBJ-01.01",
+        "OBJ-01.02",
+        "OBJ-01.03"
+      ],
+      "sourceDocument": "notes/THE-SYSTEM-SPEC.md"
+    },
+    {
+      "id": "PRD-01",
+      "title": "PRD-01 production boundary",
+      "taskIds": [
+        "PRD-01.01",
+        "PRD-01.02",
+        "PRD-01.03",
+        "PRD-01.04",
+        "PRD-01.05",
+        "PRD-01.06",
+        "PRD-01.07"
+      ],
+      "sourceDocument": "notes/THE-SYSTEM-SPEC.md"
+    },
+    {
+      "id": "CUS-01",
+      "title": "CUS-01 production boundary",
+      "taskIds": [
+        "CUS-01.01",
+        "CUS-01.02",
+        "CUS-01.03",
+        "CUS-01.04"
+      ],
+      "sourceDocument": "notes/THE-SYSTEM-SPEC.md"
+    },
+    {
+      "id": "ALB-01",
+      "title": "ALB-01 production boundary",
+      "taskIds": [
+        "ALB-01.01",
+        "ALB-01.02",
+        "ALB-01.03",
+        "ALB-01.04",
+        "ALB-01.05"
+      ],
+      "sourceDocument": "notes/THE-SYSTEM-SPEC.md"
+    },
+    {
+      "id": "CAT-01",
+      "title": "CAT-01 production boundary",
+      "taskIds": [
+        "CAT-01.01",
+        "CAT-01.02",
+        "CAT-01.03",
+        "CAT-01.04",
+        "CAT-01.05"
+      ],
+      "sourceDocument": "notes/THE-SYSTEM-SPEC.md"
+    },
+    {
+      "id": "SRC-01",
+      "title": "SRC-01 production boundary",
+      "taskIds": [
+        "SRC-01.01",
+        "SRC-01.02",
+        "SRC-01.03"
+      ],
+      "sourceDocument": "notes/THE-SYSTEM-SPEC.md"
+    },
+    {
+      "id": "INV-01",
+      "title": "INV-01 production boundary",
+      "taskIds": [
+        "INV-01.01"
+      ],
+      "sourceDocument": "notes/THE-SYSTEM-SPEC.md"
+    },
+    {
+      "id": "COM-01",
+      "title": "COM-01 production boundary",
+      "taskIds": [
+        "COM-01.01",
+        "COM-01.02"
+      ],
+      "sourceDocument": "notes/THE-SYSTEM-SPEC.md"
+    },
+    {
+      "id": "DOC-01",
+      "title": "DOC-01 production boundary",
+      "taskIds": [
+        "DOC-01.01",
+        "DOC-01.02",
+        "DOC-01.03",
+        "DOC-01.04"
+      ],
+      "sourceDocument": "notes/THE-SYSTEM-SPEC.md"
+    },
+    {
+      "id": "UTL-01",
+      "title": "UTL-01 production boundary",
+      "taskIds": [
+        "UTL-01.01"
+      ],
+      "sourceDocument": "notes/THE-SYSTEM-SPEC.md"
+    },
+    {
+      "id": "UTL-02",
+      "title": "UTL-02 production boundary",
+      "taskIds": [
+        "UTL-02.01"
+      ],
+      "sourceDocument": "notes/THE-SYSTEM-SPEC.md"
+    },
+    {
+      "id": "UTL-03",
+      "title": "UTL-03 production boundary",
+      "taskIds": [
+        "UTL-03.01"
+      ],
+      "sourceDocument": "notes/THE-SYSTEM-SPEC.md"
+    },
+    {
+      "id": "UTL-04",
+      "title": "UTL-04 production boundary",
+      "taskIds": [
+        "UTL-04.01"
+      ],
+      "sourceDocument": "notes/THE-SYSTEM-SPEC.md"
+    },
+    {
+      "id": "INT-01",
+      "title": "INT-01 production boundary",
+      "taskIds": [
+        "INT-01.01",
+        "INT-01.02",
+        "INT-01.03",
+        "INT-01.04",
+        "INT-01.05",
+        "INT-01.06"
+      ],
+      "sourceDocument": "notes/THE-SYSTEM-SPEC.md"
+    },
+    {
+      "id": "INT-02",
+      "title": "INT-02 production boundary",
+      "taskIds": [
+        "INT-02.01",
+        "INT-02.02",
+        "INT-02.03"
+      ],
+      "sourceDocument": "notes/THE-SYSTEM-SPEC.md"
+    },
+    {
+      "id": "INTG-01",
+      "title": "INTG-01 production boundary",
+      "taskIds": [
+        "INTG-01.01",
+        "INTG-01.02",
+        "INTG-01.03",
+        "INTG-01.04",
+        "INTG-01.05"
+      ],
+      "sourceDocument": "notes/THE-SYSTEM-SPEC.md"
+    },
+    {
+      "id": "ADM-01",
+      "title": "ADM-01 production boundary",
+      "taskIds": [
+        "ADM-01.01",
+        "ADM-01.02",
+        "ADM-01.03",
+        "ADM-01.04",
+        "ADM-01.05",
+        "ADM-01.06"
+      ],
+      "sourceDocument": "notes/THE-SYSTEM-SPEC.md"
+    },
+    {
+      "id": "OPS-01",
+      "title": "OPS-01 production boundary",
+      "taskIds": [
+        "OPS-01.01",
+        "OPS-01.02",
+        "OPS-01.03",
+        "OPS-01.04"
+      ],
+      "sourceDocument": "notes/THE-SYSTEM-SPEC.md"
+    },
+    {
+      "id": "QLT-01",
+      "title": "QLT-01 production boundary",
+      "taskIds": [
+        "QLT-01.01"
+      ],
+      "sourceDocument": "notes/THE-SYSTEM-SPEC.md"
+    },
+    {
+      "id": "QLT-02",
+      "title": "QLT-02 production boundary",
+      "taskIds": [
+        "QLT-02.01"
+      ],
+      "sourceDocument": "notes/THE-SYSTEM-SPEC.md"
+    },
+    {
+      "id": "ACT-01",
+      "title": "ACT-01 production boundary",
+      "taskIds": [
+        "ACT-01.01",
+        "ACT-01.02",
+        "ACT-01.03"
+      ],
+      "sourceDocument": "notes/THE-SYSTEM-SPEC.md"
+    },
+    {
+      "id": "REL-01",
+      "title": "REL-01 production boundary",
+      "taskIds": [
+        "REL-01.01",
+        "REL-01.02",
+        "REL-01.03",
+        "REL-01.04"
+      ],
+      "sourceDocument": "notes/THE-SYSTEM-SPEC.md"
+    },
+    {
+      "id": "INTX-01",
+      "title": "INTX-01 production boundary",
+      "taskIds": [
+        "OBJ-01.01",
+        "OBJ-01.03",
+        "QLT-02.01"
+      ],
+      "sourceDocument": "notes/THE-INTERACTION-SPEC.md"
+    },
+    {
+      "id": "LOT-01",
+      "title": "Stock and lot split contract",
+      "taskIds": [
+        "LOT-01.01",
+        "LOT-01.02",
+        "LOT-01.03",
+        "LOT-01.04",
+        "LOT-01.05",
+        "LOT-01.06",
+        "LOT-01.07"
+      ],
+      "sourceDocument": "notes/THE-STOCK-LOTS-SPEC.md"
+    },
+    {
+      "id": "E182",
+      "title": "Deliberate connected creation, assistant, chart and output workflows",
+      "taskIds": [
+        "OBJ-01.01",
+        "OBJ-01.03",
+        "PRD-01.02",
+        "PRD-01.06",
+        "CUS-01.01",
+        "COM-01.01",
+        "DOC-01.01",
+        "DOC-01.02",
+        "DOC-01.03",
+        "INT-01.07",
+        "INTG-01.01",
+        "QLT-02.01"
+      ],
+      "sourceDocument": "notes/THE-INTERACTION-SPEC.md"
+    },
+    {
+      "id": "E188",
+      "title": "List-card, tabular-line, filter and mobile-work closure",
+      "taskIds": [
+        "OBJ-01.03",
+        "CAT-01.03",
+        "DOC-01.03",
+        "QLT-02.01"
+      ],
+      "sourceDocument": "notes/THE-INTERACTION-SPEC.md"
+    }
+  ],
+  "obligations": [
+    {
+      "id": "OBL-ADM-01-01",
+      "title": "Organization, legal, business-day, and operations settings",
+      "scope": "Implement tenant settings for organization/legal profile, locale/timezone, tax/document profile, business day, service windows, cutoffs, holidays, operational minimums, and effective policy revisions.",
+      "taskIds": [
+        "ADM-01.01"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "ADM-01",
+        "DOC-01",
+        "FND-03",
+        "QLT-01"
+      ]
+    },
+    {
+      "id": "OBL-ADM-01-02",
+      "title": "Team, access, security, and personal-preference settings",
+      "scope": "Build all team invite/role/suspend/remove/ownership-transfer/session-revoke controls and separate tenant policy from individual locale, notification, accessibility, default-view, and saved-filter preferences.",
+      "taskIds": [
+        "ADM-01.02"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "ADM-01",
+        "FND-01",
+        "QLT-01",
+        "QLT-02"
+      ]
+    },
+    {
+      "id": "OBL-ADM-01-03",
+      "title": "Automation, geography, fulfilment, and app-policy settings",
+      "scope": "Configure automation grants, budgets, notification escalation, zones, routes, trucks, inventory policy, delivery evidence policy, and per-user application behavior as separate revisioned settings domains.",
+      "taskIds": [
+        "ADM-01.03"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "ADM-01",
+        "INT-01",
+        "INV-01",
+        "INTG-01",
+        "QLT-01"
+      ]
+    },
+    {
+      "id": "OBL-ADM-01-04",
+      "title": "Plan, subscription billing, invoices, and restricted-state controls",
+      "scope": "Implement Rocoto subscription plan, seat/usage state, billing contact, payment-method portal request, invoices, cancellation/reactivation, and policy-defined restricted access independently from customer receivables.",
+      "taskIds": [
+        "ADM-01.04"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "ADM-01",
+        "INTG-01",
+        "QLT-01",
+        "ACT-01"
+      ]
+    },
+    {
+      "id": "OBL-ADM-01-05",
+      "title": "Data administration, privacy requests, retention, and legal hold",
+      "scope": "Operate tenant data inventory, retention, export-all, access report, rectification, redaction/delete request, legal hold, recovery window, and support approval as auditable policy-controlled jobs.",
+      "taskIds": [
+        "ADM-01.05"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "ADM-01",
+        "QLT-01",
+        "ACT-01",
+        "REL-01"
+      ]
+    },
+    {
+      "id": "OBL-ADM-01-06",
+      "title": "Administration navigation, setting inventory, and controlled founder operations",
+      "scope": "Make all administration sections and their control inventories reachable, scope-correct, searchable, and auditable, including approved tenant provisioning and operational overview for authorized operators.",
+      "taskIds": [
+        "ADM-01.06"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "ADM-01",
+        "ACT-01",
+        "QLT-02"
+      ]
+    },
+    {
+      "id": "OBL-OPS-01-01",
+      "title": "Asynchronous job orchestration, retries, and dead letters",
+      "scope": "Provide the tenant-safe durable job backbone for imports, exports, rendering, sync, intelligence, scans, image work, data lifecycle, retries, cancellation, reconciliation, and manual recovery.",
+      "taskIds": [
+        "OPS-01.01"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "OPS-01",
+        "FND-03",
+        "INTEL-10",
+        "QLT-02"
+      ]
+    },
+    {
+      "id": "OBL-OPS-01-02",
+      "title": "Operational observability, alerts, and incident mode",
+      "scope": "Instrument health, dependency status, queue/projection/cursor lag, provider state, auth anomalies, data job failures, backup status, and incident acknowledgement without exposing sensitive payloads.",
+      "taskIds": [
+        "OPS-01.02"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "OPS-01",
+        "REL-01",
+        "QLT-01"
+      ]
+    },
+    {
+      "id": "OBL-OPS-01-03",
+      "title": "Backup, restore, projection rebuild, and disaster recovery",
+      "scope": "Operate encrypted, policy-compliant backups and isolated restore/replay exercises that prove recovery point/time objectives, projection parity, document integrity, access control, and cutover readiness.",
+      "taskIds": [
+        "OPS-01.03"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "OPS-01",
+        "REL-01",
+        "QLT-01",
+        "ACT-01"
+      ]
+    },
+    {
+      "id": "OBL-OPS-01-04",
+      "title": "Performance, availability, and recovery-user experience",
+      "scope": "Measure and enforce interactive command/read budgets, job progress, large-data behavior, slow/degraded dependency behavior, mobile rendering, and recoverable user-state copy.",
+      "taskIds": [
+        "OPS-01.04"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "OPS-01",
+        "QLT-02",
+        "REL-01"
+      ]
+    },
+    {
+      "id": "OBL-QLT-01-01",
+      "title": "Security, privacy, media safety, and least-privilege enforcement",
+      "scope": "Implement defense-in-depth tenant policy, server authorization, secure session/request controls, encrypted storage, signed scoped files, malware scanning, webhook verification, egress controls, and secret-safe operations.",
+      "taskIds": [
+        "QLT-01.01"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "QLT-01",
+        "FND-01",
+        "SRC-01",
+        "INTEL-12"
+      ]
+    },
+    {
+      "id": "OBL-QLT-02-01",
+      "title": "Full control/state accessibility and copy quality assurance",
+      "scope": "Verify every mapped control, opened menu/form, individual field, validation, pending/error/provider state, accessible name, keyboard path, screen-reader announcement, and locale behavior against canonical anatomy/copy tables.",
+      "taskIds": [
+        "QLT-02.01"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "QLT-02",
+        "OBJ-01",
+        "PRD-01",
+        "CUS-01",
+        "ALB-01"
+      ]
+    },
+    {
+      "id": "OBL-ACT-01-01",
+      "title": "Tenant provisioning, intake, and empty-state onboarding",
+      "scope": "Guide a newly provisioned tenant through owner verification, organization setup, catalogue/source intake, review, and honest empty states with no production demo data or fake operational readiness.",
+      "taskIds": [
+        "ACT-01.01"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "ACT-01",
+        "CAT-01",
+        "SRC-01",
+        "ADM-01"
+      ]
+    },
+    {
+      "id": "OBL-ACT-01-02",
+      "title": "Guided operating readiness and supported activation",
+      "scope": "Complete the tenant activation checklist across people, commercial/stock policy, roleplay, connection tests, legal/billing gates, training/support, and optional rails without treating a finished checklist as deployment authority.",
+      "taskIds": [
+        "ACT-01.02"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "ACT-01",
+        "REL-01",
+        "INTG-01",
+        "ADM-01"
+      ]
+    },
+    {
+      "id": "OBL-ACT-01-03",
+      "title": "Migration verification, cutover rehearsal, and tenant support recovery",
+      "scope": "Migrate retained source and business records through review/report/reconciliation, rehearse rollback/compensation, and provide scoped support diagnostics with no unauthorized repair.",
+      "taskIds": [
+        "ACT-01.03"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "ACT-01",
+        "REL-01",
+        "QLT-01",
+        "OPS-01"
+      ]
+    },
+    {
+      "id": "OBL-E188",
+      "title": "E188 physical interaction and release evidence",
+      "scope": "Preserve one inset destination per list object, unvalued order projections, exact quantity/unit rows, atomic draft-and-apply Filters, and reachable phone keyboard/thumb navigation. Record browser-kit proof separately from Runtime/model/UI-embedded intelligence/Copilot execution; no E188 UI/UX item is deferred.",
+      "taskIds": [
+        "OBJ-01.03",
+        "CAT-01.03",
+        "DOC-01.03",
+        "QLT-02.01"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "E188",
+        "OBJ-01",
+        "CAT-01",
+        "DOC-01",
+        "QLT-02"
+      ]
+    },
+    {
+      "id": "OBL-REL-01-01",
+      "title": "Release evidence board and full-system acceptance ledger",
+      "scope": "Collect required contract, integration, end-to-end, accessibility, failure, recovery, performance, security, and operational evidence by task/control/state, reporting only verified scope.",
+      "taskIds": [
+        "REL-01.01"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "REL-01",
+        "QLT-01",
+        "QLT-02",
+        "INTEL-13",
+        "INTEL-14"
+      ]
+    },
+    {
+      "id": "OBL-REL-01-02",
+      "title": "Staged rollout, monitoring, rollback, and incident communications",
+      "scope": "Prepare versioned deployment artifacts, safe rollout cohorts, monitored canary/rollback criteria, compensating migration path, operator ownership, and incident communication without self-authorizing production.",
+      "taskIds": [
+        "REL-01.02"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "REL-01",
+        "INTEL-15",
+        "OPS-01",
+        "ACT-01"
+      ]
+    },
+    {
+      "id": "OBL-REL-01-03",
+      "title": "Production authorization and owner-go gate",
+      "scope": "Require the recorded explicit owner authorization only after all evidence, operational ownership, recovery, security, accessibility, provider, billing, and tenant activation gates are satisfied.",
+      "taskIds": [
+        "REL-01.03"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "REL-01",
+        "ACT-01",
+        "QLT-01",
+        "QLT-02"
+      ]
+    },
+    {
+      "id": "OBL-REL-01-04",
+      "title": "Public documentation build and publication gate",
+      "scope": "Generate the product documentation site solely from the public canonical allowlist and task graph, validate source hashes, links, task/control coverage, and keep internal historical material out of the published artifact.",
+      "taskIds": [
+        "REL-01.04"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "REL-01",
+        "QLT-01",
+        "QLT-02"
+      ]
+    },
+    {
+      "id": "OBL-CAT-01-01",
+      "title": "Catalogue file-or-paste intake and reviewed source-item identity",
+      "scope": "Provide one session-only file-or-pasted-text source surface and one ordered review queue, with literal SKU identity and locator plus a collective Product name/SKU/Unit readback and Include/Skip. Internal classification can persist only as a quiet later Product Sheet suggestion/default; no field mapping or per-row classification/artwork/source task precedes results, and raw source is never retained by Rocoto.",
+      "taskIds": [
+        "CAT-01.01"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "CAT-01",
+        "SRC-01",
+        "UTL-03",
+        "QLT-01"
+      ]
+    },
+    {
+      "id": "OBL-CAT-01-02",
+      "title": "Reference classification, Internal category, Related products and reviewed enrichment",
+      "scope": "Use the universal reference as a versioned classifier while retaining each coded SKU or accepted uncoded sale item’s literal identity, kind-appropriate independent facts, reviewable Internal category, reviewed direct RelatedItemLink through an inline existing-record picker, source evidence and review outcome. Ordinary intake never solicits relation candidates.",
+      "taskIds": [
+        "CAT-01.02"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "CAT-01",
+        "FND-02",
+        "INTEL-08",
+        "INTEL-02"
+      ]
+    },
+    {
+      "id": "OBL-CAT-01-03",
+      "title": "Catalogue navigation, search, and viewer preferences",
+      "scope": "Serve tenant-authorized catalogue rows with tenant/source-order default plus optional Category and A–Z sorting, scoped search, explicit Related-products filter, archive visibility, exact catalogue-record navigation, intake-return context and viewer-only preferences.",
+      "taskIds": [
+        "CAT-01.03"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "CAT-01",
+        "PRD-01",
+        "FND-01",
+        "QLT-02"
+      ]
+    },
+    {
+      "id": "OBL-CAT-01-04",
+      "title": "Catalogue export formats and provenance",
+      "scope": "Generate labelled house, standard, and augmented exports from retained sources and current authorized projections without pretending a derived file is the original import.",
+      "taskIds": [
+        "CAT-01.04"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "CAT-01",
+        "UTL-04",
+        "DOC-01",
+        "QLT-01"
+      ]
+    },
+    {
+      "id": "OBL-CAT-01-05",
+      "title": "Large catalogue import/export performance and failure truth",
+      "scope": "Move large parse, validation, source retention, and export work into bounded jobs with declared limits, progress, cancellation, retry, memory, and tenant-isolation evidence.",
+      "taskIds": [
+        "CAT-01.05"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "CAT-01",
+        "OPS-01",
+        "QLT-02",
+        "REL-01"
+      ]
+    },
+    {
+      "id": "OBL-SRC-01-01",
+      "title": "Inbound source envelope, retention, and quarantine",
+      "scope": "Register an authorized external source envelope and transient fetch/scan/parse lifecycle; persist safe references/metadata and minimal derived business facts, never raw emails or incoming file bytes. WhatsApp is forward-only from accepted connection time and never supplies prior-history source data.",
+      "taskIds": [
+        "SRC-01.01"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "SRC-01",
+        "QLT-01",
+        "INTEL-02"
+      ]
+    },
+    {
+      "id": "OBL-SRC-01-02",
+      "title": "Source conversations, attachments, and product/email linkage",
+      "scope": "Project authorized post-connection source threads and attachments with exact message/part linkage, readable provenance, access state, and related-object navigation for Customer, Product, and Albarán sheets; never project prior WhatsApp history.",
+      "taskIds": [
+        "SRC-01.02"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "SRC-01",
+        "PRD-01",
+        "ALB-01",
+        "QLT-01"
+      ]
+    },
+    {
+      "id": "OBL-SRC-01-03",
+      "title": "Test, simulation, and fixture isolation",
+      "scope": "Provide deterministic test and roleplay execution that uses namespaced tenant-safe fixtures, source lineage, reset rules, and no external transport or live provider success claim.",
+      "taskIds": [
+        "SRC-01.03"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "SRC-01",
+        "OPS-01",
+        "REL-01",
+        "INTEL-13"
+      ]
+    },
+    {
+      "id": "OBL-INV-01-01",
+      "title": "Inventory ledger, lots, allocation, and availability projections",
+      "scope": "Build append-only receipt/count/adjustment/reservation/allocation/dispatch records and typed stock projections per tenant, SKU, location, unit, and lot.",
+      "taskIds": [
+        "INV-01.01"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "INV-01",
+        "PRD-01",
+        "ALB-01",
+        "QLT-01"
+      ]
+    },
+    {
+      "id": "OBL-UTL-01-01",
+      "title": "Stock update utility command surface",
+      "scope": "Ship the focused Receive stock and Record a stock count utility with exact labels, validation, review, recovery, permission, and return-to-SKU behavior rather than a generic stock edit.",
+      "taskIds": [
+        "UTL-01.01"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "UTL-01",
+        "INV-01",
+        "PRD-01",
+        "QLT-02"
+      ]
+    },
+    {
+      "id": "OBL-UTL-02-01",
+      "title": "New product utility",
+      "scope": "Provide New product from toolbar, unknown-SKU, source, customer wording or order context. Add a product list accepts one file or pasted text into the same review queue, with no pre-result mapping, hidden SKU, placement, relation or commercial adoption.",
+      "taskIds": [
+        "UTL-02.01"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "UTL-02",
+        "PRD-01",
+        "CAT-01",
+        "INTEL-08"
+      ]
+    },
+    {
+      "id": "OBL-UTL-03-01",
+      "title": "Catalogue file-or-paste review-queue surface",
+      "scope": "Provide a file drop or pasted product list, session-only custody, one ordered Excel/CSV review queue, explicit state/recovery and a collective readback where each row shows/edits only Product name/SKU/Unit plus Include/Skip. Internal classification can persist only as a quiet later Product Sheet suggestion/default. A selected PDF says Automatic PDF review · Ready to connect and Choose Excel or CSV, or paste the list; it is never stored, parsed or queued. No mapping screen or automatic relation appears before results.",
+      "taskIds": [
+        "UTL-03.01"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "UTL-03",
+        "CAT-01",
+        "SRC-01",
+        "QLT-02"
+      ]
+    },
+    {
+      "id": "OBL-DOC-01-01",
+      "title": "Document rendering, revision, and print-ready artifact authority",
+      "scope": "Render immutable issue/reprint artifacts from frozen order facts with versioned format/profile, exact page/sheet counts, audit, retention, and explicit file/print evidence.",
+      "taskIds": [
+        "DOC-01.01"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "DOC-01",
+        "ALB-01",
+        "COM-01",
+        "QLT-01"
+      ]
+    },
+    {
+      "id": "OBL-DOC-01-02",
+      "title": "Print queue, daily run, and printer-provider state",
+      "scope": "Operate per-tenant print jobs for selected documents/day runs with ordered groups, clear job states, retry/cancel, provider receipts, and no claim of physical completion without evidence.",
+      "taskIds": [
+        "DOC-01.02"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "DOC-01",
+        "INTG-01",
+        "OPS-01",
+        "QLT-02"
+      ]
+    },
+    {
+      "id": "OBL-DOC-01-03",
+      "title": "Export centre, output jobs, and download history",
+      "scope": "Build date/revision-aware output selection, job creation, status, downloadable artifact history, export profile, and explicit source/format compatibility for daily files. Export Centre and day-level print/download shortcuts share one gallery-template → configured-saved-copy identity so category, product, salesperson, truck, date, page, layout and activity status cannot drift.",
+      "taskIds": [
+        "DOC-01.03"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "DOC-01",
+        "UTL-04",
+        "CAT-01",
+        "QLT-02"
+      ]
+    },
+    {
+      "id": "OBL-DOC-01-04",
+      "title": "Document email, supplier forwarding, and ERP delivery state",
+      "scope": "Deliver customer documents and related forwarding/export work through explicit authorized jobs with recipient, revision, schedule, provider receipt, failure, retry, and audit semantics.",
+      "taskIds": [
+        "DOC-01.04"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "DOC-01",
+        "INTG-01",
+        "QLT-01"
+      ]
+    },
+    {
+      "id": "OBL-UTL-04-01",
+      "title": "Export utility command surface",
+      "scope": "Provide the focused export utility with exact data scope, selected format, profile, retention, download state, accessibility labels, and honest partial/failed outcomes.",
+      "taskIds": [
+        "UTL-04.01"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "UTL-04",
+        "DOC-01",
+        "QLT-02"
+      ]
+    },
+    {
+      "id": "OBL-FND-01-01",
+      "title": "Tenant identity and membership boundary",
+      "scope": "Create the authoritative tenant, member, role, sector, and lifecycle records that every protected read, command, file, job, and subscription resolves before domain work.",
+      "taskIds": [
+        "FND-01.01"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "FND-01",
+        "FND-02",
+        "QLT-01"
+      ]
+    },
+    {
+      "id": "OBL-FND-01-02",
+      "title": "Authentication, session, and role-capability commands",
+      "scope": "Implement sign-in, sign-out, session renewal, membership selection, role changes, revocation, and capability evaluation as server-enforced operations.",
+      "taskIds": [
+        "FND-01.02"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "FND-01",
+        "FND-03",
+        "QLT-01"
+      ]
+    },
+    {
+      "id": "OBL-FND-01-03",
+      "title": "Actor, consent, and access-audit envelope",
+      "scope": "Attach authenticated actor, tenant, request, causation, device/session, and declared test lineage to each protected operation without persisting credentials in business records.",
+      "taskIds": [
+        "FND-01.03"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "FND-01",
+        "FND-03",
+        "QLT-01",
+        "INTEL-12"
+      ]
+    },
+    {
+      "id": "OBL-FND-02-01",
+      "title": "Canonical record envelopes and identity lifecycle",
+      "scope": "Establish durable IDs, revisions, archive/redaction rules, retained original identity, and explicit relationships for every system object before any projection is treated as canonical.",
+      "taskIds": [
+        "FND-02.01"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "FND-02",
+        "OBJ-01",
+        "QLT-01"
+      ]
+    },
+    {
+      "id": "OBL-FND-02-02",
+      "title": "Event streams, folds, and replayable projections",
+      "scope": "Build the event/outbox/projection spine so screens read tenant-authorized materialized facts and historical replay cannot import later knowledge into an earlier business state.",
+      "taskIds": [
+        "FND-02.02"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "FND-02",
+        "FND-03",
+        "OPS-01",
+        "REL-01"
+      ]
+    },
+    {
+      "id": "OBL-FND-03-01",
+      "title": "Command protocol, idempotency, and acknowledged outcomes",
+      "scope": "Standardize command envelopes, validation, expected revision, idempotency lookup, typed errors, and acknowledgement semantics across every write path.",
+      "taskIds": [
+        "FND-03.01"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "FND-03",
+        "QLT-02",
+        "REL-01"
+      ]
+    },
+    {
+      "id": "OBL-FND-03-02",
+      "title": "Schema expansion, backfill, and compensating recovery",
+      "scope": "Make production schema change additive, observable, reversible by compensation where needed, and safe to roll forward during partial failure or a paused migration.",
+      "taskIds": [
+        "FND-03.02"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "FND-03",
+        "ACT-01",
+        "REL-01"
+      ]
+    },
+    {
+      "id": "OBL-FND-03-03",
+      "title": "Realtime, offline drafts, and concurrent-edit recovery",
+      "scope": "Deliver authorized projection notifications, cursor catch-up, constrained offline drafts, and server-resolved concurrent editing without treating presence as a lock.",
+      "taskIds": [
+        "FND-03.03"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "FND-03",
+        "OPS-01",
+        "QLT-02"
+      ]
+    },
+    {
+      "id": "OBL-OBJ-01-01",
+      "title": "Shared sheet, form, menu, and error-state contract",
+      "scope": "Implement the reusable interaction boundary for Product, Customer, and Albarán sheets: one stable object ID, named layers, pending drafts, permission, loading, empty, error, conflict, archive, and recovery states.",
+      "taskIds": [
+        "OBJ-01.01"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "OBJ-01",
+        "PRD-01",
+        "CUS-01",
+        "ALB-01",
+        "QLT-02"
+      ]
+    },
+    {
+      "id": "OBL-OBJ-01-02",
+      "title": "Per-control exact-copy and accessible-name framework",
+      "scope": "Bind canonical label tables to controls, tabs, menus, form fields, provider states, errors, and incomplete states so copy is precise, localized safely, and testable without altering business values.",
+      "taskIds": [
+        "OBJ-01.02"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "OBJ-01",
+        "QLT-02",
+        "PRD-01"
+      ]
+    },
+    {
+      "id": "OBL-OBJ-01-03",
+      "title": "Responsive and assistive interaction baseline",
+      "scope": "Make the three sheet archetypes and all nested menus, tables, charts, forms, and status announcements usable with keyboard, screen reader, touch, and narrow viewport recovery.",
+      "taskIds": [
+        "OBJ-01.03"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "OBJ-01",
+        "QLT-02"
+      ]
+    },
+    {
+      "id": "OBL-INT-01-01",
+      "title": "Deterministic source parsing and exact-SKU candidate resolution",
+      "scope": "Build the tier-zero parser for source wording, SKU candidates, unit/pack reconciliation, numeric ordering, attachment gating, and explicit unresolved output before any model or commercial command is considered.",
+      "taskIds": [
+        "INT-01.01"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "INT-01",
+        "INTEL-03",
+        "INTEL-06",
+        "SRC-01",
+        "CAT-01"
+      ]
+    },
+    {
+      "id": "OBL-INT-01-02",
+      "title": "Bounded reasoning, prediction, and constrained reply path",
+      "scope": "Run approved intelligence only through versioned releases and authorized command/proposal envelopes, producing bounded finished-albarán predictions or reply drafts with evidence, alternatives, cost, and human/tenant grant policy.",
+      "taskIds": [
+        "INT-01.02"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "INT-01",
+        "INTEL-04",
+        "INTEL-05",
+        "INTEL-06",
+        "INTEL-10"
+      ]
+    },
+    {
+      "id": "OBL-INT-01-03",
+      "title": "Intelligence concerns, explanation, and human review lifecycle",
+      "scope": "Specify observable scoped concern UI: one exact target, one red boundary, a concise dismissible reason, local re-evaluation after relevant edit or sent message, and retained disclosure history. Durable storage, model evaluation and learning remain later seams.",
+      "taskIds": [
+        "INT-01.03"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "INT-01",
+        "INTEL-07",
+        "INTEL-02",
+        "QLT-01"
+      ]
+    },
+    {
+      "id": "OBL-INT-01-04",
+      "title": "Interactive catalogue and variant intelligence",
+      "scope": "Deliver an interactive, review-first catalogue intelligence surface for category feedback, variant interpretation, corrected descriptions, alternatives, and injection-safe conversation state.",
+      "taskIds": [
+        "INT-01.04"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "INT-01",
+        "INTEL-08",
+        "CAT-01",
+        "PRD-01"
+      ]
+    },
+    {
+      "id": "OBL-INT-01-05",
+      "title": "Evaluation, replay, trace export, and error analysis",
+      "scope": "Create consent/retention-eligible test sets, chronological replay, frozen release evaluation, metrics, error slices, trace export, and a release gate that reports uncertainty honestly.",
+      "taskIds": [
+        "INT-01.05"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "INT-01",
+        "INTEL-13",
+        "INTEL-14",
+        "REL-01"
+      ]
+    },
+    {
+      "id": "OBL-INT-01-06",
+      "title": "Authorized backfill, correction learning, and model recovery",
+      "scope": "Backfill approved source-to-record links and learning inputs through resumable, reviewable, tenant-safe jobs that preserve historical facts and never promote a correction merely because it repeats.",
+      "taskIds": [
+        "INT-01.06"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "INT-01",
+        "INTEL-10",
+        "INTEL-12",
+        "INTEL-15"
+      ]
+    },
+    {
+      "id": "OBL-INT-02-01",
+      "title": "Illustration library, reference audit, and SKU association model",
+      "scope": "Keep the approved image library, visual aliases, reference audit, asset checksum, source/license metadata, and SKU-owned association distinct from tenant catalogue identity and Internal-category/group or Related-products presentation.",
+      "taskIds": [
+        "INT-02.01"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "INT-02",
+        "CAT-01",
+        "INTEL-11",
+        "INTEL-12"
+      ]
+    },
+    {
+      "id": "OBL-INT-02-02",
+      "title": "Budgeted asynchronous image generation worker",
+      "scope": "Implement a provider-isolated image request worker with reviewed description, prompt/style version/hash, SKU revision, budget authorization, idempotency, job lifecycle, provider receipt, timeout, retry, cancel, and dead-letter handling.",
+      "taskIds": [
+        "INT-02.02"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "INT-02",
+        "INTEL-10",
+        "INTEL-11",
+        "QLT-01"
+      ]
+    },
+    {
+      "id": "OBL-INT-02-03",
+      "title": "Image candidate review, publication, and replacement recovery",
+      "scope": "Review image candidates for SKU form, packaging, brand, safety, and source policy before assignment; retain last approved art during replacement and keep all decisions auditable.",
+      "taskIds": [
+        "INT-02.03"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "INT-02",
+        "INTEL-11",
+        "INTEL-12",
+        "QLT-01"
+      ]
+    },
+    {
+      "id": "OBL-INTG-01-01",
+      "title": "Messaging integration, test transport, and outbound receipt boundary",
+      "scope": "Implement a provider adapter for inbound/outbound messaging with verified webhook ingestion, per-tenant connection ownership, test isolation, capability checks, delivery receipts, retry, reconciliation, and revoke behavior.",
+      "taskIds": [
+        "INTG-01.01"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "INTG-01",
+        "SRC-01",
+        "INTEL-05",
+        "QLT-01"
+      ]
+    },
+    {
+      "id": "OBL-INTG-01-02",
+      "title": "Mailbox authorization, source sync, and document mail delivery",
+      "scope": "Connect authorized mailboxes through a provider-neutral OAuth/callback flow, ingest source safely, scope visibility, and send approved document mail with recipient/revision/receipt truth.",
+      "taskIds": [
+        "INTG-01.02"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "INTG-01",
+        "SRC-01",
+        "DOC-01",
+        "QLT-01"
+      ]
+    },
+    {
+      "id": "OBL-INTG-01-03",
+      "title": "ERP integration adapters, reconciliation, and manual recovery",
+      "scope": "Use versioned adapter profiles to export/reconcile authorized document and catalogue snapshots with cadence, cursor, conflict, receipt, retry, and manual repair semantics.",
+      "taskIds": [
+        "INTG-01.03"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "INTG-01",
+        "DOC-01",
+        "CAT-01",
+        "QLT-01"
+      ]
+    },
+    {
+      "id": "OBL-INTG-01-04",
+      "title": "Maps and place-provider adapter",
+      "scope": "Integrate geocoding/place suggestions through a tenant-policy-aware adapter with limited data, manual fallback, provider health, and no automatic address or route commitment.",
+      "taskIds": [
+        "INTG-01.04"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "INTG-01",
+        "CUS-01",
+        "QLT-01"
+      ]
+    },
+    {
+      "id": "OBL-INTG-01-05",
+      "title": "Connection registry, health, reconciliation, and revoke controls",
+      "scope": "Operate every external rail through a tenant-owned connection registry with capability, credential reference, test, health, queue, cursor, receipt, pause, revoke, and incident state.",
+      "taskIds": [
+        "INTG-01.05"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "INTG-01",
+        "ADM-01",
+        "OPS-01",
+        "QLT-01"
+      ]
+    },
+    {
+      "id": "OBL-PRD-01-01",
+      "title": "Product identity, Related products, Internal category and details editor",
+      "scope": "Port the SKU-first identity header with one Unit plus reusable global UnitConversion and exact-SKU override, image-owned exact-SKU artwork pencil, capability-gated Price/lot/stock directly under Unit, inline Related products picker across existing coded or accepted uncoded catalogue records, Internal category, Requested personalisations, exact order history, bottom grid Stats, Details & changes and archive/restore boundary. Ordinary creation/import never makes the operator file a product or select related products.",
+      "taskIds": [
+        "PRD-01.01"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "PRD-01",
+        "FND-02",
+        "CAT-01",
+        "QLT-02"
+      ]
+    },
+    {
+      "id": "OBL-PRD-01-02",
+      "title": "New product file-or-paste intake and variation review",
+      "scope": "Provide shared literal-SKU creation. Add one is identity-only (Product name/SKU/Unit); Add a product list has collective Product name/SKU/Unit plus Include/Skip readback. Internal classification is a quiet later Product Sheet suggestion/default, never an intake chore; the ordered queue has no pre-result mapping. Only the reviewed inline Related products picker may write a direct RelatedItemLink between existing records, each a coded SKU or accepted uncoded sale item.",
+      "taskIds": [
+        "PRD-01.02"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "PRD-01",
+        "UTL-02",
+        "CAT-01",
+        "INTEL-08"
+      ]
+    },
+    {
+      "id": "OBL-PRD-01-03",
+      "title": "Product tariffs, price editor, and independent history",
+      "scope": "Wire product price controls to dated tenant/SKU/tariff price events with exact unit/currency semantics, independent histories, customer overrides, and conflict-safe save behavior.",
+      "taskIds": [
+        "PRD-01.03"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "PRD-01",
+        "COM-01",
+        "QLT-02"
+      ]
+    },
+    {
+      "id": "OBL-PRD-01-04",
+      "title": "Product stock, lots, and expected-state clarity",
+      "scope": "Wire stock controls to receipt, physical count, variance, lot, planning-rule, and history records while preserving the distinct meanings of recorded stock, expected delivery, daily estimate, predicted demand, reservation, allocation, dispatched, and available-to-promise.",
+      "taskIds": [
+        "PRD-01.04"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "PRD-01",
+        "INV-01",
+        "UTL-01",
+        "QLT-02"
+      ]
+    },
+    {
+      "id": "OBL-PRD-01-05",
+      "title": "Product order and source-evidence panels",
+      "scope": "Connect exact-SKU operational orders, historical orders, Requested personalisations and compact source evidence with pagination, unavailable-source state and exact return paths, without inheriting category/group, Related products or supplier-name-only records. Supplier intake is separately gated.",
+      "taskIds": [
+        "PRD-01.05"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "PRD-01",
+        "ALB-01",
+        "SRC-01"
+      ]
+    },
+    {
+      "id": "OBL-PRD-01-06",
+      "title": "Product insights and customer-price doors",
+      "scope": "Build the product insight projection from completed exact-SKU lines and make the customer breakdown and permitted price override doors evidence-bound, scoped, and accessible.",
+      "taskIds": [
+        "PRD-01.06"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "PRD-01",
+        "CUS-01",
+        "COM-01",
+        "QLT-02"
+      ]
+    },
+    {
+      "id": "OBL-PRD-01-07",
+      "title": "Product artwork sheet controls",
+      "scope": "Connect the SKU artwork entry, request intent, upload candidate, review, assignment, retry, and archive states to the separate image-job contract without claiming a provider result early.",
+      "taskIds": [
+        "PRD-01.07"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "PRD-01",
+        "INT-02",
+        "INTEL-11"
+      ]
+    },
+    {
+      "id": "OBL-CUS-01-01",
+      "title": "Customer identity, contact, and relationship sheet",
+      "scope": "Implement the customer record and sheet with durable identity, contacts, addresses, customer aliases, tariff context, active work, editable fields, dossier, archive, and return behavior.",
+      "taskIds": [
+        "CUS-01.01"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "CUS-01",
+        "FND-02",
+        "OBJ-01"
+      ]
+    },
+    {
+      "id": "OBL-CUS-01-02",
+      "title": "Customer current work, prices, and dossier insights",
+      "scope": "Build the Customer Sheet's decision-first order work, product memory, customer-price actions, chronological history, and evidence-backed insights without treating an inference as a current commercial fact.",
+      "taskIds": [
+        "CUS-01.02"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "CUS-01",
+        "COM-01",
+        "ALB-01",
+        "QLT-02"
+      ]
+    },
+    {
+      "id": "OBL-CUS-01-03",
+      "title": "Customer address, map, zone, and route controls",
+      "scope": "Implement address validation, provider-backed place selection, route/zone assignment, map state, fallback, and manual correction without converting a suggested location into a delivery commitment.",
+      "taskIds": [
+        "CUS-01.03"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "CUS-01",
+        "INTG-01",
+        "ADM-01",
+        "QLT-02"
+      ]
+    },
+    {
+      "id": "OBL-CUS-01-04",
+      "title": "Customer source, relationship, and operational notices",
+      "scope": "Add customer-scoped source evidence, supplier/customer notices, and action history with explicit scope, consent, and review rather than a generic customer intelligence feed.",
+      "taskIds": [
+        "CUS-01.04"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "CUS-01",
+        "SRC-01",
+        "INT-01",
+        "INTEL-02"
+      ]
+    },
+    {
+      "id": "OBL-ALB-01-01",
+      "title": "Order and albarán identity, state, and document snapshots",
+      "scope": "Establish the authoritative order/albarán lifecycle, daily numbering, current-work projections, commercial state transitions, and immutable issued snapshots.",
+      "taskIds": [
+        "ALB-01.01"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "ALB-01",
+        "FND-02",
+        "DOC-01"
+      ]
+    },
+    {
+      "id": "OBL-ALB-01-02",
+      "title": "Albarán lines, units, prices, and totals",
+      "scope": "Port every line-level field and control for SKU resolution, written phrase, quantity, Unit, rate, tax, packed quantity, lot, note, and calculated total to exact-decimal server commands.",
+      "taskIds": [
+        "ALB-01.02"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "ALB-01",
+        "COM-01",
+        "INV-01",
+        "QLT-02"
+      ]
+    },
+    {
+      "id": "OBL-ALB-01-03",
+      "title": "Albarán source provenance, concerns, and corrections",
+      "scope": "Make source evidence, uncertainty and concern lifecycle observable at one exact source card, field, full product row or contiguous row group, with one red boundary and local dismissible reason shared by full Albarán, composer tray and condensed order-in-chat. Relevant edits or sent messages re-evaluate that scope without silently erasing history; no live outbound is implied.",
+      "taskIds": [
+        "ALB-01.03"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "ALB-01",
+        "SRC-01",
+        "INT-01",
+        "INTEL-02",
+        "INTEL-07"
+      ]
+    },
+    {
+      "id": "OBL-ALB-01-04",
+      "title": "Albarán commands, issue flow, and customer document view",
+      "scope": "Wire make, validate, issue, reprint, amend, archive/cancel, compose, and document preview controls to the immutable output contract and appropriate permissions.",
+      "taskIds": [
+        "ALB-01.04"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "ALB-01",
+        "DOC-01",
+        "FND-03"
+      ]
+    },
+    {
+      "id": "OBL-ALB-01-05",
+      "title": "Albarán navigation, query, and deterministic test theatre",
+      "scope": "Preserve document origin and browser history, build proper sales search, and isolate test/roleplay scenarios from live transport, provider calls, and business projections.",
+      "taskIds": [
+        "ALB-01.05"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "ALB-01",
+        "SRC-01",
+        "QLT-02",
+        "REL-01"
+      ]
+    },
+    {
+      "id": "OBL-COM-01-01",
+      "title": "Money, tax, unit, and price-resolution authority",
+      "scope": "Create the server-side decimal money, tax, unit-equivalence, price-source, effective-date, and manual-pin rules used consistently by product, customer, order, document, and export commands.",
+      "taskIds": [
+        "COM-01.01"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "COM-01",
+        "FND-03",
+        "QLT-01"
+      ]
+    },
+    {
+      "id": "OBL-COM-01-02",
+      "title": "Company tariff registry and commercial-policy controls",
+      "scope": "Implement the tenant tariff registry, retirement, customer allocation, price policy, unit policy, and effective-dated commercial settings without reopening historic commercial facts.",
+      "taskIds": [
+        "COM-01.02"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "COM-01",
+        "ADM-01",
+        "FND-03"
+      ]
+    },
+    {
+      "id": "OBL-LOT-01-01",
+      "title": "Opaque lot identity, source model, and quantity invariants",
+      "scope": "Create tenant-scoped opaque lot records, source/receipt attribution, unit-aware balances and immutable movement identity so a visible lot label never acts as stock truth or a reusable identifier.",
+      "taskIds": [
+        "LOT-01.01"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "LOT-01",
+        "INV-01",
+        "FND-02",
+        "QLT-01"
+      ]
+    },
+    {
+      "id": "OBL-LOT-01-02",
+      "title": "Shared LotSplitEditor control and accessible split semantics",
+      "scope": "Build the shared typed split editor used by receipt, count and allocation flows, including slider, exact quantity field, add-lot row, assigned/unassigned summary, validation and review state.",
+      "taskIds": [
+        "LOT-01.02"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "LOT-01",
+        "OBJ-01",
+        "QLT-02"
+      ]
+    },
+    {
+      "id": "OBL-LOT-01-03",
+      "title": "Receipt and physical-count split flows",
+      "scope": "Wire receipt and physical-count flows to the shared lot editor so received totals and counted totals remain distinct evidence, with source, suggested allocation, discovered-lot and review/save results.",
+      "taskIds": [
+        "LOT-01.03"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "LOT-01",
+        "INV-01",
+        "UTL-01",
+        "QLT-02"
+      ]
+    },
+    {
+      "id": "OBL-LOT-01-04",
+      "title": "Reservation, allocation, reassignment, and depletion per lot",
+      "scope": "Implement albarán-facing lot eligibility, reservation, allocation, reassignment and depletion commands that preserve line/document snapshots and never promise availability from an unaccepted action.",
+      "taskIds": [
+        "LOT-01.04"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "LOT-01",
+        "ALB-01",
+        "INV-01",
+        "COM-01"
+      ]
+    },
+    {
+      "id": "OBL-LOT-01-05",
+      "title": "Lot detail, traceability, recall and document consequences",
+      "scope": "Expose a safe lot dossier for source, movements, linked lines, recall scope, edit trace and lifecycle while preserving protected data and document/output consequences.",
+      "taskIds": [
+        "LOT-01.05"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "LOT-01",
+        "DOC-01",
+        "QLT-01",
+        "ALB-01"
+      ]
+    },
+    {
+      "id": "OBL-LOT-01-06",
+      "title": "Lot migration, recovery, evaluation and release gate",
+      "scope": "Migrate legacy stock safely into explicit lot/no-lot states, rehearse rollback and projection recovery, and gate release on invariant, accessibility and end-to-end evidence.",
+      "taskIds": [
+        "LOT-01.06"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "LOT-01",
+        "REL-01",
+        "ACT-01",
+        "QLT-02"
+      ]
+    },
+    {
+      "id": "OBL-LOT-01-07",
+      "title": "Assign stock to lots and zero-net reassignment",
+      "scope": "Port the Product Sheet action “Assign stock to lots” as physical attribution of a fixed Recorded balance between named lots and Unassigned stock, with typed new lots, zero-net movement history and no albarán fulfilment effect.",
+      "taskIds": [
+        "LOT-01.07"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "LOT-01",
+        "PRD-01",
+        "INV-01",
+        "QLT-02"
+      ]
+    },
+    {
+      "id": "OBL-JNY-01",
+      "title": "Phone source with seven product lines to approved receipt or draft",
+      "scope": "End-to-end acceptance across source, policy, permissions, drafts, failure recovery, customer-visible outcome and evidence. It remains SPECIFIED until every mapped leaf carries its own actual evidence.",
+      "taskIds": [
+        "SRC-01.01",
+        "SRC-01.02",
+        "INT-01.01",
+        "INT-01.02",
+        "CAT-01.01",
+        "CAT-01.02",
+        "PRD-01.02",
+        "INV-01.01",
+        "LOT-01.03",
+        "ALB-01.01",
+        "ALB-01.02",
+        "QLT-01.01",
+        "QLT-02.01"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "JNY-01"
+      ]
+    },
+    {
+      "id": "OBL-JNY-02",
+      "title": "Working paper to actual kg/price review and final albaran",
+      "scope": "End-to-end acceptance across source, policy, permissions, drafts, failure recovery, customer-visible outcome and evidence. It remains SPECIFIED until every mapped leaf carries its own actual evidence.",
+      "taskIds": [
+        "SRC-01.02",
+        "INT-01.03",
+        "INT-02.03",
+        "LOT-01.04",
+        "COM-01.01",
+        "ALB-01.01",
+        "ALB-01.02",
+        "ALB-01.04",
+        "DOC-01.01",
+        "DOC-01.02",
+        "QLT-01.01",
+        "QLT-02.01"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "JNY-02"
+      ]
+    },
+    {
+      "id": "OBL-JNY-03",
+      "title": "Four SKU price changes and truthful in-chat confirmation",
+      "scope": "End-to-end acceptance across source, policy, permissions, drafts, failure recovery, customer-visible outcome and evidence. It remains SPECIFIED until every mapped leaf carries its own actual evidence.",
+      "taskIds": [
+        "PRD-01.03",
+        "COM-01.01",
+        "COM-01.02",
+        "ADM-01.01",
+        "INT-01.03",
+        "INTG-01.01",
+        "ALB-01.02",
+        "ALB-01.04",
+        "DOC-01.04",
+        "QLT-01.01",
+        "QLT-02.01"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "JNY-03"
+      ]
+    },
+    {
+      "id": "OBL-E182",
+      "title": "Connected tasks down to fields, steps, menus and receipts",
+      "scope": "All E182 nested controls and cross-sheet consequences, desktop/mobile geometry, draft/retry behavior and truthful provider boundaries. Full production scope; no completion inferred from kit.",
+      "taskIds": [
+        "OBJ-01.01",
+        "OBJ-01.03",
+        "PRD-01.02",
+        "PRD-01.06",
+        "CUS-01.01",
+        "COM-01.01",
+        "DOC-01.01",
+        "DOC-01.02",
+        "DOC-01.03",
+        "INT-01.07",
+        "INTG-01.01",
+        "QLT-02.01"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "E182",
+        "INTX-11",
+        "SYS-182",
+        "INTEL-17"
+      ]
+    },
+    {
+      "id": "OBL-JNY-05",
+      "title": "New SKU to price, customer quote, albarán edit and reprint",
+      "scope": "Full connected acceptance, including permissions, drafts, customer outcome and failure/recovery. Specified until actual runtime evidence exists.",
+      "taskIds": [
+        "PRD-01.02",
+        "PRD-01.03",
+        "COM-01.01",
+        "CUS-01.02",
+        "ALB-01.01",
+        "ALB-01.02",
+        "DOC-01.01",
+        "DOC-01.02"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "JNY-05"
+      ]
+    },
+    {
+      "id": "OBL-JNY-06",
+      "title": "Operator-reported shortage to reviewed impact, customer copy and partial/unknown delivery",
+      "scope": "Full connected acceptance, including permissions, drafts, customer outcome and failure/recovery. Specified until actual runtime evidence exists.",
+      "taskIds": [
+        "INT-01.07",
+        "INV-01.01",
+        "LOT-01.03",
+        "ALB-01.02",
+        "INTG-01.01",
+        "QLT-01.01"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "JNY-06"
+      ]
+    },
+    {
+      "id": "OBL-JNY-07",
+      "title": "Template gallery to configured copy, scoped output and history",
+      "scope": "Full connected acceptance, including permissions, drafts, customer outcome and failure/recovery. Specified until actual runtime evidence exists.",
+      "taskIds": [
+        "DOC-01.03",
+        "DOC-01.01",
+        "OBJ-01.03",
+        "QLT-01.01",
+        "REL-01.01"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "JNY-07"
+      ]
+    },
+    {
+      "id": "OBL-JNY-08",
+      "title": "First-time setup to controlled activation",
+      "scope": "Full connected acceptance, including permissions, drafts, customer outcome and failure/recovery. Specified until actual runtime evidence exists.",
+      "taskIds": [
+        "ACT-01.01",
+        "ACT-01.02",
+        "ADM-01.02",
+        "INTG-01.01"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "JNY-08"
+      ]
+    },
+    {
+      "id": "OBL-JNY-09",
+      "title": "Salesperson-scoped day to authorised output activity",
+      "scope": "Full connected acceptance, including permissions, drafts, customer outcome and failure/recovery. Specified until actual runtime evidence exists.",
+      "taskIds": [
+        "ADM-01.02",
+        "ALB-01.01",
+        "ALB-01.04",
+        "DOC-01.01",
+        "DOC-01.02"
+      ],
+      "required": true,
+      "sourceRefs": [
+        "JNY-09"
+      ]
+    }
+  ],
+  "crossCutting": [
+    {
+      "id": "CC-01",
+      "title": "Tenant authorization, audit and privacy",
+      "taskIds": [
+        "FND-01.01",
+        "FND-01.02",
+        "FND-01.03",
+        "QLT-01.01",
+        "ADM-01.05"
+      ]
+    },
+    {
+      "id": "CC-02",
+      "title": "Exact copy, accessible names and state truth",
+      "taskIds": [
+        "OBJ-01.02",
+        "OBJ-01.03",
+        "QLT-02.01"
+      ]
+    },
+    {
+      "id": "CC-03",
+      "title": "Expected stock and fulfilment semantic migration",
+      "taskIds": [
+        "INV-01.01",
+        "PRD-01.04",
+        "ALB-01.01",
+        "ALB-01.02",
+        "COM-01.01"
+      ]
+    },
+    {
+      "id": "CC-04",
+      "title": "Inference, provider and failure boundaries",
+      "taskIds": [
+        "INT-01.01",
+        "INT-01.02",
+        "INT-01.03",
+        "INT-01.05",
+        "INT-01.06",
+        "INTG-01.05",
+        "OPS-01.01",
+        "OPS-01.02"
+      ]
+    },
+    {
+      "id": "CC-05",
+      "title": "Cutover, recovery and Peter production authorization",
+      "taskIds": [
+        "FND-03.02",
+        "OPS-01.03",
+        "ACT-01.03",
+        "REL-01.01",
+        "REL-01.02",
+        "REL-01.03"
+      ]
+    },
+    {
+      "id": "CC-06",
+      "title": "Lot splitting, quantity conservation and traceability",
+      "taskIds": [
+        "LOT-01.01",
+        "LOT-01.02",
+        "LOT-01.03",
+        "LOT-01.04",
+        "LOT-01.05",
+        "LOT-01.06",
+        "LOT-01.07"
+      ]
+    }
+  ],
+  "requiredDirectiveIds": [
+    "FND-01",
+    "FND-02",
+    "FND-03",
+    "OBJ-01",
+    "PRD-01",
+    "CUS-01",
+    "ALB-01",
+    "CAT-01",
+    "SRC-01",
+    "INV-01",
+    "LOT-01",
+    "COM-01",
+    "DOC-01",
+    "UTL-01",
+    "UTL-02",
+    "UTL-03",
+    "UTL-04",
+    "INT-01",
+    "INT-02",
+    "INTG-01",
+    "ADM-01",
+    "OPS-01",
+    "QLT-01",
+    "QLT-02",
+    "ACT-01",
+    "REL-01",
+    "INTX-01",
+    "E182",
+    "E188"
+  ]
+}

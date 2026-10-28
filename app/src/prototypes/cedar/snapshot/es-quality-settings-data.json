@@ -1,0 +1,1168 @@
+{
+  "locale": "es-ES",
+  "schemaVersion": 1,
+  "entries": [
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Set the days you serve",
+      "spanish": "Define los días de reparto"
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Every day",
+      "spanish": "Todos los días"
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "template",
+      "english": "${name[on[0]]} to ${name[on[on.length - 1]]}",
+      "spanish": "${name[on[0]]} a ${name[on[on.length - 1]]}"
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Can Rocoto confirm an order with the customer?",
+      "spanish": "¿Puede Rocoto confirmar un pedido con el cliente?"
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Rocoto confirms it",
+      "spanish": "Rocoto lo confirma"
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "It answers on the spot and the delivery note is promised for the day they asked for.",
+      "spanish": "Responde al momento y el albarán queda comprometido para el día solicitado."
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Every order comes to you",
+      "spanish": "Todos los pedidos te llegan a ti"
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Confirming orders",
+      "spanish": "Confirmación de pedidos"
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "template",
+      "english": "Up to ${g.upTo}× their usual",
+      "spanish": "Hasta ${g.upTo}× lo habitual"
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Every order comes to you",
+      "spanish": "Todos los pedidos te llegan a ti"
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "How far past a customer’s usual can Rocoto go on its own?",
+      "spanish": "¿Cuánto puede superar Rocoto el pedido habitual de un cliente por su cuenta?"
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "template",
+      "english": "${n}× their usual",
+      "spanish": "${n}× lo habitual"
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "How much bigger than usual",
+      "spanish": "Cuánto más que lo habitual"
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "template",
+      "english": "${g.upTo}× their usual",
+      "spanish": "${g.upTo}× lo habitual"
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Inside the limit, Rocoto answers on the spot and the delivery note exists.",
+      "spanish": "Dentro del límite, Rocoto responde al momento y crea el albarán."
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "template",
+      "english": "Received. It is confirmed for ${day}.",
+      "spanish": "Recibido. Queda confirmado para ${day}."
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "One moment — I will check this one and come straight back to you.",
+      "spanish": "Un momento: voy a comprobarlo y te respondo enseguida."
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "How big can one order be before you want to see it?",
+      "spanish": "¿Qué importe puede tener un pedido antes de que quieras revisarlo?"
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "The ceiling on one order",
+      "spanish": "Límite por pedido"
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Who answers a price question?",
+      "spanish": "¿Quién responde una consulta de precio?"
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Rocoto answers it",
+      "spanish": "Rocoto la responde"
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "It comes to you",
+      "spanish": "Te llega a ti"
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Price questions",
+      "spanish": "Consultas de precio"
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "When something is unclear, can Rocoto ask the customer?",
+      "spanish": "Cuando algo no está claro, ¿puede Rocoto preguntar al cliente?"
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Rocoto asks them",
+      "spanish": "Rocoto se lo pregunta"
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Checking with the customer",
+      "spanish": "Consulta al cliente"
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Rocoto asks them",
+      "spanish": "Rocoto se lo pregunta"
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "It comes to you",
+      "spanish": "Te llega a ti"
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "What does a word off your catalogue mean?",
+      "spanish": "¿Qué significa una palabra que no está en tu catálogo?"
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "We sell one-offs all the time",
+      "spanish": "Vendemos productos puntuales continuamente"
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Our catalogue is what we sell",
+      "spanish": "Nuestro catálogo es lo que vendemos"
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Words off your catalogue",
+      "spanish": "Palabras fuera de tu catálogo"
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Where more than one sort fits",
+      "spanish": "Cuando encaja más de una variedad"
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "When it stops and asks",
+      "spanish": "Cuando se detiene y pregunta"
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "What happens when a customer asks for something outside your catalogue?",
+      "spanish": "¿Qué ocurre cuando un cliente pide algo fuera de tu catálogo?"
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "You sell your own list",
+      "spanish": "Vendes tu propio catálogo"
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "You go and find it",
+      "spanish": "Vas a buscarlo"
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Asks outside your catalogue",
+      "spanish": "Peticiones fuera de tu catálogo"
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Which days do you serve?",
+      "spanish": "¿Qué días repartes?"
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "template",
+      "english": "${DAY_NAME[d]} is a day you serve.",
+      "spanish": "${DAY_NAME[d]} es día de reparto."
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "template",
+      "english": "You serve ${daysWords(g.days)}.",
+      "spanish": "Repartes ${daysWords(g.days)}."
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Days you serve",
+      "spanish": "Días de reparto"
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Who makes the delivery note?",
+      "spanish": "¿Quién crea el albarán?"
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Rocoto makes it",
+      "spanish": "Rocoto lo crea"
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Your ERP makes it",
+      "spanish": "Tu ERP lo crea"
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Who makes the delivery note",
+      "spanish": "Quién crea el albarán"
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "When do accepted orders reach your ERP?",
+      "spanish": "¿Cuándo llegan a tu ERP los pedidos aceptados?"
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "As each order accepts",
+      "spanish": "Al aceptar cada pedido"
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "With today’s file",
+      "spanish": "Con el archivo de hoy"
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "When the data travels",
+      "spanish": "Cuándo se envían los datos"
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "As each order accepts",
+      "spanish": "Al aceptar cada pedido"
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "With today’s file",
+      "spanish": "Con el archivo de hoy"
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "When does the invoice exist?",
+      "spanish": "¿Cuándo se emite la factura?"
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "After payment",
+      "spanish": "Después del pago"
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "On the spot",
+      "spanish": "Al momento"
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "When the invoice exists",
+      "spanish": "Cuándo se emite la factura"
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "After payment",
+      "spanish": "Después del pago"
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "template",
+      "english": "${customer}’s order for ${day}, ${figureWords}. Confirmed.",
+      "spanish": "Pedido de ${customer} para ${day}, ${figureWords}. Confirmado."
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "template",
+      "english": "Confirmed. ${day}. ${figureWords}.",
+      "spanish": "Confirmado. ${day}. ${figureWords}."
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Your own house",
+      "spanish": "Tu propia empresa"
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "The register it writes in",
+      "spanish": "El registro con el que escribe"
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "template",
+      "english": "${customer} here — what is it at today?",
+      "spanish": "${customer} al habla: ¿a cuánto está hoy?"
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Just the answer",
+      "spanish": "Solo la respuesta"
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "How much it says",
+      "spanish": "Cuánto dice"
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Just the answer",
+      "spanish": "Solo la respuesta"
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Can Rocoto answer with a voice note?",
+      "spanish": "¿Puede Rocoto responder con una nota de voz?"
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "It can send one",
+      "spanish": "Puede enviar una"
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "It writes",
+      "spanish": "Escribe"
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Voice notes",
+      "spanish": "Notas de voz"
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "It can answer out loud",
+      "spanish": "Puede responder en voz alta"
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "It writes",
+      "spanish": "Escribe"
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "A customer who orders at 06:40 has an answer at 06:40, from Rocoto, in your name.",
+      "spanish": "Un cliente que pide a las 06:40 recibe respuesta a las 06:40, de Rocoto y en tu nombre."
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Rocoto reads the order and stands it in front of you with one verb on it.",
+      "spanish": "Rocoto lee el pedido y te lo presenta con una única acción."
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "The word that goes back to a customer the moment their order lands.",
+      "spanish": "El mensaje que recibe el cliente en cuanto llega su pedido."
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "The finger slip this catches is the 12 that arrives as 120.",
+      "spanish": "Esto detecta el error de teclear 120 cuando eran 12."
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "template",
+      "english": "A line over ${n}× what that customer usually takes comes to you for a yes.",
+      "spanish": "Una línea por encima de ${n}× lo habitual de ese cliente te llega para que la confirmes."
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "A line over this comes to you, with the multiple stated on it.",
+      "spanish": "Una línea por encima de este límite te llega con el múltiplo indicado."
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "template",
+      "english": "Morning — the usual for ${day}, and put two extra cajas of gamba on it.",
+      "spanish": "Buenos días: lo habitual para ${day} y añade dos cajas extra de gamba."
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "template",
+      "english": "Read as ${customer}’s order for ${day}. It comes to ${figureWords}.",
+      "spanish": "Interpretado como el pedido de ${customer} para ${day}. Suma ${figureWords}."
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "template",
+      "english": "Over the limit, Rocoto holds the line and ${handover} takes it.",
+      "spanish": "Por encima del límite, Rocoto retiene la línea y la recibe ${handover}."
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "template",
+      "english": "${figureWords} is over the ceiling you set, so it is standing with ${handover} rather than answered.",
+      "spanish": "${figureWords} supera el límite que fijaste, así que queda con ${handover} en vez de recibir respuesta."
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "template",
+      "english": "All yours for ${day} — I have put the two extra cajas on.",
+      "spanish": "Todo confirmado para ${day}: ya he añadido las dos cajas extra."
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Your biggest customers are exactly the ones you want to answer yourself.",
+      "spanish": "Tus clientes más grandes son precisamente los que quizá quieras responder tú."
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "template",
+      "english": "An order over ${moneyWords(n)} comes to you before anything goes back to the customer.",
+      "spanish": "Un pedido de más de ${moneyWords(n)} te llega antes de responder al cliente."
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "An order over this comes to you, with what it comes to on the card.",
+      "spanish": "Un pedido que supera este límite te llega con su importe en la ficha."
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "It is the question that holds a customer’s own decision, so it is the one that wants speed.",
+      "spanish": "Es la pregunta que condiciona la decisión del cliente, por eso necesita rapidez."
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "It reads today’s price off your price sheet and replies in one sentence.",
+      "spanish": "Lee el precio de hoy en tu tarifa y responde en una frase."
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "The question stands on the sale with the thread beside it, ready for your words.",
+      "spanish": "La pregunta queda en la venta, con la conversación al lado, lista para que respondas."
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "A customer asking what something is at today.",
+      "spanish": "Un cliente pregunta cuánto cuesta algo hoy."
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Rocoto answers from your price sheet",
+      "spanish": "Rocoto responde desde tu tarifa"
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "They come to you",
+      "spanish": "Te llegan a ti"
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "A real question is conversation. Rocoto asks the way you would, in one line.",
+      "spanish": "Una pregunta real es conversación. Rocoto pregunta como lo harías tú, en una línea."
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Like a person at the counter: “Quick one on the merluza — same as last week?”",
+      "spanish": "Como una persona en el mostrador: «Una rápida sobre la merluza: ¿igual que la semana pasada?»."
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Rocoto stays quiet with the customer and hands you the one thing it needs.",
+      "spanish": "Rocoto no responde al cliente y te entrega el único dato que necesita."
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "the usual",
+      "spanish": "lo habitual"
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "template",
+      "english": "${day} — send me ${it}, same as always.",
+      "spanish": "${day}: envíame ${it}, como siempre."
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "template",
+      "english": "On for ${day}. Read as the sort you have taken every week.",
+      "spanish": "Confirmado para ${day}. Interpretado como la variedad que recibes cada semana."
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Where more than one of your own sorts fits, Rocoto asks before anything is promised.",
+      "spanish": "Cuando encaja más de una de tus variedades, Rocoto pregunta antes de prometer nada."
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "template",
+      "english": "Quick one — two sorts of ${it} are in today. Which one for ${day}?",
+      "spanish": "Una rápida: hoy hay dos variedades de ${it}. ¿Cuál quieres para ${day}?"
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "The one you sent last week.",
+      "spanish": "La que enviaste la semana pasada."
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "template",
+      "english": "That one. On for ${day}.",
+      "spanish": "Esa. Confirmada para ${day}."
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Same one.",
+      "spanish": "La misma."
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "template",
+      "english": "Same one, on for ${day}.",
+      "spanish": "La misma, confirmada para ${day}."
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "You are a house that sources. Rocoto says so, and hands it to a person with a price to find.",
+      "spanish": "Eres una empresa que busca producto. Rocoto lo explica y se lo pasa a una persona que debe encontrar precio."
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "template",
+      "english": "I will find you flowers for ${day} and come back with a price.",
+      "spanish": "Te buscaré flores para ${day} y volveré con un precio."
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "You sell your own list. Rocoto keeps the request whole and puts it in front of a person.",
+      "spanish": "Vendes tu propio catálogo. Rocoto conserva la petición completa y se la presenta a una persona."
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "template",
+      "english": "I will come back to you on the flowers. ${day}’s drop is on.",
+      "spanish": "Te responderé sobre las flores. La entrega de ${day} está confirmada."
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "The days your van goes out. Rocoto promises a delivery day you actually keep.",
+      "spanish": "Los días en que sale tu furgoneta. Rocoto promete un día de entrega que realmente cumplís."
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Both ways are ordinary trade, and Rocoto works the same either way.",
+      "spanish": "Las dos formas son habituales en el sector y Rocoto funciona igual en ambas."
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Rocoto numbers the delivery note and prints it, and your ERP invoices from it.",
+      "spanish": "Rocoto numera e imprime el albarán, y tu ERP factura a partir de él."
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Rocoto reads the orders and feeds them over; your ERP numbers the delivery note and invoices.",
+      "spanish": "Rocoto lee los pedidos y los envía; tu ERP numera el albarán y factura."
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "The document of truth, and whose number goes on it.",
+      "spanish": "El documento de referencia y quién pone su número."
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Your ERP makes it, and Rocoto feeds it",
+      "spanish": "Tu ERP lo crea y Rocoto lo alimenta"
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Rocoto makes it, and your ERP invoices",
+      "spanish": "Rocoto lo crea y tu ERP factura"
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Your orders team can be processing while the morning is still arriving.",
+      "spanish": "Tu equipo de pedidos puede estar trabajando mientras sigue llegando la mañana."
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Accepted orders go to your ERP’s queue as they land.",
+      "spanish": "Los pedidos aceptados entran en la cola de tu ERP al llegar."
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "The day travels together, in one file, at the end of it.",
+      "spanish": "Todo el día viaja junto, en un único archivo, al final."
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "The moment an accepted order reaches your ERP.",
+      "spanish": "El momento en que un pedido aceptado llega a tu ERP."
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "The delivery note carries the figure and the pay-by date, so it charges either way.",
+      "spanish": "El albarán lleva el importe y la fecha de pago, así que permite cobrar en ambos casos."
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "The delivery note charges it, and the invoice follows once the money is in.",
+      "spanish": "El albarán permite el cobro y la factura llega cuando entra el dinero."
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "A drop that pays at the door is invoiced there, off the delivery note it just signed.",
+      "spanish": "Una entrega que se paga en la puerta se factura allí, a partir del albarán recién firmado."
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "What a customer holds at the door, and what follows them home.",
+      "spanish": "Lo que recibe el cliente en la puerta y lo que le llega después."
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "On the spot, at the door",
+      "spanish": "Al momento, en la puerta"
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Plain — it states what it read and what it did.",
+      "spanish": "Directo: indica lo que leyó y lo que hizo."
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Dry — the day and the figure, and it stops there.",
+      "spanish": "Escueto: el día y el importe, sin más."
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Your own house — the register Rocoto read off your own year of messages.",
+      "spanish": "Tu propia empresa: el registro que Rocoto leyó en tu año de mensajes."
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Cordial — a good morning, the answer, and a way back to you.",
+      "spanish": "Cordial: un buenos días, la respuesta y una forma de volver a ti."
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Just the answer. One line, and the customer is already ordering.",
+      "spanish": "Solo la respuesta. Una línea y el cliente ya puede pedir."
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "How much does Rocoto say?",
+      "spanish": "¿Cuánto detalle da Rocoto?"
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "One line: what it read, and what it did.",
+      "spanish": "Una línea: lo que leyó y lo que hizo."
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "The answer and its working",
+      "spanish": "La respuesta y su explicación"
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "The answer, and what it turned on",
+      "spanish": "La respuesta y el dato que la activó"
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Every answer goes back as text, on the rail it arrived on.",
+      "spanish": "Cada respuesta vuelve como texto por el canal por el que llegó."
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Even where the past leans one way, the fork goes to the customer, and their own word settles it.",
+      "spanish": "Aunque el historial apunte en una dirección, la alternativa se plantea al cliente y decide con sus propias palabras."
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "template",
+      "english": "You have taken the same ${it} every week since May. Same one for ${day}, or the other?",
+      "spanish": "Recibes el mismo ${it} cada semana desde mayo. ¿El mismo para ${day} u otro?"
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Where history is the only thing that settles it",
+      "spanish": "Cuando solo el historial lo resuelve"
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Where history is the only thing that settles it",
+      "spanish": "Cuando solo el historial lo resuelve"
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "template",
+      "english": "Odd one — can you get me flowers for the terrace with ${day}’s drop?",
+      "spanish": "Una cosa más: ¿puedes traer flores para la terraza con la entrega de ${day}?"
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "template",
+      "english": "Flowers for ${day}, in their own words, standing with ${handover}.",
+      "spanish": "Flores para ${day}, con sus propias palabras, pendientes de ${handover}."
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "What goes back to a customer who asks for something off your list.",
+      "spanish": "Qué recibe el cliente cuando pide algo fuera de tu catálogo."
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "The days your van goes out, and the days Rocoto promises.",
+      "spanish": "Los días en que sale tu furgoneta y los días que promete Rocoto."
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "template",
+      "english": "Morning — the usual for ${day}, and two extra cajas.",
+      "spanish": "Buenos días: lo habitual para ${day} y dos cajas extra."
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "The day and the figure, in one line.",
+      "spanish": "El día y el importe, en una línea."
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Plain — what it read and what it did",
+      "spanish": "Directo: lo que leyó y lo que hizo"
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Dry — the day and the figure",
+      "spanish": "Escueto: el día y el importe"
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Your own house, read off your messages",
+      "spanish": "Tu propia empresa, leída a partir de tus mensajes"
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Cordial — a good morning, the answer, a way back",
+      "spanish": "Cordial: un buenos días, la respuesta y una vía para volver a ti"
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "The answer and its working, for a house whose customers ask how the number was reached.",
+      "spanish": "La respuesta y su explicación, para una empresa cuyos clientes preguntan cómo se ha calculado el importe."
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "The answer, and the one fact it turned on.",
+      "spanish": "La respuesta y el único dato que la activó."
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "A customer at 06:40 wants the number. The rest is yours to ask for.",
+      "spanish": "Un cliente quiere el precio a las 06:40. El resto depende de lo que quieras preguntar."
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "One line, plus the single fact the answer depended on.",
+      "spanish": "Una línea y el único dato del que depende la respuesta."
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "What it read, what it did, and where the number came from.",
+      "spanish": "Lo que leyó, lo que hizo y de dónde salió el importe."
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Even where the past leans one way, the fork goes in front of somebody.",
+      "spanish": "Aunque el historial apunte en una dirección, la alternativa se presenta a una persona."
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "The case at which a reading stops being enough.",
+      "spanish": "El caso en que una interpretación deja de ser suficiente."
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Where more than one of your sorts fits",
+      "spanish": "Cuando encaja más de una de tus variedades"
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "template",
+      "english": "Flowers for ${day}, in their own words, standing with ${handover} to source.",
+      "spanish": "Flores para ${day}, con sus propias palabras, pendientes de ${handover} para su búsqueda."
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "A meat house gets asked for flowers. Rocoto keeps the request whole either way.",
+      "spanish": "A una empresa cárnica le piden flores. Rocoto conserva la petición completa en ambos casos."
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Rocoto says it will come back to them, and the request stands with a person in their own words.",
+      "spanish": "Rocoto dice que les responderá y la petición queda con una persona, en sus propias palabras."
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Rocoto says you will source it, and the request stands with a person to price.",
+      "spanish": "Rocoto explica que lo buscarás y la petición queda con una persona para poner precio."
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Rocoto says you will find it, and brings it to you",
+      "spanish": "Rocoto dice que lo buscarás y te lo trae"
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Rocoto comes back to them, and brings it to you",
+      "spanish": "Rocoto les responde y te lo trae"
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "template",
+      "english": "Morning — got it, on for ${day}. ${figureWords} with the two extra. Anything else, tell me before nine.",
+      "spanish": "Buenos días: recibido y confirmado para ${day}. ${figureWords} con las dos cajas extra. Si necesitas algo más, dímelo antes de las nueve."
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "template",
+      "english": "Good morning. That is on for ${day}, ${figureWords} with the two extra cajas. I am here if anything changes.",
+      "spanish": "Buenos días. Queda confirmado para ${day}, ${figureWords} con las dos cajas extra. Estoy aquí si cambia algo."
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "It states what it read and what it did, in the words the trade uses.",
+      "spanish": "Indica lo que leyó y lo que hizo, con las palabras que usa el sector."
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "It opens with a good morning, answers, and leaves a way back to you.",
+      "spanish": "Empieza con un buenos días, responde y deja una vía para volver a ti."
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "The answer and what it turned on",
+      "spanish": "La respuesta y el dato que la activó"
+    }
+  ]
+}

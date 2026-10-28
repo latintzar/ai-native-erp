@@ -1,0 +1,15 @@
+{
+  "purpose": "Fictional design fixtures only. These are not credentials, executed requests, or vendor-validated payloads.",
+  "run_id": "ROCOTO-QA-20260831-01",
+  "records": [
+    {"kind":"customer","external_id":"RQA-CUST-001","name":"Café Prueba Norte SpA","tax_id":"76.000.001-1","contact":{"email":"qa+cafe-norte@example.test","phone":"+56900000001"},"ship_to":{"city":"Santiago","address":"Calle Prueba 101"}},
+    {"kind":"customer","external_id":"RQA-CUST-002","name":"Hotel Prueba Centro SpA","tax_id":"76.000.002-K","contact":{"email":"qa+hotel-centro@example.test","phone":"+56900000002"},"ship_to":{"city":"Santiago","address":"Calle Prueba 202"}},
+    {"kind":"product","external_id":"RQA-PROD-TOM","sku":"RQA-TOM-001","name":"Tomate Roma QA","stock_uom":"Kg","sales_uom":"Caja","conversion_factor":10,"lot_tracking":true,"expiry_tracking":true},
+    {"kind":"product","external_id":"RQA-PROD-ACE","sku":"RQA-ACE-001","name":"Aceite QA 1L","stock_uom":"Unidad","sales_uom":"Caja","conversion_factor":12,"lot_tracking":false},
+    {"kind":"price_change","external_id":"RQA-PRICE-001","price_list":"RQA-MAYOREO","sku":"RQA-TOM-001","price":18000,"currency":"CLP","effective_on":"2026-08-31"},
+    {"kind":"receipt","external_id":"RQA-RCV-001","warehouse":"RQA-Bodega","sku":"RQA-TOM-001","quantity":100,"uom":"Kg","lot":"RQA-LOT-001","expiry_date":"2026-09-10","observed_quantity":99.5},
+    {"kind":"stock_adjustment","external_id":"RQA-ADJ-001","warehouse":"RQA-Bodega","sku":"RQA-TOM-001","quantity_delta":-0.5,"uom":"Kg","reason":"QA observed-count difference"},
+    {"kind":"sales_order","external_id":"RQA-SO-001","customer":"RQA-CUST-001","price_list":"RQA-MAYOREO","lines":[{"sku":"RQA-TOM-001","quantity":2,"uom":"Caja","provisional_weight_kg":20},{"sku":"RQA-ACE-001","quantity":1,"uom":"Caja"}]},
+    {"kind":"partial_delivery","external_id":"RQA-DLV-001","source_order":"RQA-SO-001","lines":[{"sku":"RQA-TOM-001","quantity":1.95,"uom":"Caja","final_weight_kg":19.5,"lot":"RQA-LOT-001"},{"sku":"RQA-ACE-001","quantity":1,"uom":"Caja"}],"remaining":{"sku":"RQA-TOM-001","quantity":0.05,"uom":"Caja"}}
+  ]
+}

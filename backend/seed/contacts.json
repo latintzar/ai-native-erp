@@ -1,0 +1,408 @@
+{
+  "_comment": "Fictional contact world for the retained 68-SKU demo catalogue. The first two identities use reserved North American 555-01xx numbers in this public source. Original private operator identities remain outside the release.",
+  "business": {
+    "slug": "aldonza",
+    "name": "Cárnicas Aldonza",
+    "tagline": "Charcutería y despiece · Mercamadrid",
+    "address": "Mercamadrid, Nave de Carnes, Puesto 118",
+    "city": "Madrid",
+    "region": "Madrid",
+    "country": "ES",
+    "depot_label": "la nave de Mercamadrid",
+    "depot_lat": 40.3428,
+    "depot_lon": -3.6448,
+    "range_kind": "radius",
+    "range_km": 25,
+    "prep_cutoff": "07:30",
+    "inventory_enabled": true
+  },
+  "invented_names": {
+    "_note": "La lista cerrada de nombres inventados. LEY (NEW-SESSION-PROMPT): jamás un nombre real — ya se colaron Collsar (lead de Peter), Casa Alberto, Botín y Casa Pepe. Los seis primeros son el juego canónico del prompt; los tres últimos los añadí en esta sesión con la MISMA regla generativa (apellidos del Quijote), y están marcados para que Peter los bendiga o los cambie.",
+    "canon": [
+      "Cárnicas Aldonza",
+      "Casa Bermejo",
+      "Bar Lumbre",
+      "Café Sotillo",
+      "Mesón Peral",
+      "Taberna Ruano"
+    ],
+    "added_2026_07_27": [
+      "Freiduría Cascajo",
+      "Asador Quesada",
+      "Bar Carrasco"
+    ]
+  },
+  "contacts": [
+    {
+      "phone": "+12025550110",
+      "name": "Bar Lumbre",
+      "role": "regular",
+      "erp_code": "CL-0142",
+      "address": "C/ Argumosa 31, Lavapiés, Madrid",
+      "lat": 40.4089,
+      "lon": -3.7009,
+      "cadence_days": 7,
+      "order_dow": [
+        3
+      ],
+      "weeks": 9,
+      "usual": [
+        {
+          "sku_id": "sku-jamon-serrano-lon",
+          "qty": 40,
+          "unit": "unit"
+        },
+        {
+          "sku_id": "sku-chorizo-cular-lon",
+          "qty": 30,
+          "unit": "unit"
+        },
+        {
+          "sku_id": "sku-manchego-cuna",
+          "qty": 12,
+          "unit": "unit"
+        },
+        {
+          "sku_id": "sku-morcilla-burgos",
+          "qty": 24,
+          "unit": "unit"
+        }
+      ],
+      "chitchat": [
+        "buenas",
+        "oye el reparto ayer llegó a las once eh, a ver si lo apretamos",
+        "el serrano salió buenísimo, la gente flipa",
+        "gracias!!",
+        "el finde tenemos concierto, igual subo el pedido"
+      ],
+      "voice_samples": [
+        "buenos días, ponme lo de siempre para el jueves, y súbeme el serrano que el finde tenemos concierto y se me va a ir, gracias",
+        "hola buenas, na, confirmarte lo del jueves, igual que la semana pasada, gracias majo"
+      ],
+      "photo": "JUEVES — Serrano lonchas 40 / Cular lonchas 30 / Cuña manchego 12 / Morcilla Burgos 24"
+    },
+    {
+      "phone": "+12025550111",
+      "name": "Café Sotillo",
+      "role": "regular",
+      "erp_code": "CL-0088",
+      "address": "C/ Santa Engracia 74, Chamberí, Madrid",
+      "lat": 40.435,
+      "lon": -3.704,
+      "cadence_days": 3,
+      "order_dow": [
+        0,
+        3
+      ],
+      "weeks": 9,
+      "usual": [
+        {
+          "sku_id": "sku-jamon-cocido-lon",
+          "qty": 12,
+          "unit": "unit"
+        },
+        {
+          "sku_id": "sku-bacon-lon",
+          "qty": 8,
+          "unit": "unit"
+        },
+        {
+          "sku_id": "sku-pechuga-pavo-lon",
+          "qty": 8,
+          "unit": "unit"
+        },
+        {
+          "sku_id": "sku-manchego-cuna",
+          "qty": 6,
+          "unit": "unit"
+        }
+      ],
+      "chitchat": [
+        "buenos días",
+        "los bocatas de pavo van como churros",
+        "gracias, hasta el jueves",
+        "una cosa, ¿el lunes podéis pasar antes de las 8? que abrimos a y media",
+        "todo ok por aquí"
+      ],
+      "voice_samples": [
+        "buenas, del Sotillo, ponme lo de siempre para el lunes, cocido bacon y pavo, y las cuñas de manchego, gracias",
+        "hola, confirmo el pedido del jueves, igual que siempre, y si puede ser antes de las ocho mejor"
+      ],
+      "photo": "LUNES — Cocido lonchas 12 / Bacon lonchas 8 / Pavo lonchas 8 / Cuña manchego 6"
+    },
+    {
+      "phone": "+34611111001",
+      "name": "Mesón Peral",
+      "role": "regular",
+      "erp_code": "CL-0201",
+      "address": "Avda. de la Albufera 152, Vallecas, Madrid",
+      "lat": 40.3925,
+      "lon": -3.6489,
+      "cadence_days": 7,
+      "order_dow": [
+        2
+      ],
+      "weeks": 8,
+      "usual": [
+        {
+          "sku_id": "sku-morcilla-cebolla",
+          "qty": 6,
+          "unit": "kg"
+        },
+        {
+          "sku_id": "sku-chorizo-fresco",
+          "qty": 8,
+          "unit": "kg"
+        },
+        {
+          "sku_id": "sku-tocino-iberico",
+          "qty": 4,
+          "unit": "kg"
+        },
+        {
+          "sku_id": "sku-callos-ternera",
+          "qty": 10,
+          "unit": "kg"
+        }
+      ],
+      "chitchat": [
+        "buenas, el cocido del miércoles está siendo un exitazo",
+        "gracias",
+        "el miércoles que viene igual, sin novedad",
+        "oye, los callos venían muy limpios, así da gusto"
+      ],
+      "voice_samples": [
+        "hola buenos días, del Mesón Peral, el pedido del miércoles, morcilla de cebolla chorizo fresco tocino y los callos, lo de siempre vamos"
+      ],
+      "photo": "MIÉRCOLES — Morcilla cebolla 6 / Chorizo fresco 8 / Tocino 4 / Callos 10"
+    },
+    {
+      "phone": "+34611111002",
+      "name": "Taberna Ruano",
+      "role": "at_risk",
+      "erp_code": "CL-0117",
+      "address": "C/ General Ricardos 88, Carabanchel, Madrid",
+      "lat": 40.382,
+      "lon": -3.735,
+      "cadence_days": 14,
+      "order_dow": [
+        1
+      ],
+      "weeks": 10,
+      "quiet_days": 26,
+      "usual": [
+        {
+          "sku_id": "sku-salchichon-vela-55",
+          "qty": 6,
+          "unit": "kg"
+        },
+        {
+          "sku_id": "sku-chorizo-sarta-500",
+          "qty": 24,
+          "unit": "unit"
+        },
+        {
+          "sku_id": "sku-fuet-170",
+          "qty": 36,
+          "unit": "unit"
+        }
+      ],
+      "chitchat": [
+        "buenas",
+        "el curado aguanta de lujo, gracias",
+        "hasta dentro de dos semanas"
+      ],
+      "voice_samples": [
+        "hola, de la Taberna Ruano, ponme el pedido de cada dos semanas, salchichón de vela sartas y los fuets, gracias"
+      ],
+      "photo": "QUINCENAL — Salchichón vela 6 / Sarta chorizo 24 / Fuet 36"
+    },
+    {
+      "phone": "+34611111003",
+      "name": "Casa Bermejo",
+      "role": "regular",
+      "erp_code": "CL-0164",
+      "address": "C/ Marcelo Usera 41, Usera, Madrid",
+      "lat": 40.382,
+      "lon": -3.706,
+      "cadence_days": 7,
+      "order_dow": [
+        1
+      ],
+      "weeks": 8,
+      "usual": [
+        {
+          "sku_id": "sku-oreja-cocida",
+          "qty": 6,
+          "unit": "kg"
+        },
+        {
+          "sku_id": "sku-morro-cerdo",
+          "qty": 5,
+          "unit": "kg"
+        },
+        {
+          "sku_id": "sku-manita-cerdo",
+          "qty": 40,
+          "unit": "unit"
+        },
+        {
+          "sku_id": "sku-callos-ternera",
+          "qty": 8,
+          "unit": "kg"
+        }
+      ],
+      "chitchat": [
+        "buenas, el martes lo de siempre",
+        "gracias!",
+        "la oreja de la semana pasada venía con poco morro eh, ojo",
+        "hasta el martes"
+      ],
+      "voice_samples": [
+        "sí hola, de Casa Bermejo, el martes lo de siempre, oreja cocida morro las manitas y los callos, gracias"
+      ],
+      "photo": "MARTES — Oreja cocida 6 / Morro 5 / Manitas 40 / Callos 8"
+    },
+    {
+      "phone": "+34611111004",
+      "name": "Freiduría Cascajo",
+      "role": "regular",
+      "erp_code": "CL-0230",
+      "address": "C/ Real de Pinto 24, Villaverde, Madrid",
+      "lat": 40.3452,
+      "lon": -3.693,
+      "cadence_days": 7,
+      "order_dow": [
+        5
+      ],
+      "weeks": 8,
+      "usual": [
+        {
+          "sku_id": "sku-panceta-adobada-pieza",
+          "qty": 10,
+          "unit": "kg"
+        },
+        {
+          "sku_id": "sku-lomo-adobado",
+          "qty": 8,
+          "unit": "kg"
+        },
+        {
+          "sku_id": "sku-costilla-adobada",
+          "qty": 3,
+          "unit": "unit"
+        },
+        {
+          "sku_id": "sku-chorizo-criollo",
+          "qty": 6,
+          "unit": "kg"
+        }
+      ],
+      "chitchat": [
+        "buenas, el sábado como siempre",
+        "gracias",
+        "el adobo os está quedando muy bien",
+        "el sábado que viene igual"
+      ],
+      "voice_samples": [
+        "hola buenas, de la Freiduría, el sábado la panceta adobada el lomo tres cajas de costilla y el criollo, lo de siempre"
+      ],
+      "photo": "SÁBADO — Panceta adobada 10 / Lomo adobado 8 / Costilla 3 cajas / Criollo 6"
+    },
+    {
+      "phone": "+34611111005",
+      "name": "Asador Quesada",
+      "role": "high_volume",
+      "erp_code": "CL-0009",
+      "address": "Avda. de las Ciudades 12, Getafe, Madrid",
+      "lat": 40.308,
+      "lon": -3.732,
+      "cadence_days": 4,
+      "order_dow": [
+        0,
+        4
+      ],
+      "weeks": 9,
+      "usual": [
+        {
+          "sku_id": "sku-costilla-adobada",
+          "qty": 12,
+          "unit": "unit"
+        },
+        {
+          "sku_id": "sku-secreto-iberico",
+          "qty": 25,
+          "unit": "kg"
+        },
+        {
+          "sku_id": "sku-presa-iberica",
+          "qty": 18,
+          "unit": "kg"
+        },
+        {
+          "sku_id": "sku-panceta-adobada-pieza",
+          "qty": 20,
+          "unit": "kg"
+        },
+        {
+          "sku_id": "sku-pollo-entero-18",
+          "qty": 48,
+          "unit": "unit"
+        }
+      ],
+      "chitchat": [
+        "buenas, el de siempre para el viernes",
+        "ojo que el finde tengo dos comuniones",
+        "gracias, todo correcto",
+        "el secreto de la última venía justo de peso eh",
+        "el lunes lo mismo"
+      ],
+      "voice_samples": [
+        "buenos días, del asador, para el viernes lo de siempre, doce cajas de costilla el secreto la presa la panceta y los pollos, y ojo que el finde tengo dos comuniones",
+        "hola, el lunes igual que el viernes, sin cambios, gracias"
+      ],
+      "photo": "VIERNES — Costilla 12 cajas / Secreto 25 / Presa 18 / Panceta 20 / Pollo 1,8 x48"
+    },
+    {
+      "phone": "+34611111006",
+      "name": "Bar Carrasco",
+      "role": "new",
+      "out_of_range": true,
+      "erp_code": "",
+      "address": "C/ Mayor 18, Alcalá de Henares, Madrid",
+      "lat": 40.482,
+      "lon": -3.3639,
+      "cadence_days": 7,
+      "order_dow": [
+        1
+      ],
+      "weeks": 1,
+      "usual": [
+        {
+          "sku_id": "sku-jamon-cocido-lon",
+          "qty": 6,
+          "unit": "unit"
+        },
+        {
+          "sku_id": "sku-paleta-cocida-lon",
+          "qty": 6,
+          "unit": "unit"
+        },
+        {
+          "sku_id": "sku-bacon-lon",
+          "qty": 4,
+          "unit": "unit"
+        }
+      ],
+      "chitchat": [
+        "hola buenas, nos han pasado vuestro contacto",
+        "somos nuevos, a ver qué tal",
+        "gracias"
+      ],
+      "voice_samples": [
+        "hola buenas, somos el Bar Carrasco, estamos en Alcalá, nos han dado vuestro número, quería pedir cocido paleta y bacon para el martes si podéis"
+      ],
+      "photo": "MARTES — Cocido lonchas 6 / Paleta lonchas 6 / Bacon lonchas 4"
+    }
+  ]
+}

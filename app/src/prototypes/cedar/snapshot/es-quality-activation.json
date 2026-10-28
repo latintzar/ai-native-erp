@@ -1,0 +1,804 @@
+{
+  "locale": "es",
+  "schemaVersion": 1,
+  "entries": [
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Day one. The link arrives.",
+      "spanish": "Día uno. Llega el enlace."
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "They are in, on their own address.",
+      "spanish": "Ya están dentro, con su propia dirección."
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "They try it on.",
+      "spanish": "Lo prueban."
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "The first accounts go live.",
+      "spanish": "Las primeras cuentas se activan."
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "A few months in…",
+      "spanish": "Unos meses después…"
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "JSXAttribute > StringLiteral:emptyText",
+      "kind": "literal",
+      "english": "A year of delivery notes draws this.",
+      "spanish": "Un año de albaranes muestra esto."
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "JSXExpressionContainer > TemplateLiteral",
+      "kind": "template",
+      "english": "Open ${r.name}",
+      "spanish": "Abrir ${r.name}"
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Your accounts",
+      "spanish": "Tus cuentas"
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "BinaryExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "${count(knows.observations.length)} ${plural(knows.observations.length, 'pattern')} on",
+      "spanish": "${count(knows.observations.length)} ${plural(knows.observations.length, 'pattern')} patrones en"
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "ObjectProperty > TemplateLiteral",
+      "kind": "template",
+      "english": "seen ${count(l.seen)} times",
+      "spanish": "visto ${count(l.seen)} veces"
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Your months",
+      "spanish": "Tus meses"
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "ObjectProperty > TemplateLiteral",
+      "kind": "template",
+      "english": "${count(m.albaranes)} delivery notes",
+      "spanish": "${count(m.albaranes)} albaranes"
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "ObjectProperty > TemplateLiteral",
+      "kind": "template",
+      "english": "${label}, account by account",
+      "spanish": "${label}, cuenta por cuenta"
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "What each account took that month, on their own delivery weekdays.",
+      "spanish": "Lo que pidió cada cuenta ese mes, en sus propios días de reparto."
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "BinaryExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "${count(basket.albaranes)} delivery notes.",
+      "spanish": "${count(basket.albaranes)} albaranes."
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "ObjectProperty > TemplateLiteral",
+      "kind": "template",
+      "english": "${amount(l.qty)} ${l.unit} across ${count(l.albaranes)} delivery notes",
+      "spanish": "${amount(l.qty)} ${l.unit} en ${count(l.albaranes)} albaranes"
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "ObjectProperty > TemplateLiteral",
+      "kind": "template",
+      "english": "The accounts whose own record carries ${product.name}.",
+      "spanish": "Las cuentas cuyo propio registro incluye ${product.name}."
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "ObjectProperty > TemplateLiteral",
+      "kind": "template",
+      "english": "Every delivery note of theirs that carried ${product.name}.",
+      "spanish": "Todos sus albaranes que incluían ${product.name}."
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "LogicalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "Open a figure",
+      "spanish": "Abrir una cifra"
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "JSXExpressionContainer > TemplateLiteral",
+      "kind": "template",
+      "english": "Back to ${name}",
+      "spanish": "Volver a ${name}"
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "This fills in as their delivery notes land.",
+      "spanish": "Esto se completa a medida que llegan sus albaranes."
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "What your last year came to.",
+      "spanish": "El resultado de tu último año."
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "JSXAttribute > StringLiteral:ariaLabel",
+      "kind": "literal",
+      "english": "Your year, on paper",
+      "spanish": "Tu año, en papel"
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "JSXAttribute > StringLiteral:heading",
+      "kind": "literal",
+      "english": "Your year, on paper",
+      "spanish": "Tu año, en papel"
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "JSXAttribute > StringLiteral:document",
+      "kind": "literal",
+      "english": "Your year",
+      "spanish": "Tu año"
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Save the PDF",
+      "spanish": "Guardar el PDF"
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "is in your downloads.",
+      "spanish": "está en tus descargas."
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "All of it",
+      "spanish": "Todo"
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Open any of them to see what it is a count of.",
+      "spanish": "Abre cualquiera para ver de qué se compone la cifra."
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Download PDF",
+      "spanish": "Descargar PDF"
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "JSXExpressionContainer > TemplateLiteral",
+      "kind": "template",
+      "english": "${label} — open what it is a count of",
+      "spanish": "${label}: abrir el detalle de la cifra"
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Your year",
+      "spanish": "Tu año"
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Best customers",
+      "spanish": "Mejores clientes"
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "What sells most",
+      "spanish": "Lo que más se vende"
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Could sell more",
+      "spanish": "Podría vender más"
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Worth a call",
+      "spanish": "Merece una llamada"
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "All of it",
+      "spanish": "Todo"
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "JSXAttribute > StringLiteral:ariaLabel",
+      "kind": "literal",
+      "english": "Choose the first customers to go live",
+      "spanish": "Elige los primeros clientes que se activarán"
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Choose the first customers to go live",
+      "spanish": "Elige los primeros clientes que se activarán"
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "JSXAttribute > StringLiteral:label",
+      "kind": "literal",
+      "english": "Search your customers by name",
+      "spanish": "Busca clientes por nombre"
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Your book has other names — try another word.",
+      "spanish": "Tu registro tiene otros nombres; prueba con otra palabra."
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "Turn Rocoto on",
+      "spanish": "Activar Rocoto"
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "Turn Rocoto on for these ${picked.length}",
+      "spanish": "Activar Rocoto para estas ${picked.length}"
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "CallExpression > StringLiteral",
+      "kind": "literal",
+      "english": "Claim the account",
+      "spanish": "Reclamar la cuenta"
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "JSXAttribute > StringLiteral:label",
+      "kind": "literal",
+      "english": "Delivery Note history, 12 months",
+      "spanish": "Historial de albaranes, 12 meses"
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "JSXAttribute > StringLiteral:sub",
+      "kind": "literal",
+      "english": "Customer × product × quantity × unit × date.",
+      "spanish": "Cliente × producto × cantidad × unidad × fecha."
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "Landed · ${count(imported.albaranes)} documents",
+      "spanish": "Recibidos · ${count(imported.albaranes)} documentos"
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "JSXAttribute > StringLiteral:label",
+      "kind": "literal",
+      "english": "Your product list",
+      "spanish": "Tu lista de productos"
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "Landed · ${count(imported.grounded)}",
+      "spanish": "Recibidos · ${count(imported.grounded)}"
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "JSXAttribute > StringLiteral:label",
+      "kind": "literal",
+      "english": "Your customer list",
+      "spanish": "Tu lista de clientes"
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "JSXAttribute > StringLiteral:sub",
+      "kind": "literal",
+      "english": "Names, addresses, zones, the comercial.",
+      "spanish": "Nombres, direcciones, zonas y comercial."
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "Landed · ${count(imported.customers)}",
+      "spanish": "Recibidos · ${count(imported.customers)}"
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "JSXAttribute > StringLiteral:placeholder",
+      "kind": "literal",
+      "english": "their address",
+      "spanish": "su dirección"
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "JSXAttribute > StringLiteral:aria-label",
+      "kind": "literal",
+      "english": "Your ERP provider’s address",
+      "spanish": "La dirección de tu proveedor de ERP"
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "delivery notes ·",
+      "spanish": "albaranes ·"
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "customers ·",
+      "spanish": "clientes ·"
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "CallExpression > StringLiteral",
+      "kind": "literal",
+      "english": "Start the walk",
+      "spanish": "Empezar el recorrido"
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "CallExpression > StringLiteral",
+      "kind": "literal",
+      "english": "Open a test chat",
+      "spanish": "Abrir un chat de prueba"
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "CallExpression > StringLiteral",
+      "kind": "literal",
+      "english": "Open the agent settings",
+      "spanish": "Abrir los ajustes del agente"
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "BinaryExpression > StringLiteral",
+      "kind": "literal",
+      "english": "you can widen it whenever you want.",
+      "spanish": "puedes ampliarlo cuando quieras."
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "CallExpression > StringLiteral",
+      "kind": "literal",
+      "english": "Choose them",
+      "spanish": "Elegirlas"
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "WhatsApp on your phone keeps working",
+      "spanish": "WhatsApp sigue funcionando en tu teléfono"
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "You answer from it exactly as you do today.",
+      "spanish": "Respondes desde allí exactamente como hoy."
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Your number stays yours",
+      "spanish": "Tu número sigue siendo tuyo"
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "It is registered to your own business, and it stays that way.",
+      "spanish": "Está registrado en tu propia empresa y seguirá así."
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Disappearing messages, view-once and live location switch off",
+      "spanish": "Se desactivan los mensajes temporales, la visualización única y la ubicación en directo"
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Day one. The account is waiting to be claimed and set up.",
+      "spanish": "Día uno. La cuenta espera ser reclamada y configurada."
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "The year is read. The reading is waiting to be opened.",
+      "spanish": "El año está leído. La lectura espera a que la abras."
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "JSXAttribute > StringLiteral:ariaLabel",
+      "kind": "literal",
+      "english": "What do you want to see?",
+      "spanish": "¿Qué quieres ver?"
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "What do you want to see?",
+      "spanish": "¿Qué quieres ver?"
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "JSXExpressionContainer > TemplateLiteral",
+      "kind": "template",
+      "english": "${cast.house.name} ⌄",
+      "spanish": "${cast.house.name} ⌄"
+    },
+    {
+      "source": "src/prototypes/cedar/activation-web.tsx",
+      "context": "JSXAttribute > StringLiteral:ariaLabel",
+      "kind": "literal",
+      "english": "Your journey",
+      "spanish": "Tu recorrido"
+    },
+    {
+      "source": "src/prototypes/cedar/activation.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Claim the account",
+      "spanish": "Reclamar la cuenta"
+    },
+    {
+      "source": "src/prototypes/cedar/activation.ts",
+      "context": "ObjectProperty > TemplateLiteral",
+      "kind": "template",
+      "english": "${a.house} on Rocoto",
+      "spanish": "${a.house} en Rocoto"
+    },
+    {
+      "source": "src/prototypes/cedar/activation.ts",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "Claimed at ${hour(claimed.at)}.",
+      "spanish": "Reclamada a las ${hour(claimed.at)}."
+    },
+    {
+      "source": "src/prototypes/cedar/activation.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Tell us who you are",
+      "spanish": "Dinos quién eres"
+    },
+    {
+      "source": "src/prototypes/cedar/activation.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "How your house works",
+      "spanish": "Cómo funciona tu empresa"
+    },
+    {
+      "source": "src/prototypes/cedar/activation.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "One question at a time — who makes the delivery note, how goods come in, how you price.",
+      "spanish": "Una pregunta cada vez: quién hace el albarán, cómo entra la mercancía y cómo pones los precios."
+    },
+    {
+      "source": "src/prototypes/cedar/activation.ts",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "${orgAnswered} of ${org.length} answered.",
+      "spanish": "${orgAnswered} de ${org.length} respondidas."
+    },
+    {
+      "source": "src/prototypes/cedar/activation.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Your WhatsApp Business number",
+      "spanish": "Tu número de WhatsApp Business"
+    },
+    {
+      "source": "src/prototypes/cedar/activation.ts",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "${count(imported.albaranes)} delivery notes across ${count(imported.customers)} customers.",
+      "spanish": "${count(imported.albaranes)} albaranes de ${count(imported.customers)} clientes."
+    },
+    {
+      "source": "src/prototypes/cedar/activation.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Your year, read back",
+      "spanish": "Tu año, leído"
+    },
+    {
+      "source": "src/prototypes/cedar/activation.ts",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "Read at ${hour(returned.at)}.",
+      "spanish": "Leído a las ${hour(returned.at)}."
+    },
+    {
+      "source": "src/prototypes/cedar/activation.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "A short walk through the app",
+      "spanish": "Un recorrido breve por la aplicación"
+    },
+    {
+      "source": "src/prototypes/cedar/activation.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "One thing at a time. Press the real control or the button — both do the same thing.",
+      "spanish": "Una cosa cada vez. Pulsa el control real o el botón: ambos hacen lo mismo."
+    },
+    {
+      "source": "src/prototypes/cedar/activation.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Try it on your business",
+      "spanish": "Pruébalo con tu empresa"
+    },
+    {
+      "source": "src/prototypes/cedar/activation.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Test Rocoto as one of your customers",
+      "spanish": "Prueba Rocoto como uno de tus clientes"
+    },
+    {
+      "source": "src/prototypes/cedar/activation.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Write the way they write, and watch what comes back.",
+      "spanish": "Escribe como ellos y observa qué respuesta llega."
+    },
+    {
+      "source": "src/prototypes/cedar/activation.ts",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "Tested as ${tested.customer}.",
+      "spanish": "Probado como ${tested.customer}."
+    },
+    {
+      "source": "src/prototypes/cedar/activation.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "When it asks, when it holds, what it confirms, what it does with a word off your list.",
+      "spanish": "Cuándo pregunta, cuándo retiene, qué confirma y qué hace con una palabra que no está en tu lista."
+    },
+    {
+      "source": "src/prototypes/cedar/activation.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Turn Rocoto on",
+      "spanish": "Activar Rocoto"
+    },
+    {
+      "source": "src/prototypes/cedar/activation.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Go live for your first customers",
+      "spanish": "Activa a tus primeros clientes"
+    },
+    {
+      "source": "src/prototypes/cedar/activation.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Customers linked",
+      "spanish": "Clientes vinculados"
+    },
+    {
+      "source": "src/prototypes/cedar/activation.ts",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "The history arrives with your first upload.",
+      "spanish": "El historial llega con tu primera carga."
+    },
+    {
+      "source": "src/prototypes/cedar/activation.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Buying patterns",
+      "spanish": "Patrones de compra"
+    },
+    {
+      "source": "src/prototypes/cedar/activation.ts",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "Patterns arrive with the history.",
+      "spanish": "Los patrones llegan con el historial."
+    },
+    {
+      "source": "src/prototypes/cedar/activation.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "If Rocoto had handled your last year",
+      "spanish": "Si Rocoto hubiera gestionado tu último año"
+    },
+    {
+      "source": "src/prototypes/cedar/activation.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "orders read",
+      "spanish": "pedidos leídos"
+    },
+    {
+      "source": "src/prototypes/cedar/activation.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "came to you",
+      "spanish": "te llegaron"
+    },
+    {
+      "source": "src/prototypes/cedar/activation.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "went through in a day",
+      "spanish": "procesados en un día"
+    },
+    {
+      "source": "src/prototypes/cedar/activation.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Your best customers",
+      "spanish": "Tus mejores clientes"
+    },
+    {
+      "source": "src/prototypes/cedar/activation.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "What you sell most",
+      "spanish": "Lo que más vendes"
+    },
+    {
+      "source": "src/prototypes/cedar/activation.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Could sell more",
+      "spanish": "Podría vender más"
+    },
+    {
+      "source": "src/prototypes/cedar/activation.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Worth a call",
+      "spanish": "Merece una llamada"
+    },
+    {
+      "source": "src/prototypes/cedar/activation.ts",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "Accounts whose own record moved — a rhythm that slipped, or a line they always took, gone.",
+      "spanish": "Cuentas cuyo registro ha cambiado: un ritmo alterado o una línea que siempre pedían y ha desaparecido."
+    },
+    {
+      "source": "src/prototypes/cedar/activation.ts",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "This fills in as accounts move off their own rhythm.",
+      "spanish": "Esto se completa cuando las cuentas se apartan de su ritmo habitual."
+    },
+    {
+      "source": "src/prototypes/cedar/activation.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Customers live",
+      "spanish": "Clientes activos"
+    },
+    {
+      "source": "src/prototypes/cedar/activation.ts",
+      "context": "ObjectProperty > TemplateLiteral",
+      "kind": "template",
+      "english": "${a.cohort} of ${COHORT_CAP}",
+      "spanish": "${a.cohort} de ${COHORT_CAP}"
+    },
+    {
+      "source": "src/prototypes/cedar/activation.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Went through untouched",
+      "spanish": "Procesados sin cambios"
+    },
+    {
+      "source": "src/prototypes/cedar/activation.ts",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "The rate starts with the day’s first order.",
+      "spanish": "La tasa empieza con el primer pedido del día."
+    },
+    {
+      "source": "src/prototypes/cedar/activation.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Waiting for you",
+      "spanish": "Esperando tu respuesta"
+    },
+    {
+      "source": "src/prototypes/cedar/activation.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "A link exists for one address. The account opens on their first press.",
+      "spanish": "Existe un enlace para una dirección. La cuenta se abre cuando lo pulsan por primera vez."
+    },
+    {
+      "source": "src/prototypes/cedar/activation.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "The return was read and the walk is done. Rocoto answers inside test threads.",
+      "spanish": "La devolución está leída y el recorrido terminado. Rocoto responde dentro de los hilos de prueba."
+    },
+    {
+      "source": "src/prototypes/cedar/activation.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "The whole book is live and the journey is behind them. The app in use.",
+      "spanish": "Todo el registro está activo y el recorrido ha terminado. La aplicación está en uso."
+    }
+  ]
+}

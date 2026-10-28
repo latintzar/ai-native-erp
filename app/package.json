@@ -1,0 +1,77 @@
+{
+  "name": "rocoto-app",
+  "version": "0.197.1",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 8080 --strictPort",
+    "build:kit": "node ../tools/dependency-notices.mjs && node tools/build-kit.mjs",
+    "test": "tools/run-tool-tests.sh",
+    "build:app-es": "vite build --mode spanish-snapshot",
+    "build:app-en": "node ../tools/dependency-notices.mjs && node tools/build-english-app.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "private": true,
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "description": "AI-native ERP: Cedar workspace, shared components and original operating workflows",
+  "devDependencies": {
+    "@babel/parser": "^7.29.8",
+    "@types/react": "^18.3.31",
+    "@types/react-dom": "^18.3.7",
+    "@vitejs/plugin-react": "^6.1.0",
+    "rolldown": "1.2.7",
+    "typescript": "^7.0.2",
+    "vite": "^8.2.2"
+  },
+  "dependencies": {
+    "@capacitor/android": "8.5.2",
+    "@capacitor/app": "8.1.1",
+    "@capacitor/browser": "8.0.4",
+    "@capacitor/core": "8.5.2",
+    "@capacitor/haptics": "8.0.2",
+    "@capacitor/local-notifications": "8.3.1",
+    "@capacitor/preferences": "8.0.1",
+    "@fontsource/inter": "^5.3.0",
+    "@pdf-lib/fontkit": "1.1.1",
+    "@twilio/voice-sdk": "2.18.4",
+    "@visx/axis": "^4.0.0",
+    "@visx/curve": "^4.0.0",
+    "@visx/grid": "^4.0.0",
+    "@visx/group": "^4.0.0",
+    "@visx/scale": "^4.0.0",
+    "@visx/shape": "^4.0.0",
+    "baseui": "^16.1.1",
+    "email-validator": "^2.0.4",
+    "exceljs": "4.4.0",
+    "lucide-react": "1.34.0",
+    "pdf-lib": "1.17.1",
+    "posthog-js": "^1.427.3",
+    "qrcode.react": "^4.2.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-joyride": "^3.2.0",
+    "react-virtualized": "^9.22.6",
+    "react-vis": "^1.11.6",
+    "react-window": "^1.8.11",
+    "styletron-engine-monolithic": "^1.0.0",
+    "styletron-react": "^6.1.1",
+    "react-focus-lock": "2.13.7",
+    "date-fns": "2.30.0",
+    "styletron-standard": "3.1.0",
+    "react-range": "1.10.0"
+  },
+  "//overrides": "react-vis@1.12.1 declares peer react@^16.8.3 and this app is on react 18.3.1; the nested override answers that peer with the root's own react and react-dom, so `npm ci` resolves without --legacy-peer-deps and the installed tree stays identical.",
+  "overrides": {
+    "@types/react": "$@types/react",
+    "react-vis": {
+      "react": "$react",
+      "react-dom": "$react-dom"
+    },
+    "exceljs": {
+      "uuid": "11.1.1"
+    }
+  }
+}

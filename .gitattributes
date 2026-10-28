@@ -1,0 +1,23 @@
+# Every tracked text file is LF, in the tree and in every checkout.
+* text=auto eol=lf
+
+# The assets, byte for byte. `binary` is `-text -diff`: git leaves the bytes alone and reports a
+# change as "Binary files differ" rather than printing it.
+*.webp binary
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.avif binary
+*.pdf  binary
+*.mp3  binary
+*.mp4  binary
+*.ttf  binary
+*.woff2 binary
+*.xlsx binary
+*.zip  binary
+
+# The two generated files. `make lock` writes them from app/package.json and
+# backend/requirements.in, and those two are what a review reads.
+app/package-lock.json -diff
+backend/requirements.txt linguist-generated

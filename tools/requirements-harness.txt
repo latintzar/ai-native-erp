@@ -1,0 +1,34 @@
+# THE DEGRADATION HARNESS'S OWN DEPENDENCIES (FEED-IA §198 · E193.23)
+#
+# These are for `tools/degrade.py`, `tools/qr-harness.py`, `tools/parse-harness.py` and
+# `drives/drive-201-degradation.py` — the harness that damages a printed sheet on purpose and
+# proves the packing mark and the albarán reader still hold. NOTHING in the shipped kit or in
+# `backend/` depends on any of it.
+#
+# Install into a venv rather than the box's Python. `--system-site-packages` is deliberate: Pillow
+# and numpy are already there, they are large, and eight builds share this box.
+#
+#   python3 -m venv --system-site-packages /dev/shm/e193-harness-venv
+#   /dev/shm/e193-harness-venv/bin/pip install -r tools/requirements-harness.txt
+#
+# ⚠ THE ENCODER IS NOT A CHOICE. `print-view.tsx` draws the mark with `qrcode.react@4.2.0`, which
+# bundles Nayuki's `qrcodegen` — so the harness generates with Nayuki's own Python port and NOT
+# with a different QR library. Measured, first run: `segno` and `qrcodegen` produce DIFFERENT
+# version-3-M symbols for the same 37-character payload (138 of 1369 modules differ; same mask,
+# same format info, different data placement). Both scan. They are not the same symbol, and a
+# robustness floor measured on the wrong one is a number about a QR code Rocoto never prints.
+# `qr-harness.py --anchor`'s equivalence proof is what catches that, and it caught exactly this.
+qrcodegen==1.8.0
+
+# THE DECODER THE FLOOR IS QUOTED ON. zxing-cpp is the C++ core most scanner apps and Android's
+# ML Kit carry, so «does it decode» means «does the thing in the phone decode». The second opinion
+# is the system `libzbar`, reached through a read-only ctypes binding that needs no package at all
+# (`apt-get install libzbar0` if `ctypes.util.find_library('zbar')` comes back empty) — where the
+# two disagree by a lot, the result is a library's property rather than the symbol's, and the
+# harness says so instead of quoting the scarier number.
+zxing-cpp==3.1.1
+
+# Pillow and numpy do the degradation itself. They are almost always already present, which is
+# why the venv is built with --system-site-packages; pinned here so a bare box can still install.
+pillow>=10.0
+numpy>=1.24

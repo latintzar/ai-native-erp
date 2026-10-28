@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Rocoto app</title>
+<!-- THE PHONE IS THE PHONE. Without this, a handset lays the page out at 980px and then scales it
+     down: `usePhone()` reads false, the rail draws, the bottom navigation never appears, and every
+     touch target is a third of its size. The whole one-breakpoint doctrine (shell/viewport.ts)
+     depends on the layout viewport being the device's own width. -->
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="referrer" content="no-referrer">
+<link rel="stylesheet" href="/src/rocoto-fonts.css">
+<style>@font-face{font-family:'Inter';src:url('/inter.woff2') format('woff2');font-weight:100 900;font-display:swap}
+html,body{margin:0;background:#FAF7F3;-webkit-font-smoothing:antialiased}</style>
+</head><body><div id="root"></div><script type="module" src="/src/prototypes/cedar/main.tsx"></script></body></html>

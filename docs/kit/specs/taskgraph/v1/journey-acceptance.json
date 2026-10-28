@@ -1,0 +1,875 @@
+{
+  "schemaVersion": "1.0",
+  "authority": "Cross-system journeys are acceptance contracts over existing leaves. They make hand-offs, permissions, drafts, failures, customer-visible outcomes and evidence explicit without changing any leaf status or creating a production claim from kit behaviour. Each journey states the relevant release-profile boundary: designed capability, capability enabled for the cohort, and independent runtime proof remain distinct.",
+  "requiredJourneyIds": [
+    "JNY-01",
+    "JNY-02",
+    "JNY-03",
+    "JNY-05",
+    "JNY-06",
+    "JNY-07",
+    "JNY-08",
+    "JNY-09"
+  ],
+  "journeys": [
+    {
+      "id": "JNY-01",
+      "title": "Phone source with seven product lines to reviewed unvalued albaran draft",
+      "status": "SPECIFIED",
+      "sourceDocument": "notes/THE-JOURNEYS-SPEC.md",
+      "anchor": "jny-01-phone-source-with-seven-product-lines-to-an-approved-receipt-or-draft",
+      "taskIds": [
+        "SRC-01.01",
+        "SRC-01.02",
+        "INT-01.01",
+        "INT-01.02",
+        "CAT-01.01",
+        "CAT-01.02",
+        "PRD-01.02",
+        "INV-01.01",
+        "LOT-01.03",
+        "ALB-01.01",
+        "ALB-01.02",
+        "ALB-01.03",
+        "QLT-01.01",
+        "QLT-02.01",
+        "FND-03.03",
+        "OBJ-01.03",
+        "UTL-01.01",
+        "UTL-02.01"
+      ],
+      "policyKeys": [
+        "releaseProfile.orderReview",
+        "productRequests.suggestNewSkus"
+      ],
+      "actualRuntimeGap": "A source view, parsed candidate or local draft is not an accepted line, SKU creation, issued albaran, customer message, stock movement or ERP action. In the order-review profile, a seven-line result remains unvalued and every enabled review command needs its own tenant-scoped actual evidence.",
+      "steps": [
+        {
+          "id": "JNY-01.01",
+          "action": "Retain the seven phone-source lines with source identity, wording, position and revision.",
+          "permissions": "Source-read and source-retention policy for the current tenant.",
+          "draft": "The source review is reopenable; it creates no SKU, receipt, stock movement, priced document, customer message or ERP action.",
+          "failure": "Unavailable, quarantined or incomplete source names the actual retained count and recovery path.",
+          "customerOutcome": "No customer-visible change or completion claim.",
+          "evidence": "Synthetic seven-line fixture with source lineage and retention decision trace."
+        },
+        {
+          "id": "JNY-01.02",
+          "action": "Resolve each line as an exact tenant SKU, a field-check on an otherwise exact SKU, an off-SKU literal item, or a choice between multiple real SKUs.",
+          "permissions": "Catalogue/product proposal authority is distinct from source read authority.",
+          "draft": "Candidate, field-check reason, literal off-SKU row and multiple-choice selection remain draft until a named review command succeeds.",
+          "failure": "Ambiguous/missing match retains wording and offers the required review state; similar name/model output cannot select a SKU or manufacture a top candidate.",
+          "customerOutcome": "No invented product name, code, price, total, stock or availability claim.",
+          "evidence": "Exact-match, ambiguity and unknown-product replay report."
+        },
+        {
+          "id": "JNY-01.03",
+          "action": "Keep a repeated preparation/brochure wording as a note or proposed option unless a reviewer separately enters the new-SKU/variation flow.",
+          "permissions": "Tenant policy and manual reviewed creation grant are required for a new sellable SKU or mapped variation; accepting an off-SKU line is not that grant.",
+          "draft": "Base-item note, off-SKU one-off and proposed variation remain reviewable with source lineage.",
+          "failure": "suggestNewSkus=false blocks automatic SKU hardening; a missing mapping retains the literal one-off or note.",
+          "customerOutcome": "The accepted line treatment is visible before an unvalued document draft; no customer reply is sent by Rocoto.",
+          "evidence": "Repeated-wording fixture proving no automatic SKU/ERP mapping."
+        },
+        {
+          "id": "JNY-01.04",
+          "action": "Review the active line grammar: normal exact line; a red local outline/underline around only the ambiguous or abnormal field; a faded italic literal off-SKU one-off with accept/reject; or a compact multiple-exact-SKU choice.",
+          "permissions": "Order-review command authority for the exact tenant and current source/order revision.",
+          "draft": "A field check, one-off acceptance/rejection and multiple-choice selection remain draft until review accepts them; no lot, inventory or tariff state is created.",
+          "failure": "Negative or unsupported quantity/unit, stale source, rejected one-off or unresolved choice remains repairable and moves no stock.",
+          "customerOutcome": "No availability, received-goods, price, total or customer-message claim before acceptance.",
+          "evidence": "Exact/field-check/off-SKU/multiple-choice matrix with source spans, duplicate-retry and mobile traces."
+        },
+        {
+          "id": "JNY-01.05",
+          "action": "Review and accept only the selected unvalued line-level acts with idempotency and source lineage; separately show any reasoned reply-attention that is unrelated to a line identity.",
+          "permissions": "Each order-review, product-creation and future document command checks its own grant and expected revision; native chat/email handoff checks no outbound grant because it does not send.",
+          "draft": "Unaccepted rows and reply-attention items remain separated from accepted rows and can be reopened or dismissed with a custom reason.",
+          "failure": "Partial success lists accepted identifiers and unresolved rows; it never says all seven received, priced, sent or final without the separately enabled commands and evidence.",
+          "customerOutcome": "Only later, separately enabled customer/document outcomes can be shown; the active reply tray opens the relevant native provider thread.",
+          "evidence": "Command/event lineage report across seven rows."
+        },
+        {
+          "id": "JNY-01.06",
+          "action": "Keep an off-SKU product with box/kg wording as a faded italic literal source row until a reviewer accepts it as a one-off, rejects it, or selects one exact SKU from a multiple-choice set.",
+          "permissions": "Source read and order-review authority are required; a later new-SKU command has separate creation authority.",
+          "draft": "Preserve literal product wording, stated box/kg facts, candidates and validation gaps; never derive a conversion, inventory quantity or top candidate by default.",
+          "failure": "Unknown identity, unsupported unit or missing equivalence blocks a choice/acceptance and keeps the row repairable; no generic reply flag replaces this line state.",
+          "customerOutcome": "No invented SKU, conversion, availability, stock, price, total or customer message is shown.",
+          "evidence": "Off-SKU/box-kg accept/reject and multiple-real-SKU fixture with no-auto-SKU/no-fake-candidate proof."
+        },
+        {
+          "id": "JNY-01.07",
+          "action": "Recover an interrupted seven-line review by reopening its tenant-scoped draft and refetching current source/target revisions before a new command.",
+          "permissions": "The same scoped source/target read permissions are checked on reopen; each later write checks its own current grant.",
+          "draft": "Persist only draft intent, lineage, per-row state and idempotency identity; separate previously accepted rows from unresolved rows.",
+          "failure": "A changed revision, expired authority or uncertain prior outcome requires review and cannot force-apply the draft.",
+          "customerOutcome": "Recovery never claims all seven reviewed, received, priced, communicated or final merely because a draft reopens.",
+          "evidence": "Interrupted-entry/reopen, stale-revision, tenant-isolation and no-duplicate-command traces."
+        }
+      ],
+      "assertions": {
+        "positive": [
+          "Seven retained source rows remain individually traceable through review and any accepted unvalued line/document action.",
+          "Repeated options follow tenant policy and manual review before becoming a sellable SKU or mapped variation; one-off acceptance does not create one.",
+          "Exact, field-check, off-SKU and multiple-choice rows plus interrupted drafts preserve literal lineage until independently reviewed, current-revision commands are accepted.",
+          "An unrelated uncertainty appears as an independent reasoned reply-attention with custom dismissal and native-provider handoff, not as a fake line state or a customer send."
+        ],
+        "negative": [
+          "A repeated phrase, similar SKU name, model proposal, one-off acceptance or local draft cannot auto-create stock, a SKU, an ERP mapping or customer message.",
+          "A partial batch cannot display as seven accepted, priced, sent or final lines.",
+          "An interrupted draft, unknown product or ambiguous box/kg wording cannot infer a conversion, issue stock, fabricate a top candidate or report seven completed rows.",
+          "A no-match route, save-next sequence or later item cannot prefill/create a SKU, inherit a lot, send a reply or masquerade as a bulk stock event."
+        ]
+      },
+      "requiredEvidence": [
+        "Seven-line unvalued order-review fixture, source-to-command lineage, capability matrix, negative-path trace and mobile/accessibility evidence.",
+        "Exact/field-check/off-SKU/multiple-choice plus interrupted-draft recovery fixtures with current-revision, no-auto-SKU, no-fake-candidate and no-outbound proof.",
+        "Reasoned reply-attention custom-dismissal/native-provider-handoff fixture with no-send proof."
+      ],
+      "canonicalRefs": [
+        "SRC-01",
+        "CAT-01",
+        "INV-01",
+        "LOT-01",
+        "INTEL-08",
+        "INTX-01",
+        "FND-03",
+        "OBJ-01",
+        "UTL-01.1",
+        "UTL-02.1"
+      ]
+    },
+    {
+      "id": "JNY-02",
+      "title": "Working paper to actual kg/price review and final albaran",
+      "status": "SPECIFIED",
+      "sourceDocument": "notes/THE-JOURNEYS-SPEC.md",
+      "anchor": "jny-02-working-paper-to-actual-kg-price-review-and-final-albaran",
+      "taskIds": [
+        "SRC-01.02",
+        "INT-01.03",
+        "INT-02.03",
+        "LOT-01.04",
+        "COM-01.01",
+        "ALB-01.01",
+        "ALB-01.02",
+        "ALB-01.04",
+        "DOC-01.01",
+        "DOC-01.02",
+        "QLT-01.01",
+        "QLT-02.01",
+        "ALB-01.03"
+      ],
+      "policyKeys": [
+        "config.albaran.values",
+        "commercial.approvalPolicy",
+        "commercial.unitEquivalencePolicy"
+      ],
+      "actualRuntimeGap": "This is a full-production commercial/inventory journey and is disabled in the order-review profile. A print preview/request, handwritten value, image extraction or local photo review does not prove physical print, accepted actuals, final document issue, provider receipt or customer delivery; no price, total or lot field may surface in order review as though this journey were enabled.",
+      "steps": [
+        {
+          "id": "JNY-02.01",
+          "action": "Render a working-paper snapshot with revision, scope and explicit unknown-final-fact treatment.",
+          "permissions": "Document read/render authority and selected print profile access.",
+          "draft": "Working paper is an output snapshot; it does not finalise commercial facts.",
+          "failure": "Render/print failure preserves the selected revision and names output state without physical-print claim.",
+          "customerOutcome": "No final total or final document claim when actual facts remain unknown.",
+          "evidence": "Immutable snapshot comparison and print-state trace."
+        },
+        {
+          "id": "JNY-02.02",
+          "action": "Capture actual quantity/kg and final-price proposals manually or from a photographed paper.",
+          "permissions": "Media retention/review authority is separate from commercial/document write authority.",
+          "draft": "Photo/manual values are proposals linked to paper/document/revision evidence.",
+          "failure": "Unreadable, duplicate, stale or uncertain evidence stays review-required and cannot write a line.",
+          "customerOutcome": "No fabricated kg, price or total.",
+          "evidence": "Synthetic annotated-paper/photo fixture with source coordinates and uncertainty states."
+        },
+        {
+          "id": "JNY-02.03",
+          "action": "Review line before/after values, units, price basis, lot consequences and concerns against the latest revision.",
+          "permissions": "Commercial/document amendment grant with expected revision and concern-scope authority.",
+          "draft": "Review preserves proposals and concerns until a named correction/resolution command is accepted.",
+          "failure": "Conflict, unit mismatch, missing price authority or unresolved concern retains the draft and blocks issue.",
+          "customerOutcome": "Prior accepted revision remains authoritative.",
+          "evidence": "Stale-paper, unit-mismatch, concern-dismissal and recovery traces."
+        },
+        {
+          "id": "JNY-02.04",
+          "action": "Accept reviewed actuals as a linked amendment and render an immutable final albaran revision.",
+          "permissions": "Server checks document, commercial, stock/lot and issue policies at the command.",
+          "draft": "Previous working paper/revision remains inspectable and stale where applicable.",
+          "failure": "Denied/failed amendment does not overwrite prior facts or fabricate a new revision.",
+          "customerOutcome": "Customer view uses only accepted frozen values and its own price-visibility policy.",
+          "evidence": "Capture-to-amendment-to-revision lineage and immutable output checksum."
+        },
+        {
+          "id": "JNY-02.05",
+          "action": "Issue/reprint/output the selected revision with independent document and transport states.",
+          "permissions": "Issue/reprint/transport grants are checked independently of amendment review.",
+          "draft": "Accepted document revision persists even if a later output job fails.",
+          "failure": "Queued, failed, cancelled, retried and unknown output remain distinct from issued revision.",
+          "customerOutcome": "Prices are shown or hidden according to the stored document policy, with no false print/delivery claim.",
+          "evidence": "Two policy-render comparisons and provider/output receipt trace."
+        },
+        {
+          "id": "JNY-02.06",
+          "action": "Review an actual partial delivery against named lot allocations and accept only delivered/depleted quantity while retaining the unfulfilled balance.",
+          "permissions": "Stock/lot and document amendment authority are checked independently at the current document and lot revisions.",
+          "draft": "Keep named lot assignments, assigned/unassigned balance and proposed document revision together as a recoverable draft.",
+          "failure": "Lot conflict, over-allocation or missing delivery evidence blocks the amendment; remaining quantity is not assumed delivered.",
+          "customerOutcome": "The final document states only accepted partial delivery and never silently completes the remainder.",
+          "evidence": "Partial-delivery multi-lot fixture, invariant/conflict trace and final-document comparison."
+        },
+        {
+          "id": "JNY-02.07",
+          "action": "Propose an exact substitution with its unit/price consequence and collect separately evidenced customer approval before final issue.",
+          "permissions": "Proposal authority, customer-contact authorization and final document issue authority remain separate commands.",
+          "draft": "Keep proposed substitute, source reason, approval request/receipt, expiry and document revision separately recoverable.",
+          "failure": "Pending, denied, expired or stale approval blocks final substitution and leaves the previous accepted line authoritative.",
+          "customerOutcome": "No substitute is presented as accepted, delivered or final before its matching customer-approval and document-revision evidence.",
+          "evidence": "Substitution proposal/approval/expiry/revision-conflict fixture and no-final-issue denial trace."
+        },
+        {
+          "id": "JNY-02.08",
+          "action": "Run the paper-review/photo intake as a revision-bound human comparison: retain current/working/stale/final state, optional local source photo, manual actual fields and explicit Finish review.",
+          "permissions": "Paper source attach/read, line correction and later print each require their own current tenant/document/print scope authority.",
+          "draft": "Photo retry/local association and manual actual field drafts remain distinct from an accepted line amendment and later print snapshot.",
+          "failure": "Missing/failed photo, stale review, invalid actual or omitted finish cannot apply figures, mark final, issue a document or claim physical print.",
+          "customerOutcome": "A customer sees only a later accepted document revision under its policy; no photo, review state or working-paper label claims delivery.",
+          "evidence": "Paper stage/photo-retry/manual-field/Finish-review/later-print fixture with no-auto-extraction and no-final-without-later-print proof."
+        }
+      ],
+      "assertions": {
+        "positive": [
+          "Actual kg/price reaches a final albaran only through evidenced human review, accepted amendment and immutable revision.",
+          "Customer price visibility is explicit before issue and is stored with the document policy snapshot.",
+          "Partial delivery remains attributed to named lots and a substitution reaches final issue only after separately evidenced customer approval.",
+          "Paper review reaches final paper only through matched source/document review, explicit Finish review and a later canonical print."
+        ],
+        "negative": [
+          "Photo/OCR extraction, a working print, dismissal or a preview cannot directly finalise a line or resolve a concern.",
+          "A print request cannot claim physical print, customer delivery or final commercial facts.",
+          "A remaining lot balance or proposed substitute cannot be silently completed, allocated or shown as accepted delivery.",
+          "A local photo, missing blob, automatic reading proposal, omission of completion or old print cannot apply figures or make paper final."
+        ]
+      },
+      "requiredEvidence": [
+        "Paper/photo review fixture, amendment lineage, concern test, output-state trace and two customer-document policy renders.",
+        "Partial-lot-delivery and substitution approval/expiry fixtures with no-final-issue denial proof.",
+        "Paper stage/source-photo/manual-actual/finish/later-print fixture with client-retention failure and no-final shortcut proof."
+      ],
+      "canonicalRefs": [
+        "ALB-01",
+        "DOC-01",
+        "COM-01",
+        "LOT-01",
+        "INTEL-06",
+        "INTEL-07",
+        "INTEL-10",
+        "QLT-01",
+        "QLT-02",
+        "INTEL-06A"
+      ]
+    },
+    {
+      "id": "JNY-03",
+      "title": "Four SKU price changes and truthful in-chat confirmation",
+      "status": "SPECIFIED",
+      "sourceDocument": "notes/THE-JOURNEYS-SPEC.md",
+      "anchor": "jny-03-four-sku-price-changes-and-truthful-in-chat-confirmation",
+      "taskIds": [
+        "PRD-01.03",
+        "COM-01.01",
+        "COM-01.02",
+        "ADM-01.01",
+        "INT-01.03",
+        "INTG-01.01",
+        "ALB-01.02",
+        "ALB-01.04",
+        "DOC-01.04",
+        "QLT-01.01",
+        "QLT-02.01",
+        "PRD-01.06",
+        "ADM-01.03",
+        "ADM-01.06",
+        "CAT-01.02",
+        "PRD-01.02",
+        "INTG-01.03",
+        "ALB-01.03"
+      ],
+      "policyKeys": [
+        "grants.confirm",
+        "config.confirmation.includePrices",
+        "config.albaran.values",
+        "productRequests.suggestNewSkus",
+        "productRequests.erpLines"
+      ],
+      "actualRuntimeGap": "This is a full-production commercial/customer-outbound journey and is disabled in the order-review profile. A four-row price draft, client-side preview, setting control or queued transport attempt does not prove accepted prices, message provider acceptance, customer receipt or document issue; dormant controls must not appear as live capability.",
+      "steps": [
+        {
+          "id": "JNY-03.01",
+          "action": "Build a four-exact-SKU tariff price draft with previous value, proposed value, unit, effective time and reason/source.",
+          "permissions": "Tenant commercial-write grant for each exact SKU/tariff scope.",
+          "draft": "All rows remain draft until server acceptance; a family relation cannot apply a price to another SKU.",
+          "failure": "Invalid/stale/retired row remains named with repair copy and cannot hide behind a batch-success message.",
+          "customerOutcome": "No customer message or document price changes from a draft.",
+          "evidence": "Four-SKU fixture with stale, retired-tariff and unit-policy negatives."
+        },
+        {
+          "id": "JNY-03.02",
+          "action": "Validate and accept the price command under effective commercial policy with per-row or atomic truth.",
+          "permissions": "Server checks commercial policy, revision, exact decimal, tariff lifecycle and idempotency.",
+          "draft": "Unaccepted rows remain retryable/reviewable; issued document snapshots remain unchanged.",
+          "failure": "Partial/denied command reports exact accepted and rejected rows without invented price acceptance.",
+          "customerOutcome": "Only accepted price values are eligible for a later confirmation or document.",
+          "evidence": "Accepted event trace, decimal calculation evidence and retry/idempotency report."
+        },
+        {
+          "id": "JNY-03.03",
+          "action": "Show all three quote settings, chosen-account live price preview and customer-visible consequence before requesting a message.",
+          "permissions": "Read effective grants/configuration; message request needs separate channel/recipient authorization.",
+          "draft": "Preview uses exact current four-SKU scope, chosen account and stored effective policy, never stale browser/seeded data.",
+          "failure": "Disabled/missing control, unavailable price or settings-write failure preserves prior setting state and names the quote/repair boundary.",
+          "customerOutcome": "Only all three enabled controls allow a quote; the preview says Price to confirm and Order is not fully confirmed when value evidence is missing.",
+          "evidence": "All grants.confirm/config.confirmation.includePrices/config.albaran.values matrix snapshots plus settings-save-failure trace."
+        },
+        {
+          "id": "JNY-03.04",
+          "action": "Request an authorized in-chat confirmation; require all three settings for a price quote.",
+          "permissions": "Live outbound grant, approved recipient/channel, tenant policy and message scope check.",
+          "draft": "Message request records exact price-inclusion choice and accepted SKU scope separately from price command.",
+          "failure": "Disabled transport, one disabled quote control, provider failure or revoked grant preserves price acceptance but creates no sent/delivered claim.",
+          "customerOutcome": "A quote includes prices only when all three settings permit; internal ERP price remains unaffected by customer presentation settings.",
+          "evidence": "No-outbound transport, provider submission/receipt/failure/retry trace."
+        },
+        {
+          "id": "JNY-03.05",
+          "action": "Prepare any later albaran independently with accepted line price and config.albaran.values policy snapshot.",
+          "permissions": "Document issue/read policy is independent of chat permission.",
+          "draft": "Albaran preview is a document draft/revision, not a chat copy.",
+          "failure": "Document policy mismatch or issue denial blocks only document outcome and preserves prior accepted facts.",
+          "customerOutcome": "Quote visibility never overrides albaran policy; hiding customer values never erases internal commercial/ERP price facts.",
+          "evidence": "Customer-document comparisons for both visibility values and issue permission trace."
+        },
+        {
+          "id": "JNY-03.06",
+          "action": "Keep a recurring brochure or preparation request as a note until explicit review accepts a separately approved customerOption snapshot or mapped variation.",
+          "permissions": "Product-option review, product adoption and ERP mapping authority are separate from the confirmation settings controls.",
+          "draft": "Retain source wording, internal preparation note, customerOption proposal, approval/mapping state and base SKU separately.",
+          "failure": "Recurrence, a UI setting or missing approval/mapping cannot create a SKU or copy an internal note to customer output.",
+          "customerOutcome": "The customer sees an approved base-item/customer-option or variation distinction before issue, never an auto-created SKU.",
+          "evidence": "Recurring-option fixture with no-auto-SKU, approved customerOption and customer-document distinction traces."
+        },
+        {
+          "id": "JNY-03.07",
+          "action": "Open a new commercial review when a daily rate changes after a quote snapshot was accepted, preserving the prior quote as historic evidence.",
+          "permissions": "Commercial approval and any new message request each check current tenant policy, recipient and exact SKU scope.",
+          "draft": "Keep original quote snapshot, later price proposal, effective time and review outcome separately; never rewrite the accepted message body.",
+          "failure": "A stale/new rate cannot be silently substituted into an accepted quote or issued document; it stays pending review.",
+          "customerOutcome": "A customer receives a new-price review only where authorized; the earlier accepted quote stays truthful.",
+          "evidence": "Quote-snapshot/later-rate fixture, no-rewrite regression and approved re-quote trace."
+        },
+        {
+          "id": "JNY-03.08",
+          "action": "Block an ERP adapter request when the approved customerOption, mapped variation or surcharge has no reviewed destination representation.",
+          "permissions": "ERP adapter authorization and mapping approval are checked independently of customer preview and price settings.",
+          "draft": "Retain option/surcharge representation, selected policy and mapping problem as a recoverable draft without a sync claim.",
+          "failure": "Missing destination support cannot silently drop, flatten, create or substitute an ERP line.",
+          "customerOutcome": "No customer or ERP success outcome appears until a permitted reviewed representation is accepted.",
+          "evidence": "Missing-option/surcharge mapping fixture, blocked adapter request and reviewed-representation receipt trace."
+        },
+        {
+          "id": "JNY-03.09",
+          "action": "Review a Team note separately from a proposed product option and explicitly approve only an eligible customerOption snapshot for outward copy.",
+          "permissions": "Order-note review, customer-option approval, product creation, document issue and message/ERP composition all check distinct current grants and scope.",
+          "draft": "Keep literal team note, recurrence fact, reusable-name draft, customer-visible text draft, approval/source/actor/time and product candidate separately revisioned.",
+          "failure": "Recurrence, a raw note, unapproved audience, local review failure or cancel cannot create a SKU, pass text outward, alter price/stock or rewrite issued/sent snapshots.",
+          "customerOutcome": "Only an approved customerOption appears in customer confirmation/paper; internal preparation text remains internal.",
+          "evidence": "Team-note/product-option/customerOption approve-remove/outward-filter fixture with no-auto-SKU and no-prepNote-leak proof."
+        }
+      ],
+      "assertions": {
+        "positive": [
+          "All four price changes retain exact SKU/tariff/unit identity, accepted policy revision and separate message/document consequences.",
+          "The operator and customer outcome preview disclose chat versus albaran price treatment before either request.",
+          "An approved customerOption/mapped-variation and a later re-quote retain distinct approval, price/policy snapshot and ERP representation evidence.",
+          "A customer-facing option is an explicit approved snapshot with audience/review/source/actor/time and remains distinct from its internal Team note."
+        ],
+        "negative": [
+          "A setting, queued attempt or provider submission cannot claim customer receipt/delivery or rewrite issued document prices.",
+          "A price included in chat cannot silently force a price into a hidden-price albaran.",
+          "Recurrence, an internal preparation note, a later daily rate or a missing ERP field cannot rewrite an accepted quote, auto-create a SKU or silently flatten an option/surcharge.",
+          "A prepNote, raw request, recurrence or unapproved option cannot appear in customer confirmation, customer paper or ERP composition."
+        ]
+      },
+      "requiredEvidence": [
+        "Four-SKU matrix fixture, policy snapshots, price-event trace, outbound transport evidence and customer-document comparisons.",
+        "CustomerOption/ERP-representation, later-rate re-quote and no-auto-SKU fixtures with blocked-mapping proof.",
+        "Team-note/customerOption approval-removal/outward-filter fixture with no-prepNote-leak and independent product-create proof."
+      ],
+      "canonicalRefs": [
+        "COM-01",
+        "ADM-01",
+        "INTG-01",
+        "ALB-01",
+        "DOC-01",
+        "QLT-01",
+        "QLT-02",
+        "PRD-01",
+        "CAT-01",
+        "CAT-01.1",
+        "CAT-01.2",
+        "ADM-01.1",
+        "UTL-02.1",
+        "OBJ-02",
+        "CAT-14A"
+      ]
+    },
+    {
+      "id": "JNY-05",
+      "title": "New SKU to price, customer quote, albarán edit and reprint",
+      "status": "SPECIFIED",
+      "sourceDocument": "notes/THE-JOURNEYS-SPEC.md",
+      "anchor": "jny-05-new-sku-to-price-customer-quote-albaran-edit-and-reprint",
+      "taskIds": [
+        "PRD-01.02",
+        "PRD-01.03",
+        "COM-01.01",
+        "CUS-01.02",
+        "ALB-01.01",
+        "ALB-01.02",
+        "DOC-01.01",
+        "DOC-01.02"
+      ],
+      "policyKeys": [
+        "commercial.unitEquivalencePolicy",
+        "config.confirmation.includePrices",
+        "config.albaran.values",
+        "grants.confirm"
+      ],
+      "actualRuntimeGap": "The order-review profile enables literal SKU creation/review, reviewed artwork and unvalued print/file output, while price, quote and customer delivery are disabled. The kit's CreateSKU, local price handoff, artwork request, quote preview and native-print request do not prove server-authorized SKU/price/document acceptance, customer delivery, physical print or local-file persistence.",
+      "steps": [
+        {
+          "id": "JNY-05.01",
+          "action": "Create a tenant-scoped manual SKU from Product name, SKU and Unit, or create a variation SKU from a literal difference description.",
+          "permissions": "Product-create authority; SKU and Selling-unit data policy are checked at command time.",
+          "draft": "Typing, cancel, Back and Upload catalogue preserve scoped identity draft and create no product.",
+          "failure": "Blank Product name, SKU or Unit retains the draft. Canonical SKU storage trims outer whitespace, compares case-insensitively, preserves internal punctuation and leading zeroes, and blocks duplicates with repair/Open existing.",
+          "customerOutcome": "No sellable identity, price or customer consequence.",
+          "evidence": "Exact-SKU/blank-Sold-by/outer-whitespace/case-insensitive-duplicate/custom-unit/variation fixtures at desktop, 390 and 320 px."
+        },
+        {
+          "id": "JNY-05.02",
+          "action": "Commit one stable SKU with idempotent recovery across SKU and catalogue stores.",
+          "permissions": "Tenant/create policy, current revision and request identity.",
+          "draft": "Partial write retains one creation identity; retry resumes it.",
+          "failure": "Dependent-store failure cannot create another SKU, artwork or price event.",
+          "customerOutcome": "No success claim before both identity stores accept.",
+          "evidence": "Injected second-store failure and same-ID retry lineage."
+        },
+        {
+          "id": "JNY-05.03",
+          "action": "Write first exact-SKU Price and review a selected customer quote.",
+          "permissions": "Commercial tariff write and separate recipient/channel/message authority.",
+          "draft": "Price and quote drafts retain exact SKU/tariff/customer/policy snapshots.",
+          "failure": "Conflict, missing price, policy denial or provider failure keeps accepted facts separate from unsent request.",
+          "customerOutcome": "No quote/sent/delivered claim without provider receipt.",
+          "evidence": "Price revision, policy matrix and provider-state trace."
+        },
+        {
+          "id": "JNY-05.04",
+          "action": "Create/edit an albarán and output/reprint a selected document revision.",
+          "permissions": "Independent document amendment, issue, output and physical-confirmation grants.",
+          "draft": "Stale document amendment and output request retain selected revision/context.",
+          "failure": "Stale revision, downloadStarted or print requested cannot claim local save or physical print.",
+          "customerOutcome": "Only issued revision/policy snapshot is customer-visible; printed requires explicit Confirm printed.",
+          "evidence": "Historic-snapshot, stale-reprint, requested/Confirm printed/downloadStarted matrix."
+        },
+        {
+          "id": "JNY-05.05",
+          "action": "Open the captured copy, request native printing and explicitly confirm the actual version/copies; later edits show Changed since printing.",
+          "permissions": "Document render/print and confirmation authority, separately from issue or outbound send.",
+          "draft": "Retain the original request ID and frozen copy on popup failure; unresolved print stays unconfirmed.",
+          "failure": "A canceled dialog, download request, old revision or asset failure never confirms current paper.",
+          "customerOutcome": "Customer sees only the deliberately issued copy; no new email, invoice or repricing from Print.",
+          "evidence": "Native dialog invocation, blocked retry, stale-version confirmation, person/time activity and reprint-count trace."
+        }
+      ],
+      "assertions": {
+        "positive": [
+          "Canonical SKU value, first price, quote and document revisions remain exact-SKU scoped.",
+          "Retry and reprint preserve one request/revision lineage."
+        ],
+        "negative": [
+          "No default kg/category/family assignment, duplicate sibling, historical repricing, delivery claim, local-save claim or physical-print claim."
+        ]
+      },
+      "requiredEvidence": [
+        "Exact identity/retry/price/quote/albarán/reprint lineage with desktop and phone interruption evidence."
+      ],
+      "canonicalRefs": [
+        "SYS-182",
+        "INTX-11",
+        "E188",
+        "INTEL-17",
+        "PRD-01",
+        "COM-01",
+        "ALB-01",
+        "DOC-01"
+      ]
+    },
+    {
+      "id": "JNY-06",
+      "title": "Operator-reported shortage to reviewed impact, customer copy and partial/unknown delivery",
+      "status": "SPECIFIED",
+      "sourceDocument": "notes/THE-JOURNEYS-SPEC.md",
+      "anchor": "jny-06-operator-reported-shortage-to-reviewed-impact-customer-copy-and-partial-unknown-delivery",
+      "taskIds": [
+        "INT-01.07",
+        "INV-01.01",
+        "LOT-01.03",
+        "ALB-01.02",
+        "INTG-01.01",
+        "QLT-01.01"
+      ],
+      "policyKeys": [
+        "grants.confirm",
+        "commercial.approvalPolicy",
+        "config.albaran.values"
+      ],
+      "actualRuntimeGap": "This is a full-production inventory/supply-impact/customer-outbound journey and is disabled in the order-review profile. An operator report, local impact view or generated copy does not prove supplier confirmation, customer contact, delivery, shortage acceptance or stock/document amendment; native handoff never becomes a customer send.",
+      "steps": [
+        {
+          "id": "JNY-06.01",
+          "action": "Record exact-SKU/lot shortage facts and explicit unknowns as a scoped draft.",
+          "permissions": "Shortage-report authority for tenant/location.",
+          "draft": "Unknown quantity/delivery remains explicit and recoverable.",
+          "failure": "Missing fact blocks only dependent command; no default delivery conclusion.",
+          "customerOutcome": "No customer claim.",
+          "evidence": "Known/unknown shortage fixture."
+        },
+        {
+          "id": "JNY-06.02",
+          "action": "Review exact-SKU commitment, lot and document impact.",
+          "permissions": "Read authority for current stock/commitment/document scope.",
+          "draft": "Treatment proposal remains distinct from impact projection.",
+          "failure": "Changed revision requires re-review.",
+          "customerOutcome": "No stale-impact contact.",
+          "evidence": "Lot/document conflict trace."
+        },
+        {
+          "id": "JNY-06.03",
+          "action": "Review evidence-bounded copy and authorized recipients, then request communication separately.",
+          "permissions": "Recipient/channel consent and message command authority.",
+          "draft": "Copy revision, recipients and policy snapshot remain scoped.",
+          "failure": "Per-recipient/provider states remain separate.",
+          "customerOutcome": "No dispatch/delivery/supplier-confirmed claim without evidence.",
+          "evidence": "Mixed-recipient policy/provider matrix."
+        },
+        {
+          "id": "JNY-06.04",
+          "action": "Accept partial or unknown delivery evidence with remainder and lot/document amendments.",
+          "permissions": "Independent stock/lot/document authority at current revisions.",
+          "draft": "Partial/remainder/unknown follow-up remains recoverable.",
+          "failure": "Over-delivery/unit/lot conflict blocks acceptance.",
+          "customerOutcome": "Only accepted partial quantity is shown; unknown stays unknown.",
+          "evidence": "Partial/unknown delivery and interruption fixtures."
+        },
+        {
+          "id": "JNY-06.05",
+          "action": "Reconcile outbound outcomes per exact approved recipient and recover known retryable failures without sending again to accepted or unknown recipients.",
+          "permissions": "Verified current channel authority, consent and signed approval digest/recipient set.",
+          "draft": "Retain exact message, recipient and order/evidence revisions through timeout or partial receipt.",
+          "failure": "Unknown, malformed or incomplete receipt blocks blind retry until idempotent status lookup.",
+          "customerOutcome": "Only provider evidence supports Sent or Delivered; no double message after a timeout.",
+          "evidence": "Partial receipt, accepted/failed/unknown disjoint-set checks, stale approval and reconciliation trace."
+        }
+      ],
+      "assertions": {
+        "positive": [
+          "Exact-SKU shortage impact, recipient copy and partial delivery retain evidence and revisions."
+        ],
+        "negative": [
+          "Operator report cannot imply supplier confirmation, customer send, complete delivery or substitute acceptance."
+        ]
+      },
+      "requiredEvidence": [
+        "Impact/copy/recipient/partial-unknown delivery traces at desktop, 390 and 320 px."
+      ],
+      "canonicalRefs": [
+        "SYS-182",
+        "INTX-11",
+        "INTEL-17",
+        "INV-01",
+        "LOT-01",
+        "ALB-01",
+        "INTG-01"
+      ]
+    },
+    {
+      "id": "JNY-07",
+      "title": "Template gallery to configured copy, scoped output and history",
+      "status": "SPECIFIED",
+      "sourceDocument": "notes/THE-JOURNEYS-SPEC.md",
+      "anchor": "jny-07-template-gallery-to-configured-copy-scoped-output-and-history",
+      "taskIds": [
+        "DOC-01.03",
+        "DOC-01.01",
+        "OBJ-01.03",
+        "QLT-01.01",
+        "REL-01.01"
+      ],
+      "policyKeys": [
+        "export.columnPolicy",
+        "export.retentionPolicy",
+        "export.sharePolicy"
+      ],
+      "actualRuntimeGap": "A gallery card, builder draft, local preview or downloadStarted event does not prove a durable recipe, completed file, local save, recipient access, ERP import or history retention.",
+      "steps": [
+        {
+          "id": "JNY-07.01",
+          "action": "Browse tenant-permitted templates and build exact schema-backed columns.",
+          "permissions": "Export/read and sensitive-column policy.",
+          "draft": "Template/column selection is local until save.",
+          "failure": "Denied/stale/cross-tenant field remains named and invalid.",
+          "customerOutcome": "No file/data claim.",
+          "evidence": "Tenant/column-denial fixture."
+        },
+        {
+          "id": "JNY-07.02",
+          "action": "Save immutable tenant-scoped recipe revision.",
+          "permissions": "Recipe save authority and expected revision.",
+          "draft": "Conflict retains latest and draft versions separately.",
+          "failure": "No in-place overwrite of historical recipes/files.",
+          "customerOutcome": "No export claim.",
+          "evidence": "Conflict/save-as-new trace."
+        },
+        {
+          "id": "JNY-07.03",
+          "action": "Request scoped file and retain run/recipe/source/policy evidence in history.",
+          "permissions": "Export run authority for current source scope.",
+          "draft": "Requested run and recipe remain distinct from finished file.",
+          "failure": "Requested/queued/partial/stale/expired states are explicit; retry re-reviews scope.",
+          "customerOutcome": "Download started never claims a local save or recipient access.",
+          "evidence": "Run-state/file-manifest/downloadStarted negative matrix."
+        },
+        {
+          "id": "JNY-07.04",
+          "action": "Recover builder/history across desktop and phone interruption.",
+          "permissions": "Current schema/policy rechecked on reopen.",
+          "draft": "Intent restores without implicit save/run.",
+          "failure": "Policy/schema change blocks stale action but preserves draft for repair.",
+          "customerOutcome": "No updated/current-file claim from stale bytes.",
+          "evidence": "Reload/offline/390/320 focus and no-overflow evidence."
+        },
+        {
+          "id": "JNY-07.05",
+          "action": "Use each column chevron to change its source field, rename the heading and move it by drag or keyboard before generating the same mapped file.",
+          "permissions": "Authorised recipe fields and export data at current tenant/schema revision.",
+          "draft": "Column stable IDs, order and headings remain a draft until explicit Save template.",
+          "failure": "Retired/private field or failed save retains the draft and blocks incorrect generation.",
+          "customerOutcome": "No file includes a mismatched heading/value, private field, unsafe formula or stale schema.",
+          "evidence": "Drag/keyboard equivalence, schema-change and generated workbook content parity fixture."
+        }
+      ],
+      "assertions": {
+        "positive": [
+          "Recipe, column, source cutoff, file run and history revision remain separately auditable."
+        ],
+        "negative": [
+          "A label, preview, downloadStarted or stale recipe cannot create a completed file/local-save/recipient-access claim."
+        ]
+      },
+      "requiredEvidence": [
+        "Schema/permission/conflict/run-state/history/download and responsive interruption fixtures."
+      ],
+      "canonicalRefs": [
+        "SYS-182",
+        "INTX-11",
+        "INTEL-17",
+        "DOC-01",
+        "QLT-01",
+        "REL-01"
+      ]
+    },
+    {
+      "id": "JNY-08",
+      "title": "First-time setup to controlled activation",
+      "status": "SPECIFIED",
+      "sourceDocument": "notes/THE-JOURNEYS-SPEC.md",
+      "anchor": "jny-08-first-time-setup-to-controlled-activation",
+      "taskIds": [
+        "ACT-01.01",
+        "ACT-01.02",
+        "ADM-01.02",
+        "INTG-01.01"
+      ],
+      "policyKeys": [
+        "tenant.activationPolicy",
+        "team.rolePolicy",
+        "messaging.connectionPolicy",
+        "source.intakeRetentionPolicy"
+      ],
+      "actualRuntimeGap": "A guided setup screen, local answer, selected phone number, upload preview, manual browser mark or roleplay turn is not a provisioned tenant, verified provider connection, accepted intake, analysis run, customer message or production activation.",
+      "steps": [
+        {
+          "id": "JNY-08.01",
+          "action": "Open and resume the setup journey in the shared 800×600 task frame.",
+          "permissions": "Authenticated tenant owner/session and current activation read scope.",
+          "draft": "Only tenant-scoped permitted setup drafts and current unanswered fact restore.",
+          "failure": "Close, reload, offline or changed role preserves safe draft and names recovery; no replayed external act.",
+          "customerOutcome": "No activation, connection or customer message claim.",
+          "evidence": "1920×1080, 1536×864, 1366×768, 360×800, 390×844 and 393×873, plus 1280×800 and 320×740 boundary frame/body-scroll/focus/keyboard recovery trace."
+        },
+        {
+          "id": "JNY-08.02",
+          "action": "Answer organisation and policy questions one at a time with current revisions.",
+          "permissions": "Owner or delegated organisation-setting authority.",
+          "draft": "Each labelled answer remains a draft until accepted; prior accepted answers stay separate.",
+          "failure": "Invalid or stale answer identifies the field/revision and refetches before save.",
+          "customerOutcome": "No policy, delivery or activation consequence from an unfinished answer.",
+          "evidence": "One-question ordering, validation, Back/Close/reopen and stale-setting fixture."
+        },
+        {
+          "id": "JNY-08.03",
+          "action": "Connect one named salesperson WhatsApp line and keep its owner distinct from later lines.",
+          "permissions": "Connection-owner and team-assignment authority; provider authorisation is separate.",
+          "draft": "Number/owner proposal remains pending until authorised connection and assignment acceptance.",
+          "failure": "Unverified, revoked or conflicting line stays unavailable and retains no wider account scope.",
+          "customerOutcome": "No message or live-connection claim.",
+          "evidence": "Two-line/independent-owner/revoke/no-send provider-boundary fixture."
+        },
+        {
+          "id": "JNY-08.04",
+          "action": "Submit authorised delivery-note, product and customer intake and review accepted facts.",
+          "permissions": "Source upload/read/review authority with tenant retention policy.",
+          "draft": "Source reference, validation and unresolved rows restore without raw-file leakage into conversation history.",
+          "failure": "Unsupported, quarantined, denied or interrupted source offers explicit retry/reselect/review recovery.",
+          "customerOutcome": "No sellable SKU, stock, import-complete or analysis-complete claim.",
+          "evidence": "Source-scope/retention/quarantine/reload fixture."
+        },
+        {
+          "id": "JNY-08.05",
+          "action": "State unavailable analysis honestly, record manual review explicitly, then run controlled roleplay and activation-gate review.",
+          "permissions": "Manual review, controlled roleplay and activation decision each require their own current authority.",
+          "draft": "Checklist retains accepted facts and unresolved gates, never a simulated provider/model result.",
+          "failure": "Roleplay, connection-test, legal/billing or owner-acceptance denial blocks activation and preserves the checklist.",
+          "customerOutcome": "No customer contact or live activation from manual review or test activity.",
+          "evidence": "Unavailable-analysis/manual-review/controlled-roleplay/owner-gate trace."
+        }
+      ],
+      "assertions": {
+        "positive": [
+          "A newly provisioned tenant can resume a one-question setup, independently assign two salesperson lines, review intake manually and see exact remaining activation gates."
+        ],
+        "negative": [
+          "A browser draft, upload preview, phone chip, manual review or roleplay cannot claim analysis, provider connection, customer send or production activation."
+        ]
+      },
+      "requiredEvidence": [
+        "Tenant/role/source/connection denial and recovery traces with no raw-file/customer-history leakage.",
+        "1920×1080, 1536×864, 1366×768, 360×800, 390×844 and 393×873, plus 1280×800 and 320×740 boundary shared-frame, keyboard, focus-return and no-overflow evidence."
+      ],
+      "canonicalRefs": [
+        "ACT-01",
+        "ADM-01",
+        "INTG-01",
+        "INTX-11",
+        "SYS-182",
+        "QLT-01"
+      ]
+    },
+    {
+      "id": "JNY-09",
+      "title": "Salesperson-scoped day to authorised output activity",
+      "status": "SPECIFIED",
+      "sourceDocument": "notes/THE-JOURNEYS-SPEC.md",
+      "anchor": "jny-09-salesperson-scoped-day-to-authorised-output-activity",
+      "taskIds": [
+        "ADM-01.02",
+        "ALB-01.01",
+        "ALB-01.04",
+        "DOC-01.01",
+        "DOC-01.02"
+      ],
+      "policyKeys": [
+        "team.accountScopePolicy",
+        "sales.crossCoverPolicy",
+        "document.outputPolicy",
+        "print.confirmationPolicy"
+      ],
+      "actualRuntimeGap": "An owner chip, browser filter, Sales count, local print request, native dialog or reprint link is not a current account grant, cross-cover authority, physical print receipt or customer delivery proof.",
+      "steps": [
+        {
+          "id": "JNY-09.01",
+          "action": "Open Sales on the actor’s owned number and assigned-account scope with named filter and counts.",
+          "permissions": "Authenticated salesperson scope over current tenant line/accounts/orders.",
+          "draft": "The selected scoped filter restores only while current assignment remains valid.",
+          "failure": "Changed line/account assignment clears stale scope and returns to permitted results.",
+          "customerOutcome": "No access, count, message or document claim for unassigned accounts.",
+          "evidence": "Two-salesperson owned-line/account-filter/count fixture."
+        },
+        {
+          "id": "JNY-09.02",
+          "action": "Open a scoped order and return to the same Sales filter/count basis.",
+          "permissions": "Current account/order read authority.",
+          "draft": "Return context retains selected permitted IDs only.",
+          "failure": "Route, account, role or revision change invalidates stale return/output scope.",
+          "customerOutcome": "No unrelated customer/order exposure.",
+          "evidence": "Scoped-order return, revocation and stale-filter fixture."
+        },
+        {
+          "id": "JNY-09.03",
+          "action": "Review and request own-day document output from exact scoped frozen orders.",
+          "permissions": "Document/output authority for each selected current order revision.",
+          "draft": "Selected IDs/profile/paper/copies remain review intent until rendering request is accepted.",
+          "failure": "Mixed scope or changed revision blocks the request and retains a repairable selection.",
+          "customerOutcome": "No extra document, printed claim or customer delivery.",
+          "evidence": "Scoped-day output/frozen-revision/A4-A5/copies fixture."
+        },
+        {
+          "id": "JNY-09.04",
+          "action": "Record immutable print request/activity and handle retry or linked reprint.",
+          "permissions": "Output/print authority and current document scope.",
+          "draft": "Run key, artifact, requested actor/time and reprintOf linkage persist independently of live edits.",
+          "failure": "Popup block, dialog close, download or unknown outcome stays unconfirmed; same-attempt retry preserves identity.",
+          "customerOutcome": "No physical-print, delivery or receipt claim without acknowledgement/verified receipt.",
+          "evidence": "Popup-blocked retry, old-copy-after-edit, Previous request and immutable-activity fixture."
+        },
+        {
+          "id": "JNY-09.05",
+          "action": "Select named bounded cross-cover and recheck scope on expiry, revoke or reload.",
+          "permissions": "Manager-authorised coverage grant naming covering actor, covered line/accounts, time and reason.",
+          "draft": "Coverage proposal/audit reason persists without changing ownership.",
+          "failure": "Denied, expired or conflicted coverage exposes no target book and cannot self-widen scope.",
+          "customerOutcome": "No cross-cover message, print or customer access outside the accepted grant.",
+          "evidence": "Cross-cover grant/expiry/revoke/cross-tenant denial fixture."
+        }
+      ],
+      "assertions": {
+        "positive": [
+          "A salesperson sees only owned assigned work, produces immutable own-day activity and can use a manager-authorised bounded cross-cover scope."
+        ],
+        "negative": [
+          "A default filter, owner chip, stale session, cross-cover proposal or browser print cannot widen access, alter ownership or claim physical delivery."
+        ]
+      },
+      "requiredEvidence": [
+        "Two-salesperson scope/count/output/cross-cover/revocation trace with no unassigned-object exposure.",
+        "1920×1080, 1536×864, 1366×768, 360×800, 390×844 and 393×873, plus 1280×800 and 320×740 boundary Sales/filter/output/activity/reprint and keyboard/focus/no-overflow evidence."
+      ],
+      "canonicalRefs": [
+        "ADM-01",
+        "ALB-01",
+        "DOC-01",
+        "E188",
+        "INTX-11",
+        "SYS-182",
+        "QLT-01",
+        "QLT-02"
+      ]
+    }
+  ]
+}

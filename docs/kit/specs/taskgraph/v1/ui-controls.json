@@ -1,0 +1,1158 @@
+{
+  "schemaVersion": "1.0",
+  "authority": "The canonical anatomy documents are the exhaustive product contract. This inventory maps each stable anatomy identifier to executable task leaves; code selector discovery is supplementary and is never claimed exhaustive.",
+  "coverageDefinitions": {
+    "canonicalAnatomy": "The normative complete map: sheet → section → control → opened menu or form → field → validation, behavior, and exact state copy.",
+    "selectorInventory": "A current-code discovery aid. It may be incomplete and does not substitute for the canonical anatomy map."
+  },
+  "anatomySources": [
+    {
+      "id": "PRD-SHEET",
+      "document": "notes/THE-PRODUCT-SHEET-SPEC.md",
+      "requiredIds": [
+        "PRD-N01",
+        "PRD-N02",
+        "PRD-N03",
+        "PRD-N04",
+        "PRD-N05",
+        "PRD-N06",
+        "PRD-P01",
+        "PRD-P02",
+        "PRD-P03",
+        "PRD-P04",
+        "PRD-P05",
+        "PRD-P06",
+        "PRD-S01",
+        "PRD-S02",
+        "PRD-S03",
+        "PRD-S04",
+        "PRD-S05",
+        "PRD-S06",
+        "PRD-O01",
+        "PRD-O02",
+        "PRD-E01",
+        "PRD-E02",
+        "PRD-E03",
+        "PRD-E04",
+        "PRD-I01",
+        "PRD-I02",
+        "PRD-I03",
+        "PRD-I04",
+        "PRD-I05",
+        "PRD-D01",
+        "PRD-D02",
+        "PRD-D03",
+        "PRD-D04",
+        "PRD-D05",
+        "PRD-C01",
+        "PRD-A01"
+      ],
+      "minimumControlCount": 36,
+      "coverage": "canonicalAnatomy",
+      "title": "Product Sheet anatomy"
+    },
+    {
+      "id": "CUS-SHEET",
+      "document": "notes/THE-SYSTEM-SPEC.md",
+      "requiredIds": [
+        "CUS-N01",
+        "CUS-N02",
+        "CUS-N03",
+        "CUS-N04",
+        "CUS-C01",
+        "CUS-C02",
+        "CUS-C03",
+        "CUS-A01",
+        "CUS-A02",
+        "CUS-A03",
+        "CUS-F01",
+        "CUS-F02",
+        "CUS-O01",
+        "CUS-O02",
+        "CUS-I01",
+        "CUS-I02",
+        "CUS-D01",
+        "CUS-D02"
+      ],
+      "minimumControlCount": 18,
+      "coverage": "canonicalAnatomy",
+      "title": "Customer Sheet anatomy"
+    },
+    {
+      "id": "ALB-SHEET",
+      "document": "notes/THE-SYSTEM-SPEC.md",
+      "requiredIds": [
+        "ALB-N01",
+        "ALB-N02",
+        "ALB-N03",
+        "ALB-S01",
+        "ALB-S02",
+        "ALB-S03",
+        "ALB-D01",
+        "ALB-D02",
+        "ALB-D03",
+        "ALB-L01",
+        "ALB-L02",
+        "ALB-L03",
+        "ALB-L04",
+        "ALB-L05",
+        "ALB-L06",
+        "ALB-C01",
+        "ALB-C02",
+        "ALB-C03",
+        "ALB-O01",
+        "ALB-O02",
+        "ALB-O03",
+        "ALB-O04",
+        "ALB-M01",
+        "ALB-M02",
+        "ALB-M03",
+        "ALB-M04"
+      ],
+      "minimumControlCount": 26,
+      "coverage": "canonicalAnatomy",
+      "title": "Albarán Sheet anatomy"
+    },
+    {
+      "id": "INTX-SHARED",
+      "document": "notes/THE-INTERACTION-SPEC.md",
+      "requiredIds": [
+        "INTX-00",
+        "INTX-01",
+        "INTX-02",
+        "INTX-03",
+        "INTX-04",
+        "INTX-05",
+        "INTX-06",
+        "INTX-07",
+        "INTX-08",
+        "INTX-11"
+      ],
+      "minimumControlCount": 10,
+      "coverage": "canonicalAnatomy",
+      "title": "Shared interaction anatomy"
+    },
+    {
+      "id": "LOT-SPEC",
+      "document": "notes/THE-STOCK-LOTS-SPEC.md",
+      "requiredIds": [
+        "LOT-V01",
+        "LOT-V02",
+        "LOT-V03",
+        "LOT-V04",
+        "LOT-V05",
+        "LOT-S01",
+        "LOT-S02",
+        "LOT-S03",
+        "LOT-S04",
+        "LOT-S05",
+        "LOT-S06",
+        "LOT-S07",
+        "LOT-S08",
+        "LOT-R01",
+        "LOT-R02",
+        "LOT-R03",
+        "LOT-R04",
+        "LOT-R05",
+        "LOT-R06",
+        "LOT-C01",
+        "LOT-C02",
+        "LOT-C03",
+        "LOT-C04",
+        "LOT-C05",
+        "LOT-C06",
+        "LOT-C07",
+        "LOT-A01",
+        "LOT-A02",
+        "LOT-A03",
+        "LOT-A04",
+        "LOT-A05",
+        "LOT-A06",
+        "LOT-A07",
+        "LOT-A08",
+        "LOT-D01",
+        "LOT-D02",
+        "LOT-D03",
+        "LOT-D04",
+        "LOT-D05",
+        "LOT-D06",
+        "LOT-L01",
+        "LOT-L02",
+        "LOT-L03",
+        "LOT-L04",
+        "LOT-L05",
+        "LOT-L06",
+        "LOT-L07"
+      ],
+      "minimumControlCount": 47,
+      "coverage": "canonicalAnatomy",
+      "title": "Stock and lots anatomy"
+    },
+    {
+      "id": "JNY-POLICY",
+      "document": "notes/THE-JOURNEYS-SPEC.md",
+      "requiredIds": [
+        "JNY-C01",
+        "JNY-C02",
+        "JNY-C03",
+        "JNY-C04",
+        "JNY-C05",
+        "JNY-C06",
+        "JNY-C07",
+        "JNY-C08",
+        "JNY-C09",
+        "JNY-P01",
+        "JNY-P02",
+        "JNY-P03",
+        "JNY-P04",
+        "JNY-R01",
+        "JNY-R02",
+        "JNY-R03",
+        "JNY-R04",
+        "JNY-R05",
+        "JNY-O01",
+        "JNY-O02",
+        "JNY-O03",
+        "JNY-O04",
+        "JNY-O05",
+        "JNY-O06"
+      ],
+      "minimumControlCount": 24,
+      "coverage": "canonicalAnatomy",
+      "title": "Customer-confirmation and product-option policy anatomy"
+    },
+    {
+      "id": "UTL-STOCK-BATCH",
+      "document": "notes/THE-SYSTEM-SPEC.md",
+      "requiredIds": [
+        "UTL-B01",
+        "UTL-B02",
+        "UTL-B03",
+        "UTL-B04",
+        "UTL-B05",
+        "UTL-B06"
+      ],
+      "minimumControlCount": 6,
+      "coverage": "canonicalAnatomy",
+      "title": "Sequential Stock update handoff anatomy"
+    },
+    {
+      "id": "E181-CONTEXT",
+      "document": "notes/THE-INTERACTION-SPEC.md",
+      "requiredIds": [
+        "ALB-X01",
+        "ALB-X02",
+        "ALB-X03",
+        "ALB-X04",
+        "ALB-X05",
+        "EXP-X01",
+        "EXP-X02",
+        "EXP-X03"
+      ],
+      "minimumControlCount": 8,
+      "coverage": "canonicalAnatomy",
+      "title": "Line discussion, navigation and compact output panel"
+    },
+    {
+      "id": "UNITS",
+      "document": "notes/THE-UNITS-SPEC.md",
+      "requiredIds": [
+        "UNT-U01",
+        "UNT-U02",
+        "UNT-U03",
+        "UNT-U04",
+        "UNT-U05"
+      ],
+      "minimumControlCount": 5,
+      "coverage": "canonicalAnatomy",
+      "title": "Unit vocabulary, reusable conversions and product overrides"
+    },
+    {
+      "id": "CUSTOMER-PRICING",
+      "document": "notes/THE-SYSTEM-SPEC.md",
+      "requiredIds": [
+        "CUS-P01",
+        "CUS-P02",
+        "CUS-P03",
+        "CUS-P04"
+      ],
+      "minimumControlCount": 4,
+      "coverage": "canonicalAnatomy",
+      "title": "Customer pricing and channel actions"
+    },
+    {
+      "id": "E182-FRAME",
+      "document": "notes/THE-INTERACTION-SPEC.md",
+      "requiredIds": [
+        "UTL-M01",
+        "UTL-M02",
+        "UTL-M03",
+        "UTL-M04",
+        "UTL-M05",
+        "UTL-M06",
+        "UTL-M07",
+        "UTL-M08"
+      ],
+      "minimumControlCount": 8,
+      "coverage": "canonicalAnatomy",
+      "title": "Shared task frame, fields, menus and draft recovery"
+    },
+    {
+      "id": "E182-INSIGHTS",
+      "document": "notes/THE-INTERACTION-SPEC.md",
+      "requiredIds": [
+        "UTL-I01",
+        "UTL-I02",
+        "UTL-I03",
+        "UTL-I04",
+        "UTL-I05"
+      ],
+      "minimumControlCount": 5,
+      "coverage": "canonicalAnatomy",
+      "title": "Chart cards and scoped evidence drilldown"
+    },
+    {
+      "id": "E182-ASSISTANT",
+      "document": "notes/THE-INTERACTION-SPEC.md",
+      "requiredIds": [
+        "UTL-A01",
+        "UTL-A02",
+        "UTL-A03",
+        "UTL-A04",
+        "UTL-A05",
+        "UTL-A06",
+        "UTL-A07",
+        "UTL-A08",
+        "UTL-A09",
+        "UTL-A10",
+        "UTL-A11",
+        "UTL-A12"
+      ],
+      "minimumControlCount": 12,
+      "coverage": "canonicalAnatomy",
+      "title": "Assistant conversation, report, proposal and receipt controls"
+    },
+    {
+      "id": "E182-BUILDER",
+      "document": "notes/THE-INTERACTION-SPEC.md",
+      "requiredIds": [
+        "EXP-B01",
+        "EXP-B02",
+        "EXP-B03",
+        "EXP-B04",
+        "EXP-B05",
+        "EXP-B06",
+        "EXP-B07",
+        "EXP-B08",
+        "EXP-B09"
+      ],
+      "minimumControlCount": 9,
+      "coverage": "canonicalAnatomy",
+      "title": "Contained gallery and per-column export recipe builder"
+    },
+    {
+      "id": "E182-PRINT",
+      "document": "notes/THE-INTERACTION-SPEC.md",
+      "requiredIds": [
+        "EXP-P01",
+        "EXP-P02",
+        "EXP-P03",
+        "EXP-P04",
+        "EXP-P05",
+        "EXP-P06",
+        "EXP-P07",
+        "EXP-P08",
+        "EXP-P09"
+      ],
+      "minimumControlCount": 9,
+      "coverage": "canonicalAnatomy",
+      "title": "Print attempts, captured output and deliberate reprinting"
+    },
+    {
+      "id": "E182-CREATION",
+      "document": "notes/THE-SYSTEM-SPEC.md",
+      "requiredIds": [
+        "UTL-N01",
+        "UTL-N02",
+        "UTL-N03",
+        "UTL-N04",
+        "UTL-N05",
+        "UTL-N06",
+        "UTL-N07",
+        "UTL-N08",
+        "UTL-N09",
+        "UTL-N10"
+      ],
+      "minimumControlCount": 10,
+      "coverage": "canonicalAnatomy",
+      "title": "New-product identity, variation, upload and pricing handoffs"
+    },
+    {
+      "id": "E182-CUSTOMER",
+      "document": "notes/THE-SYSTEM-SPEC.md",
+      "requiredIds": [
+        "CUS-E01",
+        "CUS-E02",
+        "CUS-E03",
+        "CUS-E04",
+        "CUS-E05",
+        "CUS-E06",
+        "CUS-E07"
+      ],
+      "minimumControlCount": 7,
+      "coverage": "canonicalAnatomy",
+      "title": "New-customer fields, duplicate review, contacts and pricing"
+    }
+  ],
+  "mappings": [
+    {
+      "pattern": "^PRD-[ND]",
+      "taskId": "PRD-01.01",
+      "anatomyPath": "Product Sheet > frame / internal category / Related items / details > control",
+      "reason": "literal identity, Internal category, direct Related items, exact artwork, details and archive boundary"
+    },
+    {
+      "pattern": "^PRD-C",
+      "taskId": "PRD-01.02",
+      "anatomyPath": "Product Sheet > creation > Add one / Add a product list > file or pasted-text review queue > control",
+      "reason": "literal-SKU creation; one queue without pre-result mapping; deliberate variation creation only"
+    },
+    {
+      "pattern": "^PRD-P",
+      "taskId": "PRD-01.03",
+      "anatomyPath": "Product Sheet > pricing > tariff editor > control",
+      "reason": "price command and history"
+    },
+    {
+      "pattern": "^PRD-S",
+      "taskId": "PRD-01.04",
+      "anatomyPath": "Product Sheet > stock > stock / lot / expected state > control",
+      "reason": "inventory semantics"
+    },
+    {
+      "pattern": "^PRD-[OE]",
+      "taskId": "PRD-01.05",
+      "anatomyPath": "Product Sheet > evidence > order / source > control",
+      "reason": "exact order and compact source evidence; supplier feed separately gated"
+    },
+    {
+      "pattern": "^PRD-I",
+      "taskId": "PRD-01.06",
+      "anatomyPath": "Product Sheet > insights > evidence drawer > control",
+      "reason": "insight boundaries"
+    },
+    {
+      "pattern": "^PRD-A",
+      "taskId": "PRD-01.07",
+      "anatomyPath": "Product Sheet > artwork > asset workflow > control",
+      "reason": "image association and recovery"
+    },
+    {
+      "pattern": "^CUS-[NC]",
+      "taskId": "CUS-01.01",
+      "anatomyPath": "Customer Sheet > frame / contacts > control",
+      "reason": "customer identity and contact authority"
+    },
+    {
+      "pattern": "^CUS-D",
+      "taskId": "CUS-01.01",
+      "relatedTaskIds": [
+        "CUS-01.03"
+      ],
+      "anatomyPath": "Customer Sheet > details / delivery > form > control",
+      "reason": "identity editor with address, map, zone and route facets"
+    },
+    {
+      "pattern": "^CUS-A",
+      "taskId": "CUS-01.04",
+      "anatomyPath": "Customer Sheet > actions > work-item form/menu > control",
+      "reason": "operational actions and notices"
+    },
+    {
+      "pattern": "^CUS-[FOI]",
+      "taskId": "CUS-01.02",
+      "anatomyPath": "Customer Sheet > work / frequent products / history / insight > control",
+      "reason": "customer dossier and measured insight"
+    },
+    {
+      "pattern": "^ALB-N01$",
+      "taskId": "ALB-01.05",
+      "anatomyPath": "Albarán Sheet > frame > return navigation > control",
+      "reason": "origin-preserving navigation"
+    },
+    {
+      "pattern": "^ALB-(?:N0[23]|D)",
+      "taskId": "ALB-01.01",
+      "anatomyPath": "Albarán Sheet > frame / customer / delivery / fulfilment > control",
+      "reason": "state and snapshot lifecycle"
+    },
+    {
+      "pattern": "^ALB-S",
+      "taskId": "ALB-01.03",
+      "anatomyPath": "Albarán Sheet > source > native channel > control",
+      "reason": "provenance and correction boundary"
+    },
+    {
+      "pattern": "^ALB-L",
+      "taskId": "ALB-01.02",
+      "anatomyPath": "Albarán Sheet > lines > picker/form/row > control",
+      "reason": "lines, units, prices and totals"
+    },
+    {
+      "pattern": "^ALB-C",
+      "taskId": "ALB-01.03",
+      "anatomyPath": "Albarán Sheet > checks > concern/fix/dismiss > control",
+      "reason": "scoped concern lifecycle"
+    },
+    {
+      "pattern": "^ALB-[OM]",
+      "taskId": "ALB-01.04",
+      "anatomyPath": "Albarán Sheet > issue / output / lifecycle menu > control",
+      "reason": "issue, document output and recovery commands"
+    },
+    {
+      "pattern": "^INTX-0[0124]$",
+      "taskId": "OBJ-01.01",
+      "anatomyPath": "Shared interaction > surface / navigation / layer > control",
+      "reason": "shared surface contract"
+    },
+    {
+      "pattern": "^INTX-03$",
+      "taskId": "OBJ-01.03",
+      "anatomyPath": "Shared interaction > density/responsive > state",
+      "reason": "responsive interaction"
+    },
+    {
+      "pattern": "^INTX-05$",
+      "taskId": "FND-03.03",
+      "anatomyPath": "Shared interaction > drafts/offline > state",
+      "reason": "offline and conflict recovery"
+    },
+    {
+      "pattern": "^INTX-0[67]$",
+      "taskId": "OBJ-01.03",
+      "anatomyPath": "Shared interaction > focus/modal/keyboard > state",
+      "reason": "accessible interaction"
+    },
+    {
+      "pattern": "^INTX-08$",
+      "taskId": "QLT-02.01",
+      "anatomyPath": "Shared interaction > accessibility/recovery > state",
+      "reason": "cross-sheet QA"
+    },
+    {
+      "pattern": "^LOT-V",
+      "taskId": "LOT-01.01",
+      "anatomyPath": "Stock & Lots > lot book / identity > control",
+      "reason": "opaque lot identity and invariant"
+    },
+    {
+      "pattern": "^LOT-S",
+      "taskId": "LOT-01.02",
+      "anatomyPath": "Stock & Lots > LotSplitEditor > field / validation > control",
+      "reason": "shared split editor"
+    },
+    {
+      "pattern": "^LOT-[RC]",
+      "taskId": "LOT-01.03",
+      "anatomyPath": "Stock & Lots > receipt / count > split form > control",
+      "reason": "receipt and count flows"
+    },
+    {
+      "pattern": "^LOT-A",
+      "taskId": "LOT-01.04",
+      "anatomyPath": "Stock & Lots > reservation / allocation > command > control",
+      "reason": "allocation and depletion"
+    },
+    {
+      "pattern": "^LOT-D",
+      "taskId": "LOT-01.05",
+      "anatomyPath": "Stock & Lots > lot dossier / recall > control",
+      "reason": "traceability and recall"
+    },
+    {
+      "pattern": "^LOT-L",
+      "taskId": "LOT-01.07",
+      "anatomyPath": "Product Sheet > Stock > Assign stock to lots > fixed-balance split/reassignment > control",
+      "reason": "physical attribution and zero-net history; distinct from albarán-line allocation"
+    },
+    {
+      "pattern": "^JNY-C01$",
+      "taskId": "PRD-01.06",
+      "relatedTaskIds": [
+        "ADM-01.06",
+        "COM-01.01"
+      ],
+      "anatomyPath": "Product Sheet > Prices > Customer confirmations > shared in-place settings modal door and history restoration",
+      "reason": "Product-context door opens the shared settings modal without a send/price command; Back/Forward restores modal and selected preview state."
+    },
+    {
+      "pattern": "^JNY-C02$",
+      "taskId": "ADM-01.06",
+      "relatedTaskIds": [
+        "ADM-01.01",
+        "QLT-02.01"
+      ],
+      "anatomyPath": "Operations > Customer confirmations row/deep route > shared settings modal > focus/history return state",
+      "reason": "Operations route opens the same shared modal with named close, focus return and Back/Forward selected-preview restoration."
+    },
+    {
+      "pattern": "^JNY-C0[3458]$",
+      "taskId": "ADM-01.01",
+      "relatedTaskIds": [
+        "COM-01.01",
+        "ALB-01.04",
+        "INTG-01.01",
+        "QLT-02.01"
+      ],
+      "anatomyPath": "Operations > Customer confirmations > independent policy controls and effective-policy explanation",
+      "reason": "Durable, revisioned confirmation policy gates with exact customer-facing consequence copy."
+    },
+    {
+      "pattern": "^JNY-C0[67]$",
+      "taskId": "ADM-01.01",
+      "relatedTaskIds": [
+        "COM-01.01",
+        "INTG-01.01",
+        "QLT-02.01"
+      ],
+      "anatomyPath": "Operations > Customer confirmations > customer-scoped preview > subject and incomplete-price state",
+      "reason": "Scoped preview selection and truthful current-price/incomplete state; preview never sends."
+    },
+    {
+      "pattern": "^JNY-P0[12]$",
+      "taskId": "ADM-01.03",
+      "relatedTaskIds": [
+        "PRD-01.02",
+        "CAT-01.02",
+        "INTG-01.03",
+        "QLT-02.01"
+      ],
+      "anatomyPath": "Operations > Customer confirmations > Product requests and options > policy field",
+      "reason": "Revisioned no-auto-SKU and ERP line-mapping policy with reviewed product/ERP boundaries."
+    },
+    {
+      "pattern": "^JNY-P03$",
+      "taskId": "ADM-01.01",
+      "relatedTaskIds": [
+        "QLT-02.01"
+      ],
+      "anatomyPath": "Operations > Customer confirmations > settings save > durable-write failure alert and focus return",
+      "reason": "Prior effective policy remains active after a failed durable write; error copy is part of the command contract."
+    },
+    {
+      "pattern": "^JNY-P04$",
+      "taskId": "ADM-01.06",
+      "relatedTaskIds": [
+        "QLT-02.01"
+      ],
+      "anatomyPath": "Operations > Customer confirmations > settings sheet footer > Done close action",
+      "reason": "Closes the named settings surface only; no second save, send or publish action is implied."
+    },
+    {
+      "pattern": "^JNY-C09$",
+      "taskId": "ADM-01.01",
+      "relatedTaskIds": [
+        "COM-01.01",
+        "INTG-01.01",
+        "QLT-02.01"
+      ],
+      "anatomyPath": "Operations > Customer confirmations > preview > operator incomplete-price review status",
+      "reason": "Operator-only missing-price status distinguishes review work from the separate customer preview and no-send/provider state."
+    },
+    {
+      "pattern": "^UTL-B01$",
+      "taskId": "UTL-01.01",
+      "relatedTaskIds": [
+        "CAT-01.03",
+        "QLT-02.01"
+      ],
+      "anatomyPath": "Stock update > sequential handoff > exact SKU code/search > identity resolution",
+      "reason": "Exact folded SKU-code resolution before name matching in the stock-update chooser."
+    },
+    {
+      "pattern": "^UTL-B02$",
+      "taskId": "UTL-02.01",
+      "relatedTaskIds": [
+        "UTL-01.01",
+        "PRD-01.02",
+        "CAT-01.02",
+        "QLT-02.01"
+      ],
+      "anatomyPath": "Stock update > no exact SKU match > deliberate New product route > no stock/price prefill",
+      "reason": "Unknown product recovery opens reviewed PRD-C01 with source context but no selected SKU, stock/price prefill, mapping screen or automatic relation."
+    },
+    {
+      "pattern": "^UTL-B03$",
+      "taskId": "UTL-01.01",
+      "relatedTaskIds": [
+        "INV-01.01",
+        "LOT-01.03",
+        "QLT-02.01"
+      ],
+      "anatomyPath": "Stock update > resolved SKU > Receive stock / Record a stock count > no-recorded-yet state",
+      "reason": "One resolved SKU hands the user into the canonical receipt/count editor with a named pre-command state."
+    },
+    {
+      "pattern": "^UTL-B04$",
+      "taskId": "UTL-01.01",
+      "relatedTaskIds": [
+        "INV-01.01",
+        "LOT-01.03",
+        "FND-03.03",
+        "QLT-02.01"
+      ],
+      "anatomyPath": "Stock update > chooser-origin editor > Save & next item > accepted independent movement > empty next chooser",
+      "reason": "Save-next is an acknowledged independent receipt/count with lot invariant, no cross-item draft inheritance."
+    },
+    {
+      "pattern": "^UTL-B05$",
+      "taskId": "UTL-01.01",
+      "relatedTaskIds": [
+        "INV-01.01",
+        "OBJ-01.01",
+        "QLT-02.01"
+      ],
+      "anatomyPath": "Stock update > chooser-origin editor > Save and finish / direct-sheet editor separation",
+      "reason": "End-of-sequence action is distinct from direct Product Sheet save and does not create a bulk transaction."
+    },
+    {
+      "pattern": "^UTL-B06$",
+      "taskId": "UTL-01.01",
+      "relatedTaskIds": [
+        "FND-03.03",
+        "INV-01.01",
+        "QLT-02.01"
+      ],
+      "anatomyPath": "Stock update > save conflict/failure/cancel > current-item draft retention",
+      "reason": "Failure/cancel preserves only the current revisioned item and cannot advance across an unaccepted movement."
+    },
+    {
+      "pattern": "^JNY-R0[123]$",
+      "taskId": "ALB-01.03",
+      "relatedTaskIds": [
+        "DOC-01.01",
+        "INT-01.03",
+        "QLT-01.01",
+        "QLT-02.01"
+      ],
+      "anatomyPath": "Albarán > Paper check > stage/source/photo intake and local retry state",
+      "reason": "Revision-bound paper/source review with safe photo retention and no automatic extraction or document mutation."
+    },
+    {
+      "pattern": "^JNY-R04$",
+      "taskId": "DOC-01.02",
+      "relatedTaskIds": [
+        "ALB-01.03",
+        "DOC-01.01",
+        "QLT-02.01"
+      ],
+      "anatomyPath": "Albarán > Paper check > Finish review > later canonical print gate",
+      "reason": "Final-paper state requires explicit completed review plus a later canonical print; neither earlier print nor omitted flag suffices."
+    },
+    {
+      "pattern": "^JNY-R05$",
+      "taskId": "ALB-01.02",
+      "relatedTaskIds": [
+        "ALB-01.03",
+        "COM-01.01",
+        "LOT-01.04",
+        "QLT-02.01"
+      ],
+      "anatomyPath": "Albarán line > working-paper correction > actual quantity/unit-price/weight fields",
+      "reason": "Visible actual fields submit ordinary revision-checked line commands, separate from photo intake and global price/lot mutation."
+    },
+    {
+      "pattern": "^JNY-O01$",
+      "taskId": "ALB-01.03",
+      "relatedTaskIds": [
+        "CAT-01.02",
+        "QLT-02.01"
+      ],
+      "anatomyPath": "Albarán line > note > Comments boundary and recurrence fact",
+      "reason": "Internal order note/recurrence evidence remains explicitly non-customer and non-catalogue authority."
+    },
+    {
+      "pattern": "^JNY-O02$",
+      "taskId": "ALB-01.03",
+      "relatedTaskIds": [
+        "PRD-01.02",
+        "CAT-01.02",
+        "QLT-02.01"
+      ],
+      "anatomyPath": "Albarán line > Comments > Keep/review product option decision and review panel",
+      "reason": "Scoped literal note review separates order note, candidate product review and document consequence."
+    },
+    {
+      "pattern": "^JNY-O03$",
+      "taskId": "ALB-01.03",
+      "relatedTaskIds": [
+        "PRD-01.02",
+        "CAT-01.02",
+        "QLT-02.01"
+      ],
+      "anatomyPath": "Albarán line > product-option review > reusable name/customer-visible text fields",
+      "reason": "Draft product/option fields remain distinct and cannot become product or outward wording by typing alone."
+    },
+    {
+      "pattern": "^JNY-O04$",
+      "taskId": "ALB-01.03",
+      "relatedTaskIds": [
+        "ALB-01.04",
+        "DOC-01.01",
+        "INTG-01.01",
+        "QLT-01.01",
+        "QLT-02.01"
+      ],
+      "anatomyPath": "Albarán line > product-option review > approve/remove customer snapshot and indicators",
+      "reason": "Explicit approved customerOption snapshot controls outward projection independently of SKU, price, document issue and delivery."
+    },
+    {
+      "pattern": "^JNY-O05$",
+      "taskId": "PRD-01.02",
+      "relatedTaskIds": [
+        "ALB-01.03",
+        "CAT-01.02",
+        "QLT-02.01"
+      ],
+      "anatomyPath": "Albarán line > product-option review > Create separate product/Keep comment/Cancel actions",
+      "reason": "Candidate product creation is separate reviewed command; keep/cancel leaves product and customer output unchanged."
+    },
+    {
+      "pattern": "^JNY-O06$",
+      "taskId": "ALB-01.04",
+      "relatedTaskIds": [
+        "DOC-01.01",
+        "INTG-01.01",
+        "INTG-01.03",
+        "QLT-01.01",
+        "QLT-02.01"
+      ],
+      "anatomyPath": "Albarán/customer paper > approved customerOption outward projection and safety filter",
+      "reason": "Only approved customer-audience snapshot passes to customer/document/ERP composition; internal note remains excluded."
+    },
+    {
+      "pattern": "^ALB-X",
+      "taskId": "ALB-01.03",
+      "relatedTaskIds": [
+        "OBJ-01.02",
+        "QLT-02.01"
+      ],
+      "anatomyPath": "Albarán > line discussion and header navigation",
+      "reason": "Separate audience, evidence, draft, scope and layer navigation."
+    },
+    {
+      "pattern": "^EXP-X",
+      "taskId": "UTL-04.01",
+      "relatedTaskIds": [
+        "DOC-01.03",
+        "QLT-02.01"
+      ],
+      "anatomyPath": "Shell > output panel > print geometry",
+      "reason": "Compact viewport-safe layout preserves output semantics."
+    },
+    {
+      "pattern": "^UNT-U",
+      "taskId": "COM-01.01",
+      "relatedTaskIds": [
+        "COM-01.02",
+        "ALB-01.03",
+        "LOT-01.04",
+        "QLT-02.01"
+      ],
+      "anatomyPath": "Units > tenant vocabulary > global UnitConversion > product override > line snapshot",
+      "reason": "Single Product Unit; reusable global conversions with exact-SKU overrides; exact/nominal/catch-weight evidence, precision, immutable commercial snapshot and failure recovery."
+    },
+    {
+      "pattern": "^CUS-P",
+      "taskId": "CUS-01.02",
+      "relatedTaskIds": [
+        "COM-01.01",
+        "SRC-01.02",
+        "QLT-02.01"
+      ],
+      "anatomyPath": "Customer > Pricing / main channel / communication history",
+      "reason": "Customer tariff and exact-SKU exceptions; correct source navigation and failure scope."
+    },
+    {
+      "pattern": "^UTL-M",
+      "taskId": "OBJ-01.01",
+      "relatedTaskIds": [
+        "OBJ-01.03",
+        "FND-03.03"
+      ],
+      "anatomyPath": "Shared task frame, fields, menus and draft recovery > section > control > field/menu > state and consequence",
+      "reason": "E182 connected workflow with explicit scope, save, return and failure behavior"
+    },
+    {
+      "pattern": "^UTL-I",
+      "taskId": "PRD-01.06",
+      "relatedTaskIds": [
+        "CUS-01.02",
+        "COM-01.01"
+      ],
+      "anatomyPath": "Chart cards and scoped evidence drilldown > section > control > field/menu > state and consequence",
+      "reason": "E182 connected workflow with explicit scope, save, return and failure behavior"
+    },
+    {
+      "pattern": "^UTL-A",
+      "taskId": "INT-01.07",
+      "relatedTaskIds": [
+        "INT-01.04",
+        "INTG-01.01"
+      ],
+      "anatomyPath": "Assistant conversation, report, proposal and receipt controls > section > control > field/menu > state and consequence",
+      "reason": "E182 connected workflow with explicit scope, save, return and failure behavior"
+    },
+    {
+      "pattern": "^EXP-B",
+      "taskId": "DOC-01.03",
+      "relatedTaskIds": [
+        "QLT-01.01",
+        "OBJ-01.03"
+      ],
+      "anatomyPath": "Contained gallery and per-column export recipe builder > section > control > field/menu > state and consequence",
+      "reason": "E182 connected workflow with explicit scope, save, return and failure behavior"
+    },
+    {
+      "pattern": "^EXP-P",
+      "taskId": "DOC-01.02",
+      "relatedTaskIds": [
+        "DOC-01.01",
+        "ALB-01.04"
+      ],
+      "anatomyPath": "Print attempts, captured output and deliberate reprinting > section > control > field/menu > state and consequence",
+      "reason": "E182 connected workflow with explicit scope, save, return and failure behavior"
+    },
+    {
+      "pattern": "^UTL-N",
+      "taskId": "PRD-01.02",
+      "relatedTaskIds": [
+        "COM-01.01",
+        "INT-02.03"
+      ],
+      "anatomyPath": "New-product identity, variation, upload and pricing handoffs > section > control > field/menu > state and consequence",
+      "reason": "E182 connected workflow with explicit scope, save, return and failure behavior"
+    },
+    {
+      "pattern": "^CUS-E",
+      "taskId": "CUS-01.01",
+      "relatedTaskIds": [
+        "CUS-01.03",
+        "CUS-01.02"
+      ],
+      "anatomyPath": "New-customer fields, duplicate review, contacts and pricing > section > control > field/menu > state and consequence",
+      "reason": "E182 connected workflow with explicit scope, save, return and failure behavior"
+    },
+    {
+      "pattern": "^INTX-11$",
+      "taskId": "OBJ-01.01",
+      "relatedTaskIds": [
+        "INT-01.07",
+        "DOC-01.02"
+      ],
+      "anatomyPath": "Connected task anatomy > flow > control > state",
+      "reason": "Shared modal and connected work contract"
+    }
+  ],
+  "selectorInventory": {
+    "coverage": "selectorInventory",
+    "statement": "This is a code-discovery inventory, not an exhaustive action map. The canonical anatomy sources above remain the completion gate.",
+    "roots": [
+      "baseweb/src/app"
+    ],
+    "fileMappings": [
+      {
+        "pathPrefix": "baseweb/src/app/product",
+        "taskIds": [
+          "PRD-01.01",
+          "PRD-01.02",
+          "PRD-01.03",
+          "PRD-01.04",
+          "PRD-01.05",
+          "PRD-01.06",
+          "PRD-01.07",
+          "LOT-01.07"
+        ]
+      },
+      {
+        "pathPrefix": "baseweb/src/app/customer",
+        "taskIds": [
+          "CUS-01.01",
+          "CUS-01.02",
+          "CUS-01.03",
+          "CUS-01.04"
+        ]
+      },
+      {
+        "pathPrefix": "baseweb/src/app/sale",
+        "taskIds": [
+          "ALB-01.01",
+          "ALB-01.02",
+          "ALB-01.03",
+          "ALB-01.04",
+          "ALB-01.05"
+        ]
+      },
+      {
+        "pathPrefix": "baseweb/src/app/order",
+        "taskIds": [
+          "ALB-01.01",
+          "ALB-01.02",
+          "ALB-01.03",
+          "ALB-01.04",
+          "ALB-01.05"
+        ]
+      },
+      {
+        "pathPrefix": "baseweb/src/app/catalog",
+        "taskIds": [
+          "CAT-01.01",
+          "CAT-01.02",
+          "CAT-01.03",
+          "CAT-01.04",
+          "CAT-01.05"
+        ]
+      },
+      {
+        "pathPrefix": "baseweb/src/app/source",
+        "taskIds": [
+          "SRC-01.01",
+          "SRC-01.02",
+          "SRC-01.03"
+        ]
+      },
+      {
+        "pathPrefix": "baseweb/src/app/incoming",
+        "taskIds": [
+          "INV-01.01",
+          "UTL-01.01"
+        ]
+      },
+      {
+        "pathPrefix": "baseweb/src/app/stock",
+        "taskIds": [
+          "INV-01.01",
+          "UTL-01.01",
+          "LOT-01.07"
+        ]
+      },
+      {
+        "pathPrefix": "baseweb/src/app/print",
+        "taskIds": [
+          "DOC-01.01",
+          "DOC-01.02"
+        ]
+      },
+      {
+        "pathPrefix": "baseweb/src/app/export",
+        "taskIds": [
+          "DOC-01.03",
+          "UTL-04.01"
+        ]
+      },
+      {
+        "pathPrefix": "baseweb/src/app/admin",
+        "taskIds": [
+          "ADM-01.01",
+          "ADM-01.02",
+          "ADM-01.03",
+          "ADM-01.04",
+          "ADM-01.05",
+          "ADM-01.06"
+        ]
+      },
+      {
+        "pathPrefix": "baseweb/src/app/connect",
+        "taskIds": [
+          "INTG-01.01",
+          "INTG-01.02",
+          "INTG-01.03",
+          "INTG-01.04",
+          "INTG-01.05"
+        ]
+      },
+      {
+        "pathPrefix": "baseweb/src/app/customer-order-policy",
+        "taskIds": [
+          "ADM-01.01",
+          "ADM-01.03",
+          "ADM-01.06",
+          "COM-01.01",
+          "PRD-01.02",
+          "PRD-01.06",
+          "CAT-01.02",
+          "INTG-01.01",
+          "INTG-01.03",
+          "ALB-01.04",
+          "QLT-02.01"
+        ]
+      },
+      {
+        "pathPrefix": "baseweb/src/app/confirmation-policy-door",
+        "taskIds": [
+          "PRD-01.06",
+          "ADM-01.06",
+          "ADM-01.01"
+        ]
+      },
+      {
+        "pathPrefix": "baseweb/src/app/confirmation-policy",
+        "taskIds": [
+          "ADM-01.01",
+          "COM-01.01",
+          "INTG-01.01",
+          "ALB-01.04"
+        ]
+      },
+      {
+        "pathPrefix": "baseweb/src/app/albaran-paper-review",
+        "taskIds": [
+          "ALB-01.02",
+          "ALB-01.03",
+          "DOC-01.01",
+          "DOC-01.02",
+          "QLT-01.01",
+          "QLT-02.01"
+        ]
+      },
+      {
+        "pathPrefix": "baseweb/src/app/line-notes",
+        "taskIds": [
+          "ALB-01.03",
+          "ALB-01.04",
+          "PRD-01.02",
+          "CAT-01.02",
+          "QLT-01.01",
+          "QLT-02.01"
+        ]
+      },
+      {
+        "pathPrefix": "baseweb/src/app/customer-option",
+        "taskIds": [
+          "ALB-01.03",
+          "ALB-01.04",
+          "INTG-01.01",
+          "INTG-01.03",
+          "QLT-01.01"
+        ]
+      },
+      {
+        "pathPrefix": "baseweb/src/app",
+        "taskIds": [
+          "OBJ-01.01",
+          "OBJ-01.02",
+          "OBJ-01.03"
+        ],
+        "fallback": true
+      }
+    ],
+    "selectorPatterns": [
+      "data-testid",
+      "aria-label",
+      "<button",
+      "role=\"button\"",
+      "onClick"
+    ]
+  }
+}

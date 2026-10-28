@@ -1,0 +1,156 @@
+{
+  "observedAt": "2026-09-09",
+  "environment": "demo",
+  "hostname": "cedar-demo.soyrocoto.com",
+  "url": "https://cedar-demo.soyrocoto.com/?preview=setup",
+  "sourceCommit": "63f1fda7cc451a9ef065b8d83600fb478ca0b098",
+  "artifactSha256": "5770c9990bd408d064e232fc76a1d2622ef634fe4dbe692adf551797fe4b4d2c",
+  "previousSourceCommit": "677bdbd733293a27a1f4764bba5623df04534c85",
+  "sourcePullRequest": "https://github.com/Rocoto-Labs/rocoto/pull/81",
+  "runtime": {
+    "machine": "rocoto-staging",
+    "unit": "rocoto-cedar-demo.service",
+    "user": "rocoto-cedar-demo",
+    "port": 8793,
+    "source": "/srv/cedar-demo/current",
+    "state": "/var/lib/rocoto-cedar-demo",
+    "stateMode": "0700",
+    "environmentFile": "/etc/rocoto/cedar-demo.env",
+    "environmentMode": "0600"
+  },
+  "deployment": {
+    "artifactFileHashesVerified": 67,
+    "serviceActive": true,
+    "maintainedServicePidsUnchanged": [
+      "rocoto-kit-runtime",
+      "rocoto-staging",
+      "albaranes-bridge"
+    ],
+    "maintainedCaddyfileUnchanged": true,
+    "mainMerged": false,
+    "runtimeNamespaceChecks": [
+      "own state writable",
+      "own source read-only",
+      "maintained product credentials inaccessible",
+      "shared demo and bridge inaccessible"
+    ]
+  },
+  "httpsAndPrivateApi": {
+    "publicSetupStatus": 200,
+    "privateAnonymousStateStatus": 401,
+    "privateLoginStatus": 200,
+    "ready": false,
+    "blockers": [
+      "CEDAR_PROOF_SIGNUP_REVIEWED_FOR"
+    ],
+    "connected": false,
+    "messageCount": 0,
+    "refusedUncommissionedExchangeStatus": 503,
+    "webhookChallengePassed": true
+  },
+  "browser": {
+    "checkedAt": "2026-09-09T14:14:19.404136+00:00",
+    "widths": [
+      1600,
+      390,
+      320
+    ],
+    "asset": {
+      "path": "/assets/index-DQ8U8nl_.js",
+      "sha256": "dee6b8322e04ce07eda724c056848bb2e57d0bda7954432338a8cddc009d9107",
+      "matchesLocalBuild": true
+    },
+    "pageErrors": [],
+    "publicPreviewApiRequests": [],
+    "publicPreviewExternalRequests": [],
+    "anonymousState": 401,
+    "anonymousConversations": 401,
+    "checks": [
+      "HTTPS200; local build asset digest matches",
+      "setup and dialog at1600/390/320; no horizontal overflow",
+      "single Meta CTA; account/number selection owned by Meta",
+      "regular WhatsApp help expands and preserves main CTA",
+      "public preview performs zero API or external requests",
+      "anonymous state and conversations401",
+      "reviewer link opens protected login",
+      "empty browser storage; zero page errors"
+    ]
+  },
+  "providerReadOnly": {
+    "appId": "1427034652248456",
+    "method": "read-only Graph API v26.0",
+    "identity": {
+      "httpStatus": 200,
+      "id": "1427034652248456",
+      "name": "Rocoto"
+    },
+    "subscriptions": {
+      "httpStatus": 200,
+      "data": [
+        {
+          "object": "whatsapp_business_account",
+          "callback": "https://api.soyrocoto.com/meta/whatsapp/webhook",
+          "active": true,
+          "fields": [
+            {
+              "name": "messages",
+              "version": "v24.0"
+            },
+            {
+              "name": "message_template_status_update",
+              "version": "v24.0"
+            },
+            {
+              "name": "calls",
+              "version": "v24.0"
+            },
+            {
+              "name": "message_template_components_update",
+              "version": "v24.0"
+            },
+            {
+              "name": "message_template_quality_update",
+              "version": "v24.0"
+            },
+            {
+              "name": "history",
+              "version": "v24.0"
+            },
+            {
+              "name": "smb_app_state_sync",
+              "version": "v24.0"
+            },
+            {
+              "name": "smb_message_echoes",
+              "version": "v24.0"
+            },
+            {
+              "name": "account_update",
+              "version": "v24.0"
+            },
+            {
+              "name": "phone_number_quality_update",
+              "version": "v24.0"
+            }
+          ]
+        }
+      ],
+      "hasMore": false
+    },
+    "configuration": {
+      "httpStatus": 200,
+      "id": "4618748161700706",
+      "name": "Rocoto",
+      "verifiedBelongsToApp": true,
+      "coexistenceAndSignupVersionVerified": false
+    }
+  },
+  "acceptance": {
+    "realEmbeddedSignupPerformed": false,
+    "realNumberConnected": false,
+    "realHistoryImported": false,
+    "providerSubscriptionsChanged": false,
+    "automatedProtocolAndHistoryTests": "synthetic",
+    "remaining": "Commission an isolated Meta callback and eligible signup configuration, then observe Peter authorize his real WhatsApp Business account and history."
+  }
+}

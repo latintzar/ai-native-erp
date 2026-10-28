@@ -1,0 +1,9 @@
+# Router keyword, matched against the words a person types into the Copilot — a matcher token
+# in SUPPLY_WORDS beside 'out of', 'ran out', 'sin stock', 'falta'. It is read, never shown.
+no stock
+
+# The Spanish sign-up's quiet second act, «Skip for now» (`app/src/prototypes/bodega-pay-later/
+# start/words.ts`, row `skip`). It is the dismissal label Spanish apps use — Yape's own — and it is
+# a LABEL rather than a sentence about the wrong subject: the screen says what the shop gets, and
+# this is the way past it. The gate reads its «no» as English.
+Ahora no

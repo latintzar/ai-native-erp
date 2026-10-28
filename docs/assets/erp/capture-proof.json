@@ -1,0 +1,2957 @@
+{
+  "source_commit": "12d77d610c82a21c602a7706861f043e16607a74",
+  "origin": "http://127.0.0.1:18721/cedar/",
+  "renderer": {
+    "engine": "Chromium",
+    "version": "156.0.8078.47",
+    "dpr": 2
+  },
+  "seed": {
+    "rocoto-app-front-door": "months",
+    "rocoto-app-config": {
+      "version": 1,
+      "sector": [
+        "fish"
+      ],
+      "cast": "fish"
+    },
+    "rocoto-workspace-capabilities:fish": {
+      "version": 1,
+      "pricing": true,
+      "inventory": true,
+      "money": false,
+      "country": "spain",
+      "moneyByCountry": {
+        "peru": true,
+        "spain": false
+      }
+    }
+  },
+  "composition": "Whole rendered Cedar components cloned into a chromeless stage; capture CSS changes spacing, typography and artwork seats. Record text, amounts and painting sources are preserved. Catalogue shows three existing coded fixture SKUs.",
+  "artwork_boundary": "sku-artwork.tsx is a local design store for requests/review/upload; this presentation shows existing catalogue library artwork, not a provider-generated job.",
+  "captures": [
+    {
+      "file": "order-desktop.png",
+      "sha256": "dbd8a3cf2437fd10a4f4bec7955cb971b9ac67baed17f2a8864e49bad49426d5",
+      "css_width": 896,
+      "geometry": {
+        "width": 896,
+        "height": 648,
+        "scrollWidth": 896,
+        "clientWidth": 896,
+        "text": "Cafè Pagès\nSaturday 31.10\n3110-2099\nMerluza\n4.5\nkg\n71,10\n€\n15,80\n€/kg\nPulpo\n4\nkg\n54,00\n€\n13,50\n€/kg\nLubina de estero\n22\nkg\n234,44\n€\n10,66\n€/kg\nTotal · 3 lines\n359,54\n€",
+        "images": [
+          {
+            "src": "/map/14/8288/6115.png",
+            "complete": true,
+            "naturalWidth": 512,
+            "naturalHeight": 512
+          },
+          {
+            "src": "/map/14/8289/6115.png",
+            "complete": true,
+            "naturalWidth": 512,
+            "naturalHeight": 512
+          },
+          {
+            "src": "/map/14/8290/6115.png",
+            "complete": true,
+            "naturalWidth": 512,
+            "naturalHeight": 512
+          },
+          {
+            "src": "/map/14/8288/6116.png",
+            "complete": true,
+            "naturalWidth": 512,
+            "naturalHeight": 512
+          },
+          {
+            "src": "/map/14/8289/6116.png",
+            "complete": true,
+            "naturalWidth": 512,
+            "naturalHeight": 512
+          },
+          {
+            "src": "/map/14/8290/6116.png",
+            "complete": true,
+            "naturalWidth": 512,
+            "naturalHeight": 512
+          },
+          {
+            "src": "/map/14/8288/6117.png",
+            "complete": true,
+            "naturalWidth": 512,
+            "naturalHeight": 512
+          },
+          {
+            "src": "/map/14/8289/6117.png",
+            "complete": true,
+            "naturalWidth": 512,
+            "naturalHeight": 512
+          },
+          {
+            "src": "/map/14/8290/6117.png",
+            "complete": true,
+            "naturalWidth": 512,
+            "naturalHeight": 512
+          },
+          {
+            "src": "/paintings/merluza.webp",
+            "complete": true,
+            "naturalWidth": 1024,
+            "naturalHeight": 1024
+          },
+          {
+            "src": "/paintings/pulpo.webp",
+            "complete": true,
+            "naturalWidth": 1024,
+            "naturalHeight": 1024
+          },
+          {
+            "src": "/paintings/lubina.webp",
+            "complete": true,
+            "naturalWidth": 1024,
+            "naturalHeight": 1024
+          }
+        ],
+        "lineCount": 3
+      },
+      "original_components": [
+        {
+          "text": "Viewed at 09:45\nPrint\nCafè Pagès\nSaturday 31.10\n3110-2099\nViewed by Peter · 09:45\nOpen the chat\n4 · Nord\nTarifa 2\nMerluza\n4.5\nkg\n71,10\n€\n15,80\n€/kg\nPulpo\n4\nkg\n54,00\n€\n13,50\n€/kg\nLubina de estero\n22\nkg\n234,44\n€\n10,66\n€/kg\nAdd line\nTotal · 3 lines\n359,54\n€",
+          "images": [
+            {
+              "src": "/map/14/8288/6115.png",
+              "width": 512,
+              "height": 512
+            },
+            {
+              "src": "/map/14/8289/6115.png",
+              "width": 512,
+              "height": 512
+            },
+            {
+              "src": "/map/14/8290/6115.png",
+              "width": 512,
+              "height": 512
+            },
+            {
+              "src": "/map/14/8288/6116.png",
+              "width": 512,
+              "height": 512
+            },
+            {
+              "src": "/map/14/8289/6116.png",
+              "width": 512,
+              "height": 512
+            },
+            {
+              "src": "/map/14/8290/6116.png",
+              "width": 512,
+              "height": 512
+            },
+            {
+              "src": "/map/14/8288/6117.png",
+              "width": 512,
+              "height": 512
+            },
+            {
+              "src": "/map/14/8289/6117.png",
+              "width": 512,
+              "height": 512
+            },
+            {
+              "src": "/map/14/8290/6117.png",
+              "width": 512,
+              "height": 512
+            },
+            {
+              "src": "/paintings/merluza.webp",
+              "width": 1024,
+              "height": 1024
+            },
+            {
+              "src": "/paintings/pulpo.webp",
+              "width": 1024,
+              "height": 1024
+            },
+            {
+              "src": "/paintings/lubina.webp",
+              "width": 1024,
+              "height": 1024
+            }
+          ],
+          "html_sha256": "8716570f985666f68e1a754cd0bd0c96c43dc69198c3b62b7523328d85d0d80f"
+        }
+      ],
+      "page_errors": [],
+      "blocked_external": [],
+      "fixture_mutating_requests": [
+        {
+          "url": "http://127.0.0.1:18721/api/cedar/access/workspaces",
+          "method": "POST"
+        },
+        {
+          "url": "http://127.0.0.1:18721/api/proof/session",
+          "method": "POST"
+        },
+        {
+          "url": "http://127.0.0.1:18721/api/cedar/access/workspaces",
+          "method": "POST"
+        }
+      ],
+      "resources": {
+        "/cedar/": {
+          "status": 200,
+          "sha256": "61e5d1f8e9b35126566ddcae5644453c548ccb71cfa5d2674b7675d2b4f17f7b"
+        },
+        "/assets/app-CO4JVU2W.js": {
+          "status": 200,
+          "sha256": "1f9453df28ffee25da14261728eaad79e76356675ff8de149a6926df84a45f24"
+        },
+        "/assets/preload-helper-DcYFrm8w.css": {
+          "status": 200,
+          "sha256": "abba7c9022a6c6302655455fafc276af9ea7f5dcce3470d45995630f139b4656"
+        },
+        "/assets/preload-helper-DY36dqbZ.js": {
+          "status": 200,
+          "sha256": "aba87f2a53e45ecdc9113fc30387d16e449d1676428cf5f82dd624c1df97d152"
+        },
+        "/assets/modulepreload-polyfill-P2Xu9kJm.js": {
+          "status": 200,
+          "sha256": "418c206484b89b68ef5f067277831e583fc9193a62aadf4de269acaaeb12a85f"
+        },
+        "/assets/main-DrIJu8tb.js": {
+          "status": 200,
+          "sha256": "f798ef7230484c581a460824e2dcbe12f1b24fa8562471892cda7c112d0e20ae"
+        },
+        "/assets/rolldown-runtime-C0FnF6B9.js": {
+          "status": 200,
+          "sha256": "e0a79ad36c6ca1ffbc796c80aa5661803a9d1bc684e29d1587f48b4ba9a82714"
+        },
+        "/assets/react-IpA8Qn9U.js": {
+          "status": 200,
+          "sha256": "1971cbe7ee8324edfc2374a5c51f679b691b056cba3db0ac1baf277bed84841a"
+        },
+        "/assets/currency-DTdJVcSV.js": {
+          "status": 200,
+          "sha256": "7f764b21d5d7a6d5dd6bcf4149eda3a3d37f720e6b6146afdbdd08a3ca370031"
+        },
+        "/assets/createLucideIcon-BOnSrhDG.js": {
+          "status": 200,
+          "sha256": "c68725f4d8bdab58a7c03cf693d04d9a462f86c20be0e1a930caee7e86839b50"
+        },
+        "/assets/printing-BnxOVfrc.css": {
+          "status": 200,
+          "sha256": "f48c1eff5401d1950e612a2e82d7ebf8406e02fa03f63a8e31653e801488d2f4"
+        },
+        "/assets/glyphs-BO98nlga.js": {
+          "status": 200,
+          "sha256": "99dc271d57cf837a9464c3a6da6de4b450ff3c46d0265818e1ea119776a38f61"
+        },
+        "/assets/main-BfjEpHBb.css": {
+          "status": 200,
+          "sha256": "b493e48d7aa71dd0debbf7a31038e00ae38b2b44c709428cd36de603ac5e13c4"
+        },
+        "/assets/arrow-left-OU03yTFK.js": {
+          "status": 200,
+          "sha256": "a200b940e1a6cd362071d06732b72727ddb4752a0d194e9694e1a6c2d3e94cdf"
+        },
+        "/assets/arrow-up-right-CG9gwNhb.js": {
+          "status": 200,
+          "sha256": "84cffdda37c34b05df41dab07ed000abbf9c6fba1f6ccf1baa467055eb4e4a40"
+        },
+        "/assets/check-CPU-CJJK.js": {
+          "status": 200,
+          "sha256": "6a27044b73c457eded03d8ebf298c9a6612d21bff95e7c1984dfd5a460228b96"
+        },
+        "/assets/phone-Btuy6vN3.js": {
+          "status": 200,
+          "sha256": "2c3c686ea4340cdcba8f81ed314324171b3945d312d027a6a8e03cd8f76669e6"
+        },
+        "/assets/ellipsis-Cw8iGzwN.js": {
+          "status": 200,
+          "sha256": "0eb1ab89013a0f6240e7e7d939ac8555c16f7419f5e4ad0f0b11ade3ff271991"
+        },
+        "/assets/phone-off-B7_6vYjN.js": {
+          "status": 200,
+          "sha256": "f76caf7a4bf5570436dbed8b227479d1999f301c6ab1a27a0a1b416bb4924433"
+        },
+        "/assets/jsx-runtime-CJ6XR39y.js": {
+          "status": 200,
+          "sha256": "9d230b88c6df3b5c1190839e0f4e12b59c936770c4125040be2f7e227e5ddbf1"
+        },
+        "/assets/plus-CIUTM9wO.js": {
+          "status": 200,
+          "sha256": "7121e9fb1e03c9c784f0c5d14f8822984212a4c67725c99bc8f43740941bbd8f"
+        },
+        "/assets/message-circle-CwDbkwId.js": {
+          "status": 200,
+          "sha256": "f5416da9a457df19946cf466a0a3a31932a1fc88359ee6542c54b6208d8b3a4d"
+        },
+        "/assets/receipt-text-BBvYiq2u.js": {
+          "status": 200,
+          "sha256": "2ccfe58ae89eb25c40eefafae7a1e14c4ee974dd7bc5562514af9f2537909285"
+        },
+        "/assets/search-DNO7nHCu.js": {
+          "status": 200,
+          "sha256": "dd384c5530818311c4020013e91ca66259cd15566c25443232af94e4e1c8b485"
+        },
+        "/assets/store-DJfQvpoK.js": {
+          "status": 200,
+          "sha256": "4e1b0ed03dc411ae7a09d6bcfe6cddbb702101aeec2844061b4b08d22d74dee4"
+        },
+        "/assets/chevron-left-BLcZaGlL.js": {
+          "status": 200,
+          "sha256": "bea63eed385e3c019dd38086e0f7e392cb3d7860878728054c4d217a5452cbb6"
+        },
+        "/assets/chevron-right-DFm0zL4C.js": {
+          "status": 200,
+          "sha256": "9a0705cdabe48f7ca14e106d9498cb981a8b27e8bcd3e8aa0717907f8d5e2da0"
+        },
+        "/assets/arrow-right-Xqk6wDjr.js": {
+          "status": 200,
+          "sha256": "66809e2fca3a6f4335e56b5aefa75091ed4f20d5997c6c4003cadc8fe3c48092"
+        },
+        "/assets/app-DcFB5tdw.js": {
+          "status": 200,
+          "sha256": "7f06dd12a25df917708ae61ee648aa0ff035f7f6f971bbd0dbc72344359fda70"
+        },
+        "/assets/icon-CKY70IyD.js": {
+          "status": 200,
+          "sha256": "4df1672887ef3b306e50ae416f6493a4ef6450e74a0f44a3a8b44200f4ff36cf"
+        },
+        "/assets/input-zIMQXVxk.js": {
+          "status": 200,
+          "sha256": "83fe3620923a09790775b8e6cb5615330bec786e74605a7f2ee92854f4c84611"
+        },
+        "/assets/button-B_ZmeaNk.js": {
+          "status": 200,
+          "sha256": "f65b1e81506979b3f2a0500fcae65724c6dc53ee9cb4b2aa6a80526f25fd3212"
+        },
+        "/assets/message-D2b9sMCC.js": {
+          "status": 200,
+          "sha256": "d43daa304a7ef732d3819f148b01240c8678ff1cd9db607af8169853885d2c23"
+        },
+        "/assets/api-DXaJlytG.js": {
+          "status": 200,
+          "sha256": "1bb8fc74f2c75744319e692f8c70888c4a982456f0e6e61f7f94d7d5f4e380eb"
+        },
+        "/assets/workflow-dialog-SZUbYk6J.js": {
+          "status": 200,
+          "sha256": "13d0f3d39fadf6ecf3c59bd45e4a48444ffccef294f0339aeca87f16cb22c30f"
+        },
+        "/assets/es2015-BUaFuHsB.js": {
+          "status": 200,
+          "sha256": "731633b9dd41ff02767a352c6d8b45f66bd2637594d5584ac6624cddb06fcecb"
+        },
+        "/assets/tslib.es6-Dm_CEdRT.js": {
+          "status": 200,
+          "sha256": "e02eca1bcd339520e26a0f8751f665667a972debb2a28ec69f76084656acb604"
+        },
+        "/assets/hooks-IlS1DL10.js": {
+          "status": 200,
+          "sha256": "a7a02a911052e58ff8ea8916f2524c4eb4e7d7c5c6db29af957329426eb08c19"
+        },
+        "/assets/viewport-D61Dtj8a.js": {
+          "status": 200,
+          "sha256": "6aa6ed0d0b4cb5329b85a4902114ba75963e0c11ecfc8063d9544c8a56c59aeb"
+        },
+        "/assets/currency-migration-Dmyo9EI4.js": {
+          "status": 200,
+          "sha256": "7559a5b778cd4c8ec5bb5b8c3f8f08eea85f8f696a9aa43a122455ca81e21a54"
+        },
+        "/assets/scenario-clock-srjDHVvX.js": {
+          "status": 200,
+          "sha256": "56c6959234722084c62f27be7642ad20c0ca6674fbf2aac8c0ad5970ead52353"
+        },
+        "/assets/money-runtime-hd7kHe3M.js": {
+          "status": 200,
+          "sha256": "8a621928a0c5cd13365ba2c6b9e6fedd51b8d4104934ffb5f6187aefad9e11d4"
+        },
+        "/assets/config-DFDj9QhH.js": {
+          "status": 200,
+          "sha256": "dd161ffdaf206d1eb28b4d674f0884241cd27850c214a5cf83f54ba7bdd1a3de"
+        },
+        "/assets/money-api-C353yT8w.js": {
+          "status": 200,
+          "sha256": "23421448d75c8a2a0f252ef721a7b7287cf936ede7ea033792bae9a30d724e80"
+        },
+        "/assets/figure-DvgSNnDS.js": {
+          "status": 200,
+          "sha256": "af6114a0c923286832cc470085a5504d28518a498c3033b69ef7e7a6d8aba319"
+        },
+        "/assets/money-model-BWHsyawJ.js": {
+          "status": 200,
+          "sha256": "3801afef9d591217c13d3fdcfe841b250978919972b153e0c9a598e2e5ff647c"
+        },
+        "/assets/company-DhAF8hAn.js": {
+          "status": 200,
+          "sha256": "c5f03103a1dbd01c9f82d4a2a3e0ec71999242ce1fc22cb9d0bf54a4f1fd11de"
+        },
+        "/assets/day-CDgHHo6u.js": {
+          "status": 200,
+          "sha256": "10e3ba1a78a92e1557e7ff08818daa28ed28026ad9486f4e1fcfa276e6b45304"
+        },
+        "/assets/cedar-channel-api-C5kwYQ5j.js": {
+          "status": 200,
+          "sha256": "6810b608cab4e101160922ff8f41601353a69792bcd3fb7f8477327352271cb1"
+        },
+        "/assets/anchors-CcoY9Nzz.js": {
+          "status": 200,
+          "sha256": "7ee6311c39ab371ca5b98662845c3a8ab1870ee1870611045bba36ca1d4357d3"
+        },
+        "/assets/phone-runtime-D8A-bfY2.js": {
+          "status": 200,
+          "sha256": "1a2c30dc2bb3569ea874ded8aa30d7cb3ec6653ac49bd6b442230d83d4c075b8"
+        },
+        "/assets/modal-BN71puGn.js": {
+          "status": 200,
+          "sha256": "2be14da64c3d4de5135449613e5b2b70c2f0d91f5e6efd526300b2b2592e2f4f"
+        },
+        "/assets/setup-frame-Ddg35nFM.js": {
+          "status": 200,
+          "sha256": "e59a04af47acbd700081d9f861adfcf567ea939387109250812137e7e3b8516f"
+        },
+        "/assets/printing-Cy46gVio.js": {
+          "status": 200,
+          "sha256": "5ad1c6e536f1c779692c031c71a663cc6695b4685c719835f0957a15fa87709a"
+        },
+        "/assets/catalogue-DDzuIAJu.js": {
+          "status": 200,
+          "sha256": "9018df1e1d1ea10dcbc6109c06a4912c0d4e9330436e0c6cee5883a5571e359b"
+        },
+        "/assets/onboarding-v1-DQ53snQV.js": {
+          "status": 200,
+          "sha256": "ad9388a1f87828d4f1f05342b2a7b4f3b7bbb1648a7df0879fb77219e0791675"
+        },
+        "/assets/demo-welcome-DyE6uQDe.js": {
+          "status": 200,
+          "sha256": "dd7ebec3812dcac9c5778fb16b390f709f8551f5dfe34715fffeb1451d29e4f7"
+        },
+        "/assets/onboarding-store-DL3S3ROb.js": {
+          "status": 200,
+          "sha256": "1220eccd183c725ccb0e5aa5ea2f58870c157f3096adede20215814d5ee12351"
+        },
+        "/assets/money-sync-DWnraiiy.js": {
+          "status": 200,
+          "sha256": "1ff30021eaa038092a57c47bd463000bbdf1d4deb74fb607a686150d0c449c5a"
+        },
+        "/assets/whatsapp-intake-Z9f4YOW_.js": {
+          "status": 200,
+          "sha256": "acab4eb818cfe9f2322c90eaf6b53462c8bdbb56bc6053bcd8784efe9b8ea676"
+        },
+        "/assets/order-payment-sync-DND-vcol.js": {
+          "status": 200,
+          "sha256": "fa9c6d7034187a80232ad986568ac395dbe53263b7c5194f4363e5f34786a841"
+        },
+        "/assets/inter-latin-400-normal-C38fXH4l.woff2": {
+          "status": 200,
+          "sha256": "8909904ab6c872eb994093482a88a28eca2cd95912d7b6fecd72103b0dc07edc"
+        },
+        "/assets/order-intake-CofmeGmd.js": {
+          "status": 200,
+          "sha256": "135074211876241b919fd11f5ff576a2d1cfc6b41763f3ceda3c0244cfb26c5f"
+        },
+        "/assets/email-api-CTdE9W2N.js": {
+          "status": 200,
+          "sha256": "bdc482c30bbaecfc51b5c160642de845db8aef73c505f2bfd4aeb9c7ec3be40c"
+        },
+        "/assets/email-connection-CKHH63SN.js": {
+          "status": 200,
+          "sha256": "60c9b1798a96890a453271ab35b6e2a31975b126bebd8fd4c2ee9995d48c064c"
+        },
+        "/assets/email-source-session-Di9g_zMI.js": {
+          "status": 200,
+          "sha256": "69c7d67ee933c09812a23878978b31f7dd68540e971310a312402c61e0693847"
+        },
+        "/assets/document-line-table-DykzPIvk.js": {
+          "status": 200,
+          "sha256": "e4e5d7ae2ab37ce1016d504344431326c96ac1213d6c15fc94c39f1af2cd90f9"
+        },
+        "/assets/email-intake-Dg5_KwVl.js": {
+          "status": 200,
+          "sha256": "c5f26753197a1b26b3de35c63a664e4e4a3dee5ba96df8dbf6fc125d436a2a3f"
+        },
+        "/assets/phone-intake-C4irCckE.js": {
+          "status": 200,
+          "sha256": "573ff6d25e779732c6a151cdc828b5b34ec47404e70dfdcc8540660d6f4b769e"
+        },
+        "/assets/inter-latin-500-normal-Cerq10X2.woff2": {
+          "status": 200,
+          "sha256": "f3779f1efccc4bdcdf9c0a02ab95bf6bd092ed09c48c08cedc725889edd1d19f"
+        },
+        "/fonts/fraunces/fraunces-latin-500-700.woff2": {
+          "status": 200,
+          "sha256": "7234ed860a9cc83045413c4faee63c960a8f2d1917adcf728119307d56e0d783"
+        },
+        "/brand/rocoto-mark.svg": {
+          "status": 200,
+          "sha256": "5853eac27b281e7cba519cb82ae0e3005bab843cdf48345c49d1171a2f65c5e7"
+        },
+        "/cedar-artwork/delivery-batch.png": {
+          "status": 200,
+          "sha256": "17eb47ab241b42689cb4343f6194087376574b4106959418b5fb421baa2023dd"
+        },
+        "/assets/intake-road-CBWNqNet.js": {
+          "status": 200,
+          "sha256": "99f530e27dac04b761855240f500db4b0e1b2ebf5209cf01f6b646b1b3b1e987"
+        },
+        "/assets/sales-Cbr8UTCY.js": {
+          "status": 200,
+          "sha256": "32833fa67ddd2654181c7659ba784d1afdda26287e7550d55a875506e7c464ab"
+        },
+        "/assets/datepicker-C7zNRkXy.js": {
+          "status": 200,
+          "sha256": "7b7d9d151dee5190239c964ed6805d88c9e1c6a58218a60ac49df2dc25010207"
+        },
+        "/map/14/8288/6115.png": {
+          "status": 200,
+          "sha256": "ad98cbc35e084dde2386c5e1b384a4162778b322a6fa178e50e2a7a96a117375"
+        },
+        "/map/14/8289/6115.png": {
+          "status": 200,
+          "sha256": "5a8de3f1f39b25bc434f59678871a669c8437e4c8f57a31f8e10aa1a5bd3bea1"
+        },
+        "/map/14/8290/6115.png": {
+          "status": 200,
+          "sha256": "6c14c3bd0e9fdb5be5fa340f3e717eb91d309762725625a40eef407a0651b756"
+        },
+        "/map/14/8289/6117.png": {
+          "status": 200,
+          "sha256": "b35db280563b987e641e316664f41e8c270ce674ca2b0278401f591061435054"
+        },
+        "/map/14/8290/6116.png": {
+          "status": 200,
+          "sha256": "8baf5ee4b5d7de2565605cdf6590c281c384e73e3f28d27f6f3970e683e29e0a"
+        },
+        "/map/14/8288/6116.png": {
+          "status": 200,
+          "sha256": "4377e91933c9746cc61e84401309c49ee277ee92457d2c140cfac96d213686f7"
+        },
+        "/map/14/8289/6116.png": {
+          "status": 200,
+          "sha256": "e4ad20e9de2c4fd44ff0e7511dd1bf1188d5484857da6e72032a34e062d3fd66"
+        },
+        "/map/14/8288/6117.png": {
+          "status": 200,
+          "sha256": "6e82f3e31564f202c64a70c8247bb580cd3395025a903ba2003f727b525340c4"
+        },
+        "/map/14/8290/6117.png": {
+          "status": 200,
+          "sha256": "21543c7fea6025790d9852419498387c3ea668e906046a235a423ba04d23083e"
+        },
+        "/paintings/pulpo.webp": {
+          "status": 200,
+          "sha256": "d41fb8a25b8243960077e279f6cca97d6c996b0e31d3da3412bcbd6bce5b0a9d"
+        },
+        "/paintings/merluza.webp": {
+          "status": 200,
+          "sha256": "6b90e6885f63653b33b820e4d361518fdb9d2bdb6dacfd25da4db5a78d7a53b4"
+        },
+        "/paintings/lubina.webp": {
+          "status": 200,
+          "sha256": "3c3398d2051f58987b16192fc2a2d4d6dac67fa879d429b4280c9935f649194b"
+        }
+      },
+      "pixel_dimensions": [
+        1792,
+        1296
+      ]
+    },
+    {
+      "file": "order-phone.png",
+      "sha256": "dd5acf742393822b4aa30aa6d4415c52300819a83d1bab6e6ccfeed1f183383d",
+      "css_width": 390,
+      "geometry": {
+        "width": 390,
+        "height": 780,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "text": "Cafè Pagès\nSaturday 31.10\n3110-2099\nMerluza\n4.5\nkg\n71,10\n€\n15,80\n€/kg\nPulpo\n4\nkg\n54,00\n€\n13,50\n€/kg\nLubina de estero\n22\nkg\n234,44\n€\n10,66\n€/kg\nTotal · 3 lines\n359,54\n€",
+        "images": [
+          {
+            "src": "/map/14/8288/6115.png",
+            "complete": true,
+            "naturalWidth": 512,
+            "naturalHeight": 512
+          },
+          {
+            "src": "/map/14/8289/6115.png",
+            "complete": true,
+            "naturalWidth": 512,
+            "naturalHeight": 512
+          },
+          {
+            "src": "/map/14/8290/6115.png",
+            "complete": true,
+            "naturalWidth": 512,
+            "naturalHeight": 512
+          },
+          {
+            "src": "/map/14/8288/6116.png",
+            "complete": true,
+            "naturalWidth": 512,
+            "naturalHeight": 512
+          },
+          {
+            "src": "/map/14/8289/6116.png",
+            "complete": true,
+            "naturalWidth": 512,
+            "naturalHeight": 512
+          },
+          {
+            "src": "/map/14/8290/6116.png",
+            "complete": true,
+            "naturalWidth": 512,
+            "naturalHeight": 512
+          },
+          {
+            "src": "/map/14/8288/6117.png",
+            "complete": true,
+            "naturalWidth": 512,
+            "naturalHeight": 512
+          },
+          {
+            "src": "/map/14/8289/6117.png",
+            "complete": true,
+            "naturalWidth": 512,
+            "naturalHeight": 512
+          },
+          {
+            "src": "/map/14/8290/6117.png",
+            "complete": true,
+            "naturalWidth": 512,
+            "naturalHeight": 512
+          },
+          {
+            "src": "/paintings/merluza.webp",
+            "complete": true,
+            "naturalWidth": 1024,
+            "naturalHeight": 1024
+          },
+          {
+            "src": "/paintings/pulpo.webp",
+            "complete": true,
+            "naturalWidth": 1024,
+            "naturalHeight": 1024
+          },
+          {
+            "src": "/paintings/lubina.webp",
+            "complete": true,
+            "naturalWidth": 1024,
+            "naturalHeight": 1024
+          }
+        ],
+        "lineCount": 3
+      },
+      "original_components": [
+        {
+          "text": "Viewed 09:45\nCafè Pagès\nSaturday 31.10\n3110-2099\nViewed by Peter · 09:45\nOpen the chat\n4 · Nord\nTarifa 2\nMerluza\n4.5\nkg\n71,10\n€\n15,80\n€/kg\nPulpo\n4\nkg\n54,00\n€\n13,50\n€/kg\nLubina de estero\n22\nkg\n234,44\n€\n10,66\n€/kg\nAdd line\nTotal · 3 lines\n359,54\n€",
+          "images": [
+            {
+              "src": "/map/14/8288/6115.png",
+              "width": 512,
+              "height": 512
+            },
+            {
+              "src": "/map/14/8289/6115.png",
+              "width": 512,
+              "height": 512
+            },
+            {
+              "src": "/map/14/8290/6115.png",
+              "width": 512,
+              "height": 512
+            },
+            {
+              "src": "/map/14/8288/6116.png",
+              "width": 512,
+              "height": 512
+            },
+            {
+              "src": "/map/14/8289/6116.png",
+              "width": 512,
+              "height": 512
+            },
+            {
+              "src": "/map/14/8290/6116.png",
+              "width": 512,
+              "height": 512
+            },
+            {
+              "src": "/map/14/8288/6117.png",
+              "width": 512,
+              "height": 512
+            },
+            {
+              "src": "/map/14/8289/6117.png",
+              "width": 512,
+              "height": 512
+            },
+            {
+              "src": "/map/14/8290/6117.png",
+              "width": 512,
+              "height": 512
+            },
+            {
+              "src": "/paintings/merluza.webp",
+              "width": 1024,
+              "height": 1024
+            },
+            {
+              "src": "/paintings/pulpo.webp",
+              "width": 1024,
+              "height": 1024
+            },
+            {
+              "src": "/paintings/lubina.webp",
+              "width": 1024,
+              "height": 1024
+            }
+          ],
+          "html_sha256": "d467dd36fbe166719e38b6668c041e632918652ce82a06bb6d7f68d7dde22e12"
+        }
+      ],
+      "page_errors": [],
+      "blocked_external": [],
+      "fixture_mutating_requests": [
+        {
+          "url": "http://127.0.0.1:18721/api/cedar/access/workspaces",
+          "method": "POST"
+        },
+        {
+          "url": "http://127.0.0.1:18721/api/proof/session",
+          "method": "POST"
+        },
+        {
+          "url": "http://127.0.0.1:18721/api/cedar/access/workspaces",
+          "method": "POST"
+        }
+      ],
+      "resources": {
+        "/cedar/": {
+          "status": 200,
+          "sha256": "61e5d1f8e9b35126566ddcae5644453c548ccb71cfa5d2674b7675d2b4f17f7b"
+        },
+        "/assets/app-CO4JVU2W.js": {
+          "status": 200,
+          "sha256": "1f9453df28ffee25da14261728eaad79e76356675ff8de149a6926df84a45f24"
+        },
+        "/assets/preload-helper-DcYFrm8w.css": {
+          "status": 200,
+          "sha256": "abba7c9022a6c6302655455fafc276af9ea7f5dcce3470d45995630f139b4656"
+        },
+        "/assets/preload-helper-DY36dqbZ.js": {
+          "status": 200,
+          "sha256": "aba87f2a53e45ecdc9113fc30387d16e449d1676428cf5f82dd624c1df97d152"
+        },
+        "/assets/modulepreload-polyfill-P2Xu9kJm.js": {
+          "status": 200,
+          "sha256": "418c206484b89b68ef5f067277831e583fc9193a62aadf4de269acaaeb12a85f"
+        },
+        "/assets/main-DrIJu8tb.js": {
+          "status": 200,
+          "sha256": "f798ef7230484c581a460824e2dcbe12f1b24fa8562471892cda7c112d0e20ae"
+        },
+        "/assets/rolldown-runtime-C0FnF6B9.js": {
+          "status": 200,
+          "sha256": "e0a79ad36c6ca1ffbc796c80aa5661803a9d1bc684e29d1587f48b4ba9a82714"
+        },
+        "/assets/react-IpA8Qn9U.js": {
+          "status": 200,
+          "sha256": "1971cbe7ee8324edfc2374a5c51f679b691b056cba3db0ac1baf277bed84841a"
+        },
+        "/assets/currency-DTdJVcSV.js": {
+          "status": 200,
+          "sha256": "7f764b21d5d7a6d5dd6bcf4149eda3a3d37f720e6b6146afdbdd08a3ca370031"
+        },
+        "/assets/jsx-runtime-CJ6XR39y.js": {
+          "status": 200,
+          "sha256": "9d230b88c6df3b5c1190839e0f4e12b59c936770c4125040be2f7e227e5ddbf1"
+        },
+        "/assets/createLucideIcon-BOnSrhDG.js": {
+          "status": 200,
+          "sha256": "c68725f4d8bdab58a7c03cf693d04d9a462f86c20be0e1a930caee7e86839b50"
+        },
+        "/assets/check-CPU-CJJK.js": {
+          "status": 200,
+          "sha256": "6a27044b73c457eded03d8ebf298c9a6612d21bff95e7c1984dfd5a460228b96"
+        },
+        "/assets/arrow-left-OU03yTFK.js": {
+          "status": 200,
+          "sha256": "a200b940e1a6cd362071d06732b72727ddb4752a0d194e9694e1a6c2d3e94cdf"
+        },
+        "/assets/glyphs-BO98nlga.js": {
+          "status": 200,
+          "sha256": "99dc271d57cf837a9464c3a6da6de4b450ff3c46d0265818e1ea119776a38f61"
+        },
+        "/assets/arrow-up-right-CG9gwNhb.js": {
+          "status": 200,
+          "sha256": "84cffdda37c34b05df41dab07ed000abbf9c6fba1f6ccf1baa467055eb4e4a40"
+        },
+        "/assets/printing-BnxOVfrc.css": {
+          "status": 200,
+          "sha256": "f48c1eff5401d1950e612a2e82d7ebf8406e02fa03f63a8e31653e801488d2f4"
+        },
+        "/assets/main-BfjEpHBb.css": {
+          "status": 200,
+          "sha256": "b493e48d7aa71dd0debbf7a31038e00ae38b2b44c709428cd36de603ac5e13c4"
+        },
+        "/assets/plus-CIUTM9wO.js": {
+          "status": 200,
+          "sha256": "7121e9fb1e03c9c784f0c5d14f8822984212a4c67725c99bc8f43740941bbd8f"
+        },
+        "/assets/ellipsis-Cw8iGzwN.js": {
+          "status": 200,
+          "sha256": "0eb1ab89013a0f6240e7e7d939ac8555c16f7419f5e4ad0f0b11ade3ff271991"
+        },
+        "/assets/message-circle-CwDbkwId.js": {
+          "status": 200,
+          "sha256": "f5416da9a457df19946cf466a0a3a31932a1fc88359ee6542c54b6208d8b3a4d"
+        },
+        "/assets/phone-Btuy6vN3.js": {
+          "status": 200,
+          "sha256": "2c3c686ea4340cdcba8f81ed314324171b3945d312d027a6a8e03cd8f76669e6"
+        },
+        "/assets/phone-off-B7_6vYjN.js": {
+          "status": 200,
+          "sha256": "f76caf7a4bf5570436dbed8b227479d1999f301c6ab1a27a0a1b416bb4924433"
+        },
+        "/assets/receipt-text-BBvYiq2u.js": {
+          "status": 200,
+          "sha256": "2ccfe58ae89eb25c40eefafae7a1e14c4ee974dd7bc5562514af9f2537909285"
+        },
+        "/assets/search-DNO7nHCu.js": {
+          "status": 200,
+          "sha256": "dd384c5530818311c4020013e91ca66259cd15566c25443232af94e4e1c8b485"
+        },
+        "/assets/store-DJfQvpoK.js": {
+          "status": 200,
+          "sha256": "4e1b0ed03dc411ae7a09d6bcfe6cddbb702101aeec2844061b4b08d22d74dee4"
+        },
+        "/assets/chevron-left-BLcZaGlL.js": {
+          "status": 200,
+          "sha256": "bea63eed385e3c019dd38086e0f7e392cb3d7860878728054c4d217a5452cbb6"
+        },
+        "/assets/chevron-right-DFm0zL4C.js": {
+          "status": 200,
+          "sha256": "9a0705cdabe48f7ca14e106d9498cb981a8b27e8bcd3e8aa0717907f8d5e2da0"
+        },
+        "/assets/app-DcFB5tdw.js": {
+          "status": 200,
+          "sha256": "7f06dd12a25df917708ae61ee648aa0ff035f7f6f971bbd0dbc72344359fda70"
+        },
+        "/assets/arrow-right-Xqk6wDjr.js": {
+          "status": 200,
+          "sha256": "66809e2fca3a6f4335e56b5aefa75091ed4f20d5997c6c4003cadc8fe3c48092"
+        },
+        "/assets/input-zIMQXVxk.js": {
+          "status": 200,
+          "sha256": "83fe3620923a09790775b8e6cb5615330bec786e74605a7f2ee92854f4c84611"
+        },
+        "/assets/button-B_ZmeaNk.js": {
+          "status": 200,
+          "sha256": "f65b1e81506979b3f2a0500fcae65724c6dc53ee9cb4b2aa6a80526f25fd3212"
+        },
+        "/assets/icon-CKY70IyD.js": {
+          "status": 200,
+          "sha256": "4df1672887ef3b306e50ae416f6493a4ef6450e74a0f44a3a8b44200f4ff36cf"
+        },
+        "/assets/api-DXaJlytG.js": {
+          "status": 200,
+          "sha256": "1bb8fc74f2c75744319e692f8c70888c4a982456f0e6e61f7f94d7d5f4e380eb"
+        },
+        "/assets/message-D2b9sMCC.js": {
+          "status": 200,
+          "sha256": "d43daa304a7ef732d3819f148b01240c8678ff1cd9db607af8169853885d2c23"
+        },
+        "/assets/hooks-IlS1DL10.js": {
+          "status": 200,
+          "sha256": "a7a02a911052e58ff8ea8916f2524c4eb4e7d7c5c6db29af957329426eb08c19"
+        },
+        "/assets/workflow-dialog-SZUbYk6J.js": {
+          "status": 200,
+          "sha256": "13d0f3d39fadf6ecf3c59bd45e4a48444ffccef294f0339aeca87f16cb22c30f"
+        },
+        "/assets/es2015-BUaFuHsB.js": {
+          "status": 200,
+          "sha256": "731633b9dd41ff02767a352c6d8b45f66bd2637594d5584ac6624cddb06fcecb"
+        },
+        "/assets/viewport-D61Dtj8a.js": {
+          "status": 200,
+          "sha256": "6aa6ed0d0b4cb5329b85a4902114ba75963e0c11ecfc8063d9544c8a56c59aeb"
+        },
+        "/assets/tslib.es6-Dm_CEdRT.js": {
+          "status": 200,
+          "sha256": "e02eca1bcd339520e26a0f8751f665667a972debb2a28ec69f76084656acb604"
+        },
+        "/assets/currency-migration-Dmyo9EI4.js": {
+          "status": 200,
+          "sha256": "7559a5b778cd4c8ec5bb5b8c3f8f08eea85f8f696a9aa43a122455ca81e21a54"
+        },
+        "/assets/config-DFDj9QhH.js": {
+          "status": 200,
+          "sha256": "dd161ffdaf206d1eb28b4d674f0884241cd27850c214a5cf83f54ba7bdd1a3de"
+        },
+        "/assets/scenario-clock-srjDHVvX.js": {
+          "status": 200,
+          "sha256": "56c6959234722084c62f27be7642ad20c0ca6674fbf2aac8c0ad5970ead52353"
+        },
+        "/assets/money-api-C353yT8w.js": {
+          "status": 200,
+          "sha256": "23421448d75c8a2a0f252ef721a7b7287cf936ede7ea033792bae9a30d724e80"
+        },
+        "/assets/money-model-BWHsyawJ.js": {
+          "status": 200,
+          "sha256": "3801afef9d591217c13d3fdcfe841b250978919972b153e0c9a598e2e5ff647c"
+        },
+        "/assets/money-runtime-hd7kHe3M.js": {
+          "status": 200,
+          "sha256": "8a621928a0c5cd13365ba2c6b9e6fedd51b8d4104934ffb5f6187aefad9e11d4"
+        },
+        "/assets/figure-DvgSNnDS.js": {
+          "status": 200,
+          "sha256": "af6114a0c923286832cc470085a5504d28518a498c3033b69ef7e7a6d8aba319"
+        },
+        "/assets/day-CDgHHo6u.js": {
+          "status": 200,
+          "sha256": "10e3ba1a78a92e1557e7ff08818daa28ed28026ad9486f4e1fcfa276e6b45304"
+        },
+        "/assets/company-DhAF8hAn.js": {
+          "status": 200,
+          "sha256": "c5f03103a1dbd01c9f82d4a2a3e0ec71999242ce1fc22cb9d0bf54a4f1fd11de"
+        },
+        "/assets/anchors-CcoY9Nzz.js": {
+          "status": 200,
+          "sha256": "7ee6311c39ab371ca5b98662845c3a8ab1870ee1870611045bba36ca1d4357d3"
+        },
+        "/assets/cedar-channel-api-C5kwYQ5j.js": {
+          "status": 200,
+          "sha256": "6810b608cab4e101160922ff8f41601353a69792bcd3fb7f8477327352271cb1"
+        },
+        "/assets/setup-frame-Ddg35nFM.js": {
+          "status": 200,
+          "sha256": "e59a04af47acbd700081d9f861adfcf567ea939387109250812137e7e3b8516f"
+        },
+        "/assets/modal-BN71puGn.js": {
+          "status": 200,
+          "sha256": "2be14da64c3d4de5135449613e5b2b70c2f0d91f5e6efd526300b2b2592e2f4f"
+        },
+        "/assets/phone-runtime-D8A-bfY2.js": {
+          "status": 200,
+          "sha256": "1a2c30dc2bb3569ea874ded8aa30d7cb3ec6653ac49bd6b442230d83d4c075b8"
+        },
+        "/assets/catalogue-DDzuIAJu.js": {
+          "status": 200,
+          "sha256": "9018df1e1d1ea10dcbc6109c06a4912c0d4e9330436e0c6cee5883a5571e359b"
+        },
+        "/assets/printing-Cy46gVio.js": {
+          "status": 200,
+          "sha256": "5ad1c6e536f1c779692c031c71a663cc6695b4685c719835f0957a15fa87709a"
+        },
+        "/assets/onboarding-v1-DQ53snQV.js": {
+          "status": 200,
+          "sha256": "ad9388a1f87828d4f1f05342b2a7b4f3b7bbb1648a7df0879fb77219e0791675"
+        },
+        "/assets/demo-welcome-DyE6uQDe.js": {
+          "status": 200,
+          "sha256": "dd7ebec3812dcac9c5778fb16b390f709f8551f5dfe34715fffeb1451d29e4f7"
+        },
+        "/assets/onboarding-store-DL3S3ROb.js": {
+          "status": 200,
+          "sha256": "1220eccd183c725ccb0e5aa5ea2f58870c157f3096adede20215814d5ee12351"
+        },
+        "/assets/inter-latin-400-normal-C38fXH4l.woff2": {
+          "status": 200,
+          "sha256": "8909904ab6c872eb994093482a88a28eca2cd95912d7b6fecd72103b0dc07edc"
+        },
+        "/assets/money-sync-DWnraiiy.js": {
+          "status": 200,
+          "sha256": "1ff30021eaa038092a57c47bd463000bbdf1d4deb74fb607a686150d0c449c5a"
+        },
+        "/assets/whatsapp-intake-Z9f4YOW_.js": {
+          "status": 200,
+          "sha256": "acab4eb818cfe9f2322c90eaf6b53462c8bdbb56bc6053bcd8784efe9b8ea676"
+        },
+        "/assets/order-payment-sync-DND-vcol.js": {
+          "status": 200,
+          "sha256": "fa9c6d7034187a80232ad986568ac395dbe53263b7c5194f4363e5f34786a841"
+        },
+        "/assets/order-intake-CofmeGmd.js": {
+          "status": 200,
+          "sha256": "135074211876241b919fd11f5ff576a2d1cfc6b41763f3ceda3c0244cfb26c5f"
+        },
+        "/assets/email-connection-CKHH63SN.js": {
+          "status": 200,
+          "sha256": "60c9b1798a96890a453271ab35b6e2a31975b126bebd8fd4c2ee9995d48c064c"
+        },
+        "/assets/email-api-CTdE9W2N.js": {
+          "status": 200,
+          "sha256": "bdc482c30bbaecfc51b5c160642de845db8aef73c505f2bfd4aeb9c7ec3be40c"
+        },
+        "/assets/email-source-session-Di9g_zMI.js": {
+          "status": 200,
+          "sha256": "69c7d67ee933c09812a23878978b31f7dd68540e971310a312402c61e0693847"
+        },
+        "/assets/phone-intake-C4irCckE.js": {
+          "status": 200,
+          "sha256": "573ff6d25e779732c6a151cdc828b5b34ec47404e70dfdcc8540660d6f4b769e"
+        },
+        "/assets/document-line-table-DykzPIvk.js": {
+          "status": 200,
+          "sha256": "e4e5d7ae2ab37ce1016d504344431326c96ac1213d6c15fc94c39f1af2cd90f9"
+        },
+        "/assets/email-intake-Dg5_KwVl.js": {
+          "status": 200,
+          "sha256": "c5f26753197a1b26b3de35c63a664e4e4a3dee5ba96df8dbf6fc125d436a2a3f"
+        },
+        "/brand/rocoto-mark.svg": {
+          "status": 200,
+          "sha256": "5853eac27b281e7cba519cb82ae0e3005bab843cdf48345c49d1171a2f65c5e7"
+        },
+        "/fonts/fraunces/fraunces-latin-500-700.woff2": {
+          "status": 200,
+          "sha256": "7234ed860a9cc83045413c4faee63c960a8f2d1917adcf728119307d56e0d783"
+        },
+        "/assets/inter-latin-500-normal-Cerq10X2.woff2": {
+          "status": 200,
+          "sha256": "f3779f1efccc4bdcdf9c0a02ab95bf6bd092ed09c48c08cedc725889edd1d19f"
+        },
+        "/cedar-artwork/delivery-batch.png": {
+          "status": 200,
+          "sha256": "17eb47ab241b42689cb4343f6194087376574b4106959418b5fb421baa2023dd"
+        },
+        "/assets/intake-road-CBWNqNet.js": {
+          "status": 200,
+          "sha256": "99f530e27dac04b761855240f500db4b0e1b2ebf5209cf01f6b646b1b3b1e987"
+        },
+        "/assets/sales-Cbr8UTCY.js": {
+          "status": 200,
+          "sha256": "32833fa67ddd2654181c7659ba784d1afdda26287e7550d55a875506e7c464ab"
+        },
+        "/assets/datepicker-C7zNRkXy.js": {
+          "status": 200,
+          "sha256": "7b7d9d151dee5190239c964ed6805d88c9e1c6a58218a60ac49df2dc25010207"
+        },
+        "/map/14/8289/6115.png": {
+          "status": 200,
+          "sha256": "5a8de3f1f39b25bc434f59678871a669c8437e4c8f57a31f8e10aa1a5bd3bea1"
+        },
+        "/map/14/8290/6115.png": {
+          "status": 200,
+          "sha256": "6c14c3bd0e9fdb5be5fa340f3e717eb91d309762725625a40eef407a0651b756"
+        },
+        "/map/14/8288/6116.png": {
+          "status": 200,
+          "sha256": "4377e91933c9746cc61e84401309c49ee277ee92457d2c140cfac96d213686f7"
+        },
+        "/map/14/8288/6115.png": {
+          "status": 200,
+          "sha256": "ad98cbc35e084dde2386c5e1b384a4162778b322a6fa178e50e2a7a96a117375"
+        },
+        "/map/14/8289/6116.png": {
+          "status": 200,
+          "sha256": "e4ad20e9de2c4fd44ff0e7511dd1bf1188d5484857da6e72032a34e062d3fd66"
+        },
+        "/map/14/8290/6116.png": {
+          "status": 200,
+          "sha256": "8baf5ee4b5d7de2565605cdf6590c281c384e73e3f28d27f6f3970e683e29e0a"
+        },
+        "/map/14/8288/6117.png": {
+          "status": 200,
+          "sha256": "6e82f3e31564f202c64a70c8247bb580cd3395025a903ba2003f727b525340c4"
+        },
+        "/map/14/8289/6117.png": {
+          "status": 200,
+          "sha256": "b35db280563b987e641e316664f41e8c270ce674ca2b0278401f591061435054"
+        },
+        "/paintings/lubina.webp": {
+          "status": 200,
+          "sha256": "3c3398d2051f58987b16192fc2a2d4d6dac67fa879d429b4280c9935f649194b"
+        },
+        "/map/14/8290/6117.png": {
+          "status": 200,
+          "sha256": "21543c7fea6025790d9852419498387c3ea668e906046a235a423ba04d23083e"
+        },
+        "/paintings/merluza.webp": {
+          "status": 200,
+          "sha256": "6b90e6885f63653b33b820e4d361518fdb9d2bdb6dacfd25da4db5a78d7a53b4"
+        },
+        "/paintings/pulpo.webp": {
+          "status": 200,
+          "sha256": "d41fb8a25b8243960077e279f6cca97d6c996b0e31d3da3412bcbd6bce5b0a9d"
+        }
+      },
+      "pixel_dimensions": [
+        780,
+        1560
+      ]
+    },
+    {
+      "file": "catalogue-desktop.png",
+      "sha256": "3855daf5e9508a400f2e83d1f3e70d9556069905922f5cd94d421899030d49cd",
+      "css_width": 896,
+      "geometry": {
+        "width": 896,
+        "height": 368,
+        "scrollWidth": 896,
+        "clientWidth": 896,
+        "text": "Merluza\nPV-1001\nkg\nPulpo\nPV-1003\nkg\nLubina de estero\nPV-1005\nkg",
+        "images": [
+          {
+            "src": "/paintings/merluza.webp",
+            "complete": true,
+            "naturalWidth": 1024,
+            "naturalHeight": 1024
+          },
+          {
+            "src": "/paintings/pulpo.webp",
+            "complete": true,
+            "naturalWidth": 1024,
+            "naturalHeight": 1024
+          },
+          {
+            "src": "/paintings/lubina.webp",
+            "complete": true,
+            "naturalWidth": 1024,
+            "naturalHeight": 1024
+          }
+        ],
+        "lineCount": 0
+      },
+      "original_components": [
+        {
+          "text": "Merluza\nPV-1001\nkg",
+          "images": [
+            {
+              "src": "/paintings/merluza.webp",
+              "width": 1024,
+              "height": 1024
+            }
+          ],
+          "html_sha256": "aa343d35d0895f30bf25014dedfcfa0e31b43c0a4721e78915ea82150fbe3ef0"
+        },
+        {
+          "text": "Pulpo\nPV-1003\nkg",
+          "images": [
+            {
+              "src": "/paintings/pulpo.webp",
+              "width": 1024,
+              "height": 1024
+            }
+          ],
+          "html_sha256": "c0e7affeb31f78bd3d6b662942f4acfbc5086ad7bab927f431d299c656ea8cdd"
+        },
+        {
+          "text": "Lubina de estero\nPV-1005\nkg",
+          "images": [
+            {
+              "src": "/paintings/lubina.webp",
+              "width": 1024,
+              "height": 1024
+            }
+          ],
+          "html_sha256": "5b3763d2901a36f32bb7fe441235ec89d6996df314f59c0508f4e66fee019849"
+        }
+      ],
+      "page_errors": [],
+      "blocked_external": [],
+      "fixture_mutating_requests": [
+        {
+          "url": "http://127.0.0.1:18721/api/cedar/access/workspaces",
+          "method": "POST"
+        },
+        {
+          "url": "http://127.0.0.1:18721/api/proof/session",
+          "method": "POST"
+        },
+        {
+          "url": "http://127.0.0.1:18721/api/cedar/access/workspaces",
+          "method": "POST"
+        }
+      ],
+      "resources": {
+        "/cedar/": {
+          "status": 200,
+          "sha256": "61e5d1f8e9b35126566ddcae5644453c548ccb71cfa5d2674b7675d2b4f17f7b"
+        },
+        "/assets/app-CO4JVU2W.js": {
+          "status": 200,
+          "sha256": "1f9453df28ffee25da14261728eaad79e76356675ff8de149a6926df84a45f24"
+        },
+        "/assets/modulepreload-polyfill-P2Xu9kJm.js": {
+          "status": 200,
+          "sha256": "418c206484b89b68ef5f067277831e583fc9193a62aadf4de269acaaeb12a85f"
+        },
+        "/assets/preload-helper-DcYFrm8w.css": {
+          "status": 200,
+          "sha256": "abba7c9022a6c6302655455fafc276af9ea7f5dcce3470d45995630f139b4656"
+        },
+        "/assets/preload-helper-DY36dqbZ.js": {
+          "status": 200,
+          "sha256": "aba87f2a53e45ecdc9113fc30387d16e449d1676428cf5f82dd624c1df97d152"
+        },
+        "/assets/main-DrIJu8tb.js": {
+          "status": 200,
+          "sha256": "f798ef7230484c581a460824e2dcbe12f1b24fa8562471892cda7c112d0e20ae"
+        },
+        "/assets/rolldown-runtime-C0FnF6B9.js": {
+          "status": 200,
+          "sha256": "e0a79ad36c6ca1ffbc796c80aa5661803a9d1bc684e29d1587f48b4ba9a82714"
+        },
+        "/assets/currency-DTdJVcSV.js": {
+          "status": 200,
+          "sha256": "7f764b21d5d7a6d5dd6bcf4149eda3a3d37f720e6b6146afdbdd08a3ca370031"
+        },
+        "/assets/react-IpA8Qn9U.js": {
+          "status": 200,
+          "sha256": "1971cbe7ee8324edfc2374a5c51f679b691b056cba3db0ac1baf277bed84841a"
+        },
+        "/assets/createLucideIcon-BOnSrhDG.js": {
+          "status": 200,
+          "sha256": "c68725f4d8bdab58a7c03cf693d04d9a462f86c20be0e1a930caee7e86839b50"
+        },
+        "/assets/jsx-runtime-CJ6XR39y.js": {
+          "status": 200,
+          "sha256": "9d230b88c6df3b5c1190839e0f4e12b59c936770c4125040be2f7e227e5ddbf1"
+        },
+        "/assets/arrow-left-OU03yTFK.js": {
+          "status": 200,
+          "sha256": "a200b940e1a6cd362071d06732b72727ddb4752a0d194e9694e1a6c2d3e94cdf"
+        },
+        "/assets/arrow-up-right-CG9gwNhb.js": {
+          "status": 200,
+          "sha256": "84cffdda37c34b05df41dab07ed000abbf9c6fba1f6ccf1baa467055eb4e4a40"
+        },
+        "/assets/check-CPU-CJJK.js": {
+          "status": 200,
+          "sha256": "6a27044b73c457eded03d8ebf298c9a6612d21bff95e7c1984dfd5a460228b96"
+        },
+        "/assets/phone-Btuy6vN3.js": {
+          "status": 200,
+          "sha256": "2c3c686ea4340cdcba8f81ed314324171b3945d312d027a6a8e03cd8f76669e6"
+        },
+        "/assets/printing-BnxOVfrc.css": {
+          "status": 200,
+          "sha256": "f48c1eff5401d1950e612a2e82d7ebf8406e02fa03f63a8e31653e801488d2f4"
+        },
+        "/assets/ellipsis-Cw8iGzwN.js": {
+          "status": 200,
+          "sha256": "0eb1ab89013a0f6240e7e7d939ac8555c16f7419f5e4ad0f0b11ade3ff271991"
+        },
+        "/assets/phone-off-B7_6vYjN.js": {
+          "status": 200,
+          "sha256": "f76caf7a4bf5570436dbed8b227479d1999f301c6ab1a27a0a1b416bb4924433"
+        },
+        "/assets/message-circle-CwDbkwId.js": {
+          "status": 200,
+          "sha256": "f5416da9a457df19946cf466a0a3a31932a1fc88359ee6542c54b6208d8b3a4d"
+        },
+        "/assets/glyphs-BO98nlga.js": {
+          "status": 200,
+          "sha256": "99dc271d57cf837a9464c3a6da6de4b450ff3c46d0265818e1ea119776a38f61"
+        },
+        "/assets/plus-CIUTM9wO.js": {
+          "status": 200,
+          "sha256": "7121e9fb1e03c9c784f0c5d14f8822984212a4c67725c99bc8f43740941bbd8f"
+        },
+        "/assets/main-BfjEpHBb.css": {
+          "status": 200,
+          "sha256": "b493e48d7aa71dd0debbf7a31038e00ae38b2b44c709428cd36de603ac5e13c4"
+        },
+        "/assets/receipt-text-BBvYiq2u.js": {
+          "status": 200,
+          "sha256": "2ccfe58ae89eb25c40eefafae7a1e14c4ee974dd7bc5562514af9f2537909285"
+        },
+        "/assets/search-DNO7nHCu.js": {
+          "status": 200,
+          "sha256": "dd384c5530818311c4020013e91ca66259cd15566c25443232af94e4e1c8b485"
+        },
+        "/assets/store-DJfQvpoK.js": {
+          "status": 200,
+          "sha256": "4e1b0ed03dc411ae7a09d6bcfe6cddbb702101aeec2844061b4b08d22d74dee4"
+        },
+        "/assets/chevron-left-BLcZaGlL.js": {
+          "status": 200,
+          "sha256": "bea63eed385e3c019dd38086e0f7e392cb3d7860878728054c4d217a5452cbb6"
+        },
+        "/assets/chevron-right-DFm0zL4C.js": {
+          "status": 200,
+          "sha256": "9a0705cdabe48f7ca14e106d9498cb981a8b27e8bcd3e8aa0717907f8d5e2da0"
+        },
+        "/assets/app-DcFB5tdw.js": {
+          "status": 200,
+          "sha256": "7f06dd12a25df917708ae61ee648aa0ff035f7f6f971bbd0dbc72344359fda70"
+        },
+        "/assets/arrow-right-Xqk6wDjr.js": {
+          "status": 200,
+          "sha256": "66809e2fca3a6f4335e56b5aefa75091ed4f20d5997c6c4003cadc8fe3c48092"
+        },
+        "/assets/button-B_ZmeaNk.js": {
+          "status": 200,
+          "sha256": "f65b1e81506979b3f2a0500fcae65724c6dc53ee9cb4b2aa6a80526f25fd3212"
+        },
+        "/assets/input-zIMQXVxk.js": {
+          "status": 200,
+          "sha256": "83fe3620923a09790775b8e6cb5615330bec786e74605a7f2ee92854f4c84611"
+        },
+        "/assets/icon-CKY70IyD.js": {
+          "status": 200,
+          "sha256": "4df1672887ef3b306e50ae416f6493a4ef6450e74a0f44a3a8b44200f4ff36cf"
+        },
+        "/assets/message-D2b9sMCC.js": {
+          "status": 200,
+          "sha256": "d43daa304a7ef732d3819f148b01240c8678ff1cd9db607af8169853885d2c23"
+        },
+        "/assets/hooks-IlS1DL10.js": {
+          "status": 200,
+          "sha256": "a7a02a911052e58ff8ea8916f2524c4eb4e7d7c5c6db29af957329426eb08c19"
+        },
+        "/assets/workflow-dialog-SZUbYk6J.js": {
+          "status": 200,
+          "sha256": "13d0f3d39fadf6ecf3c59bd45e4a48444ffccef294f0339aeca87f16cb22c30f"
+        },
+        "/assets/api-DXaJlytG.js": {
+          "status": 200,
+          "sha256": "1bb8fc74f2c75744319e692f8c70888c4a982456f0e6e61f7f94d7d5f4e380eb"
+        },
+        "/assets/tslib.es6-Dm_CEdRT.js": {
+          "status": 200,
+          "sha256": "e02eca1bcd339520e26a0f8751f665667a972debb2a28ec69f76084656acb604"
+        },
+        "/assets/viewport-D61Dtj8a.js": {
+          "status": 200,
+          "sha256": "6aa6ed0d0b4cb5329b85a4902114ba75963e0c11ecfc8063d9544c8a56c59aeb"
+        },
+        "/assets/es2015-BUaFuHsB.js": {
+          "status": 200,
+          "sha256": "731633b9dd41ff02767a352c6d8b45f66bd2637594d5584ac6624cddb06fcecb"
+        },
+        "/assets/scenario-clock-srjDHVvX.js": {
+          "status": 200,
+          "sha256": "56c6959234722084c62f27be7642ad20c0ca6674fbf2aac8c0ad5970ead52353"
+        },
+        "/assets/config-DFDj9QhH.js": {
+          "status": 200,
+          "sha256": "dd161ffdaf206d1eb28b4d674f0884241cd27850c214a5cf83f54ba7bdd1a3de"
+        },
+        "/assets/currency-migration-Dmyo9EI4.js": {
+          "status": 200,
+          "sha256": "7559a5b778cd4c8ec5bb5b8c3f8f08eea85f8f696a9aa43a122455ca81e21a54"
+        },
+        "/assets/money-runtime-hd7kHe3M.js": {
+          "status": 200,
+          "sha256": "8a621928a0c5cd13365ba2c6b9e6fedd51b8d4104934ffb5f6187aefad9e11d4"
+        },
+        "/assets/money-api-C353yT8w.js": {
+          "status": 200,
+          "sha256": "23421448d75c8a2a0f252ef721a7b7287cf936ede7ea033792bae9a30d724e80"
+        },
+        "/assets/money-model-BWHsyawJ.js": {
+          "status": 200,
+          "sha256": "3801afef9d591217c13d3fdcfe841b250978919972b153e0c9a598e2e5ff647c"
+        },
+        "/assets/day-CDgHHo6u.js": {
+          "status": 200,
+          "sha256": "10e3ba1a78a92e1557e7ff08818daa28ed28026ad9486f4e1fcfa276e6b45304"
+        },
+        "/assets/figure-DvgSNnDS.js": {
+          "status": 200,
+          "sha256": "af6114a0c923286832cc470085a5504d28518a498c3033b69ef7e7a6d8aba319"
+        },
+        "/assets/printing-Cy46gVio.js": {
+          "status": 200,
+          "sha256": "5ad1c6e536f1c779692c031c71a663cc6695b4685c719835f0957a15fa87709a"
+        },
+        "/assets/company-DhAF8hAn.js": {
+          "status": 200,
+          "sha256": "c5f03103a1dbd01c9f82d4a2a3e0ec71999242ce1fc22cb9d0bf54a4f1fd11de"
+        },
+        "/assets/cedar-channel-api-C5kwYQ5j.js": {
+          "status": 200,
+          "sha256": "6810b608cab4e101160922ff8f41601353a69792bcd3fb7f8477327352271cb1"
+        },
+        "/assets/setup-frame-Ddg35nFM.js": {
+          "status": 200,
+          "sha256": "e59a04af47acbd700081d9f861adfcf567ea939387109250812137e7e3b8516f"
+        },
+        "/assets/anchors-CcoY9Nzz.js": {
+          "status": 200,
+          "sha256": "7ee6311c39ab371ca5b98662845c3a8ab1870ee1870611045bba36ca1d4357d3"
+        },
+        "/assets/phone-runtime-D8A-bfY2.js": {
+          "status": 200,
+          "sha256": "1a2c30dc2bb3569ea874ded8aa30d7cb3ec6653ac49bd6b442230d83d4c075b8"
+        },
+        "/assets/modal-BN71puGn.js": {
+          "status": 200,
+          "sha256": "2be14da64c3d4de5135449613e5b2b70c2f0d91f5e6efd526300b2b2592e2f4f"
+        },
+        "/assets/catalogue-DDzuIAJu.js": {
+          "status": 200,
+          "sha256": "9018df1e1d1ea10dcbc6109c06a4912c0d4e9330436e0c6cee5883a5571e359b"
+        },
+        "/assets/demo-welcome-DyE6uQDe.js": {
+          "status": 200,
+          "sha256": "dd7ebec3812dcac9c5778fb16b390f709f8551f5dfe34715fffeb1451d29e4f7"
+        },
+        "/assets/onboarding-v1-DQ53snQV.js": {
+          "status": 200,
+          "sha256": "ad9388a1f87828d4f1f05342b2a7b4f3b7bbb1648a7df0879fb77219e0791675"
+        },
+        "/assets/onboarding-store-DL3S3ROb.js": {
+          "status": 200,
+          "sha256": "1220eccd183c725ccb0e5aa5ea2f58870c157f3096adede20215814d5ee12351"
+        },
+        "/assets/money-sync-DWnraiiy.js": {
+          "status": 200,
+          "sha256": "1ff30021eaa038092a57c47bd463000bbdf1d4deb74fb607a686150d0c449c5a"
+        },
+        "/assets/inter-latin-400-normal-C38fXH4l.woff2": {
+          "status": 200,
+          "sha256": "8909904ab6c872eb994093482a88a28eca2cd95912d7b6fecd72103b0dc07edc"
+        },
+        "/assets/order-payment-sync-DND-vcol.js": {
+          "status": 200,
+          "sha256": "fa9c6d7034187a80232ad986568ac395dbe53263b7c5194f4363e5f34786a841"
+        },
+        "/assets/whatsapp-intake-Z9f4YOW_.js": {
+          "status": 200,
+          "sha256": "acab4eb818cfe9f2322c90eaf6b53462c8bdbb56bc6053bcd8784efe9b8ea676"
+        },
+        "/assets/order-intake-CofmeGmd.js": {
+          "status": 200,
+          "sha256": "135074211876241b919fd11f5ff576a2d1cfc6b41763f3ceda3c0244cfb26c5f"
+        },
+        "/assets/email-connection-CKHH63SN.js": {
+          "status": 200,
+          "sha256": "60c9b1798a96890a453271ab35b6e2a31975b126bebd8fd4c2ee9995d48c064c"
+        },
+        "/assets/email-api-CTdE9W2N.js": {
+          "status": 200,
+          "sha256": "bdc482c30bbaecfc51b5c160642de845db8aef73c505f2bfd4aeb9c7ec3be40c"
+        },
+        "/assets/email-source-session-Di9g_zMI.js": {
+          "status": 200,
+          "sha256": "69c7d67ee933c09812a23878978b31f7dd68540e971310a312402c61e0693847"
+        },
+        "/assets/document-line-table-DykzPIvk.js": {
+          "status": 200,
+          "sha256": "e4e5d7ae2ab37ce1016d504344431326c96ac1213d6c15fc94c39f1af2cd90f9"
+        },
+        "/assets/email-intake-Dg5_KwVl.js": {
+          "status": 200,
+          "sha256": "c5f26753197a1b26b3de35c63a664e4e4a3dee5ba96df8dbf6fc125d436a2a3f"
+        },
+        "/assets/phone-intake-C4irCckE.js": {
+          "status": 200,
+          "sha256": "573ff6d25e779732c6a151cdc828b5b34ec47404e70dfdcc8540660d6f4b769e"
+        },
+        "/brand/rocoto-mark.svg": {
+          "status": 200,
+          "sha256": "5853eac27b281e7cba519cb82ae0e3005bab843cdf48345c49d1171a2f65c5e7"
+        },
+        "/assets/inter-latin-500-normal-Cerq10X2.woff2": {
+          "status": 200,
+          "sha256": "f3779f1efccc4bdcdf9c0a02ab95bf6bd092ed09c48c08cedc725889edd1d19f"
+        },
+        "/cedar-artwork/delivery-batch.png": {
+          "status": 200,
+          "sha256": "17eb47ab241b42689cb4343f6194087376574b4106959418b5fb421baa2023dd"
+        },
+        "/fonts/fraunces/fraunces-latin-500-700.woff2": {
+          "status": 200,
+          "sha256": "7234ed860a9cc83045413c4faee63c960a8f2d1917adcf728119307d56e0d783"
+        },
+        "/assets/sales-Cbr8UTCY.js": {
+          "status": 200,
+          "sha256": "32833fa67ddd2654181c7659ba784d1afdda26287e7550d55a875506e7c464ab"
+        },
+        "/assets/intake-road-CBWNqNet.js": {
+          "status": 200,
+          "sha256": "99f530e27dac04b761855240f500db4b0e1b2ebf5209cf01f6b646b1b3b1e987"
+        },
+        "/assets/datepicker-C7zNRkXy.js": {
+          "status": 200,
+          "sha256": "7b7d9d151dee5190239c964ed6805d88c9e1c6a58218a60ac49df2dc25010207"
+        },
+        "/map/14/8288/6115.png": {
+          "status": 200,
+          "sha256": "ad98cbc35e084dde2386c5e1b384a4162778b322a6fa178e50e2a7a96a117375"
+        },
+        "/map/14/8290/6115.png": {
+          "status": 200,
+          "sha256": "6c14c3bd0e9fdb5be5fa340f3e717eb91d309762725625a40eef407a0651b756"
+        },
+        "/map/14/8290/6116.png": {
+          "status": 200,
+          "sha256": "8baf5ee4b5d7de2565605cdf6590c281c384e73e3f28d27f6f3970e683e29e0a"
+        },
+        "/map/14/8289/6116.png": {
+          "status": 200,
+          "sha256": "e4ad20e9de2c4fd44ff0e7511dd1bf1188d5484857da6e72032a34e062d3fd66"
+        },
+        "/map/14/8289/6115.png": {
+          "status": 200,
+          "sha256": "5a8de3f1f39b25bc434f59678871a669c8437e4c8f57a31f8e10aa1a5bd3bea1"
+        },
+        "/map/14/8288/6116.png": {
+          "status": 200,
+          "sha256": "4377e91933c9746cc61e84401309c49ee277ee92457d2c140cfac96d213686f7"
+        },
+        "/map/14/8288/6117.png": {
+          "status": 200,
+          "sha256": "6e82f3e31564f202c64a70c8247bb580cd3395025a903ba2003f727b525340c4"
+        },
+        "/paintings/lubina.webp": {
+          "status": 200,
+          "sha256": "3c3398d2051f58987b16192fc2a2d4d6dac67fa879d429b4280c9935f649194b"
+        },
+        "/map/14/8290/6117.png": {
+          "status": 200,
+          "sha256": "21543c7fea6025790d9852419498387c3ea668e906046a235a423ba04d23083e"
+        },
+        "/map/14/8289/6117.png": {
+          "status": 200,
+          "sha256": "b35db280563b987e641e316664f41e8c270ce674ca2b0278401f591061435054"
+        },
+        "/paintings/merluza.webp": {
+          "status": 200,
+          "sha256": "6b90e6885f63653b33b820e4d361518fdb9d2bdb6dacfd25da4db5a78d7a53b4"
+        },
+        "/paintings/pulpo.webp": {
+          "status": 200,
+          "sha256": "d41fb8a25b8243960077e279f6cca97d6c996b0e31d3da3412bcbd6bce5b0a9d"
+        },
+        "/assets/catalogue-export-DDNA8Qn-.js": {
+          "status": 200,
+          "sha256": "2f716a687d2d4bd16edaf48df72dbb9f6dd9013f7e1b56e6391cc173f88338e3"
+        },
+        "/assets/stock-Oje05oU4.js": {
+          "status": 200,
+          "sha256": "d0a2148846f9042569a640d31bfd49d6b4f4eb514688f32fdf1efe7281021951"
+        },
+        "/paintings/gamba-roja.webp": {
+          "status": 200,
+          "sha256": "6b88b7f1c2c8ed8f46ea76b7741a1db65b45de41cc9281f9c446258cb55885cf"
+        },
+        "/paintings/rape.webp": {
+          "status": 200,
+          "sha256": "987ee9846a82a82e099a0024d6bb333a87e431f3522364675415ffb88847d1c0"
+        },
+        "/paintings/gamba-roja-congelado.webp": {
+          "status": 200,
+          "sha256": "0c85d6f3a6659f90e827bffc489dda3695eb19310dc3284e3fa2cebd6808fafb"
+        }
+      },
+      "pixel_dimensions": [
+        1792,
+        736
+      ]
+    },
+    {
+      "file": "catalogue-phone.png",
+      "sha256": "5e008047926f0e627d4bfc8bef371b6dbc0dc2b21ddba5a4e56f3037f0194c8a",
+      "css_width": 390,
+      "geometry": {
+        "width": 390,
+        "height": 428,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "text": "Merluza\nPV-1001\nkg\nPulpo\nPV-1003\nkg\nLubina de estero\nPV-1005\nkg",
+        "images": [
+          {
+            "src": "/paintings/merluza.webp",
+            "complete": true,
+            "naturalWidth": 1024,
+            "naturalHeight": 1024
+          },
+          {
+            "src": "/paintings/pulpo.webp",
+            "complete": true,
+            "naturalWidth": 1024,
+            "naturalHeight": 1024
+          },
+          {
+            "src": "/paintings/lubina.webp",
+            "complete": true,
+            "naturalWidth": 1024,
+            "naturalHeight": 1024
+          }
+        ],
+        "lineCount": 0
+      },
+      "original_components": [
+        {
+          "text": "Merluza\nPV-1001\nkg",
+          "images": [
+            {
+              "src": "/paintings/merluza.webp",
+              "width": 1024,
+              "height": 1024
+            }
+          ],
+          "html_sha256": "4abf90f14a3762641a9e8d2ee8a0db561244fa2d305e73e0cdc67b1d7d43b940"
+        },
+        {
+          "text": "Pulpo\nPV-1003\nkg",
+          "images": [
+            {
+              "src": "/paintings/pulpo.webp",
+              "width": 1024,
+              "height": 1024
+            }
+          ],
+          "html_sha256": "c0e7affeb31f78bd3d6b662942f4acfbc5086ad7bab927f431d299c656ea8cdd"
+        },
+        {
+          "text": "Lubina de estero\nPV-1005\nkg",
+          "images": [
+            {
+              "src": "/paintings/lubina.webp",
+              "width": 1024,
+              "height": 1024
+            }
+          ],
+          "html_sha256": "5b3763d2901a36f32bb7fe441235ec89d6996df314f59c0508f4e66fee019849"
+        }
+      ],
+      "page_errors": [],
+      "blocked_external": [],
+      "fixture_mutating_requests": [
+        {
+          "url": "http://127.0.0.1:18721/api/cedar/access/workspaces",
+          "method": "POST"
+        },
+        {
+          "url": "http://127.0.0.1:18721/api/proof/session",
+          "method": "POST"
+        },
+        {
+          "url": "http://127.0.0.1:18721/api/cedar/access/workspaces",
+          "method": "POST"
+        }
+      ],
+      "resources": {
+        "/cedar/": {
+          "status": 200,
+          "sha256": "61e5d1f8e9b35126566ddcae5644453c548ccb71cfa5d2674b7675d2b4f17f7b"
+        },
+        "/assets/app-CO4JVU2W.js": {
+          "status": 200,
+          "sha256": "1f9453df28ffee25da14261728eaad79e76356675ff8de149a6926df84a45f24"
+        },
+        "/assets/preload-helper-DY36dqbZ.js": {
+          "status": 200,
+          "sha256": "aba87f2a53e45ecdc9113fc30387d16e449d1676428cf5f82dd624c1df97d152"
+        },
+        "/assets/preload-helper-DcYFrm8w.css": {
+          "status": 200,
+          "sha256": "abba7c9022a6c6302655455fafc276af9ea7f5dcce3470d45995630f139b4656"
+        },
+        "/assets/modulepreload-polyfill-P2Xu9kJm.js": {
+          "status": 200,
+          "sha256": "418c206484b89b68ef5f067277831e583fc9193a62aadf4de269acaaeb12a85f"
+        },
+        "/assets/main-DrIJu8tb.js": {
+          "status": 200,
+          "sha256": "f798ef7230484c581a460824e2dcbe12f1b24fa8562471892cda7c112d0e20ae"
+        },
+        "/assets/rolldown-runtime-C0FnF6B9.js": {
+          "status": 200,
+          "sha256": "e0a79ad36c6ca1ffbc796c80aa5661803a9d1bc684e29d1587f48b4ba9a82714"
+        },
+        "/assets/react-IpA8Qn9U.js": {
+          "status": 200,
+          "sha256": "1971cbe7ee8324edfc2374a5c51f679b691b056cba3db0ac1baf277bed84841a"
+        },
+        "/assets/currency-DTdJVcSV.js": {
+          "status": 200,
+          "sha256": "7f764b21d5d7a6d5dd6bcf4149eda3a3d37f720e6b6146afdbdd08a3ca370031"
+        },
+        "/assets/createLucideIcon-BOnSrhDG.js": {
+          "status": 200,
+          "sha256": "c68725f4d8bdab58a7c03cf693d04d9a462f86c20be0e1a930caee7e86839b50"
+        },
+        "/assets/glyphs-BO98nlga.js": {
+          "status": 200,
+          "sha256": "99dc271d57cf837a9464c3a6da6de4b450ff3c46d0265818e1ea119776a38f61"
+        },
+        "/assets/jsx-runtime-CJ6XR39y.js": {
+          "status": 200,
+          "sha256": "9d230b88c6df3b5c1190839e0f4e12b59c936770c4125040be2f7e227e5ddbf1"
+        },
+        "/assets/arrow-up-right-CG9gwNhb.js": {
+          "status": 200,
+          "sha256": "84cffdda37c34b05df41dab07ed000abbf9c6fba1f6ccf1baa467055eb4e4a40"
+        },
+        "/assets/arrow-left-OU03yTFK.js": {
+          "status": 200,
+          "sha256": "a200b940e1a6cd362071d06732b72727ddb4752a0d194e9694e1a6c2d3e94cdf"
+        },
+        "/assets/phone-Btuy6vN3.js": {
+          "status": 200,
+          "sha256": "2c3c686ea4340cdcba8f81ed314324171b3945d312d027a6a8e03cd8f76669e6"
+        },
+        "/assets/ellipsis-Cw8iGzwN.js": {
+          "status": 200,
+          "sha256": "0eb1ab89013a0f6240e7e7d939ac8555c16f7419f5e4ad0f0b11ade3ff271991"
+        },
+        "/assets/phone-off-B7_6vYjN.js": {
+          "status": 200,
+          "sha256": "f76caf7a4bf5570436dbed8b227479d1999f301c6ab1a27a0a1b416bb4924433"
+        },
+        "/assets/message-circle-CwDbkwId.js": {
+          "status": 200,
+          "sha256": "f5416da9a457df19946cf466a0a3a31932a1fc88359ee6542c54b6208d8b3a4d"
+        },
+        "/assets/plus-CIUTM9wO.js": {
+          "status": 200,
+          "sha256": "7121e9fb1e03c9c784f0c5d14f8822984212a4c67725c99bc8f43740941bbd8f"
+        },
+        "/assets/check-CPU-CJJK.js": {
+          "status": 200,
+          "sha256": "6a27044b73c457eded03d8ebf298c9a6612d21bff95e7c1984dfd5a460228b96"
+        },
+        "/assets/receipt-text-BBvYiq2u.js": {
+          "status": 200,
+          "sha256": "2ccfe58ae89eb25c40eefafae7a1e14c4ee974dd7bc5562514af9f2537909285"
+        },
+        "/assets/search-DNO7nHCu.js": {
+          "status": 200,
+          "sha256": "dd384c5530818311c4020013e91ca66259cd15566c25443232af94e4e1c8b485"
+        },
+        "/assets/store-DJfQvpoK.js": {
+          "status": 200,
+          "sha256": "4e1b0ed03dc411ae7a09d6bcfe6cddbb702101aeec2844061b4b08d22d74dee4"
+        },
+        "/assets/printing-BnxOVfrc.css": {
+          "status": 200,
+          "sha256": "f48c1eff5401d1950e612a2e82d7ebf8406e02fa03f63a8e31653e801488d2f4"
+        },
+        "/assets/chevron-left-BLcZaGlL.js": {
+          "status": 200,
+          "sha256": "bea63eed385e3c019dd38086e0f7e392cb3d7860878728054c4d217a5452cbb6"
+        },
+        "/assets/chevron-right-DFm0zL4C.js": {
+          "status": 200,
+          "sha256": "9a0705cdabe48f7ca14e106d9498cb981a8b27e8bcd3e8aa0717907f8d5e2da0"
+        },
+        "/assets/app-DcFB5tdw.js": {
+          "status": 200,
+          "sha256": "7f06dd12a25df917708ae61ee648aa0ff035f7f6f971bbd0dbc72344359fda70"
+        },
+        "/assets/main-BfjEpHBb.css": {
+          "status": 200,
+          "sha256": "b493e48d7aa71dd0debbf7a31038e00ae38b2b44c709428cd36de603ac5e13c4"
+        },
+        "/assets/arrow-right-Xqk6wDjr.js": {
+          "status": 200,
+          "sha256": "66809e2fca3a6f4335e56b5aefa75091ed4f20d5997c6c4003cadc8fe3c48092"
+        },
+        "/assets/input-zIMQXVxk.js": {
+          "status": 200,
+          "sha256": "83fe3620923a09790775b8e6cb5615330bec786e74605a7f2ee92854f4c84611"
+        },
+        "/assets/icon-CKY70IyD.js": {
+          "status": 200,
+          "sha256": "4df1672887ef3b306e50ae416f6493a4ef6450e74a0f44a3a8b44200f4ff36cf"
+        },
+        "/assets/button-B_ZmeaNk.js": {
+          "status": 200,
+          "sha256": "f65b1e81506979b3f2a0500fcae65724c6dc53ee9cb4b2aa6a80526f25fd3212"
+        },
+        "/assets/message-D2b9sMCC.js": {
+          "status": 200,
+          "sha256": "d43daa304a7ef732d3819f148b01240c8678ff1cd9db607af8169853885d2c23"
+        },
+        "/assets/api-DXaJlytG.js": {
+          "status": 200,
+          "sha256": "1bb8fc74f2c75744319e692f8c70888c4a982456f0e6e61f7f94d7d5f4e380eb"
+        },
+        "/assets/hooks-IlS1DL10.js": {
+          "status": 200,
+          "sha256": "a7a02a911052e58ff8ea8916f2524c4eb4e7d7c5c6db29af957329426eb08c19"
+        },
+        "/assets/workflow-dialog-SZUbYk6J.js": {
+          "status": 200,
+          "sha256": "13d0f3d39fadf6ecf3c59bd45e4a48444ffccef294f0339aeca87f16cb22c30f"
+        },
+        "/assets/es2015-BUaFuHsB.js": {
+          "status": 200,
+          "sha256": "731633b9dd41ff02767a352c6d8b45f66bd2637594d5584ac6624cddb06fcecb"
+        },
+        "/assets/tslib.es6-Dm_CEdRT.js": {
+          "status": 200,
+          "sha256": "e02eca1bcd339520e26a0f8751f665667a972debb2a28ec69f76084656acb604"
+        },
+        "/assets/viewport-D61Dtj8a.js": {
+          "status": 200,
+          "sha256": "6aa6ed0d0b4cb5329b85a4902114ba75963e0c11ecfc8063d9544c8a56c59aeb"
+        },
+        "/assets/scenario-clock-srjDHVvX.js": {
+          "status": 200,
+          "sha256": "56c6959234722084c62f27be7642ad20c0ca6674fbf2aac8c0ad5970ead52353"
+        },
+        "/assets/currency-migration-Dmyo9EI4.js": {
+          "status": 200,
+          "sha256": "7559a5b778cd4c8ec5bb5b8c3f8f08eea85f8f696a9aa43a122455ca81e21a54"
+        },
+        "/assets/config-DFDj9QhH.js": {
+          "status": 200,
+          "sha256": "dd161ffdaf206d1eb28b4d674f0884241cd27850c214a5cf83f54ba7bdd1a3de"
+        },
+        "/assets/money-api-C353yT8w.js": {
+          "status": 200,
+          "sha256": "23421448d75c8a2a0f252ef721a7b7287cf936ede7ea033792bae9a30d724e80"
+        },
+        "/assets/money-runtime-hd7kHe3M.js": {
+          "status": 200,
+          "sha256": "8a621928a0c5cd13365ba2c6b9e6fedd51b8d4104934ffb5f6187aefad9e11d4"
+        },
+        "/assets/money-model-BWHsyawJ.js": {
+          "status": 200,
+          "sha256": "3801afef9d591217c13d3fdcfe841b250978919972b153e0c9a598e2e5ff647c"
+        },
+        "/assets/figure-DvgSNnDS.js": {
+          "status": 200,
+          "sha256": "af6114a0c923286832cc470085a5504d28518a498c3033b69ef7e7a6d8aba319"
+        },
+        "/assets/company-DhAF8hAn.js": {
+          "status": 200,
+          "sha256": "c5f03103a1dbd01c9f82d4a2a3e0ec71999242ce1fc22cb9d0bf54a4f1fd11de"
+        },
+        "/assets/day-CDgHHo6u.js": {
+          "status": 200,
+          "sha256": "10e3ba1a78a92e1557e7ff08818daa28ed28026ad9486f4e1fcfa276e6b45304"
+        },
+        "/assets/cedar-channel-api-C5kwYQ5j.js": {
+          "status": 200,
+          "sha256": "6810b608cab4e101160922ff8f41601353a69792bcd3fb7f8477327352271cb1"
+        },
+        "/assets/anchors-CcoY9Nzz.js": {
+          "status": 200,
+          "sha256": "7ee6311c39ab371ca5b98662845c3a8ab1870ee1870611045bba36ca1d4357d3"
+        },
+        "/assets/modal-BN71puGn.js": {
+          "status": 200,
+          "sha256": "2be14da64c3d4de5135449613e5b2b70c2f0d91f5e6efd526300b2b2592e2f4f"
+        },
+        "/assets/setup-frame-Ddg35nFM.js": {
+          "status": 200,
+          "sha256": "e59a04af47acbd700081d9f861adfcf567ea939387109250812137e7e3b8516f"
+        },
+        "/assets/phone-runtime-D8A-bfY2.js": {
+          "status": 200,
+          "sha256": "1a2c30dc2bb3569ea874ded8aa30d7cb3ec6653ac49bd6b442230d83d4c075b8"
+        },
+        "/assets/catalogue-DDzuIAJu.js": {
+          "status": 200,
+          "sha256": "9018df1e1d1ea10dcbc6109c06a4912c0d4e9330436e0c6cee5883a5571e359b"
+        },
+        "/assets/printing-Cy46gVio.js": {
+          "status": 200,
+          "sha256": "5ad1c6e536f1c779692c031c71a663cc6695b4685c719835f0957a15fa87709a"
+        },
+        "/assets/onboarding-store-DL3S3ROb.js": {
+          "status": 200,
+          "sha256": "1220eccd183c725ccb0e5aa5ea2f58870c157f3096adede20215814d5ee12351"
+        },
+        "/assets/demo-welcome-DyE6uQDe.js": {
+          "status": 200,
+          "sha256": "dd7ebec3812dcac9c5778fb16b390f709f8551f5dfe34715fffeb1451d29e4f7"
+        },
+        "/assets/order-payment-sync-DND-vcol.js": {
+          "status": 200,
+          "sha256": "fa9c6d7034187a80232ad986568ac395dbe53263b7c5194f4363e5f34786a841"
+        },
+        "/assets/onboarding-v1-DQ53snQV.js": {
+          "status": 200,
+          "sha256": "ad9388a1f87828d4f1f05342b2a7b4f3b7bbb1648a7df0879fb77219e0791675"
+        },
+        "/assets/inter-latin-400-normal-C38fXH4l.woff2": {
+          "status": 200,
+          "sha256": "8909904ab6c872eb994093482a88a28eca2cd95912d7b6fecd72103b0dc07edc"
+        },
+        "/assets/money-sync-DWnraiiy.js": {
+          "status": 200,
+          "sha256": "1ff30021eaa038092a57c47bd463000bbdf1d4deb74fb607a686150d0c449c5a"
+        },
+        "/assets/whatsapp-intake-Z9f4YOW_.js": {
+          "status": 200,
+          "sha256": "acab4eb818cfe9f2322c90eaf6b53462c8bdbb56bc6053bcd8784efe9b8ea676"
+        },
+        "/assets/order-intake-CofmeGmd.js": {
+          "status": 200,
+          "sha256": "135074211876241b919fd11f5ff576a2d1cfc6b41763f3ceda3c0244cfb26c5f"
+        },
+        "/assets/email-api-CTdE9W2N.js": {
+          "status": 200,
+          "sha256": "bdc482c30bbaecfc51b5c160642de845db8aef73c505f2bfd4aeb9c7ec3be40c"
+        },
+        "/assets/email-connection-CKHH63SN.js": {
+          "status": 200,
+          "sha256": "60c9b1798a96890a453271ab35b6e2a31975b126bebd8fd4c2ee9995d48c064c"
+        },
+        "/assets/document-line-table-DykzPIvk.js": {
+          "status": 200,
+          "sha256": "e4e5d7ae2ab37ce1016d504344431326c96ac1213d6c15fc94c39f1af2cd90f9"
+        },
+        "/assets/email-source-session-Di9g_zMI.js": {
+          "status": 200,
+          "sha256": "69c7d67ee933c09812a23878978b31f7dd68540e971310a312402c61e0693847"
+        },
+        "/assets/email-intake-Dg5_KwVl.js": {
+          "status": 200,
+          "sha256": "c5f26753197a1b26b3de35c63a664e4e4a3dee5ba96df8dbf6fc125d436a2a3f"
+        },
+        "/assets/phone-intake-C4irCckE.js": {
+          "status": 200,
+          "sha256": "573ff6d25e779732c6a151cdc828b5b34ec47404e70dfdcc8540660d6f4b769e"
+        },
+        "/brand/rocoto-mark.svg": {
+          "status": 200,
+          "sha256": "5853eac27b281e7cba519cb82ae0e3005bab843cdf48345c49d1171a2f65c5e7"
+        },
+        "/assets/inter-latin-500-normal-Cerq10X2.woff2": {
+          "status": 200,
+          "sha256": "f3779f1efccc4bdcdf9c0a02ab95bf6bd092ed09c48c08cedc725889edd1d19f"
+        },
+        "/cedar-artwork/delivery-batch.png": {
+          "status": 200,
+          "sha256": "17eb47ab241b42689cb4343f6194087376574b4106959418b5fb421baa2023dd"
+        },
+        "/fonts/fraunces/fraunces-latin-500-700.woff2": {
+          "status": 200,
+          "sha256": "7234ed860a9cc83045413c4faee63c960a8f2d1917adcf728119307d56e0d783"
+        },
+        "/assets/sales-Cbr8UTCY.js": {
+          "status": 200,
+          "sha256": "32833fa67ddd2654181c7659ba784d1afdda26287e7550d55a875506e7c464ab"
+        },
+        "/assets/intake-road-CBWNqNet.js": {
+          "status": 200,
+          "sha256": "99f530e27dac04b761855240f500db4b0e1b2ebf5209cf01f6b646b1b3b1e987"
+        },
+        "/assets/datepicker-C7zNRkXy.js": {
+          "status": 200,
+          "sha256": "7b7d9d151dee5190239c964ed6805d88c9e1c6a58218a60ac49df2dc25010207"
+        },
+        "/map/14/8289/6115.png": {
+          "status": 200,
+          "sha256": "5a8de3f1f39b25bc434f59678871a669c8437e4c8f57a31f8e10aa1a5bd3bea1"
+        },
+        "/map/14/8288/6115.png": {
+          "status": 200,
+          "sha256": "ad98cbc35e084dde2386c5e1b384a4162778b322a6fa178e50e2a7a96a117375"
+        },
+        "/map/14/8288/6116.png": {
+          "status": 200,
+          "sha256": "4377e91933c9746cc61e84401309c49ee277ee92457d2c140cfac96d213686f7"
+        },
+        "/map/14/8289/6116.png": {
+          "status": 200,
+          "sha256": "e4ad20e9de2c4fd44ff0e7511dd1bf1188d5484857da6e72032a34e062d3fd66"
+        },
+        "/map/14/8290/6116.png": {
+          "status": 200,
+          "sha256": "8baf5ee4b5d7de2565605cdf6590c281c384e73e3f28d27f6f3970e683e29e0a"
+        },
+        "/map/14/8290/6115.png": {
+          "status": 200,
+          "sha256": "6c14c3bd0e9fdb5be5fa340f3e717eb91d309762725625a40eef407a0651b756"
+        },
+        "/map/14/8288/6117.png": {
+          "status": 200,
+          "sha256": "6e82f3e31564f202c64a70c8247bb580cd3395025a903ba2003f727b525340c4"
+        },
+        "/map/14/8289/6117.png": {
+          "status": 200,
+          "sha256": "b35db280563b987e641e316664f41e8c270ce674ca2b0278401f591061435054"
+        },
+        "/map/14/8290/6117.png": {
+          "status": 200,
+          "sha256": "21543c7fea6025790d9852419498387c3ea668e906046a235a423ba04d23083e"
+        },
+        "/paintings/pulpo.webp": {
+          "status": 200,
+          "sha256": "d41fb8a25b8243960077e279f6cca97d6c996b0e31d3da3412bcbd6bce5b0a9d"
+        },
+        "/paintings/lubina.webp": {
+          "status": 200,
+          "sha256": "3c3398d2051f58987b16192fc2a2d4d6dac67fa879d429b4280c9935f649194b"
+        },
+        "/paintings/merluza.webp": {
+          "status": 200,
+          "sha256": "6b90e6885f63653b33b820e4d361518fdb9d2bdb6dacfd25da4db5a78d7a53b4"
+        },
+        "/assets/catalogue-export-DDNA8Qn-.js": {
+          "status": 200,
+          "sha256": "2f716a687d2d4bd16edaf48df72dbb9f6dd9013f7e1b56e6391cc173f88338e3"
+        },
+        "/assets/stock-Oje05oU4.js": {
+          "status": 200,
+          "sha256": "d0a2148846f9042569a640d31bfd49d6b4f4eb514688f32fdf1efe7281021951"
+        },
+        "/paintings/gamba-roja.webp": {
+          "status": 200,
+          "sha256": "6b88b7f1c2c8ed8f46ea76b7741a1db65b45de41cc9281f9c446258cb55885cf"
+        },
+        "/paintings/rape.webp": {
+          "status": 200,
+          "sha256": "987ee9846a82a82e099a0024d6bb333a87e431f3522364675415ffb88847d1c0"
+        },
+        "/paintings/gamba-roja-congelado.webp": {
+          "status": 200,
+          "sha256": "0c85d6f3a6659f90e827bffc489dda3695eb19310dc3284e3fa2cebd6808fafb"
+        }
+      },
+      "pixel_dimensions": [
+        780,
+        856
+      ]
+    },
+    {
+      "file": "import-desktop.png",
+      "sha256": "842daca3c606412fdeea84e58a75eb1ec4646594d650a0a389d100ee9cb75cc3",
+      "css_width": 896,
+      "geometry": {
+        "width": 896,
+        "height": 631,
+        "scrollWidth": 896,
+        "clientWidth": 896,
+        "text": "Upload products\nProcessed readback\n3 products · 0 identity checks\nMerluza\nPV-1001 · Unit kg\nEdit\nInclude\nSkip\nPulpo\nPV-1003 · Unit kg\nEdit\nInclude\nSkip\nLubina de estero\nPV-1005 · Unit kg\nEdit\nInclude\nSkip\nI reviewed the product names, codes and units.\nAdd 3 included products",
+        "images": [
+          {
+            "src": "/paintings/merluza.webp",
+            "complete": true,
+            "naturalWidth": 1024,
+            "naturalHeight": 1024
+          },
+          {
+            "src": "/paintings/pulpo.webp",
+            "complete": true,
+            "naturalWidth": 1024,
+            "naturalHeight": 1024
+          },
+          {
+            "src": "/paintings/lubina.webp",
+            "complete": true,
+            "naturalWidth": 1024,
+            "naturalHeight": 1024
+          }
+        ],
+        "lineCount": 0
+      },
+      "original_components": [
+        {
+          "text": "Upload products\nUpload a supplier list\nA photo, a PDF, Excel or CSV. Every product waits in a review you walk before it joins the catalogue.\nTake photo\nUpload file\nPaste\nPaste a product list\nReview paste\nProcessed readback\n3 products · 0 identity checks\nRaw source retained for this session · Pasted product list · 3 source rows\nMerluza\nPV-1001 · Unit kg\nEdit\nInclude\nSkip\nPulpo\nPV-1003 · Unit kg\nEdit\nInclude\nSkip\nLubina de estero\nPV-1005 · Unit kg\nEdit\nInclude\nSkip\nI reviewed the product names, codes and units.\nAdd will commit 3 included products.\nAdd 3 included products",
+          "images": [
+            {
+              "src": "/paintings/merluza.webp",
+              "width": 1024,
+              "height": 1024
+            },
+            {
+              "src": "/paintings/pulpo.webp",
+              "width": 1024,
+              "height": 1024
+            },
+            {
+              "src": "/paintings/lubina.webp",
+              "width": 1024,
+              "height": 1024
+            }
+          ],
+          "html_sha256": "9ca9079fddf4706a7b7380b0f64c65cff34e3f0c28063d5967f59acd49571b2f"
+        }
+      ],
+      "page_errors": [],
+      "blocked_external": [],
+      "fixture_mutating_requests": [
+        {
+          "url": "http://127.0.0.1:18721/api/cedar/access/workspaces",
+          "method": "POST"
+        },
+        {
+          "url": "http://127.0.0.1:18721/api/proof/session",
+          "method": "POST"
+        },
+        {
+          "url": "http://127.0.0.1:18721/api/cedar/access/workspaces",
+          "method": "POST"
+        }
+      ],
+      "resources": {
+        "/cedar/": {
+          "status": 200,
+          "sha256": "61e5d1f8e9b35126566ddcae5644453c548ccb71cfa5d2674b7675d2b4f17f7b"
+        },
+        "/assets/app-CO4JVU2W.js": {
+          "status": 200,
+          "sha256": "1f9453df28ffee25da14261728eaad79e76356675ff8de149a6926df84a45f24"
+        },
+        "/assets/modulepreload-polyfill-P2Xu9kJm.js": {
+          "status": 200,
+          "sha256": "418c206484b89b68ef5f067277831e583fc9193a62aadf4de269acaaeb12a85f"
+        },
+        "/assets/preload-helper-DY36dqbZ.js": {
+          "status": 200,
+          "sha256": "aba87f2a53e45ecdc9113fc30387d16e449d1676428cf5f82dd624c1df97d152"
+        },
+        "/assets/preload-helper-DcYFrm8w.css": {
+          "status": 200,
+          "sha256": "abba7c9022a6c6302655455fafc276af9ea7f5dcce3470d45995630f139b4656"
+        },
+        "/assets/react-IpA8Qn9U.js": {
+          "status": 200,
+          "sha256": "1971cbe7ee8324edfc2374a5c51f679b691b056cba3db0ac1baf277bed84841a"
+        },
+        "/assets/main-DrIJu8tb.js": {
+          "status": 200,
+          "sha256": "f798ef7230484c581a460824e2dcbe12f1b24fa8562471892cda7c112d0e20ae"
+        },
+        "/assets/rolldown-runtime-C0FnF6B9.js": {
+          "status": 200,
+          "sha256": "e0a79ad36c6ca1ffbc796c80aa5661803a9d1bc684e29d1587f48b4ba9a82714"
+        },
+        "/assets/currency-DTdJVcSV.js": {
+          "status": 200,
+          "sha256": "7f764b21d5d7a6d5dd6bcf4149eda3a3d37f720e6b6146afdbdd08a3ca370031"
+        },
+        "/assets/jsx-runtime-CJ6XR39y.js": {
+          "status": 200,
+          "sha256": "9d230b88c6df3b5c1190839e0f4e12b59c936770c4125040be2f7e227e5ddbf1"
+        },
+        "/assets/arrow-up-right-CG9gwNhb.js": {
+          "status": 200,
+          "sha256": "84cffdda37c34b05df41dab07ed000abbf9c6fba1f6ccf1baa467055eb4e4a40"
+        },
+        "/assets/createLucideIcon-BOnSrhDG.js": {
+          "status": 200,
+          "sha256": "c68725f4d8bdab58a7c03cf693d04d9a462f86c20be0e1a930caee7e86839b50"
+        },
+        "/assets/glyphs-BO98nlga.js": {
+          "status": 200,
+          "sha256": "99dc271d57cf837a9464c3a6da6de4b450ff3c46d0265818e1ea119776a38f61"
+        },
+        "/assets/check-CPU-CJJK.js": {
+          "status": 200,
+          "sha256": "6a27044b73c457eded03d8ebf298c9a6612d21bff95e7c1984dfd5a460228b96"
+        },
+        "/assets/arrow-left-OU03yTFK.js": {
+          "status": 200,
+          "sha256": "a200b940e1a6cd362071d06732b72727ddb4752a0d194e9694e1a6c2d3e94cdf"
+        },
+        "/assets/main-BfjEpHBb.css": {
+          "status": 200,
+          "sha256": "b493e48d7aa71dd0debbf7a31038e00ae38b2b44c709428cd36de603ac5e13c4"
+        },
+        "/assets/printing-BnxOVfrc.css": {
+          "status": 200,
+          "sha256": "f48c1eff5401d1950e612a2e82d7ebf8406e02fa03f63a8e31653e801488d2f4"
+        },
+        "/assets/phone-off-B7_6vYjN.js": {
+          "status": 200,
+          "sha256": "f76caf7a4bf5570436dbed8b227479d1999f301c6ab1a27a0a1b416bb4924433"
+        },
+        "/assets/phone-Btuy6vN3.js": {
+          "status": 200,
+          "sha256": "2c3c686ea4340cdcba8f81ed314324171b3945d312d027a6a8e03cd8f76669e6"
+        },
+        "/assets/ellipsis-Cw8iGzwN.js": {
+          "status": 200,
+          "sha256": "0eb1ab89013a0f6240e7e7d939ac8555c16f7419f5e4ad0f0b11ade3ff271991"
+        },
+        "/assets/message-circle-CwDbkwId.js": {
+          "status": 200,
+          "sha256": "f5416da9a457df19946cf466a0a3a31932a1fc88359ee6542c54b6208d8b3a4d"
+        },
+        "/assets/plus-CIUTM9wO.js": {
+          "status": 200,
+          "sha256": "7121e9fb1e03c9c784f0c5d14f8822984212a4c67725c99bc8f43740941bbd8f"
+        },
+        "/assets/receipt-text-BBvYiq2u.js": {
+          "status": 200,
+          "sha256": "2ccfe58ae89eb25c40eefafae7a1e14c4ee974dd7bc5562514af9f2537909285"
+        },
+        "/assets/search-DNO7nHCu.js": {
+          "status": 200,
+          "sha256": "dd384c5530818311c4020013e91ca66259cd15566c25443232af94e4e1c8b485"
+        },
+        "/assets/chevron-left-BLcZaGlL.js": {
+          "status": 200,
+          "sha256": "bea63eed385e3c019dd38086e0f7e392cb3d7860878728054c4d217a5452cbb6"
+        },
+        "/assets/store-DJfQvpoK.js": {
+          "status": 200,
+          "sha256": "4e1b0ed03dc411ae7a09d6bcfe6cddbb702101aeec2844061b4b08d22d74dee4"
+        },
+        "/assets/chevron-right-DFm0zL4C.js": {
+          "status": 200,
+          "sha256": "9a0705cdabe48f7ca14e106d9498cb981a8b27e8bcd3e8aa0717907f8d5e2da0"
+        },
+        "/assets/arrow-right-Xqk6wDjr.js": {
+          "status": 200,
+          "sha256": "66809e2fca3a6f4335e56b5aefa75091ed4f20d5997c6c4003cadc8fe3c48092"
+        },
+        "/assets/input-zIMQXVxk.js": {
+          "status": 200,
+          "sha256": "83fe3620923a09790775b8e6cb5615330bec786e74605a7f2ee92854f4c84611"
+        },
+        "/assets/app-DcFB5tdw.js": {
+          "status": 200,
+          "sha256": "7f06dd12a25df917708ae61ee648aa0ff035f7f6f971bbd0dbc72344359fda70"
+        },
+        "/assets/button-B_ZmeaNk.js": {
+          "status": 200,
+          "sha256": "f65b1e81506979b3f2a0500fcae65724c6dc53ee9cb4b2aa6a80526f25fd3212"
+        },
+        "/assets/icon-CKY70IyD.js": {
+          "status": 200,
+          "sha256": "4df1672887ef3b306e50ae416f6493a4ef6450e74a0f44a3a8b44200f4ff36cf"
+        },
+        "/assets/message-D2b9sMCC.js": {
+          "status": 200,
+          "sha256": "d43daa304a7ef732d3819f148b01240c8678ff1cd9db607af8169853885d2c23"
+        },
+        "/assets/api-DXaJlytG.js": {
+          "status": 200,
+          "sha256": "1bb8fc74f2c75744319e692f8c70888c4a982456f0e6e61f7f94d7d5f4e380eb"
+        },
+        "/assets/viewport-D61Dtj8a.js": {
+          "status": 200,
+          "sha256": "6aa6ed0d0b4cb5329b85a4902114ba75963e0c11ecfc8063d9544c8a56c59aeb"
+        },
+        "/assets/tslib.es6-Dm_CEdRT.js": {
+          "status": 200,
+          "sha256": "e02eca1bcd339520e26a0f8751f665667a972debb2a28ec69f76084656acb604"
+        },
+        "/assets/hooks-IlS1DL10.js": {
+          "status": 200,
+          "sha256": "a7a02a911052e58ff8ea8916f2524c4eb4e7d7c5c6db29af957329426eb08c19"
+        },
+        "/assets/workflow-dialog-SZUbYk6J.js": {
+          "status": 200,
+          "sha256": "13d0f3d39fadf6ecf3c59bd45e4a48444ffccef294f0339aeca87f16cb22c30f"
+        },
+        "/assets/es2015-BUaFuHsB.js": {
+          "status": 200,
+          "sha256": "731633b9dd41ff02767a352c6d8b45f66bd2637594d5584ac6624cddb06fcecb"
+        },
+        "/assets/config-DFDj9QhH.js": {
+          "status": 200,
+          "sha256": "dd161ffdaf206d1eb28b4d674f0884241cd27850c214a5cf83f54ba7bdd1a3de"
+        },
+        "/assets/scenario-clock-srjDHVvX.js": {
+          "status": 200,
+          "sha256": "56c6959234722084c62f27be7642ad20c0ca6674fbf2aac8c0ad5970ead52353"
+        },
+        "/assets/money-runtime-hd7kHe3M.js": {
+          "status": 200,
+          "sha256": "8a621928a0c5cd13365ba2c6b9e6fedd51b8d4104934ffb5f6187aefad9e11d4"
+        },
+        "/assets/money-model-BWHsyawJ.js": {
+          "status": 200,
+          "sha256": "3801afef9d591217c13d3fdcfe841b250978919972b153e0c9a598e2e5ff647c"
+        },
+        "/assets/money-api-C353yT8w.js": {
+          "status": 200,
+          "sha256": "23421448d75c8a2a0f252ef721a7b7287cf936ede7ea033792bae9a30d724e80"
+        },
+        "/assets/currency-migration-Dmyo9EI4.js": {
+          "status": 200,
+          "sha256": "7559a5b778cd4c8ec5bb5b8c3f8f08eea85f8f696a9aa43a122455ca81e21a54"
+        },
+        "/assets/printing-Cy46gVio.js": {
+          "status": 200,
+          "sha256": "5ad1c6e536f1c779692c031c71a663cc6695b4685c719835f0957a15fa87709a"
+        },
+        "/assets/figure-DvgSNnDS.js": {
+          "status": 200,
+          "sha256": "af6114a0c923286832cc470085a5504d28518a498c3033b69ef7e7a6d8aba319"
+        },
+        "/assets/cedar-channel-api-C5kwYQ5j.js": {
+          "status": 200,
+          "sha256": "6810b608cab4e101160922ff8f41601353a69792bcd3fb7f8477327352271cb1"
+        },
+        "/assets/company-DhAF8hAn.js": {
+          "status": 200,
+          "sha256": "c5f03103a1dbd01c9f82d4a2a3e0ec71999242ce1fc22cb9d0bf54a4f1fd11de"
+        },
+        "/assets/day-CDgHHo6u.js": {
+          "status": 200,
+          "sha256": "10e3ba1a78a92e1557e7ff08818daa28ed28026ad9486f4e1fcfa276e6b45304"
+        },
+        "/assets/anchors-CcoY9Nzz.js": {
+          "status": 200,
+          "sha256": "7ee6311c39ab371ca5b98662845c3a8ab1870ee1870611045bba36ca1d4357d3"
+        },
+        "/assets/phone-runtime-D8A-bfY2.js": {
+          "status": 200,
+          "sha256": "1a2c30dc2bb3569ea874ded8aa30d7cb3ec6653ac49bd6b442230d83d4c075b8"
+        },
+        "/assets/setup-frame-Ddg35nFM.js": {
+          "status": 200,
+          "sha256": "e59a04af47acbd700081d9f861adfcf567ea939387109250812137e7e3b8516f"
+        },
+        "/assets/modal-BN71puGn.js": {
+          "status": 200,
+          "sha256": "2be14da64c3d4de5135449613e5b2b70c2f0d91f5e6efd526300b2b2592e2f4f"
+        },
+        "/assets/catalogue-DDzuIAJu.js": {
+          "status": 200,
+          "sha256": "9018df1e1d1ea10dcbc6109c06a4912c0d4e9330436e0c6cee5883a5571e359b"
+        },
+        "/assets/onboarding-v1-DQ53snQV.js": {
+          "status": 200,
+          "sha256": "ad9388a1f87828d4f1f05342b2a7b4f3b7bbb1648a7df0879fb77219e0791675"
+        },
+        "/assets/demo-welcome-DyE6uQDe.js": {
+          "status": 200,
+          "sha256": "dd7ebec3812dcac9c5778fb16b390f709f8551f5dfe34715fffeb1451d29e4f7"
+        },
+        "/assets/onboarding-store-DL3S3ROb.js": {
+          "status": 200,
+          "sha256": "1220eccd183c725ccb0e5aa5ea2f58870c157f3096adede20215814d5ee12351"
+        },
+        "/assets/money-sync-DWnraiiy.js": {
+          "status": 200,
+          "sha256": "1ff30021eaa038092a57c47bd463000bbdf1d4deb74fb607a686150d0c449c5a"
+        },
+        "/assets/whatsapp-intake-Z9f4YOW_.js": {
+          "status": 200,
+          "sha256": "acab4eb818cfe9f2322c90eaf6b53462c8bdbb56bc6053bcd8784efe9b8ea676"
+        },
+        "/assets/order-payment-sync-DND-vcol.js": {
+          "status": 200,
+          "sha256": "fa9c6d7034187a80232ad986568ac395dbe53263b7c5194f4363e5f34786a841"
+        },
+        "/assets/inter-latin-400-normal-C38fXH4l.woff2": {
+          "status": 200,
+          "sha256": "8909904ab6c872eb994093482a88a28eca2cd95912d7b6fecd72103b0dc07edc"
+        },
+        "/assets/email-connection-CKHH63SN.js": {
+          "status": 200,
+          "sha256": "60c9b1798a96890a453271ab35b6e2a31975b126bebd8fd4c2ee9995d48c064c"
+        },
+        "/assets/order-intake-CofmeGmd.js": {
+          "status": 200,
+          "sha256": "135074211876241b919fd11f5ff576a2d1cfc6b41763f3ceda3c0244cfb26c5f"
+        },
+        "/assets/document-line-table-DykzPIvk.js": {
+          "status": 200,
+          "sha256": "e4e5d7ae2ab37ce1016d504344431326c96ac1213d6c15fc94c39f1af2cd90f9"
+        },
+        "/assets/email-source-session-Di9g_zMI.js": {
+          "status": 200,
+          "sha256": "69c7d67ee933c09812a23878978b31f7dd68540e971310a312402c61e0693847"
+        },
+        "/assets/email-api-CTdE9W2N.js": {
+          "status": 200,
+          "sha256": "bdc482c30bbaecfc51b5c160642de845db8aef73c505f2bfd4aeb9c7ec3be40c"
+        },
+        "/assets/email-intake-Dg5_KwVl.js": {
+          "status": 200,
+          "sha256": "c5f26753197a1b26b3de35c63a664e4e4a3dee5ba96df8dbf6fc125d436a2a3f"
+        },
+        "/assets/phone-intake-C4irCckE.js": {
+          "status": 200,
+          "sha256": "573ff6d25e779732c6a151cdc828b5b34ec47404e70dfdcc8540660d6f4b769e"
+        },
+        "/brand/rocoto-mark.svg": {
+          "status": 200,
+          "sha256": "5853eac27b281e7cba519cb82ae0e3005bab843cdf48345c49d1171a2f65c5e7"
+        },
+        "/cedar-artwork/delivery-batch.png": {
+          "status": 200,
+          "sha256": "17eb47ab241b42689cb4343f6194087376574b4106959418b5fb421baa2023dd"
+        },
+        "/fonts/fraunces/fraunces-latin-500-700.woff2": {
+          "status": 200,
+          "sha256": "7234ed860a9cc83045413c4faee63c960a8f2d1917adcf728119307d56e0d783"
+        },
+        "/assets/inter-latin-500-normal-Cerq10X2.woff2": {
+          "status": 200,
+          "sha256": "f3779f1efccc4bdcdf9c0a02ab95bf6bd092ed09c48c08cedc725889edd1d19f"
+        },
+        "/assets/intake-road-CBWNqNet.js": {
+          "status": 200,
+          "sha256": "99f530e27dac04b761855240f500db4b0e1b2ebf5209cf01f6b646b1b3b1e987"
+        },
+        "/assets/sales-Cbr8UTCY.js": {
+          "status": 200,
+          "sha256": "32833fa67ddd2654181c7659ba784d1afdda26287e7550d55a875506e7c464ab"
+        },
+        "/assets/datepicker-C7zNRkXy.js": {
+          "status": 200,
+          "sha256": "7b7d9d151dee5190239c964ed6805d88c9e1c6a58218a60ac49df2dc25010207"
+        },
+        "/map/14/8288/6116.png": {
+          "status": 200,
+          "sha256": "4377e91933c9746cc61e84401309c49ee277ee92457d2c140cfac96d213686f7"
+        },
+        "/map/14/8288/6117.png": {
+          "status": 200,
+          "sha256": "6e82f3e31564f202c64a70c8247bb580cd3395025a903ba2003f727b525340c4"
+        },
+        "/map/14/8289/6117.png": {
+          "status": 200,
+          "sha256": "b35db280563b987e641e316664f41e8c270ce674ca2b0278401f591061435054"
+        },
+        "/map/14/8290/6117.png": {
+          "status": 200,
+          "sha256": "21543c7fea6025790d9852419498387c3ea668e906046a235a423ba04d23083e"
+        },
+        "/map/14/8289/6116.png": {
+          "status": 200,
+          "sha256": "e4ad20e9de2c4fd44ff0e7511dd1bf1188d5484857da6e72032a34e062d3fd66"
+        },
+        "/map/14/8290/6116.png": {
+          "status": 200,
+          "sha256": "8baf5ee4b5d7de2565605cdf6590c281c384e73e3f28d27f6f3970e683e29e0a"
+        },
+        "/paintings/lubina.webp": {
+          "status": 200,
+          "sha256": "3c3398d2051f58987b16192fc2a2d4d6dac67fa879d429b4280c9935f649194b"
+        },
+        "/paintings/merluza.webp": {
+          "status": 200,
+          "sha256": "6b90e6885f63653b33b820e4d361518fdb9d2bdb6dacfd25da4db5a78d7a53b4"
+        },
+        "/map/14/8288/6115.png": {
+          "status": 200,
+          "sha256": "ad98cbc35e084dde2386c5e1b384a4162778b322a6fa178e50e2a7a96a117375"
+        },
+        "/paintings/pulpo.webp": {
+          "status": 200,
+          "sha256": "d41fb8a25b8243960077e279f6cca97d6c996b0e31d3da3412bcbd6bce5b0a9d"
+        },
+        "/map/14/8289/6115.png": {
+          "status": 200,
+          "sha256": "5a8de3f1f39b25bc434f59678871a669c8437e4c8f57a31f8e10aa1a5bd3bea1"
+        },
+        "/map/14/8290/6115.png": {
+          "status": 200,
+          "sha256": "6c14c3bd0e9fdb5be5fa340f3e717eb91d309762725625a40eef407a0651b756"
+        },
+        "/assets/catalogue-export-DDNA8Qn-.js": {
+          "status": 200,
+          "sha256": "2f716a687d2d4bd16edaf48df72dbb9f6dd9013f7e1b56e6391cc173f88338e3"
+        },
+        "/assets/stock-Oje05oU4.js": {
+          "status": 200,
+          "sha256": "d0a2148846f9042569a640d31bfd49d6b4f4eb514688f32fdf1efe7281021951"
+        },
+        "/paintings/gamba-roja-congelado.webp": {
+          "status": 200,
+          "sha256": "0c85d6f3a6659f90e827bffc489dda3695eb19310dc3284e3fa2cebd6808fafb"
+        },
+        "/paintings/rape.webp": {
+          "status": 200,
+          "sha256": "987ee9846a82a82e099a0024d6bb333a87e431f3522364675415ffb88847d1c0"
+        },
+        "/paintings/gamba-roja.webp": {
+          "status": 200,
+          "sha256": "6b88b7f1c2c8ed8f46ea76b7741a1db65b45de41cc9281f9c446258cb55885cf"
+        }
+      },
+      "pixel_dimensions": [
+        1792,
+        1262
+      ]
+    },
+    {
+      "file": "import-phone.png",
+      "sha256": "0ca156358696faecb2f2ae3ff44e6c8f1b10bd0347544ea3b95c1d4e1fad80cf",
+      "css_width": 390,
+      "geometry": {
+        "width": 390,
+        "height": 785,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "text": "Upload products\nProcessed readback\n3 products · 0 identity checks\nMerluza\nPV-1001 · Unit kg\nEdit\nInclude\nSkip\nPulpo\nPV-1003 · Unit kg\nEdit\nInclude\nSkip\nLubina de estero\nPV-1005 · Unit kg\nEdit\nInclude\nSkip\nI reviewed the product names, codes and units.\nAdd 3 included products",
+        "images": [
+          {
+            "src": "/paintings/merluza.webp",
+            "complete": true,
+            "naturalWidth": 1024,
+            "naturalHeight": 1024
+          },
+          {
+            "src": "/paintings/pulpo.webp",
+            "complete": true,
+            "naturalWidth": 1024,
+            "naturalHeight": 1024
+          },
+          {
+            "src": "/paintings/lubina.webp",
+            "complete": true,
+            "naturalWidth": 1024,
+            "naturalHeight": 1024
+          }
+        ],
+        "lineCount": 0
+      },
+      "original_components": [
+        {
+          "text": "Upload products\nUpload a supplier list\nA photo, a PDF, Excel or CSV. Every product waits in a review you walk before it joins the catalogue.\nTake photo\nUpload file\nPaste\nPaste a product list\nReview paste\nProcessed readback\n3 products · 0 identity checks\nRaw source retained for this session · Pasted product list · 3 source rows\nMerluza\nPV-1001 · Unit kg\nEdit\nInclude\nSkip\nPulpo\nPV-1003 · Unit kg\nEdit\nInclude\nSkip\nLubina de estero\nPV-1005 · Unit kg\nEdit\nInclude\nSkip\nI reviewed the product names, codes and units.\nAdd will commit 3 included products.\nAdd 3 included products",
+          "images": [
+            {
+              "src": "/paintings/merluza.webp",
+              "width": 1024,
+              "height": 1024
+            },
+            {
+              "src": "/paintings/pulpo.webp",
+              "width": 1024,
+              "height": 1024
+            },
+            {
+              "src": "/paintings/lubina.webp",
+              "width": 1024,
+              "height": 1024
+            }
+          ],
+          "html_sha256": "984106c1d00c9bcb879384aeabe79bed70516984e9fbcdfa104b4266caf57399"
+        }
+      ],
+      "page_errors": [],
+      "blocked_external": [],
+      "fixture_mutating_requests": [
+        {
+          "url": "http://127.0.0.1:18721/api/cedar/access/workspaces",
+          "method": "POST"
+        },
+        {
+          "url": "http://127.0.0.1:18721/api/proof/session",
+          "method": "POST"
+        },
+        {
+          "url": "http://127.0.0.1:18721/api/cedar/access/workspaces",
+          "method": "POST"
+        }
+      ],
+      "resources": {
+        "/cedar/": {
+          "status": 200,
+          "sha256": "61e5d1f8e9b35126566ddcae5644453c548ccb71cfa5d2674b7675d2b4f17f7b"
+        },
+        "/assets/app-CO4JVU2W.js": {
+          "status": 200,
+          "sha256": "1f9453df28ffee25da14261728eaad79e76356675ff8de149a6926df84a45f24"
+        },
+        "/assets/modulepreload-polyfill-P2Xu9kJm.js": {
+          "status": 200,
+          "sha256": "418c206484b89b68ef5f067277831e583fc9193a62aadf4de269acaaeb12a85f"
+        },
+        "/assets/preload-helper-DcYFrm8w.css": {
+          "status": 200,
+          "sha256": "abba7c9022a6c6302655455fafc276af9ea7f5dcce3470d45995630f139b4656"
+        },
+        "/assets/preload-helper-DY36dqbZ.js": {
+          "status": 200,
+          "sha256": "aba87f2a53e45ecdc9113fc30387d16e449d1676428cf5f82dd624c1df97d152"
+        },
+        "/assets/rolldown-runtime-C0FnF6B9.js": {
+          "status": 200,
+          "sha256": "e0a79ad36c6ca1ffbc796c80aa5661803a9d1bc684e29d1587f48b4ba9a82714"
+        },
+        "/assets/main-DrIJu8tb.js": {
+          "status": 200,
+          "sha256": "f798ef7230484c581a460824e2dcbe12f1b24fa8562471892cda7c112d0e20ae"
+        },
+        "/assets/react-IpA8Qn9U.js": {
+          "status": 200,
+          "sha256": "1971cbe7ee8324edfc2374a5c51f679b691b056cba3db0ac1baf277bed84841a"
+        },
+        "/assets/currency-DTdJVcSV.js": {
+          "status": 200,
+          "sha256": "7f764b21d5d7a6d5dd6bcf4149eda3a3d37f720e6b6146afdbdd08a3ca370031"
+        },
+        "/assets/jsx-runtime-CJ6XR39y.js": {
+          "status": 200,
+          "sha256": "9d230b88c6df3b5c1190839e0f4e12b59c936770c4125040be2f7e227e5ddbf1"
+        },
+        "/assets/arrow-up-right-CG9gwNhb.js": {
+          "status": 200,
+          "sha256": "84cffdda37c34b05df41dab07ed000abbf9c6fba1f6ccf1baa467055eb4e4a40"
+        },
+        "/assets/arrow-left-OU03yTFK.js": {
+          "status": 200,
+          "sha256": "a200b940e1a6cd362071d06732b72727ddb4752a0d194e9694e1a6c2d3e94cdf"
+        },
+        "/assets/createLucideIcon-BOnSrhDG.js": {
+          "status": 200,
+          "sha256": "c68725f4d8bdab58a7c03cf693d04d9a462f86c20be0e1a930caee7e86839b50"
+        },
+        "/assets/glyphs-BO98nlga.js": {
+          "status": 200,
+          "sha256": "99dc271d57cf837a9464c3a6da6de4b450ff3c46d0265818e1ea119776a38f61"
+        },
+        "/assets/check-CPU-CJJK.js": {
+          "status": 200,
+          "sha256": "6a27044b73c457eded03d8ebf298c9a6612d21bff95e7c1984dfd5a460228b96"
+        },
+        "/assets/phone-Btuy6vN3.js": {
+          "status": 200,
+          "sha256": "2c3c686ea4340cdcba8f81ed314324171b3945d312d027a6a8e03cd8f76669e6"
+        },
+        "/assets/ellipsis-Cw8iGzwN.js": {
+          "status": 200,
+          "sha256": "0eb1ab89013a0f6240e7e7d939ac8555c16f7419f5e4ad0f0b11ade3ff271991"
+        },
+        "/assets/message-circle-CwDbkwId.js": {
+          "status": 200,
+          "sha256": "f5416da9a457df19946cf466a0a3a31932a1fc88359ee6542c54b6208d8b3a4d"
+        },
+        "/assets/phone-off-B7_6vYjN.js": {
+          "status": 200,
+          "sha256": "f76caf7a4bf5570436dbed8b227479d1999f301c6ab1a27a0a1b416bb4924433"
+        },
+        "/assets/plus-CIUTM9wO.js": {
+          "status": 200,
+          "sha256": "7121e9fb1e03c9c784f0c5d14f8822984212a4c67725c99bc8f43740941bbd8f"
+        },
+        "/assets/receipt-text-BBvYiq2u.js": {
+          "status": 200,
+          "sha256": "2ccfe58ae89eb25c40eefafae7a1e14c4ee974dd7bc5562514af9f2537909285"
+        },
+        "/assets/search-DNO7nHCu.js": {
+          "status": 200,
+          "sha256": "dd384c5530818311c4020013e91ca66259cd15566c25443232af94e4e1c8b485"
+        },
+        "/assets/chevron-right-DFm0zL4C.js": {
+          "status": 200,
+          "sha256": "9a0705cdabe48f7ca14e106d9498cb981a8b27e8bcd3e8aa0717907f8d5e2da0"
+        },
+        "/assets/chevron-left-BLcZaGlL.js": {
+          "status": 200,
+          "sha256": "bea63eed385e3c019dd38086e0f7e392cb3d7860878728054c4d217a5452cbb6"
+        },
+        "/assets/store-DJfQvpoK.js": {
+          "status": 200,
+          "sha256": "4e1b0ed03dc411ae7a09d6bcfe6cddbb702101aeec2844061b4b08d22d74dee4"
+        },
+        "/assets/arrow-right-Xqk6wDjr.js": {
+          "status": 200,
+          "sha256": "66809e2fca3a6f4335e56b5aefa75091ed4f20d5997c6c4003cadc8fe3c48092"
+        },
+        "/assets/app-DcFB5tdw.js": {
+          "status": 200,
+          "sha256": "7f06dd12a25df917708ae61ee648aa0ff035f7f6f971bbd0dbc72344359fda70"
+        },
+        "/assets/input-zIMQXVxk.js": {
+          "status": 200,
+          "sha256": "83fe3620923a09790775b8e6cb5615330bec786e74605a7f2ee92854f4c84611"
+        },
+        "/assets/button-B_ZmeaNk.js": {
+          "status": 200,
+          "sha256": "f65b1e81506979b3f2a0500fcae65724c6dc53ee9cb4b2aa6a80526f25fd3212"
+        },
+        "/assets/icon-CKY70IyD.js": {
+          "status": 200,
+          "sha256": "4df1672887ef3b306e50ae416f6493a4ef6450e74a0f44a3a8b44200f4ff36cf"
+        },
+        "/assets/message-D2b9sMCC.js": {
+          "status": 200,
+          "sha256": "d43daa304a7ef732d3819f148b01240c8678ff1cd9db607af8169853885d2c23"
+        },
+        "/assets/hooks-IlS1DL10.js": {
+          "status": 200,
+          "sha256": "a7a02a911052e58ff8ea8916f2524c4eb4e7d7c5c6db29af957329426eb08c19"
+        },
+        "/assets/api-DXaJlytG.js": {
+          "status": 200,
+          "sha256": "1bb8fc74f2c75744319e692f8c70888c4a982456f0e6e61f7f94d7d5f4e380eb"
+        },
+        "/assets/printing-BnxOVfrc.css": {
+          "status": 200,
+          "sha256": "f48c1eff5401d1950e612a2e82d7ebf8406e02fa03f63a8e31653e801488d2f4"
+        },
+        "/assets/main-BfjEpHBb.css": {
+          "status": 200,
+          "sha256": "b493e48d7aa71dd0debbf7a31038e00ae38b2b44c709428cd36de603ac5e13c4"
+        },
+        "/assets/workflow-dialog-SZUbYk6J.js": {
+          "status": 200,
+          "sha256": "13d0f3d39fadf6ecf3c59bd45e4a48444ffccef294f0339aeca87f16cb22c30f"
+        },
+        "/assets/es2015-BUaFuHsB.js": {
+          "status": 200,
+          "sha256": "731633b9dd41ff02767a352c6d8b45f66bd2637594d5584ac6624cddb06fcecb"
+        },
+        "/assets/tslib.es6-Dm_CEdRT.js": {
+          "status": 200,
+          "sha256": "e02eca1bcd339520e26a0f8751f665667a972debb2a28ec69f76084656acb604"
+        },
+        "/assets/viewport-D61Dtj8a.js": {
+          "status": 200,
+          "sha256": "6aa6ed0d0b4cb5329b85a4902114ba75963e0c11ecfc8063d9544c8a56c59aeb"
+        },
+        "/assets/scenario-clock-srjDHVvX.js": {
+          "status": 200,
+          "sha256": "56c6959234722084c62f27be7642ad20c0ca6674fbf2aac8c0ad5970ead52353"
+        },
+        "/assets/currency-migration-Dmyo9EI4.js": {
+          "status": 200,
+          "sha256": "7559a5b778cd4c8ec5bb5b8c3f8f08eea85f8f696a9aa43a122455ca81e21a54"
+        },
+        "/assets/config-DFDj9QhH.js": {
+          "status": 200,
+          "sha256": "dd161ffdaf206d1eb28b4d674f0884241cd27850c214a5cf83f54ba7bdd1a3de"
+        },
+        "/assets/money-model-BWHsyawJ.js": {
+          "status": 200,
+          "sha256": "3801afef9d591217c13d3fdcfe841b250978919972b153e0c9a598e2e5ff647c"
+        },
+        "/assets/money-api-C353yT8w.js": {
+          "status": 200,
+          "sha256": "23421448d75c8a2a0f252ef721a7b7287cf936ede7ea033792bae9a30d724e80"
+        },
+        "/assets/money-runtime-hd7kHe3M.js": {
+          "status": 200,
+          "sha256": "8a621928a0c5cd13365ba2c6b9e6fedd51b8d4104934ffb5f6187aefad9e11d4"
+        },
+        "/assets/day-CDgHHo6u.js": {
+          "status": 200,
+          "sha256": "10e3ba1a78a92e1557e7ff08818daa28ed28026ad9486f4e1fcfa276e6b45304"
+        },
+        "/assets/company-DhAF8hAn.js": {
+          "status": 200,
+          "sha256": "c5f03103a1dbd01c9f82d4a2a3e0ec71999242ce1fc22cb9d0bf54a4f1fd11de"
+        },
+        "/assets/figure-DvgSNnDS.js": {
+          "status": 200,
+          "sha256": "af6114a0c923286832cc470085a5504d28518a498c3033b69ef7e7a6d8aba319"
+        },
+        "/assets/cedar-channel-api-C5kwYQ5j.js": {
+          "status": 200,
+          "sha256": "6810b608cab4e101160922ff8f41601353a69792bcd3fb7f8477327352271cb1"
+        },
+        "/assets/anchors-CcoY9Nzz.js": {
+          "status": 200,
+          "sha256": "7ee6311c39ab371ca5b98662845c3a8ab1870ee1870611045bba36ca1d4357d3"
+        },
+        "/assets/setup-frame-Ddg35nFM.js": {
+          "status": 200,
+          "sha256": "e59a04af47acbd700081d9f861adfcf567ea939387109250812137e7e3b8516f"
+        },
+        "/assets/modal-BN71puGn.js": {
+          "status": 200,
+          "sha256": "2be14da64c3d4de5135449613e5b2b70c2f0d91f5e6efd526300b2b2592e2f4f"
+        },
+        "/assets/phone-runtime-D8A-bfY2.js": {
+          "status": 200,
+          "sha256": "1a2c30dc2bb3569ea874ded8aa30d7cb3ec6653ac49bd6b442230d83d4c075b8"
+        },
+        "/assets/catalogue-DDzuIAJu.js": {
+          "status": 200,
+          "sha256": "9018df1e1d1ea10dcbc6109c06a4912c0d4e9330436e0c6cee5883a5571e359b"
+        },
+        "/assets/printing-Cy46gVio.js": {
+          "status": 200,
+          "sha256": "5ad1c6e536f1c779692c031c71a663cc6695b4685c719835f0957a15fa87709a"
+        },
+        "/assets/onboarding-store-DL3S3ROb.js": {
+          "status": 200,
+          "sha256": "1220eccd183c725ccb0e5aa5ea2f58870c157f3096adede20215814d5ee12351"
+        },
+        "/assets/onboarding-v1-DQ53snQV.js": {
+          "status": 200,
+          "sha256": "ad9388a1f87828d4f1f05342b2a7b4f3b7bbb1648a7df0879fb77219e0791675"
+        },
+        "/assets/demo-welcome-DyE6uQDe.js": {
+          "status": 200,
+          "sha256": "dd7ebec3812dcac9c5778fb16b390f709f8551f5dfe34715fffeb1451d29e4f7"
+        },
+        "/assets/money-sync-DWnraiiy.js": {
+          "status": 200,
+          "sha256": "1ff30021eaa038092a57c47bd463000bbdf1d4deb74fb607a686150d0c449c5a"
+        },
+        "/assets/order-payment-sync-DND-vcol.js": {
+          "status": 200,
+          "sha256": "fa9c6d7034187a80232ad986568ac395dbe53263b7c5194f4363e5f34786a841"
+        },
+        "/assets/inter-latin-400-normal-C38fXH4l.woff2": {
+          "status": 200,
+          "sha256": "8909904ab6c872eb994093482a88a28eca2cd95912d7b6fecd72103b0dc07edc"
+        },
+        "/assets/whatsapp-intake-Z9f4YOW_.js": {
+          "status": 200,
+          "sha256": "acab4eb818cfe9f2322c90eaf6b53462c8bdbb56bc6053bcd8784efe9b8ea676"
+        },
+        "/assets/order-intake-CofmeGmd.js": {
+          "status": 200,
+          "sha256": "135074211876241b919fd11f5ff576a2d1cfc6b41763f3ceda3c0244cfb26c5f"
+        },
+        "/assets/email-api-CTdE9W2N.js": {
+          "status": 200,
+          "sha256": "bdc482c30bbaecfc51b5c160642de845db8aef73c505f2bfd4aeb9c7ec3be40c"
+        },
+        "/assets/email-source-session-Di9g_zMI.js": {
+          "status": 200,
+          "sha256": "69c7d67ee933c09812a23878978b31f7dd68540e971310a312402c61e0693847"
+        },
+        "/assets/email-connection-CKHH63SN.js": {
+          "status": 200,
+          "sha256": "60c9b1798a96890a453271ab35b6e2a31975b126bebd8fd4c2ee9995d48c064c"
+        },
+        "/assets/document-line-table-DykzPIvk.js": {
+          "status": 200,
+          "sha256": "e4e5d7ae2ab37ce1016d504344431326c96ac1213d6c15fc94c39f1af2cd90f9"
+        },
+        "/assets/email-intake-Dg5_KwVl.js": {
+          "status": 200,
+          "sha256": "c5f26753197a1b26b3de35c63a664e4e4a3dee5ba96df8dbf6fc125d436a2a3f"
+        },
+        "/assets/phone-intake-C4irCckE.js": {
+          "status": 200,
+          "sha256": "573ff6d25e779732c6a151cdc828b5b34ec47404e70dfdcc8540660d6f4b769e"
+        },
+        "/brand/rocoto-mark.svg": {
+          "status": 200,
+          "sha256": "5853eac27b281e7cba519cb82ae0e3005bab843cdf48345c49d1171a2f65c5e7"
+        },
+        "/assets/inter-latin-500-normal-Cerq10X2.woff2": {
+          "status": 200,
+          "sha256": "f3779f1efccc4bdcdf9c0a02ab95bf6bd092ed09c48c08cedc725889edd1d19f"
+        },
+        "/cedar-artwork/delivery-batch.png": {
+          "status": 200,
+          "sha256": "17eb47ab241b42689cb4343f6194087376574b4106959418b5fb421baa2023dd"
+        },
+        "/fonts/fraunces/fraunces-latin-500-700.woff2": {
+          "status": 200,
+          "sha256": "7234ed860a9cc83045413c4faee63c960a8f2d1917adcf728119307d56e0d783"
+        },
+        "/assets/sales-Cbr8UTCY.js": {
+          "status": 200,
+          "sha256": "32833fa67ddd2654181c7659ba784d1afdda26287e7550d55a875506e7c464ab"
+        },
+        "/assets/intake-road-CBWNqNet.js": {
+          "status": 200,
+          "sha256": "99f530e27dac04b761855240f500db4b0e1b2ebf5209cf01f6b646b1b3b1e987"
+        },
+        "/assets/datepicker-C7zNRkXy.js": {
+          "status": 200,
+          "sha256": "7b7d9d151dee5190239c964ed6805d88c9e1c6a58218a60ac49df2dc25010207"
+        },
+        "/map/14/8288/6115.png": {
+          "status": 200,
+          "sha256": "ad98cbc35e084dde2386c5e1b384a4162778b322a6fa178e50e2a7a96a117375"
+        },
+        "/map/14/8289/6115.png": {
+          "status": 200,
+          "sha256": "5a8de3f1f39b25bc434f59678871a669c8437e4c8f57a31f8e10aa1a5bd3bea1"
+        },
+        "/map/14/8290/6115.png": {
+          "status": 200,
+          "sha256": "6c14c3bd0e9fdb5be5fa340f3e717eb91d309762725625a40eef407a0651b756"
+        },
+        "/map/14/8289/6116.png": {
+          "status": 200,
+          "sha256": "e4ad20e9de2c4fd44ff0e7511dd1bf1188d5484857da6e72032a34e062d3fd66"
+        },
+        "/map/14/8290/6116.png": {
+          "status": 200,
+          "sha256": "8baf5ee4b5d7de2565605cdf6590c281c384e73e3f28d27f6f3970e683e29e0a"
+        },
+        "/map/14/8288/6116.png": {
+          "status": 200,
+          "sha256": "4377e91933c9746cc61e84401309c49ee277ee92457d2c140cfac96d213686f7"
+        },
+        "/map/14/8289/6117.png": {
+          "status": 200,
+          "sha256": "b35db280563b987e641e316664f41e8c270ce674ca2b0278401f591061435054"
+        },
+        "/map/14/8288/6117.png": {
+          "status": 200,
+          "sha256": "6e82f3e31564f202c64a70c8247bb580cd3395025a903ba2003f727b525340c4"
+        },
+        "/map/14/8290/6117.png": {
+          "status": 200,
+          "sha256": "21543c7fea6025790d9852419498387c3ea668e906046a235a423ba04d23083e"
+        },
+        "/paintings/merluza.webp": {
+          "status": 200,
+          "sha256": "6b90e6885f63653b33b820e4d361518fdb9d2bdb6dacfd25da4db5a78d7a53b4"
+        },
+        "/paintings/lubina.webp": {
+          "status": 200,
+          "sha256": "3c3398d2051f58987b16192fc2a2d4d6dac67fa879d429b4280c9935f649194b"
+        },
+        "/paintings/pulpo.webp": {
+          "status": 200,
+          "sha256": "d41fb8a25b8243960077e279f6cca97d6c996b0e31d3da3412bcbd6bce5b0a9d"
+        },
+        "/assets/catalogue-export-DDNA8Qn-.js": {
+          "status": 200,
+          "sha256": "2f716a687d2d4bd16edaf48df72dbb9f6dd9013f7e1b56e6391cc173f88338e3"
+        },
+        "/assets/stock-Oje05oU4.js": {
+          "status": 200,
+          "sha256": "d0a2148846f9042569a640d31bfd49d6b4f4eb514688f32fdf1efe7281021951"
+        },
+        "/paintings/gamba-roja-congelado.webp": {
+          "status": 200,
+          "sha256": "0c85d6f3a6659f90e827bffc489dda3695eb19310dc3284e3fa2cebd6808fafb"
+        },
+        "/paintings/gamba-roja.webp": {
+          "status": 200,
+          "sha256": "6b88b7f1c2c8ed8f46ea76b7741a1db65b45de41cc9281f9c446258cb55885cf"
+        },
+        "/paintings/rape.webp": {
+          "status": 200,
+          "sha256": "987ee9846a82a82e099a0024d6bb333a87e431f3522364675415ffb88847d1c0"
+        }
+      },
+      "pixel_dimensions": [
+        780,
+        1570
+      ]
+    }
+  ],
+  "prototype": {
+    "surface": "cedar",
+    "environment": "development",
+    "sourceCommit": "12d77d610c82a21c602a7706861f043e16607a74",
+    "entrySha256": "61e5d1f8e9b35126566ddcae5644453c548ccb71cfa5d2674b7675d2b4f17f7b",
+    "spanishEntry": "/cedar/es/",
+    "spanishEntrySha256": "6ad04e6f337fa30f670a1c0a36bd55e9c3093a416477cafb89ed1587bf163922"
+  },
+  "entry_sha256": "61e5d1f8e9b35126566ddcae5644453c548ccb71cfa5d2674b7675d2b4f17f7b",
+  "capture_script_sha256": "a3ee73851e4261414a45a22e852ea3673bb7357f780153e4ec86b1e033516691",
+  "css_sha256": {
+    "common": "341a3e1af73c11cd92927f04164ce3f48c29ff3653dfac9d262b5de7af6ba542",
+    "order": "55adfbd21669fdce2853d39f1e3ef377f4b09d4f786b4d58997d0c39c63c2849",
+    "catalogue": "d4156b014919d4366e8a6a5bc7902e6d1e3ee9b789623a72d111bd6311d3309e",
+    "import": "8fc957b66627d8b51f2d2ea8ba8efe9c7bc313edd3853ddeb622e33ffa689534"
+  },
+  "source_sha256": {
+    "app/src/prototypes/cedar/detail.tsx": "5e9286eec52bb91996d552406f3ba03e6e4f51142486d608186396c54ef1e273",
+    "app/src/prototypes/cedar/areas/stock.tsx": "6bff827ef3ec330a6072ab309afddb35b4b8cc4bc1fc3e62b0f72038c3c4087c",
+    "app/src/prototypes/cedar/product-face.tsx": "9e7caf312069aaf382089af206e51eb7730a3529fe85336074cb3df8e166dd52",
+    "app/src/prototypes/cedar/painting-map.ts": "d990447da7cc4649a8a0766a7754f48d72c3b540ca6f67ac88bf1538430c5484",
+    "app/src/prototypes/cedar/sku-artwork.tsx": "9f5b8ae6084167f2a7f204a513e9dc07049bb56f4dfa038f819214d03a001699",
+    "app/src/prototypes/cedar/product-creation.tsx": "cb015da6f8eddb3120297e7c12f04057088121edbe9adc08b2124466f78ec6d7",
+    "app/src/prototypes/cedar/onboarding-catalogue.tsx": "fdad4fb317ec81f6027f68f896968395939196eb92e1c73bef94a8b46578ae18",
+    "app/src/prototypes/cedar/product-card.tsx": "3e72b46e4f9f5420b8eea77f1f94e914a3f5a61b29ab5417fc428d724efa5fa9",
+    "app/src/rocoto-theme.ts": "dd96ec416c2f95166e3de54d6f4eb64ca5cce077675a631ff45a8b22b7fa2751",
+    "app/public/paintings/merluza.webp": "6b90e6885f63653b33b820e4d361518fdb9d2bdb6dacfd25da4db5a78d7a53b4",
+    "app/public/paintings/pulpo.webp": "d41fb8a25b8243960077e279f6cca97d6c996b0e31d3da3412bcbd6bce5b0a9d",
+    "app/public/paintings/lubina.webp": "3c3398d2051f58987b16192fc2a2d4d6dac67fa879d429b4280c9935f649194b"
+  },
+  "source_verification": "Each listed original source/painting file also matched git show at the pinned commit on peter-projects; the capture reads the completed review artifact, not the incomplete local build.",
+  "spanish_entry_sha256": "6ad04e6f337fa30f670a1c0a36bd55e9c3093a416477cafb89ed1587bf163922",
+  "presentation_checks": "presentation-checks.json",
+  "visually_reviewed": [
+    "all six composed assets",
+    "presentation-1600.png",
+    "presentation-390.png"
+  ],
+  "provider_model_gpu_calls": 0,
+  "recommended_picture_breakpoint_px": 768,
+  "phone_master_max_css_width": 390
+}

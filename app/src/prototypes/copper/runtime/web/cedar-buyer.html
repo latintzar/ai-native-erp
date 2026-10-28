@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow"><title>Pago con Yape · Rocoto</title>
+  <link rel="stylesheet" href="/assets/cedar-buyer.css"><script defer src="/assets/cedar-buyer.js"></script>
+</head>
+<!-- THE CHECKOUT A BUYER SEES (FEED-IA §252). The page is Spanish-source: it is served to a
+     Peruvian buyer by the collection service itself, outside Cedar's snapshot tables, so the copy
+     is written here in Spanish and each block carries its English source comment. -->
+<body><main>
+  <header class="brand"><a href="https://soyrocoto.com" aria-label="Rocoto"><img src="/assets/rocoto-mark.svg" alt="" width="44" height="44"></a></header>
+  <article class="checkout" aria-label="Pago del pedido">
+
+    <!-- THE TOP BAR: the amount and the order number, the two facts a payer checks first. -->
+    <header class="topbar">
+      <span class="wallet" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7.5A2.5 2.5 0 0 1 5.5 5H18a2 2 0 0 1 2 2v1"/><path d="M3 7.5V17a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-3"/><path d="M21 10.5h-4a1.75 1.75 0 0 0 0 3.5h4z"/></svg></span>
+      <!-- Pay exactly: the server's quote, with its cents kept beside the payment amount. -->
+      <p class="amount"><span id="payment-verb" class="payment-verb">Paga exactamente</span><span id="amount">—</span></p>
+      <p id="order" class="order">Pedido</p>
+      <p id="rounding" class="order rounding" hidden></p>
+    </header>
+
+    <!-- THE ASK: Yape's mark, the one sentence, and where the code lives. -->
+    <section id="ask" class="ask">
+      <img class="mark" src="/assets/yape.png" alt="Yape" width="64" height="80">
+      <h1 id="ask-title">Paga con tu <strong>Código de aprobación</strong></h1>
+      <ul class="hints">
+        <li><span class="hint-mark" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M10.5 18.5h3"/></svg></span><span class="hint-words">Encuéntralo en el <strong>menú de tu app Yape.</strong></span></li>
+        <li><span class="hint-mark" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11.5" height="11.5" rx="2.5"/><path d="M15 5.5A2.5 2.5 0 0 0 12.5 3h-7A2.5 2.5 0 0 0 3 5.5v7A2.5 2.5 0 0 0 5.5 15"/></svg></span><span class="hint-words"><strong>Cópialo y pégalo</strong> abajo.</span></li>
+      </ul>
+
+      <!-- THE FORM: the buyer's Yape phone behind its +51, then the six approval-code boxes. -->
+      <form id="approve-form" novalidate>
+        <label class="field-label" for="phone">Ingresa tu celular Yape</label>
+        <div class="phone-field"><span class="prefix">+51</span><input id="phone" name="phone" type="tel"
+          inputmode="numeric" autocomplete="tel-national" placeholder="000 000 000" maxlength="11" aria-describedby="phone-help"></div>
+        <p id="phone-help" class="field-help">Nueve dígitos, el mismo de tu cuenta Yape.</p>
+
+        <fieldset class="code-field">
+          <legend class="field-label">Código de aprobación</legend>
+          <div id="code-boxes" class="boxes">
+            <input class="box" inputmode="numeric" autocomplete="one-time-code" maxlength="1" aria-label="Dígito 1 de 6">
+            <input class="box" inputmode="numeric" maxlength="1" aria-label="Dígito 2 de 6">
+            <input class="box" inputmode="numeric" maxlength="1" aria-label="Dígito 3 de 6">
+            <input class="box" inputmode="numeric" maxlength="1" aria-label="Dígito 4 de 6">
+            <input class="box" inputmode="numeric" maxlength="1" aria-label="Dígito 5 de 6">
+            <input class="box" inputmode="numeric" maxlength="1" aria-label="Dígito 6 de 6">
+          </div>
+          <p class="field-help"><span class="hint-mark" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg></span>Encuéntralo en el menú de Yape.</p>
+        </fieldset>
+
+        <button id="pay" class="pay" type="submit" disabled><span id="pay-label">Yapear</span><span id="pay-working" class="working" hidden><span class="spinner" aria-hidden="true"></span>Procesando…</span></button>
+        <p id="approve-note" class="note" role="status" aria-live="polite"></p>
+      </form>
+
+      <p id="for-order" class="for-order">Pago para el pedido</p>
+      <button id="qr-open" class="secondary" type="button" aria-expanded="false" aria-controls="qr-panel">Pagar con QR</button>
+    </section>
+
+    <!-- THE QR ROUTE: the seller's own collection QR, for the payer who prefers to scan. -->
+    <section id="qr-panel" class="qr-panel" aria-labelledby="qr-title" hidden>
+      <h2 id="qr-title">Paga escaneando el QR</h2>
+      <p id="payment-instruction" class="field-help"></p>
+      <img id="merchant-qr" class="qr" alt="QR de cobro del vendedor" width="240" height="240">
+      <p id="phone-seller" class="seller-phone"></p>
+      <p class="field-help">Revisa el nombre del destinatario y el importe en tu aplicación antes de confirmar.</p>
+    </section>
+
+    <!-- THE RECEIPT: what the card becomes once the payment lands. -->
+    <section id="receipt" class="receipt" aria-labelledby="receipt-title" hidden>
+      <span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span>
+      <h2 id="receipt-title">Pago recibido</h2>
+      <p id="receipt-amount" class="amount"></p>
+      <p id="receipt-order" class="receipt-line"></p>
+      <p id="receipt-hour" class="receipt-line"></p>
+      <p class="receipt-line">Puedes cerrar esta ventana.</p>
+    </section>
+
+    <!-- THE RECORD: this request's own payment history, and the reference the bank carries. -->
+    <section class="record" aria-labelledby="record-title">
+      <h2 id="record-title">Registros de pago</h2>
+      <p id="payment-status" role="status" aria-live="polite">Consultando el saldo…</p>
+      <div class="reference"><span class="label">Referencia del pedido</span><strong id="reference"></strong></div>
+      <p id="account" class="account"></p>
+      <ol id="timeline" class="timeline"></ol>
+      <p id="history-empty" class="muted">Los registros de este pedido aparecerán aquí.</p>
+      <p id="evidence" class="muted"></p>
+    </section>
+
+    <footer><p id="explanation">Rocoto emite este cobro para <strong id="seller">el vendedor</strong>. Tus datos viajan cifrados y quedan con tu pedido.</p></footer>
+  </article>
+  <p class="privacy">Pago vinculado a tu pedido · Rocoto</p>
+</main></body></html>

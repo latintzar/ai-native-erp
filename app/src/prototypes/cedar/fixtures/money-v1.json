@@ -1,0 +1,867 @@
+{
+  "version": 1,
+  "id": "cedar-money-v1",
+  "synthetic": true,
+  "fixture": {
+    "collections": {
+      "workspaces": [
+        {
+          "scope": "fish",
+          "referenceAt": "2025-08-22T09:45:00-05:00",
+          "currency": "PEN",
+          "openingBalanceMinor": 500000,
+          "fxRate": 1,
+          "houseName": "Peix Vilalta"
+        },
+        {
+          "scope": "meat",
+          "referenceAt": "2025-08-22T12:45:00-05:00",
+          "currency": "PEN",
+          "openingBalanceMinor": 500000,
+          "fxRate": 1,
+          "houseName": "Carns Bofill"
+        },
+        {
+          "scope": "fruit",
+          "referenceAt": "2025-08-22T11:15:00-05:00",
+          "currency": "PEN",
+          "openingBalanceMinor": 500000,
+          "fxRate": 1,
+          "houseName": "Fruites Amat"
+        }
+      ],
+      "invoiceSeeds": [
+        {
+          "scope": "fish",
+          "saleId": "d-1-vera",
+          "customerId": "vera",
+          "sourceDay": "2025-08-21",
+          "dueAt": "2025-08-21",
+          "paidBps": 0,
+          "receiptAt": "2025-08-21T16:40:00-05:00",
+          "method": "yape",
+          "reference": "F001-00000001"
+        },
+        {
+          "scope": "fish",
+          "saleId": "d-1-hotelrec",
+          "customerId": "hotelrec",
+          "sourceDay": "2025-08-21",
+          "dueAt": "2025-08-22",
+          "paidBps": 5000,
+          "receiptAt": "2025-08-21T15:05:00-05:00",
+          "method": "plin",
+          "reference": "F001-00000002"
+        },
+        {
+          "scope": "fish",
+          "saleId": "d-1-nou",
+          "customerId": "nou",
+          "sourceDay": "2025-08-21",
+          "dueAt": "2025-08-23",
+          "paidBps": 10000,
+          "receiptAt": "2025-08-21T14:05:00-05:00",
+          "method": "transfer",
+          "reference": "F001-00000003"
+        },
+        {
+          "scope": "fish",
+          "saleId": "d-1-marisqueria-montllor",
+          "customerId": "marisqueria-montllor",
+          "sourceDay": "2025-08-21",
+          "dueAt": "2025-08-24",
+          "paidBps": 10000,
+          "receiptAt": "2025-08-21T07:09:00-05:00",
+          "method": "yape",
+          "reference": "F001-00000004"
+        },
+        {
+          "scope": "fish",
+          "saleId": "d-1-fonda-perello",
+          "customerId": "fonda-perello",
+          "sourceDay": "2025-08-21",
+          "dueAt": "2025-08-25",
+          "paidBps": 0,
+          "receiptAt": "2025-08-21T06:06:00-05:00",
+          "method": "plin",
+          "reference": "F001-00000005"
+        },
+        {
+          "scope": "fish",
+          "saleId": "d-1-peixateria-rosell",
+          "customerId": "peixateria-rosell",
+          "sourceDay": "2025-08-21",
+          "dueAt": "2025-08-26",
+          "paidBps": 5000,
+          "receiptAt": "2025-08-21T05:24:00-05:00",
+          "method": "transfer",
+          "reference": "F001-00000006"
+        },
+        {
+          "scope": "fish",
+          "saleId": "d-1-cal-farre",
+          "customerId": "cal-farre",
+          "sourceDay": "2025-08-21",
+          "dueAt": "2025-08-27",
+          "paidBps": 10000,
+          "receiptAt": "2025-08-21T07:43:00-05:00",
+          "method": "yape",
+          "reference": "F001-00000007"
+        },
+        {
+          "scope": "fish",
+          "saleId": "d-1-hostal-cadaques",
+          "customerId": "hostal-cadaques",
+          "sourceDay": "2025-08-21",
+          "dueAt": "2025-08-28",
+          "paidBps": 10000,
+          "receiptAt": "2025-08-21T06:59:00-05:00",
+          "method": "plin",
+          "reference": "F001-00000008"
+        },
+        {
+          "scope": "fish",
+          "saleId": "d-1-catering-garraf",
+          "customerId": "catering-garraf",
+          "sourceDay": "2025-08-21",
+          "dueAt": "2025-08-21",
+          "paidBps": 0,
+          "receiptAt": "2025-08-21T05:31:00-05:00",
+          "method": "transfer",
+          "reference": "F001-00000009"
+        },
+        {
+          "scope": "fish",
+          "saleId": "d-1-hotel-tibidabo",
+          "customerId": "hotel-tibidabo",
+          "sourceDay": "2025-08-21",
+          "dueAt": "2025-08-22",
+          "paidBps": 5000,
+          "receiptAt": "2025-08-21T05:53:00-05:00",
+          "method": "yape",
+          "reference": "F001-00000010"
+        },
+        {
+          "scope": "fish",
+          "saleId": "d-1-cafe-vila",
+          "customerId": "cafe-vila",
+          "sourceDay": "2025-08-21",
+          "dueAt": "2025-08-23",
+          "paidBps": 10000,
+          "receiptAt": "2025-08-21T05:40:00-05:00",
+          "method": "plin",
+          "reference": "F001-00000011"
+        },
+        {
+          "scope": "fish",
+          "saleId": "d-1-hotel-bosch",
+          "customerId": "hotel-bosch",
+          "sourceDay": "2025-08-21",
+          "dueAt": "2025-08-24",
+          "paidBps": 10000,
+          "receiptAt": "2025-08-21T08:35:00-05:00",
+          "method": "transfer",
+          "reference": "F001-00000012"
+        },
+        {
+          "scope": "fish",
+          "saleId": "cansole",
+          "customerId": "cansole",
+          "sourceDay": "2025-08-22",
+          "dueAt": "2025-08-25",
+          "paidBps": 0,
+          "receiptAt": "2025-08-22T06:12:00-05:00",
+          "method": "yape",
+          "reference": "F001-00000013"
+        },
+        {
+          "scope": "fish",
+          "saleId": "hotelrec",
+          "customerId": "hotelrec",
+          "sourceDay": "2025-08-22",
+          "dueAt": "2025-08-26",
+          "paidBps": 5000,
+          "receiptAt": "2025-08-22T05:34:00-05:00",
+          "method": "plin",
+          "reference": "F001-00000014"
+        },
+        {
+          "scope": "fish",
+          "saleId": "nou",
+          "customerId": "nou",
+          "sourceDay": "2025-08-22",
+          "dueAt": "2025-08-27",
+          "paidBps": 10000,
+          "receiptAt": "2025-08-22T08:40:00-05:00",
+          "method": "transfer",
+          "reference": "F001-00000015"
+        },
+        {
+          "scope": "fish",
+          "saleId": "vera",
+          "customerId": "vera",
+          "sourceDay": "2025-08-22",
+          "dueAt": "2025-08-28",
+          "paidBps": 10000,
+          "receiptAt": "2025-08-22T05:34:00-05:00",
+          "method": "yape",
+          "reference": "F001-00000016"
+        },
+        {
+          "scope": "fish",
+          "saleId": "can-ferrer",
+          "customerId": "can-ferrer",
+          "sourceDay": "2025-08-22",
+          "dueAt": "2025-08-21",
+          "paidBps": 0,
+          "receiptAt": "2025-08-22T06:28:00-05:00",
+          "method": "plin",
+          "reference": "F001-00000017"
+        },
+        {
+          "scope": "fish",
+          "saleId": "restaurant-montgri",
+          "customerId": "restaurant-montgri",
+          "sourceDay": "2025-08-22",
+          "dueAt": "2025-08-22",
+          "paidBps": 5000,
+          "receiptAt": "2025-08-22T06:11:00-05:00",
+          "method": "transfer",
+          "reference": "F001-00000018"
+        },
+        {
+          "scope": "fish",
+          "saleId": "bar-ribo",
+          "customerId": "bar-ribo",
+          "sourceDay": "2025-08-22",
+          "dueAt": "2025-08-23",
+          "paidBps": 10000,
+          "receiptAt": "2025-08-22T05:11:00-05:00",
+          "method": "yape",
+          "reference": "F001-00000019"
+        },
+        {
+          "scope": "fish",
+          "saleId": "cal-cabre",
+          "customerId": "cal-cabre",
+          "sourceDay": "2025-08-22",
+          "dueAt": "2025-08-24",
+          "paidBps": 10000,
+          "receiptAt": "2025-08-22T08:16:00-05:00",
+          "method": "plin",
+          "reference": "F001-00000020"
+        },
+        {
+          "scope": "fish",
+          "saleId": "marisqueria-montllor",
+          "customerId": "marisqueria-montllor",
+          "sourceDay": "2025-08-22",
+          "dueAt": "2025-08-25",
+          "paidBps": 0,
+          "receiptAt": "2025-08-22T09:10:00-05:00",
+          "method": "transfer",
+          "reference": "F001-00000021"
+        },
+        {
+          "scope": "fish",
+          "saleId": "cerveseria-pineda",
+          "customerId": "cerveseria-pineda",
+          "sourceDay": "2025-08-22",
+          "dueAt": "2025-08-26",
+          "paidBps": 5000,
+          "receiptAt": "2025-08-22T05:46:00-05:00",
+          "method": "yape",
+          "reference": "F001-00000022"
+        },
+        {
+          "scope": "fish",
+          "saleId": "bar-restaurant-puig",
+          "customerId": "bar-restaurant-puig",
+          "sourceDay": "2025-08-22",
+          "dueAt": "2025-08-27",
+          "paidBps": 10000,
+          "receiptAt": "2025-08-22T05:20:00-05:00",
+          "method": "plin",
+          "reference": "F001-00000023"
+        },
+        {
+          "scope": "fish",
+          "saleId": "celler-rovira",
+          "customerId": "celler-rovira",
+          "sourceDay": "2025-08-22",
+          "dueAt": "2025-08-28",
+          "paidBps": 10000,
+          "receiptAt": "2025-08-22T08:13:00-05:00",
+          "method": "transfer",
+          "reference": "F001-00000024"
+        },
+        {
+          "scope": "meat",
+          "saleId": "d-1-vera",
+          "customerId": "vera",
+          "sourceDay": "2025-08-21",
+          "dueAt": "2025-08-21",
+          "paidBps": 0,
+          "receiptAt": "2025-08-21T19:40:00-05:00",
+          "method": "yape",
+          "reference": "F001-00000001"
+        },
+        {
+          "scope": "meat",
+          "saleId": "d-1-hotelrec",
+          "customerId": "hotelrec",
+          "sourceDay": "2025-08-21",
+          "dueAt": "2025-08-22",
+          "paidBps": 5000,
+          "receiptAt": "2025-08-21T18:05:00-05:00",
+          "method": "plin",
+          "reference": "F001-00000002"
+        },
+        {
+          "scope": "meat",
+          "saleId": "d-1-nou",
+          "customerId": "nou",
+          "sourceDay": "2025-08-21",
+          "dueAt": "2025-08-23",
+          "paidBps": 10000,
+          "receiptAt": "2025-08-21T17:05:00-05:00",
+          "method": "transfer",
+          "reference": "F001-00000003"
+        },
+        {
+          "scope": "meat",
+          "saleId": "d-1-cal-riba",
+          "customerId": "cal-riba",
+          "sourceDay": "2025-08-21",
+          "dueAt": "2025-08-24",
+          "paidBps": 10000,
+          "receiptAt": "2025-08-21T10:09:00-05:00",
+          "method": "yape",
+          "reference": "F001-00000004"
+        },
+        {
+          "scope": "meat",
+          "saleId": "d-1-cafe-ricart",
+          "customerId": "cafe-ricart",
+          "sourceDay": "2025-08-21",
+          "dueAt": "2025-08-25",
+          "paidBps": 0,
+          "receiptAt": "2025-08-21T09:06:00-05:00",
+          "method": "plin",
+          "reference": "F001-00000005"
+        },
+        {
+          "scope": "meat",
+          "saleId": "d-1-catering-camprodon",
+          "customerId": "catering-camprodon",
+          "sourceDay": "2025-08-21",
+          "dueAt": "2025-08-26",
+          "paidBps": 5000,
+          "receiptAt": "2025-08-21T08:24:00-05:00",
+          "method": "transfer",
+          "reference": "F001-00000006"
+        },
+        {
+          "scope": "meat",
+          "saleId": "d-1-hotel-lloret",
+          "customerId": "hotel-lloret",
+          "sourceDay": "2025-08-21",
+          "dueAt": "2025-08-27",
+          "paidBps": 10000,
+          "receiptAt": "2025-08-21T10:43:00-05:00",
+          "method": "yape",
+          "reference": "F001-00000007"
+        },
+        {
+          "scope": "meat",
+          "saleId": "d-1-xiringuito-conca",
+          "customerId": "xiringuito-conca",
+          "sourceDay": "2025-08-21",
+          "dueAt": "2025-08-28",
+          "paidBps": 10000,
+          "receiptAt": "2025-08-21T09:59:00-05:00",
+          "method": "plin",
+          "reference": "F001-00000008"
+        },
+        {
+          "scope": "meat",
+          "saleId": "d-1-hotel-brunet",
+          "customerId": "hotel-brunet",
+          "sourceDay": "2025-08-21",
+          "dueAt": "2025-08-21",
+          "paidBps": 0,
+          "receiptAt": "2025-08-21T08:31:00-05:00",
+          "method": "transfer",
+          "reference": "F001-00000009"
+        },
+        {
+          "scope": "meat",
+          "saleId": "d-1-carnisseria-clotet",
+          "customerId": "carnisseria-clotet",
+          "sourceDay": "2025-08-21",
+          "dueAt": "2025-08-22",
+          "paidBps": 5000,
+          "receiptAt": "2025-08-21T08:53:00-05:00",
+          "method": "yape",
+          "reference": "F001-00000010"
+        },
+        {
+          "scope": "meat",
+          "saleId": "d-1-cansaladeria-comas",
+          "customerId": "cansaladeria-comas",
+          "sourceDay": "2025-08-21",
+          "dueAt": "2025-08-23",
+          "paidBps": 10000,
+          "receiptAt": "2025-08-21T08:40:00-05:00",
+          "method": "plin",
+          "reference": "F001-00000011"
+        },
+        {
+          "scope": "meat",
+          "saleId": "d-1-arrosseria-vic",
+          "customerId": "arrosseria-vic",
+          "sourceDay": "2025-08-21",
+          "dueAt": "2025-08-24",
+          "paidBps": 10000,
+          "receiptAt": "2025-08-21T11:35:00-05:00",
+          "method": "transfer",
+          "reference": "F001-00000012"
+        },
+        {
+          "scope": "meat",
+          "saleId": "cansole",
+          "customerId": "cansole",
+          "sourceDay": "2025-08-22",
+          "dueAt": "2025-08-25",
+          "paidBps": 0,
+          "receiptAt": "2025-08-22T09:05:00-05:00",
+          "method": "yape",
+          "reference": "F001-00000013"
+        },
+        {
+          "scope": "meat",
+          "saleId": "hotelrec",
+          "customerId": "hotelrec",
+          "sourceDay": "2025-08-22",
+          "dueAt": "2025-08-26",
+          "paidBps": 5000,
+          "receiptAt": "2025-08-22T08:34:00-05:00",
+          "method": "plin",
+          "reference": "F001-00000014"
+        },
+        {
+          "scope": "meat",
+          "saleId": "nou",
+          "customerId": "nou",
+          "sourceDay": "2025-08-22",
+          "dueAt": "2025-08-27",
+          "paidBps": 10000,
+          "receiptAt": "2025-08-22T11:40:00-05:00",
+          "method": "transfer",
+          "reference": "F001-00000015"
+        },
+        {
+          "scope": "meat",
+          "saleId": "vera",
+          "customerId": "vera",
+          "sourceDay": "2025-08-22",
+          "dueAt": "2025-08-28",
+          "paidBps": 10000,
+          "receiptAt": "2025-08-22T08:34:00-05:00",
+          "method": "yape",
+          "reference": "F001-00000016"
+        },
+        {
+          "scope": "meat",
+          "saleId": "can-castells",
+          "customerId": "can-castells",
+          "sourceDay": "2025-08-22",
+          "dueAt": "2025-08-21",
+          "paidBps": 0,
+          "receiptAt": "2025-08-22T09:28:00-05:00",
+          "method": "plin",
+          "reference": "F001-00000017"
+        },
+        {
+          "scope": "meat",
+          "saleId": "restaurant-alt-camp",
+          "customerId": "restaurant-alt-camp",
+          "sourceDay": "2025-08-22",
+          "dueAt": "2025-08-22",
+          "paidBps": 5000,
+          "receiptAt": "2025-08-22T09:11:00-05:00",
+          "method": "transfer",
+          "reference": "F001-00000018"
+        },
+        {
+          "scope": "meat",
+          "saleId": "bar-granell",
+          "customerId": "bar-granell",
+          "sourceDay": "2025-08-22",
+          "dueAt": "2025-08-23",
+          "paidBps": 10000,
+          "receiptAt": "2025-08-22T08:11:00-05:00",
+          "method": "yape",
+          "reference": "F001-00000019"
+        },
+        {
+          "scope": "meat",
+          "saleId": "hotel-oliana",
+          "customerId": "hotel-oliana",
+          "sourceDay": "2025-08-22",
+          "dueAt": "2025-08-24",
+          "paidBps": 10000,
+          "receiptAt": "2025-08-22T11:16:00-05:00",
+          "method": "plin",
+          "reference": "F001-00000020"
+        },
+        {
+          "scope": "meat",
+          "saleId": "cal-riba",
+          "customerId": "cal-riba",
+          "sourceDay": "2025-08-22",
+          "dueAt": "2025-08-25",
+          "paidBps": 0,
+          "receiptAt": "2025-08-22T12:10:00-05:00",
+          "method": "transfer",
+          "reference": "F001-00000021"
+        },
+        {
+          "scope": "meat",
+          "saleId": "braseria-boada",
+          "customerId": "braseria-boada",
+          "sourceDay": "2025-08-22",
+          "dueAt": "2025-08-26",
+          "paidBps": 5000,
+          "receiptAt": "2025-08-22T08:46:00-05:00",
+          "method": "yape",
+          "reference": "F001-00000022"
+        },
+        {
+          "scope": "meat",
+          "saleId": "cerveseria-camprodon",
+          "customerId": "cerveseria-camprodon",
+          "sourceDay": "2025-08-22",
+          "dueAt": "2025-08-27",
+          "paidBps": 10000,
+          "receiptAt": "2025-08-22T08:20:00-05:00",
+          "method": "plin",
+          "reference": "F001-00000023"
+        },
+        {
+          "scope": "meat",
+          "saleId": "bar-restaurant-ferrando",
+          "customerId": "bar-restaurant-ferrando",
+          "sourceDay": "2025-08-22",
+          "dueAt": "2025-08-28",
+          "paidBps": 10000,
+          "receiptAt": "2025-08-22T11:13:00-05:00",
+          "method": "transfer",
+          "reference": "F001-00000024"
+        },
+        {
+          "scope": "fruit",
+          "saleId": "d-1-vera",
+          "customerId": "vera",
+          "sourceDay": "2025-08-21",
+          "dueAt": "2025-08-21",
+          "paidBps": 0,
+          "receiptAt": "2025-08-21T18:10:00-05:00",
+          "method": "yape",
+          "reference": "F001-00000001"
+        },
+        {
+          "scope": "fruit",
+          "saleId": "d-1-hotelrec",
+          "customerId": "hotelrec",
+          "sourceDay": "2025-08-21",
+          "dueAt": "2025-08-22",
+          "paidBps": 5000,
+          "receiptAt": "2025-08-21T16:35:00-05:00",
+          "method": "plin",
+          "reference": "F001-00000002"
+        },
+        {
+          "scope": "fruit",
+          "saleId": "d-1-nou",
+          "customerId": "nou",
+          "sourceDay": "2025-08-21",
+          "dueAt": "2025-08-23",
+          "paidBps": 10000,
+          "receiptAt": "2025-08-21T15:35:00-05:00",
+          "method": "transfer",
+          "reference": "F001-00000003"
+        },
+        {
+          "scope": "fruit",
+          "saleId": "d-1-hotel-gandesa",
+          "customerId": "hotel-gandesa",
+          "sourceDay": "2025-08-21",
+          "dueAt": "2025-08-24",
+          "paidBps": 10000,
+          "receiptAt": "2025-08-21T08:39:00-05:00",
+          "method": "yape",
+          "reference": "F001-00000004"
+        },
+        {
+          "scope": "fruit",
+          "saleId": "d-1-cafe-cervello",
+          "customerId": "cafe-cervello",
+          "sourceDay": "2025-08-21",
+          "dueAt": "2025-08-25",
+          "paidBps": 0,
+          "receiptAt": "2025-08-21T07:36:00-05:00",
+          "method": "plin",
+          "reference": "F001-00000005"
+        },
+        {
+          "scope": "fruit",
+          "saleId": "d-1-catering-ebre",
+          "customerId": "catering-ebre",
+          "sourceDay": "2025-08-21",
+          "dueAt": "2025-08-26",
+          "paidBps": 5000,
+          "receiptAt": "2025-08-21T06:54:00-05:00",
+          "method": "transfer",
+          "reference": "F001-00000006"
+        },
+        {
+          "scope": "fruit",
+          "saleId": "d-1-verduleria-solivella",
+          "customerId": "verduleria-solivella",
+          "sourceDay": "2025-08-21",
+          "dueAt": "2025-08-27",
+          "paidBps": 10000,
+          "receiptAt": "2025-08-21T09:13:00-05:00",
+          "method": "yape",
+          "reference": "F001-00000007"
+        },
+        {
+          "scope": "fruit",
+          "saleId": "d-1-xiringuito-guissona",
+          "customerId": "xiringuito-guissona",
+          "sourceDay": "2025-08-21",
+          "dueAt": "2025-08-28",
+          "paidBps": 10000,
+          "receiptAt": "2025-08-21T08:29:00-05:00",
+          "method": "plin",
+          "reference": "F001-00000008"
+        },
+        {
+          "scope": "fruit",
+          "saleId": "d-1-hotel-forcada",
+          "customerId": "hotel-forcada",
+          "sourceDay": "2025-08-21",
+          "dueAt": "2025-08-21",
+          "paidBps": 0,
+          "receiptAt": "2025-08-21T07:01:00-05:00",
+          "method": "transfer",
+          "reference": "F001-00000009"
+        },
+        {
+          "scope": "fruit",
+          "saleId": "d-1-bar-iglesias",
+          "customerId": "bar-iglesias",
+          "sourceDay": "2025-08-21",
+          "dueAt": "2025-08-22",
+          "paidBps": 5000,
+          "receiptAt": "2025-08-21T07:23:00-05:00",
+          "method": "yape",
+          "reference": "F001-00000010"
+        },
+        {
+          "scope": "fruit",
+          "saleId": "d-1-celler-jove",
+          "customerId": "celler-jove",
+          "sourceDay": "2025-08-21",
+          "dueAt": "2025-08-23",
+          "paidBps": 10000,
+          "receiptAt": "2025-08-21T07:10:00-05:00",
+          "method": "plin",
+          "reference": "F001-00000011"
+        },
+        {
+          "scope": "fruit",
+          "saleId": "d-1-arrosseria-juneda",
+          "customerId": "arrosseria-juneda",
+          "sourceDay": "2025-08-21",
+          "dueAt": "2025-08-24",
+          "paidBps": 10000,
+          "receiptAt": "2025-08-21T10:05:00-05:00",
+          "method": "transfer",
+          "reference": "F001-00000012"
+        },
+        {
+          "scope": "fruit",
+          "saleId": "cansole",
+          "customerId": "cansole",
+          "sourceDay": "2025-08-22",
+          "dueAt": "2025-08-25",
+          "paidBps": 0,
+          "receiptAt": "2025-08-22T07:40:00-05:00",
+          "method": "yape",
+          "reference": "F001-00000013"
+        },
+        {
+          "scope": "fruit",
+          "saleId": "hotelrec",
+          "customerId": "hotelrec",
+          "sourceDay": "2025-08-22",
+          "dueAt": "2025-08-26",
+          "paidBps": 5000,
+          "receiptAt": "2025-08-22T07:04:00-05:00",
+          "method": "plin",
+          "reference": "F001-00000014"
+        },
+        {
+          "scope": "fruit",
+          "saleId": "nou",
+          "customerId": "nou",
+          "sourceDay": "2025-08-22",
+          "dueAt": "2025-08-27",
+          "paidBps": 10000,
+          "receiptAt": "2025-08-22T10:10:00-05:00",
+          "method": "transfer",
+          "reference": "F001-00000015"
+        },
+        {
+          "scope": "fruit",
+          "saleId": "vera",
+          "customerId": "vera",
+          "sourceDay": "2025-08-22",
+          "dueAt": "2025-08-28",
+          "paidBps": 10000,
+          "receiptAt": "2025-08-22T07:04:00-05:00",
+          "method": "yape",
+          "reference": "F001-00000016"
+        },
+        {
+          "scope": "fruit",
+          "saleId": "fruiteria-grifell",
+          "customerId": "fruiteria-grifell",
+          "sourceDay": "2025-08-22",
+          "dueAt": "2025-08-21",
+          "paidBps": 0,
+          "receiptAt": "2025-08-22T07:58:00-05:00",
+          "method": "plin",
+          "reference": "F001-00000017"
+        },
+        {
+          "scope": "fruit",
+          "saleId": "can-marfa",
+          "customerId": "can-marfa",
+          "sourceDay": "2025-08-22",
+          "dueAt": "2025-08-22",
+          "paidBps": 5000,
+          "receiptAt": "2025-08-22T07:41:00-05:00",
+          "method": "transfer",
+          "reference": "F001-00000018"
+        },
+        {
+          "scope": "fruit",
+          "saleId": "restaurant-seros",
+          "customerId": "restaurant-seros",
+          "sourceDay": "2025-08-22",
+          "dueAt": "2025-08-23",
+          "paidBps": 10000,
+          "receiptAt": "2025-08-22T06:41:00-05:00",
+          "method": "yape",
+          "reference": "F001-00000019"
+        },
+        {
+          "scope": "fruit",
+          "saleId": "verduleria-alcarras",
+          "customerId": "verduleria-alcarras",
+          "sourceDay": "2025-08-22",
+          "dueAt": "2025-08-24",
+          "paidBps": 10000,
+          "receiptAt": "2025-08-22T09:46:00-05:00",
+          "method": "plin",
+          "reference": "F001-00000020"
+        },
+        {
+          "scope": "fruit",
+          "saleId": "hotel-gandesa",
+          "customerId": "hotel-gandesa",
+          "sourceDay": "2025-08-22",
+          "dueAt": "2025-08-25",
+          "paidBps": 0,
+          "receiptAt": "2025-08-22T10:40:00-05:00",
+          "method": "transfer",
+          "reference": "F001-00000021"
+        },
+        {
+          "scope": "fruit",
+          "saleId": "cal-feixas",
+          "customerId": "cal-feixas",
+          "sourceDay": "2025-08-22",
+          "dueAt": "2025-08-26",
+          "paidBps": 5000,
+          "receiptAt": "2025-08-22T07:16:00-05:00",
+          "method": "yape",
+          "reference": "F001-00000022"
+        },
+        {
+          "scope": "fruit",
+          "saleId": "cerveseria-ebre",
+          "customerId": "cerveseria-ebre",
+          "sourceDay": "2025-08-22",
+          "dueAt": "2025-08-27",
+          "paidBps": 10000,
+          "receiptAt": "2025-08-22T06:50:00-05:00",
+          "method": "plin",
+          "reference": "F001-00000023"
+        },
+        {
+          "scope": "fruit",
+          "saleId": "herbolari-masdeu",
+          "customerId": "herbolari-masdeu",
+          "sourceDay": "2025-08-22",
+          "dueAt": "2025-08-28",
+          "paidBps": 10000,
+          "receiptAt": "2025-08-22T09:43:00-05:00",
+          "method": "transfer",
+          "reference": "F001-00000024"
+        }
+      ]
+    },
+    "effects": []
+  },
+  "history": {
+    "days": 96,
+    "weekdayOrders": [
+      2,
+      14,
+      10,
+      10,
+      12,
+      16,
+      8
+    ],
+    "partialBasisPoints": 1000,
+    "lateBasisPoints": 1000,
+    "paymentDelayDays": 7,
+    "partialDueDays": 30,
+    "disputedOffsets": [
+      -17,
+      -31
+    ],
+    "chases": [
+      {
+        "step": 1,
+        "hoursAgo": 2,
+        "everyHours": 24
+      },
+      {
+        "step": 2,
+        "hoursAgo": 3,
+        "everyHours": 24
+      },
+      {
+        "step": 3,
+        "hoursAgo": 4,
+        "everyHours": 24
+      }
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+[Unit]
+Description=Cedar connections development preview
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=rocoto-cedar-demo
+Group=rocoto-cedar-demo
+WorkingDirectory=/srv/cedar-demo/current/proof
+EnvironmentFile=/etc/rocoto/cedar-demo.env
+Environment=PYTHONDONTWRITEBYTECODE=1
+ExecStart=/srv/cedar-demo/venv/bin/python /srv/cedar-demo/current/proof/run.py --port 8793
+Restart=on-failure
+RestartSec=5
+UMask=0077
+NoNewPrivileges=yes
+PrivateTmp=yes
+ProtectSystem=strict
+ProtectHome=yes
+ReadWritePaths=/var/lib/rocoto-cedar-demo
+InaccessiblePaths=-/srv/rocoto -/srv/demo -/srv/staging -/srv/albaranes-bridge
+CapabilityBoundingSet=
+RestrictSUIDSGID=yes
+LockPersonality=yes
+
+[Install]
+WantedBy=multi-user.target

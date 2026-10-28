@@ -1,0 +1,17 @@
+# The two tools tools/py-gate.py runs, and nothing else. They are pinned EXACTLY because the
+# baselines in tools/ruff-baseline.json and tools/mypy-baseline.json are a list of what these
+# versions find: a different ruff finds different things, and the gate would report the upgrade as
+# several hundred unexplained findings. py-gate.py compares the installed version against the one
+# recorded in the baseline and says so rather than letting the drift through.
+#
+# Moving a pin is a deliberate change: bump it here and re-take that tool's baseline in the same
+# commit, so the diff shows what the new version started and stopped finding.
+#
+#     pip install -r tools/requirements-dev.txt
+#
+# These stay OUT of backend/requirements.txt: that file is what the production box installs
+# (deploy/, .github/workflows/release.yml) and what `pip-audit` audits as the shipped tree. A
+# linter has no business in either.
+
+ruff==0.16.6
+mypy==2.3.1

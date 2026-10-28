@@ -1,0 +1,139 @@
+{
+  "observedAt": "2026-09-09",
+  "environment": "demo/development",
+  "target": "cedar-preview",
+  "hostname": "cedar-demo.soyrocoto.com",
+  "url": "https://cedar-demo.soyrocoto.com/?preview=setup",
+  "sourceCommit": "7b30bc623b80ba6ffc2ee92f5f479ef8163c6d67",
+  "previousSourceCommit": "63f1fda7cc451a9ef065b8d83600fb478ca0b098",
+  "sourcePullRequest": "https://github.com/Rocoto-Labs/rocoto/pull/81",
+  "packageSha256": "eaf2598d1abfc3b1fb7939039f6460ea061b2bbc2de382823969ef0d85b2d9cf",
+  "publication": {
+    "method": "deploy/development/package.py and publish.py through commissioned constrained receiver",
+    "manifest": "app/src/prototypes/cedar/connections/deploy.preview.json",
+    "host": "rocoto-staging",
+    "unit": "rocoto-cedar-demo.service",
+    "source": "/srv/cedar-demo/current",
+    "state": "/var/lib/rocoto-cedar-demo",
+    "environmentFile": "/etc/rocoto/cedar-demo.env",
+    "publisherExitStatus": 0,
+    "mainMerged": false,
+    "maintainedServicePidsUnchanged": [
+      "rocoto-kit-runtime",
+      "rocoto-staging",
+      "albaranes-bridge"
+    ],
+    "maintainedCaddyfileUnchanged": true,
+    "unitAndCredentialBoundaryPreserved": true
+  },
+  "httpsAndPrivateApi": {
+    "publicSetupStatus": 200,
+    "privateAnonymousStateStatus": 401,
+    "privateLoginStatus": 200,
+    "readyToAttemptSignup": true,
+    "blockers": [],
+    "connected": false,
+    "messageCount": 0,
+    "privateConversationsStatus": 200,
+    "webhookChallengePassed": true
+  },
+  "browser": {
+    "url": "https://cedar-demo.soyrocoto.com/?preview=setup",
+    "environment": "demo",
+    "expectedSourceCommit": "7b30bc623b80ba6ffc2ee92f5f479ef8163c6d67",
+    "checkedAt": "2026-09-09T16:48:50.089258+00:00",
+    "providerPosture": "Public design only; real API checks are anonymous GET requests.",
+    "widths": [
+      1600,
+      390,
+      320
+    ],
+    "pageErrors": [],
+    "publicPreviewApiRequests": [],
+    "publicPreviewExternalRequests": [],
+    "asset": {
+      "path": "/assets/index-Cz5SapAn.js",
+      "sha256": "3c9c5042ab55a69828b319d33574f84e2a4c80dfd346133d71bb3c3d7bf29e2d",
+      "matchesLocalBuild": true
+    },
+    "anonymousState": 401,
+    "anonymousConversations": 401,
+    "anonymousHistory": 401,
+    "checks": [
+      "HTTPS200; local build asset digest matches",
+      "setup and dialog at1600/390/320; no horizontal overflow",
+      "active private-setup CTA opens protected login and preserves dialog presentation",
+      "regular WhatsApp help expands and preserves main CTA",
+      "public preview performs zero API or external requests",
+      "anonymous state, conversations and history401",
+      "reviewer link opens protected login",
+      "empty browser storage; zero page errors"
+    ],
+    "screenshotsVerified": 22,
+    "screenshotDigests": {
+      "setup-1600.png": "b73c886ea11c07931c342657f646202a769ab00f3977178078ebbdf712e31448",
+      "setup-1600-help.png": "6e7cf6deee826563771324225553f67ea8531ecf9a4fe2ba5288755395232644",
+      "setup-1600-private-login.png": "bc8f468f664936cb2a646f3995213f608bbcd03e134cfef6e6071aa0061de122",
+      "dialog-1600.png": "8716964156139dc09a1f0bbe36d9f9f4d7ec61ccfb1eb19ef5065d590656b5a7",
+      "dialog-1600-help.png": "6798ae42403580dcf1f4807dacc33f063fc916358f8b149b8c906e911b13ac20",
+      "dialog-1600-help-scrolled.png": "6798ae42403580dcf1f4807dacc33f063fc916358f8b149b8c906e911b13ac20",
+      "dialog-1600-private-login.png": "7551f34aab4e6725c32ad266fe6eed52540029cad58c31afd2d238bf2aaef0dd",
+      "setup-390.png": "e9be94889d7acdd9e5b62cc83f1d85c06a21846db805da59bad74be4527ec34e",
+      "setup-390-help.png": "37eeafff6d642d9a00d65c9fd49f871534401a160945a14c35634f040ba62141",
+      "setup-390-private-login.png": "f15f71f9888443a0cb9515c6a4ae7799c66bb97012f774c10be51da3920e2010",
+      "dialog-390.png": "df7d1006f4b5d2c8469dd4ebaf43b6a76b2420ddaca13cb2ebb1291303d636cd",
+      "dialog-390-help.png": "82a348800e20c88976df169ae200b04757c2170d6ae3dfabdb00ecece9b66ca0",
+      "dialog-390-help-scrolled.png": "5b003a034b990818865a73b1814bdc74cf5bff98bf39804d69015fc22da89481",
+      "dialog-390-private-login.png": "b9079681864ed478c59796dbeb6e96192cf4d68d8fd5e67b2c577a854e813064",
+      "setup-320.png": "5381791dd190fc3ed587a5b4c49f32bfe1a4cbf51876ea9248c539986df3fba1",
+      "setup-320-help.png": "bb0c9629873e93dafe1df37a6d541b8f8bfbf4c5392ef249dcaa7f6c3c2ef4c9",
+      "setup-320-private-login.png": "fc8533bf2cde1ee1f4845c3a61db2ded444b588652332612fe0c2537b92f33ea",
+      "dialog-320.png": "f2b828c139977f8beee589957cd2868b3e3d95a6df16ce82ffd9681461a0eb2b",
+      "dialog-320-help.png": "aeeb85465d92dc35b8b33f432f377d429a5313ee012a6eb843c18c48670aec39",
+      "dialog-320-help-scrolled.png": "99c0a08a4c62e8579142e12afd657cf9997f47ac981e44858a2a2cf5ee9ae198",
+      "dialog-320-private-login.png": "a7a3a7edffc93432c2a1a6a7b175c4206afb957b3429e27a5a9fb33f6eb26387",
+      "private-login-320.png": "fc8533bf2cde1ee1f4845c3a61db2ded444b588652332612fe0c2537b92f33ea"
+    }
+  },
+  "actualMetaSdk": {
+    "sourceRevision": "7b30bc623b80ba6ffc2ee92f5f479ef8163c6d67",
+    "checkedAt": "2026-09-09T16:50:05.023393+00:00",
+    "scope": "Actual Meta SDK and popup before Facebook login or customer consent",
+    "accountProof": "pending",
+    "providerMutationAttempts": 0,
+    "privateLoginStatus": 200,
+    "privateReady": true,
+    "actualSdkLoaded": true,
+    "popupUrl": "https://www.facebook.com/login.php",
+    "popupHost": "www.facebook.com",
+    "visibleRecognizedMessages": [
+      "log into facebook",
+      "password",
+      "cookies"
+    ],
+    "loginFieldsPresent": true,
+    "stoppedBeforeFacebookLogin": true,
+    "stoppedBeforeNumberSelectionAndConsent": true,
+    "screenshotSha256": "a0e2e50321cbd26cec70b9fba8bfec6978f212ad4fe7df44f8a20ef178a454f1"
+  },
+  "sourceValidation": {
+    "makeGates": "passed",
+    "makeTest": "passed",
+    "cedarBackendTests": 47,
+    "backendTestPayloads": "synthetic",
+    "syntheticBrowserScenes": 21,
+    "targetedRoutingReview": "passed after deadline regression fix",
+    "githubChecks": "Failed before execution: account-payment/spending-limit restriction"
+  },
+  "providerReadOnlyEvidence": "provider-verification-2026-09-09.json",
+  "acceptance": {
+    "realEmbeddedSignupPopupOpened": true,
+    "realAccountAuthorizationCompleted": false,
+    "realNumberConnected": false,
+    "realHistoryImported": false,
+    "newRealIncomingMessagesVerified": false,
+    "realHistoryPersistenceVerified": false,
+    "providerSubscriptionsChanged": false,
+    "remaining": "Peter authorizes his real WhatsApp Business account through Meta and chooses history sharing; observe eligible history, new incoming messages and persistence."
+  }
+}

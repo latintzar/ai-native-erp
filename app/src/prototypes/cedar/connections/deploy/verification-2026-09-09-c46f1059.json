@@ -1,0 +1,81 @@
+{
+  "observedAt": "2026-09-09T21:11:12.191294+00:00",
+  "target": "cedar-preview",
+  "logicalEnvironment": "development/demo",
+  "physicalHost": "rocoto-staging",
+  "publicOrigin": "https://cedar-demo.soyrocoto.com",
+  "sourceCommit": "c46f10595129bad5c0c2180ff33b865eb8d77517",
+  "previousSourceCommit": "2417e69e0efe1083d5e5d885b492d17556fa83ea",
+  "sourcePullRequest": "https://github.com/Rocoto-Labs/rocoto/pull/81",
+  "change": "Capture late Meta support reports independently of stopped authorization, retain richer reports, and display confirmed delivery or failure.",
+  "packageSha256": "492dc1e827db76a81fce20aa715a74c7d5a9aed7549191cd125fd41a57926ad4",
+  "publication": {
+    "method": "Commissioned native development package/publish receiver",
+    "exitStatus": 0,
+    "activeRelease": "releases/c46f10595129bad5c0c2180ff33b865eb8d77517",
+    "mainMerged": false,
+    "maintainedServicePidsBeforeAndAfter": {
+      "rocoto-kit-runtime": 66172,
+      "rocoto-staging": 66165,
+      "albaranes-bridge": 65534
+    },
+    "maintainedCaddyfileSha256BeforeAndAfter": "6c9f548a761bb8469ac18de5bfc34b8de79709f9fed880822f66b6a65fa7fc22",
+    "providerEnvironmentDigestUnchanged": true,
+    "providerConfigurationChanged": false
+  },
+  "validation": {
+    "makeGates": "passed",
+    "makeTest": "passed",
+    "syntheticBrowserScreenshots": 44,
+    "independentReview": "No blocking lifecycle/security findings; richer-report acknowledgment issue fixed and covered.",
+    "redEvidence": "/tmp/cedar-diagnostic-lifecycle-red.log",
+    "greenEvidence": [
+      "/tmp/cedar-diagnostic-lifecycle-green.log",
+      "/tmp/cedar-diagnostic-lifecycle-gates.log",
+      "/tmp/cedar-diagnostic-lifecycle-tests.log",
+      "/tmp/cedar-diagnostic-lifecycle-browser/receipt.json"
+    ]
+  },
+  "actualHttpsDiagnosticProbe": {
+    "kind": "Actual HTTPS transport with synthetic Meta SDK/error; zero provider calls",
+    "delayedAfterCancellationMs": 1500,
+    "acknowledgmentVisible": true,
+    "servedScript": "/assets/index-D7MwiuLU.js",
+    "servedScriptSha256": "f8ba4bfd49762958125044a908ad40e6e8f673e6b8dec7ff4602d737ed7eca70",
+    "matchesPackage": true,
+    "privateWriteHttpStatus": 200,
+    "privateOperatorReadbackMatched": true,
+    "syntheticStep": "SYNTHETIC_QA",
+    "syntheticErrorCode": "0",
+    "syntheticReceiptId": "4f8d1e6dac2127ec49827eac49dcd9479c443cd5a9ce5ca62ae59a8cd1404f24",
+    "realReportsAtVerification": 0,
+    "providerCalls": 0,
+    "pageErrors": 0,
+    "browserStorageEmpty": true,
+    "receipt": "/tmp/cedar-diagnostic-lifecycle-live/receipt.json"
+  },
+  "limitations": [
+    "Reports require Meta to emit a supported event while the page is listening and the unbound browser session remains valid.",
+    "An already-open page retains its previous code until refreshed; prior lost events cannot be recovered.",
+    "The actual cause of the missing customer report remains unverified.",
+    "Meta error2494064, real coexistence authorization, history import and incoming messages remain unresolved/unproved."
+  ],
+  "sourceFiles": [
+    {
+      "path": "app/src/prototypes/cedar/connections/meta.ts",
+      "sha256": "26fc4cfd2e6d3b1cae2090c832ac666540608702f21f86d9cb1619b3b06f16ce"
+    },
+    {
+      "path": "app/src/prototypes/cedar/connections/app.tsx",
+      "sha256": "b2798d1270cee6a43a0d4a3effc7aaca17924cd6b13fd6ce29011b6487d7fe92"
+    },
+    {
+      "path": "app/src/prototypes/cedar/connections/tests.mjs",
+      "sha256": "01398288b7085494559d03bd923f245adca46a49b13a24f36228a6e06ec80ffe"
+    },
+    {
+      "path": "app/src/prototypes/cedar/connections/browser-drive.py",
+      "sha256": "d518c421b87d174705e47c3974b6b8a95d0e4eb087b68f1b22d2dfee107ef10e"
+    }
+  ]
+}

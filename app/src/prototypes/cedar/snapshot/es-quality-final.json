@@ -1,0 +1,1404 @@
+{
+  "entries": [
+    {
+      "source": "src/prototypes/cedar/detail.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "of",
+      "spanish": "de"
+    },
+    {
+      "source": "src/prototypes/cedar/detail.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "given",
+      "spanish": "entregado"
+    },
+    {
+      "source": "src/prototypes/cedar/customer-profile.tsx",
+      "context": "review",
+      "kind": "template",
+      "english": "Show ${more} more",
+      "spanish": "Ver ${more} más"
+    },
+    {
+      "source": "src/prototypes/cedar/customer-profile.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "line",
+      "spanish": "línea"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/stock.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "line",
+      "spanish": "línea"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/stock.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "lines",
+      "spanish": "líneas"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/stock.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "product",
+      "spanish": "producto"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/stock.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "products",
+      "spanish": "productos"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/stock.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "variation",
+      "spanish": "variante"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/stock.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "variations",
+      "spanish": "variantes"
+    },
+    {
+      "source": "src/prototypes/cedar/product-card.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "order",
+      "spanish": "pedido"
+    },
+    {
+      "source": "src/prototypes/cedar/product-card.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "orders",
+      "spanish": "pedidos"
+    },
+    {
+      "source": "src/prototypes/cedar/stock-tiers.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "customer",
+      "spanish": "cliente"
+    },
+    {
+      "source": "src/prototypes/cedar/stock-tiers.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "customers",
+      "spanish": "clientes"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/sales.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "line",
+      "spanish": "línea"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/sales.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "order",
+      "spanish": "pedido"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/sales.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "customer",
+      "spanish": "cliente"
+    },
+    {
+      "source": "src/prototypes/cedar/sale.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "line",
+      "spanish": "línea"
+    },
+    {
+      "source": "src/prototypes/cedar/sale.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "lines",
+      "spanish": "líneas"
+    },
+    {
+      "source": "src/prototypes/cedar/sale.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Your system",
+      "spanish": "Tu sistema"
+    },
+    {
+      "source": "src/prototypes/cedar/detail.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "line",
+      "spanish": "línea"
+    },
+    {
+      "source": "src/prototypes/cedar/detail.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "record",
+      "spanish": "registro"
+    },
+    {
+      "source": "src/prototypes/cedar/detail.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "records",
+      "spanish": "registros"
+    },
+    {
+      "source": "src/prototypes/cedar/test-chat.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "line",
+      "spanish": "línea"
+    },
+    {
+      "source": "src/prototypes/cedar/test-chat.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "lines",
+      "spanish": "líneas"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/sales.tsx",
+      "context": "review",
+      "kind": "template",
+      "english": "${sale.archived ? 'Archived' : 'Viewed'}${fact.by ? ` by ${fact.by}` : ''} · ${fact.at}",
+      "spanish": "${sale.archived ? 'Archived' : 'Viewed'}${fact.by ? ` by ${fact.by}` : ''} · ${fact.at}"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/sales.tsx",
+      "context": "review",
+      "kind": "template",
+      "english": " by ${fact.by}",
+      "spanish": " por ${fact.by}"
+    },
+    {
+      "source": "src/prototypes/cedar/print-view.tsx",
+      "context": "review",
+      "kind": "template",
+      "english": " · ${printed} copies",
+      "spanish": " · ${printed} copias"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/stock.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Find a product",
+      "spanish": "Buscar producto"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/stock.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Find a product",
+      "spanish": "Buscar producto"
+    },
+    {
+      "source": "src/prototypes/cedar/company.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "30 days",
+      "spanish": "30 días"
+    },
+    {
+      "source": "src/prototypes/cedar/customer-profile.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "What changed",
+      "spanish": "Qué ha cambiado"
+    },
+    {
+      "source": "src/prototypes/cedar/detail.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Today’s file",
+      "spanish": "Archivo del día"
+    },
+    {
+      "source": "src/prototypes/cedar/grants.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Voice notes",
+      "spanish": "Notas de voz"
+    },
+    {
+      "source": "src/prototypes/cedar/knows-web.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "What you sell",
+      "spanish": "Qué vendes"
+    },
+    {
+      "source": "src/prototypes/cedar/knows.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "a razor-clam starter",
+      "spanish": "un entrante de navajas"
+    },
+    {
+      "source": "src/prototypes/cedar/knows.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "razor clams",
+      "spanish": "navajas"
+    },
+    {
+      "source": "src/prototypes/cedar/order-open.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Today’s file",
+      "spanish": "Archivo del día"
+    },
+    {
+      "source": "src/prototypes/cedar/print-queue.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Truck to assign",
+      "spanish": "Camión por asignar"
+    },
+    {
+      "source": "src/prototypes/cedar/route-meta.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Your agent",
+      "spanish": "Tu agente"
+    },
+    {
+      "source": "src/prototypes/cedar/route-meta.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "App settings",
+      "spanish": "Ajustes de la aplicación"
+    },
+    {
+      "source": "src/prototypes/cedar/route-meta.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Your business",
+      "spanish": "Tu empresa"
+    },
+    {
+      "source": "src/prototypes/cedar/route-meta.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Your data",
+      "spanish": "Tus datos"
+    },
+    {
+      "source": "src/prototypes/cedar/sale.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Today’s file",
+      "spanish": "Archivo del día"
+    },
+    {
+      "source": "src/prototypes/cedar/supply-film.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Take it off",
+      "spanish": "Desconectar"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/account.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "The person this account belongs to.",
+      "spanish": "La persona titular de esta cuenta."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/account.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "What you may do here",
+      "spanish": "Tus permisos"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/account.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Add a number",
+      "spanish": "Añadir número"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/agent.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Your agent",
+      "spanish": "Tu agente"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/agent.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Who takes it from here",
+      "spanish": "Quién se encarga"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/agent.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Who takes it from here",
+      "spanish": "Quién se encarga"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/app-settings.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "App settings",
+      "spanish": "Ajustes de la aplicación"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/business.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Your business",
+      "spanish": "Tu empresa"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/business.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Zones covered",
+      "spanish": "Zonas de reparto"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/business.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Rails in and out",
+      "spanish": "Canales de entrada y salida"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/business.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Settings Rocoto acts on alone",
+      "spanish": "Ajustes que Rocoto aplica por su cuenta"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/business.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Add the registry entry",
+      "spanish": "Añadir datos registrales"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/business.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "The name you trade under",
+      "spanish": "Nombre comercial"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/business.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Add it",
+      "spanish": "Añadir"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/business.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "What this house trades in",
+      "spanish": "Actividad de la empresa"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/business.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Fiscal identity",
+      "spanish": "Identificación fiscal"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/business.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Add the address",
+      "spanish": "Añadir dirección"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/business.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Where Rocoto’s own invoices are made out to.",
+      "spanish": "La dirección que aparece en tus facturas de Rocoto."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/business.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Getting paid",
+      "spanish": "Cobros"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/business.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Add the account",
+      "spanish": "Añadir cuenta bancaria"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/business.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Public contact",
+      "spanish": "Contacto público"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/business.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Add the number",
+      "spanish": "Añadir número"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/business.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Your trade",
+      "spanish": "Tu actividad"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/business.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Catalogue, trazabilidad, and the hour your morning opens.",
+      "spanish": "Catálogo, trazabilidad y hora de inicio de la jornada."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/business.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Delivery Note sign-off",
+      "spanish": "Pie del albarán"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/business.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "The line at the foot of every delivery note you print.",
+      "spanish": "El texto al pie de cada albarán que imprimes."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/business.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Write one",
+      "spanish": "Escribir texto"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/business.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "What you sell",
+      "spanish": "Qué vendes"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/business.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "What you sell",
+      "spanish": "Qué vendes"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/business.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Catalogue, trazabilidad, and the hour your morning opens.",
+      "spanish": "Catálogo, trazabilidad y hora de inicio de la jornada."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/business.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Drawn with",
+      "spanish": "Diseñado con"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/business.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Your morning opens at",
+      "spanish": "Tu jornada empieza a las"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/connections.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "A file you download",
+      "spanish": "Archivo descargable"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/connections.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Today’s file",
+      "spanish": "Archivo del día"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/connections.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Add a number",
+      "spanish": "Añadir número"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/connections.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "The number",
+      "spanish": "Número"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/connections.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Add it",
+      "spanish": "Añadir"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/connections.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "The suppliers’ address",
+      "spanish": "Correo de proveedores"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/connections.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Who answers this number",
+      "spanish": "Responsable de este número"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/connections.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Who answers",
+      "spanish": "Responsable"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/connections.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "hands over on this line reaches them first.",
+      "spanish": "asigna a este número llega primero a esta persona."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/connections.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Take this line off",
+      "spanish": "Quitar número"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/data.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Your data",
+      "spanish": "Tus datos"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/operations.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Your agent",
+      "spanish": "Tu agente"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "3 months",
+      "spanish": "3 meses"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Per order",
+      "spanish": "Por pedido"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Download it",
+      "spanish": "Descargar"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Saved as",
+      "spanish": "Guardado como"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Your plan",
+      "spanish": "Tu plan"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Without IVA.",
+      "spanish": "Sin IVA."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "for the three months, up front.",
+      "spanish": "por los tres meses, por adelantado."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Your trial month",
+      "spanish": "Tu mes de prueba"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Cargo delivered",
+      "spanish": "Mercancía entregada"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Orders used",
+      "spanish": "Pedidos utilizados"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Your bundle",
+      "spanish": "Tu paquete"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Beyond the bundle",
+      "spanish": "Fuera del paquete"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Prepaid this month",
+      "spanish": "Pagado por adelantado este mes"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "People on the account",
+      "spanish": "Personas en la cuenta"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "You prepay the bundle at the month’s start, at 10% under the per-order rate.",
+      "spanish": "Pagas el paquete al principio del mes, con un descuento del 10 % sobre el precio por pedido."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Orders above the bundle run at the per-order rate.",
+      "spanish": "Los pedidos que superan el paquete se cobran al precio por pedido."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Your card settles them at month’s end.",
+      "spanish": "Se cargan en tu tarjeta al final del mes."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Paying for it",
+      "spanish": "Pago"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "The card that pays",
+      "spanish": "Tarjeta de pago"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "What the three months come off, up front.",
+      "spanish": "La tarjeta en la que se cobran los tres meses por adelantado."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "The last four digits of the card that pays",
+      "spanish": "Últimos cuatro dígitos de la tarjeta"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Add a card",
+      "spanish": "Añadir tarjeta"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Made out to",
+      "spanish": "A nombre de"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Billing address",
+      "spanish": "Dirección de facturación"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Add the address",
+      "spanish": "Añadir dirección"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Manage subscription",
+      "spanish": "Gestionar suscripción"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Your card, your invoices and the term, on Stripe.",
+      "spanish": "Tu tarjeta, facturas y periodo de suscripción en Stripe."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Your invoices",
+      "spanish": "Tus facturas"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "The quarter you are in.",
+      "spanish": "El trimestre actual."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Download them",
+      "spanish": "Descargar facturas"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Manage subscription",
+      "spanish": "Gestionar suscripción"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Manage subscription",
+      "spanish": "Gestionar suscripción"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "when the account is live.",
+      "spanish": "cuando la cuenta esté activa."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Back to the plan",
+      "spanish": "Volver al plan"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/team.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Add a number",
+      "spanish": "Añadir número"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/team.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Add an address",
+      "spanish": "Añadir dirección"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/units.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Unit name",
+      "spanish": "Nombre de la unidad"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/units.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Product units",
+      "spanish": "Unidades de producto"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/units.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Find a product",
+      "spanish": "Buscar producto"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/units.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Find a product",
+      "spanish": "Buscar producto"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/units.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Try another product name.",
+      "spanish": "Prueba con otro nombre de producto."
+    },
+    {
+      "source": "src/prototypes/cedar/config.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Today’s file",
+      "spanish": "Archivo del día"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/area.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Your business",
+      "spanish": "Tu empresa"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/area.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Your agent",
+      "spanish": "Tu agente"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/area.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "App settings",
+      "spanish": "Ajustes de la aplicación"
+    },
+    {
+      "source": "src/prototypes/cedar/shell/area.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Your data",
+      "spanish": "Tus datos"
+    },
+    {
+      "source": "src/scenarios/reduction/Reduction.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Drawn with",
+      "spanish": "Diseñado con"
+    },
+    {
+      "source": "src/scenarios/screens/A13.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Today’s file",
+      "spanish": "Archivo del día"
+    },
+    {
+      "source": "src/prototypes/cedar/route-meta.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Account",
+      "spanish": "Cuenta"
+    },
+    {
+      "source": "src/prototypes/cedar/route-meta.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Your agent",
+      "spanish": "Tu agente"
+    },
+    {
+      "source": "src/prototypes/cedar/route-meta.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Your business",
+      "spanish": "Tu empresa"
+    },
+    {
+      "source": "src/prototypes/cedar/route-meta.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Your data",
+      "spanish": "Tus datos"
+    },
+    {
+      "source": "src/prototypes/cedar/route-meta.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "App settings",
+      "spanish": "Ajustes de la aplicación"
+    },
+    {
+      "source": "src/prototypes/cedar/route-meta.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Geography",
+      "spanish": "Zonas y rutas"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/account.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Account",
+      "spanish": "Cuenta"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/account.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "You",
+      "spanish": "Tú"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/account.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "The person this account belongs to.",
+      "spanish": "La persona titular de esta cuenta."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/account.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "What you may do here",
+      "spanish": "Tus permisos"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/account.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Add a number",
+      "spanish": "Añadir número"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Add the address",
+      "spanish": "Añadir dirección"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "3 months",
+      "spanish": "3 meses"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Per order",
+      "spanish": "Por pedido"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Download it",
+      "spanish": "Descargar"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Saved as",
+      "spanish": "Guardado como"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Your plan",
+      "spanish": "Tu plan"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Without IVA.",
+      "spanish": "Sin IVA."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "for the three months, up front.",
+      "spanish": "por los tres meses, por adelantado."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Your trial month",
+      "spanish": "Tu mes de prueba"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Cargo delivered",
+      "spanish": "Mercancía entregada"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Orders used",
+      "spanish": "Pedidos utilizados"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Your bundle",
+      "spanish": "Tu paquete"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Beyond the bundle",
+      "spanish": "Fuera del paquete"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Prepaid this month",
+      "spanish": "Pagado por adelantado este mes"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "People on the account",
+      "spanish": "Personas en la cuenta"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Your card settles them at month’s end.",
+      "spanish": "Se cargan en tu tarjeta al final del mes."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Paying for it",
+      "spanish": "Pago"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "The card that pays",
+      "spanish": "Tarjeta de pago"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "What the three months come off, up front.",
+      "spanish": "La tarjeta en la que se cobran los tres meses por adelantado."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "The last four digits of the card that pays",
+      "spanish": "Últimos cuatro dígitos de la tarjeta"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Add a card",
+      "spanish": "Añadir tarjeta"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Made out to",
+      "spanish": "A nombre de"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Billing address",
+      "spanish": "Dirección de facturación"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Manage subscription",
+      "spanish": "Gestionar suscripción"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Manage subscription",
+      "spanish": "Gestionar suscripción"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Your invoices",
+      "spanish": "Tus facturas"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "The quarter you are in.",
+      "spanish": "El trimestre actual."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Download them",
+      "spanish": "Descargar facturas"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "when the account is live.",
+      "spanish": "cuando la cuenta esté activa."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/plan.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Back to the plan",
+      "spanish": "Volver al plan"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/connections.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Copy",
+      "spanish": "Copiar"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/connections.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Add it",
+      "spanish": "Añadir"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/connections.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "A file you download",
+      "spanish": "Archivo descargable"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/connections.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Today’s file",
+      "spanish": "Archivo del día"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/connections.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Add a number",
+      "spanish": "Añadir número"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/connections.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "The suppliers’ address",
+      "spanish": "Correo de proveedores"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/connections.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "The number",
+      "spanish": "Número"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/connections.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Who answers this number",
+      "spanish": "Responsable de este número"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/connections.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Who answers",
+      "spanish": "Responsable"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/connections.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "hands over on this line reaches them first.",
+      "spanish": "asigna a este número llega primero a esta persona."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/admin/connections.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Take this line off",
+      "spanish": "Quitar número"
+    },
+    {
+      "source": "src/prototypes/cedar/knows.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "a razor-clam starter",
+      "spanish": "un entrante de navajas"
+    },
+    {
+      "source": "src/prototypes/cedar/knows.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "razor clams",
+      "spanish": "navajas"
+    },
+    {
+      "source": "src/prototypes/cedar/print-queue.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "You",
+      "spanish": "Tú"
+    },
+    {
+      "source": "src/prototypes/cedar/print-queue.ts",
+      "context": "review",
+      "kind": "literal",
+      "english": "Truck to assign",
+      "spanish": "Camión por asignar"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/sales.tsx",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "Archived",
+      "spanish": "Archivado"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/sales.tsx",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "Viewed",
+      "spanish": "Visto"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/sales.tsx",
+      "context": "TemplateLiteral > TemplateElement",
+      "kind": "template",
+      "english": " by ${fact.by}",
+      "spanish": " por ${fact.by}"
+    },
+    {
+      "source": "src/scenarios/data/cast.ts",
+      "context": "ObjectProperty > StringLiteral:deliveryDay",
+      "kind": "literal",
+      "english": "Friday 22.08",
+      "spanish": "viernes 22.08"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/sales.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "literal",
+      "english": "Archived",
+      "spanish": "Archivado"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/sales.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "literal",
+      "english": "Viewed",
+      "spanish": "Visto"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/sales.tsx",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": " by ${fact.by}",
+      "spanish": " por ${fact.by}"
+    }
+  ]
+}

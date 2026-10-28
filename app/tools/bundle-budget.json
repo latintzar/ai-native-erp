@@ -1,0 +1,11 @@
+{
+  "what": "Ceiling on the complete English artifact: app.html plus every emitted JS/CSS asset of BOTH entries — Cedar and bodega pay later — including lazy chunks. This is an inventory budget; the initial navigation loads only its dependency graph. Fonts, images and templates have separate publication inventories.",
+  "dist": "dist-export-review",
+  "ceilingBytes": 8126464,
+  "measuredBytes": 7782787,
+  "measuredOn": "2026-09-19",
+  "measuredAt": "app.html plus 117 JS/CSS assets from npm run build:app-en with the bodega pay later entry integrated",
+  "how": "Re-measured because the build now emits a SECOND entry. WIRING-SPEC.md §12 says the pull request adding this surface re-measures and records the number, and this is that number: 7782787 bytes over 118 files, 754950 bytes above the 7027837-byte Cedar-only measurement of 15 September. The ceiling moves from 7701504 to 8126464 bytes, 343677 bytes of headroom (4.4%) — enough to absorb ordinary drift and tight enough to catch a chunk nobody meant to add.",
+  "when-it-goes-red": "Re-measure, and either take the weight back out or raise the ceiling in the same pull request that adds it — with the new number, the new date and the reason in this file.",
+  "reason": "The bodega pay later candidate ships its own entry (app/bodega-pay-later.html), its own router, four areas, the onboarding walk, the chat simulation and the copied Cedar surfaces it adapts — the prep list, the delivery note, the three print sheets, the money cards and the export door. Its own copied stores (money-store, money-api, chase, print-queue, packing-output, whatsapp-connection) are separate modules by design: one origin serves /cedar/ and /bodega-pay-later/, and a shared browser key would mean one prototype editing the other ledger (WIRING-SPEC.md §11). The pdf-lib and fontkit chunk behind the record document stays lazy and shared with Cedar dossier, so the growth is this candidate own code and its fixtures rather than a second copy of the PDF engine."
+}

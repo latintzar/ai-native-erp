@@ -1,0 +1,143 @@
+/* GENERATED from ui/theme/Tokens.kt by tools/export-tokens.py — DO NOT EDIT BY HAND.
+   Single source of truth: every colour/dp mirrors the real app. */
+:root{
+  /* color */
+  --rocoto-bg: #FAF7F3;
+  --rocoto-surface: #FAF7F3;
+  --rocoto-surface2: #F2ECE5;
+  --rocoto-elevated: #FFFFFF;
+  --rocoto-border: rgba(26,20,19,0.141);
+  --rocoto-border-strong: rgba(26,20,19,0.22);
+  --rocoto-fg: #1A1413;
+  --rocoto-muted: #6F665C;
+  --rocoto-faint: #998F83;
+  --rocoto-saffron: #C01B2C;
+  --rocoto-saffron-text: #831521;
+  --rocoto-saffron-dim: rgba(192,27,44,0.161);
+  --rocoto-chat-out-bubble: #FBE2E5;
+  --rocoto-chat-out-border: rgba(192,27,44,0.2);
+  --rocoto-chat-in-bubble: #F5F0E8;
+  --rocoto-chat-in-border: rgba(42,32,24,0.122);
+  --rocoto-green: #4E9E5E;
+  --rocoto-green-text: #2E6038;
+  --rocoto-green-dim: rgba(78,158,94,0.188);
+  --rocoto-red: #F4A300;
+  --rocoto-red-text: #8A5300;
+  --rocoto-red-dim: rgba(244,163,0,0.188);
+  --rocoto-on-saffron: #FAF7F3;
+  --rocoto-on-green: #0C2A1E;
+  --rocoto-on-red: #3D2A00;
+  --rocoto-danger: #C01B2C;
+  --rocoto-danger-text: #831521;
+  --rocoto-danger-dim: rgba(192,27,44,0.161);
+  --rocoto-on-danger: #FAF7F3;
+  --rocoto-highlight: rgba(227,184,78,0.141);
+  --rocoto-scrim: rgba(33,28,21,0.4);
+  --rocoto-scrim-strong: rgba(33,28,21,0.6);
+  --rocoto-on-scrim: #FBF8F2;
+  --rocoto-call-bg-top: #0F3A2B;
+  --rocoto-call-bg-bottom: #071711;
+  --rocoto-call-fg: #F4EFE7;
+  --rocoto-call-muted: rgba(244,239,231,0.659);
+  --rocoto-call-bar: rgba(251,248,242,0.102);
+  --rocoto-on-call-bg: #FBF8F2;
+  --rocoto-hero-top: #221A13;
+  --rocoto-hero-bottom: #130E0A;
+  --rocoto-hero-glass: rgba(251,248,242,0.078);
+  --rocoto-hero-glass-strong: rgba(251,248,242,0.129);
+  --rocoto-hero-glass-border: rgba(251,248,242,0.149);
+  --rocoto-on-hero: #F7F2EA;
+  --rocoto-on-hero-muted: rgba(247,242,234,0.702);
+  --rocoto-on-hero-faint: rgba(247,242,234,0.502);
+  --rocoto-hero-accent: #E2707D;
+  --rocoto-hero-accent-dim: rgba(226,112,125,0.2);
+  --rocoto-accent-moss: #2A8358;
+  --rocoto-accent-moss-deep: #143D24;
+  --rocoto-accent-moss-dim: rgba(42,131,88,0.086);
+  --rocoto-on-accent-moss: #F1FAF4;
+  --rocoto-accent-rust: #B04A2B;
+  --rocoto-accent-rust-deep: #6E2C16;
+  --rocoto-accent-rust-dim: rgba(176,74,43,0.094);
+  --rocoto-on-accent-rust: #FBF1EA;
+  --rocoto-accent-berry: #A8466A;
+  --rocoto-accent-berry-deep: #5F2840;
+  --rocoto-accent-berry-dim: rgba(168,70,106,0.094);
+  --rocoto-on-accent-berry: #FBF0F4;
+  --rocoto-accent-cana: #C0812F;
+  --rocoto-accent-cana-deep: #8A5816;
+  --rocoto-accent-cana-dim: rgba(192,129,47,0.094);
+  --rocoto-on-accent-cana: #FBF3E6;
+  /* space */
+  --rocoto-space-xxs: 2px;
+  --rocoto-space-xxs2: 3px;
+  --rocoto-space-xs: 4px;
+  --rocoto-space-sm: 8px;
+  --rocoto-space-md: 12px;
+  --rocoto-space-lg: 16px;
+  --rocoto-space-xl: 20px;
+  --rocoto-space-xxl: 24px;
+  --rocoto-space-xxxl: 32px;
+  --rocoto-space-huge: 48px;
+  --rocoto-space-giant: 64px;
+  /* radius */
+  --rocoto-radius-sm: 6px;
+  --rocoto-radius-base: 8px;
+  --rocoto-radius-card: 12px;
+  --rocoto-radius-sheet: 20px;
+  --rocoto-radius-pill: 999px;
+  /* elevation */
+  --rocoto-elevation-flat: 0px;
+  --rocoto-elevation-hairline: 1px;
+  --rocoto-elevation-card: 2px;
+  --rocoto-elevation-sticky: 3px;
+  --rocoto-elevation-sheet: 4px;
+  --rocoto-elevation-popover: 5px;
+  --rocoto-elevation-toast: 6px;
+  /* button */
+  --rocoto-button-sm: 32px;
+  --rocoto-button-md: 40px;
+  --rocoto-button-lg: 48px;
+  /* stroke */
+  --rocoto-stroke-hairline: 1px;
+  --rocoto-stroke-thick: 1.5px;
+  /* icon */
+  --rocoto-icon-sm: 16px;
+  --rocoto-icon-md: 20px;
+  --rocoto-icon-lg: 24px;
+  /* chat */
+  --rocoto-chat-bubble-max-width: 250px;
+  --rocoto-chat-image-max-width: 290px;
+  --rocoto-chat-image-max-height: 360px;
+  --rocoto-chat-vn-width: 250px;
+  --rocoto-chat-vn-wave-width: 132px;
+  --rocoto-chat-wave-height: 24px;
+  --rocoto-chat-avatar: 42px;
+  --rocoto-chat-play: 34px;
+  --rocoto-chat-bubble-radius: 7.5px;
+  /* motion */
+  --rocoto-motion-standard: cubic-bezier(0.22, 1, 0.36, 1);
+  --rocoto-motion-snappy: cubic-bezier(0.2, 0, 0, 1);
+  --rocoto-motion-expressive: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --rocoto-motion-dur-micro: 130ms;
+  --rocoto-motion-dur-standard: 250ms;
+  --rocoto-motion-dur-overlay: 380ms;
+}
+
+/* WhatsApp-green customer view — semantic chat overlay (colours only; geometry from the app tokens) */
+:root{
+  --chat-out:var(--rocoto-chat-out-bubble); --chat-out-bd:var(--rocoto-chat-out-border);
+  --chat-in:var(--rocoto-chat-in-bubble); --chat-in-bd:var(--rocoto-chat-in-border);
+  --chat-bg:var(--rocoto-bg);
+  --c-hbg:var(--rocoto-bg); --c-hfg:var(--rocoto-fg); --c-hic:var(--rocoto-muted);
+  --c-av:var(--rocoto-saffron-dim); --c-avfg:var(--rocoto-saffron-text);
+  --c-accent:var(--rocoto-saffron); --c-accentfg:var(--rocoto-on-saffron);
+  --c-recdot:var(--rocoto-red); --c-link:var(--rocoto-saffron); --c-tick:var(--rocoto-faint);
+  --c-wave:var(--rocoto-muted); --dot:var(--rocoto-saffron-dim);
+}
+[data-theme="wa"]{
+  --chat-out:#D9FDD3; --chat-out-bd:rgba(0,110,80,.16); --chat-in:#FFFFFF; --chat-in-bd:rgba(11,27,22,.07);
+  --chat-bg:#EFE7DE; --dot:rgba(6,40,28,.05);
+  --c-hbg:#008069; --c-hfg:#FFFFFF; --c-hic:rgba(255,255,255,.94); --c-av:#DBF5E1; --c-avfg:#075E54;
+  --c-accent:#00A884; --c-accentfg:#FFFFFF; --c-confbg:#DBF5E1; --c-conffg:#075E54;
+  --c-recdot:#EA4335; --c-link:#027EB5; --c-tick:#53BDEB; --c-wave:#54806E;
+}

@@ -1,0 +1,81 @@
+{
+  "schemaVersion": "1.0",
+  "authority": "Exact static labels, state copy, accessible names and form help are canonical only in the public anatomy/specification documents. Business values and imported/source text are data, not copy to translate or invent.",
+  "sourceDocuments": [
+    "notes/THE-PRODUCT-SHEET-SPEC.md",
+    "notes/THE-SYSTEM-SPEC.md",
+    "notes/THE-INTERACTION-SPEC.md",
+    "notes/THE-JOURNEYS-SPEC.md"
+  ],
+  "requiredStateFamilies": [
+    {
+      "id": "empty",
+      "meaning": "No qualifying record exists; names the next truthful action."
+    },
+    {
+      "id": "loading",
+      "meaning": "A read is underway; never presents stale values as current."
+    },
+    {
+      "id": "saving",
+      "meaning": "A command is awaiting acceptance."
+    },
+    {
+      "id": "accepted",
+      "meaning": "The command was accepted with revision or receipt."
+    },
+    {
+      "id": "queued",
+      "meaning": "A provider or job has not yet accepted/completed work."
+    },
+    {
+      "id": "offline",
+      "meaning": "Draft/request intent exists locally; acceptance is not claimed."
+    },
+    {
+      "id": "conflict",
+      "meaning": "Revision mismatch asks the user to review current facts."
+    },
+    {
+      "id": "denied",
+      "meaning": "Authority/policy blocks the action, with no hidden workaround."
+    },
+    {
+      "id": "invalid",
+      "meaning": "Field-level validation names the failed field and repair."
+    },
+    {
+      "id": "provider-unavailable",
+      "meaning": "The external connection is unavailable/read-only/failed, without fake completion."
+    },
+    {
+      "id": "failed",
+      "meaning": "A known failure names retry/recovery scope."
+    },
+    {
+      "id": "incomplete",
+      "meaning": "Missing evidence/required data names what is still needed."
+    },
+    {
+      "id": "archived-or-unavailable",
+      "meaning": "Retention/redaction/archive state preserves safe identity and recovery context."
+    },
+    {
+      "id": "success-with-proof",
+      "meaning": "Completion wording requires a command receipt, provider acceptance, or issued revision."
+    }
+  ],
+  "qaTasks": [
+    "OBJ-01.02",
+    "OBJ-01.03",
+    "QLT-02.01"
+  ],
+  "rules": [
+    "Every interactive control receives a programmatic accessible name that matches its visible canonical label unless the specification explicitly supplies an accessible alternative.",
+    "Menus, dialogs and forms retain their subject in title, confirmation and failure copy.",
+    "Exact state copy distinguishes saved/accepted, queued/provider-accepted and completed/provider-confirmed.",
+    "Do not translate, normalize or fabricate business values, source wording, customer data, provider outcome or measured evidence.",
+    "Journey acceptance copy must state whether the customer sees prices in chat, on the albaran, in both, or in neither before any customer-facing request; it must preserve accepted business values and never imply external receipt without evidence.",
+    "Customer-confirmation and product-option controls retain their independent labels, remembered-choice, no-auto-SKU, no-send preview and durable-write failure copy; an effective-policy explanation never substitutes for a message, price acceptance or provider receipt."
+  ]
+}

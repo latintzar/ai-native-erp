@@ -1,0 +1,119 @@
+{
+  "observedAt": "2026-09-09",
+  "consumer": "cedar-preview",
+  "logicalEnvironment": "development/demo",
+  "method": "Read-only Graph API v26.0 using the privately supplied Rocoto app secret",
+  "app": {
+    "httpStatus": 200,
+    "id": "1427034652248456",
+    "name": "Rocoto",
+    "app_domains": [
+      "soyrocoto.com"
+    ],
+    "website_url": "https://soyrocoto.com/",
+    "privacy_policy_url": "https://soyrocoto.com/privacy.html",
+    "terms_of_service_url": "https://soyrocoto.com/terms.html"
+  },
+  "configuration": {
+    "httpStatus": 200,
+    "appId": "1427034652248456",
+    "id": "4618748161700706",
+    "name": "Rocoto",
+    "verifiedBelongsToApp": true,
+    "signupVersionObserved": false,
+    "productsObserved": false
+  },
+  "permissions": {
+    "httpStatus": 200,
+    "data": [
+      {
+        "permission": "email",
+        "status": "live"
+      },
+      {
+        "permission": "whatsapp_business_management",
+        "status": "live"
+      },
+      {
+        "permission": "whatsapp_business_messaging",
+        "status": "live"
+      },
+      {
+        "permission": "public_profile",
+        "status": "live"
+      }
+    ],
+    "rowFields": [
+      "permission",
+      "status"
+    ],
+    "hasMore": false
+  },
+  "existingSubscriptions": {
+    "httpStatus": 200,
+    "data": [
+      {
+        "object": "whatsapp_business_account",
+        "callback": "https://api.soyrocoto.com/meta/whatsapp/webhook",
+        "active": true,
+        "fields": [
+          {
+            "name": "messages",
+            "version": "v24.0"
+          },
+          {
+            "name": "message_template_status_update",
+            "version": "v24.0"
+          },
+          {
+            "name": "calls",
+            "version": "v24.0"
+          },
+          {
+            "name": "message_template_components_update",
+            "version": "v24.0"
+          },
+          {
+            "name": "message_template_quality_update",
+            "version": "v24.0"
+          },
+          {
+            "name": "history",
+            "version": "v24.0"
+          },
+          {
+            "name": "smb_app_state_sync",
+            "version": "v24.0"
+          },
+          {
+            "name": "smb_message_echoes",
+            "version": "v24.0"
+          },
+          {
+            "name": "account_update",
+            "version": "v24.0"
+          },
+          {
+            "name": "phone_number_quality_update",
+            "version": "v24.0"
+          }
+        ]
+      }
+    ],
+    "hasMore": false
+  },
+  "interpretation": {
+    "permissionStatus": "Meta reports WhatsApp messaging and business management as live in the Login Review permissions edge.",
+    "limits": "This does not independently establish modern Advanced Access labels, overall app mode, selected signup version, number eligibility or completed real import.",
+    "routingContract": "Subscribe the sole-number WABA with override_callback_uri and verify_token in one request; verify account and effective phone routes before contacts/history; preserve the application default."
+  },
+  "realCustomerAuthorizationPerformed": false,
+  "realHistoryImportPerformed": false,
+  "providerMutationsPerformed": false,
+  "sources": [
+    "https://developers.facebook.com/docs/graph-api/reference/application/permissions/",
+    "https://developers.facebook.com/documentation/business-messaging/whatsapp/reference/whatsapp-business-account/subscribed-apps-api",
+    "https://developers.facebook.com/documentation/business-messaging/whatsapp/webhooks/override",
+    "https://developers.facebook.com/documentation/business-messaging/whatsapp/embedded-signup/onboarding-business-app-users"
+  ]
+}

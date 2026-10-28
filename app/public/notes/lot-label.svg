@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- A PHOTO STAND-IN: the lot label on a box, photographed and sent into the thread (§47.3).
+     Every figure on it is the fish cast's own batch — L-2208, merluza, Rubio, 21.08, 3200 kg —
+     and the turn's `reading` states exactly these words, so the record and the picture agree. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" width="600" height="800" role="img"
+     aria-label="A lot label photographed on the box">
+  <rect width="600" height="800" fill="#D9DDDC"/>
+  <rect x="60" y="90" width="480" height="620" rx="8" fill="#FBFAF7" stroke="#B9BEBD" stroke-width="2"/>
+  <rect x="60" y="90" width="480" height="96" fill="#26333F"/>
+  <text x="96" y="154" fill="#FBFAF7" font-family="Helvetica, Arial, sans-serif" font-size="46" font-weight="700" letter-spacing="2">LOT L-2208</text>
+  <g fill="#26333F" font-family="Helvetica, Arial, sans-serif">
+    <text x="96" y="270" font-size="52" font-weight="700">MERLUZA</text>
+    <text x="96" y="332" font-size="34" fill="#5A6670">RUBIO</text>
+    <line x1="96" y1="372" x2="504" y2="372" stroke="#CFD4D3" stroke-width="2"/>
+    <text x="96" y="436" font-size="38">21.08</text>
+    <text x="96" y="498" font-size="38">3.200 kg</text>
+    <line x1="96" y1="538" x2="504" y2="538" stroke="#CFD4D3" stroke-width="2"/>
+    <text x="96" y="602" font-size="34">ORIGIN FAO 27</text>
+  </g>
+  <g fill="#26333F">
+    <rect x="96" y="640" width="8" height="40"/><rect x="112" y="640" width="4" height="40"/>
+    <rect x="124" y="640" width="10" height="40"/><rect x="142" y="640" width="4" height="40"/>
+    <rect x="154" y="640" width="6" height="40"/><rect x="168" y="640" width="12" height="40"/>
+    <rect x="188" y="640" width="4" height="40"/><rect x="200" y="640" width="8" height="40"/>
+    <rect x="216" y="640" width="4" height="40"/><rect x="228" y="640" width="10" height="40"/>
+    <rect x="246" y="640" width="6" height="40"/><rect x="260" y="640" width="4" height="40"/>
+    <rect x="272" y="640" width="12" height="40"/><rect x="292" y="640" width="4" height="40"/>
+    <rect x="304" y="640" width="8" height="40"/><rect x="320" y="640" width="6" height="40"/>
+  </g>
+</svg>

@@ -1,0 +1,382 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:rocoto:situations:intelligence:assistant-action:v1",
+  "title": "Rocoto Assistant Supply Dispatch Action v1",
+  "description": "Server boundary for an operator-approved assistant supply proposal and its durable delivery receipt. tenant_id is resolved from authenticated server scope; browser kit sector is never accepted. It carries only customer-facing, operator-reviewed outgoing copy and safe evidence identifiers, never raw email, files, attachment bytes, provider source bodies, audio, prompts, or model traces. JSON Schema validates shape only. Server validation must bind every order/customer/recipient and evidence snapshot to tenant_id; compare request proposal/revision/digest and every per-recipient message digest with the approved proposal; enforce the current revision/authorization/idempotency key atomically with outbox creation; and require exactly one non-overlapping disposition for every requested recipient. A timeout, malformed receipt, or provider silence is unknown: it is not accepted, sent, or retryable until authenticated reconciliation produces a new receipt.",
+  "oneOf": [
+    {
+      "$ref": "#/$defs/request"
+    },
+    {
+      "$ref": "#/$defs/receipt"
+    }
+  ],
+  "$defs": {
+    "id": {
+      "type": "string",
+      "pattern": "^[A-Za-z][A-Za-z0-9_-]{2,127}$"
+    },
+    "tenant": {
+      "type": "string",
+      "pattern": "^ten_[A-Za-z0-9_-]{3,120}$"
+    },
+    "sha": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "actor": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "actor_id",
+        "role_snapshot_id"
+      ],
+      "properties": {
+        "actor_id": {
+          "$ref": "#/$defs/id"
+        },
+        "role_snapshot_id": {
+          "$ref": "#/$defs/id"
+        }
+      }
+    },
+    "revision": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "object_type",
+        "object_id",
+        "revision"
+      ],
+      "properties": {
+        "object_type": {
+          "enum": [
+            "supply_assessment",
+            "stock_ledger",
+            "order",
+            "customer_thread"
+          ]
+        },
+        "object_id": {
+          "$ref": "#/$defs/id"
+        },
+        "revision": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    },
+    "recipient": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "recipient_id",
+        "order_id",
+        "customer_id",
+        "message_text",
+        "message_digest"
+      ],
+      "properties": {
+        "recipient_id": {
+          "$ref": "#/$defs/id",
+          "description": "Stable order-recipient id, unique in this proposal."
+        },
+        "order_id": {
+          "$ref": "#/$defs/id"
+        },
+        "customer_id": {
+          "$ref": "#/$defs/id"
+        },
+        "message_text": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4000
+        },
+        "message_digest": {
+          "$ref": "#/$defs/sha"
+        }
+      },
+      "description": "One explicitly approved order-recipient. The server recomputes tenant ownership, exact order scope, selected membership, and message_digest; it does not trust browser ids or text alone."
+    },
+    "proposal": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "proposal_id",
+        "proposal_revision",
+        "text_digest",
+        "evidence_snapshot_id",
+        "issue"
+      ],
+      "properties": {
+        "proposal_id": {
+          "$ref": "#/$defs/id"
+        },
+        "proposal_revision": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "text_digest": {
+          "$ref": "#/$defs/sha"
+        },
+        "evidence_snapshot_id": {
+          "$ref": "#/$defs/id"
+        },
+        "issue": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "product_id",
+            "shortage",
+            "unit",
+            "availability_basis"
+          ],
+          "properties": {
+            "product_id": {
+              "$ref": "#/$defs/id"
+            },
+            "shortage": {
+              "type": "number",
+              "minimum": 0
+            },
+            "unit": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 80
+            },
+            "availability_basis": {
+              "enum": [
+                "recorded_ledger",
+                "operator_reported_current"
+              ],
+              "description": "recorded_ledger is a revisioned stock/book calculation; operator_reported_current is an operator-confirmed current quantity. Delayed inbound must not be submitted as allocatable availability."
+            }
+          }
+        }
+      },
+      "description": "A safe proposal reference. An operator-reported current quantity is evidence for an allocation proposal only; it never mutates physical stock."
+    },
+    "request": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "api_version",
+        "envelope_type",
+        "request_id",
+        "tenant_id",
+        "actor",
+        "proposal",
+        "idempotency_key",
+        "expected_revisions",
+        "recipients",
+        "approved_at"
+      ],
+      "properties": {
+        "api_version": {
+          "const": "2026-08-31/v1"
+        },
+        "envelope_type": {
+          "const": "assistant.supply_dispatch.request"
+        },
+        "request_id": {
+          "$ref": "#/$defs/id"
+        },
+        "tenant_id": {
+          "$ref": "#/$defs/tenant"
+        },
+        "actor": {
+          "$ref": "#/$defs/actor"
+        },
+        "proposal": {
+          "$ref": "#/$defs/proposal"
+        },
+        "idempotency_key": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_-]{16,200}$"
+        },
+        "expected_revisions": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 1000,
+          "items": {
+            "$ref": "#/$defs/revision"
+          }
+        },
+        "recipients": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 1000,
+          "items": {
+            "$ref": "#/$defs/recipient"
+          }
+        },
+        "approved_at": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "disposition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "recipient_id",
+        "order_id",
+        "status",
+        "recorded_at"
+      ],
+      "properties": {
+        "recipient_id": {
+          "$ref": "#/$defs/id"
+        },
+        "order_id": {
+          "$ref": "#/$defs/id"
+        },
+        "status": {
+          "enum": [
+            "accepted",
+            "rejected",
+            "retryable",
+            "unknown"
+          ]
+        },
+        "provider_message_id": {
+          "$ref": "#/$defs/id"
+        },
+        "reason_code": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 120
+        },
+        "recorded_at": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "description": "One authenticated provider outcome for one requested order-recipient. `unknown` is terminal for automatic retry until a reconciliation workflow resolves it.",
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "const": "accepted"
+              }
+            },
+            "required": [
+              "status"
+            ]
+          },
+          "then": {
+            "required": [
+              "provider_message_id"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "const": "retryable"
+              }
+            },
+            "required": [
+              "status"
+            ]
+          },
+          "then": {
+            "required": [
+              "reason_code"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "const": "unknown"
+              }
+            },
+            "required": [
+              "status"
+            ]
+          },
+          "then": {
+            "required": [
+              "reason_code"
+            ],
+            "not": {
+              "required": [
+                "provider_message_id"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "receipt": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "api_version",
+        "envelope_type",
+        "receipt_id",
+        "request_id",
+        "tenant_id",
+        "proposal_id",
+        "proposal_revision",
+        "text_digest",
+        "idempotency_key",
+        "dispositions",
+        "received_at"
+      ],
+      "properties": {
+        "api_version": {
+          "const": "2026-08-31/v1"
+        },
+        "envelope_type": {
+          "const": "assistant.supply_dispatch.receipt"
+        },
+        "receipt_id": {
+          "$ref": "#/$defs/id"
+        },
+        "request_id": {
+          "$ref": "#/$defs/id"
+        },
+        "tenant_id": {
+          "$ref": "#/$defs/tenant"
+        },
+        "proposal_id": {
+          "$ref": "#/$defs/id"
+        },
+        "proposal_revision": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "text_digest": {
+          "$ref": "#/$defs/sha"
+        },
+        "idempotency_key": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_-]{16,200}$"
+        },
+        "provider_dispatch_id": {
+          "$ref": "#/$defs/id",
+          "description": "Provider correlation identifier when one exists; absence is permitted for an all-unknown receipt."
+        },
+        "dispositions": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 1000,
+          "items": {
+            "$ref": "#/$defs/disposition"
+          }
+        },
+        "received_at": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "description": "Authenticated durable receipt. Server validation, rather than this schema, checks same tenant/request/proposal/revision/digest/idempotency key and an exact, unique, complete recipient disposition partition."
+    }
+  }
+}

@@ -1,0 +1,1049 @@
+{
+  "locale": "es",
+  "schemaVersion": 1,
+  "entries": [
+    {
+      "source": "src/prototypes/cedar/areas/stock.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Delivery Note",
+      "spanish": "Albarán"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/stock.tsx",
+      "context": "JSXAttribute > StringLiteral:aria-label",
+      "kind": "literal",
+      "english": "The photographs taken at the bay",
+      "spanish": "Las fotos tomadas en el muelle"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/stock.tsx",
+      "context": "JSXExpressionContainer > TemplateLiteral",
+      "kind": "template",
+      "english": "Open ${file.name}",
+      "spanish": "Abrir ${file.name}"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/stock.tsx",
+      "context": "AssignmentExpression > StringLiteral",
+      "kind": "literal",
+      "english": "top left",
+      "spanish": "arriba a la izquierda"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/stock.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Bay photo",
+      "spanish": "Foto del muelle"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/stock.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "By hand",
+      "spanish": "A mano"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/stock.tsx",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "in by email",
+      "spanish": "por correo electrónico"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/stock.tsx",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "photographed at the bay",
+      "spanish": "fotografiado en el muelle"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/stock.tsx",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "on the ${row.lot} arrival",
+      "spanish": "en la entrada ${row.lot}"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/stock.tsx",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "lote ${row.lot}",
+      "spanish": "lote ${row.lot}"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/stock.tsx",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "waiting for a code",
+      "spanish": "a la espera de un código"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/stock.tsx",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "kept at par",
+      "spanish": "mantenido al mismo nivel"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/stock.tsx",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "Kept at par",
+      "spanish": "Mantenido al nivel"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/stock.tsx",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "by rule · ${row.ruleAt}",
+      "spanish": "por regla · ${row.ruleAt}"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/stock.tsx",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "at ${row.ruleAt}",
+      "spanish": "a ${row.ruleAt}"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/stock.tsx",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "Rocoto announced it",
+      "spanish": "Rocoto lo anunció"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/stock.tsx",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "declared by hand",
+      "spanish": "declarado a mano"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/stock.tsx",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "counted at",
+      "spanish": "contado a las"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/stock.tsx",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "Counted at",
+      "spanish": "Contado a las"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/stock.tsx",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "cause unknown, declared by hand",
+      "spanish": "causa desconocida, declarado a mano"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/stock.tsx",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "cause unknown",
+      "spanish": "causa desconocida"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/stock.tsx",
+      "context": "ArrowFunctionExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "${formatLevel(d.qty)} ${row.unit} off lote ${d.lot}",
+      "spanish": "${formatLevel(d.qty)} ${row.unit} del lote ${d.lot}"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/stock.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Kept at",
+      "spanish": "Mantenido en"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/stock.tsx",
+      "context": "JSXExpressionContainer > TemplateLiteral",
+      "kind": "template",
+      "english": "The level ${product.name} is kept at",
+      "spanish": "El nivel de ${product.name} se mantiene en"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/stock.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Replenishes at",
+      "spanish": "Repone a las"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/stock.tsx",
+      "context": "JSXAttribute > StringLiteral:aria-label",
+      "kind": "literal",
+      "english": "The hour it replenishes",
+      "spanish": "La hora de reposición"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/stock.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Set the rule",
+      "spanish": "Definir la regla"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/stock.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "The lotes on the floor",
+      "spanish": "Los lotes en existencias"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/stock.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "The lotes appear here as the landings arrive.",
+      "spanish": "Los lotes aparecen aquí a medida que llegan las entradas."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/stock.tsx",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "Hide its record",
+      "spanish": "Ocultar su registro"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/stock.tsx",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "Open its record",
+      "spanish": "Abrir su registro"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/stock.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "This landing carries the goods and leaves the code to us.",
+      "spanish": "Esta entrada trae la mercancía y nos deja el código."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/stock.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Give it",
+      "spanish": "Asignarlo"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/stock.tsx",
+      "context": "JSXFragment > JSXText",
+      "kind": "jsx-text",
+      "english": "facts arrived with the goods and were captured once, at the bay.",
+      "spanish": "los datos llegaron con la mercancía y se capturaron una vez, en el muelle."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/stock.tsx",
+      "context": "JSXFragment > JSXText",
+      "kind": "jsx-text",
+      "english": "Rocoto reads a lote; the\n                  goods carry it.",
+      "spanish": "Rocoto lee un lote; la mercancía lo lleva."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/stock.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "What today’s order drew from them",
+      "spanish": "Lo que el pedido de hoy tomó de ellos"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/stock.tsx",
+      "context": "JSXFragment > JSXText",
+      "kind": "jsx-text",
+      "english": "Oldest lote first. Correct it if another crate was used.",
+      "spanish": "Primero el lote más antiguo. Corrígelo si se usó otra caja."
+    },
+    {
+      "source": "src/prototypes/cedar/areas/stock.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "What happened to this product",
+      "spanish": "Qué ha pasado con este producto"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/stock.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "The delivery note log",
+      "spanish": "El registro de albaranes"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/stock.tsx",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "merluza sin cabeza",
+      "spanish": "merluza sin cabeza"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/stock.tsx",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "merluza sin cabeza congelada",
+      "spanish": "merluza sin cabeza congelada"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/stock.tsx",
+      "context": "JSXAttribute > StringLiteral:title",
+      "kind": "literal",
+      "english": "Stock update",
+      "spanish": "Actualización de existencias"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/stock.tsx",
+      "context": "JSXAttribute > StringLiteral:ariaLabel",
+      "kind": "literal",
+      "english": "Paste prices",
+      "spanish": "Pegar precios"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/stock.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Paste prices",
+      "spanish": "Pegar precios"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/stock.tsx",
+      "context": "JSXAttribute > StringLiteral:aria-label",
+      "kind": "literal",
+      "english": "The price list, as you copied it",
+      "spanish": "La lista de precios tal como la has copiado"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/stock.tsx",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "Update ${found} ${found === 1 ? 'price' : 'prices'}",
+      "spanish": "Actualizar ${found} ${found === 1 ? 'price' : 'prices'}"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/stock.tsx",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "Update prices",
+      "spanish": "Actualizar precios"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/stock.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Add a variation",
+      "spanish": "Añadir una variación"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/stock.tsx",
+      "context": "JSXAttribute > StringLiteral:title",
+      "kind": "literal",
+      "english": "New product",
+      "spanish": "Nuevo producto"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/stock.tsx",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "The lotes",
+      "spanish": "El lotes"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/stock.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Stock update",
+      "spanish": "Actualización de existencias"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/stock.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Export catalogue",
+      "spanish": "Exportar catálogo"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/stock.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Paste prices",
+      "spanish": "Pegar precios"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/stock.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Find a product",
+      "spanish": "Buscar un producto"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/stock.tsx",
+      "context": "JSXAttribute > StringLiteral:label",
+      "kind": "literal",
+      "english": "Find a product",
+      "spanish": "Buscar un producto"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/stock.tsx",
+      "context": "LogicalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "your file",
+      "spanish": "tu archivo"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/stock.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Hand-added variation",
+      "spanish": "Variación añadida a mano"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/stock.tsx",
+      "context": "ObjectProperty > TemplateLiteral",
+      "kind": "template",
+      "english": "Variation · ${amendment.facet}",
+      "spanish": "Variación · ${amendment.facet}"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/stock.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Learned variation",
+      "spanish": "Variación aprendida"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/stock.tsx",
+      "context": "LogicalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "Base SKU",
+      "spanish": "SKU base"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/stock.tsx",
+      "context": "ObjectProperty > TemplateLiteral",
+      "kind": "template",
+      "english": "${e.file!.name} — the document behind ${productOf(cast, e.product).name}",
+      "spanish": "${e.file!.name} — el documento de ${productOf(cast, e.product).name}"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/stock.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "arrived from",
+      "spanish": "llegó desde"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/stock.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Try another word for “",
+      "spanish": "Prueba con otra palabra para «"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/stock.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Update prices",
+      "spanish": "Actualizar precios"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/stock.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "New product",
+      "spanish": "Nuevo producto"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/stock.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Stock update",
+      "spanish": "Actualización de existencias"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/stock.tsx",
+      "context": "JSXAttribute > StringLiteral:title",
+      "kind": "literal",
+      "english": "Export catalogue",
+      "spanish": "Exportar catálogo"
+    },
+    {
+      "source": "src/prototypes/cedar/catalogue.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Pescado fresco",
+      "spanish": "Pescado fresco"
+    },
+    {
+      "source": "src/prototypes/cedar/catalogue.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Canal y despiece",
+      "spanish": "Canal y despiece"
+    },
+    {
+      "source": "src/prototypes/cedar/catalogue.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "sin cabeza",
+      "spanish": "sin cabeza"
+    },
+    {
+      "source": "src/prototypes/cedar/catalogue.ts",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "Alitas de pollo",
+      "spanish": "Alitas de pollo"
+    },
+    {
+      "source": "src/prototypes/cedar/catalogue.ts",
+      "context": "CallExpression > StringLiteral",
+      "kind": "literal",
+      "english": "~base",
+      "spanish": "~base"
+    },
+    {
+      "source": "src/prototypes/cedar/catalogue.ts",
+      "context": "MemberExpression > StringLiteral",
+      "kind": "literal",
+      "english": "~base",
+      "spanish": "~base"
+    },
+    {
+      "source": "src/prototypes/cedar/catalogue.ts",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "${t['arte']}, from ${t['zona']}",
+      "spanish": "${t['arte']} , desde ${t['zona']}"
+    },
+    {
+      "source": "src/prototypes/cedar/catalogue.ts",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "born in ${t['birth']}, cut in ${t['cutting']}",
+      "spanish": "nacido en ${t['birth']}, cortado en ${t['cutting']}"
+    },
+    {
+      "source": "src/prototypes/cedar/catalogue.ts",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "the ${t['variedad']}, from ${t['origen']}",
+      "spanish": "el ${t['variedad']} , desde ${t['origen']}"
+    },
+    {
+      "source": "src/prototypes/cedar/catalogue.ts",
+      "context": "ReturnStatement > TemplateLiteral",
+      "kind": "template",
+      "english": "In ${MONTHS[now.getMonth()]}, «${nameOfNode(node)}» here means ${facts}.",
+      "spanish": "En ${MONTHS[now.getMonth()]}, «${nameOfNode(node)}» aquí significa ${facts}."
+    },
+    {
+      "source": "src/prototypes/cedar/catalogue.ts",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "${e.count} products",
+      "spanish": "${e.count} productos"
+    },
+    {
+      "source": "src/prototypes/cedar/catalogue.ts",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "1 product",
+      "spanish": "1 producto"
+    },
+    {
+      "source": "src/prototypes/cedar/catalogue.ts",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "You moved ${what} to ${e.subject} · Rocoto had said ${e.said}",
+      "spanish": "Has movido ${what} a ${e.subject}; Rocoto había dicho ${e.said}"
+    },
+    {
+      "source": "src/prototypes/cedar/catalogue.ts",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "You moved ${what} to ${e.subject}",
+      "spanish": "Has movido ${what} a ${e.subject}"
+    },
+    {
+      "source": "src/prototypes/cedar/catalogue.ts",
+      "context": "ReturnStatement > TemplateLiteral",
+      "kind": "template",
+      "english": "${e.subject} joined the catalogue",
+      "spanish": "${e.subject} se añadió al catálogo"
+    },
+    {
+      "source": "src/prototypes/cedar/catalogue.ts",
+      "context": "ReturnStatement > TemplateLiteral",
+      "kind": "template",
+      "english": "${e.subject} became a product of its own",
+      "spanish": "${e.subject} se convirtió en un producto independiente"
+    },
+    {
+      "source": "src/prototypes/cedar/catalogue.ts",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "${fresh.length} products",
+      "spanish": "${fresh.length} productos"
+    },
+    {
+      "source": "src/prototypes/cedar/catalogue.ts",
+      "context": "ArrayExpression > StringLiteral",
+      "kind": "literal",
+      "english": "en lomos",
+      "spanish": "en lomos"
+    },
+    {
+      "source": "src/prototypes/cedar/catalogue.ts",
+      "context": "ArrayExpression > StringLiteral",
+      "kind": "literal",
+      "english": "en filetes",
+      "spanish": "en filetes"
+    },
+    {
+      "source": "src/prototypes/cedar/catalogue.ts",
+      "context": "ArrayExpression > StringLiteral",
+      "kind": "literal",
+      "english": "en rodajas",
+      "spanish": "en rodajas"
+    },
+    {
+      "source": "src/prototypes/cedar/catalogue.ts",
+      "context": "ArrayExpression > StringLiteral",
+      "kind": "literal",
+      "english": "en hielo",
+      "spanish": "en hielo"
+    },
+    {
+      "source": "src/prototypes/cedar/catalogue.ts",
+      "context": "ArrayExpression > StringLiteral",
+      "kind": "literal",
+      "english": "al vacío por separado",
+      "spanish": "al vacío por separado"
+    },
+    {
+      "source": "src/prototypes/cedar/catalogue.ts",
+      "context": "ArrayExpression > StringLiteral",
+      "kind": "literal",
+      "english": "en piezas",
+      "spanish": "en piezas"
+    },
+    {
+      "source": "src/prototypes/cedar/catalogue.ts",
+      "context": "ArrayExpression > StringLiteral",
+      "kind": "literal",
+      "english": "en bandeja",
+      "spanish": "en bandeja"
+    },
+    {
+      "source": "src/prototypes/cedar/catalogue.ts",
+      "context": "ArrayExpression > StringLiteral",
+      "kind": "literal",
+      "english": "en caja de madera",
+      "spanish": "en caja de madera"
+    },
+    {
+      "source": "src/prototypes/cedar/catalogue.ts",
+      "context": "ArrayExpression > StringLiteral",
+      "kind": "literal",
+      "english": "en malla",
+      "spanish": "en malla"
+    },
+    {
+      "source": "src/prototypes/cedar/catalogue.ts",
+      "context": "ArrayExpression > StringLiteral",
+      "kind": "literal",
+      "english": "ramos atados",
+      "spanish": "ramos atados"
+    },
+    {
+      "source": "src/prototypes/cedar/catalogue.ts",
+      "context": "ArrayExpression > StringLiteral",
+      "kind": "literal",
+      "english": "sin apilar",
+      "spanish": "sin apilar"
+    },
+    {
+      "source": "src/prototypes/cedar/catalogue.ts",
+      "context": "ArrayExpression > StringLiteral",
+      "kind": "literal",
+      "english": "papel entre capas",
+      "spanish": "papel entre capas"
+    },
+    {
+      "source": "src/prototypes/cedar/catalogue.ts",
+      "context": "ArrayExpression > StringLiteral",
+      "kind": "literal",
+      "english": "en saco",
+      "spanish": "en saco"
+    },
+    {
+      "source": "src/prototypes/cedar/catalogue.ts",
+      "context": "ArrayExpression > StringLiteral",
+      "kind": "literal",
+      "english": "en bolsa",
+      "spanish": "en bolsa"
+    },
+    {
+      "source": "src/prototypes/cedar/catalogue.ts",
+      "context": "ArrayExpression > StringLiteral",
+      "kind": "literal",
+      "english": "de avión",
+      "spanish": "de avión"
+    },
+    {
+      "source": "src/prototypes/cedar/catalogue.ts",
+      "context": "ArrayExpression > StringLiteral",
+      "kind": "literal",
+      "english": "de barco",
+      "spanish": "de barco"
+    },
+    {
+      "source": "src/prototypes/cedar/catalogue.ts",
+      "context": "ArrayExpression > StringLiteral",
+      "kind": "literal",
+      "english": "15 días",
+      "spanish": "15 dícomo"
+    },
+    {
+      "source": "src/prototypes/cedar/catalogue.ts",
+      "context": "ArrayExpression > StringLiteral",
+      "kind": "literal",
+      "english": "21 días",
+      "spanish": "21 dícomo"
+    },
+    {
+      "source": "src/prototypes/cedar/catalogue.ts",
+      "context": "ArrayExpression > StringLiteral",
+      "kind": "literal",
+      "english": "30 días",
+      "spanish": "30 dícomo"
+    },
+    {
+      "source": "src/prototypes/cedar/catalogue.ts",
+      "context": "ArrayExpression > StringLiteral",
+      "kind": "literal",
+      "english": "45 días",
+      "spanish": "45 dícomo"
+    },
+    {
+      "source": "src/prototypes/cedar/catalogue.ts",
+      "context": "ArrayExpression > StringLiteral",
+      "kind": "literal",
+      "english": "60 días",
+      "spanish": "60 dícomo"
+    },
+    {
+      "source": "src/prototypes/cedar/catalogue.ts",
+      "context": "ArrayExpression > StringLiteral",
+      "kind": "literal",
+      "english": "en su punto",
+      "spanish": "en su punto"
+    },
+    {
+      "source": "src/prototypes/cedar/catalogue.ts",
+      "context": "VariableDeclarator > StringLiteral",
+      "kind": "literal",
+      "english": "tal cual",
+      "spanish": "tal cual"
+    },
+    {
+      "source": "src/prototypes/cedar/product-card.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Their price",
+      "spanish": "Su precio"
+    },
+    {
+      "source": "src/prototypes/cedar/product-card.tsx",
+      "context": "JSXExpressionContainer > TemplateLiteral",
+      "kind": "template",
+      "english": "A price for ${customer.name}",
+      "spanish": "Un precio para ${customer.name}"
+    },
+    {
+      "source": "src/prototypes/cedar/product-card.tsx",
+      "context": "JSXExpressionContainer > TemplateLiteral",
+      "kind": "template",
+      "english": "Their price for ${product.name}",
+      "spanish": "Su precio para ${product.name}"
+    },
+    {
+      "source": "src/prototypes/cedar/product-card.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "your sheet",
+      "spanish": "tu hoja"
+    },
+    {
+      "source": "src/prototypes/cedar/product-card.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "set by hand",
+      "spanish": "definido a mano"
+    },
+    {
+      "source": "src/prototypes/cedar/product-card.tsx",
+      "context": "ObjectProperty > StringLiteral",
+      "kind": "literal",
+      "english": "set by a rule",
+      "spanish": "definido por una regla"
+    },
+    {
+      "source": "src/prototypes/cedar/product-card.tsx",
+      "context": "JSXExpressionContainer > TemplateLiteral",
+      "kind": "template",
+      "english": "Open ${customer.name}",
+      "spanish": "Abrir ${customer.name}"
+    },
+    {
+      "source": "src/prototypes/cedar/product-card.tsx",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "Show fewer",
+      "spanish": "Mostrar menos"
+    },
+    {
+      "source": "src/prototypes/cedar/product-card.tsx",
+      "context": "AssignmentPattern > StringLiteral",
+      "kind": "literal",
+      "english": "Back to the delivery note",
+      "spanish": "Volver al albarán"
+    },
+    {
+      "source": "src/prototypes/cedar/product-card.tsx",
+      "context": "JSXExpressionContainer > TemplateLiteral",
+      "kind": "template",
+      "english": "Price history for ${statsTariff.name}",
+      "spanish": "Historial de precios de ${statsTariff.name}"
+    },
+    {
+      "source": "src/prototypes/cedar/product-card.tsx",
+      "context": "JSXExpressionContainer > TemplateLiteral",
+      "kind": "template",
+      "english": "${statsTariff.name} price",
+      "spanish": "Precio de ${statsTariff.name}"
+    },
+    {
+      "source": "src/prototypes/cedar/product-card.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "is in your catalogue",
+      "spanish": "está en tu catálogo"
+    },
+    {
+      "source": "src/prototypes/cedar/product-card.tsx",
+      "context": "JSXAttribute > StringLiteral:label",
+      "kind": "literal",
+      "english": "What the goods are called",
+      "spanish": "Cómo se llama la mercancía"
+    },
+    {
+      "source": "src/prototypes/cedar/product-card.tsx",
+      "context": "JSXAttribute > StringLiteral:aria-label",
+      "kind": "literal",
+      "english": "The words on this product",
+      "spanish": "Las palabras de este producto"
+    },
+    {
+      "source": "src/prototypes/cedar/stock-tiers.tsx",
+      "context": "JSXAttribute > StringLiteral:d",
+      "kind": "literal",
+      "english": "m15 12 4 4-4 4",
+      "spanish": "m15 12 4 4-4 4"
+    },
+    {
+      "source": "src/prototypes/cedar/stock-tiers.tsx",
+      "context": "JSXAttribute > StringLiteral:d",
+      "kind": "literal",
+      "english": "m12 7.6 4.4 4.4-4.4 4.4",
+      "spanish": "m12 7.6 4.4 4.4-4.4 4.4"
+    },
+    {
+      "source": "src/prototypes/cedar/stock-tiers.tsx",
+      "context": "JSXAttribute > StringLiteral:title",
+      "kind": "literal",
+      "english": "Write a new price",
+      "spanish": "Escribir un precio nuevo"
+    },
+    {
+      "source": "src/prototypes/cedar/stock-tiers.tsx",
+      "context": "JSXAttribute > StringLiteral:title",
+      "kind": "literal",
+      "english": "Write a new name",
+      "spanish": "Escribir un nombre nuevo"
+    },
+    {
+      "source": "src/prototypes/cedar/stock-tiers.tsx",
+      "context": "JSXAttribute > StringLiteral:ariaLabel",
+      "kind": "literal",
+      "english": "Who is on this tarifa",
+      "spanish": "Quién está en esta tarifa"
+    },
+    {
+      "source": "src/prototypes/cedar/stock-tiers.tsx",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "customer buys",
+      "spanish": "el cliente compra"
+    },
+    {
+      "source": "src/prototypes/cedar/stock-tiers.tsx",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "customers buy",
+      "spanish": "los clientes compran"
+    },
+    {
+      "source": "src/prototypes/cedar/stock-tiers.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "on this tarifa. Their band\n              lives on their own profile.",
+      "spanish": "en esta tarifa. Su tramo aparece en su propio perfil."
+    },
+    {
+      "source": "src/prototypes/cedar/stock-tiers.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Prices are written in Stock, on the product card.",
+      "spanish": "Los precios se escriben en Existencias, en la ficha del producto."
+    },
+    {
+      "source": "src/prototypes/cedar/stock-tiers.tsx",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "Save & next",
+      "spanish": "Guardar y siguiente"
+    },
+    {
+      "source": "src/prototypes/cedar/stock-tiers.tsx",
+      "context": "JSXAttribute > StringLiteral:ariaLabel",
+      "kind": "literal",
+      "english": "Today’s prices",
+      "spanish": "Precios de hoy"
+    },
+    {
+      "source": "src/prototypes/cedar/stock-tiers.tsx",
+      "context": "JSXAttribute > StringLiteral:ariaLabel",
+      "kind": "literal",
+      "english": "Today’s price",
+      "spanish": "Precio de hoy"
+    },
+    {
+      "source": "src/prototypes/cedar/stock-tiers.tsx",
+      "context": "JSXExpressionContainer > TemplateLiteral",
+      "kind": "template",
+      "english": "${cast.sector}-price-${target.product.id}",
+      "spanish": "${cast.sector}-price-${target.product.id}"
+    },
+    {
+      "source": "src/prototypes/cedar/stock-tiers.tsx",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "opacity, transform",
+      "spanish": "opacity, transform"
+    },
+    {
+      "source": "src/prototypes/cedar/stock-tiers.tsx",
+      "context": "JSXExpressionContainer > TemplateLiteral",
+      "kind": "template",
+      "english": "${at + 1} of ${targets.length}",
+      "spanish": "${at + 1} de ${targets.length}"
+    },
+    {
+      "source": "src/prototypes/cedar/stock-tiers.tsx",
+      "context": "JSXExpressionContainer > TemplateLiteral",
+      "kind": "template",
+      "english": "Today’s price for ${target.name}",
+      "spanish": "Precio de hoy para ${target.name}"
+    },
+    {
+      "source": "src/prototypes/cedar/stock-tiers.tsx",
+      "context": "ConditionalExpression > TemplateLiteral",
+      "kind": "template",
+      "english": "as of ${last.at} on ${dayShort(last.day)}",
+      "spanish": "a fecha de ${last.at}, el ${dayShort(last.day)}"
+    },
+    {
+      "source": "src/prototypes/cedar/stock-tiers.tsx",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "from your list",
+      "spanish": "de tu lista"
+    },
+    {
+      "source": "src/prototypes/cedar/stock-tiers.tsx",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "from your take",
+      "spanish": "de tu pedido"
+    },
+    {
+      "source": "src/prototypes/cedar/stock-tiers.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Keep theirs",
+      "spanish": "Conservar el suyo"
+    },
+    {
+      "source": "src/prototypes/cedar/stock-tiers.tsx",
+      "context": "JSXElement > JSXText",
+      "kind": "jsx-text",
+      "english": "Write mine",
+      "spanish": "Escribir el mío"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/stock.tsx",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "product",
+      "spanish": "producto"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/stock.tsx",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "products",
+      "spanish": "productos"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/stock.tsx",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "variation",
+      "spanish": "variante"
+    },
+    {
+      "source": "src/prototypes/cedar/areas/stock.tsx",
+      "context": "ConditionalExpression > StringLiteral",
+      "kind": "literal",
+      "english": "variations",
+      "spanish": "variantes"
+    },
+    {
+      "source": "src/prototypes/cedar/product-card.tsx",
+      "context": "review",
+      "kind": "literal",
+      "english": "Product performance",
+      "spanish": "Rendimiento del producto"
+    },
+    {
+      "source": "src/prototypes/cedar/product-card.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Completed Delivery Notes",
+      "spanish": "Albaranes completados"
+    },
+    {
+      "source": "src/prototypes/cedar/product-card.tsx",
+      "context": "review",
+      "kind": "jsx-text",
+      "english": "Completed orders show here",
+      "spanish": "Los pedidos completados aparecen aquí"
+    }
+  ]
+}

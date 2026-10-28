@@ -1,0 +1,27 @@
+{
+ "_note": "A POLLED GENERATION, SHAPED FROM THE PINNED ADAPTER (ideogram-v4-async@1: submit multipart, poll GET /v1/generations/{id}). Two states are recorded because both are on the road: `running`, which is what a job answers while it paints and what a job answers FOREVER once the wallet empties mid-queue, and `completed`, which carries the render URL.",
+ "running": {
+  "generation_id": "gen_01J8ZQ7Q0R0000000000000000",
+  "status": "PENDING",
+  "data": []
+ },
+ "completed": {
+  "generation_id": "gen_01J8ZQ7Q0R0000000000000000",
+  "status": "COMPLETED",
+  "reported_cost_usd_micros": 80000,
+  "safety": "safe",
+  "data": [
+   {
+    "url": "https://ideogram.ai/api/images/direct/gen_01J8ZQ7Q0R0000000000000000.png",
+    "resolution": "1024x1024",
+    "is_image_safe": true
+   }
+  ]
+ },
+ "failed": {
+  "generation_id": "gen_01J8ZQ7Q0R0000000000000001",
+  "status": "FAILED",
+  "failure_reason": "content policy",
+  "data": []
+ }
+}

@@ -1,0 +1,134 @@
+/* THE BUYER'S CHECKOUT — the collection service's own page, outside the app bundle and its theme.
+ *
+ * `app/tools/theme-gate.mjs` reads every `.css` under `app/src`, and it is right to: a Rocoto
+ * surface owns no colour. This file is the one exception the gate knows about, because it is not
+ * a Rocoto surface — it is the HTML the Python service serves to a Peruvian buyer at
+ * `/collect/{id}/{token}`, with the wallet's own mark and the wallet's own purple on it. So the
+ * whole palette lives in these custom properties, each line carrying its `theme-gate-allow` note,
+ * and every rule below reads a property rather than a value. Rocoto's type and spacing carry the
+ * rest: one column, generous rounding, 44 px seats, tabular figures on every amount. */
+:root {
+  color-scheme: light;
+  --surface: #ffffff;       /* theme-gate-allow: the wallet checkout's white card */
+  --ground: #f4f3f6;        /* theme-gate-allow: the page behind the card */
+  --ink: #1b1a1f;           /* theme-gate-allow: body text on the card */
+  --muted: #6a6872;         /* theme-gate-allow: secondary facts */
+  --line: #e2e0e6;          /* theme-gate-allow: hairlines and field borders */
+  --field: #f2f1f5;         /* theme-gate-allow: the grey-filled inert fields */
+  --yape: #742284;          /* theme-gate-allow: Yape's own purple, the mark and the act */
+  --yape-strong: #5a1a68;   /* theme-gate-allow: the purple under a press */
+  --yape-soft: #f7f0fa;     /* theme-gate-allow: the purple's own tint behind the mark */
+  --rest: #dedce3;          /* theme-gate-allow: the act at rest, flat grey */
+  --rest-ink: #86848e;      /* theme-gate-allow: the act's label at rest */
+  --settled: #0f7a58;       /* theme-gate-allow: the receipt's tick */
+  --settled-soft: #e8f5f0;  /* theme-gate-allow: the receipt's own ground */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--ink); background: var(--ground); font-size: 16px; line-height: 1.5;
+}
+* { box-sizing: border-box; min-width: 0 }
+[hidden] { display: none !important }
+body { margin: 0 }
+main { width: 100%; max-width: 30rem; margin: 0 auto; padding: 1.5rem 1rem 3rem }
+h1, h2, p, ul, legend, fieldset { margin: 0 }
+ul { padding: 0; list-style: none }
+fieldset { border: 0; padding: 0; min-width: 0 }
+
+.brand { margin: 0 .25rem 1rem }
+.brand a { display: inline-flex; align-items: center; justify-content: center; min-width: 44px; min-height: 44px; color: var(--ink); text-decoration: none }
+.brand img { display: block; width: 44px; height: 44px; object-fit: contain }
+.checkout { background: var(--surface); border: 1px solid var(--line); border-radius: 1.5rem; overflow: hidden }
+.checkout > section, .checkout > footer { padding: 1.5rem; border-top: 1px solid var(--line) }
+
+/* The top bar: the amount and the order, on one line each, in tabular figures. */
+.topbar { display: grid; grid-template-columns: auto 1fr; align-items: center; gap: .25rem .75rem; padding: 1.15rem 1.5rem; background: var(--yape-soft) }
+.wallet { grid-row: span 2; display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; background: var(--surface); color: var(--yape) }
+.amount { font-size: clamp(1.75rem, 8vw, 2.25rem); font-weight: 700; letter-spacing: -.03em; font-variant-numeric: tabular-nums; white-space: nowrap; color: var(--yape) }
+.payment-verb { display: block; font-size: 1rem; line-height: 1.5; letter-spacing: 0; font-weight: 600 }
+.rounding { grid-column: 2 }
+.order { font-size: .875rem; color: var(--muted); font-variant-numeric: tabular-nums; overflow-wrap: anywhere }
+
+/* The ask: the mark, the sentence, the two hints, the form. */
+.ask { display: grid; gap: 1rem; text-align: center; justify-items: center }
+/* Yape's own mark, at its own 4:5 proportion (logo-yape_positive.png, 240 × 300). */
+.mark { width: 64px; height: 80px; object-fit: contain }
+h1 { font-size: 1.3rem; line-height: 1.3; letter-spacing: -.02em; font-weight: 600 }
+h1 strong { color: var(--yape); font-weight: 750 }
+.hints { display: grid; gap: .6rem; justify-items: start; text-align: left; font-size: .9375rem; color: var(--muted) }
+/* two children exactly: the mark and the sentence — the sentence carries its own emphasis, so
+   a <strong> inside it can never become a grid item of its own and drop to the next row. */
+.hints li { display: grid; grid-template-columns: auto 1fr; gap: .6rem; align-items: start }
+.hint-words { min-width: 0 }
+.hints strong { color: var(--ink); font-weight: 650 }
+.hint-mark { display: inline-flex; color: var(--yape); padding-top: .1rem }
+
+form { display: grid; gap: .5rem; width: 100%; text-align: left }
+.field-label { display: block; font-size: .9375rem; font-weight: 650; color: var(--ink) }
+.field-help { display: flex; gap: .4rem; align-items: center; font-size: .8125rem; color: var(--muted) }
+.phone-field { display: flex; align-items: stretch; gap: .5rem; background: var(--field); border: 1px solid var(--line); border-radius: .85rem; padding: 0 .9rem }
+.prefix { display: grid; place-items: center; font-weight: 650; font-variant-numeric: tabular-nums; color: var(--ink) }
+#phone { flex: 1 1 auto; min-width: 0; min-height: 52px; border: 0; background: transparent; font: inherit; font-size: 1.0625rem; font-variant-numeric: tabular-nums; letter-spacing: .04em; color: var(--ink) }
+#phone::placeholder { color: var(--rest-ink) }
+
+.code-field { display: grid; gap: .5rem; margin-top: .65rem }
+.boxes { display: flex; gap: .5rem }
+.box { flex: 1 1 0; min-width: 44px; width: 100%; height: 56px; text-align: center; font: inherit; font-size: 1.25rem; font-weight: 650; font-variant-numeric: tabular-nums;
+  color: var(--ink); background: var(--field); border: 1px solid var(--line); border-radius: .75rem }
+.box[data-filled="yes"] { background: var(--surface); border-color: var(--yape) }
+
+.pay { position: relative; width: 100%; min-height: 54px; margin-top: 1rem; padding: .85rem 1rem; border: 0; border-radius: 999px;
+  font: inherit; font-size: 1.0625rem; font-weight: 700; font-variant-numeric: tabular-nums; white-space: nowrap;
+  color: var(--rest-ink); background: var(--rest); cursor: default;
+  transition: background-color 400ms cubic-bezier(.2, .8, .2, 1), color 400ms cubic-bezier(.2, .8, .2, 1) }
+.pay:enabled { color: var(--surface); background: var(--yape); cursor: pointer }
+.pay:enabled:hover { background: var(--yape-strong) }
+.working { display: inline-flex; gap: .55rem; align-items: center; justify-content: center }
+.spinner { width: 18px; height: 18px; border: 2px solid currentColor; border-top-color: transparent; border-radius: 50%; animation: spin 700ms linear infinite }
+@keyframes spin { to { transform: rotate(360deg) } }
+.note { font-size: .875rem; color: var(--yape); min-height: 1.25rem }
+.for-order { font-size: .8125rem; color: var(--muted); overflow-wrap: anywhere }
+
+button.secondary { min-height: 44px; padding: .6rem 1rem; font: inherit; font-size: .9375rem; font-weight: 600;
+  color: var(--yape); background: var(--surface); border: 1px solid var(--line); border-radius: 999px; cursor: pointer }
+button.secondary:hover { background: var(--yape-soft) }
+:focus-visible { outline: 3px solid var(--yape); outline-offset: 2px }
+
+/* The QR route and the receipt. */
+.qr-panel { display: grid; gap: .6rem; justify-items: center; text-align: center }
+h2 { font-size: 1.0625rem; font-weight: 650 }
+.qr { display: block; width: min(100%, 240px); height: auto; aspect-ratio: 1; object-fit: contain; border-radius: .75rem }
+.seller-phone { font-weight: 650; font-variant-numeric: tabular-nums }
+.receipt { display: grid; gap: .5rem; justify-items: center; text-align: center; background: var(--settled-soft) }
+.tick { display: grid; place-items: center; width: 56px; height: 56px; border-radius: 50%; background: var(--surface); color: var(--settled) }
+.receipt .amount { color: var(--settled) }
+.receipt-line { font-size: .9375rem; color: var(--muted); font-variant-numeric: tabular-nums }
+
+/* The record: the reference the bank carries, and this request's own payments. */
+.record { display: grid; gap: .6rem }
+#payment-status { font-size: .875rem; color: var(--muted) }
+.reference { display: grid; gap: .3rem; justify-items: start; overflow-wrap: anywhere }
+.reference .label, .muted, .account, .privacy { font-size: .8125rem; color: var(--muted) }
+.reference strong { font-size: .9375rem; font-variant-numeric: tabular-nums }
+.account { overflow-wrap: anywhere }
+.timeline { list-style: none; padding: 0; margin: .25rem 0 0 }
+.timeline li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: .15rem .75rem; padding: .7rem 0; border-top: 1px solid var(--line); font-size: .875rem }
+.timeline time { grid-column: 1 / -1; font-size: .75rem; color: var(--muted) }
+.timeline strong { font-variant-numeric: tabular-nums; white-space: nowrap }
+.checkout > footer { background: var(--field); font-size: .75rem; color: var(--muted) }
+.checkout > footer strong { color: var(--ink) }
+.privacy { text-align: center; margin-top: 1rem }
+
+/* At 320 px the card keeps its padding and the six boxes take the width back, so each one is a
+   44 px seat rather than a 39 px one; everything else stays a single column. */
+@media (max-width: 359px) {
+  main { padding: 1rem .4rem 2rem }
+  .checkout > section, .checkout > footer { padding: 1.15rem }
+  .topbar { padding: 1rem 1.15rem }
+  .boxes { gap: .2rem; margin-inline: -.5rem }
+  .box { height: 52px; font-size: 1.125rem; border-radius: .6rem }
+  .timeline li { grid-template-columns: minmax(0, 1fr) }
+  .timeline time { grid-column: auto }
+}
+@media (prefers-reduced-motion: reduce) {
+  .spinner { animation: none }
+  .pay { transition: none }
+}

@@ -1,0 +1,10 @@
+/* This stylesheet is loaded only by Cedar's entry. Component durations use the kit's
+   timing400 token; the operating-system preference also covers nested kit controls. */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0ms !important;
+    scroll-behavior: auto !important;
+  }
+}

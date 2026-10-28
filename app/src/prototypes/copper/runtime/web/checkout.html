@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="es-PE">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pago de documento · Rocoto</title>
+  <link rel="stylesheet" href="/assets/style.css">
+  <script src="https://sdk.mercadopago.com/js/v2" defer></script>
+  <script src="/assets/checkout.js" defer></script>
+</head>
+<body>
+  <main class="checkout">
+    <header><p>Rocoto</p><h1>Pago de documento</h1></header>
+    <section aria-labelledby="payment-title">
+      <h2 id="payment-title">Cargando el pago</h2>
+      <p id="environment" class="badge"></p>
+      <dl><dt>Vendedor</dt><dd id="seller-name">—</dd><dt>Documento</dt><dd id="document-id">—</dd></dl>
+      <p id="description"></p>
+      <p id="amount" class="amount"></p>
+      <p id="payment-state" role="status" aria-live="polite">Consultando el estado del pago.</p>
+      <a id="hosted-payment" class="button" hidden>Continuar al pago</a>
+      <form id="yape-form" hidden>
+        <h3>Pagar con Yape</h3>
+        <label>Celular Yape<input id="yape-phone" type="tel" inputmode="numeric" autocomplete="off" pattern="[0-9]{9}" maxlength="9" required></label>
+        <label>Código de aprobación<input id="yape-otp" type="password" inputmode="numeric" autocomplete="off" pattern="[0-9]{6}" maxlength="6" required aria-describedby="otp-help"></label>
+        <p id="otp-help" class="hint">Abre Yape y consulta tu código de aprobación de 6 dígitos para compras por internet.</p>
+        <button id="yape-submit" type="submit">Pagar con Yape</button>
+      </form>
+      <p id="payment-message" role="status" aria-live="polite"></p>
+    </section>
+  </main>
+</body>
+</html>

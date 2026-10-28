@@ -1,0 +1,1070 @@
+[
+  {
+    "id": "ADM-01.01",
+    "title": "Organization, legal, business-day, and operations settings",
+    "summary": "Implement tenant settings for organization/legal profile, locale/timezone, tax/document profile, business day, service windows, cutoffs, holidays, operational minimums, and effective policy revisions.",
+    "status": "SPECIFIED",
+    "stage": "administration-activation",
+    "dependsOn": [
+      "FND-01.02",
+      "FND-03.01",
+      "DOC-01.01"
+    ],
+    "docRefs": [
+      "ADM-01",
+      "DOC-01",
+      "FND-03",
+      "QLT-01",
+      "JNY-03",
+      "ADM-01.1"
+    ],
+    "legacyIds": [
+      "A7.1",
+      "A7.2"
+    ],
+    "files": {
+      "actual": [
+        "baseweb/src/app/areas/admin/account.tsx",
+        "baseweb/src/app/areas/admin/business.tsx",
+        "baseweb/src/app/areas/admin/operations.tsx",
+        "baseweb/src/app/customer-order-policy.tsx",
+        "baseweb/src/app/confirmation-policy.ts"
+      ],
+      "proposed": [
+        "product/backend/admin/organization.py",
+        "product/backend/admin/operations_policy.py"
+      ]
+    },
+    "steps": [
+      "Define each setting's owner, scope, effective time, validation, required authority, audit event, and historic snapshot consequence.",
+      "Validate legal/document requirements before issue/export while allowing incomplete setup as an explicit activation state.",
+      "Apply future operational changes to future work without rewriting issued document, price, route, or source history.",
+      "Model the three independent confirmation gates and their combined effective-policy copy; a durable-write failure retains the previous effective snapshot and returns focus to the labelled failed setting."
+    ],
+    "assertions": {
+      "positive": [
+        "A permitted effective-dated cutoff change affects only future eligible operational projections.",
+        "A permitted operator can change one confirmation policy field without resetting the other remembered choices, and the persisted effective policy explains whether a customer message may show current prices."
+      ],
+      "negative": [
+        "An incomplete profile, client timezone, or unsaved setting cannot silently produce a legally complete document or mutate historic work.",
+        "A preview, local toggle, hidden albarán value or failed durable write cannot send a message, invent a price, erase another choice, or replace the prior effective policy."
+      ]
+    },
+    "doneConditions": [
+      "Every organization/business/operations control has command, state, exact copy, authority, audit, and effective-date tests.",
+      "JNY-C03–JNY-C08 and JNY-P03 have authorized command, revision, remembered-choice, save-failure, accessible-name, focus-return and customer-copy tests."
+    ],
+    "requiredEvidence": [
+      "Settings contract suite, incomplete-profile issue denial, and effective-date projection trace.",
+      "Confirmation-policy command trace covering all three gate combinations, previous-value retention on write failure, and no-send preview denial."
+    ]
+  },
+  {
+    "id": "ADM-01.02",
+    "title": "Team, access, security, and personal-preference settings",
+    "summary": "Build all team invite/role/suspend/remove/ownership-transfer/session-revoke controls and separate tenant policy from individual locale, notification, accessibility, default-view, and saved-filter preferences.",
+    "status": "SPECIFIED",
+    "stage": "administration-activation",
+    "dependsOn": [
+      "FND-01.02",
+      "FND-01.03",
+      "OBJ-01.02"
+    ],
+    "docRefs": [
+      "ADM-01",
+      "FND-01",
+      "QLT-01",
+      "QLT-02",
+      "JNY-08",
+      "JNY-09"
+    ],
+    "legacyIds": [
+      "A7.3"
+    ],
+    "files": {
+      "actual": [
+        "baseweb/src/app/areas/admin/team.tsx",
+        "baseweb/src/app/areas/admin/app-settings.tsx",
+        "baseweb/src/app/grants.ts"
+      ],
+      "proposed": [
+        "product/backend/admin/team.py",
+        "product/backend/admin/preferences.py",
+        "product/backend/admin/security_settings.py"
+      ]
+    },
+    "steps": [
+      "Route membership and sensitive access acts through strong authority and immediate revocation semantics.",
+      "Store user preferences in personal scope and tenant settings in tenant scope, each with independent revision and audit.",
+      "Expose invite, pending, active, suspended, removed, ownership-transfer, error, and recovery states with exact visible/accessibility copy.",
+      "Keep each salesperson line/account assignment personal and tenant-scoped during first-time setup; a later line does not inherit another line’s owner or customer scope.",
+      "Model a manager-authorised cross-cover grant as a bounded actor/line/account/time scope with independent audit, expiry and revocation; it never transfers ownership or widens tenant access."
+    ],
+    "assertions": {
+      "positive": [
+        "A permitted owner suspension immediately blocks the affected member's new commands and subscriptions.",
+        "A permitted owner can assign distinct named salesperson ownership to independently configured lines.",
+        "A permitted manager can grant bounded cross-cover while the covering salesperson sees only the named temporary scope."
+      ],
+      "negative": [
+        "A user preference, invite, stale session, or role editor cannot alter tenant policy or self-grant an unavailable capability.",
+        "A team preference, stale session or line chip cannot grant another salesperson’s accounts or provider authority.",
+        "An owner chip, default filter, stale session or cross-cover proposal cannot self-widen account, output or messaging authority."
+      ]
+    },
+    "doneConditions": [
+      "Every team/security/preference control has role, conflict, revoke, invite, accessibility, and audit coverage."
+    ],
+    "requiredEvidence": [
+      "Role transition tests, session-revocation trace, and preference-scope audit.",
+      "Two-line owner assignment/revoke and setup-resume scope audit.",
+      "Cross-cover grant/expiry/revoke/cross-tenant denial and salesperson-scope audit."
+    ]
+  },
+  {
+    "id": "ADM-01.03",
+    "title": "Automation, geography, fulfilment, and app-policy settings",
+    "summary": "Configure automation grants, budgets, notification escalation, zones, routes, trucks, inventory policy, delivery evidence policy, and per-user application behavior as separate revisioned settings domains.",
+    "status": "SPECIFIED",
+    "stage": "administration-activation",
+    "dependsOn": [
+      "ADM-01.01",
+      "INT-01.02",
+      "INTG-01.04",
+      "INV-01.01"
+    ],
+    "docRefs": [
+      "ADM-01",
+      "INT-01",
+      "INV-01",
+      "INTG-01",
+      "QLT-01",
+      "JNY-03",
+      "ADM-01.1",
+      "UTL-02.1"
+    ],
+    "legacyIds": [
+      "A7.4",
+      "A7.5",
+      "A7.6",
+      "A7.7"
+    ],
+    "files": {
+      "actual": [
+        "baseweb/src/app/areas/admin/agent.tsx",
+        "baseweb/src/app/areas/admin/geography.tsx",
+        "baseweb/src/app/areas/admin/operations.tsx",
+        "baseweb/src/app/areas/admin/app-settings.tsx",
+        "baseweb/src/app/customer-order-policy.tsx"
+      ],
+      "proposed": [
+        "product/backend/admin/automation.py",
+        "product/backend/admin/fulfilment_policy.py",
+        "product/backend/admin/notification_policy.py"
+      ]
+    },
+    "steps": [
+      "Define every automation/grant threshold, route, stock exception, notification, and preference control with scope and activation review.",
+      "Require policy simulation/test lineage before enabling an automation or fulfilment policy that can affect live work.",
+      "Make disable, pause, revoke, and policy conflict visible without deleting history or already accepted job evidence.",
+      "Define the recurring-request review and ERP-line policy as independent revisioned settings: no automatic SKU admission, base-item-note by default, and mapped variation only after approved mapping."
+    ],
+    "assertions": {
+      "positive": [
+        "A reviewed grant enables only its tenant-scoped allowed action and produces a policy/audit trail.",
+        "A tenant can keep recurring requests as notes or explicitly permit reviewed mapped-variation handling while the customer-visible draft distinguishes the selected policy."
+      ],
+      "negative": [
+        "A setting toggle, map choice, or app preference cannot bypass required review, change past records, or silently send externally.",
+        "Repeated source wording, a setting preview or missing destination mapping cannot create a SKU, create an ERP item, silently map a variation, or claim a live ERP sync."
+      ]
+    },
+    "doneConditions": [
+      "All automation/geography/operations/app setting controls have state, permission, simulation, and revocation tests.",
+      "JNY-P01–JNY-P02 have policy revision, approval-gate, customer-visible distinction, missing-mapping and no-auto-SKU tests."
+    ],
+    "requiredEvidence": [
+      "Policy simulation report, grant audit, and disabled-automation rejection test.",
+      "Product-request policy audit showing no automatic SKU/ERP creation and a rejected mapped-variation request without approved mapping."
+    ]
+  },
+  {
+    "id": "ADM-01.04",
+    "title": "Plan, subscription billing, invoices, and restricted-state controls",
+    "summary": "Implement Rocoto subscription plan, seat/usage state, billing contact, payment-method portal request, invoices, cancellation/reactivation, and policy-defined restricted access independently from customer receivables.",
+    "status": "SPECIFIED",
+    "stage": "administration-activation",
+    "dependsOn": [
+      "ADM-01.01",
+      "FND-01.02",
+      "INTG-01.05"
+    ],
+    "docRefs": [
+      "ADM-01",
+      "INTG-01",
+      "QLT-01",
+      "ACT-01"
+    ],
+    "legacyIds": [
+      "A7.8",
+      "A10.1",
+      "A10.2",
+      "A10.3",
+      "A10.4",
+      "A10.5"
+    ],
+    "files": {
+      "actual": [
+        "baseweb/src/app/areas/admin/plan.tsx",
+        "baseweb/src/app/areas/admin/founder.tsx",
+        "baseweb/src/app/capability.tsx"
+      ],
+      "proposed": [
+        "product/backend/billing/subscriptions.py",
+        "product/backend/billing/provider.py",
+        "product/backend/billing/invoices.py"
+      ]
+    },
+    "steps": [
+      "Model subscription status, plan, seats, usage, billing contact, invoices, provider event, and policy outcome with tenant ownership.",
+      "Use provider webhook/portal receipts as separate facts from requested changes and show retry/unknown state.",
+      "Define restriction behavior that preserves policy-allowed read/export/recovery rights while blocking new high-risk acts."
+    ],
+    "assertions": {
+      "positive": [
+        "An authorized billing event updates tenant subscription state only after verified provider evidence."
+      ],
+      "negative": [
+        "A customer payment, frontend plan label, stale usage meter, or unverified callback cannot change subscription authority."
+      ]
+    },
+    "doneConditions": [
+      "Plan, invoice, billing-contact, provider-event, restriction, cancellation, and reactivation tests pass."
+    ],
+    "requiredEvidence": [
+      "Billing event fixture, restricted-state command denial, and provider reconciliation audit."
+    ]
+  },
+  {
+    "id": "ADM-01.05",
+    "title": "Data administration, privacy requests, retention, and legal hold",
+    "summary": "Operate tenant data inventory, retention, export-all, access report, rectification, redaction/delete request, legal hold, recovery window, and support approval as auditable policy-controlled jobs.",
+    "status": "SPECIFIED",
+    "stage": "administration-activation",
+    "dependsOn": [
+      "FND-01.03",
+      "CAT-01.04",
+      "OPS-01.03"
+    ],
+    "docRefs": [
+      "ADM-01",
+      "QLT-01",
+      "ACT-01",
+      "REL-01"
+    ],
+    "legacyIds": [
+      "A7.9"
+    ],
+    "files": {
+      "actual": [
+        "baseweb/src/app/areas/admin/data.tsx",
+        "baseweb/src/app/export-files.ts",
+        "baseweb/src/app/trace.ts"
+      ],
+      "proposed": [
+        "product/backend/admin/data_lifecycle.py",
+        "product/backend/privacy/requests.py",
+        "product/backend/privacy/legal_hold.py"
+      ]
+    },
+    "steps": [
+      "Classify each request by authority, tenant, subject, scope, retention/legal-hold constraints, and reversible/irreversible effect.",
+      "Execute exports, redactions, and deletion requests as job records with review, progress, receipt, and recovery window.",
+      "Protect issued documents and retained evidence under declared legal/retention policy while minimizing sheet/export fields."
+    ],
+    "assertions": {
+      "positive": [
+        "An approved tenant data export has a bounded artifact, audit, expiry, and download authorization record."
+      ],
+      "negative": [
+        "A request, support user, client filter, or expired link cannot cross tenant scope, bypass legal hold, or erase protected history."
+      ]
+    },
+    "doneConditions": [
+      "Data lifecycle, export, retention, hold, redaction, access report, and support-approval tests pass."
+    ],
+    "requiredEvidence": [
+      "Privacy-job audit, legal-hold denial test, and bounded export artifact manifest."
+    ]
+  },
+  {
+    "id": "ADM-01.06",
+    "title": "Administration navigation, setting inventory, and controlled founder operations",
+    "summary": "Make all administration sections and their control inventories reachable, scope-correct, searchable, and auditable, including approved tenant provisioning and operational overview for authorized operators.",
+    "status": "SPECIFIED",
+    "stage": "administration-activation",
+    "dependsOn": [
+      "ADM-01.01",
+      "ADM-01.02",
+      "ADM-01.03",
+      "ADM-01.04",
+      "ADM-01.05"
+    ],
+    "docRefs": [
+      "ADM-01",
+      "ACT-01",
+      "QLT-02",
+      "JNY-03"
+    ],
+    "legacyIds": [
+      "A7.10",
+      "A7.11",
+      "A7.12",
+      "A1.1",
+      "A1.2",
+      "A1.3",
+      "A1.4",
+      "A1.5",
+      "C3.1",
+      "C3.2"
+    ],
+    "files": {
+      "actual": [
+        "baseweb/src/app/areas/admin/founder.tsx",
+        "baseweb/src/app/areas/admin/account.tsx",
+        "baseweb/src/app/route-meta.ts",
+        "baseweb/src/app/navigation.ts",
+        "baseweb/src/app/confirmation-policy-door.tsx",
+        "baseweb/src/app/customer-order-policy.tsx"
+      ],
+      "proposed": [
+        "product/backend/admin/navigation.py",
+        "product/backend/admin/provisioning.py",
+        "product/backend/admin/operations_overview.py"
+      ]
+    },
+    "steps": [
+      "Publish a machine-readable settings/control inventory with section, authority, command, state, copy, and test owner.",
+      "Provision tenant, owner, invite/link, and intake authorization through controlled founder/operator commands with audit and no silent fixture creation.",
+      "Present operator overview as scoped operational projections, not access to raw tenants or private source content.",
+      "Expose the Product Sheet confirmation door and Operations Customer confirmations row/deep route as one shared in-place settings modal, with named close/Done behavior, focus return, Back/Forward selected-preview restoration and no implied send."
+    ],
+    "assertions": {
+      "positive": [
+        "An authorized operator can provision one tenant and retrieve its explicit activation/intake state without reading unrelated tenant data.",
+        "An authorized user can open the scoped customer-confirmations settings surface from the product door and return to the invoking context without changing a message or business record."
+      ],
+      "negative": [
+        "Navigation, a founder-facing view, or an unscoped provisioning request cannot expose credentials, private source contents, or cross-tenant operations.",
+        "A route, sheet close, Done action or stale client navigation state cannot grant policy authority, persist unsaved work, send a preview, or expose another tenant."
+      ]
+    },
+    "doneConditions": [
+      "Every settings section/control is mapped; provisioning, tenant scope, link revoke, and operator read tests pass.",
+      "JNY-C01–JNY-C02 and JNY-P04 have Product/Operations entry, modal history restore, role, focus-return, responsive surface and no-second-command tests."
+    ],
+    "requiredEvidence": [
+      "Settings inventory report, provisioning audit, and cross-tenant operator denial test.",
+      "Settings inventory report plus keyboard/focus/history trace for the Product door, Operations row/deep route and Done close behavior."
+    ]
+  },
+  {
+    "id": "OPS-01.01",
+    "title": "Asynchronous job orchestration, retries, and dead letters",
+    "summary": "Provide the tenant-safe durable job backbone for imports, exports, rendering, sync, intelligence, scans, image work, data lifecycle, retries, cancellation, reconciliation, and manual recovery.",
+    "status": "SPECIFIED",
+    "stage": "automation-services",
+    "dependsOn": [
+      "FND-03.01",
+      "FND-02.02",
+      "FND-01.03"
+    ],
+    "docRefs": [
+      "OPS-01",
+      "FND-03",
+      "INTEL-10",
+      "QLT-02"
+    ],
+    "legacyIds": [],
+    "files": {
+      "actual": [
+        "baseweb/src/app/live-value.tsx",
+        "baseweb/src/app/tick.tsx",
+        "baseweb/src/app/print-queue.ts"
+      ],
+      "proposed": [
+        "product/backend/jobs/models.py",
+        "product/backend/jobs/runner.py",
+        "product/backend/jobs/dead_letters.py"
+      ]
+    },
+    "steps": [
+      "Persist job intent, tenant, actor, source/object revisions, idempotency, priority, state, attempts, and result/receipt references.",
+      "Use bounded retry/backoff/cancel/dead-letter behavior and check staleness/authority before every effect.",
+      "Offer authorized replay/repair that creates a new audit attempt and never overwrites the original outcome."
+    ],
+    "assertions": {
+      "positive": [
+        "A failed job exposes a durable failure/retry state and can resume safely with the same or explicitly new idempotency contract."
+      ],
+      "negative": [
+        "A worker crash, duplicate delivery, stale revision, or cancelled job cannot cause unbounded retries, duplicate effects, or fabricated completion."
+      ]
+    },
+    "doneConditions": [
+      "Job idempotency, retry, cancel, dead-letter, tenant isolation, stale work, and manual replay tests pass."
+    ],
+    "requiredEvidence": [
+      "Job state trace, dead-letter report, and controlled replay audit."
+    ]
+  },
+  {
+    "id": "OPS-01.02",
+    "title": "Operational observability, alerts, and incident mode",
+    "summary": "Instrument health, dependency status, queue/projection/cursor lag, provider state, auth anomalies, data job failures, backup status, and incident acknowledgement without exposing sensitive payloads.",
+    "status": "SPECIFIED",
+    "stage": "assurance-release",
+    "dependsOn": [
+      "OPS-01.01",
+      "FND-01.03",
+      "INTG-01.05"
+    ],
+    "docRefs": [
+      "OPS-01",
+      "REL-01",
+      "QLT-01"
+    ],
+    "legacyIds": [
+      "X8"
+    ],
+    "files": {
+      "actual": [
+        "baseweb/src/app/capability.tsx",
+        "baseweb/src/app/live-value.tsx",
+        "baseweb/src/app/areas/admin/founder.tsx"
+      ],
+      "proposed": [
+        "product/backend/ops/health.py",
+        "product/backend/ops/metrics.py",
+        "product/backend/ops/alerts.py"
+      ]
+    },
+    "steps": [
+      "Define service and business integrity signals with threshold, freshness, tenant impact, owner, and recovery runbook.",
+      "Record alert acknowledgement, escalation, incident state, and remediation commands separately from raw source/business payloads.",
+      "Show operator health states as known, stale, degraded, failed, or unknown with timestamp/evidence."
+    ],
+    "assertions": {
+      "positive": [
+        "A projection lag or repeated receipt failure triggers a traceable alert with a documented investigation path."
+      ],
+      "negative": [
+        "A green-looking dashboard, missing metric, or generic provider icon cannot mask unknown/stale health or leak sensitive content."
+      ]
+    },
+    "doneConditions": [
+      "Metrics, alert, incident, authorization, and redaction tests plus an alert drill are completed."
+    ],
+    "requiredEvidence": [
+      "Alert drill record, health dashboard snapshot, and incident audit trace."
+    ]
+  },
+  {
+    "id": "OPS-01.03",
+    "title": "Backup, restore, projection rebuild, and disaster recovery",
+    "summary": "Operate encrypted, policy-compliant backups and isolated restore/replay exercises that prove recovery point/time objectives, projection parity, document integrity, access control, and cutover readiness.",
+    "status": "SPECIFIED",
+    "stage": "assurance-release",
+    "dependsOn": [
+      "FND-02.02",
+      "FND-03.02",
+      "OPS-01.01"
+    ],
+    "docRefs": [
+      "OPS-01",
+      "REL-01",
+      "QLT-01",
+      "ACT-01"
+    ],
+    "legacyIds": [
+      "X7"
+    ],
+    "files": {
+      "actual": [
+        "baseweb/src/app/areas/admin/data.tsx",
+        "baseweb/src/app/trace.ts"
+      ],
+      "proposed": [
+        "product/backend/recovery/backups.py",
+        "product/backend/recovery/restore.py",
+        "product/backend/recovery/parity.py"
+      ]
+    },
+    "steps": [
+      "Encrypt and classify backups, record backup/restore exercise metadata, and restrict access with audit.",
+      "Restore into an isolated environment and rebuild projections from events/outbox with count/hash/sequence/snapshot parity checks.",
+      "Document recovery decision, RPO/RTO measurement, residual gap, compensating plan, and operator ownership."
+    ],
+    "assertions": {
+      "positive": [
+        "A controlled restore proves tenant scope, event sequence, projection parity, and issued document snapshot integrity."
+      ],
+      "negative": [
+        "A backup success signal, raw snapshot, or recovery command cannot expose data, replace production silently, or skip parity validation."
+      ]
+    },
+    "doneConditions": [
+      "Restore/rebuild exercise reaches the stated recovery objectives and records all parity checks."
+    ],
+    "requiredEvidence": [
+      "Backup manifest, isolated restore report, and projection/document parity result."
+    ]
+  },
+  {
+    "id": "OPS-01.04",
+    "title": "Performance, availability, and recovery-user experience",
+    "summary": "Measure and enforce interactive command/read budgets, job progress, large-data behavior, slow/degraded dependency behavior, mobile rendering, and recoverable user-state copy.",
+    "status": "SPECIFIED",
+    "stage": "assurance-release",
+    "dependsOn": [
+      "OPS-01.01",
+      "OBJ-01.03",
+      "CAT-01.05"
+    ],
+    "docRefs": [
+      "OPS-01",
+      "QLT-02",
+      "REL-01"
+    ],
+    "legacyIds": [
+      "A3.30"
+    ],
+    "files": {
+      "actual": [
+        "baseweb/src/app/live-value.tsx",
+        "baseweb/src/app/shell/viewport.ts",
+        "baseweb/src/app/areas/stock.tsx"
+      ],
+      "proposed": [
+        "product/backend/ops/performance.py",
+        "product/backend/ops/load_tests.py"
+      ]
+    },
+    "steps": [
+      "Set and measure explicit query/command budgets, job performance, large history/catalogue limits, and degraded-dependency behavior.",
+      "Use bounded pagination/virtualization/deferred media and never block an interactive command transaction on external work.",
+      "Keep valid drafts and name exact object/revision/action in pending, failed, conflict, or unknown recovery states."
+    ],
+    "assertions": {
+      "positive": [
+        "A degraded external dependency preserves interactive local validation and reports its exact unavailable/pending state."
+      ],
+      "negative": [
+        "A time-out, large list, slow network, or provider delay cannot block indefinitely, suppress errors, or show a cheerful success."
+      ]
+    },
+    "doneConditions": [
+      "Cold/warm, slow network, large catalogue/history, mobile, degraded provider, and recovery-copy tests meet published budgets."
+    ],
+    "requiredEvidence": [
+      "Performance report, budget dashboard, and degraded-dependency interaction trace."
+    ]
+  },
+  {
+    "id": "QLT-01.01",
+    "title": "Security, privacy, media safety, and least-privilege enforcement",
+    "summary": "Implement defense-in-depth tenant policy, server authorization, secure session/request controls, encrypted storage, signed scoped files, malware scanning, webhook verification, egress controls, and secret-safe operations.",
+    "status": "SPECIFIED",
+    "stage": "assurance-release",
+    "dependsOn": [
+      "FND-01.01",
+      "FND-01.03",
+      "SRC-01.01",
+      "OPS-01.01"
+    ],
+    "docRefs": [
+      "QLT-01",
+      "FND-01",
+      "SRC-01",
+      "INTEL-12",
+      "JNY-01",
+      "JNY-02",
+      "JNY-03",
+      "JNY-06",
+      "JNY-07"
+    ],
+    "legacyIds": [],
+    "files": {
+      "actual": [
+        "baseweb/src/app/net.ts",
+        "baseweb/src/app/capability.tsx",
+        "baseweb/src/app/areas/admin/data.tsx"
+      ],
+      "proposed": [
+        "product/backend/security/authorization.py",
+        "product/backend/security/files.py",
+        "product/backend/security/webhooks.py"
+      ]
+    },
+    "steps": [
+      "Enforce tenant/role policy in database and server layers, and minimize projections/exports by action.",
+      "Use secure sessions, CSRF/XSS/CSP/rate/size/type controls, opaque secret references, signed files, and scan/quarantine gates.",
+      "Audit high-risk attempts, access/read acts, support grants, egress, and administrative actions with redacted summaries."
+    ],
+    "assertions": {
+      "positive": [
+        "A permitted scoped file download is auditable, time-bounded, and inaccessible after expiry/revocation."
+      ],
+      "negative": [
+        "A client filter, unverified webhook, raw file, support request, or UI flag cannot bypass tenant scope, scanner, policy, or secret boundary."
+      ]
+    },
+    "doneConditions": [
+      "Threat, authz, file, webhook, egress, rate, scanning, privacy, and support-access tests are green."
+    ],
+    "requiredEvidence": [
+      "Security test report, dependency/secret review, and abuse-path denial evidence."
+    ]
+  },
+  {
+    "id": "QLT-02.01",
+    "title": "Full control/state accessibility and copy quality assurance",
+    "summary": "Verify every mapped control, opened menu/form, individual field, validation, pending/error/provider state, accessible name, keyboard path, screen-reader announcement, and locale behavior against canonical anatomy/copy tables.",
+    "status": "SPECIFIED",
+    "stage": "assurance-release",
+    "dependsOn": [
+      "OBJ-01.02",
+      "OBJ-01.03",
+      "ADM-01.06"
+    ],
+    "docRefs": [
+      "QLT-02",
+      "OBJ-01",
+      "PRD-01",
+      "CUS-01",
+      "ALB-01",
+      "JNY-01",
+      "JNY-02",
+      "JNY-03",
+      "E188"
+    ],
+    "legacyIds": [],
+    "files": {
+      "actual": [
+        "baseweb/src/app/snapshot/spanish-dictionary.ts",
+        "baseweb/src/app/snapshot/provenance.ts",
+        "baseweb/src/app/anchors.tsx"
+      ],
+      "proposed": [
+        "product/backend/quality/copy_audit.py",
+        "product/backend/quality/a11y_audit.py"
+      ]
+    },
+    "steps": [
+      "Compare the control/copy inventory with implemented selectors/routes and report unmapped or ambiguous actions.",
+      "Test focus, labels, fields, errors, conflict, permission, pending, unavailable, and recovery messages on desktop/narrow layouts.",
+      "Verify translations preserve tenant-entered names, identifiers, values, links, and source evidence while missing strings remain explicit.",
+      "Read E188 list-card, unvalued-order, quantity/unit, Filters and phone keyboard/thumb states at the named viewports; verify concise operator copy and no founder/architecture narration in working UI."
+    ],
+    "assertions": {
+      "positive": [
+        "Each control state has a named action, scope, accessible name, expected copy, and evidence route."
+      ],
+      "negative": [
+        "A missing label, translated business value, inaccessible chart, hidden error, or unmapped interactive action cannot pass release evidence.",
+        "Visible order money, full-width list hover, parallel filter controls, clipped terminal units, keyboard-obscured actions or founder/architecture narration cannot pass E188 evidence."
+      ]
+    },
+    "doneConditions": [
+      "Control/copy completeness, automated accessibility, keyboard/screen-reader, narrow-layout, and locale integrity tests pass.",
+      "E188 current/hover/focus, long-line, draft-filter and keyboard/dock screenshot review passes at the named desktop and phone viewports."
+    ],
+    "requiredEvidence": [
+      "Control coverage report, accessibility audit, copy diff, and locale identity-preservation test.",
+      "E188 visual matrix with list, line, filter and phone-keyboard/dock evidence; kit proof remains distinct from runtime execution."
+    ]
+  },
+  {
+    "id": "ACT-01.01",
+    "title": "Tenant provisioning, intake, and empty-state onboarding",
+    "summary": "Guide a newly provisioned tenant through owner verification, organization setup, catalogue/source intake, review, and honest empty states with no production demo data or fake operational readiness.",
+    "status": "SPECIFIED",
+    "stage": "administration-activation",
+    "dependsOn": [
+      "ADM-01.06",
+      "CAT-01.01"
+    ],
+    "docRefs": [
+      "ACT-01",
+      "CAT-01",
+      "SRC-01",
+      "ADM-01",
+      "JNY-08"
+    ],
+    "legacyIds": [
+      "A11.1",
+      "A11.2",
+      "C1.1",
+      "C1.2"
+    ],
+    "files": {
+      "actual": [
+        "baseweb/src/app/activation-guide.tsx",
+        "baseweb/src/app/activation-web.tsx",
+        "baseweb/src/app/workflow-dialog.tsx",
+        "baseweb/src/app/_parked/onboarding/index.tsx"
+      ],
+      "proposed": [
+        "product/backend/activation/provisioning.py",
+        "product/backend/activation/intake.py"
+      ]
+    },
+    "steps": [
+      "Model provisioned, organization-ready, intake, catalogue-ready, operations-ready, tested, activated, restricted, and closed states from facts.",
+      "Guide owner through authorized source upload/review in the shared bounded task frame and show what remains blocked or unknown per state.",
+      "Keep test/sample fixtures in explicit test lineage only and do not seed production tenants.",
+      "Use the shared 800×600 setup task frame for one-question organisation, scoped salesperson-line connection, authorised intake and explicit unavailable-analysis/manual-review states."
+    ],
+    "assertions": {
+      "positive": [
+        "A new tenant sees a truthful setup path in the shared 800×600 viewport-clamped task frame and can resume accepted intake work after reload.",
+        "A provisioned owner can resume the one-question setup with authorised intake while unavailable analysis remains manual review only."
+      ],
+      "negative": [
+        "An empty tenant, upload preview, or unreviewed proposal cannot claim sellable products, stock, external connections, or activation.",
+        "A setup draft, phone chip, upload preview or manual review cannot claim provider connection, model analysis, stock, sellable catalogue or activation."
+      ]
+    },
+    "doneConditions": [
+      "Provisioning, empty state, intake, resume, permission, and no-demo-data tests pass."
+    ],
+    "requiredEvidence": [
+      "Activation state trace, intake recovery test, and production-fixture denial result.",
+      "1280×800, 390×844 and 320×740 setup frame/keyboard/reload/permission/intake evidence."
+    ]
+  },
+  {
+    "id": "ACT-01.02",
+    "title": "Guided operating readiness and supported activation",
+    "summary": "Complete the tenant activation checklist across people, commercial/stock policy, roleplay, connection tests, legal/billing gates, training/support, and optional rails without treating a finished checklist as deployment authority.",
+    "status": "SPECIFIED",
+    "stage": "administration-activation",
+    "dependsOn": [
+      "ACT-01.01",
+      "ADM-01.01",
+      "ADM-01.04",
+      "INTG-01.05",
+      "SRC-01.03"
+    ],
+    "docRefs": [
+      "ACT-01",
+      "REL-01",
+      "INTG-01",
+      "ADM-01",
+      "JNY-08"
+    ],
+    "legacyIds": [
+      "C2.1",
+      "C2.2",
+      "C4.1",
+      "C4.2",
+      "C4.3",
+      "C4.4"
+    ],
+    "files": {
+      "actual": [
+        "baseweb/src/app/activation-guide.tsx",
+        "baseweb/src/app/activation.ts",
+        "baseweb/src/app/activation-web.tsx",
+        "baseweb/src/app/capability.tsx"
+      ],
+      "proposed": [
+        "product/backend/activation/checklist.py",
+        "product/backend/activation/support.py",
+        "product/backend/activation/roleplay.py"
+      ]
+    },
+    "steps": [
+      "Derive checklist state from durable configuration, test receipt, policy, and owner acceptance facts.",
+      "Run controlled roleplay/source-to-document/output exercises with test lineage and named gaps.",
+      "Offer targeted support/education and retain incomplete/optional rail states explicitly rather than blocking unrelated ready work.",
+      "Carry current role, connection-test, controlled-roleplay and owner-acceptance gates through setup resume without treating a manual review as activation."
+    ],
+    "assertions": {
+      "positive": [
+        "An owner can see the exact remaining activation fact, its responsible role, and its evidence/recovery route.",
+        "A controlled roleplay and accepted gate checklist identify the remaining activation fact and responsible authority."
+      ],
+      "negative": [
+        "A tour completion, model suggestion, configured card, or untested connection cannot activate a high-risk production capability.",
+        "A roleplay turn, configured line or completed browser checklist cannot contact a customer or activate production."
+      ]
+    },
+    "doneConditions": [
+      "All activation states, roleplay, receipt, gap, support, and owner-acceptance tests pass."
+    ],
+    "requiredEvidence": [
+      "Activation checklist report, controlled roleplay trace, and owner-acceptance audit.",
+      "Controlled roleplay, activation-gate, revoke/reload and owner-acceptance evidence at 1280×800, 390×844 and 320×740."
+    ]
+  },
+  {
+    "id": "ACT-01.03",
+    "title": "Migration verification, cutover rehearsal, and tenant support recovery",
+    "summary": "Migrate retained source and business records through review/report/reconciliation, rehearse rollback/compensation, and provide scoped support diagnostics with no unauthorized repair.",
+    "status": "SPECIFIED",
+    "stage": "assurance-release",
+    "dependsOn": [
+      "FND-03.02",
+      "ACT-01.02",
+      "OPS-01.03"
+    ],
+    "docRefs": [
+      "ACT-01",
+      "REL-01",
+      "QLT-01",
+      "OPS-01"
+    ],
+    "legacyIds": [
+      "A11.3",
+      "A11.4"
+    ],
+    "files": {
+      "actual": [
+        "baseweb/src/app/activation-guide.tsx",
+        "baseweb/src/app/areas/admin/data.tsx",
+        "baseweb/src/app/trace.ts"
+      ],
+      "proposed": [
+        "product/backend/migration/verify.py",
+        "product/backend/activation/cutover.py",
+        "product/backend/support/diagnostics.py"
+      ]
+    },
+    "steps": [
+      "Validate imported IDs, rows, totals, units, prices, archive state, source retention, and tenant scope before activation.",
+      "Rehearse forward migration, rollback/compensation, support diagnostics, and recovery in isolated environments.",
+      "Issue a tenant-readable report that separates accepted, skipped, ambiguous, failed, and review-needed facts."
+    ],
+    "assertions": {
+      "positive": [
+        "A rehearsal reports exact parity and recovery evidence for the selected tenant/test lineage."
+      ],
+      "negative": [
+        "A migration, support session, or accepted report cannot silently reshape historical documents, access unrelated tenants, or authorize production cutover."
+      ]
+    },
+    "doneConditions": [
+      "Migration parity, rollback/compensation, support access expiry, and activation acceptance exercises pass."
+    ],
+    "requiredEvidence": [
+      "Migration verification report, rehearsal result, and scoped-support audit."
+    ]
+  },
+  {
+    "id": "REL-01.01",
+    "title": "Release evidence board and full-system acceptance ledger",
+    "summary": "Collect required contract, integration, end-to-end, accessibility, failure, recovery, performance, security, and operational evidence by task/control/state, reporting only verified scope.",
+    "status": "SPECIFIED",
+    "stage": "assurance-release",
+    "dependsOn": [
+      "QLT-01.01",
+      "QLT-02.01",
+      "OPS-01.02",
+      "OPS-01.03",
+      "OPS-01.04",
+      "INT-01.05"
+    ],
+    "docRefs": [
+      "REL-01",
+      "QLT-01",
+      "QLT-02",
+      "INTEL-13",
+      "INTEL-14",
+      "JNY-07"
+    ],
+    "legacyIds": [
+      "B5.1",
+      "B5.2",
+      "B5.3"
+    ],
+    "files": {
+      "actual": [
+        "baseweb/src/app/snapshot/provenance.ts",
+        "drives/drive-176-sheet.py",
+        "drives/drive-177-save-states.py"
+      ],
+      "proposed": [
+        "product/backend/release/evidence.py",
+        "product/backend/release/ledger.py"
+      ]
+    },
+    "steps": [
+      "Require source/release/drive/scope/result links for every actual evidence entry and retain failed/blocked results.",
+      "Calculate task/control/state coverage with no substitution of a kit path for runtime or production proof.",
+      "Block promotion when required evidence is missing, stale, contradictory, or outside the selected release revision."
+    ],
+    "assertions": {
+      "positive": [
+        "The ledger reports an exact release scope, each required proof, and any remaining blocked or failed condition."
+      ],
+      "negative": [
+        "A screenshot, design demo, partial test, green aggregate, or unrelated release cannot tick an unproven production boundary."
+      ]
+    },
+    "doneConditions": [
+      "Evidence schema, task/control rollup, stale-proof, failure retention, and release-block tests pass."
+    ],
+    "requiredEvidence": [
+      "Release ledger export and an intentional missing-proof gate failure."
+    ]
+  },
+  {
+    "id": "REL-01.02",
+    "title": "Staged rollout, monitoring, rollback, and incident communications",
+    "summary": "Prepare versioned deployment artifacts, safe rollout cohorts, monitored canary/rollback criteria, compensating migration path, operator ownership, and incident communication without self-authorizing production. Every cohort records the release profile's designed, enabled and independently proven capabilities; the order-review launch profile permits only its explicit active surface and cannot silently activate commercial, inventory, customer-outbound, supplier-intake or ERP leaves.",
+    "status": "SPECIFIED",
+    "stage": "assurance-release",
+    "dependsOn": [
+      "REL-01.01",
+      "ACT-01.03",
+      "INT-01.05"
+    ],
+    "docRefs": [
+      "REL-01",
+      "INTEL-15",
+      "OPS-01",
+      "ACT-01"
+    ],
+    "legacyIds": [
+      "X6"
+    ],
+    "files": {
+      "actual": [
+        "baseweb/src/app/stage.tsx",
+        "baseweb/src/app/snapshot/provenance.ts"
+      ],
+      "proposed": [
+        "product/backend/release/rollout.py",
+        "product/backend/release/rollback.py",
+        "product/backend/ops/incidents.py"
+      ]
+    },
+    "steps": [
+      "Define immutable release version, schema compatibility, cohort, explicit release-profile capability matrix (designed/enabled/proven), success/failure thresholds, owner, and abort criteria.",
+      "Exercise rollback or compensating event, service/projection recovery, and operator communication in an isolated controlled environment.",
+      "Separate deployed, designed, enabled, independently proven, monitored, rolled back, and incident states with durable evidence."
+    ],
+    "assertions": {
+      "positive": [
+        "A controlled rollout can halt and return to the documented safe state with evidence of the exact reason and each capability's enabled/proven boundary."
+      ],
+      "negative": [
+        "A build, preview, partial deployment, toggle, configured integration, or successful canary cannot bypass capability/release gates or represent full production acceptance."
+      ]
+    },
+    "doneConditions": [
+      "Rollout/abort/rollback, schema compatibility, capability-matrix, monitoring, and incident-drill tests are complete."
+    ],
+    "requiredEvidence": [
+      "Isolated rollout rehearsal, rollback result, alert/incident drill record, and order-review capability-matrix/disabled-surface proof."
+    ]
+  },
+  {
+    "id": "REL-01.03",
+    "title": "Production authorization and owner-go gate",
+    "summary": "Require the recorded explicit owner authorization only after all evidence, operational ownership, recovery, security, accessibility, provider, billing, and tenant activation gates are satisfied.",
+    "status": "SPECIFIED",
+    "stage": "assurance-release",
+    "dependsOn": [
+      "REL-01.01",
+      "REL-01.02",
+      "ACT-01.03"
+    ],
+    "docRefs": [
+      "REL-01",
+      "ACT-01",
+      "QLT-01",
+      "QLT-02"
+    ],
+    "legacyIds": [],
+    "files": {
+      "actual": [
+        "baseweb/src/app/snapshot/provenance.ts",
+        "baseweb/src/app/stage.tsx"
+      ],
+      "proposed": [
+        "product/backend/release/authorization.py"
+      ]
+    },
+    "steps": [
+      "List every required gate, evidence revision, unresolved risk, owner, and rollout/rollback decision in one reviewable authorization record.",
+      "Require explicit recorded owner go after the evidence review; preserve denial/defer conditions as first-class outcomes.",
+      "Bind enablement to the approved release/cutover record and expire/revoke it if material evidence changes."
+    ],
+    "assertions": {
+      "positive": [
+        "A production enablement decision references the exact reviewed release and owner authorization."
+      ],
+      "negative": [
+        "A task status, passing build, agent action, or implied permission cannot deploy, enable external sends, or override a production gate."
+      ]
+    },
+    "doneConditions": [
+      "Authorization/deny/defer/expiry and evidence-change invalidation tests pass."
+    ],
+    "requiredEvidence": [
+      "Owner-go record template, deliberate-denial test, and release binding audit."
+    ]
+  },
+  {
+    "id": "REL-01.04",
+    "title": "Public documentation build and publication gate",
+    "summary": "Generate the product documentation site solely from the public canonical allowlist and task graph, validate source hashes, links, task/control coverage, and keep internal historical material out of the published artifact.",
+    "status": "SPECIFIED",
+    "stage": "assurance-release",
+    "dependsOn": [
+      "REL-01.01",
+      "QLT-02.01"
+    ],
+    "docRefs": [
+      "REL-01",
+      "QLT-01",
+      "QLT-02"
+    ],
+    "legacyIds": [
+      "D1.6"
+    ],
+    "files": {
+      "actual": [
+        "baseweb/app.html",
+        "baseweb/tools/reference-authored.mjs"
+      ],
+      "proposed": [
+        "tools/build_product_docs.py",
+        "specs/taskgraph/v1/graph.json",
+        "tools/product_docs_assets/docs.css"
+      ]
+    },
+    "steps": [
+      "Allowlist selected public canonical Markdown and taskgraph records; reject private-note links, secrets, host addresses, and disallowed source paths.",
+      "Render a responsive hierarchy, sidebar, table of contents, search, task/control deep links, and source/revision manifest next to the app artifact.",
+      "Fail build for missing core docs, unsafe content, invalid dependencies, unmapped obligations/controls, broken public links, or unverifiable evidence status."
+    ],
+    "assertions": {
+      "positive": [
+        "The generated site exposes only approved documents and a traceable task/control graph with hashes."
+      ],
+      "negative": [
+        "A legacy operating note, raw source/customer text, credential, address, or broken private link cannot enter the public build."
+      ]
+    },
+    "doneConditions": [
+      "The documentation generator validates cleanly, rejects deliberate unsafe/missing/unmapped fixtures, and renders the expected local directory."
+    ],
+    "requiredEvidence": [
+      "Build manifest, validation report, public-link check, and negative publication-gate test."
+    ]
+  }
+]

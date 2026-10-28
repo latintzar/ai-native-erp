@@ -1,0 +1,41 @@
+fastapi
+uvicorn[standard]
+httpx
+python-multipart
+twilio>=9.0
+# The floor is the SDK that exports `anthropic.OverloadedError`, which `orders.py`,
+# `brain/skuparse.py` and `brain/understand.py` all catch. Below it the except clause itself
+# raises AttributeError, so a model failure is neither retried nor reported; the check that
+# found this is `backend/tests/vital_mindcheck.py`.
+anthropic>=0.116
+# Stripe SDK — onboarding €50 setup fee (Checkout + invoice + webhook, brain/setupfee.py) and the
+# Connect / subscriptions layers (brain/stripe_*.py).
+stripe>=9,<13
+asyncpg
+pypdf
+# The PRIMARY PDF text reader (transcribe.extract_pdf_text). pdfium resolves the custom font
+# encodings a trade catalogue ships with; pypdf above returns those as scrambled glyph indices,
+# which is how Solobuey's price-less PDF once produced an invented tariff. Pure wheel, no system
+# binary. pypdf stays as the fallback.
+pypdfium2
+google-auth
+websockets
+openpyxl
+segno
+# ── Order-brain grounding (self-hosted, ONNX/CPU) ──
+pgvector
+fastembed
+numpy
+# ── Medusa integration: canonical E.164 phone identity (region ES) ──
+phonenumbers
+# ── The order-confirmation card, rendered as an image for WhatsApp (brain/order_card.py) ──
+Pillow
+# eval harness (the ship gate: pytest tests/)
+pytest
+# channel secrets (channels.py) — AES-256-GCM for a customer WhatsApp business token, which is
+# the one credential here we must be able to USE rather than merely verify. Already present as a
+# transitive dep; pinned explicitly because a direct import must not rely on somebody else’s tree.
+cryptography>=42
+# Explicit versioned schema changes; asyncpg remains the application database driver.
+alembic>=1.19,<2
+SQLAlchemy[asyncio]>=2.0,<2.1

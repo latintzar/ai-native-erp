@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- A PHOTO STAND-IN: the written order a customer sends as a picture (FEED-IA §47.3).
+     The words drawn here are the words the turn's `reading` states, exactly — the asset and its
+     transcript are one text, so nothing the surface claims to have read is invented. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img"
+     aria-label="A written order on a notepad page">
+  <rect width="800" height="600" fill="#EFE9E1"/>
+  <rect x="64" y="40" width="672" height="520" rx="6" fill="#FCFBF8"/>
+  <g stroke="#DCD5CB" stroke-width="1.5">
+    <line x1="96" y1="176" x2="704" y2="176"/>
+    <line x1="96" y1="248" x2="704" y2="248"/>
+    <line x1="96" y1="320" x2="704" y2="320"/>
+    <line x1="96" y1="392" x2="704" y2="392"/>
+    <line x1="96" y1="464" x2="704" y2="464"/>
+  </g>
+  <line x1="128" y1="40" x2="128" y2="560" stroke="#E6BFC2" stroke-width="1.5"/>
+  <g fill="#26333F" font-family="Georgia, 'Times New Roman', serif" font-size="38">
+    <text x="150" y="120" font-size="42" letter-spacing="1.5">ORDER — Thursday</text>
+    <text x="150" y="166">6 cajas tomate rama</text>
+    <text x="150" y="238">2 kg gamba roja</text>
+    <text x="150" y="310">1 caja pulpo</text>
+    <text x="150" y="382">Leave it at the back door</text>
+  </g>
+  <text x="150" y="520" fill="#6C7A86" font-family="Georgia, 'Times New Roman', serif" font-size="30">Marta</text>
+</svg>

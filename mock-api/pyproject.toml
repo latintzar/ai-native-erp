@@ -1,0 +1,33 @@
+[project]
+name = "rocoto-kit-runtime"
+version = "1.0.0"
+description = "The kit runtime — Parsewise, Google Places, Deepgram, Twilio and our own paper read back, behind kit.soyrocoto.com/api (FEED-IA §196.5, §196.6; PAR-10)"
+requires-python = ">=3.11"
+dependencies = [
+  "fastapi>=0.110,<1",
+  "uvicorn>=0.27,<1",
+  "httpx>=0.27,<1",
+  "google-auth[requests]>=2.57,<3",
+  "python-multipart>=0.0.9",
+  "twilio>=9,<10",
+  "websockets>=14,<18",
+  "opencv-python-headless>=4.9,<5",
+  "zxing-cpp>=2.2",
+  "numpy>=1.26",
+  "pillow>=10",
+]
+
+[project.optional-dependencies]
+# no pytest-asyncio: the async paths are driven with asyncio.run in plain tests.
+# qrcodegen draws the real symbol on the synthetic packing sheet (tests/paper_page.py), so the
+# registration suite reads a mark rather than a picture of one. It is a TEST dependency and stays
+# out of requirements.txt: the service DECODES, and decoding is zxing-cpp's job. `pip install -e
+# '.[test]'` is what a machine holding only requirements.txt needs before `pytest` collects.
+test = ["pytest>=8", "qrcodegen>=1.8"]
+
+[tool.setuptools.packages.find]
+# the package is app/; deploy/ is scripts and units for the box, never installed
+include = ["app*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "product": "rocoto-cedar",
+  "environments": [
+    "development"
+  ],
+  "effects": "capture",
+  "adapter": [
+    "python3",
+    "app/tools/cedar-testdata-adapter.py"
+  ],
+  "scenarios": {
+    "cedar-money-v1": "app/src/prototypes/cedar/fixtures/money-v1.json"
+  },
+  "inputs": [
+    "tools/vendor/testdata/adapters/fixtures.py",
+    "app/src/**/*.ts",
+    "app/src/**/*.tsx",
+    "app/src/**/*.json",
+    "app/src/assets/*",
+    "app/package.json",
+    "app/package-lock.json",
+    "app/tools/test-money-seed.mjs",
+    "app/tools/test-money-history.mjs",
+    "app/tools/test-money-clock.mjs",
+    "app/tools/test-sample-bank.mjs",
+    "app/tools/ts-module.mjs"
+  ]
+}

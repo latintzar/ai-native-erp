@@ -1,0 +1,837 @@
+[
+  {
+    "id": "INT-01.01",
+    "title": "Deterministic source parsing and exact-SKU candidate resolution",
+    "summary": "Build the tier-zero parser for source wording, SKU candidates, unit/pack reconciliation, numeric ordering, attachment gating, and explicit unresolved output before any model or commercial command is considered.",
+    "status": "SPECIFIED",
+    "stage": "automation-services",
+    "dependsOn": [
+      "SRC-01.02",
+      "CAT-01.02",
+      "COM-01.01"
+    ],
+    "docRefs": [
+      "INT-01",
+      "INTEL-03",
+      "INTEL-06",
+      "SRC-01",
+      "CAT-01",
+      "JNY-01"
+    ],
+    "legacyIds": [
+      "A4.3",
+      "A6.5",
+      "A6.6",
+      "A6.7"
+    ],
+    "files": {
+      "actual": [
+        "baseweb/src/app/chip-parse.ts",
+        "baseweb/src/app/chip-entry.tsx",
+        "baseweb/src/app/reference-lexicon.ts",
+        "baseweb/src/app/reasoning-door.tsx"
+      ],
+      "proposed": [
+        "product/backend/intelligence/deterministic_parse.py",
+        "product/backend/intelligence/sku_resolution.py",
+        "product/backend/intelligence/unit_reconciliation.py"
+      ]
+    },
+    "steps": [
+      "Parse source text and readable attachments into versioned token, candidate, unit, pack, and uncertainty facts.",
+      "Match only tenant-authorized SKU/alias candidates and retain alternative candidates plus matching evidence.",
+      "Stop at explicit unresolved state when a unit, attachment, source, or product distinction cannot be reconciled."
+    ],
+    "assertions": {
+      "positive": [
+        "A clean exact-SKU/compatible-unit input yields a reproducible structured proposal with source spans."
+      ],
+      "negative": [
+        "An unread attachment, ambiguous variant, unrecognized unit, or missing price cannot become a fabricated line, total, or outbound answer."
+      ]
+    },
+    "doneConditions": [
+      "Deterministic parser cases cover accents, aliases, variants, pack/unit mismatch, numeric sort, attachments, and unknown values."
+    ],
+    "requiredEvidence": [
+      "Parser corpus result, source-span trace, and unresolved-case regression set."
+    ]
+  },
+  {
+    "id": "INT-01.02",
+    "title": "Bounded reasoning, prediction, and constrained reply path",
+    "summary": "Run approved intelligence only through versioned releases and authorized command/proposal envelopes, producing bounded finished-albarán predictions or reply drafts with evidence, alternatives, cost, and human/tenant grant policy.",
+    "status": "SPECIFIED",
+    "stage": "automation-services",
+    "dependsOn": [
+      "INT-01.01",
+      "ALB-01.03",
+      "FND-03.01"
+    ],
+    "docRefs": [
+      "INT-01",
+      "INTEL-04",
+      "INTEL-05",
+      "INTEL-06",
+      "INTEL-10",
+      "JNY-01"
+    ],
+    "legacyIds": [
+      "A6.0",
+      "A6.2",
+      "A6.3",
+      "A6.8",
+      "A6.9",
+      "A6.10"
+    ],
+    "files": {
+      "actual": [
+        "baseweb/src/app/reasoning-door.tsx",
+        "baseweb/src/app/test-chat.tsx",
+        "baseweb/src/app/trace.ts",
+        "baseweb/src/app/shell/chats.tsx"
+      ],
+      "proposed": [
+        "product/backend/intelligence/runs.py",
+        "product/backend/intelligence/prediction.py",
+        "product/backend/intelligence/replies.py"
+      ]
+    },
+    "steps": [
+      "Construct minimized, tenant-authorized context from retained evidence and versioned release policy.",
+      "Persist run, model/prompt/release version, input evidence hash, budget decision, candidate output, alternatives, and outcome.",
+      "Convert accepted intelligence only into explicit proposal or command routes; external reply requires separate policy and provider evidence."
+    ],
+    "assertions": {
+      "positive": [
+        "A permitted approved release creates a reviewable prediction or reply draft with exact evidence and version lineage."
+      ],
+      "negative": [
+        "A model cannot auto-issue, reprice, alter stock, resolve a concern, send externally, or claim an unavailable provider succeeded."
+      ]
+    },
+    "doneConditions": [
+      "Prediction/reply tests cover release allowlist, grant denial, budget denial, cancellation, stale input, and source-evidence inspection."
+    ],
+    "requiredEvidence": [
+      "Frozen-release evaluation trace, budget decision record, and denied-mutation test."
+    ]
+  },
+  {
+    "id": "INT-01.03",
+    "title": "Intelligence concerns, explanation, and human review lifecycle",
+    "summary": "Specify observable scoped concern UI: one exact target, one red boundary, a concise dismissible reason, local re-evaluation after relevant edit or sent message, and retained disclosure history. Durable storage, model evaluation and learning remain later seams.",
+    "status": "SPECIFIED",
+    "stage": "automation-services",
+    "dependsOn": [
+      "INT-01.01",
+      "FND-03.01"
+    ],
+    "docRefs": [
+      "INT-01",
+      "INTEL-07",
+      "INTEL-02",
+      "QLT-01",
+      "JNY-02",
+      "JNY-03"
+    ],
+    "legacyIds": [
+      "A2.14",
+      "A6.11"
+    ],
+    "files": {
+      "actual": [
+        "baseweb/src/app/anxiety.tsx",
+        "baseweb/src/app/dismissals.ts",
+        "baseweb/src/app/thread-trace.ts",
+        "baseweb/src/app/attention-dot.tsx"
+      ],
+      "proposed": [
+        "product/backend/concerns/models.py",
+        "product/backend/concerns/review.py",
+        "product/backend/concerns/explanations.py"
+      ]
+    },
+    "steps": [
+      "Define one exact UI target: message/email card, field, full product row or contiguous row group; use one red boundary and a short dismissible colleague-style explanation immediately above it.",
+      "Re-evaluate only a relevant edited or sent-message scope; resolve, replace or dismiss stale reply notes with optional brief acknowledgement while retaining earlier local history.",
+      "Use the same scope/reason/lifecycle in full Albarán, condensed order-in-chat and composer tray; do not imply a provider, model or outbound action."
+    ],
+    "assertions": {
+      "positive": [
+        "A dismissed concern remains auditable and can reopen when its source/policy changes."
+      ],
+      "negative": [
+        "A generic rating, confidence score, or unscoped model explanation cannot override a commercial or source fact."
+      ]
+    },
+    "doneConditions": [
+      "Concern scope, lifecycle, visibility, accessibility, and no-direct-mutation tests are green."
+    ],
+    "requiredEvidence": [
+      "Concern audit history, policy-change reopen test, and explanation source-link trace."
+    ]
+  },
+  {
+    "id": "INT-01.04",
+    "title": "Interactive catalogue and variant intelligence",
+    "summary": "Deliver an interactive, review-first catalogue intelligence surface for category feedback, variant interpretation, corrected descriptions, alternatives, and injection-safe conversation state.",
+    "status": "SPECIFIED",
+    "stage": "automation-services",
+    "dependsOn": [
+      "CAT-01.02",
+      "PRD-01.02",
+      "INT-01.01"
+    ],
+    "docRefs": [
+      "INT-01",
+      "INTEL-08",
+      "CAT-01",
+      "PRD-01"
+    ],
+    "legacyIds": [
+      "A9.5",
+      "A9.6",
+      "A9.7"
+    ],
+    "files": {
+      "actual": [
+        "baseweb/src/app/catalogue.ts",
+        "baseweb/src/app/test-chat.tsx",
+        "baseweb/src/app/product-creation.tsx",
+        "baseweb/src/app/reasoning-door.tsx"
+      ],
+      "proposed": [
+        "product/backend/intelligence/catalogue_interaction.py",
+        "product/backend/intelligence/proposals.py"
+      ]
+    },
+    "steps": [
+      "Scope the interaction to tenant-authorized catalogue records and source evidence with a bounded release/tool policy.",
+      "Return proposal, alternatives, missing facts, original wording, evidence, and review actions rather than direct record mutations.",
+      "Treat untrusted source text as data and prevent it from overriding instructions, authority, or tenant scope."
+    ],
+    "assertions": {
+      "positive": [
+        "A reviewer can correct a proposed classification or variant description and see the revisioned proposal change."
+      ],
+      "negative": [
+        "Conversation text cannot grant capabilities, alter policy, create a sellable SKU, or publish a category change without review."
+      ]
+    },
+    "doneConditions": [
+      "Interactive proposal, alternative, correction, injection-safety, permission, and failure-state tests pass."
+    ],
+    "requiredEvidence": [
+      "Proposal review trace, adversarial input suite, and scoped interaction transcript fixture."
+    ]
+  },
+  {
+    "id": "INT-01.05",
+    "title": "Evaluation, replay, trace export, and error analysis",
+    "summary": "Create consent/retention-eligible test sets, chronological replay, frozen release evaluation, metrics, error slices, trace export, and a release gate that reports uncertainty honestly.",
+    "status": "SPECIFIED",
+    "stage": "assurance-release",
+    "dependsOn": [
+      "INT-01.02",
+      "SRC-01.03"
+    ],
+    "docRefs": [
+      "INT-01",
+      "INTEL-13",
+      "INTEL-14",
+      "REL-01"
+    ],
+    "legacyIds": [
+      "X3",
+      "X4",
+      "X5"
+    ],
+    "files": {
+      "actual": [
+        "baseweb/src/app/thread-trace.ts",
+        "baseweb/src/app/trace.ts",
+        "baseweb/src/app/test-panel.tsx"
+      ],
+      "proposed": [
+        "product/backend/evals/datasets.py",
+        "product/backend/evals/replay.py",
+        "product/backend/evals/reporting.py"
+      ]
+    },
+    "steps": [
+      "Register dataset consent, retention, tenant/test lineage, date boundaries, and task-specific expected outcomes.",
+      "Replay inputs chronologically against frozen releases and capture evidence, decision, abstention, cost, latency, and error class.",
+      "Export redacted traces under authorization and require a reviewed metric definition before making performance claims."
+    ],
+    "assertions": {
+      "positive": [
+        "A release report states dataset, version, abstentions, error slices, and exact evidence for each claimed metric."
+      ],
+      "negative": [
+        "A design demo, unversioned prompt, future context, raw customer text, or ambiguous denominator cannot become an accuracy claim."
+      ]
+    },
+    "doneConditions": [
+      "Dataset governance, replay chronology, trace-redaction, metric-definition, and regression-gate tests are recorded."
+    ],
+    "requiredEvidence": [
+      "Evaluation manifest, frozen replay report, and redacted trace export test."
+    ]
+  },
+  {
+    "id": "INT-01.06",
+    "title": "Authorized backfill, correction learning, and model recovery",
+    "summary": "Backfill approved source-to-record links and learning inputs through resumable, reviewable, tenant-safe jobs that preserve historical facts and never promote a correction merely because it repeats.",
+    "status": "SPECIFIED",
+    "stage": "automation-services",
+    "dependsOn": [
+      "INT-01.03",
+      "FND-03.02",
+      "OPS-01.01"
+    ],
+    "docRefs": [
+      "INT-01",
+      "INTEL-10",
+      "INTEL-12",
+      "INTEL-15"
+    ],
+    "legacyIds": [],
+    "files": {
+      "actual": [
+        "baseweb/src/app/dismissals.ts",
+        "baseweb/src/app/line-notes.tsx",
+        "baseweb/src/app/thread-trace.ts"
+      ],
+      "proposed": [
+        "product/backend/intelligence/backfill.py",
+        "product/backend/intelligence/corrections.py",
+        "product/backend/intelligence/recovery.py"
+      ]
+    },
+    "steps": [
+      "Select only policy-eligible source/record pairs and record selection criteria, release, actor, and approval.",
+      "Run bounded idempotent backfill chunks with proposal/review outputs and no direct historical rewrite.",
+      "Supersede or retract dependent proposals when correction/source provenance changes."
+    ],
+    "assertions": {
+      "positive": [
+        "A resumed backfill returns the same request/proposal IDs and reports reviewed versus pending results."
+      ],
+      "negative": [
+        "Repeated wording, retrospective model output, or a failed job cannot rewrite issued documents, stock, price, or source history."
+      ]
+    },
+    "doneConditions": [
+      "Backfill eligibility, resume, correction supersession, retention, and no-historical-rewrite tests pass."
+    ],
+    "requiredEvidence": [
+      "Backfill checkpoint trace, proposal supersession audit, and historical replay regression."
+    ]
+  },
+  {
+    "id": "INT-02.01",
+    "title": "Illustration library, reference audit, and SKU association model",
+    "summary": "Keep the approved image library, visual aliases, reference audit, asset checksum, source/license metadata, and SKU-owned association distinct from tenant catalogue identity and Internal-category/group or Related-items presentation.",
+    "status": "SPECIFIED",
+    "stage": "domain-records",
+    "dependsOn": [
+      "CAT-01.02",
+      "FND-02.01"
+    ],
+    "docRefs": [
+      "INT-02",
+      "CAT-01",
+      "INTEL-11",
+      "INTEL-12"
+    ],
+    "legacyIds": [
+      "X1",
+      "X2"
+    ],
+    "files": {
+      "actual": [
+        "baseweb/src/app/painting-map.ts",
+        "baseweb/src/app/sku-artwork.tsx",
+        "assets/paintings/manifest.json"
+      ],
+      "proposed": [
+        "product/backend/media/library.py",
+        "product/backend/media/sku_associations.py",
+        "product/backend/media/reference_gate.py"
+      ]
+    },
+    "steps": [
+      "Register immutable asset checksum, source/provider, review state, permitted use, and visual alias without asserting taxonomy or SKU membership.",
+      "Attach a reviewed association to each SKU independently, allowing byte deduplication without approval inheritance.",
+      "Keep any optional Internal-category/group or Related-items presentation art labelled separately from item identity and assignment."
+    ],
+    "assertions": {
+      "positive": [
+        "An approved library asset can be associated to one reviewed SKU with retained provenance and unchanged SKU identity."
+      ],
+      "negative": [
+        "A visual alias, reference class, Internal-category/group or Related-items presentation, or generic fallback cannot add a SKU or automatically approve a variant image."
+      ]
+    },
+    "doneConditions": [
+      "Library/association/alias/Internal-category/group or Related-items presentation and provenance tests are green."
+    ],
+    "requiredEvidence": [
+      "Asset association audit, checksum validation, and variant non-inheritance test."
+    ]
+  },
+  {
+    "id": "INT-02.02",
+    "title": "Budgeted asynchronous image generation worker",
+    "summary": "Implement a provider-isolated image request worker with reviewed description, prompt/style version/hash, SKU revision, budget authorization, idempotency, job lifecycle, provider receipt, timeout, retry, cancel, and dead-letter handling.",
+    "status": "SPECIFIED",
+    "stage": "automation-services",
+    "dependsOn": [
+      "INT-02.01",
+      "FND-03.01",
+      "OPS-01.01"
+    ],
+    "docRefs": [
+      "INT-02",
+      "INTEL-10",
+      "INTEL-11",
+      "QLT-01"
+    ],
+    "legacyIds": [
+      "B3.144"
+    ],
+    "files": {
+      "actual": [
+        "baseweb/src/app/sku-artwork.tsx",
+        "assets/paintings/pipeline.py",
+        "assets/paintings/reference_gate.py"
+      ],
+      "proposed": [
+        "product/backend/media/image_jobs.py",
+        "product/backend/media/provider_adapter.py",
+        "product/backend/media/budgets.py"
+      ]
+    },
+    "steps": [
+      "Deduplicate requests by tenant/SKU/revision/visual-description/prompt-version and authorize budget before provider submission.",
+      "Persist requested, validated, submitted, receipt, candidate, review, approved/rejected, failed, cancelled, and stale states.",
+      "Validate returned bytes and reference constraints before a candidate can enter review."
+    ],
+    "assertions": {
+      "positive": [
+        "A valid authorized request produces one durable job and captures the provider receipt only after it exists."
+      ],
+      "negative": [
+        "A local request, absent credential, duplicate retry, malformed asset, over-budget call, or provider failure cannot publish or claim generation success."
+      ]
+    },
+    "doneConditions": [
+      "Mock-provider idempotency, budget, timeout, cancellation, malformed-image, and dead-letter tests pass before any paid proof."
+    ],
+    "requiredEvidence": [
+      "Job state-machine trace, mock receipt fixture, and budget-denial test."
+    ]
+  },
+  {
+    "id": "INT-02.03",
+    "title": "Image candidate review, publication, and replacement recovery",
+    "summary": "Review image candidates for SKU form, packaging, brand, safety, and source policy before assignment; retain last approved art during replacement and keep all decisions auditable.",
+    "status": "SPECIFIED",
+    "stage": "automation-services",
+    "dependsOn": [
+      "INT-02.01",
+      "INT-02.02",
+      "FND-01.02"
+    ],
+    "docRefs": [
+      "INT-02",
+      "INTEL-11",
+      "INTEL-12",
+      "QLT-01",
+      "JNY-02"
+    ],
+    "legacyIds": [],
+    "files": {
+      "actual": [
+        "baseweb/src/app/sku-artwork.tsx",
+        "baseweb/src/app/product-face.tsx",
+        "assets/paintings/reference_gate.py"
+      ],
+      "proposed": [
+        "product/backend/media/review.py",
+        "product/backend/media/publish.py",
+        "product/backend/media/uploads.py"
+      ]
+    },
+    "steps": [
+      "Validate upload type/size/scan/quarantine and bind candidates to exact tenant/SKU/revision.",
+      "Require reviewer authority, decision, reason, and content/provenance gate before association update.",
+      "Keep approved asset visible while a requested/candidate/failed replacement is pending and preserve archive restrictions."
+    ],
+    "assertions": {
+      "positive": [
+        "An approved candidate replaces only its reviewed SKU association and creates an auditable revision."
+      ],
+      "negative": [
+        "An upload, generated candidate, archived SKU, or family image cannot assign itself or erase the previous approved asset."
+      ]
+    },
+    "doneConditions": [
+      "Upload/review/reject/approve/replacement/archive and stale-candidate tests pass."
+    ],
+    "requiredEvidence": [
+      "Artwork review audit, upload quarantine test, and last-approved fallback test."
+    ]
+  },
+  {
+    "id": "INTG-01.01",
+    "title": "Messaging integration, inbound source rail, and future outbound receipt boundary",
+    "summary": "Implement a provider adapter for verified inbound messaging, per-tenant connection ownership, test isolation, capability checks, and revoke behavior. The full production outbound receipt boundary remains specified, but the order-review profile enables only native WhatsApp handoff and never offers customer send, template, queue, or delivery claims.",
+    "status": "SPECIFIED",
+    "stage": "automation-services",
+    "dependsOn": [
+      "SRC-01.01",
+      "FND-01.02",
+      "INT-01.02"
+    ],
+    "docRefs": [
+      "INTG-01",
+      "SRC-01",
+      "INTEL-05",
+      "QLT-01",
+      "JNY-03",
+      "JNY-06",
+      "JNY-08"
+    ],
+    "legacyIds": [
+      "B1.1",
+      "B1.2",
+      "B1.3",
+      "B1.4"
+    ],
+    "files": {
+      "actual": [
+        "baseweb/src/app/connect.tsx",
+        "baseweb/src/app/shell/chats.tsx",
+        "baseweb/src/app/test-chat.tsx"
+      ],
+      "proposed": [
+        "product/backend/integrations/messaging.py",
+        "product/backend/integrations/messaging_webhooks.py",
+        "product/backend/integrations/messaging_receipts.py"
+      ]
+    },
+    "steps": [
+      "Verify origin, signature, replay window, schema, mapping, and idempotency before source retention.",
+      "Route the order-review profile through no-outbound transport and native-provider handoff; a future live send requires its own explicit tenant grant/policy and release-profile enablement.",
+      "When outbound is separately enabled, record delivery request, provider submission, receipt, failure, retry, and reconciliation as distinct auditable facts.",
+      "Bind messaging connection capability to the named tenant line and assigned salesperson; setup displays pending/unavailable separately from verified provider capability and does not confuse inbound access with outbound permission."
+    ],
+    "assertions": {
+      "positive": [
+        "A verified authorised inbound line records its owner and native handoff boundary without widening customer scope.",
+        "When separately enabled, an authorized live send becomes delivered only after a matching provider receipt/reconciliation state."
+      ],
+      "negative": [
+        "A browser test, inbound connection, reply-attention tray, queued reply, or missing receipt cannot send externally or display delivered.",
+        "A configured line, browser test or unavailable provider cannot claim a live send or verified connection; in order review, no customer outbound control is enabled."
+      ]
+    },
+    "doneConditions": [
+      "Webhook, tenant mapping, test isolation, revoke, duplicate, provider-outage, native-handoff, and no-outbound order-review tests pass; full outbound receipt tests remain required before that capability is enabled."
+    ],
+    "requiredEvidence": [
+      "Mock webhook verification, order-review no-outbound/native-handoff trace, and future delivery receipt reconciliation report.",
+      "Named-line connection/revoke/no-outbound/native-handoff/provider-receipt boundary trace."
+    ]
+  },
+  {
+    "id": "INTG-01.02",
+    "title": "Mailbox authorization, source sync, native handoff, and future document delivery",
+    "summary": "Connect authorized mailboxes through a provider-neutral OAuth/callback flow, ingest source safely, scope visibility, and provide native Outlook/Gmail handoff. Full document-mail delivery remains separately specified; the order-review profile sends no customer email and does not retain source email bodies/files as a substitute mailbox.",
+    "status": "SPECIFIED",
+    "stage": "automation-services",
+    "dependsOn": [
+      "SRC-01.01",
+      "FND-01.02"
+    ],
+    "docRefs": [
+      "INTG-01",
+      "SRC-01",
+      "DOC-01",
+      "QLT-01"
+    ],
+    "legacyIds": [
+      "B3.1",
+      "B3.2"
+    ],
+    "files": {
+      "actual": [
+        "baseweb/src/app/connect.tsx",
+        "baseweb/src/app/email-thread.tsx",
+        "baseweb/src/app/areas/admin/connections.tsx"
+      ],
+      "proposed": [
+        "product/backend/integrations/mail.py",
+        "product/backend/integrations/mail_oauth.py",
+        "product/backend/integrations/mail_sync.py"
+      ]
+    },
+    "steps": [
+      "Store opaque connection references, grants, scope, tenant mapping, expiry, and callback state without exposing provider secrets.",
+      "Ingest accepted message/attachment sources through a source envelope, preserve connection/cursor provenance, and open the relevant native provider for the operator; original custody remains external.",
+      "When separately enabled, send document mail through selected saved-copy revision/recipient policy and distinguish accepted job from provider receipt. A scheduled subcontractor order-list email is a first-class, independently gated Export delivery: its schedule object carries recipient rule, attachment/template, connection profile, next run, history and explicit edit/pause/remove actions; Send history is outside the editor. Final rendered draft and unusual/new change note are reviewed pre-send seams only; any AI proposal/runtime remains deferred. It is not customer messaging."
+    ],
+    "assertions": {
+      "positive": [
+        "A permitted mailbox sync advances a cursor only after durable accepted source processing, and the order-review surface can return the operator to the matching native provider thread."
+      ],
+      "negative": [
+        "An expired, revoked, unscoped, or failed authorization cannot expose mailbox data, retain original bodies/files as a local mailbox, claim document delivery, or enable customer email in order review."
+      ]
+    },
+    "doneConditions": [
+      "OAuth state, scope, callback, sync cursor, revoke, provider-error and native-handoff paths are tested; receipt tests remain required before separately enabled delivery."
+    ],
+    "requiredEvidence": [
+      "Authorized callback/native-handoff trace, cursor reconciliation report, revoked-connection denial test, and separately gated document/subcontractor-delivery receipt trace."
+    ]
+  },
+  {
+    "id": "INTG-01.03",
+    "title": "ERP integration adapters, reconciliation, and manual recovery",
+    "summary": "Use versioned adapter profiles to export/reconcile authorized document and catalogue snapshots with cadence, cursor, conflict, receipt, retry, and manual repair semantics.",
+    "status": "SPECIFIED",
+    "stage": "automation-services",
+    "dependsOn": [
+      "CAT-01.04",
+      "FND-03.01"
+    ],
+    "docRefs": [
+      "INTG-01",
+      "DOC-01",
+      "CAT-01",
+      "QLT-01",
+      "JNY-03",
+      "UTL-02.1",
+      "OBJ-02"
+    ],
+    "legacyIds": [
+      "B2.1",
+      "B2.2",
+      "B2.3",
+      "B3.143"
+    ],
+    "files": {
+      "actual": [
+        "baseweb/src/app/connect.tsx",
+        "baseweb/src/app/export-model.ts",
+        "baseweb/src/app/areas/admin/connections.tsx"
+      ],
+      "proposed": [
+        "product/backend/integrations/erp.py",
+        "product/backend/integrations/erp_profiles.py",
+        "product/backend/integrations/reconciliation.py"
+      ]
+    },
+    "steps": [
+      "Model adapter capability, schema/profile version, cadence, cursor, reconciliation key, and per-record attempt.",
+      "Send immutable snapshots under explicit tenant/connection authority and record accepted/external/reconciled divergence states.",
+      "Provide pause, retry, resync, manual repair proposal, and disable/revoke actions with no silent overwrite.",
+      "Resolve a selected product-option policy to a declared ERP line representation only after approved mapping; retain the base-item/note default and surface missing destination support for review."
+    ],
+    "assertions": {
+      "positive": [
+        "A reconciliation report identifies matching, pending, rejected, and divergent records by stable IDs and revision.",
+        "An approved mapped variation yields an attributable adapter request whose source SKU, approved mapping, policy revision and returned receipt remain independently traceable."
+      ],
+      "negative": [
+        "A queue, cursor advance, generic CSV, or provider availability cannot be represented as ERP synchronization.",
+        "A UI select, recurring note, absent mapping or provider timeout cannot create an ERP item, silently substitute a line, claim sync completion or erase the source/approval distinction."
+      ]
+    },
+    "doneConditions": [
+      "Profile validation, external duplicate prevention, cursor, conflict, retry, and reconciliation tests pass.",
+      "JNY-P02 has approved-mapping, base-item-note default, missing-mapping, adapter-denial and provider-receipt tests."
+    ],
+    "requiredEvidence": [
+      "Adapter contract fixture, reconciliation report, and failure/retry audit trace.",
+      "ERP adapter contract trace showing base-item-note fallback is explicit and mapped variation is rejected without approved mapping."
+    ]
+  },
+  {
+    "id": "INTG-01.04",
+    "title": "Maps and place-provider adapter",
+    "summary": "Integrate geocoding/place suggestions through a tenant-policy-aware adapter with limited data, manual fallback, provider health, and no automatic address or route commitment.",
+    "status": "SPECIFIED",
+    "stage": "automation-services",
+    "dependsOn": [
+      "CUS-01.01",
+      "FND-01.02",
+      "QLT-01.01"
+    ],
+    "docRefs": [
+      "INTG-01",
+      "CUS-01",
+      "QLT-01"
+    ],
+    "legacyIds": [],
+    "files": {
+      "actual": [
+        "baseweb/src/app/round-map-geo.ts",
+        "baseweb/src/app/pin-map.tsx",
+        "baseweb/src/app/customer-edits.ts"
+      ],
+      "proposed": [
+        "product/backend/integrations/places.py",
+        "product/backend/routing/geocode.py"
+      ]
+    },
+    "steps": [
+      "Request only permitted address fields through a constrained provider adapter.",
+      "Store provider result/availability separately from the customer-approved address and route policy.",
+      "Offer manual entry/correction and explain unavailable, denied, quota, and stale state without external details."
+    ],
+    "assertions": {
+      "positive": [
+        "A user can save a valid manual address when the provider is unavailable."
+      ],
+      "negative": [
+        "A suggestion, map pin, or failed lookup cannot change a customer address, delivery promise, or route without confirmation."
+      ]
+    },
+    "doneConditions": [
+      "Provider, manual fallback, privacy minimization, quota/error, and address-confirmation tests pass."
+    ],
+    "requiredEvidence": [
+      "Places adapter contract test and manual-fallback state trace."
+    ]
+  },
+  {
+    "id": "INTG-01.05",
+    "title": "Connection registry, health, reconciliation, and revoke controls",
+    "summary": "Operate every external rail through a tenant-owned connection registry with capability, credential reference, test, health, queue, cursor, receipt, pause, revoke, and incident state.",
+    "status": "SPECIFIED",
+    "stage": "administration-activation",
+    "dependsOn": [
+      "FND-01.02",
+      "OPS-01.01",
+      "INTG-01.01"
+    ],
+    "docRefs": [
+      "INTG-01",
+      "ADM-01",
+      "OPS-01",
+      "QLT-01"
+    ],
+    "legacyIds": [
+      "B4.1",
+      "B4.2",
+      "B4.3"
+    ],
+    "files": {
+      "actual": [
+        "baseweb/src/app/connect.tsx",
+        "baseweb/src/app/areas/admin/connections.tsx",
+        "baseweb/src/app/capability.tsx"
+      ],
+      "proposed": [
+        "product/backend/integrations/registry.py",
+        "product/backend/integrations/health.py",
+        "product/backend/integrations/revoke.py"
+      ]
+    },
+    "steps": [
+      "Register connection owner, tenant, opaque credential reference, scopes, enabled capability, policy, and test lineage.",
+      "Expose configured, authorizing, ready, degraded, paused, revoked, failed, stale, and unknown states with last known evidence.",
+      "Stop new external work on revoke/pause and preserve prior receipts/audit for recovery."
+    ],
+    "assertions": {
+      "positive": [
+        "A revoked connection immediately rejects a new external job while keeping historic receipt evidence readable."
+      ],
+      "negative": [
+        "A configured card, health ping, stale cursor, or generic success badge cannot imply a functioning authorized rail."
+      ]
+    },
+    "doneConditions": [
+      "Connection setup/test/pause/revoke/health/reconciliation and permission tests are complete for each enabled rail."
+    ],
+    "requiredEvidence": [
+      "Connection registry audit, revoke-denial test, and health/reconciliation trace."
+    ]
+  },
+  {
+    "id": "INT-01.07",
+    "title": "Operator assistant, availability incidents and reviewed customer updates",
+    "summary": "Deliver the full tenant assistant with its own history, additive dictation, scoped supply/category proposals, reviewed affected orders and exact outbound payloads, and per-recipient receipt/recovery.",
+    "status": "SPECIFIED",
+    "stage": "automation-services",
+    "dependsOn": [
+      "INT-01.04",
+      "INV-01.01",
+      "INTG-01.01",
+      "FND-03.03"
+    ],
+    "docRefs": [
+      "INTEL-17",
+      "SYS-182",
+      "INTX-11",
+      "INV-01",
+      "INTG-01",
+      "QLT-01",
+      "JNY-06"
+    ],
+    "legacyIds": [],
+    "files": {
+      "actual": [
+        "baseweb/src/app/assistant.tsx",
+        "baseweb/src/app/supply-broadcast.tsx",
+        "baseweb/src/app/stock-entry-intent.ts",
+        "baseweb/src/app/areas/stock.tsx",
+        "baseweb/src/app/shell/day-bar.tsx",
+        "baseweb/src/app/shell/chats.tsx"
+      ],
+      "proposed": [
+        "product/backend/assistant/conversations.py",
+        "product/backend/assistant/availability_incidents.py",
+        "product/backend/assistant/impact_proposals.py",
+        "product/backend/assistant/reviewed_delivery.py"
+      ]
+    },
+    "steps": [
+      "Persist authorized authored conversation history, typed evidence/proposal/approval/tool summaries and retention/redaction state separately from provider-owned incoming raw mail/files.",
+      "Implement UTL-A01–A04 launch/context/history/composer/dictation and exact product/problem/availability/when report; preserve underlying customer chat draft.",
+      "Implement UTL-A05 impact projection from confirmed operator report or current ledger/source evidence without mutating physical stock; unknown equivalence and no-affected-order states stay useful and honest.",
+      "For Review stock, suspend the assistant while retaining its saved report, publish one exact-SKU count intent, then use the product door to mount that SKU sheet before it consumes the intent; this handoff must work on phone as well as desktop and Back/reopen must restore the report.",
+      "Implement UTL-A06–A09 immutable recipient/copy review, digest/revision approval, authorized delivery, per-recipient dispositions, reconciliation and retry of only eligible failures.",
+      "Implement UTL-A10–A12 explicit classification before/after command, incident reevaluation/lifecycle and reopened conversation recovery; no stale approval reuse.",
+      "Wire approved versioned LLM/tool release and dictation adapters with budget/timeout/cancel/eval controls; manual review remains available when unconnected, and the browser kit must never present structured prompts, manual review text or local UI as real model generation or delivery."
+    ],
+    "assertions": {
+      "positive": [
+        "An operator can report a new shortage not present in the old ledger, review exact affected orders and customer wording, and observe real partial delivery outcomes.",
+        "A category discussion can apply only reviewed classification relationships while all commercial SKU facts remain unchanged.",
+        "A phone or desktop Review stock handoff reaches the exact SKU count editor and a reopened assistant thread restores the retained report.",
+        "A timeout or incomplete provider receipt is reconciled under its original identity before any new send."
+      ],
+      "negative": [
+        "A report, model/tool message, dictation result, preview or local successful-looking UI cannot change stock, approve itself, send to customers or fabricate a provider receipt.",
+        "In an unconnected kit, a composer response, evidence trail or manual proposal cannot be labelled as an LLM result, generated customer message or transport outcome.",
+        "A changed recipient/text/order/policy revision invalidates approval; an accepted or unknown recipient cannot be blindly retried.",
+        "Assistant history, raw mail/files or contact cards cannot cross tenant boundaries or authorize broader access."
+      ]
+    },
+    "doneConditions": [
+      "Every UTL-A control passes empty/loading/permission/offline/dirty/reopen/concurrent/stale/unknown and narrow-screen states.",
+      "Recorded incident → impact → proposal → approval → per-recipient attempt trace is reproducible with current policy/units and adversarial source fixtures.",
+      "No live-send or model-execution claim until the exact provider adapter has its own controlled and operational evidence."
+    ],
+    "requiredEvidence": [
+      "Tenant-isolation and prompt-injection suite; seven-order/new-shortage, no-impact, missing conversion, partial receipt, timeout reconciliation and stale-approval traces.",
+      "Assistant/customer/support mutual-context and draft/focus/history browser proof; dictation append/cancel/typing-race test.",
+      "Provider receipt schema, exact payload digest and idempotency reconciliation contract tests, retention/deletion and operator runbook."
+    ]
+  }
+]

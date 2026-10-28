@@ -1,0 +1,13 @@
+# THE KIT RUNTIME's whole dependency list (FEED-IA §196.5 · PAR-10). Every name is load-bearing.
+fastapi>=0.110,<1
+uvicorn>=0.27,<1
+httpx>=0.27,<1
+google-auth[requests]>=2.57,<3 # delegated service account for the fixed Google Play tester group
+python-multipart>=0.0.9      # FastAPI reads multipart (the file, the audio and the photo) through it
+twilio>=9,<10                # ONLY for RequestValidator + AccessToken; the REST calls are httpx
+websockets>=14,<18            # Cedar: authenticated Twilio audio to live Deepgram streams
+# ── reading our own paper back (PAR-10) ────────────────────────────────────────────────────
+opencv-python-headless>=4.9,<5   # homography, rectification, the corner marks. HEADLESS: no GUI on a server
+zxing-cpp>=2.2                   # the QR decoder Android's ML Kit carries — the same core the harness measured
+numpy>=1.26                      # opencv's own array type; named because this file depends on it directly
+pillow>=10                       # renders the printed value as a mask, and writes the crops

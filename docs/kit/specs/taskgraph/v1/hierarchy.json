@@ -1,0 +1,1107 @@
+{
+  "rootId": "SYS-00",
+  "nodes": [
+    {
+      "id": "SYS-00",
+      "kind": "system",
+      "title": "Rocoto production system",
+      "owner": "product-system",
+      "docRefs": [
+        "FND-01",
+        "FND-02",
+        "FND-03"
+      ],
+      "taskIds": []
+    },
+    {
+      "id": "H-JOURNEYS",
+      "parentId": "SYS-00",
+      "kind": "stage",
+      "title": "Cross-system acceptance journeys",
+      "owner": "quality-release",
+      "docRefs": [
+        "JNY-01",
+        "JNY-02",
+        "JNY-03",
+        "JNY-05",
+        "JNY-06",
+        "JNY-07",
+        "JNY-08",
+        "JNY-09"
+      ],
+      "taskIds": []
+    },
+    {
+      "id": "JNY-01",
+      "parentId": "H-JOURNEYS",
+      "kind": "journey",
+      "title": "Phone source with seven product lines to approved receipt or draft",
+      "owner": "quality-release",
+      "docRefs": [
+        "JNY-01"
+      ],
+      "taskIds": []
+    },
+    {
+      "id": "JNY-02",
+      "parentId": "H-JOURNEYS",
+      "kind": "journey",
+      "title": "Working paper to actual kg/price review and final albaran",
+      "owner": "quality-release",
+      "docRefs": [
+        "JNY-02"
+      ],
+      "taskIds": []
+    },
+    {
+      "id": "JNY-03",
+      "parentId": "H-JOURNEYS",
+      "kind": "journey",
+      "title": "Four SKU price changes and truthful in-chat confirmation",
+      "owner": "quality-release",
+      "docRefs": [
+        "JNY-03"
+      ],
+      "taskIds": []
+    },
+    {
+      "id": "JNY-05",
+      "parentId": "H-JOURNEYS",
+      "kind": "journey",
+      "title": "New SKU to price, customer quote, albarán edit and reprint",
+      "owner": "quality-release",
+      "docRefs": [
+        "JNY-05"
+      ],
+      "taskIds": []
+    },
+    {
+      "id": "JNY-06",
+      "parentId": "H-JOURNEYS",
+      "kind": "journey",
+      "title": "Operator-reported shortage to reviewed impact, customer copy and partial/unknown delivery",
+      "owner": "quality-release",
+      "docRefs": [
+        "JNY-06"
+      ],
+      "taskIds": []
+    },
+    {
+      "id": "JNY-07",
+      "parentId": "H-JOURNEYS",
+      "kind": "journey",
+      "title": "Template gallery to configured copy, scoped output and history",
+      "owner": "quality-release",
+      "docRefs": [
+        "JNY-07"
+      ],
+      "taskIds": []
+    },
+    {
+      "id": "JNY-08",
+      "parentId": "H-JOURNEYS",
+      "kind": "journey",
+      "title": "First-time setup to controlled activation",
+      "owner": "quality-release",
+      "docRefs": [
+        "JNY-08"
+      ],
+      "taskIds": []
+    },
+    {
+      "id": "JNY-09",
+      "parentId": "H-JOURNEYS",
+      "kind": "journey",
+      "title": "Salesperson-scoped day to authorised output activity",
+      "owner": "quality-release",
+      "docRefs": [
+        "JNY-09"
+      ],
+      "taskIds": []
+    },
+    {
+      "id": "H-FOUNDATION",
+      "parentId": "SYS-00",
+      "kind": "stage",
+      "title": "Foundation",
+      "owner": "runtime-foundation",
+      "docRefs": [
+        "FND-01",
+        "FND-02",
+        "FND-03"
+      ],
+      "taskIds": []
+    },
+    {
+      "id": "H-DOMAIN",
+      "parentId": "SYS-00",
+      "kind": "stage",
+      "title": "Domain records",
+      "owner": "domain-runtime",
+      "docRefs": [
+        "CAT-01",
+        "SRC-01",
+        "INV-01",
+        "COM-01",
+        "DOC-01"
+      ],
+      "taskIds": []
+    },
+    {
+      "id": "H-SHEETS",
+      "parentId": "SYS-00",
+      "kind": "stage",
+      "title": "Sheets and focused utilities",
+      "owner": "interaction-runtime",
+      "docRefs": [
+        "OBJ-01",
+        "PRD-01",
+        "CUS-01",
+        "ALB-01"
+      ],
+      "taskIds": []
+    },
+    {
+      "id": "H-AUTOMATION",
+      "parentId": "SYS-00",
+      "kind": "stage",
+      "title": "Automation, jobs, and integrations",
+      "owner": "services-runtime",
+      "docRefs": [
+        "INT-01",
+        "INT-02",
+        "INTG-01",
+        "OPS-01"
+      ],
+      "taskIds": []
+    },
+    {
+      "id": "H-ADMIN",
+      "parentId": "SYS-00",
+      "kind": "stage",
+      "title": "Administration and activation",
+      "owner": "tenant-operations",
+      "docRefs": [
+        "ADM-01",
+        "ACT-01"
+      ],
+      "taskIds": []
+    },
+    {
+      "id": "H-ASSURANCE",
+      "parentId": "SYS-00",
+      "kind": "stage",
+      "title": "Assurance and release",
+      "owner": "quality-release",
+      "docRefs": [
+        "QLT-01",
+        "QLT-02",
+        "REL-01"
+      ],
+      "taskIds": []
+    },
+    {
+      "id": "FND-01",
+      "parentId": "H-FOUNDATION",
+      "kind": "domain",
+      "title": "Tenant identity, authentication, and authorization",
+      "owner": "identity-runtime",
+      "docRefs": [
+        "FND-01"
+      ],
+      "taskIds": []
+    },
+    {
+      "id": "FND-01.identity",
+      "parentId": "FND-01",
+      "kind": "workflow",
+      "title": "Tenant, session, role, and audit boundaries",
+      "owner": "identity-runtime",
+      "docRefs": [
+        "FND-01",
+        "QLT-01"
+      ],
+      "taskIds": [
+        "FND-01.01",
+        "FND-01.02",
+        "FND-01.03"
+      ]
+    },
+    {
+      "id": "FND-02",
+      "parentId": "H-FOUNDATION",
+      "kind": "domain",
+      "title": "Canonical records and lifecycle",
+      "owner": "records-runtime",
+      "docRefs": [
+        "FND-02"
+      ],
+      "taskIds": []
+    },
+    {
+      "id": "FND-02.records",
+      "parentId": "FND-02",
+      "kind": "workflow",
+      "title": "Identity envelopes, events, folds, and replay",
+      "owner": "records-runtime",
+      "docRefs": [
+        "FND-02",
+        "FND-03"
+      ],
+      "taskIds": [
+        "FND-02.01",
+        "FND-02.02"
+      ]
+    },
+    {
+      "id": "FND-03",
+      "parentId": "H-FOUNDATION",
+      "kind": "domain",
+      "title": "Commands, projections, and audit",
+      "owner": "command-runtime",
+      "docRefs": [
+        "FND-03"
+      ],
+      "taskIds": []
+    },
+    {
+      "id": "FND-03.commands",
+      "parentId": "FND-03",
+      "kind": "workflow",
+      "title": "Command acknowledgement, migration, realtime, and recovery",
+      "owner": "command-runtime",
+      "docRefs": [
+        "FND-03",
+        "OPS-01"
+      ],
+      "taskIds": [
+        "FND-03.01",
+        "FND-03.02",
+        "FND-03.03"
+      ]
+    },
+    {
+      "id": "OBJ-01",
+      "parentId": "H-FOUNDATION",
+      "kind": "domain",
+      "title": "Shared sheet interaction contract",
+      "owner": "interaction-runtime",
+      "docRefs": [
+        "OBJ-01",
+        "QLT-02",
+        "INTX-01"
+      ],
+      "taskIds": []
+    },
+    {
+      "id": "OBJ-01.interaction",
+      "parentId": "OBJ-01",
+      "kind": "workflow",
+      "title": "Sheet layers, exact copy, and accessible behavior",
+      "owner": "interaction-runtime",
+      "docRefs": [
+        "OBJ-01",
+        "QLT-02",
+        "INTX-01"
+      ],
+      "taskIds": [
+        "OBJ-01.01",
+        "OBJ-01.02",
+        "OBJ-01.03"
+      ]
+    },
+    {
+      "id": "PRD-01",
+      "parentId": "H-SHEETS",
+      "kind": "domain",
+      "title": "Product Sheet",
+      "owner": "product-sheet",
+      "docRefs": [
+        "PRD-01",
+        "CAT-01",
+        "INV-01",
+        "COM-01"
+      ],
+      "taskIds": []
+    },
+    {
+      "id": "PRD-01.identity",
+      "parentId": "PRD-01",
+      "kind": "workflow",
+      "title": "Identity, Internal category, Related items and archive",
+      "owner": "product-sheet",
+      "docRefs": [
+        "PRD-01"
+      ],
+      "taskIds": [
+        "PRD-01.01"
+      ]
+    },
+    {
+      "id": "PRD-01.creation",
+      "parentId": "PRD-01",
+      "kind": "workflow",
+      "title": "New product, candidate and variation review",
+      "owner": "product-sheet",
+      "docRefs": [
+        "PRD-01",
+        "UTL-02",
+        "INTEL-08"
+      ],
+      "taskIds": [
+        "PRD-01.02"
+      ]
+    },
+    {
+      "id": "PRD-01.pricing",
+      "parentId": "PRD-01",
+      "kind": "workflow",
+      "title": "Tariffs, price editor, and histories",
+      "owner": "commercial-runtime",
+      "docRefs": [
+        "PRD-01",
+        "COM-01"
+      ],
+      "taskIds": [
+        "PRD-01.03"
+      ]
+    },
+    {
+      "id": "PRD-01.stock",
+      "parentId": "PRD-01",
+      "kind": "workflow",
+      "title": "Recorded stock, lots, and explicit expected states",
+      "owner": "inventory-runtime",
+      "docRefs": [
+        "PRD-01",
+        "INV-01",
+        "UTL-01"
+      ],
+      "taskIds": [
+        "PRD-01.04"
+      ]
+    },
+    {
+      "id": "PRD-01.evidence",
+      "parentId": "PRD-01",
+      "kind": "workflow",
+      "title": "Orders, supplier evidence, and return paths",
+      "owner": "product-sheet",
+      "docRefs": [
+        "PRD-01",
+        "SRC-01",
+        "ALB-01"
+      ],
+      "taskIds": [
+        "PRD-01.05"
+      ]
+    },
+    {
+      "id": "PRD-01.insights",
+      "parentId": "PRD-01",
+      "kind": "workflow",
+      "title": "Measured sales insights and customer price",
+      "owner": "product-sheet",
+      "docRefs": [
+        "PRD-01",
+        "CUS-01",
+        "COM-01"
+      ],
+      "taskIds": [
+        "PRD-01.06"
+      ]
+    },
+    {
+      "id": "PRD-01.artwork",
+      "parentId": "PRD-01",
+      "kind": "workflow",
+      "title": "SKU artwork controls and recovery",
+      "owner": "media-runtime",
+      "docRefs": [
+        "PRD-01",
+        "INT-02",
+        "INTEL-11"
+      ],
+      "taskIds": [
+        "PRD-01.07"
+      ]
+    },
+    {
+      "id": "CUS-01",
+      "parentId": "H-SHEETS",
+      "kind": "domain",
+      "title": "Customer Sheet",
+      "owner": "customer-sheet",
+      "docRefs": [
+        "CUS-01",
+        "OBJ-01",
+        "INTX-01"
+      ],
+      "taskIds": []
+    },
+    {
+      "id": "CUS-01.identity",
+      "parentId": "CUS-01",
+      "kind": "workflow",
+      "title": "Identity, contact, edit, and archive",
+      "owner": "customer-sheet",
+      "docRefs": [
+        "CUS-01"
+      ],
+      "taskIds": [
+        "CUS-01.01"
+      ]
+    },
+    {
+      "id": "CUS-01.work",
+      "parentId": "CUS-01",
+      "kind": "workflow",
+      "title": "Current work, prices, dossier, and insights",
+      "owner": "customer-sheet",
+      "docRefs": [
+        "CUS-01",
+        "COM-01",
+        "ALB-01"
+      ],
+      "taskIds": [
+        "CUS-01.02",
+        "CUS-01.04"
+      ]
+    },
+    {
+      "id": "CUS-01.routing",
+      "parentId": "CUS-01",
+      "kind": "workflow",
+      "title": "Address, map, zone, and route controls",
+      "owner": "routing-runtime",
+      "docRefs": [
+        "CUS-01",
+        "INTG-01"
+      ],
+      "taskIds": [
+        "CUS-01.03"
+      ]
+    },
+    {
+      "id": "ALB-01",
+      "parentId": "H-SHEETS",
+      "kind": "domain",
+      "title": "Albarán Sheet",
+      "owner": "order-sheet",
+      "docRefs": [
+        "ALB-01",
+        "DOC-01",
+        "INTX-01"
+      ],
+      "taskIds": []
+    },
+    {
+      "id": "ALB-01.identity",
+      "parentId": "ALB-01",
+      "kind": "workflow",
+      "title": "Order state, document identity, and snapshot",
+      "owner": "orders-runtime",
+      "docRefs": [
+        "ALB-01",
+        "DOC-01"
+      ],
+      "taskIds": [
+        "ALB-01.01"
+      ]
+    },
+    {
+      "id": "ALB-01.lines",
+      "parentId": "ALB-01",
+      "kind": "workflow",
+      "title": "Line quantities, units, prices, totals, and lots",
+      "owner": "orders-runtime",
+      "docRefs": [
+        "ALB-01",
+        "COM-01",
+        "INV-01"
+      ],
+      "taskIds": [
+        "ALB-01.02"
+      ]
+    },
+    {
+      "id": "ALB-01.concerns",
+      "parentId": "ALB-01",
+      "kind": "workflow",
+      "title": "Source provenance, concerns, and corrections",
+      "owner": "orders-runtime",
+      "docRefs": [
+        "ALB-01",
+        "INTEL-07",
+        "SRC-01"
+      ],
+      "taskIds": [
+        "ALB-01.03"
+      ]
+    },
+    {
+      "id": "ALB-01.issue",
+      "parentId": "ALB-01",
+      "kind": "workflow",
+      "title": "Issue, preview, amend, and reprint",
+      "owner": "documents-runtime",
+      "docRefs": [
+        "ALB-01",
+        "DOC-01"
+      ],
+      "taskIds": [
+        "ALB-01.04"
+      ]
+    },
+    {
+      "id": "ALB-01.navigation",
+      "parentId": "ALB-01",
+      "kind": "workflow",
+      "title": "Navigation, search, and deterministic theatre",
+      "owner": "order-sheet",
+      "docRefs": [
+        "ALB-01",
+        "SRC-01",
+        "REL-01"
+      ],
+      "taskIds": [
+        "ALB-01.05"
+      ]
+    },
+    {
+      "id": "CAT-01",
+      "parentId": "H-DOMAIN",
+      "kind": "domain",
+      "title": "Catalogue",
+      "owner": "catalogue-runtime",
+      "docRefs": [
+        "CAT-01"
+      ],
+      "taskIds": []
+    },
+    {
+      "id": "CAT-01.intake",
+      "parentId": "CAT-01",
+      "kind": "workflow",
+      "title": "Import retention, Internal category, Related items and browse",
+      "owner": "catalogue-runtime",
+      "docRefs": [
+        "CAT-01",
+        "SRC-01"
+      ],
+      "taskIds": [
+        "CAT-01.01",
+        "CAT-01.02",
+        "CAT-01.03"
+      ]
+    },
+    {
+      "id": "CAT-01.output",
+      "parentId": "CAT-01",
+      "kind": "workflow",
+      "title": "Export formats and large-job truth",
+      "owner": "catalogue-runtime",
+      "docRefs": [
+        "CAT-01",
+        "DOC-01",
+        "OPS-01"
+      ],
+      "taskIds": [
+        "CAT-01.04",
+        "CAT-01.05"
+      ]
+    },
+    {
+      "id": "SRC-01",
+      "parentId": "H-DOMAIN",
+      "kind": "domain",
+      "title": "Sources",
+      "owner": "sources-runtime",
+      "docRefs": [
+        "SRC-01"
+      ],
+      "taskIds": []
+    },
+    {
+      "id": "SRC-01.ingest",
+      "parentId": "SRC-01",
+      "kind": "workflow",
+      "title": "Source envelope, conversation, and test lineage",
+      "owner": "sources-runtime",
+      "docRefs": [
+        "SRC-01",
+        "QLT-01"
+      ],
+      "taskIds": [
+        "SRC-01.01",
+        "SRC-01.02",
+        "SRC-01.03"
+      ]
+    },
+    {
+      "id": "INV-01",
+      "parentId": "H-DOMAIN",
+      "kind": "domain",
+      "title": "Inventory",
+      "owner": "inventory-runtime",
+      "docRefs": [
+        "INV-01"
+      ],
+      "taskIds": []
+    },
+    {
+      "id": "INV-01.ledger",
+      "parentId": "INV-01",
+      "kind": "workflow",
+      "title": "Ledger, lots, allocation, and stock update",
+      "owner": "inventory-runtime",
+      "docRefs": [
+        "INV-01",
+        "UTL-01"
+      ],
+      "taskIds": [
+        "INV-01.01",
+        "UTL-01.01"
+      ]
+    },
+    {
+      "id": "COM-01",
+      "parentId": "H-DOMAIN",
+      "kind": "domain",
+      "title": "Commercial pricing",
+      "owner": "commercial-runtime",
+      "docRefs": [
+        "COM-01"
+      ],
+      "taskIds": []
+    },
+    {
+      "id": "COM-01.pricing",
+      "parentId": "COM-01",
+      "kind": "workflow",
+      "title": "Money, units, price resolution, and tariff registry",
+      "owner": "commercial-runtime",
+      "docRefs": [
+        "COM-01",
+        "ADM-01"
+      ],
+      "taskIds": [
+        "COM-01.01",
+        "COM-01.02"
+      ]
+    },
+    {
+      "id": "DOC-01",
+      "parentId": "H-DOMAIN",
+      "kind": "domain",
+      "title": "Documents and output",
+      "owner": "documents-runtime",
+      "docRefs": [
+        "DOC-01"
+      ],
+      "taskIds": []
+    },
+    {
+      "id": "DOC-01.outputs",
+      "parentId": "DOC-01",
+      "kind": "workflow",
+      "title": "Render, print, export, and delivery",
+      "owner": "documents-runtime",
+      "docRefs": [
+        "DOC-01",
+        "UTL-04"
+      ],
+      "taskIds": [
+        "DOC-01.01",
+        "DOC-01.02",
+        "DOC-01.03",
+        "DOC-01.04",
+        "UTL-04.01"
+      ]
+    },
+    {
+      "id": "UTL-02",
+      "parentId": "H-SHEETS",
+      "kind": "domain",
+      "title": "New product utility",
+      "owner": "product-sheet",
+      "docRefs": [
+        "UTL-02"
+      ],
+      "taskIds": [
+        "UTL-02.01"
+      ]
+    },
+    {
+      "id": "UTL-03",
+      "parentId": "H-SHEETS",
+      "kind": "domain",
+      "title": "Import utility",
+      "owner": "catalogue-runtime",
+      "docRefs": [
+        "UTL-03"
+      ],
+      "taskIds": [
+        "UTL-03.01"
+      ]
+    },
+    {
+      "id": "INT-01",
+      "parentId": "H-AUTOMATION",
+      "kind": "domain",
+      "title": "Intelligence",
+      "owner": "intelligence-runtime",
+      "docRefs": [
+        "INT-01",
+        "INTEL-00"
+      ],
+      "taskIds": []
+    },
+    {
+      "id": "INT-01.reasoning",
+      "parentId": "INT-01",
+      "kind": "workflow",
+      "title": "Deterministic parse, bounded reasoning, and concerns",
+      "owner": "intelligence-runtime",
+      "docRefs": [
+        "INTEL-03",
+        "INTEL-06",
+        "INTEL-07"
+      ],
+      "taskIds": [
+        "INT-01.01",
+        "INT-01.02",
+        "INT-01.03"
+      ]
+    },
+    {
+      "id": "INT-01.learning",
+      "parentId": "INT-01",
+      "kind": "workflow",
+      "title": "Interactive review, evaluation, and backfill",
+      "owner": "intelligence-runtime",
+      "docRefs": [
+        "INTEL-08",
+        "INTEL-13",
+        "INTEL-15"
+      ],
+      "taskIds": [
+        "INT-01.04",
+        "INT-01.05",
+        "INT-01.06"
+      ]
+    },
+    {
+      "id": "INT-02",
+      "parentId": "H-AUTOMATION",
+      "kind": "domain",
+      "title": "Artwork generation",
+      "owner": "media-runtime",
+      "docRefs": [
+        "INT-02",
+        "INTEL-11"
+      ],
+      "taskIds": []
+    },
+    {
+      "id": "INT-02.media",
+      "parentId": "INT-02",
+      "kind": "workflow",
+      "title": "Library, worker, review, and publication",
+      "owner": "media-runtime",
+      "docRefs": [
+        "INTEL-11",
+        "INTEL-12"
+      ],
+      "taskIds": [
+        "INT-02.01",
+        "INT-02.02",
+        "INT-02.03"
+      ]
+    },
+    {
+      "id": "INTG-01",
+      "parentId": "H-AUTOMATION",
+      "kind": "domain",
+      "title": "Integrations",
+      "owner": "integrations-runtime",
+      "docRefs": [
+        "INTG-01"
+      ],
+      "taskIds": []
+    },
+    {
+      "id": "INTG-01.rails",
+      "parentId": "INTG-01",
+      "kind": "workflow",
+      "title": "Messaging, mail, ERP, places, and connection health",
+      "owner": "integrations-runtime",
+      "docRefs": [
+        "INTG-01",
+        "QLT-01"
+      ],
+      "taskIds": [
+        "INTG-01.01",
+        "INTG-01.02",
+        "INTG-01.03",
+        "INTG-01.04",
+        "INTG-01.05"
+      ]
+    },
+    {
+      "id": "OPS-01",
+      "parentId": "H-AUTOMATION",
+      "kind": "domain",
+      "title": "Operations",
+      "owner": "operations-runtime",
+      "docRefs": [
+        "OPS-01"
+      ],
+      "taskIds": []
+    },
+    {
+      "id": "OPS-01.reliability",
+      "parentId": "OPS-01",
+      "kind": "workflow",
+      "title": "Jobs, observability, recovery, and performance",
+      "owner": "operations-runtime",
+      "docRefs": [
+        "OPS-01",
+        "REL-01"
+      ],
+      "taskIds": [
+        "OPS-01.01",
+        "OPS-01.02",
+        "OPS-01.03",
+        "OPS-01.04"
+      ]
+    },
+    {
+      "id": "ADM-01",
+      "parentId": "H-ADMIN",
+      "kind": "domain",
+      "title": "Administration",
+      "owner": "tenant-operations",
+      "docRefs": [
+        "ADM-01"
+      ],
+      "taskIds": []
+    },
+    {
+      "id": "ADM-01.settings",
+      "parentId": "ADM-01",
+      "kind": "workflow",
+      "title": "Organization, team, automation, billing, data, and navigation settings",
+      "owner": "tenant-operations",
+      "docRefs": [
+        "ADM-01",
+        "QLT-01"
+      ],
+      "taskIds": [
+        "ADM-01.01",
+        "ADM-01.02",
+        "ADM-01.03",
+        "ADM-01.04",
+        "ADM-01.05",
+        "ADM-01.06"
+      ]
+    },
+    {
+      "id": "ACT-01",
+      "parentId": "H-ADMIN",
+      "kind": "domain",
+      "title": "Activation",
+      "owner": "activation-runtime",
+      "docRefs": [
+        "ACT-01"
+      ],
+      "taskIds": []
+    },
+    {
+      "id": "ACT-01.activation",
+      "parentId": "ACT-01",
+      "kind": "workflow",
+      "title": "Provision, readiness, migration, and cutover rehearsal",
+      "owner": "activation-runtime",
+      "docRefs": [
+        "ACT-01",
+        "REL-01"
+      ],
+      "taskIds": [
+        "ACT-01.01",
+        "ACT-01.02",
+        "ACT-01.03"
+      ]
+    },
+    {
+      "id": "QLT-01",
+      "parentId": "H-ASSURANCE",
+      "kind": "domain",
+      "title": "Security and privacy",
+      "owner": "quality-security",
+      "docRefs": [
+        "QLT-01"
+      ],
+      "taskIds": [
+        "QLT-01.01"
+      ]
+    },
+    {
+      "id": "QLT-02",
+      "parentId": "H-ASSURANCE",
+      "kind": "domain",
+      "title": "Accessibility and quality",
+      "owner": "quality-experience",
+      "docRefs": [
+        "QLT-02",
+        "INTX-01"
+      ],
+      "taskIds": [
+        "QLT-02.01"
+      ]
+    },
+    {
+      "id": "REL-01",
+      "parentId": "H-ASSURANCE",
+      "kind": "domain",
+      "title": "Release",
+      "owner": "quality-release",
+      "docRefs": [
+        "REL-01"
+      ],
+      "taskIds": []
+    },
+    {
+      "id": "REL-01.gates",
+      "parentId": "REL-01",
+      "kind": "workflow",
+      "title": "Evidence, rollout, production authority, and public documentation",
+      "owner": "quality-release",
+      "docRefs": [
+        "REL-01",
+        "QLT-01",
+        "QLT-02"
+      ],
+      "taskIds": [
+        "REL-01.01",
+        "REL-01.02",
+        "REL-01.03",
+        "REL-01.04"
+      ]
+    },
+    {
+      "id": "LOT-01",
+      "parentId": "INV-01",
+      "kind": "domain",
+      "title": "Stock and lot split contract",
+      "owner": "inventory-runtime",
+      "docRefs": [
+        "LOT-01",
+        "INV-01"
+      ],
+      "taskIds": []
+    },
+    {
+      "id": "LOT-01.identity",
+      "parentId": "LOT-01",
+      "kind": "workflow",
+      "title": "Lot book, identity, source and invariant model",
+      "owner": "inventory-runtime",
+      "docRefs": [
+        "LOT-01",
+        "INV-01"
+      ],
+      "taskIds": [
+        "LOT-01.01"
+      ]
+    },
+    {
+      "id": "LOT-01.split",
+      "parentId": "LOT-01",
+      "kind": "workflow",
+      "title": "Shared LotSplitEditor controls and state behavior",
+      "owner": "interaction-runtime",
+      "docRefs": [
+        "LOT-01",
+        "OBJ-01",
+        "QLT-02"
+      ],
+      "taskIds": [
+        "LOT-01.02"
+      ]
+    },
+    {
+      "id": "LOT-01.receive-count",
+      "parentId": "LOT-01",
+      "kind": "workflow",
+      "title": "Receipt and physical-count split flows",
+      "owner": "inventory-runtime",
+      "docRefs": [
+        "LOT-01",
+        "UTL-01"
+      ],
+      "taskIds": [
+        "LOT-01.03"
+      ]
+    },
+    {
+      "id": "LOT-01.allocation",
+      "parentId": "LOT-01",
+      "kind": "workflow",
+      "title": "Reservation, allocation, reassignment and depletion",
+      "owner": "inventory-runtime",
+      "docRefs": [
+        "LOT-01",
+        "ALB-01"
+      ],
+      "taskIds": [
+        "LOT-01.04"
+      ]
+    },
+    {
+      "id": "LOT-01.trace",
+      "parentId": "LOT-01",
+      "kind": "workflow",
+      "title": "Dossier, recall, migration and release checks",
+      "owner": "inventory-runtime",
+      "docRefs": [
+        "LOT-01",
+        "REL-01"
+      ],
+      "taskIds": [
+        "LOT-01.05",
+        "LOT-01.06"
+      ]
+    },
+    {
+      "id": "LOT-01.attribution",
+      "parentId": "LOT-01",
+      "kind": "workflow",
+      "title": "Product Stock: Assign stock to lots physical attribution and zero-net history",
+      "owner": "inventory-runtime",
+      "docRefs": [
+        "LOT-01",
+        "PRD-01",
+        "INV-01"
+      ],
+      "taskIds": [
+        "LOT-01.07"
+      ]
+    },
+    {
+      "id": "INT-01.assistant",
+      "parentId": "INT-01",
+      "kind": "workflow",
+      "title": "Operator assistant, supply incidents and reviewed delivery",
+      "owner": "intelligence-runtime",
+      "docRefs": [
+        "INTEL-17",
+        "SYS-182",
+        "INTX-11"
+      ],
+      "taskIds": [
+        "INT-01.07"
+      ]
+    }
+  ]
+}

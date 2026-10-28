@@ -1,0 +1,44 @@
+{
+  "schema": 1,
+  "name": "cedar-preview",
+  "logicalEnvironment": "development/demo",
+  "physicalHost": "rocoto-staging",
+  "sourceOwner": "app/src/prototypes/cedar/connections",
+  "publicOrigin": "https://cedar-demo.soyrocoto.com",
+  "buildCommand": [
+    "node",
+    "app/src/prototypes/cedar/connections/build.mjs"
+  ],
+  "artifacts": [
+    {
+      "source": "app/src/prototypes/cedar/connections/proof",
+      "destination": "proof",
+      "kind": "source"
+    },
+    {
+      "source": "app/src/prototypes/cedar/connections/deploy/requirements.txt",
+      "destination": "requirements.txt",
+      "kind": "source"
+    },
+    {
+      "source": "app/dist-cedar-connections",
+      "destination": "static",
+      "kind": "build"
+    }
+  ],
+  "runtime": {
+    "service": "rocoto-cedar-demo",
+    "user": "rocoto-cedar-demo",
+    "installPath": "/srv/cedar-demo/current",
+    "statePath": "/var/lib/rocoto-cedar-demo",
+    "environmentFile": "/etc/rocoto/cedar-demo.env",
+    "workingDirectory": "/srv/cedar-demo/current/proof",
+    "execStart": [
+      "/srv/cedar-demo/venv/bin/python",
+      "/srv/cedar-demo/current/proof/run.py",
+      "--port",
+      "8793"
+    ],
+    "healthUrl": "http://127.0.0.1:8793/"
+  }
+}

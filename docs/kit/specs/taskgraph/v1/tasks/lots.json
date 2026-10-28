@@ -1,0 +1,350 @@
+[
+  {
+    "id": "LOT-01.01",
+    "title": "Opaque lot identity, source model, and quantity invariants",
+    "summary": "Create tenant-scoped opaque lot records, source/receipt attribution, unit-aware balances and immutable movement identity so a visible lot label never acts as stock truth or a reusable identifier.",
+    "status": "SPECIFIED",
+    "stage": "domain-records",
+    "dependsOn": [
+      "INV-01.01",
+      "FND-02.01",
+      "FND-03.01"
+    ],
+    "docRefs": [
+      "LOT-01",
+      "INV-01",
+      "FND-02",
+      "QLT-01"
+    ],
+    "legacyIds": [],
+    "files": {
+      "actual": [
+        "baseweb/src/app/stock-tiers.tsx",
+        "baseweb/src/app/incoming.ts"
+      ],
+      "proposed": [
+        "product/backend/inventory/lots.py",
+        "product/backend/inventory/lot_movements.py",
+        "product/backend/inventory/lot_projection.py"
+      ]
+    },
+    "steps": [
+      "Define opaque lot IDs, permitted display labels, source/receipt links, lifecycle state and tenant isolation.",
+      "Represent every received, counted, reserved, allocated, depleted, released and corrected quantity as a revisioned lot movement.",
+      "Enforce unit conversion, non-negative allocatable balance and conservation invariants at the command boundary."
+    ],
+    "assertions": {
+      "positive": [
+        "A tenant can trace one allocated line quantity through its exact lot movements and source revision."
+      ],
+      "negative": [
+        "A typed lot label, cross-tenant ID, rounding conversion or repeated request cannot create, merge, over-allocate or silently rewrite a lot balance."
+      ]
+    },
+    "doneConditions": [
+      "LOT-V01–V05 preserve opaque identity, source attribution, unit precision, lifecycle and a truthful no-lot state under tenant and concurrency tests."
+    ],
+    "requiredEvidence": [
+      "Lot migration, movement conservation property drive, cross-tenant denial trace and historical replay."
+    ]
+  },
+  {
+    "id": "LOT-01.02",
+    "title": "Shared LotSplitEditor control and accessible split semantics",
+    "summary": "Build the shared typed split editor used by receipt, count and allocation flows, including slider, exact quantity field, add-lot row, assigned/unassigned summary, validation and review state.",
+    "status": "SPECIFIED",
+    "stage": "sheet-ports",
+    "dependsOn": [
+      "LOT-01.01",
+      "OBJ-01.01",
+      "OBJ-01.02"
+    ],
+    "docRefs": [
+      "LOT-01",
+      "OBJ-01",
+      "QLT-02"
+    ],
+    "legacyIds": [],
+    "files": {
+      "actual": [
+        "baseweb/src/app/stock-tiers.tsx",
+        "baseweb/src/app/tiers.ts"
+      ],
+      "proposed": [
+        "product/frontend/components/LotSplitEditor.tsx",
+        "product/backend/inventory/lot_split_validation.py"
+      ]
+    },
+    "steps": [
+      "Use one typed editor contract for lot context, total, entries, unit precision, available choices and command revision.",
+      "Keep slider and exact numeric field synchronized without hidden rounding; keyboard input remains a first-class route.",
+      "Allow adding a discovered/new lot only through the same validated draft, with review, cancel and focus-return behavior."
+    ],
+    "assertions": {
+      "positive": [
+        "Changing the slider or exact field updates the same draft total and exposes assigned versus unassigned quantity."
+      ],
+      "negative": [
+        "A slider movement, new-lot row, blur, close or retry cannot save an invalid split, lose a draft or claim a received/allocation result."
+      ]
+    },
+    "doneConditions": [
+      "LOT-S01–S08 have labelled control, keyboard, validation, dirty-close, conflict, offline and status-copy tests in each calling flow."
+    ],
+    "requiredEvidence": [
+      "Shared editor component tests, keyboard drive, precision property tests and dirty-draft recovery trace."
+    ]
+  },
+  {
+    "id": "LOT-01.03",
+    "title": "Receipt and physical-count split flows",
+    "summary": "Wire receipt and physical-count flows to the shared lot editor so received totals and counted totals remain distinct evidence, with source, suggested allocation, discovered-lot and review/save results.",
+    "status": "SPECIFIED",
+    "stage": "sheet-ports",
+    "dependsOn": [
+      "LOT-01.01",
+      "LOT-01.02",
+      "UTL-01.01",
+      "FND-03.01"
+    ],
+    "docRefs": [
+      "LOT-01",
+      "INV-01",
+      "UTL-01",
+      "QLT-02",
+      "JNY-01",
+      "JNY-06"
+    ],
+    "legacyIds": [],
+    "files": {
+      "actual": [
+        "baseweb/src/app/incoming.ts",
+        "baseweb/src/app/stock-tiers.tsx"
+      ],
+      "proposed": [
+        "product/backend/inventory/receive_lots.py",
+        "product/backend/inventory/count_lots.py",
+        "product/backend/api/lot_receipt_routes.py"
+      ]
+    },
+    "steps": [
+      "Record a receipt against supplier/source evidence, received total and explicit lot split before accepting stock.",
+      "Record a physical count as a distinct observed-after total with suggested but reviewable per-lot allocation.",
+      "Persist discovered lot provenance, validation result, actor/revision and idempotency receipt for each accepted flow."
+    ],
+    "assertions": {
+      "positive": [
+        "A saved receipt or count produces one reviewable movement set whose exact total equals the accepted evidence total."
+      ],
+      "negative": [
+        "A predicted amount, slider display, stale count, missing source, duplicate save or unresolved difference cannot become a recorded balance."
+      ]
+    },
+    "doneConditions": [
+      "LOT-R01–R06 and LOT-C01–C07 expose separate receipt/count state, per-lot validation and post-save results with retry-safe tests."
+    ],
+    "requiredEvidence": [
+      "Receipt/count integration drives, split conservation checks, duplicate-submit test and stale-revision recovery trace."
+    ]
+  },
+  {
+    "id": "LOT-01.04",
+    "title": "Reservation, allocation, reassignment, and depletion per lot",
+    "summary": "Implement albarán-facing lot eligibility, reservation, allocation, reassignment and depletion commands that preserve line/document snapshots and never promise availability from an unaccepted action.",
+    "status": "SPECIFIED",
+    "stage": "sheet-ports",
+    "dependsOn": [
+      "LOT-01.03",
+      "ALB-01.02",
+      "ALB-01.01",
+      "FND-03.01"
+    ],
+    "docRefs": [
+      "LOT-01",
+      "ALB-01",
+      "INV-01",
+      "COM-01",
+      "JNY-02"
+    ],
+    "legacyIds": [],
+    "files": {
+      "actual": [
+        "baseweb/src/app/sale.ts",
+        "baseweb/src/app/order-open.tsx",
+        "baseweb/src/app/stock-tiers.tsx"
+      ],
+      "proposed": [
+        "product/backend/inventory/reservations.py",
+        "product/backend/inventory/allocations.py",
+        "product/backend/inventory/depletion.py"
+      ]
+    },
+    "steps": [
+      "Resolve eligible lots by exact SKU, unit, lifecycle, reservation policy, tenant and current revision.",
+      "Make reserve, allocate, reassign, release and depletion idempotent state-specific commands bound to a document line.",
+      "Expose accepted allocation/history separately from pending, unavailable, conflict, depleted and provider-independent fulfilment state."
+    ],
+    "assertions": {
+      "positive": [
+        "A permitted allocation links an exact line revision to eligible lot quantities and leaves a replayable outcome history."
+      ],
+      "negative": [
+        "Two editors, repeated action, a stale lot balance or a depleted/ineligible lot cannot over-reserve, duplicate-deplete or change an issued line snapshot."
+      ]
+    },
+    "doneConditions": [
+      "LOT-A01–A08 cover line context, eligibility, reserve/allocate/reassign/deplete, history and exception/recovery behavior under concurrency tests."
+    ],
+    "requiredEvidence": [
+      "Concurrent allocation drive, idempotency test, issue-snapshot replay and depletion/reassign recovery trace."
+    ]
+  },
+  {
+    "id": "LOT-01.05",
+    "title": "Lot detail, traceability, recall and document consequences",
+    "summary": "Expose a safe lot dossier for source, movements, linked lines, recall scope, edit trace and lifecycle while preserving protected data and document/output consequences.",
+    "status": "SPECIFIED",
+    "stage": "domain-records",
+    "dependsOn": [
+      "LOT-01.04",
+      "DOC-01.01",
+      "QLT-01.01"
+    ],
+    "docRefs": [
+      "LOT-01",
+      "DOC-01",
+      "QLT-01",
+      "ALB-01"
+    ],
+    "legacyIds": [],
+    "files": {
+      "actual": [
+        "baseweb/src/app/stock-tiers.tsx",
+        "baseweb/src/app/sale.ts"
+      ],
+      "proposed": [
+        "product/backend/inventory/lot_dossier.py",
+        "product/backend/inventory/recall.py",
+        "product/backend/documents/lot_traceability.py"
+      ]
+    },
+    "steps": [
+      "Project a permission-scoped lot dossier with source, movement, linked-line and recall facts at their actual revisions.",
+      "Model recall/hold as explicit lifecycle commands with scope, reason, actor and operational consequences.",
+      "Preserve document snapshots and safely redact unavailable source/person data without erasing necessary trace identity."
+    ],
+    "assertions": {
+      "positive": [
+        "An authorized recall can enumerate its exact affected lot/line scope and retained document consequences."
+      ],
+      "negative": [
+        "A generic stock badge, unrelated SKU, archive/redaction action or unscoped actor cannot disclose or change a lot traceability history."
+      ]
+    },
+    "doneConditions": [
+      "LOT-D01–D06 have auditable source/movement/linked-line/recall/lifecycle views, permission denials and unavailable-state copy."
+    ],
+    "requiredEvidence": [
+      "Recall scope drive, permission/redaction test, issued-document history replay and audit query."
+    ]
+  },
+  {
+    "id": "LOT-01.06",
+    "title": "Lot migration, recovery, evaluation and release gate",
+    "summary": "Migrate legacy stock safely into explicit lot/no-lot states, rehearse rollback and projection recovery, and gate release on invariant, accessibility and end-to-end evidence.",
+    "status": "SPECIFIED",
+    "stage": "assurance-release",
+    "dependsOn": [
+      "LOT-01.05",
+      "FND-03.02",
+      "OPS-01.03",
+      "QLT-02.01"
+    ],
+    "docRefs": [
+      "LOT-01",
+      "REL-01",
+      "ACT-01",
+      "QLT-02"
+    ],
+    "legacyIds": [],
+    "files": {
+      "actual": [
+        "baseweb/src/app/stock-tiers.tsx",
+        "baseweb/src/app/incoming.ts"
+      ],
+      "proposed": [
+        "product/backend/migrations/lot_backfill.py",
+        "product/backend/inventory/lot_rebuild.py",
+        "product/evals/lot_invariants.py"
+      ]
+    },
+    "steps": [
+      "Classify legacy balances as source-backed lots, explicit unassigned/no-lot balances or quarantined records; never invent provenance.",
+      "Rehearse migration, rollback, projection rebuild and operator recovery with per-tenant evidence.",
+      "Run split/editor/receipt/count/allocation/recall accessibility, concurrency, conservation and release-gate suites before owner-go."
+    ],
+    "assertions": {
+      "positive": [
+        "A migration replay preserves every known balance and labels unknown lot provenance rather than fabricating a source."
+      ],
+      "negative": [
+        "A failed backfill, partial projection or release dashboard can neither hide a conservation failure nor mark lot work production-ready without actual evidence."
+      ]
+    },
+    "doneConditions": [
+      "LOT-12 release checks prove migration/recovery plus all LOT-V/S/R/C/A/D control anatomy, state and invariant gates."
+    ],
+    "requiredEvidence": [
+      "Per-tenant migration rehearsal, rollback/rebuild trace, full invariant suite, accessibility drive and release evidence-board entry."
+    ]
+  },
+  {
+    "id": "LOT-01.07",
+    "title": "Assign stock to lots and zero-net reassignment",
+    "summary": "Port the Product Sheet action “Assign stock to lots” as physical attribution of a fixed Recorded balance between named lots and Unassigned stock, with typed new lots, zero-net movement history and no albarán fulfilment effect.",
+    "status": "SPECIFIED",
+    "stage": "sheet-ports",
+    "dependsOn": [
+      "LOT-01.01",
+      "LOT-01.02",
+      "FND-03.01"
+    ],
+    "docRefs": [
+      "LOT-01",
+      "PRD-01",
+      "INV-01",
+      "QLT-02"
+    ],
+    "legacyIds": [],
+    "files": {
+      "actual": [
+        "baseweb/src/app/stock-tiers.tsx",
+        "baseweb/src/app/product-sheet-sections.tsx"
+      ],
+      "proposed": [
+        "product/backend/inventory/lot_attribution.py",
+        "product/backend/inventory/lot_reassignment.py",
+        "product/frontend/components/AssignStockToLots.tsx"
+      ]
+    },
+    "steps": [
+      "Open only from an exact SKU with an evidence-backed Recorded balance and current inventory revision.",
+      "Use the shared LotSplitEditor to move the same recorded quantity among named lot IDs, a typed new lot and explicit Unassigned stock.",
+      "Record a zero-net attribution/reassignment event with reason, actor, before/after split and revision; do not reserve, allocate, deplete or alter an albarán line."
+    ],
+    "assertions": {
+      "positive": [
+        "Saving a valid split preserves the exact Recorded balance, creates a traceable zero-net history entry and names the resulting lot/unassigned composition."
+      ],
+      "negative": [
+        "A slider, typed lot, stale revision, repeated save or reassignment cannot create stock, promise availability, change an albarán allocation or hide an unassigned remainder."
+      ]
+    },
+    "doneConditions": [
+      "LOT-L01–L07 cover action entry, fixed balance context, split/reassignment, typed new lot, unassigned remainder, review/save result and zero-net history with keyboard/concurrency tests."
+    ],
+    "requiredEvidence": [
+      "Physical-attribution integration drive, zero-net invariant/property test, stale-revision recovery trace and product-sheet accessible-name/state copy review."
+    ]
+  }
+]

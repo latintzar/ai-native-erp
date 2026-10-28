@@ -1,0 +1,275 @@
+{
+  "observedAt": "2026-09-09",
+  "environment": "demo/development",
+  "target": "cedar-preview",
+  "sourceCommit": "1805bf55ffa7b9bcfa106c809a3f88443b5767b7",
+  "previousSourceCommit": "29e0d37d2799885c616077a0e5a8eb1c171ff8a7",
+  "sourcePullRequest": "https://github.com/Rocoto-Labs/rocoto/pull/81",
+  "packageSha256": "e63795ee543649dddb0064c676ad58272f5751bbdd85b2d792694f0a00c6631f",
+  "change": "Customer browser onboarding replaces the shared reviewer gate; verified Meta authorization grants account-scoped private sessions and encrypted stores.",
+  "publication": {
+    "method": "native package/publish through commissioned constrained receiver",
+    "host": "rocoto-staging",
+    "publisherExitStatus": 0,
+    "mainMerged": false,
+    "maintainedServicePidsUnchanged": [
+      "rocoto-kit-runtime",
+      "rocoto-staging",
+      "albaranes-bridge"
+    ],
+    "maintainedCaddyfileUnchanged": true,
+    "providerConfigurationPreserved": true
+  },
+  "httpsAndPrivateApi": {
+    "anonymousStateStatus": 401,
+    "browserSessionStatus": 200,
+    "readyToAttemptSignup": true,
+    "unboundConnection": null,
+    "unboundHistoryMessages": 0,
+    "unboundConversationsStatus": 401,
+    "hostOnlySecureHttpOnlyStrictCookie": true
+  },
+  "browser": {
+    "url": "https://cedar-demo.soyrocoto.com",
+    "environment": "demo",
+    "expectedSourceCommit": "1805bf55ffa7b9bcfa106c809a3f88443b5767b7",
+    "checkedAt": "2026-09-09T17:31:07.134803+00:00",
+    "providerPosture": "Real SDK; anonymous session bootstrap only. Meta authorization and account writes blocked.",
+    "widths": [
+      1600,
+      390,
+      320
+    ],
+    "pageErrorCount": 0,
+    "sessionBootstrapRequests": 7,
+    "blockedRequests": [],
+    "externalGetPaths": [
+      "https://connect.facebook.net/en_US/sdk.js",
+      "https://connect.facebook.net/en_US/bundle/sdk.js/",
+      "https://connect.facebook.net/app_config/json/1427034652248456/",
+      "https://connect.facebook.net/en_US/sdk.js",
+      "https://connect.facebook.net/en_US/bundle/sdk.js/",
+      "https://connect.facebook.net/en_US/sdk.js",
+      "https://connect.facebook.net/en_US/bundle/sdk.js/",
+      "https://connect.facebook.net/en_US/sdk.js",
+      "https://connect.facebook.net/en_US/bundle/sdk.js/",
+      "https://connect.facebook.net/en_US/sdk.js",
+      "https://connect.facebook.net/en_US/bundle/sdk.js/",
+      "https://connect.facebook.net/en_US/sdk.js",
+      "https://connect.facebook.net/en_US/bundle/sdk.js/",
+      "https://connect.facebook.net/en_US/sdk.js",
+      "https://connect.facebook.net/en_US/bundle/sdk.js/"
+    ],
+    "accountProof": "pending customer Meta authorization",
+    "storageKeyNames": {
+      "localStorageKeys": [
+        "fbapc_1427034652248456"
+      ],
+      "sessionStorageKeys": []
+    },
+    "storageValuesInspected": false,
+    "cedarBrowserStorageAbsent": true,
+    "decodedQrUrl": "https://cedar-demo.soyrocoto.com/download/whatsapp-business",
+    "asset": {
+      "path": "/assets/index-BSlJI_pl.js",
+      "sha256": "bfa1192588c9d749455da798c69740b44e8da7b19bcfbc7c49dc8c3997e6d80d",
+      "matchesLocalBuild": true
+    },
+    "unboundStateBlank": true,
+    "unboundPrivateEndpoints": 401,
+    "anonymousState": 401,
+    "anonymousConversations": 401,
+    "anonymousHistory": 401,
+    "cookie": {
+      "name": "__Host-cedar_session",
+      "domain": "cedar-demo.soyrocoto.com",
+      "path": "/",
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Strict"
+    },
+    "actualSdkLoaded": true,
+    "checks": [
+      "HTTPS200 and asset digest matches local build",
+      "Customer page and dialog at1600/390/320; no horizontal overflow",
+      "Actual Meta SDK loads and customer CTA enables; no credentials or consent entered",
+      "Business app links, decoded desktop QR, mobile help and device redirects verified",
+      "Unbound state blank; anonymous and unbound chat APIs401",
+      "Secure host-only HttpOnly SameSiteStrict cookie; only independently attributed Meta SDK cache key",
+      "All non-bootstrap browser POSTs blocked; zero page errors"
+    ],
+    "screenshotsVerified": 16,
+    "screenshotDigests": {
+      "setup-1600.png": "889896bda22b6229ddad44641431e216fd8b9f761b4eb200205c42109a0ee9b9",
+      "setup-1600-help.png": "183f0e32c9fa146ba6e60011ff504117ab9e2b78856adcf1c6c59cde587eb846",
+      "dialog-1600.png": "8a21a9d0e59f77802a124551e417fc3951847f3b0ea3843a06202779dffb88e3",
+      "dialog-1600-help.png": "a9fa6f45ef1e6e5b767aba05752d81efea433591ce55917fcbf858decaca2212",
+      "dialog-1600-help-scrolled.png": "a9fa6f45ef1e6e5b767aba05752d81efea433591ce55917fcbf858decaca2212",
+      "setup-390.png": "189911d2db4f9c5a5b7f0a8d0003a62f0a1c36c2db3909e023f64eabe3ef9022",
+      "setup-390-help.png": "426615e6a3771c2c9f5750fd31ddda769adfcb38f04615b8697bb03ddc955145",
+      "dialog-390.png": "7aa8a5e5ca8b5b8df978fd5362476d3799744acfad0520e631d4c43f88b5c0c9",
+      "dialog-390-help.png": "78c0f1083daf23a83989a6744c43dd2cbf99c9e69c43d1839680a78b0e2d581d",
+      "dialog-390-help-scrolled.png": "78382ecc2f5e95a3b4698fe94f8b3a5fa6505a4d1aa07e9f02e3ca2485cd38d2",
+      "setup-320.png": "76ea5629252e9e6efc4fa7452931bfabaa455ec550bc5fe5c4669a541024a650",
+      "setup-320-help.png": "6a3f77d16e339ccef18559d4cef243868acaf33980d49bcd55888192ed638a6d",
+      "dialog-320.png": "8cbe80673375737fc86c2a47f6b2564108b81fa471a3440161700681f156d92a",
+      "dialog-320-help.png": "58d1498db553300975f223eccea8bebdfb7d883fd179616f19517b192c962148",
+      "dialog-320-help-scrolled.png": "756b775d9faedef8d9336bafe615243784e1d08420c628d08f615c8f1dc6d9c5",
+      "scanned-phone-transfer-390.png": "8dc1aaa33a2fee9fa4aadf71c2c81c72e40c53ac814452153770d80cb7058907"
+    }
+  },
+  "actualMetaSdkEvidence": {
+    "sourceRevision": "1805bf55ffa7b9bcfa106c809a3f88443b5767b7",
+    "checkedAt": "2026-09-09T17:31:07.051610+00:00",
+    "scope": "Real customer bootstrap, actual Meta SDK and login popup before credentials or consent",
+    "accountProof": "pending customer Meta authorization",
+    "sessionBootstrapRequests": 1,
+    "blockedRequests": [
+      {
+        "method": "POST",
+        "url": "https://www.facebook.com/ajax/qm/"
+      },
+      {
+        "method": "GET",
+        "url": "https://www.instagram.com/accounts/xuserid/"
+      },
+      {
+        "method": "POST",
+        "url": "https://www.facebook.com/ajax/bz"
+      }
+    ],
+    "pageErrorCount": 0,
+    "actualSdkLoaded": true,
+    "unboundStateBlank": true,
+    "storageKeyNames": {
+      "localStorageKeys": [
+        "fbapc_1427034652248456"
+      ],
+      "sessionStorageKeys": []
+    },
+    "storageValuesInspected": false,
+    "cedarBrowserStorageAbsent": true,
+    "popupUrl": "https://www.facebook.com/login.php",
+    "popupHost": "www.facebook.com",
+    "visibleRecognizedMessages": [
+      "log into facebook",
+      "password",
+      "cookies"
+    ],
+    "loginFieldsPresent": true,
+    "stoppedBeforeFacebookLogin": true,
+    "stoppedBeforeNumberSelectionAndConsent": true,
+    "sessionCookieFlagsVerified": true,
+    "stoppedBeforeAuthorizationCode": true,
+    "screenshotSha256": "a0e2e50321cbd26cec70b9fba8bfec6978f212ad4fe7df44f8a20ef178a454f1"
+  },
+  "metaSdkStorageEvidence": {
+    "checkedAt": "2026-09-09T17:30:13.614790+00:00",
+    "origin": "https://cedar-demo.soyrocoto.com",
+    "method": "Fresh empty document supplied in browser; only actual Meta SDK loaded and initialized. Cedar application JavaScript absent. Values never read.",
+    "before": {
+      "localStorageKeys": [],
+      "sessionStorageKeys": []
+    },
+    "after": {
+      "localStorageKeys": [
+        "fbapc_1427034652248456"
+      ],
+      "sessionStorageKeys": []
+    },
+    "sdk": "https://connect.facebook.net/en_US/sdk.js",
+    "appId": "1427034652248456"
+  },
+  "syntheticBrowser": {
+    "providerPosture": "synthetic intercepted API and SDK; no provider calls",
+    "screenshots": [
+      "1600-session-retry",
+      "1600-transfer-help",
+      "1600-customer-setup",
+      "390-transfer-help",
+      "390-customer-setup",
+      "320-transfer-help",
+      "320-customer-setup",
+      "390-transfer-help-dialog",
+      "390-customer-setup-dialog",
+      "390-transfer-help-fallback",
+      "390-cookie-retry",
+      "1600-blocked-setup",
+      "390-blocked-setup",
+      "320-blocked-setup",
+      "1600-ready-setup",
+      "390-ready-setup",
+      "320-ready-setup",
+      "320-regular-guidance",
+      "1600-dialog",
+      "390-dialog",
+      "320-dialog",
+      "320-verified-account-interrupted",
+      "320-conversation-list",
+      "320-chat-latest",
+      "320-chat-updated",
+      "1600-chat-updated",
+      "390-chat-updated",
+      "390-same-second-update",
+      "390-expired-account-cleared"
+    ],
+    "decodedTransferQr": "https://cedar-demo.soyrocoto.com/download/whatsapp-business",
+    "interceptedDownloadTargets": [
+      "https://apps.apple.com/app/whatsapp-business/id1386412985",
+      "https://play.google.com/store/apps/details?id=com.whatsapp.w4b"
+    ],
+    "checks": [
+      "browser session failure/retry before state and SDK",
+      "every entry including preview opens actual customer setup without an access code",
+      "Meta popup requires a synchronous user click",
+      "cookie rejection bounded renewal and explicit retry",
+      "verified account state recovered after provider setup error",
+      "long connection pauses polling and discards an older in-flight 401 during cookie rotation",
+      "verified browser account survives reload",
+      "expired account clears visible history before bootstrap retry",
+      "blocked/ready setup",
+      "regular WhatsApp guidance",
+      "rendered desktop QR decodes to device download route; mobile QR hidden",
+      "public fallback opens transfer help and correct Business store buttons",
+      "1600/390/320 widths",
+      "dialog close/reopen",
+      "cursor pagination",
+      "open-chat refresh",
+      "older-page retention",
+      "media enrichment",
+      "pagination failure/retry",
+      "same-second opaque cursor/media reconciliation",
+      "44px phone buttons",
+      "empty browser storage",
+      "zero external requests",
+      "zero page errors"
+    ]
+  },
+  "sourceValidation": {
+    "makeGates": "passed",
+    "fullMakeTest": "passed",
+    "maintainedBackendTests": 297,
+    "prototypeRuntimeTests": 258,
+    "cedarBackendTests": 82,
+    "repositoryUnitTests": 93,
+    "javascriptTestFiles": 8,
+    "existingSkippedTests": 5,
+    "finalPollingChange": "isolated build, TypeScript, theme, copy, Ruff and29-scene synthetic browser drive passed",
+    "independentReview": "identified cookie-rotation/polling race; fixed and verified with delayed connection and old in-flight401; no remaining confirmed backend blockers",
+    "newCustomerAccessRegression": "unprivileged POST/session regression failed on previous implementation, then passed with customer sessions"
+  },
+  "ci": {
+    "status": "jobs failed before execution",
+    "observedReason": "recent account payments have failed or spending limit needs to be increased",
+    "requiredGatesPreserved": true,
+    "companyZeroOverageCapPreserved": true
+  },
+  "acceptance": {
+    "realAccountAuthorizationCompleted": false,
+    "realNumberConnected": false,
+    "realHistoryImported": false,
+    "newRealIncomingMessagesVerified": false,
+    "realHistoryPersistenceVerified": false,
+    "remaining": "A customer completes Meta signup and history consent in the browser; verify exact account routing, eligible imported history, incoming messages and persistence. Peter offered one real Business account for this first run."
+  }
+}

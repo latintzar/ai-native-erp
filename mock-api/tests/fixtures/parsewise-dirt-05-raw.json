@@ -1,0 +1,1220 @@
+{
+ "_": "THE «dirt-05» READ OF albaran-fixture.png, RECORDED VERBATIM from Parsewise on 2026-09-04T17:10:37 in 137.8 s by tests/record_degraded_reads.py — the same damage tools/parse-harness.py sent when it measured THE-PARSING-SPEC §PAR-08.1 (degrade.py «dirt-05», seed 7, PNG md5 2febff011bfd13ed3031df1a95924aea). Nothing here is hand-typed. §PAR-08.2 named the defect this read carries and §PAR-09 owes it a test; tests/test_parse_degraded.py is that test.",
+ "results": [
+  {
+   "id": "1dae63dc-7ab0-491e-9016-9ce5f52a8345",
+   "value_type": "string",
+   "resolution_result": {
+    "id": "9f3f3b16-0732-477c-9cc8-4c0ba04d099a",
+    "result_name": "Counterparty",
+    "value": "Restaurant Can Sabate",
+    "resolution_status": "Resolved",
+    "justification_for_resolution_status": "Single underlying entity value",
+    "references": {
+     "1": [
+      "albaran.png",
+      1
+     ]
+    },
+    "source_type": "document",
+    "is_web_supplement": false,
+    "created_at": "2026-09-04T17:09:34.133693Z",
+    "updated_at": "2026-09-04T17:09:34.143048Z",
+    "agent_name": "Counterparty",
+    "updated_by_email": null,
+    "web_supplement": null,
+    "latest_review_status": null,
+    "latest_review_comment": "",
+    "latest_review_at": null,
+    "latest_review_by": null
+   },
+   "dimension_instances": [],
+   "extraction_status": "Processed",
+   "agent_id": "71de2f22-b407-4bdd-a2dc-0e0a95dbfaa0",
+   "agent_name": "Counterparty"
+  },
+  {
+   "id": "f60b7bbe-af84-4636-80d0-2a66145d8c92",
+   "value_type": "string",
+   "resolution_result": {
+    "id": "a1b86a40-33c5-4e00-84be-0aca582e87ed",
+    "result_name": "Document date",
+    "value": "2026-09-03",
+    "resolution_status": "Resolved",
+    "justification_for_resolution_status": "Single underlying entity value",
+    "references": {
+     "1": [
+      "albaran.png",
+      1
+     ]
+    },
+    "source_type": "document",
+    "is_web_supplement": false,
+    "created_at": "2026-09-04T17:09:24.155875Z",
+    "updated_at": "2026-09-04T17:09:24.175935Z",
+    "agent_name": "Document date",
+    "updated_by_email": null,
+    "web_supplement": null,
+    "latest_review_status": null,
+    "latest_review_comment": "",
+    "latest_review_at": null,
+    "latest_review_by": null
+   },
+   "dimension_instances": [],
+   "extraction_status": "Processed",
+   "agent_id": "03a9822e-a884-4705-a228-6d8867ec776c",
+   "agent_name": "Document date"
+  },
+  {
+   "id": "4518b6d6-c2e2-4673-90b6-27c88fd1ccbb",
+   "value_type": "string",
+   "resolution_result": {
+    "id": "5bfccb65-b5d5-43d5-9638-e650e70ff071",
+    "result_name": "Document number",
+    "value": "2026/0418",
+    "resolution_status": "Resolved",
+    "justification_for_resolution_status": "Single underlying entity value",
+    "references": {
+     "1": [
+      "albaran.png",
+      1
+     ]
+    },
+    "source_type": "document",
+    "is_web_supplement": false,
+    "created_at": "2026-09-04T17:09:34.171226Z",
+    "updated_at": "2026-09-04T17:09:34.194458Z",
+    "agent_name": "Document number",
+    "updated_by_email": null,
+    "web_supplement": null,
+    "latest_review_status": null,
+    "latest_review_comment": "",
+    "latest_review_at": null,
+    "latest_review_by": null
+   },
+   "dimension_instances": [],
+   "extraction_status": "Processed",
+   "agent_id": "2376c2df-d392-4a7d-8fcb-9a0e5ab43bac",
+   "agent_name": "Document number"
+  },
+  {
+   "id": "275296a2-e4b1-4254-a52d-2108f2fac5c2",
+   "value_type": "number",
+   "resolution_result": {
+    "id": "0a5a62cf-827d-4581-9e31-91c063af76bd",
+    "result_name": "Line number | Almeja fina",
+    "value": 4,
+    "resolution_status": "Resolved",
+    "justification_for_resolution_status": "Single underlying entity value",
+    "references": {
+     "1": [
+      "albaran.png",
+      1
+     ]
+    },
+    "source_type": "document",
+    "is_web_supplement": false,
+    "created_at": "2026-09-04T17:10:19.466375Z",
+    "updated_at": "2026-09-04T17:10:19.495775Z",
+    "agent_name": "Line number",
+    "updated_by_email": null,
+    "web_supplement": null,
+    "latest_review_status": null,
+    "latest_review_comment": "",
+    "latest_review_at": null,
+    "latest_review_by": null
+   },
+   "dimension_instances": [
+    {
+     "id": "8728142a-67c2-4183-b36b-fa499bedd0f7",
+     "dimension_id": "fd4bee53-04de-45a0-81dd-7703dddbd9da",
+     "dimension_value": "Almeja fina",
+     "name": "Line"
+    }
+   ],
+   "extraction_status": "Processed",
+   "agent_id": "94f45927-a3ec-4cc2-942f-8cf715352c14",
+   "agent_name": "Line number"
+  },
+  {
+   "id": "5794c328-577c-4308-a0fd-7ec1556d8e92",
+   "value_type": "number",
+   "resolution_result": {
+    "id": "449d8e90-c238-4936-9003-3244712f18fb",
+    "result_name": "Line number | Merluza grande",
+    "value": 1,
+    "resolution_status": "Resolved",
+    "justification_for_resolution_status": "Single underlying entity value",
+    "references": {
+     "1": [
+      "albaran.png",
+      1
+     ]
+    },
+    "source_type": "document",
+    "is_web_supplement": false,
+    "created_at": "2026-09-04T17:10:20.027446Z",
+    "updated_at": "2026-09-04T17:10:20.059473Z",
+    "agent_name": "Line number",
+    "updated_by_email": null,
+    "web_supplement": null,
+    "latest_review_status": null,
+    "latest_review_comment": "",
+    "latest_review_at": null,
+    "latest_review_by": null
+   },
+   "dimension_instances": [
+    {
+     "id": "e4927def-2208-4c5c-b603-cb93085bcc7b",
+     "dimension_id": "fd4bee53-04de-45a0-81dd-7703dddbd9da",
+     "dimension_value": "Merluza grande",
+     "name": "Line"
+    }
+   ],
+   "extraction_status": "Processed",
+   "agent_id": "94f45927-a3ec-4cc2-942f-8cf715352c14",
+   "agent_name": "Line number"
+  },
+  {
+   "id": "77bf0b9d-1dfa-4ff9-a815-82ceda0775c2",
+   "value_type": "number",
+   "resolution_result": {
+    "id": "4b3b694f-cdde-414e-bc3d-d991f41febf1",
+    "result_name": "Line number | Gamba roja",
+    "value": 3,
+    "resolution_status": "Resolved",
+    "justification_for_resolution_status": "Single underlying entity value",
+    "references": {
+     "1": [
+      "albaran.png",
+      1
+     ]
+    },
+    "source_type": "document",
+    "is_web_supplement": false,
+    "created_at": "2026-09-04T17:10:20.493615Z",
+    "updated_at": "2026-09-04T17:10:20.523711Z",
+    "agent_name": "Line number",
+    "updated_by_email": null,
+    "web_supplement": null,
+    "latest_review_status": null,
+    "latest_review_comment": "",
+    "latest_review_at": null,
+    "latest_review_by": null
+   },
+   "dimension_instances": [
+    {
+     "id": "7d902a9a-9883-4ca0-9c3a-cdf06d989681",
+     "dimension_id": "fd4bee53-04de-45a0-81dd-7703dddbd9da",
+     "dimension_value": "Gamba roja",
+     "name": "Line"
+    }
+   ],
+   "extraction_status": "Processed",
+   "agent_id": "94f45927-a3ec-4cc2-942f-8cf715352c14",
+   "agent_name": "Line number"
+  },
+  {
+   "id": "84818a04-136d-4629-8d7a-ce3f0b723f97",
+   "value_type": "number",
+   "resolution_result": {
+    "id": "d93ddca8-39fe-43bd-855a-150597f61755",
+    "result_name": "Line number | Pulpo cocido",
+    "value": 2,
+    "resolution_status": "Resolved",
+    "justification_for_resolution_status": "Single underlying entity value",
+    "references": {
+     "1": [
+      "albaran.png",
+      1
+     ]
+    },
+    "source_type": "document",
+    "is_web_supplement": false,
+    "created_at": "2026-09-04T17:10:20.673191Z",
+    "updated_at": "2026-09-04T17:10:20.701723Z",
+    "agent_name": "Line number",
+    "updated_by_email": null,
+    "web_supplement": null,
+    "latest_review_status": null,
+    "latest_review_comment": "",
+    "latest_review_at": null,
+    "latest_review_by": null
+   },
+   "dimension_instances": [
+    {
+     "id": "48b9f053-3da9-4d49-a780-ea81643415e3",
+     "dimension_id": "fd4bee53-04de-45a0-81dd-7703dddbd9da",
+     "dimension_value": "Pulpo cocido",
+     "name": "Line"
+    }
+   ],
+   "extraction_status": "Processed",
+   "agent_id": "94f45927-a3ec-4cc2-942f-8cf715352c14",
+   "agent_name": "Line number"
+  },
+  {
+   "id": "2882fc9f-ebbe-4da0-80e0-835768e773ee",
+   "value_type": "string",
+   "resolution_result": {
+    "id": "3a9d281b-f32e-4f8c-9bde-851e3c68de93",
+    "result_name": "Lot | Pulpo cocido",
+    "value": "L-250902",
+    "resolution_status": "Resolved",
+    "justification_for_resolution_status": "Single underlying entity value",
+    "references": {
+     "1": [
+      "albaran.png",
+      1
+     ]
+    },
+    "source_type": "document",
+    "is_web_supplement": false,
+    "created_at": "2026-09-04T17:10:19.561079Z",
+    "updated_at": "2026-09-04T17:10:19.594661Z",
+    "agent_name": "Lot",
+    "updated_by_email": null,
+    "web_supplement": null,
+    "latest_review_status": null,
+    "latest_review_comment": "",
+    "latest_review_at": null,
+    "latest_review_by": null
+   },
+   "dimension_instances": [
+    {
+     "id": "23f6f6bb-2c56-4921-8f89-854de8ea71fa",
+     "dimension_id": "fd4bee53-04de-45a0-81dd-7703dddbd9da",
+     "dimension_value": "Pulpo cocido",
+     "name": "Line"
+    }
+   ],
+   "extraction_status": "Processed",
+   "agent_id": "c4d0a777-1f26-4b62-94b3-88b1a932ed00",
+   "agent_name": "Lot"
+  },
+  {
+   "id": "5b4664a0-9d38-4440-a507-97814851dc77",
+   "value_type": "string",
+   "resolution_result": {
+    "id": "96a22c83-8a72-4398-aab4-9fb926a166c5",
+    "result_name": "Lot | Merluza grande",
+    "value": "L-250903",
+    "resolution_status": "Resolved",
+    "justification_for_resolution_status": "Single underlying entity value",
+    "references": {
+     "1": [
+      "albaran.png",
+      1
+     ]
+    },
+    "source_type": "document",
+    "is_web_supplement": false,
+    "created_at": "2026-09-04T17:10:20.121642Z",
+    "updated_at": "2026-09-04T17:10:20.154804Z",
+    "agent_name": "Lot",
+    "updated_by_email": null,
+    "web_supplement": null,
+    "latest_review_status": null,
+    "latest_review_comment": "",
+    "latest_review_at": null,
+    "latest_review_by": null
+   },
+   "dimension_instances": [
+    {
+     "id": "0aef487d-ae28-4ee1-8c58-1b93240e14d7",
+     "dimension_id": "fd4bee53-04de-45a0-81dd-7703dddbd9da",
+     "dimension_value": "Merluza grande",
+     "name": "Line"
+    }
+   ],
+   "extraction_status": "Processed",
+   "agent_id": "c4d0a777-1f26-4b62-94b3-88b1a932ed00",
+   "agent_name": "Lot"
+  },
+  {
+   "id": "af2e31b6-833c-422f-b48f-83d0146dd7c9",
+   "value_type": "string",
+   "resolution_result": {
+    "id": "6f97d472-e45f-4f14-8ca5-055cac7641f3",
+    "result_name": "Lot | Gamba roja",
+    "value": "L-250903",
+    "resolution_status": "Resolved",
+    "justification_for_resolution_status": "Single underlying entity value",
+    "references": {
+     "1": [
+      "albaran.png",
+      1
+     ]
+    },
+    "source_type": "document",
+    "is_web_supplement": false,
+    "created_at": "2026-09-04T17:10:21.027360Z",
+    "updated_at": "2026-09-04T17:10:21.056545Z",
+    "agent_name": "Lot",
+    "updated_by_email": null,
+    "web_supplement": null,
+    "latest_review_status": null,
+    "latest_review_comment": "",
+    "latest_review_at": null,
+    "latest_review_by": null
+   },
+   "dimension_instances": [
+    {
+     "id": "f3f903b3-1d6b-4950-ae99-15284836674a",
+     "dimension_id": "fd4bee53-04de-45a0-81dd-7703dddbd9da",
+     "dimension_value": "Gamba roja",
+     "name": "Line"
+    }
+   ],
+   "extraction_status": "Processed",
+   "agent_id": "c4d0a777-1f26-4b62-94b3-88b1a932ed00",
+   "agent_name": "Lot"
+  },
+  {
+   "id": "2be043ed-128f-4eee-a018-0de0461ad53a",
+   "value_type": "string",
+   "resolution_result": {
+    "id": "f3d18c35-b1df-4ede-8740-fbb57ee8c532",
+    "result_name": "Product code | Gamba roja",
+    "value": "GAM-010",
+    "resolution_status": "Resolved",
+    "justification_for_resolution_status": "Single underlying entity value",
+    "references": {
+     "1": [
+      "albaran.png",
+      1
+     ]
+    },
+    "source_type": "document",
+    "is_web_supplement": false,
+    "created_at": "2026-09-04T17:10:19.657943Z",
+    "updated_at": "2026-09-04T17:10:19.688256Z",
+    "agent_name": "Product code",
+    "updated_by_email": null,
+    "web_supplement": null,
+    "latest_review_status": null,
+    "latest_review_comment": "",
+    "latest_review_at": null,
+    "latest_review_by": null
+   },
+   "dimension_instances": [
+    {
+     "id": "162b37d7-3eae-487c-81ac-9ad0bcf297b3",
+     "dimension_id": "fd4bee53-04de-45a0-81dd-7703dddbd9da",
+     "dimension_value": "Gamba roja",
+     "name": "Line"
+    }
+   ],
+   "extraction_status": "Processed",
+   "agent_id": "a32fb3a5-f692-46a7-8d23-1f0b6195374a",
+   "agent_name": "Product code"
+  },
+  {
+   "id": "ba9199be-2edb-4802-9099-61e3aad59175",
+   "value_type": "string",
+   "resolution_result": {
+    "id": "86a5e1a8-f417-4b5f-9341-908abcba15be",
+    "result_name": "Product code | Almeja fina",
+    "value": "ALM-002",
+    "resolution_status": "Resolved",
+    "justification_for_resolution_status": "Single underlying entity value",
+    "references": {
+     "1": [
+      "albaran.png",
+      1
+     ]
+    },
+    "source_type": "document",
+    "is_web_supplement": false,
+    "created_at": "2026-09-04T17:10:21.117358Z",
+    "updated_at": "2026-09-04T17:10:21.147421Z",
+    "agent_name": "Product code",
+    "updated_by_email": null,
+    "web_supplement": null,
+    "latest_review_status": null,
+    "latest_review_comment": "",
+    "latest_review_at": null,
+    "latest_review_by": null
+   },
+   "dimension_instances": [
+    {
+     "id": "7a23f84a-4372-4e48-b506-7cc1718469ec",
+     "dimension_id": "fd4bee53-04de-45a0-81dd-7703dddbd9da",
+     "dimension_value": "Almeja fina",
+     "name": "Line"
+    }
+   ],
+   "extraction_status": "Processed",
+   "agent_id": "a32fb3a5-f692-46a7-8d23-1f0b6195374a",
+   "agent_name": "Product code"
+  },
+  {
+   "id": "df88a6a2-1fae-4899-b5d1-ffc549280dfe",
+   "value_type": "string",
+   "resolution_result": {
+    "id": "e86510f8-1ce2-4736-a137-2eab8561f043",
+    "result_name": "Product code | Merluza grande",
+    "value": "MER-001",
+    "resolution_status": "Resolved",
+    "justification_for_resolution_status": "Single underlying entity value",
+    "references": {
+     "1": [
+      "albaran.png",
+      1
+     ]
+    },
+    "source_type": "document",
+    "is_web_supplement": false,
+    "created_at": "2026-09-04T17:10:21.396906Z",
+    "updated_at": "2026-09-04T17:10:21.426545Z",
+    "agent_name": "Product code",
+    "updated_by_email": null,
+    "web_supplement": null,
+    "latest_review_status": null,
+    "latest_review_comment": "",
+    "latest_review_at": null,
+    "latest_review_by": null
+   },
+   "dimension_instances": [
+    {
+     "id": "76aba3b6-efce-4d9c-8006-8d0f50b46bdc",
+     "dimension_id": "fd4bee53-04de-45a0-81dd-7703dddbd9da",
+     "dimension_value": "Merluza grande",
+     "name": "Line"
+    }
+   ],
+   "extraction_status": "Processed",
+   "agent_id": "a32fb3a5-f692-46a7-8d23-1f0b6195374a",
+   "agent_name": "Product code"
+  },
+  {
+   "id": "fb865503-233d-4ac4-bb12-cfb7aa6d00d3",
+   "value_type": "string",
+   "resolution_result": {
+    "id": "4e51d17c-86cd-458e-82a5-0f876195eca0",
+    "result_name": "Product code | Pulpo cocido",
+    "value": "PUL-004",
+    "resolution_status": "Resolved",
+    "justification_for_resolution_status": "Single underlying entity value",
+    "references": {
+     "1": [
+      "albaran.png",
+      1
+     ]
+    },
+    "source_type": "document",
+    "is_web_supplement": false,
+    "created_at": "2026-09-04T17:10:21.577511Z",
+    "updated_at": "2026-09-04T17:10:21.606717Z",
+    "agent_name": "Product code",
+    "updated_by_email": null,
+    "web_supplement": null,
+    "latest_review_status": null,
+    "latest_review_comment": "",
+    "latest_review_at": null,
+    "latest_review_by": null
+   },
+   "dimension_instances": [
+    {
+     "id": "b3b79537-61f2-4a87-a8cc-1cff02b369ca",
+     "dimension_id": "fd4bee53-04de-45a0-81dd-7703dddbd9da",
+     "dimension_value": "Pulpo cocido",
+     "name": "Line"
+    }
+   ],
+   "extraction_status": "Processed",
+   "agent_id": "a32fb3a5-f692-46a7-8d23-1f0b6195374a",
+   "agent_name": "Product code"
+  },
+  {
+   "id": "2d9b4d3d-efb6-43f9-ae5a-5af98cb8fae1",
+   "value_type": "string",
+   "resolution_result": {
+    "id": "45edd1b9-f1b4-4aab-8385-8223d9f086df",
+    "result_name": "Product name | Merluza grande",
+    "value": "Merluza grande",
+    "resolution_status": "Resolved",
+    "justification_for_resolution_status": "Single underlying entity value",
+    "references": {
+     "1": [
+      "albaran.png",
+      1
+     ]
+    },
+    "source_type": "document",
+    "is_web_supplement": false,
+    "created_at": "2026-09-04T17:10:19.749638Z",
+    "updated_at": "2026-09-04T17:10:19.779485Z",
+    "agent_name": "Product name",
+    "updated_by_email": null,
+    "web_supplement": null,
+    "latest_review_status": null,
+    "latest_review_comment": "",
+    "latest_review_at": null,
+    "latest_review_by": null
+   },
+   "dimension_instances": [
+    {
+     "id": "19fd339b-3dda-4e9c-a999-296ae2c7cdb9",
+     "dimension_id": "fd4bee53-04de-45a0-81dd-7703dddbd9da",
+     "dimension_value": "Merluza grande",
+     "name": "Line"
+    }
+   ],
+   "extraction_status": "Processed",
+   "agent_id": "3f3cc5f1-a300-4278-9030-08ceaa397ecb",
+   "agent_name": "Product name"
+  },
+  {
+   "id": "4df0b8cb-db75-49d1-afc6-ebd661117b2e",
+   "value_type": "string",
+   "resolution_result": {
+    "id": "d1df4bd3-567b-4ef6-989e-3b5eedca5aca",
+    "result_name": "Product name | Pulpo cocido",
+    "value": "Pulpo cocido",
+    "resolution_status": "Resolved",
+    "justification_for_resolution_status": "Single underlying entity value",
+    "references": {
+     "1": [
+      "albaran.png",
+      1
+     ]
+    },
+    "source_type": "document",
+    "is_web_supplement": false,
+    "created_at": "2026-09-04T17:10:19.839728Z",
+    "updated_at": "2026-09-04T17:10:19.868963Z",
+    "agent_name": "Product name",
+    "updated_by_email": null,
+    "web_supplement": null,
+    "latest_review_status": null,
+    "latest_review_comment": "",
+    "latest_review_at": null,
+    "latest_review_by": null
+   },
+   "dimension_instances": [
+    {
+     "id": "134027ae-cb99-42cd-85b2-5f538c7cab17",
+     "dimension_id": "fd4bee53-04de-45a0-81dd-7703dddbd9da",
+     "dimension_value": "Pulpo cocido",
+     "name": "Line"
+    }
+   ],
+   "extraction_status": "Processed",
+   "agent_id": "3f3cc5f1-a300-4278-9030-08ceaa397ecb",
+   "agent_name": "Product name"
+  },
+  {
+   "id": "cfe18b57-9dc5-4c55-9d7c-60673039f3ac",
+   "value_type": "string",
+   "resolution_result": {
+    "id": "3b1a3f5a-c569-461a-bf9f-89f50d2d9255",
+    "result_name": "Product name | Almeja fina",
+    "value": "Almeja fina",
+    "resolution_status": "Resolved",
+    "justification_for_resolution_status": "Single underlying entity value",
+    "references": {
+     "1": [
+      "albaran.png",
+      1
+     ]
+    },
+    "source_type": "document",
+    "is_web_supplement": false,
+    "created_at": "2026-09-04T17:10:21.213398Z",
+    "updated_at": "2026-09-04T17:10:21.242621Z",
+    "agent_name": "Product name",
+    "updated_by_email": null,
+    "web_supplement": null,
+    "latest_review_status": null,
+    "latest_review_comment": "",
+    "latest_review_at": null,
+    "latest_review_by": null
+   },
+   "dimension_instances": [
+    {
+     "id": "d4c16c66-ecf3-4bce-964a-f1e36b7635f7",
+     "dimension_id": "fd4bee53-04de-45a0-81dd-7703dddbd9da",
+     "dimension_value": "Almeja fina",
+     "name": "Line"
+    }
+   ],
+   "extraction_status": "Processed",
+   "agent_id": "3f3cc5f1-a300-4278-9030-08ceaa397ecb",
+   "agent_name": "Product name"
+  },
+  {
+   "id": "da9b1799-08f2-4b1b-9cd2-3bf23c8ac50e",
+   "value_type": "string",
+   "resolution_result": {
+    "id": "289f8b5b-ffdb-4f43-a848-b105b37da9fd",
+    "result_name": "Product name | Gamba roja",
+    "value": "Gamba roja",
+    "resolution_status": "Resolved",
+    "justification_for_resolution_status": "Single underlying entity value",
+    "references": {
+     "1": [
+      "albaran.png",
+      1
+     ]
+    },
+    "source_type": "document",
+    "is_web_supplement": false,
+    "created_at": "2026-09-04T17:10:21.304918Z",
+    "updated_at": "2026-09-04T17:10:21.334948Z",
+    "agent_name": "Product name",
+    "updated_by_email": null,
+    "web_supplement": null,
+    "latest_review_status": null,
+    "latest_review_comment": "",
+    "latest_review_at": null,
+    "latest_review_by": null
+   },
+   "dimension_instances": [
+    {
+     "id": "f981c992-26f3-4665-a498-99e69f75731d",
+     "dimension_id": "fd4bee53-04de-45a0-81dd-7703dddbd9da",
+     "dimension_value": "Gamba roja",
+     "name": "Line"
+    }
+   ],
+   "extraction_status": "Processed",
+   "agent_id": "3f3cc5f1-a300-4278-9030-08ceaa397ecb",
+   "agent_name": "Product name"
+  },
+  {
+   "id": "06e1739c-c093-473f-9327-133b26eefab2",
+   "value_type": "number",
+   "resolution_result": {
+    "id": "bbc77ee5-fbca-4105-9a54-4eb6e42ec57f",
+    "result_name": "Quantity | Pulpo cocido",
+    "value": 21,
+    "resolution_status": "Resolved",
+    "justification_for_resolution_status": "Single underlying entity value",
+    "references": {
+     "1": [
+      "albaran.png",
+      1
+     ]
+    },
+    "source_type": "document",
+    "is_web_supplement": false,
+    "created_at": "2026-09-04T17:10:19.196537Z",
+    "updated_at": "2026-09-04T17:10:19.228014Z",
+    "agent_name": "Quantity",
+    "updated_by_email": null,
+    "web_supplement": null,
+    "latest_review_status": null,
+    "latest_review_comment": "",
+    "latest_review_at": null,
+    "latest_review_by": null
+   },
+   "dimension_instances": [
+    {
+     "id": "3735652f-2da3-473a-9ae5-f9631120c575",
+     "dimension_id": "fd4bee53-04de-45a0-81dd-7703dddbd9da",
+     "dimension_value": "Pulpo cocido",
+     "name": "Line"
+    }
+   ],
+   "extraction_status": "Processed",
+   "agent_id": "7849b835-cc39-4857-91a3-de3e5bdf4441",
+   "agent_name": "Quantity"
+  },
+  {
+   "id": "13758e32-d083-4542-9061-de0559ee1fcc",
+   "value_type": "number",
+   "resolution_result": {
+    "id": "14571185-5fca-4a92-8400-bc77a56de431",
+    "result_name": "Quantity | Gamba roja",
+    "value": 3,
+    "resolution_status": "Resolved",
+    "justification_for_resolution_status": "Single underlying entity value",
+    "references": {
+     "1": [
+      "albaran.png",
+      1
+     ]
+    },
+    "source_type": "document",
+    "is_web_supplement": false,
+    "created_at": "2026-09-04T17:10:19.377527Z",
+    "updated_at": "2026-09-04T17:10:19.406693Z",
+    "agent_name": "Quantity",
+    "updated_by_email": null,
+    "web_supplement": null,
+    "latest_review_status": null,
+    "latest_review_comment": "",
+    "latest_review_at": null,
+    "latest_review_by": null
+   },
+   "dimension_instances": [
+    {
+     "id": "62a02e10-4fec-4400-98ca-894465e51f42",
+     "dimension_id": "fd4bee53-04de-45a0-81dd-7703dddbd9da",
+     "dimension_value": "Gamba roja",
+     "name": "Line"
+    }
+   ],
+   "extraction_status": "Processed",
+   "agent_id": "7849b835-cc39-4857-91a3-de3e5bdf4441",
+   "agent_name": "Quantity"
+  },
+  {
+   "id": "63d3da68-4510-4816-8eba-6b7b6dca28f3",
+   "value_type": "number",
+   "resolution_result": {
+    "id": "f22ec5ac-df0b-40f1-ae56-24b4a0f45d41",
+    "result_name": "Quantity | Merluza grande",
+    "value": 12.5,
+    "resolution_status": "Resolved",
+    "justification_for_resolution_status": "Single underlying entity value",
+    "references": {
+     "1": [
+      "albaran.png",
+      1
+     ]
+    },
+    "source_type": "document",
+    "is_web_supplement": false,
+    "created_at": "2026-09-04T17:10:20.218297Z",
+    "updated_at": "2026-09-04T17:10:20.248989Z",
+    "agent_name": "Quantity",
+    "updated_by_email": null,
+    "web_supplement": null,
+    "latest_review_status": null,
+    "latest_review_comment": "",
+    "latest_review_at": null,
+    "latest_review_by": null
+   },
+   "dimension_instances": [
+    {
+     "id": "f9e041b3-590a-4f3c-bfd1-ba526d488bcb",
+     "dimension_id": "fd4bee53-04de-45a0-81dd-7703dddbd9da",
+     "dimension_value": "Merluza grande",
+     "name": "Line"
+    }
+   ],
+   "extraction_status": "Processed",
+   "agent_id": "7849b835-cc39-4857-91a3-de3e5bdf4441",
+   "agent_name": "Quantity"
+  },
+  {
+   "id": "789635ed-da9c-4062-a1eb-c1f82e38478b",
+   "value_type": "number",
+   "resolution_result": {
+    "id": "db858b60-b435-4a63-bc4f-6e4e27f4cff6",
+    "result_name": "Quantity | Almeja fina",
+    "value": 4.25,
+    "resolution_status": "Resolved",
+    "justification_for_resolution_status": "Single underlying entity value",
+    "references": {
+     "1": [
+      "albaran.png",
+      1
+     ]
+    },
+    "source_type": "document",
+    "is_web_supplement": false,
+    "created_at": "2026-09-04T17:10:20.584262Z",
+    "updated_at": "2026-09-04T17:10:20.614082Z",
+    "agent_name": "Quantity",
+    "updated_by_email": null,
+    "web_supplement": null,
+    "latest_review_status": null,
+    "latest_review_comment": "",
+    "latest_review_at": null,
+    "latest_review_by": null
+   },
+   "dimension_instances": [
+    {
+     "id": "02a09228-4fbb-4ca4-a2cd-1bd7205383b0",
+     "dimension_id": "fd4bee53-04de-45a0-81dd-7703dddbd9da",
+     "dimension_value": "Almeja fina",
+     "name": "Line"
+    }
+   ],
+   "extraction_status": "Processed",
+   "agent_id": "7849b835-cc39-4857-91a3-de3e5bdf4441",
+   "agent_name": "Quantity"
+  },
+  {
+   "id": "72349c14-462f-49df-a980-041923b43cbb",
+   "value_type": "string",
+   "resolution_result": {
+    "id": "32da3916-f743-4059-a271-c5a076b43cfe",
+    "result_name": "Unit | Pulpo cocido",
+    "value": "kg",
+    "resolution_status": "Resolved",
+    "justification_for_resolution_status": "Single underlying entity value",
+    "references": {
+     "1": [
+      "albaran.png",
+      1
+     ]
+    },
+    "source_type": "document",
+    "is_web_supplement": false,
+    "created_at": "2026-09-04T17:10:20.401156Z",
+    "updated_at": "2026-09-04T17:10:20.430552Z",
+    "agent_name": "Unit",
+    "updated_by_email": null,
+    "web_supplement": null,
+    "latest_review_status": null,
+    "latest_review_comment": "",
+    "latest_review_at": null,
+    "latest_review_by": null
+   },
+   "dimension_instances": [
+    {
+     "id": "7c7d08fc-f3f2-442b-931c-a55a415722c0",
+     "dimension_id": "fd4bee53-04de-45a0-81dd-7703dddbd9da",
+     "dimension_value": "Pulpo cocido",
+     "name": "Line"
+    }
+   ],
+   "extraction_status": "Processed",
+   "agent_id": "99da8386-ff66-41e2-858c-8e1674e1c0ac",
+   "agent_name": "Unit"
+  },
+  {
+   "id": "8bde7066-df25-4350-a32f-9b363ed43cd9",
+   "value_type": "string",
+   "resolution_result": {
+    "id": "3dc96ab8-eca5-4322-be79-64b6b7a1bce3",
+    "result_name": "Unit | Gamba roja",
+    "value": "caja",
+    "resolution_status": "Resolved",
+    "justification_for_resolution_status": "Single underlying entity value",
+    "references": {
+     "1": [
+      "albaran.png",
+      1
+     ]
+    },
+    "source_type": "document",
+    "is_web_supplement": false,
+    "created_at": "2026-09-04T17:10:20.761032Z",
+    "updated_at": "2026-09-04T17:10:20.790213Z",
+    "agent_name": "Unit",
+    "updated_by_email": null,
+    "web_supplement": null,
+    "latest_review_status": null,
+    "latest_review_comment": "",
+    "latest_review_at": null,
+    "latest_review_by": null
+   },
+   "dimension_instances": [
+    {
+     "id": "09d3c4e5-9496-4748-b35e-1517ce3855c0",
+     "dimension_id": "fd4bee53-04de-45a0-81dd-7703dddbd9da",
+     "dimension_value": "Gamba roja",
+     "name": "Line"
+    }
+   ],
+   "extraction_status": "Processed",
+   "agent_id": "99da8386-ff66-41e2-858c-8e1674e1c0ac",
+   "agent_name": "Unit"
+  },
+  {
+   "id": "a33cb277-9473-4c36-8434-19f56cb4d12e",
+   "value_type": "string",
+   "resolution_result": {
+    "id": "9e5451e4-981d-48ee-9b0a-824288df483e",
+    "result_name": "Unit | Merluza grande",
+    "value": "kg",
+    "resolution_status": "Resolved",
+    "justification_for_resolution_status": "Single underlying entity value",
+    "references": {
+     "1": [
+      "albaran.png",
+      1
+     ]
+    },
+    "source_type": "document",
+    "is_web_supplement": false,
+    "created_at": "2026-09-04T17:10:20.849658Z",
+    "updated_at": "2026-09-04T17:10:20.878101Z",
+    "agent_name": "Unit",
+    "updated_by_email": null,
+    "web_supplement": null,
+    "latest_review_status": null,
+    "latest_review_comment": "",
+    "latest_review_at": null,
+    "latest_review_by": null
+   },
+   "dimension_instances": [
+    {
+     "id": "546fd645-6bc7-45dd-935a-84aadec7eb1e",
+     "dimension_id": "fd4bee53-04de-45a0-81dd-7703dddbd9da",
+     "dimension_value": "Merluza grande",
+     "name": "Line"
+    }
+   ],
+   "extraction_status": "Processed",
+   "agent_id": "99da8386-ff66-41e2-858c-8e1674e1c0ac",
+   "agent_name": "Unit"
+  },
+  {
+   "id": "e7572f4a-4c58-4a8f-98ea-df0de3584f48",
+   "value_type": "string",
+   "resolution_result": {
+    "id": "a4dc5782-566f-4304-8d09-5d945b5a3a5e",
+    "result_name": "Unit | Almeja fina",
+    "value": "kg",
+    "resolution_status": "Resolved",
+    "justification_for_resolution_status": "Single underlying entity value",
+    "references": {
+     "1": [
+      "albaran.png",
+      1
+     ]
+    },
+    "source_type": "document",
+    "is_web_supplement": false,
+    "created_at": "2026-09-04T17:10:21.487251Z",
+    "updated_at": "2026-09-04T17:10:21.516768Z",
+    "agent_name": "Unit",
+    "updated_by_email": null,
+    "web_supplement": null,
+    "latest_review_status": null,
+    "latest_review_comment": "",
+    "latest_review_at": null,
+    "latest_review_by": null
+   },
+   "dimension_instances": [
+    {
+     "id": "e16cff35-89d8-4bf1-ad58-9f099e01fdfb",
+     "dimension_id": "fd4bee53-04de-45a0-81dd-7703dddbd9da",
+     "dimension_value": "Almeja fina",
+     "name": "Line"
+    }
+   ],
+   "extraction_status": "Processed",
+   "agent_id": "99da8386-ff66-41e2-858c-8e1674e1c0ac",
+   "agent_name": "Unit"
+  },
+  {
+   "id": "0f3b2958-bf7e-4fd9-9c20-4e96775938ce",
+   "value_type": "number",
+   "resolution_result": {
+    "id": "3206b05b-f2db-4f7d-914c-90453bd5ad81",
+    "result_name": "Unit price (EUR) | Pulpo cocido",
+    "value": 18.9,
+    "resolution_status": "Resolved",
+    "justification_for_resolution_status": "Single underlying entity value",
+    "references": {
+     "1": [
+      "albaran.png",
+      1
+     ]
+    },
+    "source_type": "document",
+    "is_web_supplement": false,
+    "created_at": "2026-09-04T17:10:19.288060Z",
+    "updated_at": "2026-09-04T17:10:19.318047Z",
+    "agent_name": "Unit price (EUR)",
+    "updated_by_email": null,
+    "web_supplement": null,
+    "latest_review_status": null,
+    "latest_review_comment": "",
+    "latest_review_at": null,
+    "latest_review_by": null
+   },
+   "dimension_instances": [
+    {
+     "id": "d316730c-5094-4a22-a91e-80eb0a98280a",
+     "dimension_id": "fd4bee53-04de-45a0-81dd-7703dddbd9da",
+     "dimension_value": "Pulpo cocido",
+     "name": "Line"
+    }
+   ],
+   "extraction_status": "Processed",
+   "agent_id": "f4a9b65e-0e4c-482f-bc01-0d394d1d39c7",
+   "agent_name": "Unit price (EUR)"
+  },
+  {
+   "id": "4fed855a-afde-4005-bc40-083c8c19b8a8",
+   "value_type": "number",
+   "resolution_result": {
+    "id": "70b9c3c6-430d-4d89-96de-9cc84afc2290",
+    "result_name": "Unit price (EUR) | Gamba roja",
+    "value": 92,
+    "resolution_status": "Resolved",
+    "justification_for_resolution_status": "Single underlying entity value",
+    "references": {
+     "1": [
+      "albaran.png",
+      1
+     ]
+    },
+    "source_type": "document",
+    "is_web_supplement": false,
+    "created_at": "2026-09-04T17:10:19.934129Z",
+    "updated_at": "2026-09-04T17:10:19.964446Z",
+    "agent_name": "Unit price (EUR)",
+    "updated_by_email": null,
+    "web_supplement": null,
+    "latest_review_status": null,
+    "latest_review_comment": "",
+    "latest_review_at": null,
+    "latest_review_by": null
+   },
+   "dimension_instances": [
+    {
+     "id": "16d42326-260a-4623-85c1-3877c306d8cf",
+     "dimension_id": "fd4bee53-04de-45a0-81dd-7703dddbd9da",
+     "dimension_value": "Gamba roja",
+     "name": "Line"
+    }
+   ],
+   "extraction_status": "Processed",
+   "agent_id": "f4a9b65e-0e4c-482f-bc01-0d394d1d39c7",
+   "agent_name": "Unit price (EUR)"
+  },
+  {
+   "id": "6441cb6f-e7dd-4f9e-a882-ef6a47c7c5f8",
+   "value_type": "number",
+   "resolution_result": {
+    "id": "0a990ee1-9986-4996-a595-3e3ee7b02952",
+    "result_name": "Unit price (EUR) | Almeja fina",
+    "value": 31.4,
+    "resolution_status": "Resolved",
+    "justification_for_resolution_status": "Single underlying entity value",
+    "references": {
+     "1": [
+      "albaran.png",
+      1
+     ]
+    },
+    "source_type": "document",
+    "is_web_supplement": false,
+    "created_at": "2026-09-04T17:10:20.311120Z",
+    "updated_at": "2026-09-04T17:10:20.340583Z",
+    "agent_name": "Unit price (EUR)",
+    "updated_by_email": null,
+    "web_supplement": null,
+    "latest_review_status": null,
+    "latest_review_comment": "",
+    "latest_review_at": null,
+    "latest_review_by": null
+   },
+   "dimension_instances": [
+    {
+     "id": "727a2920-1c98-4fb9-ae0f-663b21603f4e",
+     "dimension_id": "fd4bee53-04de-45a0-81dd-7703dddbd9da",
+     "dimension_value": "Almeja fina",
+     "name": "Line"
+    }
+   ],
+   "extraction_status": "Processed",
+   "agent_id": "f4a9b65e-0e4c-482f-bc01-0d394d1d39c7",
+   "agent_name": "Unit price (EUR)"
+  },
+  {
+   "id": "aae461e7-7098-4f7f-9dc2-a8b6666fcb2b",
+   "value_type": "number",
+   "resolution_result": {
+    "id": "4d66583e-9945-4bca-acc9-e07757f03aeb",
+    "result_name": "Unit price (EUR) | Merluza grande",
+    "value": 13.5,
+    "resolution_status": "Resolved",
+    "justification_for_resolution_status": "Single underlying entity value",
+    "references": {
+     "1": [
+      "albaran.png",
+      1
+     ]
+    },
+    "source_type": "document",
+    "is_web_supplement": false,
+    "created_at": "2026-09-04T17:10:20.937596Z",
+    "updated_at": "2026-09-04T17:10:20.967054Z",
+    "agent_name": "Unit price (EUR)",
+    "updated_by_email": null,
+    "web_supplement": null,
+    "latest_review_status": null,
+    "latest_review_comment": "",
+    "latest_review_at": null,
+    "latest_review_by": null
+   },
+   "dimension_instances": [
+    {
+     "id": "c56b5bc7-210b-47fe-bdf1-387db4d82cb0",
+     "dimension_id": "fd4bee53-04de-45a0-81dd-7703dddbd9da",
+     "dimension_value": "Merluza grande",
+     "name": "Line"
+    }
+   ],
+   "extraction_status": "Processed",
+   "agent_id": "f4a9b65e-0e4c-482f-bc01-0d394d1d39c7",
+   "agent_name": "Unit price (EUR)"
+  }
+ ],
+ "count": 30,
+ "page": 1,
+ "page_size": 500,
+ "total_pages": 1,
+ "total_rows": 30,
+ "displayed_dimensions": [
+  {
+   "dimension_id": "agent",
+   "dimension_mapping_id": "agent-mapping",
+   "name": "Agent",
+   "order": -1,
+   "are_values_dynamic": false,
+   "values": [
+    "Counterparty",
+    "Document date",
+    "Document number",
+    "Line number",
+    "Lot",
+    "Product code",
+    "Product name",
+    "Quantity",
+    "Unit",
+    "Unit price (EUR)"
+   ]
+  },
+  {
+   "dimension_id": "fd4bee53-04de-45a0-81dd-7703dddbd9da",
+   "dimension_mapping_id": "9cea8fa8-b96d-49a7-93ac-f1dfe9e30b44",
+   "name": "Line",
+   "order": 0,
+   "are_values_dynamic": true,
+   "values": [
+    "Almeja fina",
+    "Merluza grande",
+    "Gamba roja",
+    "Pulpo cocido"
+   ]
+  }
+ ],
+ "agent_ids": [
+  "2376c2df-d392-4a7d-8fcb-9a0e5ab43bac",
+  "71de2f22-b407-4bdd-a2dc-0e0a95dbfaa0",
+  "99da8386-ff66-41e2-858c-8e1674e1c0ac",
+  "3f3cc5f1-a300-4278-9030-08ceaa397ecb",
+  "7849b835-cc39-4857-91a3-de3e5bdf4441",
+  "f4a9b65e-0e4c-482f-bc01-0d394d1d39c7",
+  "c4d0a777-1f26-4b62-94b3-88b1a932ed00",
+  "94f45927-a3ec-4cc2-942f-8cf715352c14",
+  "03a9822e-a884-4705-a228-6d8867ec776c",
+  "a32fb3a5-f692-46a7-8d23-1f0b6195374a"
+ ],
+ "recommended_dimension_order": null,
+ "all_dimension_values": {
+  "Agent": [
+   "Counterparty",
+   "Document date",
+   "Document number",
+   "Line number",
+   "Lot",
+   "Product code",
+   "Product name",
+   "Quantity",
+   "Unit",
+   "Unit price (EUR)"
+  ]
+ }
+}

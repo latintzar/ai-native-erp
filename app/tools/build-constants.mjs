@@ -16,6 +16,8 @@ const APP_ROOT = fileURLToPath(new URL('../', import.meta.url));
 export function buildConstants({ mode, command }) {
   const env = loadEnv(mode, APP_ROOT, 'VITE_');
   return {
+    __ATELIER_GUEST_PREFIX__: JSON.stringify(env.VITE_ATELIER_GUEST_PREFIX ?? ''),
+    __ATELIER_AI_ORIGIN__: JSON.stringify(env.VITE_ATELIER_AI_ORIGIN ?? ''),
     __SUPPORT_WIDGET_URL__: JSON.stringify(env.VITE_SUPPORT_WIDGET_URL ?? ''),
     __POSTHOG_KEY__: JSON.stringify(env.VITE_POSTHOG_KEY ?? ''),
     __POSTHOG_HOST__: JSON.stringify(env.VITE_POSTHOG_HOST ?? ''),

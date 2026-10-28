@@ -1,3 +1,4 @@
+import { guestPrefix } from './guest-preview';
 /** One explicit private connection workspace; scenario choices never select account access. */
 import { runtimeBase } from './runtime-client';
 
@@ -19,6 +20,7 @@ function invalidateWorkspace(): void {
   window.dispatchEvent(new Event('rocoto:channel-workspace-reset'));
 }
 function base(): string {
+  const guest = guestPrefix(); if (guest) return guest;
   const candidate = runtimeBase();
   if (!candidate) return '';
   const target = new URL(candidate, location.origin);

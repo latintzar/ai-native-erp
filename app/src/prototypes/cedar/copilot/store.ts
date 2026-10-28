@@ -24,7 +24,6 @@
  */
 import * as React from 'react';
 import type { Cast } from '../../../scenarios/data/cast';
-import { runtime as kitRuntime } from '../runtime-client';
 import type { AssistantContext, AssistantKind, CopilotMessage, CopilotSession, CopilotStore } from './types';
 
 const KEY = (sector: Cast['sector']) => `rocoto-copilot-v3:${sector}`;
@@ -214,7 +213,7 @@ export function useSessions(sector: Cast['sector']): SessionsApi {
  * It is the RUNTIME's word and nothing else. `runtime.health()` reports what the service holds
  * before the first ask; every `router.ask` result overwrites it with what actually happened.
  */
-export type CopilotPosture = 'checking' | 'live' | 'offline';
+export type CopilotPosture = 'checking' | 'live' | 'offline' | 'preview';
 
 export type CopilotRuntimeStanding = {
   posture: CopilotPosture;
@@ -228,7 +227,7 @@ let standing: CopilotRuntimeStanding = { posture: 'checking', model: '', checked
 const standingListeners = new Set<() => void>();
 
 /** What a finished ask actually found. `router.ask` answers `live` or `offline` for every turn. */
-export function noteCopilotPosture(posture: 'live' | 'offline', model = ''): void {
+export function noteCopilotPosture(posture: 'live' | 'offline' | 'preview', model = ''): void {
   standing = { posture, model: model || (posture === 'live' ? standing.model : ''), checkedAt: Date.now() };
   standingListeners.forEach((listener) => listener());
 }
@@ -236,13 +235,7 @@ export function noteCopilotPosture(posture: 'live' | 'offline', model = ''): voi
 /** What the runtime HOLDS, read once when the agent opens, so the posture stands before the first
  *  ask. A read that fails is a runtime out of reach, which is the offline posture's own subject. */
 export async function readCopilotPosture(): Promise<void> {
-  try {
-    const health = await kitRuntime.health();
-    const model = health.providers.copilot ?? '';
-    noteCopilotPosture(model === 'gemini' || model === 'anthropic' ? 'live' : 'offline', model);
-  } catch {
-    noteCopilotPosture('offline');
-  }
+  noteCopilotPosture('preview', 'OpenAI preview');
 }
 
 export function useCopilotPosture(): CopilotRuntimeStanding {
@@ -259,6 +252,7 @@ export function useCopilotPosture(): CopilotRuntimeStanding {
 /** The one word the surface prints, in the same three-word shape as `phoneStatusWord`,
  *  `emailStatusWord` and `whatsappStatusWord` — one state, one sentence, the same voice. */
 export function copilotStatusWord(posture: CopilotPosture): string {
+  if (posture === 'preview') return 'OpenAI preview';
   if (posture === 'live') return 'Connected';
   if (posture === 'checking') return 'Checking';
   return 'Answering from your workspace records';

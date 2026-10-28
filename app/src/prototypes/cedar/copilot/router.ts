@@ -29,7 +29,10 @@ import type { Activity, CopilotCard, CopilotMessage } from './types';
 import type {
   CopilotAnswer, CopilotContext, CopilotContextOrder, CopilotProposal, CopilotSessionMessage,
 } from '../runtime-client';
+declare const __ATELIER_AI_ORIGIN__: string | undefined;
+import { askPreviewTurn } from './atelier-copilot-preview.mjs';
 import { runtime } from '../runtime-client';
+import type { PreviewCopilotAnswer } from './preview-types';
 import { CONTEXT_CAPS } from './context';
 import { uid } from './store';
 import { workspaceAnswer } from './workspace-answer';
@@ -207,7 +210,7 @@ const proposalTrail = (proposals: CopilotProposal[], orders: CopilotContextOrder
 };
 
 /** THE MIND'S TURN, in the kit's own object. */
-export function turnOf(answered: CopilotAnswer, orders: CopilotContextOrder[]): CopilotMessage {
+export function turnOf(answered: CopilotAnswer | PreviewCopilotAnswer, orders: CopilotContextOrder[]): CopilotMessage {
   const report = answered.proposals.find((one) => one.kind === 'supply-report');
   return {
     id: uid('turn'),
@@ -216,7 +219,8 @@ export function turnOf(answered: CopilotAnswer, orders: CopilotContextOrder[]): 
     text: answered.reply.text,
     activity: proposalTrail(answered.proposals, orders),
     proposals: answered.proposals,
-    evidence: answered.evidence,
+    evidence: 'evidence' in answered ? answered.evidence : undefined,
+    previewTransport: 'preview' in answered ? answered.preview : undefined,
     /* THE CARD IS THE SURFACE'S OWN, UNCHANGED. A supply-report proposal mounts the report form
        that was already there — the mind slots in behind the surface rather than beside it. */
     ...(report ? { card: { kind: 'supply-report' as const } } : {}),
@@ -242,26 +246,22 @@ export async function ask(a: {
   context: CopilotContext;
   sessionId: string;
   history: CopilotMessage[];
-}): Promise<{ turn: CopilotMessage; posture: 'live' | 'offline' }> {
+}): Promise<{ turn: CopilotMessage; posture: 'live' | 'offline' | 'preview' }> {
   const messages: CopilotSessionMessage[] = a.history.slice(-CONTEXT_CAPS.messages).map((message) => ({
     role: message.role === 'copilot' ? 'copilot' : 'person',
     text: message.text,
     at: message.at,
   }));
+  const gatewayOrigin = typeof __ATELIER_AI_ORIGIN__ === 'string' ? __ATELIER_AI_ORIGIN__.trim() : '';
+  if (gatewayOrigin) return askPreviewTurn({
+    gatewayOrigin, nativeAsk: {session: {id: a.sessionId, messages}, context: a.context, ask: a.text},
+    orders: a.context.orders, localTurn: () => offlineTurn(a.text, a.reading), turnOf,
+  });
   let answered: CopilotAnswer;
   try {
-    answered = await runtime.copilot.ask({
-      session: { id: a.sessionId, messages },
-      context: a.context,
-      ask: a.text,
-    });
+    answered = await runtime.copilot.ask({session: {id: a.sessionId, messages}, context: a.context, ask: a.text});
   } catch {
-    /* THE REASON IS THE BROWSER'S TO REPORT, NOT THE PERSON'S TO READ. `runtime-client` already
-       threw a named error; the person gets the flows this build can run without a mind.
-       ⚠ ONLY THE CALL IS INSIDE THE TRY. A catch wrapped around the turn-building below would
-       turn any bug in this file into a silent «offline», which is the shape of a defect nobody
-       ever finds — the offline posture is for a runtime that is out of reach, and nothing else. */
-    return { turn: offlineTurn(a.text, a.reading), posture: 'offline' };
+    return {turn: offlineTurn(a.text, a.reading), posture: 'offline'};
   }
-  return { turn: turnOf(answered, a.context.orders), posture: 'live' };
+  return {turn: turnOf(answered, a.context.orders), posture: 'live'};
 }

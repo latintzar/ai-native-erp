@@ -4,6 +4,8 @@
  * (`snapshot/main-spanish.tsx`) mounts exactly the same application. An entry is an address and a
  * language, and nothing else.
  */
-import { mountCedar } from './app-root';
+import { guestPrefix } from "./guest-preview";
+import { initializePreviewWorkspace } from "./guest-seed.mjs";
 
-mountCedar();
+if (guestPrefix()) initializePreviewWorkspace(window.localStorage);
+void import('./app-root').then(({mountCedar}) => mountCedar());

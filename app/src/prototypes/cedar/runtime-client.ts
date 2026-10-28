@@ -1,3 +1,4 @@
+import { guestPrefix } from './guest-preview';
 /* THE KIT RUNTIME'S ONE CLIENT (FEED-IA §196.5 · §196.6 — «now we're doing it all for real»)
  *
  * The kit is a static page. The calls that need a SECRET — Parsewise extraction, Google Places
@@ -253,6 +254,7 @@ const refusalOf = async (response: Response, path: string): Promise<RuntimeRefus
 
 export function runtimeBase(): string {
   if (typeof window === 'undefined') return '';
+  const guest = guestPrefix(); if (guest) return guest;
   // `make dev` owns this runtime. It wins over an old manual pin so one worktree cannot silently
   // call the runtime selected in another task. Published builds receive an empty constant.
   const configured = typeof __RUNTIME_BASE__ === 'string' ? __RUNTIME_BASE__.trim() : '';

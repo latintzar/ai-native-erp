@@ -1,3 +1,4 @@
+import { guestAssets } from './guest-assets.mjs';
 /** Build the Cedar development candidate, independently of the kit gallery.
  *
  * TWO ENTRIES, ONE ARTIFACT. Cedar's English build is the design source; the Spanish snapshot is
@@ -21,6 +22,7 @@ import { copyFileSync, existsSync, mkdirSync, readFileSync, renameSync, rmSync, 
 import { createHash } from 'node:crypto';
 import { sourceProvenance, copyNotices } from './source-provenance.mjs';
 import { buildConstants } from './build-constants.mjs';
+const guestPrefix = (process.env.VITE_ATELIER_GUEST_PREFIX || '').trim();
 const root = fileURLToPath(new URL('../', import.meta.url));
 /* One publishable output by default. A worker or a drive may build into its own ignored
  * `dist-*` directory so concurrent verification never empties the artifact the publish chain reads. */
@@ -28,7 +30,8 @@ const outDirName = /^dist-[a-z0-9-]+$/.test(process.env.ROCOTO_BUILD_OUT_DIR ?? 
 await build({
   root,
   configFile: false,
-  plugins: [react()],
+  plugins: [guestAssets(), react()],
+  base: guestPrefix ? `${guestPrefix}/` : '/',
   define: buildConstants({ mode: 'production', command: 'build' }),
   build: {
     outDir: outDirName,
@@ -48,7 +51,7 @@ const out = resolve(root, outDirName);
  * Spanish entry, so THIS script is what says one exists. Every entry document it publishes carries
  * the meta; a document without it publishes no Castellano, and the boot stays where it is. */
 const SPANISH_ENTRY = 'cedar/es';
-const SPANISH_ENTRY_PATH = `/${SPANISH_ENTRY}/`;
+const SPANISH_ENTRY_PATH = `${guestPrefix}/${SPANISH_ENTRY}/`;
 const marker = `<meta name="rocoto-spanish-entry" content="${SPANISH_ENTRY_PATH}">`;
 const markEntry = (file) => {
   const at = resolve(out, file);
@@ -83,13 +86,13 @@ await build({
   root,
   configFile: resolve(root, 'vite.config.ts'),
   mode: 'spanish-snapshot',
-  base: `/${SPANISH_ENTRY}/`,
+  base: SPANISH_ENTRY_PATH,
   build: { outDir: esOut, emptyOutDir: true },
 });
 renameSync(resolve(esOut, 'app-spanish.html'), resolve(esOut, 'index.html'));
 /* The shared public files live at the artifact root; the base must not follow them there. */
 const esEntry = resolve(esOut, 'index.html');
-writeFileSync(esEntry, readFileSync(esEntry, 'utf8').split(`${SPANISH_ENTRY_PATH}inter.woff2`).join('/inter.woff2'));
+writeFileSync(esEntry, readFileSync(esEntry, 'utf8').split(`${SPANISH_ENTRY_PATH}inter.woff2`).join(`${guestPrefix}/inter.woff2`));
 /* The Spanish entry carries the same marker, so Settings offers both languages from either side. */
 markEntry(`${SPANISH_ENTRY}/index.html`);
 console.log(`Cedar Castellano: ${SPANISH_ENTRY_PATH}`);

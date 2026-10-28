@@ -18,6 +18,7 @@
  * do are the catalogue's «Save category» and the reviewed supply message's Send (which is itself
  * capability-gated). THE-COPILOT-SPEC.md states the whole boundary.
  */
+import type { PreviewTransport } from './preview-types';
 import type { Cast } from '../../../scenarios/data/cast';
 import type { CopilotProposal } from '../runtime-client';
 import type { Take } from '../../../rocoto/voice-button-kit';
@@ -113,6 +114,8 @@ export type CopilotMessage = {
   proposals?: CopilotProposal[];
   /** which mind answered, how long it took, what it cost. Printed on the turn. */
   evidence?: { model: string; ms: number; tokens: number };
+  previewTransport?: PreviewTransport;
+  previewFailure?: {code: string};
   /** the receipt of a reviewed send, kept with the turn that reported it */
   proposal?: { id: string; revision: string; digest: string; receipt?: AssistantDeliveryReceipt };
   /** the words arrived by dictation — stated on the turn, because the person spoke them */

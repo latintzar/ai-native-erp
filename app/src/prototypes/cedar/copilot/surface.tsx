@@ -162,6 +162,8 @@ function Turn({ message, children }: { message: CopilotMessage; children?: React
       {children}
       {/* WHICH MIND ANSWERED, AND WHAT IT COST. The same three facts the runtime journals, on the
           turn itself — an agent that states its own provenance is one a person can audit. */}
+      {message.previewTransport && <p data-testid="copilot-preview-provenance" style={{...theme.typography.LabelXSmall,color:theme.colors.contentTertiary}}>OpenAI preview · {message.previewTransport.model}</p>}
+      {message.previewFailure && <p data-testid="copilot-preview-failure" data-code={message.previewFailure.code} style={{...theme.typography.LabelXSmall,color:theme.colors.contentTertiary}}>OpenAI preview</p>}
       {message.evidence && (
         <details data-testid={`copilot-evidence-${message.id}`} style={{ ...theme.typography.LabelXSmall, color: theme.colors.contentTertiary }}>
           <summary style={{ minHeight:44, cursor:'pointer', alignContent:'center' }}>Response details</summary>
@@ -484,7 +486,7 @@ export function CopilotHost({ cast, runtime }: { cast: Cast; runtime?: Assistant
     }).then(({ turn, posture }) => {
       /* WHAT THE ASK ACTUALLY FOUND, published once so the standing line is the last truth rather
          than the last guess. `turn.evidence.model` is the runtime's own word for the mind. */
-      noteCopilotPosture(posture, turn.evidence?.model);
+      noteCopilotPosture(posture, turn.previewTransport?.model ?? turn.evidence?.model);
       if (!sessions.append([said(text), turn])) setDraft(text);
     }).finally(() => {
       askLock.current = false;

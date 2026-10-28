@@ -1,3 +1,4 @@
+import { guestPrefix } from './guest-preview';
 import target from './money-runtime.json';
 import { decimalText, paymentReference, moneyStorageKey, peruDate, validFiscal, validPaymentQuote, receiptPrincipal, type PaymentQuote, type FiscalState, type Invoice, type MoneySetupState, type PaymentRequest, type Receipt, type ReceiptInput } from './money-model';
 import { moneyWorkspace } from './money-seed';
@@ -77,6 +78,7 @@ if (typeof window !== 'undefined') window.addEventListener('storage', event => {
 /** The declared preview uses its owned API. A local run may select its own loopback service. */
 export function collectionOrigin(): string | null {
   if (typeof window === 'undefined') return null;
+  const guest = guestPrefix(); if (guest) return window.location.origin + guest;
   if (target.uiOrigins.includes(window.location.origin)) return target.apiOrigin;
   if (!['127.0.0.1', 'localhost'].includes(window.location.hostname)) return null;
   try {

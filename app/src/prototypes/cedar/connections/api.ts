@@ -1,3 +1,4 @@
+import { guestPrefix } from '../guest-preview';
 export class ProofApiError extends Error {
   constructor(public status: number, message: string) { super(message); }
 }
@@ -12,7 +13,7 @@ export async function proofApi<T>(path: string, options: {
   if (options.signal?.aborted) controller.abort();
   const timeout = window.setTimeout(abort, options.timeoutMs ?? 20000);
   try {
-    const response = await fetch(`/api/proof${path}`, {
+    const response = await fetch(`${guestPrefix()}/api/proof${path}`, {
       method: options.body === undefined ? 'GET' : 'POST',
       credentials: 'same-origin',
       cache: 'no-store',

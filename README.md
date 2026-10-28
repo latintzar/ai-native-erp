@@ -1,23 +1,35 @@
-# AI-native ERP
+# Rocoto — AI-native ERP for food distributors
 
-Rocoto combines catalogue, customers, orders, stock, delivery, documents and payments around shared business records. This release preserves its original architecture, working backend and interactive Cedar workspace.
+Rocoto brings a food distributor’s catalogue, customer prices, orders, stock, delivery notes and payments into one workspace. AI integrations turn supplier documents and customer conversations into proposed business records.
 
-![Catalogue products with their original illustrations](docs/assets/erp/catalogue-desktop.png)
+[Website](https://soyrocoto.com) · [Open preview](https://preview.atelierneyra.com/?project=ai-native-erp&entry=open-workspace) · [Documentation](https://docs.atelierneyra.com/ai-native-erp/overview/)
 
-Catalogue components rendered from Cedar. [Capture provenance](docs/assets/erp/NOTES.md).
+[![Rocoto’s food-distributor workspace: customer orders beside an illustrated delivery note](docs/assets/erp/workspace-overview.png)](https://preview.atelierneyra.com/?project=ai-native-erp&entry=open-workspace)
 
-## Open the workspace
+## Food distribution workflows
+
+- **Catalogue and prices.** Supplier catalogues, product illustrations, units, case conversions and customer price lists.
+- **Orders and delivery.** Customer orders, quantities by weight, preparation, packing lists and delivery notes.
+- **Documents and conversations.** Parsing, transcription and Copilot adapters connect source material to product and order records.
+
+The source includes the original interactive product, a FastAPI/PostgreSQL backend, provider adapters and the product’s design and architecture specifications.
+
+## Run the workspace
 
 Use Node 22.12+ and npm.
 
 ```sh
+git clone https://github.com/latintzar/ai-native-erp.git
+cd ai-native-erp
 make install-ui
 make dev-ui
 ```
 
-Open [localhost:8080/app.html](http://127.0.0.1:8080/app.html). Choose a sample business, open Products, and paste a three-row catalogue into the native import review. The workspace uses synthetic records and browser storage. [First result](docs/getting-started.md) explains each step and its persistence boundary.
+Open [localhost:8080/app.html](http://127.0.0.1:8080/app.html). Explore the sample food distributor, then open **Products** and paste a three-row supplier catalogue into the import review. The [first-result guide](docs/getting-started.md) walks through the original interface.
 
-## Run the backend proof
+The browser workspace uses sample records and browser storage. The persistent backend has a separate starter; connecting the workspace to that backend is documented integration work. [Release status](RELEASE-STATUS.md) identifies each part’s tested scope.
+
+## Run the backend
 
 Use Python 3.12, PostgreSQL 16, `vector` and `ltree`.
 
@@ -26,18 +38,26 @@ make install
 make starter-proof
 ```
 
-The proof creates its own local database, loads three products and two orders, approves an order, verifies authenticated HTTP and tenant boundaries, restarts PostgreSQL and reads the persisted order. Provider and model calls: zero. [Backend setup](docs/backend-starter.md) also covers the existing Docker lifecycle.
+The starter creates a local database, loads products and orders, approves an order and verifies it after PostgreSQL restarts. It also checks authentication and tenant access. [Backend setup](docs/backend-starter.md) explains the service and Docker options.
 
-## Build on it
+## Connect your services
 
-| Part | Current boundary | Start here |
-|---|---|---|
-| Maintained backend | Persistent commerce, events, scoped memory, action gates, authenticated services | [Backend starter](docs/backend-starter.md) |
-| Cedar workspace | Interactive product design with fixtures and browser state | [First result](docs/getting-started.md) |
-| Prototype APIs | Separate parsing, transcription, identity, phone, email, Copilot and artwork adapters | [Own provider keys](docs/providers.md) |
-| Collection service | Persistent workspace/payment evidence and guarded bank/fiscal adapters | [Service contract](app/src/prototypes/copper/SPEC.md) |
-| Full ERP direction | Detailed domain, interaction, intelligence and implementation contracts | [Design and specifications](docs/design.md) |
+Follow [provider setup](docs/providers.md) to configure your own AI, identity, calling, email and artwork accounts through a private environment file. Each integration lists its purpose, credentials and current verification status. [Agent instructions](AGENTS.md) give your coding agent the same setup path.
 
-Follow [catalogue → order → delivery](docs/workflows.md), then read the [architecture](docs/architecture.md) and [decisions](docs/decisions.md). The [source reference](docs/reference/source-index.md) locates functions and components. [Agent setup](AGENTS.md) defines safe installation and provider configuration.
+## Documentation
 
-MIT for original code. [Third-party notices](NOTICE.md) cover dependencies, fonts, maps, marks and generated artwork. [Release status](RELEASE-STATUS.md) records the exact source, checks and remaining integration work.
+| Guide | What it covers |
+|---|---|
+| [First result](docs/getting-started.md) | Run the product and explore its sample food distributor |
+| [Workflows](docs/workflows.md) | Catalogue import, orders, delivery and documents |
+| [Architecture](docs/architecture.md) | Workspace, persistent backend and provider boundaries |
+| [Decisions](docs/decisions.md) | Product and engineering choices, with source references |
+| [Design specifications](docs/design.md) | The full ERP product and interaction model |
+| [Functions and modules](docs/reference/source-index.md) | Navigation through 804 modules and 11,015 named symbols |
+| [Verification](docs/verification.md) | Tests, persistent-data proof and integration status |
+
+## Licence
+
+Original code is [MIT licensed](LICENSE). Dependencies, fonts and artwork retain their [own notices](NOTICE.md). [Image provenance](docs/assets/erp/NOTES.md) records the original components and sample data.
+
+[made by atelier neyra](https://atelierneyra.com)

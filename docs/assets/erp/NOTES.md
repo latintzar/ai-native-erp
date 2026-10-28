@@ -37,3 +37,7 @@ The stored PNGs and capture-proof.json record the original pinned reference buil
 Build Cedar with make build, install the optional browser with .venv/bin/python -m playwright install chromium, then serve app/dist-export-review on loopback port 18721. Run .venv/bin/python docs/assets/erp/capture.py in another terminal. ERP_CAPTURE_ORIGIN selects another loopback origin; ERP_CAPTURE_OUT explicitly selects an output directory. The script blocks external browser requests and supplies empty local replies to mutations. Inspect its new proof and images separately from the stored reference's provenance.
 
 The component capture changes layout, typography and artwork seats; it preserves the fixture business records. It demonstrates source-derived interface composition and keeps provider generation separate.
+
+## Repository introduction image
+
+`workspace-overview.png` shows the whole original Sales workspace and an open sample food-distributor delivery note. The native Spain/fish configuration supplies EUR, units, customer tariffs and the existing illustrated products. It was captured at1440×940 after the order, fonts and visible images loaded. External accounts and provider calls were unused; bootstrap API requests were explicitly refused for the capture. [Capture receipt](workspace-overview-proof.json).

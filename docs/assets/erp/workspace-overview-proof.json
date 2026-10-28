@@ -1,0 +1,15 @@
+{
+  "source_repository": "https://github.com/latintzar/ai-native-erp",
+  "source_release": "82d458cca1a834d1f2480f849937976bf71ebb37",
+  "view": "Original Sales workspace with Caf\u00e8 Pag\u00e8s delivery note open",
+  "fixture": "Existing synthetic Spanish fish-distributor workspace; native months/fish/spain configuration",
+  "viewport": {
+    "width": 1440,
+    "height": 940
+  },
+  "image_sha256": "fa76acc1eb2178c32759978e0d083e8e476c469a5cde3f8e80a2981829de2725",
+  "capture": "Real Chromium render after native order, fonts and visible images loaded. Whole viewport; no invented interface.",
+  "provider_calls": 0,
+  "bootstrap_requests": "Explicit offline refusals for access/workspace and proof-session requests",
+  "ui_edits": []
+}

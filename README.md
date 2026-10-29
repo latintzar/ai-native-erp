@@ -1,6 +1,6 @@
 # Rocoto
 
-Rocoto is an AI-native ERP for food distributors. It brings a food distributor’s catalogue, customer prices, orders, stock, delivery notes and payments into one workspace. AI integrations turn supplier documents and customer conversations into proposed business records.
+Rocoto is an AI-native ERP for fresh-food distributors. It turns customer messages, voice notes, emails and calls into reviewed orders, then carries products, weights, substitutions and customer prices through preparation, stock and delivery notes.
 
 [Website](https://soyrocoto.com) · [Open preview](https://preview.atelierneyra.com/?project=ai-native-erp&entry=open-workspace) · [Documentation](https://docs.atelierneyra.com/ai-native-erp/overview/)
 
@@ -48,6 +48,7 @@ Follow [provider setup](docs/providers.md) to configure your own AI, identity, c
 
 | Guide | What it covers |
 |---|---|
+| [Product](docs/product.md) | The distributor workflow, original ambition and implementation boundaries |
 | [First result](docs/getting-started.md) | Run the product and explore its sample food distributor |
 | [Workflows](docs/workflows.md) | Catalogue import, orders, delivery and documents |
 | [Architecture](docs/architecture.md) | Workspace, persistent backend and provider boundaries |

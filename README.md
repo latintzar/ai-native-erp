@@ -2,7 +2,7 @@
 
 Rocoto is an AI-native ERP for fresh-food distributors. It turns customer messages, voice notes, emails and calls into reviewed orders, then carries products, weights, substitutions and customer prices through preparation, stock and delivery notes.
 
-[Website](https://soyrocoto.com) · [Open preview](https://preview.atelierneyra.com/?project=ai-native-erp&entry=open-workspace) · [Documentation](https://docs.atelierneyra.com/ai-native-erp/overview/)
+[Website](https://soyrocoto.com) · [Open app](https://preview.atelierneyra.com/?project=ai-native-erp) · [Documentation](https://docs.atelierneyra.com/ai-native-erp/overview/)
 
 [![Rocoto sales workspace showing a customer delivery note with illustrated seafood](docs/assets/readme-hero.png)](https://preview.atelierneyra.com/?project=ai-native-erp&entry=open-workspace)
 

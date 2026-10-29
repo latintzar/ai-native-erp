@@ -2,6 +2,14 @@
 
 Rocoto is an AI-native ERP for distributors selling fresh food to restaurants, bars and other trade customers. It starts at the order desk, where customer messages become an exact list of goods to pick and deliver.
 
+Peter Neyra developed Rocoto with design partners over two months in their warehouses. The product is designed for the speed of the night shift: an order becomes the working paper used to pick, weigh and deliver fresh food.
+
+## Order, paper and review
+
+The team reviews an incoming customer order and prints the appropriate packing sheets and delivery notes. On the warehouse floor, a worker can write the actual fish weight in red pen. A phone photograph brings the sheet back: its QR identifies the printed document, and the saved page geometry associates written cells with the original order lines. A person reviews the proposed readings against the ink before accepting them.
+
+The source includes print views, QR reading, registration and review code. Handwriting uses a configured vision provider; provider acceptance and the full real-world paper workflow require their own commissioning and evidence. The QR carries an opaque document and geometry locator, while commercial details remain in the system. See [paper](THE-PAPER-SPEC.md), [QR](THE-QR-SPEC.md), [outputs](THE-OUTPUTS-SPEC.md) and [release status](../RELEASE-STATUS.md).
+
 ## The distributor’s order
 
 A customer might ask for six crates of plum tomatoes. The delivery note needs an exact product, grade, calibre and pack conversion: Roma plum tomato, Extra, calibre M, six 5 kg crates. Customer preferences and the team’s product knowledge determine that interpretation.
@@ -13,9 +21,10 @@ flowchart LR
   A["WhatsApp · voice · email · calls"] --> B["Proposed order"]
   H["Customer history · catalogue · tariffs"] --> B
   B --> C["Review products, units and substitutions"]
-  C --> D["Pick and confirm actual weights"]
-  D --> E["Packing list and delivery note"]
-  E --> F["Stock, payment and order history"]
+  C --> D["Print packing list and delivery note"]
+  D --> E["Handwrite actual weight and photograph sheet"]
+  E --> F["Match QR and line · review reading"]
+  F --> G["Stock, payment and order history"]
 ~~~
 
 ## Shared product records

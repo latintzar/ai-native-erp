@@ -1,18 +1,20 @@
 # Rocoto
 
-Rocoto is an AI-native ERP for fresh-food distributors. It turns customer messages, voice notes, emails and calls into reviewed orders, then carries products, weights, substitutions and customer prices through preparation, stock and delivery notes.
+Rocoto is an AI-native ERP for fresh-food distributors. It starts with the customer order and helps the team prepare, weigh and deliver it during the night shift.
 
-[Website](https://soyrocoto.com) · [Open app](https://preview.atelierneyra.com/?project=ai-native-erp) · [Documentation](https://docs.atelierneyra.com/ai-native-erp/overview/)
+Peter Neyra developed the product with design partners over two months in their warehouses, following the work from incoming orders to packing and delivery.
 
-[![Rocoto sales workspace showing a customer delivery note with illustrated seafood](docs/assets/readme-hero.png)](https://preview.atelierneyra.com/?project=ai-native-erp&entry=open-workspace)
+[Website](https://soyrocoto.com) · [Open app](https://preview.atelierneyra.com/apps/erp/app.html) · [Documentation](https://docs.atelierneyra.com/ai-native-erp/overview/)
 
-## Food distribution workflows
+[![Rocoto sales workspace showing a customer delivery note with illustrated seafood](docs/assets/readme-hero.png)](https://preview.atelierneyra.com/apps/erp/app.html)
 
-- **Catalogue and prices.** Supplier catalogues, product illustrations, units, case conversions and customer price lists.
-- **Orders and delivery.** Customer orders, quantities by weight, preparation, packing lists and delivery notes.
-- **Documents and conversations.** Parsing, transcription and Copilot adapters connect source material to product and order records.
+## From order to delivery
 
-The source includes the original interactive product, a FastAPI/PostgreSQL backend, provider adapters and the product’s design and architecture specifications.
+1. **Review the order.** Customer messages, voice notes, emails and calls become proposed lines for the distributor to review against its catalogue and customer prices.
+2. **Print for the shift.** The same orders produce packing lists for the warehouse and delivery notes for customers. Workers can write the actual fish weight on the packing sheet in red pen.
+3. **Bring the paper back.** A phone photo and the sheet’s QR locator identify the printed document; its recorded layout maps handwriting to the original line for human review.
+
+The browser workspace includes sample orders, print views, QR capture and review interfaces. The paper-reading pipeline and provider adapters are present in the source; real handwriting/provider acceptance and the browser-to-persistent-backend integration have separate verification steps. See [product guide](docs/product.md), [provider setup](docs/providers.md) and [release status](RELEASE-STATUS.md).
 
 ## Run the workspace
 

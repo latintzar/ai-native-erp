@@ -1,12 +1,14 @@
 # Rocoto
 
+AI-native ERP for food distributors
+
 Rocoto is an AI-native ERP for fresh-food distributors. It starts with the customer order and helps the team prepare, weigh and deliver it during the night shift.
 
 Peter Neyra developed the product with design partners over two months in their warehouses, following the work from incoming orders to packing and delivery.
 
 [Website](https://soyrocoto.com) · [Open app](https://preview.atelierneyra.com/apps/erp/app.html) · [Documentation](https://docs.atelierneyra.com/ai-native-erp/overview/)
 
-[![Rocoto order and warehouse workspace](docs/assets/readme-hero-v2.jpg)](https://preview.atelierneyra.com/apps/erp/app.html)
+[![Rocoto](https://atelierneyra.com/assets/product-shots-20261030/ai-native-erp.jpg)](https://preview.atelierneyra.com/apps/erp/app.html)
 
 ## From order to delivery
 

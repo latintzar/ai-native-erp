@@ -8,7 +8,7 @@ Peter Neyra developed the product with design partners over two months in their 
 
 [Website](https://soyrocoto.com) · [Open app](https://preview.atelierneyra.com/apps/erp/app.html) · [Documentation](https://docs.atelierneyra.com/ai-native-erp/overview/)
 
-[![Rocoto](https://atelierneyra.com/assets/product-shots-20261030/ai-native-erp.jpg)](https://preview.atelierneyra.com/apps/erp/app.html)
+[![Rocoto](https://atelierneyra.com/assets/product-motion-v3/ai-native-erp.jpg)](https://preview.atelierneyra.com/apps/erp/app.html)
 
 ## From order to delivery
 

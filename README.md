@@ -6,17 +6,31 @@ Rocoto is an AI-native ERP for fresh-food distributors. It starts with the custo
 
 Peter Neyra developed the product with design partners over two months in their warehouses, following the work from incoming orders to packing and delivery.
 
-[Website](https://soyrocoto.com) · [Open app](https://preview.atelierneyra.com/apps/erp/app.html) · [Documentation](https://docs.atelierneyra.com/ai-native-erp/overview/)
+[Website](https://soyrocoto.com) · [Open demo](https://preview.atelierneyra.com/apps/erp/app.html) · [Product tour](docs/product-tour.md) · [Documentation](https://docs.atelierneyra.com/ai-native-erp/overview/)
 
-[![Rocoto](https://atelierneyra.com/assets/product-motion-v4/ai-native-erp.jpg)](https://preview.atelierneyra.com/apps/erp/app.html)
+[![Rocoto Sales showing restaurant orders, seafood line items and packing-list and delivery-note print controls](https://atelierneyra.com/assets/product-motion-v4/ai-native-erp.jpg)](https://preview.atelierneyra.com/apps/erp/app.html)
 
-## From order to delivery
+## A night-shift order
 
-1. **Review the order.** Customer messages, voice notes, emails and calls become proposed lines for the distributor to review against its catalogue and customer prices.
-2. **Print for the shift.** The same orders produce packing lists for the warehouse and delivery notes for customers. Workers can write the actual fish weight on the packing sheet in red pen.
-3. **Bring the paper back.** A phone photo and the sheet’s QR locator identify the printed document; its recorded layout maps handwriting to the original line for human review.
+1. **Review a restaurant’s order.** Match its words to the distributor’s goods, pack units and customer prices.
+2. **Print the work.** Produce packing sheets and delivery notes. A worker can write the actual fish weight on the sheet in red pen.
+3. **Photograph the sheet.** Its QR identifies the saved print; recorded page geometry maps each handwritten cell to the original order line.
+4. **Review the reading.** Compare proposed weights with the ink crops, accept the values and carry the order into its delivery paperwork.
 
-The browser workspace includes sample orders, print views, QR capture and review interfaces. The paper-reading pipeline and provider adapters are present in the source; real handwriting/provider acceptance and the browser-to-persistent-backend integration have separate verification steps. See [product guide](docs/product.md), [provider setup](docs/providers.md) and [release status](RELEASE-STATUS.md).
+## Product areas
+
+| Area | What it does |
+| --- | --- |
+| Sales | Review incoming orders, customer terms, preparation and final quantities. |
+| Products | Import supplier rows, review goods and pack conversions, and associate catalogue illustrations. |
+| Customers | Keep the customer’s usual products, prices and substitution context. |
+| Printing | Produce A4/A5 packing and delivery sheets with saved line-level geometry. |
+| Paper readback | Register a photograph, inspect handwriting crops and review values against their order lines. |
+| Stock and connections | Retain lots and units alongside the selected messaging, model, voice and artwork adapters. |
+
+The hosted workspace uses sample records. Print/readback code and provider adapters are included; real handwriting acceptance and the browser-to-persistent-backend integration have their own verification steps.
+
+[Product tour](docs/product-tour.md) explains the complete journey, UX decisions and source modules. [Release status](RELEASE-STATUS.md) identifies each implementation’s tested scope.
 
 ## Run the workspace
 
@@ -50,16 +64,7 @@ Follow [provider setup](docs/providers.md) to configure your own AI, identity, c
 
 ## Documentation
 
-| Guide | What it covers |
-|---|---|
-| [Product](docs/product.md) | The distributor workflow, original ambition and implementation boundaries |
-| [First result](docs/getting-started.md) | Run the product and explore its sample food distributor |
-| [Workflows](docs/workflows.md) | Catalogue import, orders, delivery and documents |
-| [Architecture](docs/architecture.md) | Workspace, persistent backend and provider boundaries |
-| [Decisions](docs/decisions.md) | Product and engineering choices, with source references |
-| [Design specifications](docs/design.md) | The full ERP product and interaction model |
-| [Functions and modules](docs/reference/source-index.md) | Navigation through 804 modules and 11,015 named symbols |
-| [Verification](docs/verification.md) | Tests, persistent-data proof and integration status |
+[Product tour](docs/product-tour.md) · [First result](docs/getting-started.md) · [Architecture](docs/architecture.md) · [Design decisions](docs/decisions.md) · [Full specifications](docs/design.md) · [Function reference](docs/reference/source-index.md) · [Verification](docs/verification.md)
 
 ## Licence
 

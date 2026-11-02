@@ -4,6 +4,8 @@ Rocoto is an AI-native ERP for distributors selling fresh food to restaurants, b
 
 Peter Neyra developed Rocoto with design partners over two months in their warehouses. The product is designed for the speed of the night shift: an order becomes the working paper used to pick, weigh and deliver fresh food.
 
+[Product tour](product-tour.md) follows one night-shift order through the interface and maps each product area to its source.
+
 ## Order, paper and review
 
 The team reviews an incoming customer order and prints the appropriate packing sheets and delivery notes. On the warehouse floor, a worker can write the actual fish weight in red pen. A phone photograph brings the sheet back: its QR identifies the printed document, and the saved page geometry associates written cells with the original order lines. A person reviews the proposed readings against the ink before accepting them.

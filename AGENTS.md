@@ -1,8 +1,8 @@
-# Agent setup
+# Rocoto engineering
 
 This is the personal public-source derivative of Rocoto’s original AI-native ERP. `SOURCE.json` pins the upstream source; `RELEASE-STATUS.md` records the extraction and proof boundaries. The authoritative mixed original keeps its own protected workflow.
 
-1. Read `README.md`, `docs/getting-started.md` and the subject’s source/specification. Establish whether the change belongs to Cedar, the maintained backend, the shared kit, prototype APIs or the collection service.
+1. Read `README.md`, `docs/product-tour.md`, `docs/getting-started.md` and the subject’s source/specification. Establish whether the change belongs to Cedar, the maintained backend, the shared kit, prototype APIs or the collection service.
 2. Use Node 22.12+ and Python 3.12. `make install-ui` provides the first interactive result; `make install` adds the isolated Python environment. Use the existing components, theme, domain models and provider adapters.
 3. Start with synthetic records. `make starter-proof` provisions its own native PostgreSQL cluster and proves persistence/RLS with captured effects. Tests run with clean credentials and a loopback-only Python network fence. Ordinary app operation is a separate command.
 4. For optional providers, select the account owner and exact capability first. `tools/provider-env.py configure` uses a hidden local terminal prompt and writes an owned mode-0600 file outside the checkout. Keep values in a private file or secret store. `doctor` prints names/status only. Do not request or echo keys in conversation, source, URLs, browser storage or logs.

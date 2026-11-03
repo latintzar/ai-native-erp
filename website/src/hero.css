@@ -1,0 +1,370 @@
+/* Hero phone — structural CSS for the React island. COLOURS/DP come from tokens.css (generated from
+   the app's Tokens.kt). The short aliases below just map app-token names → the exported --rocoto-* vars,
+   so nothing here is a hand-picked value. The WhatsApp-green swap lives in tokens.css [data-theme="wa"]. */
+.hp-frame{
+  --surface:var(--rocoto-surface); --surface2:var(--rocoto-surface2); --elevated:var(--rocoto-elevated);
+  --ink:var(--rocoto-fg); --stone:var(--rocoto-muted); --muted:var(--rocoto-faint);
+  --border:var(--rocoto-border); --border-strong:var(--rocoto-border-strong); --crimson:var(--rocoto-saffron);
+  --bubble-r:var(--rocoto-chat-bubble-radius); --wave-h:var(--rocoto-chat-wave-height);
+  /* landing motion/type (inherited from the page, restated as fallbacks so the island is robust) */
+  --ease:var(--ease,cubic-bezier(.25,1,.5,1)); --spring:var(--spring,cubic-bezier(.34,1.56,.64,1));
+  position:relative; width:100%; max-width:340px; margin-inline:auto; aspect-ratio:320/660; background:#0b0b0d; border-radius:42px; padding:9px;
+  box-shadow:0 30px 70px rgba(28,25,23,.30), 0 2px 6px rgba(0,0,0,.3); border:1px solid #1c1a18;
+}
+.hp-screen{ position:relative; width:100%; height:100%; border-radius:34px; overflow:hidden; background:#12100e; }
+/* home-indicator line, like a real phone — a neutral bar that reads on both dark + light scenes */
+.hp-screen::after{ content:''; position:absolute; bottom:8px; left:50%; transform:translateX(-50%); width:34%; height:5px; border-radius:99px; background:rgba(140,140,140,.6); z-index:9; pointer-events:none; }
+/* STATIC status bar — a TOP-LEVEL child of .hp-frame, pinned to the very top of the phone SCREEN
+   (inset by the frame's 9px padding + clipped to the screen's rounded corners). It sits ABOVE every
+   .hp-layer via z-index and NEVER scales or slides with the apps, so it's full-width + full-size
+   through the whole loop, including the multitask app-switch (Peter). */
+.hp-status{ position:absolute; top:9px; left:9px; right:9px; height:26px; z-index:20; display:flex; align-items:center; justify-content:space-between; padding:8px 22px 0; pointer-events:none; color:#fff; font-family:var(--f-mono); border-radius:34px 34px 0 0; }
+.hp-status-t{ font-size:12px; font-weight:600; letter-spacing:.02em; }
+.hp-status-r{ display:inline-flex; align-items:center; gap:6px; }
+.hp-status-sig{ width:17px; height:11px; fill:#fff; } .hp-status-wifi{ width:16px; height:11px; fill:#fff; }
+.hp-status-bat{ width:22px; height:11px; border:1px solid rgba(255,255,255,.9); border-radius:3px; position:relative; padding:1.5px; box-sizing:border-box; }
+.hp-status-bat::after{ content:''; position:absolute; right:-3px; top:3px; width:2px; height:5px; background:rgba(255,255,255,.9); border-radius:0 1px 1px 0; }
+.hp-status-bat i{ display:block; width:72%; height:100%; background:#fff; border-radius:1px; }
+/* ── the carousel: shrink · slide · zoom (Peter's transition) ────────────────────────────────────────
+   THREE cards (dialer · WhatsApp · web-sheet) live side-by-side in .hp-track. The clock (rAF) sets two
+   GPU transforms per frame, with NO CSS transition on them (a transition would lag the JS and re-introduce
+   jank): .hp-track translateX slides between cards; .hp-stage scale does the shrink→zoom. When a hop is in
+   flight the stage scales down a touch so each card reads as a rounded-corner CARD floating over the phone's
+   dark screen — then it zooms back to full on arrival, and only then does that screen's content animate. */
+.hp-stage{ position:absolute; inset:0; border-radius:34px; overflow:hidden; background:#0b0b0d;
+  will-change:opacity; isolation:isolate; }
+/* each "app" is its OWN card layer. The app-switch scales + springs the layers (Android recents
+   physics) — NOT a track sliding inside the frame. The clock sets each layer's transform per frame,
+   with no CSS transition (a transition would lag the JS). The dark stage shows through around a
+   shrunk card, so it reads as a floating rounded recents card. */
+.hp-layer{ position:absolute; inset:0; overflow:hidden; border-radius:30px; transform-origin:center center;
+  will-change:transform,opacity; backface-visibility:hidden; -webkit-backface-visibility:hidden;
+  box-shadow:0 18px 46px rgba(0,0,0,.42); }
+.hp-sb{ display:flex; justify-content:space-between; padding:11px 20px 0; font-family:var(--f-mono); font-size:11px; color:#f3efe9; }
+.hp-sb-r svg{ width:11px; height:11px; vertical-align:-1px; }
+
+/* scene 1 — dialer */
+.hp-dial{ background:linear-gradient(180deg,#1b1613,#100d0b); color:#f3efe9; display:flex; flex-direction:column; align-items:center; text-align:center; }
+.hp-d-top{ margin-top:30px; font-size:12.5px; color:#b6ac9f; } .hp-d-top b{ color:#E2707D; font-weight:600; }
+.hp-d-name{ font-family:var(--f-display); font-size:30px; margin-top:8px; }
+.hp-d-num{ font-family:var(--f-mono); font-size:15px; letter-spacing:.02em; margin-top:12px; color:#efe9e0; }
+.hp-d-city{ font-size:12.5px; color:#8f877c; margin-top:3px; }
+.hp-orb{ width:132px; height:132px; margin:22px auto 0; border-radius:50%; overflow:hidden; position:relative;
+  /* container is INVISIBLE until answered — no dark disc, no glow, no ring (background/shadow gated below).
+     Only when .hp-orb--answered is set does the disc + orb fade/scale in as they pick up (Peter). */
+  background:transparent; box-shadow:none;
+  opacity:0; transform:scale(.86); transition:opacity .5s var(--ease), transform .6s var(--spring); }
+.hp-orb.hp-orb--answered{ opacity:1; transform:scale(1);
+  background:radial-gradient(circle at 46% 40%, #2a201b 0%, #17110d 72%, #100b08 100%);
+  box-shadow:0 0 0 1px rgba(255,255,255,.04), 0 8px 34px rgba(0,0,0,.35); }
+.hp-orb canvas{ position:absolute; inset:0; width:100%!important; height:100%!important;
+  opacity:0; transform:scale(.86); transition:opacity .6s var(--ease), transform .7s var(--spring); }
+/* Canvas reveal is gated PURELY on --answered (the pickup beat) — NOT on `.ready`. The orb engine
+   (DDOrb) draws itself once mounted; the old `.ready` gate depended on an async texture/mount that
+   could never resolve in the built bundle, leaving the orb hidden forever. `.ready` now only adds the
+   optional glow polish and never blocks the orb from showing. */
+.hp-orb.hp-orb--answered canvas{ opacity:1; transform:scale(1); }
+.hp-orb.hp-orb--answered.ready{ animation:hpGlow 6s ease-in-out infinite; }
+@keyframes hpGlow{ 0%,100%{filter:saturate(1) brightness(1)} 50%{filter:saturate(1.1) brightness(1.05)} }
+.hp-d-c span svg{ width:20px; height:20px; }
+.hp-d-hang svg{ width:24px; height:24px; }
+.hp-comp-plus svg{ width:19px; height:19px; } .hp-comp-mic svg{ width:18px; height:18px; }
+.hp-wa-bk svg{ width:18px; height:18px; } .hp-lock svg{ width:11px; height:11px; vertical-align:-1px; }
+.hp-check svg{ width:12px; height:12px; } .hp-ic svg{ width:26px; height:26px; }
+.hp-d-ctrls{ display:flex; gap:30px; margin-top:auto; margin-bottom:18px; }
+.hp-d-c{ display:flex; flex-direction:column; align-items:center; gap:6px; font-size:10.5px; color:#cfc7bc; }
+.hp-d-c span{ width:50px; height:50px; border-radius:50%; background:rgba(255,255,255,.09); display:grid; place-items:center; font-size:18px; }
+.hp-d-c i{ font-style:normal; }
+.hp-d-hang{ margin-bottom:30px; width:56px; height:56px; border-radius:50%; background:#E5533E; color:#fff; display:grid; place-items:center; font-size:22px; transform:rotate(133deg); box-shadow:0 8px 20px rgba(229,83,62,.4); }
+
+/* app switcher — the current app shrinks to a card, swipes left, the next expands (iOS-style) */
+.hp-sw{ position:absolute; inset:0; background:#08080a; overflow:hidden; }
+.hp-sw-track{ position:absolute; top:0; bottom:0; left:0; width:200%; display:flex; }
+.hp-sw.on .hp-sw-track{ animation:hpSwitch 1200ms cubic-bezier(.5,0,.15,1) both; }
+@keyframes hpSwitch{ 0%,20%{ transform:translateX(0) } 100%{ transform:translateX(-50%) } }
+.hp-sw-card{ width:50%; height:100%; flex:none; position:relative; display:flex; flex-direction:column; border-radius:30px; overflow:hidden; transform:scale(.9); box-shadow:0 22px 54px rgba(0,0,0,.5); }
+.hp-sw.on .hp-sw-wa{ animation:hpSwExpand 1200ms cubic-bezier(.4,0,.15,1) both; }
+@keyframes hpSwExpand{ 0%,56%{ transform:scale(.9) } 100%{ transform:scale(1) } }
+.hp-sw.on .hp-sw-dial{ animation:hpSwLeave 1200ms cubic-bezier(.4,0,.2,1) both; }
+@keyframes hpSwLeave{ 0%{ transform:scale(.9); opacity:1 } 68%,100%{ transform:scale(.82); opacity:.35 } }
+.msw-label{ position:absolute; bottom:14px; left:0; right:0; text-align:center; font:600 12px var(--f-body); color:rgba(255,255,255,.92); text-shadow:0 1px 4px rgba(0,0,0,.5); }
+.hp-sw-dial{ background:linear-gradient(180deg,#1b1613,#100d0b); color:#f3efe9; align-items:center; padding:46px 16px 40px; }
+.msw-dtop{ font-size:12px; color:#b6ac9f; margin-top:14px; } .msw-dname{ font-family:var(--f-display); font-size:26px; margin-top:8px; }
+.msw-orb{ width:96px; height:96px; border-radius:50%; margin:auto 0; background:radial-gradient(circle at 44% 40%, #E5533E, #C01B2C 55%, #5C0E16); box-shadow:0 8px 26px rgba(229,83,62,.4); }
+.msw-hang{ width:48px; height:48px; border-radius:50%; background:#E5533E; color:#fff; display:grid; place-items:center; transform:rotate(133deg); margin-top:auto; } .msw-hang svg{ width:21px; height:21px; }
+.hp-sw-wa{ background:var(--chat-bg); }
+.msw-wh{ background:#008069; color:#fff; display:flex; align-items:center; gap:9px; padding:46px 16px 16px; font-size:16px; font-weight:600; }
+.msw-wav{ width:30px; height:30px; border-radius:50%; background:#fff; color:#075E54; display:grid; place-items:center; flex:none; overflow:hidden; } .msw-wav img{ width:100%; height:100%; object-fit:cover; }
+.msw-wb{ flex:1; display:flex; flex-direction:column; gap:10px; padding:16px 14px; background-image:radial-gradient(rgba(6,40,28,.05) 1.4px,transparent 1.5px); background-size:18px 18px; }
+.msw-mb{ height:22px; border-radius:8px; }
+.msw-mb.out{ align-self:flex-end; width:56%; background:#D9FDD3; } .msw-mb.in{ align-self:flex-start; width:62%; background:#fff; }
+.msw-mb.card{ align-self:flex-start; width:82%; height:66px; background:#fff; box-shadow:0 2px 8px rgba(0,0,0,.08); } .msw-mb.short{ width:38%; }
+@keyframes hpSwipe{ 0%{transform:translateX(150px)} 62%{transform:translateX(-8px)} 100%{transform:translateX(0)} }
+
+/* scene 2 — the customer's WhatsApp-green conversation */
+.hp-wa{ background:var(--chat-bg); display:flex; flex-direction:column; font-family:-apple-system,'Segoe UI',var(--f-body),system-ui,sans-serif; }
+.hp-wa.on{ animation:hpExpand .45s var(--ease) both; }
+@keyframes hpExpand{ from{transform:scale(.97);opacity:0} to{transform:scale(1);opacity:1} }
+.hp-wa-h{ background:var(--c-hbg); color:var(--c-hfg); display:flex; align-items:center; gap:7px; padding:34px 10px 8px 6px; box-shadow:0 1px 2px rgba(0,0,0,.08); position:relative; z-index:3; }
+.hp-wa-bk{ color:var(--c-hic); display:grid; place-items:center; width:20px; height:30px; flex:none; }
+.hp-wa-av{ width:36px; height:36px; border-radius:50%; background:#fff; color:var(--c-avfg); display:grid; place-items:center; flex:none; overflow:hidden; }
+.hp-wa-av svg{ width:22px; height:22px; }
+.hp-wa-av img,.msw-wav img{ width:100%; height:100%; object-fit:cover; }
+.hp-wa-nm{ display:flex; align-items:center; gap:5px; min-width:0; font-size:15.5px; font-weight:500; color:var(--c-hfg); letter-spacing:-.01em; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.hp-wa-wa{ width:14px; height:14px; flex:none; }
+.hp-frame[data-theme="wa"] .hp-wa-wa{ display:none; }
+.hp-wa-actions{ margin-left:auto; display:flex; align-items:center; gap:9px; color:var(--c-hic); }
+.hp-wa-actions svg{ width:20px; height:20px; }
+.hp-wa-b{ flex:1; overflow:hidden; padding:12px 10px 6px; display:flex; flex-direction:column; gap:7px;
+  background:var(--chat-bg); background-image:radial-gradient(var(--dot) 1.5px, transparent 1.6px);
+  background-size:19px 19px; background-position:9px 9px; }
+/* bubbles — waBubbleShape (radius 7.5), tail-notch on the speaker's top corner. */
+@keyframes hpBubbleIn{ from{opacity:0; transform:translateY(7px) scale(.97)} to{opacity:1; transform:none} }
+.hp-b{ position:relative; max-width:82%; padding:6px 9px; font-size:13px; line-height:1.42; color:var(--ink); text-align:left;
+  border-radius:var(--bubble-r); box-shadow:0 1px .5px rgba(26,20,19,.07); overflow-wrap:anywhere;
+  animation:hpBubbleIn .32s var(--spring) both; }
+/* SCROLL-REVEALED bubbles: always mounted, hidden until their threshold, then a spring rise+fade in.
+   (Overrides the mount animation — reveal is a class toggle, driven by scroll progress.) */
+.hp-b.hp-reveal{ animation:none; opacity:0; transform:translateY(10px) scale(.96);
+  transition:opacity .38s var(--ease), transform .48s var(--spring); }
+.hp-b.hp-reveal.shown{ opacity:1; transform:none; }
+.hp-txt{ display:inline; }
+.hp-out{ align-self:flex-end; background:var(--chat-out); border:1px solid var(--chat-out-bd); border-top-right-radius:1.5px; }
+.hp-in{ align-self:flex-start; background:var(--chat-in); border:1px solid var(--chat-in-bd); border-top-left-radius:1.5px; }
+.hp-out::after{ content:''; position:absolute; top:-1px; right:-5px; width:10px; height:12px; background:var(--chat-out); border-top:1px solid var(--chat-out-bd); border-bottom-left-radius:13px 15px; }
+.hp-in::before{ content:''; position:absolute; top:-1px; left:-5px; width:10px; height:12px; background:var(--chat-in); border-top:1px solid var(--chat-in-bd); border-bottom-right-radius:13px 15px; }
+.hp-meta{ float:right; display:inline-flex; align-items:center; gap:3px; margin:5px -1px -2px 8px; line-height:1; }
+.hp-meta time{ font-family:var(--f-mono); font-size:9.5px; color:var(--muted); }
+.hp-tick{ width:15px; height:10px; }
+.hp-tick path{ fill:none; stroke:var(--c-tick); stroke-width:1.4; stroke-linecap:round; stroke-linejoin:round; }
+/* real WhatsApp voice note — bare play triangle, waveform + scrubber, avatar with mic badge.
+   The waveform is FIXED-density bars that fill the full bubble width (see SentWave / SENT_BARS). */
+.hp-vn{ display:flex; align-items:center; gap:10px; min-width:210px; }
+.hp-vp{ background:transparent; color:var(--c-accent); display:grid; place-items:center; flex:none; }
+.hp-vp svg{ width:28px; height:28px; }
+.hp-vw{ position:relative; display:flex; align-items:center; justify-content:space-between; gap:1.5px; height:22px; flex:1; overflow:hidden; }
+.hp-vw i{ flex:none; width:2.5px; border-radius:2px; display:block; background:rgba(11,63,45,.26); }
+.hp-vw i.p{ background:var(--c-accent); }
+.hp-vdot{ position:absolute; left:38%; top:50%; width:9px; height:9px; margin-top:-4.5px; border-radius:50%; background:var(--c-accent); box-shadow:0 1px 2px rgba(0,0,0,.22); }
+.hp-vav{ position:relative; width:32px; height:32px; flex:none; }
+.hp-vav img{ width:32px; height:32px; border-radius:50%; object-fit:cover; }
+.hp-vmic{ position:absolute; right:-2px; bottom:-2px; width:15px; height:15px; border-radius:50%; background:var(--c-accent); color:#fff; display:grid; place-items:center; box-shadow:0 0 0 2px var(--chat-out); }
+.hp-vmic svg{ width:9px; height:9px; }
+/* voice-note bubble corners — WhatsApp outgoing: soft ~8px on three corners, sharp tail on top-right.
+   (The generic 7.5px + 1.5px tail read boxy on this wider/taller bubble.) */
+.hp-vn-b{ border-radius:8px; border-top-right-radius:2px; padding:7px 9px 6px; }
+.hp-vn-foot{ display:flex; align-items:center; justify-content:space-between; margin-top:2px; }
+.hp-vn-foot .hp-meta{ float:none; margin:0; }
+.hp-vd{ font-family:var(--f-mono); font-size:10px; color:var(--muted); }
+/* small green WhatsApp "responded" cue — a centred chip that fades+rises in after the voice note,
+   so the exchange reads as HANDLED (Rocoto replied). Uses the WhatsApp accent green. */
+.hp-reply-cue{ align-self:center; display:inline-flex; align-items:center; gap:5px; margin-top:3px;
+  padding:3px 10px 3px 8px; border-radius:999px; background:var(--chat-out); border:1px solid var(--chat-out-bd);
+  font-size:10.5px; font-weight:600; color:var(--c-accent); box-shadow:0 1px 3px rgba(26,20,19,.08);
+  opacity:0; transform:translateY(8px) scale(.94); transition:opacity .34s var(--ease), transform .44s var(--spring); }
+.hp-reply-cue.shown{ opacity:1; transform:none; }
+.hp-reply-cue .hp-rc-wa{ width:13px; height:13px; flex:none; }
+.hp-reply-cue svg:not(.hp-rc-wa){ width:12px; height:12px; color:var(--c-accent); }
+/* Rocoto typing → confirming (incoming). A small left bubble with three blinking dots. */
+.hp-typing{ align-self:flex-start; display:inline-flex; align-items:center; gap:4px; padding:9px 12px;
+  background:var(--chat-in); border:1px solid var(--chat-in-bd); border-radius:var(--bubble-r); border-top-left-radius:1.5px; }
+.hp-typing i{ width:6px; height:6px; border-radius:50%; background:var(--muted); animation:hpblink 1s infinite; }
+.hp-typing i:nth-child(2){animation-delay:.2s} .hp-typing i:nth-child(3){animation-delay:.4s}
+.hp-typing.hp-reveal{ opacity:0; transition:opacity .25s var(--ease); } .hp-typing.hp-reveal.shown{ opacity:1; }
+.hp-confirm .hp-txt{ color:var(--c-accent,#0b7d4b); font-weight:500; }
+@keyframes hpblink{0%,60%,100%{opacity:.3}30%{opacity:1}}
+
+/* recording row (live) — dot · timer · waveform filling left→right */
+.hp-rec-row{ display:flex; align-items:center; gap:10px; padding:4px 4px 2px; }
+.hp-rec-wave{ justify-content:flex-end !important; gap:2px; }
+/* Rocoto's reply: the order-confirmation IMAGE + link (incoming, tappable) */
+.hp-imgb{ display:flex !important; flex-direction:column; gap:5px; padding:6px !important; max-width:78%; }
+.hp-imgb::before,.hp-imgb::after{ display:none; }
+.hp-imgb-thumb{ display:flex; align-items:center; gap:10px; background:linear-gradient(135deg,#ffffff,#f4eee6); border:1px solid var(--border); border-radius:9px; padding:15px 13px; }
+.hp-imgb-ic{ width:32px; height:32px; border-radius:50%; background:#1a9d5a; color:#fff; display:grid; place-items:center; flex:none; } .hp-imgb-ic svg{ width:18px; height:18px; }
+.hp-imgb-cap{ font-family:var(--f-display); font-size:14.5px; color:var(--ink); font-weight:600; }
+.hp-imgb-link{ font-size:12.5px; color:#0a7cff; font-weight:600; padding:2px 4px 4px; display:inline-block; }
+.hp-imgb.hp-tapped .hp-imgb-thumb{ filter:brightness(.95); }
+.hp-imgb .hp-meta{ float:none; align-self:flex-end; margin:0 2px; }
+
+/* ── order-confirmation bottom sheet — SLIDES UP (Peter: not an app-swap) ── */
+.hp-sheet{ position:absolute; left:0; right:0; bottom:0; z-index:8; background:var(--cream,#FAF8F4);
+  border-radius:22px 22px 0 0; padding:8px 16px 18px; box-shadow:0 -14px 44px rgba(0,0,0,.24); will-change:transform; }
+.hp-sheet-grab{ width:38px; height:4px; border-radius:99px; background:var(--border-strong); margin:2px auto 12px; }
+.hp-sheet-head{ display:flex; align-items:center; gap:10px; margin-bottom:11px; }
+.hp-sheet-ic{ width:30px; height:30px; border-radius:50%; background:#1a9d5a; color:#fff; display:grid; place-items:center; flex:none; } .hp-sheet-ic svg{ width:17px; height:17px; }
+.hp-sheet-ttl b{ display:block; font-family:var(--f-display); font-size:17px; color:var(--ink); line-height:1.1; }
+.hp-sheet-ttl i{ font-style:normal; font-size:11.5px; color:var(--stone); }
+.hp-sheet-lines{ border-top:1px solid var(--border); }
+.hp-sheet-row{ display:flex; align-items:center; gap:10px; padding:8px 0; border-bottom:1px solid var(--border); }
+.hp-sheet-row .n{ flex:1; font-size:13px; color:var(--ink); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.hp-sheet-row .q{ font-family:var(--f-mono); font-size:12px; color:var(--stone); }
+.hp-sheet-row .p{ font-family:var(--f-mono); font-size:13px; color:var(--ink); }
+.hp-sheet-foot{ display:flex; align-items:baseline; padding:11px 0 12px; }
+.hp-sheet-foot span{ flex:1; font-size:13px; color:var(--stone); font-weight:500; }
+.hp-sheet-foot b{ font-family:var(--f-mono); font-size:19px; font-weight:600; color:var(--ink); }
+.hp-sheet-cta{ height:44px; border-radius:12px; background:var(--rocoto-saffron,#C01B2C); color:#fff; display:grid; place-items:center; font-weight:600; font-size:14px; }
+/* order receipt (elevated white) — no confirm/edit: it's the customer's WhatsApp, a receipt */
+.hp-b.hp-cardb{ background:transparent; border:none; box-shadow:none; padding:0; max-width:90%; }
+.hp-b.hp-cardb::before,.hp-b.hp-cardb::after{ display:none; }
+.hp-oc{ background:var(--elevated); border:1px solid var(--border); border-radius:12px; padding:11px 12px 12px; box-shadow:0 8px 20px rgba(26,20,19,.10); }
+.hp-oc-h{ display:flex; align-items:center; gap:6px; margin-bottom:2px; }
+.hp-oc-wa{ width:15px; height:15px; flex:none; }
+.hp-oc-ht{ font-size:14px; font-weight:500; color:var(--ink); letter-spacing:-.01em; }
+.hp-oc-hs{ font-size:10.5px; color:var(--stone); margin-left:auto; }
+.hp-ocr{ display:flex; align-items:center; gap:8px; padding:6.5px 0; border-top:1px solid var(--border); }
+.hp-ocr:nth-of-type(1){ margin-top:6px; }
+.hp-ocr .n{ flex:1; font-size:12.5px; color:var(--ink); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.hp-ocr .q{ font-family:var(--f-mono); font-size:12px; color:var(--stone); }
+.hp-ocr .p{ font-family:var(--f-mono); font-size:12px; color:var(--ink); }
+.hp-oc-t{ display:flex; align-items:baseline; border-top:1.5px solid var(--border-strong); margin-top:1px; padding-top:7px; }
+.hp-oc-t span{ flex:1; font-size:12px; font-weight:500; color:var(--stone); }
+.hp-oc-t b{ font-family:var(--f-mono); font-size:16px; font-weight:600; color:var(--ink); }
+.hp-link{ display:inline-block; margin-top:3px; color:var(--c-link); font-weight:600; }
+.hp-link.tap{ animation:hpTap .3s; } @keyframes hpTap{50%{background:var(--c-confbg,rgba(0,0,0,.06))}}
+/* composer + record interaction */
+.hp-wa-c{ padding:7px 8px 16px; position:relative; background:var(--chat-bg); box-shadow:0 -1px 2px rgba(0,0,0,.05); z-index:3; }
+.hp-comp-idle{ display:flex; align-items:center; gap:6px; }
+/* real WhatsApp input pill: emoji (left) · placeholder · paperclip + camera (right), all INSIDE the pill;
+   the mic/send button lives OUTSIDE. Icon grey ≈ #8696a0 (WhatsApp composer grey). */
+.hp-comp-field{ flex:1; background:var(--elevated); border:1px solid var(--border); border-radius:22px; padding:7px 12px; font-size:13px; color:var(--muted); display:flex; align-items:center; gap:9px; min-width:0; }
+.hp-comp-emoji{ color:#8696a0; display:grid; place-items:center; flex:none; }
+.hp-comp-emoji svg{ width:19px; height:19px; }
+.hp-comp-ph{ flex:1; min-width:0; color:var(--muted); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.hp-comp-clip,.hp-comp-cam{ color:#8696a0; display:grid; place-items:center; flex:none; }
+.hp-comp-clip svg{ width:18px; height:18px; transform:rotate(0deg); }
+.hp-comp-cam svg{ width:19px; height:19px; }
+.hp-comp-field svg{ width:18px; height:18px; }
+.hp-comp-mic{ width:38px; height:38px; border-radius:50%; background:var(--c-accent); color:var(--c-accentfg); display:grid; place-items:center; flex:none; transition:transform .16s var(--spring); }
+.hp-comp-mic svg{ width:17px; height:17px; }
+.hp-wa-c.recording .hp-comp-mic{ transform:scale(1.26); }
+/* recording = LockedRecorderContent: a PURE-WHITE bar filling the composer (not a floating bubble) —
+   waveform row ABOVE, trash·pause·send row BELOW. */
+.hp-wa-c.recording{ background:#fff; }
+.hp-comp-rec{ display:none; flex-direction:column; gap:6px; }
+.hp-wa-c.recording .hp-comp-idle{ display:none; } .hp-wa-c.recording .hp-comp-rec{ display:flex; }
+.hp-rec-pill{ display:flex; align-items:center; gap:10px; background:transparent; border:none; border-radius:0; padding:6px 4px 2px; box-shadow:none; }
+.hp-rec-dot{ width:10px; height:10px; border-radius:50%; background:var(--c-recdot); animation:hpblink 1.1s infinite; flex:none; }
+.hp-rec-time{ font-family:var(--f-mono); font-size:12.5px; color:var(--ink); flex:none; }
+.hp-rec-wave{ display:flex; align-items:center; justify-content:flex-end; gap:2px; height:22px; flex:1; overflow:hidden; }
+.hp-rec-wave i{ width:2.5px; border-radius:2px; display:block; background:var(--c-wave); flex:none; }
+.hp-rec-ctrls{ display:flex; align-items:center; gap:6px; padding:0 4px; }
+.hp-rec-trash,.hp-rec-pause{ width:38px; height:38px; display:grid; place-items:center; border-radius:50%; flex:none; }
+.hp-rec-trash{ color:var(--stone); } .hp-rec-trash svg{ width:19px; height:19px; }
+.hp-rec-pause{ color:var(--c-recdot); } .hp-rec-pause svg{ width:18px; height:18px; }
+.hp-rec-sp{ flex:1; }
+.hp-rec-send{ width:44px; height:44px; border-radius:50%; background:var(--c-accent); color:var(--c-accentfg); display:grid; place-items:center; flex:none; box-shadow:0 2px 8px rgba(0,0,0,.14); }
+.hp-rec-send svg{ width:18px; height:18px; }
+
+/* scene 3 — confirmation WEB SHEET (Café Sotillo stats + orders). Now a carousel CARD: it fills its slot,
+   zooms in with the stage, then the content animates. (No slide-up sheet; the carousel does the entrance.) */
+.hp-app{ background:var(--cream,#FAF8F4); }
+.hp-appsheet{ position:absolute; inset:0; background:var(--cream,#FAF8F4); display:flex; flex-direction:column; }
+/* browser chrome — URL centred (Safari-style), X on the left */
+.hp-app-bar{ display:flex; align-items:center; gap:8px; padding:11px 12px; background:var(--cream-dark,#F0EBE3); border-bottom:1px solid var(--border); }
+.hp-app-x{ width:24px; height:24px; display:grid; place-items:center; font-size:20px; color:var(--stone); flex:none; }
+.hp-app-bsp{ width:24px; flex:none; }
+.hp-app-url{ flex:1; display:inline-flex; align-items:center; justify-content:center; gap:6px; font-family:var(--f-mono); font-size:11.5px; color:var(--stone); background:#fff; border:1px solid var(--border); border-radius:999px; padding:6px 14px; min-width:0; }
+.hp-app-url span{ overflow:hidden; text-overflow:ellipsis; white-space:nowrap; } .hp-app-url svg{ width:11px; height:11px; flex:none; opacity:.7; }
+/* the content area FILLS the rest of the card and clips (no scrollbar) — content is sized to fit. */
+.hp-app-view{ flex:1; position:relative; overflow:hidden; }
+/* stats/orders — sized to fit the phone screen (Peter: "Your orders doesn't fit"). Tighter paddings +
+   a flex column so the three regions share the height without clipping. */
+.hp-app-inv{ position:absolute; inset:0; display:flex; flex-direction:column; padding:13px 15px 16px;
+  opacity:0; transform:translateY(6px); transition:opacity .45s var(--ease) .1s, transform .45s var(--spring) .1s; }
+.hp-app-inv.show{ opacity:1; transform:none; }
+/* Café Sotillo title — CENTRED (Peter). The old 46px left pad was for a tick that no longer renders. */
+.hp-app-conf2{ padding:0 0 12px; display:flex; flex-direction:column; align-items:center; text-align:center; border-bottom:1px solid var(--border); }
+.hp-app-conf2 b{ display:block; font-family:var(--f-display); font-size:19px; color:var(--ink); line-height:1.15; }
+.hp-app-conf2 i{ font-style:normal; font-size:12.5px; color:var(--stone); margin-top:2px; }
+.hp-app-actions{ display:flex; gap:9px; margin:16px 0 18px; }
+.hp-app-dl,.hp-app-pay{ flex:1; height:46px; border-radius:12px; display:flex; align-items:center; justify-content:center; gap:7px; font-size:13px; font-weight:600; border:none; }
+.hp-app-dl{ background:#fff; border:1px solid var(--border); color:var(--ink); } .hp-app-dl svg{ width:18px; height:18px; }
+.hp-app-pay{ background:#000; color:#fff; } .hp-app-pay svg{ width:17px; height:17px; margin-top:-2px; } .hp-app-pay span{ font-size:16px; }
+.hp-app-rhead{ font-family:var(--f-display); font-weight:600; font-size:18px; color:var(--ink); margin:2px 0 12px; }
+.hp-app-statcard{ background:#fff; border:1px solid var(--border); border-radius:14px; padding:12px 14px 11px; margin-top:11px; }
+.hp-app-statcard:first-of-type{ margin-top:13px; }
+.hp-app-bym,.hp-app-mostk{ font:600 10px var(--f-mono); letter-spacing:.09em; color:var(--muted); text-transform:uppercase; margin-bottom:9px; }
+.hp-app-chart{ display:flex; align-items:flex-end; gap:8px; height:70px; }
+.hp-app-chart span{ flex:1; border-radius:5px 5px 0 0; background:#E6DFD5; } .hp-app-chart span.on{ background:var(--rocoto-saffron,#C01B2C); }
+.hp-app-months{ display:flex; gap:8px; margin:9px 0 0; } .hp-app-months span{ flex:1; text-align:center; font-family:var(--f-mono); font-size:10.5px; color:var(--muted); } .hp-app-months span.now{ color:var(--rocoto-saffron,#C01B2C); font-weight:600; }
+.hp-app-most{ display:flex; flex-direction:column; }
+.hp-app-mrow{ display:flex; align-items:center; gap:12px; padding:8px 0; border-top:1px solid var(--border); } .hp-app-mrow:first-child{ border-top:none; padding-top:2px; }
+.hp-app-mrow .rk{ font-family:var(--f-mono); font-size:13px; font-weight:600; color:var(--rocoto-saffron,#C01B2C); width:14px; flex:none; }
+.hp-app-mrow .mn{ flex:1; font-size:14px; color:var(--ink); } .hp-app-mrow .mc{ font-family:var(--f-mono); font-size:12.5px; color:var(--muted); }
+/* stat cards pop in when the sheet reveals */
+.hp-app-statcard{ box-shadow:0 8px 22px rgba(26,20,19,.08); }
+.hp-app-inv.show .hp-app-statcard{ animation:hpPop .5s var(--spring) both; }
+.hp-app-inv.show .hp-app-statcard:nth-of-type(2){ animation-delay:.07s; }
+@keyframes hpPop{ from{ opacity:0; transform:translateY(10px) scale(.97); } to{ opacity:1; transform:none; } }
+/* "Your orders" — three rows that FIT the screen (Peter: "doesn't fit properly"). No floating pill, no
+   faded row: the list sits at the bottom of the flex column and stays fully inside the phone frame. */
+.hp-app-phead{ display:flex; align-items:baseline; justify-content:space-between; margin:13px 2px 8px; }
+.hp-app-phead span{ font-family:var(--f-display); font-weight:600; font-size:16px; color:var(--ink); }
+.hp-app-orders{ position:relative; background:#fff; border:1px solid var(--border); border-radius:14px; padding:2px 15px; box-shadow:0 8px 22px rgba(26,20,19,.08); }
+.hp-app-orow{ display:flex; align-items:center; gap:10px; padding:9px 0; border-top:1px solid var(--border); }
+.hp-app-orow:first-child{ border-top:none; }
+.hp-app-orow .d{ font-family:var(--f-mono); font-size:11px; color:var(--muted); width:64px; flex:none; }
+.hp-app-orow .n{ flex:1; font-size:13.5px; color:var(--ink); }
+.hp-app-orow b{ font-family:var(--f-mono); font-size:13px; color:var(--ink); }
+@media(prefers-reduced-motion:reduce){
+  .hp-layer,.hp-b,.hp-orb canvas,.hp-sheet{ transition:none; animation:none; }
+  .hp-stage{ transition:none!important; }
+}
+
+/* Rocoto's reply — the order card received AS AN IMAGE, then a separate link message */
+.hp-orderimg{ padding:5px !important; max-width:82%; }
+.hp-orderimg::before,.hp-orderimg::after{ display:none !important; }
+.hp-oi{ background:#fff; border:1px solid var(--border); border-radius:9px; overflow:hidden; box-shadow:0 3px 10px rgba(0,0,0,.07); }
+.hp-oi-h{ display:flex; align-items:center; gap:8px; padding:10px 11px 9px; border-bottom:1px solid var(--border); }
+.hp-oi-ic{ width:24px; height:24px; border-radius:50%; background:#1a9d5a; color:#fff; display:grid; place-items:center; flex:none; } .hp-oi-ic svg{ width:14px; height:14px; }
+.hp-oi-ht b{ display:block; font-family:var(--f-display); font-size:13.5px; color:var(--ink); line-height:1.1; } .hp-oi-ht i{ font-style:normal; font-size:10.5px; color:var(--stone); }
+.hp-oi-lines{ padding:1px 11px; }
+.hp-oi-row{ display:flex; align-items:center; gap:8px; padding:5px 0; border-bottom:1px solid var(--border); }
+.hp-oi-row:last-child{ border-bottom:none; }
+.hp-oi-row .n{ flex:1; font-size:11.5px; color:var(--ink); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.hp-oi-row .q{ font-family:var(--f-mono); font-size:10.5px; color:var(--stone); } .hp-oi-row .p{ font-family:var(--f-mono); font-size:11px; color:var(--ink); }
+.hp-oi-foot{ display:flex; align-items:baseline; padding:7px 11px 9px; background:var(--cream); }
+.hp-oi-foot span{ flex:1; font-size:11px; color:var(--stone); } .hp-oi-foot b{ font-family:var(--f-mono); font-size:14px; color:var(--ink); }
+.hp-orderimg .hp-meta{ float:none; display:block; text-align:right; margin:4px 3px 0; }
+.hp-linkmsg-t{ color:#0a7cff; font-weight:600; font-size:12.5px; }
+.hp-linkmsg.hp-tapped{ filter:brightness(.95); }
+
+/* recents background — a dark, warm wallpaper behind the app cards during a multitask switch */
+.hp-recents{ position:absolute; inset:0; z-index:0; pointer-events:none;
+  background:radial-gradient(130% 90% at 50% 12%, #2c241f 0%, #17110d 55%, #0a0806 100%); }
+/* the app layers float over it as cards during the switch */
+.hp-layer{ z-index:2; }
+/* status bar stays the highest layer — above every scaling/sliding app card */
+.hp-status{ z-index:20; }
+
+/* the BROWSER sheet — slides up with stats + order history (brought back) */
+.hp-browser{ top:30px !important; height:auto; padding:0 !important; border-radius:18px 18px 0 0 !important;
+  overflow:hidden; display:flex; flex-direction:column; background:var(--cream,#FAF8F4); }
+.hp-browser .hp-sheet-grab{ display:none; }
+.hp-browser .hp-app-bar{ display:flex; align-items:center; gap:8px; padding:10px 12px; background:var(--cream-dark,#F0EBE3); border-bottom:1px solid var(--border); flex:none; }
+.hp-browser .hp-app-x{ width:22px; height:22px; display:grid; place-items:center; font-size:18px; color:var(--stone); flex:none; }
+.hp-browser .hp-app-bsp{ width:22px; flex:none; }
+.hp-browser .hp-app-url{ flex:1; display:inline-flex; align-items:center; justify-content:center; gap:6px; font-family:var(--f-mono); font-size:11px; color:var(--stone); background:#fff; border:1px solid var(--border); border-radius:999px; padding:5px 12px; min-width:0; }
+.hp-browser .hp-app-url span{ overflow:hidden; text-overflow:ellipsis; white-space:nowrap; } .hp-browser .hp-app-url svg{ width:11px; height:11px; opacity:.6; }
+.hp-browser .hp-app-view{ flex:1; overflow:hidden; }
+.hp-browser .hp-app-inv{ position:relative; inset:auto; opacity:1 !important; transform:none !important; padding:12px 14px 14px; }
+
+/* real-app WhatsApp: WHITE header (only the SENT bubbles are green), matching our Kotlin app */
+.hp-frame[data-theme="wa"] .hp-wa-h{ background:#fff; color:#111b21; box-shadow:0 1px 3px rgba(11,20,26,.08); }
+.hp-frame[data-theme="wa"] .hp-wa-nm{ color:#111b21; }
+.hp-frame[data-theme="wa"] .hp-wa-bk,.hp-frame[data-theme="wa"] .hp-wa-actions{ color:#54656f; }
+.hp-frame[data-theme="wa"] .hp-wa-av{ border:1px solid rgba(11,20,26,.1); }
+/* status bar: dark icons when it sits over the white WhatsApp header */
+.hp-status--dark{ color:#111b21; }
+.hp-status--dark .hp-status-sig,.hp-status--dark .hp-status-wifi{ fill:#111b21; }
+.hp-status--dark .hp-status-bat{ border-color:rgba(17,27,33,.85); }
+.hp-status--dark .hp-status-bat::after{ background:rgba(17,27,33,.85); }
+.hp-status--dark .hp-status-bat i{ background:#111b21; }
+/* straight double-check tick (not cursive) — WhatsApp read-blue */
+.hp-tick{ fill:none !important; stroke:#53bdeb !important; stroke-width:1.5; stroke-linecap:round; stroke-linejoin:round; }
+
+/* dialer: the orb is COMPLETELY invisible until they PICK UP — container + canvas + glow all gated
+   off (see .hp-orb / .hp-orb--answered above). No dark disc, no ring, nothing, while calling. */
+.hp-orb:not(.hp-orb--answered){ opacity:0 !important; background:transparent !important; box-shadow:none !important; }
+.hp-orb:not(.hp-orb--answered) canvas{ opacity:0 !important; transform:scale(.86) !important; }

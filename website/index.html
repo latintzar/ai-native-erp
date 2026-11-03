@@ -1,1 +1,1060 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Rocoto — AI-native ERP for food distributors</title><meta name="description" content="AI-native ERP for food distributors"><link rel="canonical" href="https://soyrocoto.com/"><style>@font-face{font-family:Inter;src:url('assets/inter.woff2');font-weight:100 900;font-display:swap}@font-face{font-family:Fraunces;src:url('assets/fraunces-latin-500-700.woff2');font-weight:500 700;font-display:swap}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;-webkit-font-smoothing:antialiased}a{color:inherit;text-underline-offset:4px}img{display:block;max-width:100%;height:auto}button{font:inherit}a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:5px}h1,h2,h3,p,figure{margin:0}p{line-height:1.65}header{display:flex;align-items:center;justify-content:space-between;gap:24px}header nav{display:flex;gap:24px;flex-wrap:wrap}header nav a{text-decoration:none;font-size:13px}.brand{text-decoration:none;color:var(--ink)}.actions{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:28px}.actions a{font-size:14px;text-decoration:none;padding:13px 18px;border:1px solid var(--line);border-radius:6px}.actions .primary{background:var(--ink);color:var(--paper);border-color:var(--ink)}.actions a:hover{filter:brightness(.93)}.doc-link{font-size:14px}.source-note{font-size:12px;line-height:1.6;color:var(--muted);margin-top:14px}footer{padding:28px 5vw;text-align:center;border-top:1px solid var(--line)}footer a{font-size:12px;text-decoration:none}section{scroll-margin-top:24px}code{font-size:.84em;background:var(--wash);padding:3px 5px;border-radius:3px;overflow-wrap:anywhere}.reveal{opacity:1}h1{overflow-wrap:normal;text-wrap:balance}h2{text-wrap:balance}main{overflow:clip}.skip{position:fixed;top:-60px;left:16px;padding:10px;background:var(--paper);z-index:20}.skip:focus{top:10px}@media(max-width:640px){header{gap:16px;align-items:start}header nav{gap:12px;font-size:12px}.actions{gap:10px}.actions a{font-size:13px;padding:12px 14px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}} :root{--paper:#FAF7F3;--ink:#1A1413;--accent:#C01B2C;--line:#E7E2D9;--wash:#F1EDE6;--muted:#6B675F}body{background:var(--paper);color:var(--ink);font:16px Inter,Arial,sans-serif}header{max-width:1440px;margin:auto;padding:24px 5vw;border-bottom:1px solid var(--line)}.brand{font:600 33px Fraunces,Georgia,serif}.erp-hero{max-width:1440px;margin:auto;padding:76px 5vw 88px;display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:60px;align-items:center}h1{font:600 clamp(48px,4.4vw,72px)/1.04 Fraunces,Georgia,serif;letter-spacing:-.045em;max-width:650px}.erp-hero>div>p:not(.source-note){font-size:19px;max-width:530px;color:var(--muted);margin-top:26px}.erp-hero figure{width:100%;max-width:680px}.erp-hero figcaption{font-size:12px;color:var(--muted);margin-top:14px}.erp-order{padding:70px 7vw;background:#F1EDE6;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.8fr);gap:90px;align-items:center}.erp-order figure{max-width:720px}.erp-order p{margin:20px 0 24px;color:var(--muted);max-width:480px}h2{font:500 44px/1.1 Fraunces,Georgia,serif;letter-spacing:-.025em}.erp-modules{padding:80px 7vw;max-width:1440px;margin:auto}.erp-modules>div{display:grid;grid-template-columns:repeat(3,1fr);gap:50px;margin-top:40px}.erp-modules article{border-top:1px solid var(--line);padding-top:24px}.erp-modules h3{font:600 20px Fraunces;margin-bottom:14px}.erp-modules p{font-size:15px;color:var(--muted)}.erp-adopt{background:#1A1413;color:var(--paper);padding:70px 7vw;display:flex;gap:80px;justify-content:space-between;align-items:center}.erp-adopt>div{max-width:640px}.erp-adopt p{margin-top:20px;color:#d8d0c7}.erp-adopt .actions{max-width:400px}.erp-adopt .primary{background:var(--paper);color:var(--ink)}.erp-adopt a{border-color:#6b675f}@media(max-width:900px){.erp-hero{gap:28px}.erp-order{gap:36px}.erp-adopt{display:block}.erp-modules>div{gap:24px}}@media(max-width:640px){header{padding:20px}.brand{font-size:28px}.erp-hero{padding:42px 20px 52px;display:flex;flex-direction:column;gap:34px}.erp-hero h1{font-size:48px}.erp-hero figure{max-width:390px}.erp-order{display:flex;flex-direction:column-reverse;padding:44px 20px;gap:30px}.erp-order figure{max-width:390px}h2{font-size:36px}.erp-modules{padding:48px 20px}.erp-modules>div{grid-template-columns:1fr;gap:28px}.erp-adopt{padding:44px 20px}.erp-adopt .actions{margin-top:30px}}.actions .doc-link{width:48px;height:48px;padding:12px;display:inline-flex;align-items:center;justify-content:center}.doc-link img{width:24px;height:24px;object-fit:contain}.erp-adopt .doc-link img{filter:invert(1)}</style></head><body><a class="skip" href="#main">Skip to content</a><header><a class="brand" href="#main">Rocoto</a><nav><a href="https://docs.atelierneyra.com/ai-native-erp/overview/" target="_blank" rel="noopener noreferrer">Documentation</a><a href="https://github.com/latintzar/ai-native-erp" target="_blank" rel="noopener noreferrer">GitHub</a></nav></header><main id="main"><section class="erp-hero"><div><h1>AI-native ERP for food distributors</h1><p>Turn customer messages and calls into orders, then prepare and deliver them at the speed of the night shift. Rocoto was developed with design partners over two months in their warehouses.</p><div class="actions"><a class="primary" href="https://preview.atelierneyra.com/apps/erp/app.html" target="_blank" rel="noopener noreferrer">Open app</a><a href="https://github.com/latintzar/ai-native-erp" target="_blank" rel="noopener noreferrer">GitHub</a><a class="doc-link" href="https://docs.atelierneyra.com/ai-native-erp/overview/" target="_blank" rel="noopener noreferrer" aria-label="Documentation" title="Documentation"><img src="assets/book-open.svg" alt=""></a></div></div><figure><img src="assets/night-shift-orders.jpg" alt="Rocoto’s order workspace showing a customer order and fish products" decoding="sync"></figure></section><section class="erp-modules"><h2>From order to delivery</h2><div><article><h3>1. Review the order</h3><p>Review products, quantities and customer prices from messages, voice notes, emails and calls.</p></article><article><h3>2. Print and prepare</h3><p>Print packing sheets for the warehouse and delivery notes for customers. Write the actual fish weight on the packing sheet in red pen.</p></article><article><h3>3. Photograph and review</h3><p>Photograph the sheet on a phone. Its QR identifies the print, and its saved layout connects handwriting to the original order line for a person to review.</p></article></div><p class="source-note">Paper readback uses a configured handwriting provider. <a href="https://github.com/latintzar/ai-native-erp/blob/main/docs/THE-PAPER-SPEC.md">Read the paper workflow specification</a>.</p></section><section class="erp-order"><figure><picture><source media="(max-width:640px)" srcset="assets/catalogue-phone.png"><img src="assets/catalogue-native.png" alt="Rocoto product catalogue with illustrated seafood, units and customer prices" loading="lazy"></picture></figure><div><h2>Catalogue and customer prices</h2><p>Review products, units, pack conversions and customer prices alongside each order. Product illustrations stay attached to the catalogue.</p><a href="https://docs.atelierneyra.com/ai-native-erp/overview/" target="_blank" rel="noopener noreferrer">Explore the workspace →</a></div></section><section class="erp-adopt"><div><h2>Workspace setup</h2><p>Clone the repository, run the sample food distributor and follow the setup guide to connect your services.</p><p>The guides cover the original design decisions, architecture, provider credentials and each component’s tested scope.</p></div><div class="actions"><a class="primary" href="https://preview.atelierneyra.com/apps/erp/app.html" target="_blank" rel="noopener noreferrer">Open app</a><a href="https://github.com/latintzar/ai-native-erp" target="_blank" rel="noopener noreferrer">GitHub</a><a class="doc-link" href="https://docs.atelierneyra.com/ai-native-erp/overview/" target="_blank" rel="noopener noreferrer" aria-label="Documentation" title="Documentation"><img src="assets/book-open.svg" alt=""></a></div></section></main><footer><a href="https://atelierneyra.com" target="_blank" rel="noopener noreferrer">made by atelier neyra</a></footer></body></html>
+<!-- GENERATED from landing/build.py — edit COPY there, then rerun. Do not edit this file. -->
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>Rocoto | ERP con IA para distribuidores de alimentación</title>
+<meta content="Rocoto convierte los pedidos de WhatsApp y email en albaranes con tus productos, tus precios y lo que compra cada cliente." name="description"/>
+<link href="https://soyrocoto.com/" rel="canonical"/>
+<link href="https://soyrocoto.com/" hreflang="es" rel="alternate"/>
+<link href="https://soyrocoto.com/en/" hreflang="en" rel="alternate"/>
+<link href="https://soyrocoto.com/" hreflang="x-default" rel="alternate"/>
+<meta content="website" property="og:type"/>
+<meta content="Rocoto | IA para distribuidores de alimentación" property="og:title"/>
+<meta content="Rocoto convierte los pedidos de WhatsApp y email en albaranes con tus productos, tus precios y lo que compra cada cliente." property="og:description"/>
+<meta content="es_ES" property="og:locale"/>
+<link href="/brand/favicon-32.png" rel="icon" type="image/png"/>
+<link href="/brand/favicon-180.png" rel="apple-touch-icon"/>
+<link href="/assets/hero.css?v=74ac2205" rel="stylesheet"/>
+<link href="/assets/agents.css" rel="stylesheet"/>
+<style>/* hero.css sets overflow-x:hidden on html+body, which turns the root into a scroll container
+  and silently breaks the already-sticky .hdr on every page. `clip` clips the same way without
+  creating one, so the nav actually sticks. */
+html,body{overflow-x:clip}
+/* THE PRODUCTS MEGA-MENU'S FIVE RULES LIVED HERE and went with the menu (2026-08-28, canon
+   §16.1 — Rocoto is one thing). Nothing on the site emits `.hdr .menu` any more, so they were
+   dead CSS downloaded by every page. The three mobile rules below are NOT part of it: they open
+   the burger panel, which every page still has. */
+/* The mobile menu has never opened on a v2 page: hero.css closes it at specificity (0,2,1) and
+   its opening selectors are (0,1,2) or reference .v2 as a DESCENDANT of body, which it can never
+   be because .v2 IS the body. body.v2.navopen is (0,2,2) and wins. Fixed here, not in hero.css,
+   because that sheet is shared with the rest of the site. */
+/* ONE DOOR, ONE LABEL PER WIDTH (canon §32). `.nav-start-m` is the burger sheet's «Empieza»; the
+   red `.sp .b` is the desktop's. Each width shows exactly one of them, so the header never says
+   the same word twice. Written as the DESKTOP hide (rather than a mobile show) because the link is
+   a plain nav anchor and must keep the sheet's own row treatment below 860px without a second
+   opinion about padding, borders or font-size. */
+/* AND THE SAME FOR SIGN IN (the final amendment, 2026-08-29): `.nav-signin-m` is the burger
+   sheet's «Iniciar sesión», the quiet `.sp .b.signin` is the desktop's. Without this pair the door
+   back into an account is missing from every phone, because `.hdr .sp .b` is display:none there. */
+@media(min-width:861px){ .hdr nav>a.nav-start-m,.hdr nav>a.nav-signin-m{display:none} }
+@media(max-width:860px){
+  /* the panel was fixed at 58px tall with overflow:auto, so the six products were inside it and
+     entirely unreachable — the submenu is already static+grid on mobile, it just had no room */
+  body.v2.navopen .hdr nav{opacity:1 !important;visibility:visible !important;
+    transform:none !important;pointer-events:auto !important;
+    position:fixed !important;inset:56px 0 auto 0 !important;height:auto !important;
+    max-height:calc(100dvh - 56px) !important;min-height:0 !important;overflow-y:auto !important;
+    background:var(--paper,#FAF7F3);border-bottom:1px solid var(--line);
+    padding:10px 20px 26px !important;display:flex !important;flex-direction:column !important;
+    align-items:stretch !important;gap:0 !important}
+  body.v2.navopen .hdr nav>a{padding:14px 0;border-top:1px solid var(--line);font-size:16px}
+  /* THE DROPDOWN INSIDE THE BURGER. It stays a real disclosure here rather than flattening into
+     an always-open list (which is what the dead products menu did): the panel is a phone-height
+     column and three role rows permanently open push «Empresas» off the first screen. The
+     trigger keeps the same row treatment as its sibling links so the bar reads as one list. */
+  body.v2.navopen .hdr .navdd{display:block;border-top:1px solid var(--line)}
+  body.v2.navopen .hdr .navdd-t{width:100%;justify-content:space-between;padding:14px 0;
+    font-size:16px;color:var(--fg)}
+  /* ⚠️ CLOSED MEANS `display:none` HERE, NOT `visibility:hidden`. Flattened into the panel the
+     menu is a STATIC box, and a hidden static box still occupies its layout — which left a
+     140px hole between «A quién ayuda» and «Empieza» with nothing in it (rendered and looked at).
+     Taking it out of flow is the only thing that closes a disclosure inside a column. */
+  body.v2.navopen .hdr .navdd .menu{display:none;position:static;transform:none;border:none;
+    box-shadow:none;background:none;padding:0 0 10px;min-width:0;grid-template-columns:1fr}
+  body.v2.navopen .hdr .navdd.open .menu{display:grid}
+  /* AND IT IS PINNED TO THE COLUMN IT SITS IN. Measured inside the open panel at 390 and 320,
+     the flattened grid came out ~25px wider than its own parent and the third word of every line
+     went under the panel's edge. `width:100%` states what `auto` was supposed to give it, and
+     `min-width:0` on the row lets the sentence wrap instead of setting the row's floor. */
+  body.v2.navopen .hdr .navdd .menu{width:100%;max-width:100%;box-sizing:border-box}
+  body.v2.navopen .hdr .navdd .menu a{padding:11px 0;border-radius:0;min-width:0}
+}
+/* ══ THE NAV DROPDOWN — «A quién ayuda» → the three role pages (review round 2, decision 6) ══
+   It wears the chrome the site already ships: `.hasmenu` / `.menu` / `.mi` / `.mt` are live rules
+   in assets/hero.css, written for the products mega-menu and left standing when that menu died.
+   Everything below is the DELTA between that menu and this one — a button trigger instead of a
+   link, one column instead of two, left-aligned instead of centred, and an explicit open state
+   so a finger can work it. This block sits after the stylesheet links, so on the ties it wins. */
+.v2 .hdr .navdd-t{display:inline-flex;align-items:center;gap:5px;background:none;border:0;
+  padding:0;margin:0;font:inherit;font-size:var(--t-sm);font-weight:500;color:var(--mid);
+  cursor:pointer;line-height:inherit}
+.v2 .hdr .navdd-t:hover{color:var(--fg)}
+.v2 .hdr .navdd-t:focus-visible{outline:2px solid var(--acc-t);outline-offset:3px;border-radius:4px}
+.v2 .hdr .navdd-c{width:12px;height:12px;color:var(--faint);transition:transform .15s}
+.v2 .hdr .navdd.open .navdd-c{transform:rotate(180deg)}
+/* ONE COLUMN, LEFT-HUNG. The menu it inherits from was a 2x3 grid of product cards centred under
+   its trigger; three roles in two columns strand the third on a row of its own, and a centred
+   panel under the first nav item hangs off the left edge of the bar. */
+.v2 .hdr .navdd>.menu{grid-template-columns:minmax(0,312px);left:0;right:auto;
+  transform:translateY(6px);opacity:0;visibility:hidden;pointer-events:none}
+/* ⚠️ AND THE ROW HAS TO SAY `row`. Two rules in hero.css style `.menu a`: the generic one sets
+   `flex-direction:column`, the header one sets `display:flex` and the gap but never touches the
+   direction — so the mark stacked ON TOP of its label instead of beside it (rendered and looked
+   at). Restating the axis is what makes the icon card an icon card. */
+.v2 .hdr .navdd .menu a{flex-direction:row;align-items:flex-start;gap:11px}
+/* HOVER ONLY WHERE HOVER IS REAL. On a touch screen :hover latches on the first tap and there is
+   nothing to un-hover, so the pointer query keeps that opener off phones and the class does the
+   work there instead. Keyboard is covered by :focus-within on every device. */
+@media(hover:hover){
+  .v2 .hdr .navdd:hover>.menu{opacity:1;visibility:visible;pointer-events:auto;
+    transform:translateY(2px)}}
+.v2 .hdr .navdd:focus-within>.menu,.v2 .hdr .navdd.open>.menu{opacity:1;visibility:visible;
+  pointer-events:auto;transform:translateY(2px)}
+/* ⚠️ AND THE INHERITED HOVER RULE HAS TO BE PUT DOWN ON TOUCH. `.v2 .hdr .hasmenu:hover .menu`
+   lives in hero.css unguarded, and a tap on a phone leaves :hover LATCHED until the next tap
+   elsewhere — so the menu reopened itself the instant it was closed (rendered, tapped twice and
+   looked at). Guarding my own opener with `hover:hover` was never going to be enough; the older
+   rule has to be answered where it fires. Order inside this block matters: the neutraliser first,
+   then the two real openers, so an intentionally-open menu still wins under a resting finger. */
+@media(hover:none){
+  .v2 .hdr .navdd:hover>.menu{opacity:0;visibility:hidden;pointer-events:none;
+    transform:translateY(6px)}
+  .v2 .hdr .navdd:focus-within>.menu,.v2 .hdr .navdd.open>.menu{opacity:1;visibility:visible;
+    pointer-events:auto;transform:translateY(2px)}}
+/* THE HOME GRID IS FOUR MODULES, so it is 2x2 (2026-08-15). `.pg` is auto-fill at 300px, which
+   fitted five cards as 3+2; four cards land as 3+1 and strand the last one on a row of its own.
+   Two columns also gives each product shot the width it was composed at. */
+@media(min-width:900px){.v2 .pg{grid-template-columns:repeat(2,minmax(0,1fr))}}
+/* product-page related grids: THREE peers, three columns. It was two columns for a 2x2 of four
+   peers; with Agentes dissolved into the modules (2026-08-15) every product page has exactly
+   three others beside it, and two columns leaves the third card alone on a row of its own. */
+.v2 .pg.pg2{grid-template-columns:repeat(3,1fr)}
+@media(max-width:980px){.v2 .pg.pg2{grid-template-columns:1fr 1fr}}
+@media(max-width:760px){.v2 .pg.pg2{grid-template-columns:1fr}}</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Rocoto","url":"https://soyrocoto.com","description":"Rocoto convierte los pedidos de WhatsApp y email en albaranes con tus productos, tus precios y lo que compra cada cliente."}</script>
+<style>
+/* ══════════════════════════════════════════════════════════════════════════════════════════════
+   SITE V3 — the pilot home and /precios, page-scoped (2026-08-28)
+
+   WHY IT IS HERE AND NOT IN sections-v2.css. That sheet is compiled out of landing-react and is
+   another territory's file; this is the pattern this build already uses for a section that owns
+   its own rules (PS_CSS, MOD_CSS, TRYBAND_CSS, WR_CSS) — the styles travel with the sections and
+   only the two pages that render them pay for the bytes.
+
+   IT ADDS TO THE HOUSE STYLE, IT DOES NOT RESTATE IT. Every value below resolves through the v2
+   tokens `.v2` already declares — the type ramp (--t-lead/--t-body/--t-sm/--t-cap/--t-label),
+   the ink ramp (--fg/--mid/--faint), --line-soft, --acc-t, --r, the spacing scale and the
+   landing's own deepened shadow ramp. Nothing here picks a colour, a radius or a shadow by hand.
+   Peter, 2026-08-28: «the current website has a sick design aesthetic itself» — so this is that
+   design, extended into four new shapes, not a second one parked beside it.
+   ══════════════════════════════════════════════════════════════════════════════════════════ */
+
+/* anchors under a sticky header (#ayuda, #ayuda-comerciales… come off the nav and the footer) */
+.v2 [id^="ayuda"], .v2 #sabe, .v2 #pedido, .v2 #abstencion, .v2 #mes,
+.v2 #canales, .v2 #erp, .v2 #papel, .v2 #precio{scroll-margin-top:76px}
+
+/* ── THE NUMBERED FLOW — «Cómo gestiona un pedido» · «El primer mes» · both steps on /precios ──
+   Vertical and full width on purpose: five of these sentences laid across a 1100px container as
+   cards gives each one 200px, which turns a sentence into a caption. The number is the site's
+   mono accent, the same one `.st .k` wears. */
+.v2 .fl{list-style:none;margin:26px 0 0;padding:0;border-top:1px solid var(--line-soft)}
+.v2 .fl li{display:grid;grid-template-columns:26px minmax(0,27ch) minmax(0,1fr);
+  gap:2px clamp(14px,2.6vw,36px);align-items:baseline;padding:15px 0;
+  border-bottom:1px solid var(--line-soft)}
+.v2 .fl .fl-n{font-family:var(--mono);font-size:var(--t-label);font-weight:600;color:var(--acc-t);
+  font-variant-numeric:tabular-nums}
+.v2 .fl b{font-size:var(--t-h);font-weight:600;letter-spacing:-.008em;text-wrap:pretty}
+.v2 .fl .fl-d{font-size:var(--t-sm);color:var(--mid);line-height:1.55;text-wrap:pretty}
+@media(max-width:820px){
+  .v2 .fl li{grid-template-columns:26px minmax(0,1fr);row-gap:4px}
+  .v2 .fl .fl-d{grid-column:2}}
+
+/* ── THE TICKED LIST — what the month measures ─────────────────────────────────────────────── */
+.v2 .tk{list-style:none;margin:22px 0 0;padding:0;display:grid;gap:9px 30px}
+.v2 .tk.tk-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.v2 .tk li{display:flex;gap:9px;align-items:flex-start;font-size:var(--t-sm);line-height:1.5}
+.v2 .tk li svg.ic{margin-top:3px;color:var(--acc-t)}
+@media(max-width:700px){.v2 .tk.tk-2{grid-template-columns:1fr}}
+
+/* ── §3 · what Rocoto knows ────────────────────────────────────────────────────────────────── */
+/* the one-product sentence sits a step up from the grid: it is the claim the eight items prove */
+.v2 .kn-one{margin-top:14px;max-width:62ch;color:var(--fg);font-size:var(--t-lead)}
+/* eight items in the site's own `.st` card, four across — the fourth column is what keeps each
+   sentence at two lines instead of four */
+.v2 .kn-grid{grid-template-columns:repeat(4,minmax(0,1fr));margin-top:26px}
+.v2 .kn-grid .st .k svg.ic{width:17px;height:17px}
+@media(max-width:1000px){.v2 .kn-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.v2 .kn-grid{grid-template-columns:1fr}}
+/* the two islands, side by side, each captioned with what it is */
+.v2 .kn-proof{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:clamp(18px,3vw,34px);margin-top:clamp(26px,4vw,44px);align-items:start}
+.v2 .kn-isl{margin:0}
+.v2 .kn-isl figcaption,.v2 .ho-isl figcaption{margin-top:12px;font-size:var(--t-cap);
+  color:var(--faint);line-height:1.5;max-width:44ch}
+@media(max-width:860px){.v2 .kn-proof{grid-template-columns:1fr}}
+
+/* ── §4 · how it handles an order ──────────────────────────────────────────────────────────── */
+.v2 .ho-isl{margin:clamp(26px,4vw,44px) 0 0}
+.v2 .ho-isl-rev figcaption{margin-left:auto;text-align:right}
+
+/* ── §6 · abstention ───────────────────────────────────────────────────────────────────────── */
+/* `.limit` is the site's own sunk box; the closing line is the one sentence that deserves to be
+   larger than the list above it, so it takes the lead size rather than a new treatment */
+.v2 .ab-close{margin-top:26px;font-size:var(--t-lead);color:var(--fg);max-width:none;
+  font-family:var(--f-display,'Fraunces',Georgia,serif);font-weight:600;letter-spacing:-.008em}
+
+/* ══ §7 · THE MONTH, AS A CALENDAR YOU CAN WALK ═════════════════════════════════════════════
+   Peter, 2026-08-28: «it's a really low-commitment way, but it needs to be WELL EXPLAINED — the
+   design, visually, timelines, all that.» So the month stopped being five numbered rows and
+   became a dated rail: a hairline running down through five red nodes, the date in the display
+   face on the left, the sentence on the right, and Día 30 as the arrival.
+
+   WHY A RAIL AND NOT A ROW OF CARDS. The reader's question is «how long until I see something»,
+   and a rail answers it with distance — the eye measures the month by travelling it. Five cards
+   across the container would answer it with five captions.
+
+   THE NUMBERS ARE THE DISPLAY FACE, not the mono accent `.fl` uses. «Día 0» and «Semanas 3–4»
+   are dates, and Fraunces is the face this site says its important nouns in; a mono «03» reads
+   as an index, which is exactly the flat list this replaces.
+   ═══════════════════════════════════════════════════════════════════════════════════════════ */
+.v2 .tml{list-style:none;margin:clamp(28px,4vw,42px) 0 0;padding:0}
+.v2 .tml li{display:grid;grid-template-columns:minmax(0,148px) 26px minmax(0,1fr);
+  gap:0 clamp(12px,2vw,26px);padding-bottom:clamp(26px,3.6vw,42px)}
+.v2 .tml li:last-child{padding-bottom:0}
+/* RIGHT-ALIGNED AGAINST THE RAIL, so the five dates form one clean edge and the rail reads as
+   the axis they are measured on. Left-aligned they were five ragged starts and the rail was just
+   a line that happened to be there. */
+.v2 .tml-k{font-family:var(--f-display,'Fraunces',Georgia,serif);
+  font-size:clamp(19px,1.45vw,23px);font-weight:600;letter-spacing:-.015em;line-height:1.2;
+  color:var(--fg);font-variant-numeric:lining-nums tabular-nums;white-space:nowrap;
+  text-align:right}
+/* THE RAIL AND ITS NODE. The line is drawn per-item so it stretches with the item's own height
+   — one absolute rail on the <ol> would need the first and last node's offsets in JS. The first
+   item's line starts AT its node and the last item draws none, so the rail spans Día 0 → Día 30
+   and stops there rather than trailing off into the paper. */
+.v2 .tml-r{position:relative;justify-self:center;width:26px}
+.v2 .tml-r:before{content:"";position:absolute;left:50%;transform:translateX(-50%);
+  top:5px;bottom:-6px;width:1px;background:var(--line)}
+.v2 .tml li:last-child .tml-r:before{display:none}
+/* the ring is the page's own linen, so the node sits ON the rail rather than beside a gap */
+.v2 .tml-r:after{content:"";position:absolute;left:50%;top:5px;transform:translateX(-50%);
+  width:10px;height:10px;border-radius:var(--rocoto-radius-pill,999px);background:var(--acc);
+  box-shadow:0 0 0 4px var(--paper),0 0 0 5px var(--acc-dim)}
+/* Día 30 is the arrival, and it is the one node that says so: a wider halo and the name in the
+   display face. One emphasis, on the row the whole rail is walking towards. */
+.v2 .tml li:last-child .tml-r:after{width:13px;height:13px;top:4px;
+  box-shadow:0 0 0 4px var(--paper),0 0 0 5px var(--acc-dim),0 0 0 10px var(--paper),
+             0 0 0 11px var(--acc-dim)}
+.v2 .tml li:last-child .tml-b b{font-family:var(--f-display,'Fraunces',Georgia,serif);
+  font-size:19px;letter-spacing:-.015em}
+.v2 .tml-b b{display:block;font-size:var(--t-h);font-weight:600;letter-spacing:-.008em;
+  line-height:1.3;text-wrap:pretty}
+.v2 .tml-b>span{display:block;margin-top:7px;font-size:var(--t-sm);color:var(--mid);
+  line-height:1.55;max-width:56ch;text-wrap:pretty}
+/* THE HONESTY BEAT (canon §7: «If Rocoto is ready earlier, the customer should be able to start
+   testing earlier»). It is an aside about the WHOLE rail, so it hangs off the rail's own column
+   with an accent rule rather than sitting indented under Día 30, where it read as a sixth
+   sentence belonging to the last node. */
+.v2 .tml-note{margin:clamp(26px,3.4vw,38px) 0 0 calc(148px + clamp(12px,2vw,26px));
+  padding-left:18px;border-left:2px solid var(--acc-dim);
+  font-size:var(--t-sm);color:var(--mid);line-height:1.55;max-width:56ch}
+@media(max-width:760px){
+  /* IT STACKS WITHOUT JAGGING: the rail keeps column one and spans both rows, so the date sits
+     directly over its own sentence and every node still hangs off one straight line. */
+  .v2 .tml li{grid-template-columns:22px minmax(0,1fr);gap:0 14px;padding-bottom:26px}
+  .v2 .tml-r{grid-column:1;grid-row:1/span 2;width:22px}
+  .v2 .tml-k{grid-column:2;grid-row:1;margin-bottom:6px;font-size:19px;text-align:left}
+  .v2 .tml-b{grid-column:2;grid-row:2}
+  .v2 .tml-b>span{max-width:none}
+  .v2 .tml-note{margin-left:0;max-width:none}}
+
+/* what he is actually signing, one line above the door */
+.v2 .mo-commit{margin:clamp(26px,3.4vw,36px) 0 0;font-size:var(--t-lead);color:var(--fg);
+  max-width:56ch;line-height:1.5}
+.v2 .mo-cta,.v2 .pp-cta{margin-top:22px}
+
+/* ══ «ASÍ ES EL INFORME» — the month's other deliverable, shown ═════════════════════════════
+   Same plates as «A quién ayuda», pointed at the rendered sample report instead of the app: the
+   isolate on its `warm_field()` gradient, at its own native size, on the deep shadow. The page
+   argues the analytics by SHOWING pages of them, and the caption under each one names what the
+   page is — the numbers stay inside the image, where they belong to a real sample.
+   ═══════════════════════════════════════════════════════════════════════════════════════════ */
+.v2 .rep{margin-top:clamp(32px,4.4vw,54px);padding-top:clamp(24px,3.4vw,38px);
+  border-top:1px solid var(--line-soft)}
+.v2 .rep-hd{max-width:64ch}
+.v2 .rep-hd h3{font-family:var(--f-display,'Fraunces',Georgia,serif);font-size:22px;
+  font-weight:600;letter-spacing:-.012em;line-height:1.2;margin:0}
+.v2 .rep-hd p{margin:8px 0 0;font-size:var(--t-lead);color:var(--mid);line-height:1.5}
+.v2 .rep-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:clamp(20px,3vw,36px);margin-top:clamp(22px,3vw,32px);align-items:stretch}
+/* TWO PAGES OF THE REPORT ARE TWO DIFFERENT SHAPES, AND THEIR CAPTIONS STILL HAVE TO LINE UP.
+   Letting each plate be exactly its shot's height put the two captions at different heights and
+   the row jagged. The plates stretch to the row instead and the shot centres inside — the plate
+   is atmosphere, so growing it costs nothing, and the shot is never touched (canon: never scaled
+   past its own pixels). */
+.v2 .rep-i{margin:0;display:flex;flex-direction:column}
+.v2 .rep-i>.ayp{flex:1;display:flex;flex-direction:column;justify-content:center}
+.v2 .rep-i>.ayp>.ayp-scroll{width:100%}
+.v2 .rep-i.rep-lead{grid-column:1/-1}
+.v2 .rep-i figcaption{margin-top:13px}
+.v2 .rep-i figcaption b{display:block;font-size:var(--t-h);font-weight:600;letter-spacing:-.008em;
+  line-height:1.3;text-wrap:pretty}
+.v2 .rep-i figcaption span{display:block;margin-top:4px;font-size:var(--t-sm);color:var(--mid);
+  line-height:1.55;max-width:48ch;text-wrap:pretty}
+.v2 .rep-all{display:inline-flex;align-items:center;gap:7px;margin-top:clamp(22px,3vw,30px);
+  font-size:var(--t-sm);font-weight:600;color:var(--acc-t)}
+@media(max-width:860px){.v2 .rep-grid{grid-template-columns:1fr}}
+
+/* ── §8 · channels ─────────────────────────────────────────────────────────────────────────── */
+/* a sub-heading INSIDE the channels story: it is a level below `h2.t`, so it takes the display
+   face one step down rather than a new type role */
+.v2 .ch-sub{font-family:var(--f-display,'Fraunces',Georgia,serif);font-size:22px;font-weight:600;
+  letter-spacing:-.012em;line-height:1.2;margin:0}
+/* the ERP shelf — the real marks in /assets/erp, the same files the enterprise page uses */
+.v2 .erpr{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.v2 .erpr-m{display:inline-flex;align-items:center;gap:9px;padding:7px 13px 7px 8px;
+  background:var(--white);border:1px solid var(--line);border-radius:var(--r);
+  font-size:var(--t-cap);font-weight:600;color:var(--mid)}
+.v2 .erpr-m i{display:flex;width:22px;height:22px;align-items:center;justify-content:center}
+.v2 .erpr-m img{max-width:22px;max-height:22px;object-fit:contain}
+/* the four blocks of the channels story read as ONE section: the inner hairlines and the inner
+   64px gaps come off, and the group keeps the single rule at its foot */
+.v2 .ch-group{border-bottom:1px solid var(--line-soft);padding-bottom:var(--rocoto-space-giant)}
+.v2 .ch-group>section{border-bottom:none;padding-top:0;padding-bottom:0}
+.v2 .ch-group>section:first-child{padding-top:var(--rocoto-space-giant)}
+.v2 .ch-group>section+section{margin-top:clamp(30px,4vw,50px)}
+.v2 .ch-acts{margin-top:22px;display:flex;gap:22px;flex-wrap:wrap}
+.v2 .ch-acts .mdl-all{display:inline-flex;align-items:center;gap:7px;font-size:var(--t-sm);
+  font-weight:600;color:var(--acc-t)}
+
+/* ══ §5 · «A QUIÉN AYUDA» — the aides and their plates ══════════════════════════════════════
+   The section is the page's proof layer, so it gets the page's most air. Each role opens on its
+   own heading and one framing sentence, then its aides alternate side by side down the block,
+   then one compact line folds in the rest of the role's story.
+   ═══════════════════════════════════════════════════════════════════════════════════════════ */
+.v2 .ay-role{margin-top:clamp(38px,6vw,76px);padding-top:clamp(26px,4vw,44px);
+  border-top:1px solid var(--line-soft)}
+.v2 .ay-rolehd{max-width:58ch}
+.v2 .ay-roleic{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;
+  border-radius:var(--r);background:var(--sunk);border:1px solid var(--line-soft);
+  color:var(--acc-t);margin-bottom:12px}
+.v2 .ay-roleic svg.ic{width:18px;height:18px}
+.v2 .ay-rolehd h3{font-family:var(--f-display,'Fraunces',Georgia,serif);font-size:26px;
+  font-weight:600;letter-spacing:-.015em;line-height:1.14;margin:0}
+.v2 .ay-rolehd p{margin-top:8px;font-size:var(--t-lead);color:var(--mid);line-height:1.5}
+
+/* one aide: the sentence on one side, the thing it names on the other */
+.v2 .ay-aide{display:grid;grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr);
+  gap:clamp(20px,4vw,58px);align-items:center;margin-top:clamp(26px,4vw,46px)}
+/* ⚠️ REVERSING THE SIDE HAS TO REVERSE THE TRACKS TOO. `order:2` on the text moves the plate
+   into COLUMN ONE, so with the template left alone every other aide handed its screen the .82fr
+   track and its sentence the 1.18fr one — the frame rendered 180px narrower than its twin above
+   it and the sentence ran wide. The pair moves together. */
+.v2 .ay-aide.rev{grid-template-columns:minmax(0,1.18fr) minmax(0,.82fr)}
+.v2 .ay-aide.rev>.ay-txt{order:2}
+/* a wide strip (or one of the two hero visuals) takes the whole section: sentence above, plate
+   below at full width, which is what turns a 1544px component strip from a 40 % thumbnail into
+   a screen you can read */
+.v2 .ay-aide.ay-wide{grid-template-columns:minmax(0,1fr)}
+.v2 .ay-aide.ay-wide .ay-txt{max-width:62ch;margin-bottom:6px}
+.v2 .ay-aide.ay-wide .ay-txt p{max-width:58ch}
+.v2 .ay-aide.ay-noshot{grid-template-columns:minmax(0,62ch)}
+.v2 .ay-txt h4{font-size:19px;font-weight:600;letter-spacing:-.012em;line-height:1.2;margin:0}
+.v2 .ay-txt p{margin-top:9px;font-size:var(--t-body);color:var(--mid);line-height:1.55;
+  max-width:46ch;text-wrap:pretty}
+.v2 .ay-fold{margin-top:clamp(22px,3vw,34px);font-size:var(--t-sm);color:var(--faint);
+  max-width:60ch;line-height:1.55}
+
+/* ── THE GRADIENT PLATE (canon §17.2: «screens ON cool gradient plates… never a flat gray box»)
+   THREE LAYERS, the site's own — the same field the product tiles and the try-band wear, seeded
+   off the frame's name by `warm_field()` so a screen keeps one colour wherever it appears:
+     0  .ayp-blobs   the two poles, blurred wide
+     1  .ayp-curve   the bezier band
+     2  ::after      the grain — the layer that stops it reading as a CSS gradient
+     3  the capture itself, on the landing's deepest shadow
+   Dialled well under the tile's intensity: there the field IS the artefact on a 190px shot, here
+   it is atmosphere under a real screen and the screen has to win. The plate keeps the page's own
+   linen underneath so it reads as light on paper rather than as a card on paper. */
+.v2 .ayp{position:relative;isolation:isolate;overflow:hidden;margin:0;
+  background:var(--paper);border:1px solid var(--line-soft);
+  border-radius:var(--rocoto-radius-card,12px);padding:clamp(15px,2.4vw,36px)}
+.v2 .ayp-blobs{position:absolute;inset:-22%;z-index:0;pointer-events:none;
+  filter:blur(66px) saturate(1.08);opacity:.30}
+.v2 .ayp-curve{position:absolute;inset:-8%;width:116%;height:116%;z-index:1;pointer-events:none;
+  transform-origin:50% 50%;filter:blur(22px);opacity:.22}
+.v2 .ayp:after{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;
+  opacity:.15;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E")}
+.v2 .ayp-scroll{position:relative;z-index:3}
+/* SIZED TO THE AIDE (canon §19), AND NEVER ENLARGED PAST ITS OWN PIXELS. `--nw` is half the
+   capture's stored width, i.e. the size the component was composed at on a DPR-2 screen, so a
+   micro-frame sits inline at its own modest scale and a wide strip fills the band it earned —
+   without any capture ever being scaled up into softness. */
+.v2 .ayp-shot{display:block;margin:0 auto;width:min(100%,var(--nw,100%));height:auto;
+  border-radius:var(--rocoto-radius-sm,6px);box-shadow:var(--rocoto-shadow-popover)}
+/* THE ISLAND'S HOST (canon §27/§28). Empty in the served HTML and therefore invisible — the
+   capture below it is what a no-JS visitor sees. The React island mounts in here and hides the
+   <img> itself (`.ayp.am-on .ayp-shot`, in landing-react/src/appmotion.css), so the swap happens
+   in one paint and nothing reserves space twice. */
+.v2 .ayp-live{display:block}
+
+@media(max-width:860px){
+  /* THE FRAME NEVER SHRINKS INTO ILLEGIBILITY. Below the fold-point the aide stacks — sentence,
+     then screen — and the plate becomes a horizontal scroller with the capture held at a real
+     reading height. A 320px-wide crop of a component is a thumbnail; a 300px-tall one you can
+     push sideways is the screen. */
+  /* `.ay-aide.rev` carries its own two-track template (0,3,0), which outranks the single-column
+     rule above it — so the reversed aides have to be named here too or they stay side by side
+     on a phone. */
+  .v2 .ay-aide,.v2 .ay-aide.rev{grid-template-columns:1fr;gap:18px}
+  .v2 .ay-aide.rev>.ay-txt{order:0}
+  .v2 .ay-txt p{max-width:none}
+  .v2 .ayp-scroll{overflow-x:auto;overscroll-behavior-x:contain;
+    -webkit-overflow-scrolling:touch;padding-bottom:2px}
+  /* width:auto + the intrinsic attributes puts every capture back at its own composed size and
+     the plate scrolls sideways under it; the max-height only catches the tall portrait ones,
+     which would otherwise run 800px down a phone. */
+  .v2 .ayp-shot{width:auto;max-width:none;height:auto;max-height:440px}
+}
+
+/* ══ §5, AFTER REVIEW ROUND 2 · THE THREE DOORS ═════════════════════════════════════════════
+   What is left of «A quién ayuda» on the home page: three tiles, each one the whole link, each
+   naming a job and saying in one line what Rocoto takes off it. The aide blocks above are still
+   rendered — by `role_aides()`, on /sales.html, /procurement.html and /owner.html, where the
+   plates get the width they were composed for.
+   ═══════════════════════════════════════════════════════════════════════════════════════════ */
+.v2 .wdoors{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:clamp(12px,1.6vw,18px);margin-top:clamp(22px,3vw,32px)}
+.v2 .wdoor{display:flex;flex-direction:column;background:var(--white);
+  border:1px solid var(--line);border-radius:var(--r);padding:clamp(16px,1.9vw,23px);
+  box-shadow:var(--rocoto-shadow-card);color:var(--fg);
+  transition:border-color .15s,transform .15s}
+.v2 .wdoor:hover{border-color:var(--line-hard);transform:translateY(-2px)}
+.v2 .wdoor-ic{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;
+  border-radius:var(--r);background:var(--sunk);border:1px solid var(--line-soft);
+  color:var(--acc-t);margin-bottom:13px}
+.v2 .wdoor-ic svg.ic{width:17px;height:17px}
+.v2 .wdoor b{font-family:var(--f-display,'Fraunces',Georgia,serif);font-size:20px;font-weight:600;
+  letter-spacing:-.014em;line-height:1.15}
+.v2 .wdoor-p{margin-top:7px;font-size:var(--t-sm);color:var(--mid);line-height:1.5;
+  text-wrap:pretty}
+.v2 .wdoor-go{margin-top:auto;padding-top:15px;display:inline-flex;align-items:center;gap:6px;
+  font-size:var(--t-cap);font-weight:600;color:var(--acc-t)}
+.v2 .wdoor:focus-visible{outline:2px solid var(--acc-t);outline-offset:3px}
+@media(max-width:860px){.v2 .wdoors{grid-template-columns:1fr}}
+
+/* ══ THE ROLE PAGES — /sales · /procurement · /owner ════════════════════════════════════════
+   Almost nothing of their own: a hero, and then `.ay-*`, which is the aide machinery declared
+   above and is why these pages take V3_CSS rather than a fourth sheet. The one thing that had to
+   be written here is the hero, because a role page opens on an h1 and the home section opened on
+   an h3 inside a section that already had one.
+   ═══════════════════════════════════════════════════════════════════════════════════════════ */
+.v2 .ro-hero{padding:clamp(26px,4.4vw,50px) 0 0;border-bottom:none;max-width:46ch}
+.v2 .ro-ic{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;
+  border-radius:var(--r);background:var(--sunk);border:1px solid var(--line-soft);
+  color:var(--acc-t);margin-bottom:14px}
+.v2 .ro-ic svg.ic{width:20px;height:20px}
+.v2 .ro-hero h1{font-family:var(--f-display,'Fraunces',Georgia,serif);
+  font-size:clamp(32px,4.8vw,48px);font-weight:600;letter-spacing:-.022em;line-height:1.06;
+  margin:0;text-wrap:balance}
+.v2 .ro-hero p{margin:14px 0 0;font-size:var(--t-lead);color:var(--fg);line-height:1.5;
+  text-wrap:pretty}
+/* THE THIRD-EYE LEDE (canon §31). It sits OUTSIDE .ro-hero's 46ch column on purpose: the hero's
+   one line wants to break early and hold the eye, and this wants to read like a paragraph in a
+   letter — so it takes its own 66ch measure, body size, secondary ink, and a generous gap above
+   and below. That gap IS the «remember to have SPACE» instruction; the page opens with room
+   before the first screen instead of stacking two headings on top of one another. */
+.v2 .ro-lede{max-width:66ch;margin:clamp(18px,2.6vw,26px) 0 0;font-size:var(--t-body);
+  color:var(--mid);line-height:1.62;text-wrap:pretty}
+.v2 .ro-aides{padding-top:0;border-bottom:none}
+.v2 .ro-aides>.ay-aide:first-child{margin-top:clamp(24px,3.6vw,42px)}
+
+/* ── §10 · the close ───────────────────────────────────────────────────────────────────────── */
+.v2 .v3-close{text-align:center;border-bottom:none}
+.v2 .v3-close h2.t{margin:0 auto;max-width:22ch}
+.v2 .cta-mid{justify-content:center;margin-top:22px}
+
+/* ══ /precios.html — «El mes, y luego el año» ═══════════════════════════════════════════════ */
+.v2 .pmhead{max-width:34ch}
+.v2 .pmhead h1{font-family:var(--f-display,'Fraunces',Georgia,serif);font-size:clamp(32px,4.6vw,46px);
+  font-weight:600;letter-spacing:-.02em;line-height:1.08;margin:0;text-wrap:balance}
+.v2 .pmhead p{margin-top:12px;font-size:var(--t-lead);color:var(--mid);line-height:1.5}
+/* one step: its number-word, its name, its sentence, then the flow of what happens inside it */
+.v2 .pmstep{margin-top:clamp(30px,5vw,54px);padding-top:clamp(22px,3vw,34px);
+  border-top:1px solid var(--line-soft)}
+.v2 .pmstep-k{font-size:var(--t-label);font-weight:700;letter-spacing:.11em;text-transform:uppercase;
+  color:var(--acc-t)}
+.v2 .pmstep h2{font-family:var(--f-display,'Fraunces',Georgia,serif);font-size:29px;font-weight:600;
+  letter-spacing:-.015em;line-height:1.14;margin:8px 0 0}
+.v2 .pmstep>p{margin-top:9px;font-size:var(--t-lead);color:var(--mid);line-height:1.5;max-width:58ch}
+.v2 .pmprice{margin-top:clamp(28px,3.4vw,38px);font-size:var(--t-body);color:var(--fg)}
+.v2 .pmcta{margin-top:clamp(30px,4vw,44px);display:flex;gap:9px;flex-wrap:wrap;align-items:center}
+.v2 .pmcta-n{font-size:var(--t-cap);color:var(--faint);flex-basis:100%;margin-top:2px}
+
+/* ── the custom offer, now /custom.html ────────────────────────────────────────────────────── */
+.v2 .cuhd{max-width:44ch}
+/* IT IS A PAGE NOW, SO ITS OPENING LINE IS AN h1 (canon §26). `h2.t` is tag-qualified, so an
+   `h1.t` inherited none of it and shipped the heading in the sans. Same treatment, one step up. */
+.v2 .cuhd h1.t{font-family:var(--f-display,'Fraunces',Georgia,serif);
+  font-size:clamp(30px,4vw,40px);font-weight:600;letter-spacing:-.02em;line-height:1.08;
+  margin:0;max-width:20ch;text-wrap:balance}
+.v2 .cu-egn{margin-top:12px;font-size:var(--t-sm);color:var(--faint);max-width:66ch;line-height:1.55}
+/* the example agents. THEY ARE EXAMPLES AND THE DRAWING SAYS SO: a plain roll of named rows,
+   no card, no price slot, no plus sign — a catalogue is a grid of things you pick, and the whole
+   point of this block is that you do not pick from it. */
+.v2 .cueg{list-style:none;margin:22px 0 0;padding:0;display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));gap:0 clamp(20px,4vw,48px)}
+.v2 .cueg li{padding:14px 0;border-top:1px solid var(--line-soft)}
+.v2 .cueg b{display:block;font-size:var(--t-h);font-weight:600;letter-spacing:-.008em}
+.v2 .cueg span{display:block;margin-top:4px;font-size:var(--t-sm);color:var(--mid);line-height:1.5}
+@media(max-width:760px){.v2 .cueg{grid-template-columns:1fr}}
+.v2 .cu-terms{margin-top:26px;font-size:var(--t-body);color:var(--fg)}
+</style><link href="/assets/restoration.css" rel="stylesheet"/><meta content="default-src 'self'; base-uri 'self'; connect-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; media-src 'self' blob:; frame-src 'self'; object-src 'none'; form-action 'none'" http-equiv="Content-Security-Policy"/></head>
+<body class="v2" data-lang="es">
+<svg style="display:none">
+<symbol fill="currentColor" id="ph-arrow-right" viewbox="0 0 256 256"><path d="M216,128l-72,72V56Z" opacity="0.2"></path><path d="M221.66,122.34l-72-72A8,8,0,0,0,136,56v64H40a8,8,0,0,0,0,16h96v64a8,8,0,0,0,13.66,5.66l72-72A8,8,0,0,0,221.66,122.34ZM152,180.69V75.31L204.69,128Z"></path></symbol>
+<symbol fill="currentColor" id="ph-arrow-u-up-left" viewbox="0 0 256 256"><path d="M80,40v96L32,88Z" opacity="0.2"></path><path d="M168,80H88V40a8,8,0,0,0-13.66-5.66l-48,48a8,8,0,0,0,0,11.32l48,48A8,8,0,0,0,88,136V96h80a48,48,0,0,1,0,96H80a8,8,0,0,0,0,16h88a64,64,0,0,0,0-128ZM72,116.69,43.31,88,72,59.31Z"></path></symbol>
+<symbol fill="currentColor" id="ph-binoculars" viewbox="0 0 256 256"><path d="M104,168a40,40,0,1,1-40-40A40,40,0,0,1,104,168Zm88-40a40,40,0,1,0,40,40A40,40,0,0,0,192,128Z" opacity="0.2"></path><path d="M237.2,151.87v0a47.1,47.1,0,0,0-2.35-5.45L193.26,51.8a7.82,7.82,0,0,0-1.66-2.44,32,32,0,0,0-45.26,0A8,8,0,0,0,144,55V80H112V55a8,8,0,0,0-2.34-5.66,32,32,0,0,0-45.26,0,7.82,7.82,0,0,0-1.66,2.44L21.15,146.4a47.1,47.1,0,0,0-2.35,5.45v0A48,48,0,1,0,112,168V96h32v72a48,48,0,1,0,93.2-16.13ZM76.71,59.75a16,16,0,0,1,19.29-1v73.51a47.9,47.9,0,0,0-46.79-9.92ZM64,200a32,32,0,1,1,32-32A32,32,0,0,1,64,200ZM160,58.74a16,16,0,0,1,19.29,1l27.5,62.58A47.9,47.9,0,0,0,160,132.25ZM192,200a32,32,0,1,1,32-32A32,32,0,0,1,192,200Z"></path></symbol>
+<symbol fill="currentColor" id="ph-brain" viewbox="0 0 256 256"><path d="M240,124a48,48,0,0,1-32,45.27h0V176a40,40,0,0,1-80,0,40,40,0,0,1-80,0v-6.73h0a48,48,0,0,1,0-90.54V72a40,40,0,0,1,80,0,40,40,0,0,1,80,0v6.73A48,48,0,0,1,240,124Z" opacity="0.2"></path><path d="M248,124a56.11,56.11,0,0,0-32-50.61V72a48,48,0,0,0-88-26.49A48,48,0,0,0,40,72v1.39a56,56,0,0,0,0,101.2V176a48,48,0,0,0,88,26.49A48,48,0,0,0,216,176v-1.41A56.09,56.09,0,0,0,248,124ZM88,208a32,32,0,0,1-31.81-28.56A55.87,55.87,0,0,0,64,180h8a8,8,0,0,0,0-16H64A40,40,0,0,1,50.67,86.27,8,8,0,0,0,56,78.73V72a32,32,0,0,1,64,0v68.26A47.8,47.8,0,0,0,88,128a8,8,0,0,0,0,16,32,32,0,0,1,0,64Zm104-44h-8a8,8,0,0,0,0,16h8a55.87,55.87,0,0,0,7.81-.56A32,32,0,1,1,168,144a8,8,0,0,0,0-16,47.8,47.8,0,0,0-32,12.26V72a32,32,0,0,1,64,0v6.73a8,8,0,0,0,5.33,7.54A40,40,0,0,1,192,164Zm16-52a8,8,0,0,1-8,8h-4a36,36,0,0,1-36-36V80a8,8,0,0,1,16,0v4a20,20,0,0,0,20,20h4A8,8,0,0,1,208,112ZM60,120H56a8,8,0,0,1,0-16h4A20,20,0,0,0,80,84V80a8,8,0,0,1,16,0v4A36,36,0,0,1,60,120Z"></path></symbol>
+<symbol fill="currentColor" id="ph-broadcast" viewbox="0 0 256 256"><path d="M160,128a32,32,0,1,1-32-32A32,32,0,0,1,160,128Z" opacity="0.2"></path><path d="M128,88a40,40,0,1,0,40,40A40,40,0,0,0,128,88Zm0,64a24,24,0,1,1,24-24A24,24,0,0,1,128,152Zm73.71,7.14a80,80,0,0,1-14.08,22.2,8,8,0,0,1-11.92-10.67,63.95,63.95,0,0,0,0-85.33,8,8,0,1,1,11.92-10.67,80.08,80.08,0,0,1,14.08,84.47ZM69,103.09a64,64,0,0,0,11.26,67.58,8,8,0,0,1-11.92,10.67,79.93,79.93,0,0,1,0-106.67A8,8,0,1,1,80.29,85.34,63.77,63.77,0,0,0,69,103.09ZM248,128a119.58,119.58,0,0,1-34.29,84,8,8,0,1,1-11.42-11.2,103.9,103.9,0,0,0,0-145.56A8,8,0,1,1,213.71,44,119.58,119.58,0,0,1,248,128ZM53.71,200.78A8,8,0,1,1,42.29,212a119.87,119.87,0,0,1,0-168,8,8,0,1,1,11.42,11.2,103.9,103.9,0,0,0,0,145.56Z"></path></symbol>
+<symbol fill="currentColor" id="ph-buildings" viewbox="0 0 256 256"><path d="M136,32V216H40V85.35a8,8,0,0,1,3.56-6.66l80-53.33A8,8,0,0,1,136,32Z" opacity="0.2"></path><path d="M240,208H224V96a16,16,0,0,0-16-16H144V32a16,16,0,0,0-24.88-13.32L39.12,72A16,16,0,0,0,32,85.34V208H16a8,8,0,0,0,0,16H240a8,8,0,0,0,0-16ZM208,96V208H144V96ZM48,85.34,128,32V208H48ZM112,112v16a8,8,0,0,1-16,0V112a8,8,0,1,1,16,0Zm-32,0v16a8,8,0,0,1-16,0V112a8,8,0,1,1,16,0Zm0,56v16a8,8,0,0,1-16,0V168a8,8,0,0,1,16,0Zm32,0v16a8,8,0,0,1-16,0V168a8,8,0,0,1,16,0Z"></path></symbol>
+<symbol fill="currentColor" id="ph-camera" viewbox="0 0 256 256"><path d="M208,64H176L160,40H96L80,64H48A16,16,0,0,0,32,80V192a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V80A16,16,0,0,0,208,64ZM128,168a36,36,0,1,1,36-36A36,36,0,0,1,128,168Z" opacity="0.2"></path><path d="M208,56H180.28L166.65,35.56A8,8,0,0,0,160,32H96a8,8,0,0,0-6.65,3.56L75.71,56H48A24,24,0,0,0,24,80V192a24,24,0,0,0,24,24H208a24,24,0,0,0,24-24V80A24,24,0,0,0,208,56Zm8,136a8,8,0,0,1-8,8H48a8,8,0,0,1-8-8V80a8,8,0,0,1,8-8H80a8,8,0,0,0,6.66-3.56L100.28,48h55.43l13.63,20.44A8,8,0,0,0,176,72h32a8,8,0,0,1,8,8ZM128,88a44,44,0,1,0,44,44A44.05,44.05,0,0,0,128,88Zm0,72a28,28,0,1,1,28-28A28,28,0,0,1,128,160Z"></path></symbol>
+<symbol fill="currentColor" id="ph-caret-down" viewbox="0 0 256 256"><path d="M208,96l-80,80L48,96Z" opacity="0.2"></path><path d="M215.39,92.94A8,8,0,0,0,208,88H48a8,8,0,0,0-5.66,13.66l80,80a8,8,0,0,0,11.32,0l80-80A8,8,0,0,0,215.39,92.94ZM128,164.69,67.31,104H188.69Z"></path></symbol>
+<symbol fill="currentColor" id="ph-caret-left" viewbox="0 0 256 256"><path d="M160,48V208L80,128Z" opacity="0.2"></path><path d="M163.06,40.61a8,8,0,0,0-8.72,1.73l-80,80a8,8,0,0,0,0,11.32l80,80A8,8,0,0,0,168,208V48A8,8,0,0,0,163.06,40.61ZM152,188.69,91.31,128,152,67.31Z"></path></symbol>
+<symbol fill="currentColor" id="ph-caret-right" viewbox="0 0 256 256"><path d="M176,128,96,208V48Z" opacity="0.2"></path><path d="M181.66,122.34l-80-80A8,8,0,0,0,88,48V208a8,8,0,0,0,13.66,5.66l80-80A8,8,0,0,0,181.66,122.34ZM104,188.69V67.31L164.69,128Z"></path></symbol>
+<symbol fill="currentColor" id="ph-caret-up" viewbox="0 0 256 256"><path d="M208,160H48l80-80Z" opacity="0.2"></path><path d="M213.66,154.34l-80-80a8,8,0,0,0-11.32,0l-80,80A8,8,0,0,0,48,168H208a8,8,0,0,0,5.66-13.66ZM67.31,152,128,91.31,188.69,152Z"></path></symbol>
+<symbol fill="currentColor" id="ph-chart-line-up" viewbox="0 0 256 256"><path d="M224,64V208H32V48H208A16,16,0,0,1,224,64Z" opacity="0.2"></path><path d="M232,208a8,8,0,0,1-8,8H32a8,8,0,0,1-8-8V48a8,8,0,0,1,16,0V156.69l50.34-50.35a8,8,0,0,1,11.32,0L128,132.69,180.69,80H160a8,8,0,0,1,0-16h40a8,8,0,0,1,8,8v40a8,8,0,0,1-16,0V91.31l-58.34,58.35a8,8,0,0,1-11.32,0L96,123.31l-56,56V200H224A8,8,0,0,1,232,208Z"></path></symbol>
+<symbol fill="currentColor" id="ph-chat-circle-dots" viewbox="0 0 256 256"><path d="M224,128A96,96,0,0,1,79.93,211.11h0L42.54,223.58a8,8,0,0,1-10.12-10.12l12.47-37.39h0A96,96,0,1,1,224,128Z" opacity="0.2"></path><path d="M128,24A104,104,0,0,0,36.18,176.88L24.83,210.93a16,16,0,0,0,20.24,20.24l34.05-11.35A104,104,0,1,0,128,24Zm0,192a87.87,87.87,0,0,1-44.06-11.81,8,8,0,0,0-4-1.08,7.85,7.85,0,0,0-2.53.42L40,216,52.47,178.6a8,8,0,0,0-.66-6.54A88,88,0,1,1,128,216Zm12-88a12,12,0,1,1-12-12A12,12,0,0,1,140,128Zm-44,0a12,12,0,1,1-12-12A12,12,0,0,1,96,128Zm88,0a12,12,0,1,1-12-12A12,12,0,0,1,184,128Z"></path></symbol>
+<symbol fill="currentColor" id="ph-chats-circle" viewbox="0 0 256 256"><path d="M231.66,213.73a8,8,0,0,1-9.93,9.93L194,215.5A72.05,72.05,0,0,1,92.06,175.89h0c1.31.07,2.62.11,3.94.11a72,72,0,0,0,67.93-95.88h0A72,72,0,0,1,223.5,186Z" opacity="0.2"></path><path d="M232.07,186.76a80,80,0,0,0-62.5-114.17A80,80,0,1,0,23.93,138.76l-7.27,24.71a16,16,0,0,0,19.87,19.87l24.71-7.27a80.39,80.39,0,0,0,25.18,7.35,80,80,0,0,0,108.34,40.65l24.71,7.27a16,16,0,0,0,19.87-19.86ZM62,159.5a8.28,8.28,0,0,0-2.26.32L32,168l8.17-27.76a8,8,0,0,0-.63-6,64,64,0,1,1,26.26,26.26A8,8,0,0,0,62,159.5Zm153.79,28.73L224,216l-27.76-8.17a8,8,0,0,0-6,.63,64.05,64.05,0,0,1-85.87-24.88A79.93,79.93,0,0,0,174.7,89.71a64,64,0,0,1,41.75,92.48A8,8,0,0,0,215.82,188.23Z"></path></symbol>
+<symbol fill="currentColor" id="ph-check" viewbox="0 0 256 256"><path d="M232,56V200a16,16,0,0,1-16,16H40a16,16,0,0,1-16-16V56A16,16,0,0,1,40,40H216A16,16,0,0,1,232,56Z" opacity="0.2"></path><path d="M205.66,85.66l-96,96a8,8,0,0,1-11.32,0l-40-40a8,8,0,0,1,11.32-11.32L104,164.69l90.34-90.35a8,8,0,0,1,11.32,11.32Z"></path></symbol>
+<symbol fill="currentColor" id="ph-circles-three-plus" viewbox="0 0 256 256"><path d="M112,80A32,32,0,1,1,80,48,32,32,0,0,1,112,80Zm64-32a32,32,0,1,0,32,32A32,32,0,0,0,176,48ZM80,144a32,32,0,1,0,32,32A32,32,0,0,0,80,144Z" opacity="0.2"></path><path d="M80,40a40,40,0,1,0,40,40A40,40,0,0,0,80,40Zm0,64a24,24,0,1,1,24-24A24,24,0,0,1,80,104Zm96,16a40,40,0,1,0-40-40A40,40,0,0,0,176,120Zm0-64a24,24,0,1,1-24,24A24,24,0,0,1,176,56ZM80,136a40,40,0,1,0,40,40A40,40,0,0,0,80,136Zm0,64a24,24,0,1,1,24-24A24,24,0,0,1,80,200Zm136-24a8,8,0,0,1-8,8H184v24a8,8,0,0,1-16,0V184H144a8,8,0,0,1,0-16h24V144a8,8,0,0,1,16,0v24h24A8,8,0,0,1,216,176Z"></path></symbol>
+<symbol fill="currentColor" id="ph-clock" viewbox="0 0 256 256"><path d="M224,128a96,96,0,1,1-96-96A96,96,0,0,1,224,128Z" opacity="0.2"></path><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm64-88a8,8,0,0,1-8,8H128a8,8,0,0,1-8-8V72a8,8,0,0,1,16,0v48h48A8,8,0,0,1,192,128Z"></path></symbol>
+<symbol fill="currentColor" id="ph-clock-countdown" viewbox="0 0 256 256"><path d="M224,128a96,96,0,1,1-96-96A96,96,0,0,1,224,128Z" opacity="0.2"></path><path d="M232,136.66A104.12,104.12,0,1,1,119.34,24,8,8,0,0,1,120.66,40,88.12,88.12,0,1,0,216,135.34,8,8,0,0,1,232,136.66ZM120,72v56a8,8,0,0,0,8,8h56a8,8,0,0,0,0-16H136V72a8,8,0,0,0-16,0Zm40-24a12,12,0,1,0-12-12A12,12,0,0,0,160,48Zm36,24a12,12,0,1,0-12-12A12,12,0,0,0,196,72Zm24,36a12,12,0,1,0-12-12A12,12,0,0,0,220,108Z"></path></symbol>
+<symbol fill="currentColor" id="ph-code" viewbox="0 0 256 256"><path d="M240,128l-48,40H64L16,128,64,88H192Z" opacity="0.2"></path><path d="M69.12,94.15,28.5,128l40.62,33.85a8,8,0,1,1-10.24,12.29l-48-40a8,8,0,0,1,0-12.29l48-40a8,8,0,0,1,10.24,12.3Zm176,27.7-48-40a8,8,0,1,0-10.24,12.3L227.5,128l-40.62,33.85a8,8,0,1,0,10.24,12.29l48-40a8,8,0,0,0,0-12.29ZM162.73,32.48a8,8,0,0,0-10.25,4.79l-64,176a8,8,0,0,0,4.79,10.26A8.14,8.14,0,0,0,96,224a8,8,0,0,0,7.52-5.27l64-176A8,8,0,0,0,162.73,32.48Z"></path></symbol>
+<symbol fill="currentColor" id="ph-coins" viewbox="0 0 256 256"><path d="M240,132c0,19.88-35.82,36-80,36-19.6,0-37.56-3.17-51.47-8.44h0C146.76,156.85,176,142,176,124V96.72h0C212.52,100.06,240,114.58,240,132ZM176,84c0-19.88-35.82-36-80-36S16,64.12,16,84s35.82,36,80,36S176,103.88,176,84Z" opacity="0.2"></path><path d="M184,89.57V84c0-25.08-37.83-44-88-44S8,58.92,8,84v40c0,20.89,26.25,37.49,64,42.46V172c0,25.08,37.83,44,88,44s88-18.92,88-44V132C248,111.3,222.58,94.68,184,89.57ZM232,132c0,13.22-30.79,28-72,28-3.73,0-7.43-.13-11.08-.37C170.49,151.77,184,139,184,124V105.74C213.87,110.19,232,122.27,232,132ZM72,150.25V126.46A183.74,183.74,0,0,0,96,128a183.74,183.74,0,0,0,24-1.54v23.79A163,163,0,0,1,96,152,163,163,0,0,1,72,150.25Zm96-40.32V124c0,8.39-12.41,17.4-32,22.87V123.5C148.91,120.37,159.84,115.71,168,109.93ZM96,56c41.21,0,72,14.78,72,28s-30.79,28-72,28S24,97.22,24,84,54.79,56,96,56ZM24,124V109.93c8.16,5.78,19.09,10.44,32,13.57v23.37C36.41,141.4,24,132.39,24,124Zm64,48v-4.17c2.63.1,5.29.17,8,.17,3.88,0,7.67-.13,11.39-.35A121.92,121.92,0,0,0,120,171.41v23.46C100.41,189.4,88,180.39,88,172Zm48,26.25V174.4a179.48,179.48,0,0,0,24,1.6,183.74,183.74,0,0,0,24-1.54v23.79a165.45,165.45,0,0,1-48,0Zm64-3.38V171.5c12.91-3.13,23.84-7.79,32-13.57V172C232,180.39,219.59,189.4,200,194.87Z"></path></symbol>
+<symbol fill="currentColor" id="ph-credit-card" viewbox="0 0 256 256"><path d="M232,96v96a8,8,0,0,1-8,8H32a8,8,0,0,1-8-8V96Z" opacity="0.2"></path><path d="M224,48H32A16,16,0,0,0,16,64V192a16,16,0,0,0,16,16H224a16,16,0,0,0,16-16V64A16,16,0,0,0,224,48Zm0,16V88H32V64Zm0,128H32V104H224v88Zm-16-24a8,8,0,0,1-8,8H168a8,8,0,0,1,0-16h32A8,8,0,0,1,208,168Zm-64,0a8,8,0,0,1-8,8H120a8,8,0,0,1,0-16h16A8,8,0,0,1,144,168Z"></path></symbol>
+<symbol fill="currentColor" id="ph-device-mobile" viewbox="0 0 256 256"><path d="M192,56V200H64V56Z" opacity="0.2"></path><path d="M176,16H80A24,24,0,0,0,56,40V216a24,24,0,0,0,24,24h96a24,24,0,0,0,24-24V40A24,24,0,0,0,176,16ZM72,64H184V192H72Zm8-32h96a8,8,0,0,1,8,8v8H72V40A8,8,0,0,1,80,32Zm96,192H80a8,8,0,0,1-8-8v-8H184v8A8,8,0,0,1,176,224Z"></path></symbol>
+<symbol fill="currentColor" id="ph-download-simple" viewbox="0 0 256 256"><path d="M216,48V208H40V48A16,16,0,0,1,56,32H200A16,16,0,0,1,216,48Z" opacity="0.2"></path><path d="M224,144v64a8,8,0,0,1-8,8H40a8,8,0,0,1-8-8V144a8,8,0,0,1,16,0v56H208V144a8,8,0,0,1,16,0Zm-101.66,5.66a8,8,0,0,0,11.32,0l40-40a8,8,0,0,0-11.32-11.32L136,124.69V32a8,8,0,0,0-16,0v92.69L93.66,98.34a8,8,0,0,0-11.32,11.32Z"></path></symbol>
+<symbol fill="currentColor" id="ph-envelope-simple" viewbox="0 0 256 256"><path d="M224,56l-96,88L32,56Z" opacity="0.2"></path><path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM203.43,64,128,133.15,52.57,64ZM216,192H40V74.19l82.59,75.71a8,8,0,0,0,10.82,0L216,74.19V192Z"></path></symbol>
+<symbol fill="currentColor" id="ph-files" viewbox="0 0 256 256"><path d="M208,72V184a8,8,0,0,1-8,8H176V104L136,64H80V40a8,8,0,0,1,8-8h80Z" opacity="0.2"></path><path d="M213.66,66.34l-40-40A8,8,0,0,0,168,24H88A16,16,0,0,0,72,40V56H56A16,16,0,0,0,40,72V216a16,16,0,0,0,16,16H168a16,16,0,0,0,16-16V200h16a16,16,0,0,0,16-16V72A8,8,0,0,0,213.66,66.34ZM168,216H56V72h76.69L168,107.31v84.53c0,.06,0,.11,0,.16s0,.1,0,.16V216Zm32-32H184V104a8,8,0,0,0-2.34-5.66l-40-40A8,8,0,0,0,136,56H88V40h76.69L200,75.31Zm-56-32a8,8,0,0,1-8,8H88a8,8,0,0,1,0-16h48A8,8,0,0,1,144,152Zm0,32a8,8,0,0,1-8,8H88a8,8,0,0,1,0-16h48A8,8,0,0,1,144,184Z"></path></symbol>
+<symbol fill="currentColor" id="ph-hand-coins" viewbox="0 0 256 256"><path d="M16,152H48v56H16a8,8,0,0,1-8-8V160A8,8,0,0,1,16,152ZM204,56a28,28,0,0,0-12,2.71h0A28,28,0,1,0,176,85.29h0A28,28,0,1,0,204,56Z" opacity="0.2"></path><path d="M230.33,141.06a24.43,24.43,0,0,0-21.24-4.23l-41.84,9.62A28,28,0,0,0,140,112H89.94a31.82,31.82,0,0,0-22.63,9.37L44.69,144H16A16,16,0,0,0,0,160v40a16,16,0,0,0,16,16H120a7.93,7.93,0,0,0,1.94-.24l64-16a6.94,6.94,0,0,0,1.19-.4L226,182.82l.44-.2a24.6,24.6,0,0,0,3.93-41.56ZM16,160H40v40H16Zm203.43,8.21-38,16.18L119,200H56V155.31l22.63-22.62A15.86,15.86,0,0,1,89.94,128H140a12,12,0,0,1,0,24H112a8,8,0,0,0,0,16h32a8.32,8.32,0,0,0,1.79-.2l67-15.41.31-.08a8.6,8.6,0,0,1,6.3,15.9ZM164,96a36,36,0,0,0,5.9-.48,36,36,0,1,0,28.22-47A36,36,0,1,0,164,96Zm60-12a20,20,0,1,1-20-20A20,20,0,0,1,224,84ZM164,40a20,20,0,0,1,19.25,14.61,36,36,0,0,0-15,24.93A20.42,20.42,0,0,1,164,80a20,20,0,0,1,0-40Z"></path></symbol>
+<symbol fill="currentColor" id="ph-hand-grabbing" viewbox="0 0 256 256"><path d="M208,108v44a80,80,0,0,1-160,0V140a20,20,0,0,1,20-20H88V92a20,20,0,0,1,40,0,20,20,0,0,1,40,0v16a20,20,0,0,1,40,0Z" opacity="0.2"></path><path d="M188,80a27.79,27.79,0,0,0-13.36,3.4,28,28,0,0,0-46.64-11A28,28,0,0,0,80,92v20H68a28,28,0,0,0-28,28v12a88,88,0,0,0,176,0V108A28,28,0,0,0,188,80Zm12,72a72,72,0,0,1-144,0V140a12,12,0,0,1,12-12H80v24a8,8,0,0,0,16,0V92a12,12,0,0,1,24,0v28a8,8,0,0,0,16,0V92a12,12,0,0,1,24,0v28a8,8,0,0,0,16,0V108a12,12,0,0,1,24,0Z"></path></symbol>
+<symbol fill="currentColor" id="ph-hand-waving" viewbox="0 0 256 256"><path d="M184,213.27A80,80,0,0,1,74.7,184l-40-69.32a20,20,0,0,1,34.64-20L55.08,70A20,20,0,0,1,89.73,50l6.92,12h0a20,20,0,0,1,34.64-20l30,52A20,20,0,0,1,196,74l17.31,30A80,80,0,0,1,184,213.27Z" opacity="0.2"></path><path d="M220.17,100,202.86,70a28,28,0,0,0-38.24-10.25,27.69,27.69,0,0,0-9,8.34L138.2,38a28,28,0,0,0-48.48,0A28,28,0,0,0,48.15,74l1.59,2.76A27.67,27.67,0,0,0,38,80.41a28,28,0,0,0-10.24,38.25l40,69.32a87.47,87.47,0,0,0,53.43,41,88.56,88.56,0,0,0,22.92,3,88,88,0,0,0,76.06-132Zm-6.66,62.64A72,72,0,0,1,81.62,180l-40-69.32a12,12,0,0,1,20.78-12L81.63,132a8,8,0,1,0,13.85-8L62,66A12,12,0,1,1,82.78,54L114,108a8,8,0,1,0,13.85-8L103.57,58h0a12,12,0,1,1,20.78-12l33.42,57.9a48,48,0,0,0-5.54,60.6,8,8,0,0,0,13.24-9A32,32,0,0,1,172.78,112a8,8,0,0,0,2.13-10.4L168.23,90A12,12,0,1,1,189,78l17.31,30A71.56,71.56,0,0,1,213.51,162.62ZM184.25,31.71A8,8,0,0,1,194,26a59.62,59.62,0,0,1,36.53,28l.33.57a8,8,0,1,1-13.85,8l-.33-.57a43.67,43.67,0,0,0-26.8-20.5A8,8,0,0,1,184.25,31.71ZM80.89,237a8,8,0,0,1-11.23,1.33A119.56,119.56,0,0,1,40.06,204a8,8,0,0,1,13.86-8,103.67,103.67,0,0,0,25.64,29.72A8,8,0,0,1,80.89,237Z"></path></symbol>
+<symbol fill="currentColor" id="ph-identification-card" viewbox="0 0 256 256"><path d="M216,48H40a8,8,0,0,0-8,8V200a8,8,0,0,0,8,8H216a8,8,0,0,0,8-8V56A8,8,0,0,0,216,48ZM96,144a24,24,0,1,1,24-24A24,24,0,0,1,96,144Z" opacity="0.2"></path><path d="M200,112a8,8,0,0,1-8,8H152a8,8,0,0,1,0-16h40A8,8,0,0,1,200,112Zm-8,24H152a8,8,0,0,0,0,16h40a8,8,0,0,0,0-16Zm40-80V200a16,16,0,0,1-16,16H40a16,16,0,0,1-16-16V56A16,16,0,0,1,40,40H216A16,16,0,0,1,232,56ZM216,200V56H40V200H216Zm-80.26-34a8,8,0,1,1-15.5,4c-2.63-10.26-13.06-18-24.25-18s-21.61,7.74-24.25,18a8,8,0,1,1-15.5-4,39.84,39.84,0,0,1,17.19-23.34,32,32,0,1,1,45.12,0A39.76,39.76,0,0,1,135.75,166ZM96,136a16,16,0,1,0-16-16A16,16,0,0,0,96,136Z"></path></symbol>
+<symbol fill="currentColor" id="ph-link" viewbox="0 0 256 256"><path d="M218.34,119.6,183.6,154.34a46.58,46.58,0,0,1-44.31,12.26c-.31.34-.62.67-.95,1L103.6,202.34A46.63,46.63,0,1,1,37.66,136.4L72.4,101.66A46.6,46.6,0,0,1,116.71,89.4c.31-.34.62-.67,1-1L152.4,53.66a46.63,46.63,0,0,1,65.94,65.94Z" opacity="0.2"></path><path d="M240,88.23a54.43,54.43,0,0,1-16,37L189.25,160a54.27,54.27,0,0,1-38.63,16h-.05A54.63,54.63,0,0,1,96,119.84a8,8,0,0,1,16,.45A38.62,38.62,0,0,0,150.58,160h0a38.39,38.39,0,0,0,27.31-11.31l34.75-34.75a38.63,38.63,0,0,0-54.63-54.63l-11,11A8,8,0,0,1,135.7,59l11-11A54.65,54.65,0,0,1,224,48,54.86,54.86,0,0,1,240,88.23ZM109,185.66l-11,11A38.41,38.41,0,0,1,70.6,208h0a38.63,38.63,0,0,1-27.29-65.94L78,107.31A38.63,38.63,0,0,1,144,135.71a8,8,0,0,0,7.78,8.22H152a8,8,0,0,0,8-7.78A54.86,54.86,0,0,0,144,96a54.65,54.65,0,0,0-77.27,0L32,130.75A54.62,54.62,0,0,0,70.56,224h0a54.28,54.28,0,0,0,38.64-16l11-11A8,8,0,0,0,109,185.66Z"></path></symbol>
+<symbol fill="currentColor" id="ph-lock" viewbox="0 0 256 256"><path d="M216,96V208a8,8,0,0,1-8,8H48a8,8,0,0,1-8-8V96a8,8,0,0,1,8-8H208A8,8,0,0,1,216,96Z" opacity="0.2"></path><path d="M208,80H176V56a48,48,0,0,0-96,0V80H48A16,16,0,0,0,32,96V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V96A16,16,0,0,0,208,80ZM96,56a32,32,0,0,1,64,0V80H96ZM208,208H48V96H208V208Zm-68-56a12,12,0,1,1-12-12A12,12,0,0,1,140,152Z"></path></symbol>
+<symbol fill="currentColor" id="ph-map-pin-line" viewbox="0 0 256 256"><path d="M128,24a80,80,0,0,0-80,80c0,72,80,128,80,128s80-56,80-128A80,80,0,0,0,128,24Zm0,112a32,32,0,1,1,32-32A32,32,0,0,1,128,136Z" opacity="0.2"></path><path d="M200,224H150.54A266.56,266.56,0,0,0,174,200.25c27.45-31.57,42-64.85,42-96.25a88,88,0,0,0-176,0c0,31.4,14.51,64.68,42,96.25A266.56,266.56,0,0,0,105.46,224H56a8,8,0,0,0,0,16H200a8,8,0,0,0,0-16ZM56,104a72,72,0,0,1,144,0c0,57.23-55.47,105-72,118C111.47,209,56,161.23,56,104Zm112,0a40,40,0,1,0-40,40A40,40,0,0,0,168,104Zm-64,0a24,24,0,1,1,24,24A24,24,0,0,1,104,104Z"></path></symbol>
+<symbol fill="currentColor" id="ph-microphone" viewbox="0 0 256 256"><path d="M168,64v64a40,40,0,0,1-40,40h0a40,40,0,0,1-40-40V64a40,40,0,0,1,40-40h0A40,40,0,0,1,168,64Z" opacity="0.2"></path><path d="M128,176a48.05,48.05,0,0,0,48-48V64a48,48,0,0,0-96,0v64A48.05,48.05,0,0,0,128,176ZM96,64a32,32,0,0,1,64,0v64a32,32,0,0,1-64,0Zm40,143.6V240a8,8,0,0,1-16,0V207.6A80.11,80.11,0,0,1,48,128a8,8,0,0,1,16,0,64,64,0,0,0,128,0,8,8,0,0,1,16,0A80.11,80.11,0,0,1,136,207.6Z"></path></symbol>
+<symbol fill="currentColor" id="ph-minus" viewbox="0 0 256 256"><path d="M216,56V200a16,16,0,0,1-16,16H56a16,16,0,0,1-16-16V56A16,16,0,0,1,56,40H200A16,16,0,0,1,216,56Z" opacity="0.2"></path><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128Z"></path></symbol>
+<symbol fill="currentColor" id="ph-moon-stars" viewbox="0 0 256 256"><path d="M210.69,158.18A88,88,0,1,1,97.82,45.31,96.08,96.08,0,0,0,192,160,96.78,96.78,0,0,0,210.69,158.18Z" opacity="0.2"></path><path d="M240,96a8,8,0,0,1-8,8H216v16a8,8,0,0,1-16,0V104H184a8,8,0,0,1,0-16h16V72a8,8,0,0,1,16,0V88h16A8,8,0,0,1,240,96ZM144,56h8v8a8,8,0,0,0,16,0V56h8a8,8,0,0,0,0-16h-8V32a8,8,0,0,0-16,0v8h-8a8,8,0,0,0,0,16Zm72.77,97a8,8,0,0,1,1.43,8A96,96,0,1,1,95.07,37.8a8,8,0,0,1,10.6,9.06A88.07,88.07,0,0,0,209.14,150.33,8,8,0,0,1,216.77,153Zm-19.39,14.88c-1.79.09-3.59.14-5.38.14A104.11,104.11,0,0,1,88,64c0-1.79,0-3.59.14-5.38A80,80,0,1,0,197.38,167.86Z"></path></symbol>
+<symbol fill="currentColor" id="ph-package" viewbox="0 0 256 256"><path d="M128,129.09V232a8,8,0,0,1-3.84-1l-88-48.18a8,8,0,0,1-4.16-7V80.18a8,8,0,0,1,.7-3.25Z" opacity="0.2"></path><path d="M223.68,66.15,135.68,18a15.88,15.88,0,0,0-15.36,0l-88,48.17a16,16,0,0,0-8.32,14v95.64a16,16,0,0,0,8.32,14l88,48.17a15.88,15.88,0,0,0,15.36,0l88-48.17a16,16,0,0,0,8.32-14V80.18A16,16,0,0,0,223.68,66.15ZM128,32l80.34,44-29.77,16.3-80.35-44ZM128,120,47.66,76l33.9-18.56,80.34,44ZM40,90l80,43.78v85.79L40,175.82Zm176,85.78h0l-80,43.79V133.82l32-17.51V152a8,8,0,0,0,16,0V107.55L216,90v85.77Z"></path></symbol>
+<symbol fill="currentColor" id="ph-paper-plane-tilt" viewbox="0 0 256 256"><path d="M223.69,42.18l-58.22,192a8,8,0,0,1-14.92,1.25L108,148,20.58,105.45a8,8,0,0,1,1.25-14.92l192-58.22A8,8,0,0,1,223.69,42.18Z" opacity="0.2"></path><path d="M227.32,28.68a16,16,0,0,0-15.66-4.08l-.15,0L19.57,82.84a16,16,0,0,0-2.49,29.8L102,154l41.3,84.87A15.86,15.86,0,0,0,157.74,248q.69,0,1.38-.06a15.88,15.88,0,0,0,14-11.51l58.2-191.94c0-.05,0-.1,0-.15A16,16,0,0,0,227.32,28.68ZM157.83,231.85l-.05.14,0-.07-40.06-82.3,48-48a8,8,0,0,0-11.31-11.31l-48,48L24.08,98.25l-.07,0,.14,0L216,40Z"></path></symbol>
+<symbol fill="currentColor" id="ph-pause" viewbox="0 0 256 256"><path d="M208,48V208a8,8,0,0,1-8,8H160a8,8,0,0,1-8-8V48a8,8,0,0,1,8-8h40A8,8,0,0,1,208,48ZM96,40H56a8,8,0,0,0-8,8V208a8,8,0,0,0,8,8H96a8,8,0,0,0,8-8V48A8,8,0,0,0,96,40Z" opacity="0.2"></path><path d="M200,32H160a16,16,0,0,0-16,16V208a16,16,0,0,0,16,16h40a16,16,0,0,0,16-16V48A16,16,0,0,0,200,32Zm0,176H160V48h40ZM96,32H56A16,16,0,0,0,40,48V208a16,16,0,0,0,16,16H96a16,16,0,0,0,16-16V48A16,16,0,0,0,96,32Zm0,176H56V48H96Z"></path></symbol>
+<symbol fill="currentColor" id="ph-pencil-simple" viewbox="0 0 256 256"><path d="M221.66,90.34,192,120,136,64l29.66-29.66a8,8,0,0,1,11.31,0L221.66,79A8,8,0,0,1,221.66,90.34Z" opacity="0.2"></path><path d="M227.31,73.37,182.63,28.68a16,16,0,0,0-22.63,0L36.69,152A15.86,15.86,0,0,0,32,163.31V208a16,16,0,0,0,16,16H92.69A15.86,15.86,0,0,0,104,219.31L227.31,96a16,16,0,0,0,0-22.63ZM92.69,208H48V163.31l88-88L180.69,120ZM192,108.68,147.31,64l24-24L216,84.68Z"></path></symbol>
+<symbol fill="currentColor" id="ph-play" viewbox="0 0 256 256"><path d="M228.23,134.69,84.15,222.81A8,8,0,0,1,72,216.12V39.88a8,8,0,0,1,12.15-6.69l144.08,88.12A7.82,7.82,0,0,1,228.23,134.69Z" opacity="0.2"></path><path d="M232.4,114.49,88.32,26.35a16,16,0,0,0-16.2-.3A15.86,15.86,0,0,0,64,39.87V216.13A15.94,15.94,0,0,0,80,232a16.07,16.07,0,0,0,8.36-2.35L232.4,141.51a15.81,15.81,0,0,0,0-27ZM80,215.94V40l143.83,88Z"></path></symbol>
+<symbol fill="currentColor" id="ph-plugs-connected" viewbox="0 0 256 256"><path d="M185,127,127,185a24,24,0,0,1-33.94,0L71,162.91A24,24,0,0,1,71,129L129,71a24,24,0,0,1,33.94,0L185,93.09A24,24,0,0,1,185,127Z" opacity="0.2"></path><path d="M237.66,18.34a8,8,0,0,0-11.32,0l-52.4,52.41-5.37-5.38a32.05,32.05,0,0,0-45.26,0L100,88.69l-6.34-6.35A8,8,0,0,0,82.34,93.66L88.69,100,65.37,123.31a32,32,0,0,0,0,45.26l5.38,5.37-52.41,52.4a8,8,0,0,0,11.32,11.32l52.4-52.41,5.37,5.38a32.06,32.06,0,0,0,45.26,0L156,167.31l6.34,6.35a8,8,0,0,0,11.32-11.32L167.31,156l23.32-23.31a32,32,0,0,0,0-45.26l-5.38-5.37,52.41-52.4A8,8,0,0,0,237.66,18.34Zm-116.29,161a16,16,0,0,1-22.62,0L76.69,157.25a16,16,0,0,1,0-22.62L100,111.31,144.69,156Zm57.94-57.94h0L156,144.69,111.31,100l23.32-23.31a16,16,0,0,1,22.62,0l22.06,22a16,16,0,0,1,0,22.63ZM88.57,35A8,8,0,0,1,103.43,29l8,20A8,8,0,0,1,96.57,55ZM24.57,93A8,8,0,0,1,35,88.57l20,8A8,8,0,0,1,49,111.43l-20-8A8,8,0,0,1,24.57,93ZM231.43,163a8,8,0,0,1-10.4,4.46l-20-8A8,8,0,1,1,207,144.57l20,8A8,8,0,0,1,231.43,163Zm-64,58.06A8,8,0,0,1,152.57,227l-8-20A8,8,0,0,1,159.43,201Z"></path></symbol>
+<symbol fill="currentColor" id="ph-plus" viewbox="0 0 256 256"><path d="M216,56V200a16,16,0,0,1-16,16H56a16,16,0,0,1-16-16V56A16,16,0,0,1,56,40H200A16,16,0,0,1,216,56Z" opacity="0.2"></path><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"></path></symbol>
+<symbol fill="currentColor" id="ph-printer" viewbox="0 0 256 256"><path d="M232,96v80H192V152H64v24H24V96c0-8.84,7.76-16,17.33-16H214.67C224.24,80,232,87.16,232,96Z" opacity="0.2"></path><path d="M214.67,72H200V40a8,8,0,0,0-8-8H64a8,8,0,0,0-8,8V72H41.33C27.36,72,16,82.77,16,96v80a8,8,0,0,0,8,8H56v32a8,8,0,0,0,8,8H192a8,8,0,0,0,8-8V184h32a8,8,0,0,0,8-8V96C240,82.77,228.64,72,214.67,72ZM72,48H184V72H72ZM184,208H72V160H184Zm40-40H200V152a8,8,0,0,0-8-8H64a8,8,0,0,0-8,8v16H32V96c0-4.41,4.19-8,9.33-8H214.67c5.14,0,9.33,3.59,9.33,8Zm-24-52a12,12,0,1,1-12-12A12,12,0,0,1,200,116Z"></path></symbol>
+<symbol fill="currentColor" id="ph-receipt" viewbox="0 0 256 256"><path d="M224,56V208l-32-16-32,16-32-16L96,208,64,192,32,208V56a8,8,0,0,1,8-8H216A8,8,0,0,1,224,56Z" opacity="0.2"></path><path d="M72,104a8,8,0,0,1,8-8h96a8,8,0,0,1,0,16H80A8,8,0,0,1,72,104Zm8,40h96a8,8,0,0,0,0-16H80a8,8,0,0,0,0,16ZM232,56V208a8,8,0,0,1-11.58,7.15L192,200.94l-28.42,14.21a8,8,0,0,1-7.16,0L128,200.94,99.58,215.15a8,8,0,0,1-7.16,0L64,200.94,35.58,215.15A8,8,0,0,1,24,208V56A16,16,0,0,1,40,40H216A16,16,0,0,1,232,56Zm-16,0H40V195.06l20.42-10.22a8,8,0,0,1,7.16,0L96,199.06l28.42-14.22a8,8,0,0,1,7.16,0L160,199.06l28.42-14.22a8,8,0,0,1,7.16,0L216,195.06Z"></path></symbol>
+<symbol fill="currentColor" id="ph-scan" viewbox="0 0 256 256"><path d="M176,80v96H80V80Z" opacity="0.2"></path><path d="M224,40V80a8,8,0,0,1-16,0V48H176a8,8,0,0,1,0-16h40A8,8,0,0,1,224,40ZM80,208H48V176a8,8,0,0,0-16,0v40a8,8,0,0,0,8,8H80a8,8,0,0,0,0-16Zm136-40a8,8,0,0,0-8,8v32H176a8,8,0,0,0,0,16h40a8,8,0,0,0,8-8V176A8,8,0,0,0,216,168ZM40,88a8,8,0,0,0,8-8V48H80a8,8,0,0,0,0-16H40a8,8,0,0,0-8,8V80A8,8,0,0,0,40,88ZM80,72h96a8,8,0,0,1,8,8v96a8,8,0,0,1-8,8H80a8,8,0,0,1-8-8V80A8,8,0,0,1,80,72Zm8,96h80V88H88Z"></path></symbol>
+<symbol fill="currentColor" id="ph-seal-question" viewbox="0 0 256 256"><path d="M232,128c0,12.51-17.82,21.95-22.68,33.69-4.68,11.32,1.42,30.64-7.78,39.85s-28.53,3.1-39.85,7.78C150,214.18,140.5,232,128,232s-22-17.82-33.69-22.68c-11.32-4.68-30.65,1.42-39.85-7.78s-3.1-28.53-7.78-39.85C41.82,150,24,140.5,24,128s17.82-22,22.68-33.69C51.36,83,45.26,63.66,54.46,54.46S83,51.36,94.31,46.68C106.05,41.82,115.5,24,128,24S150,41.82,161.69,46.68c11.32,4.68,30.65-1.42,39.85,7.78s3.1,28.53,7.78,39.85C214.18,106.05,232,115.5,232,128Z" opacity="0.2"></path><path d="M225.86,102.82c-3.77-3.94-7.67-8-9.14-11.57-1.36-3.27-1.44-8.69-1.52-13.94-.15-9.76-.31-20.82-8-28.51s-18.75-7.85-28.51-8c-5.25-.08-10.67-.16-13.94-1.52-3.56-1.47-7.63-5.37-11.57-9.14C146.28,23.51,138.44,16,128,16s-18.27,7.51-25.18,14.14c-3.94,3.77-8,7.67-11.57,9.14C88,40.64,82.56,40.72,77.31,40.8c-9.76.15-20.82.31-28.51,8S41,67.55,40.8,77.31c-.08,5.25-.16,10.67-1.52,13.94-1.47,3.56-5.37,7.63-9.14,11.57C23.51,109.72,16,117.56,16,128s7.51,18.27,14.14,25.18c3.77,3.94,7.67,8,9.14,11.57,1.36,3.27,1.44,8.69,1.52,13.94.15,9.76.31,20.82,8,28.51s18.75,7.85,28.51,8c5.25.08,10.67.16,13.94,1.52,3.56,1.47,7.63,5.37,11.57,9.14C109.72,232.49,117.56,240,128,240s18.27-7.51,25.18-14.14c3.94-3.77,8-7.67,11.57-9.14,3.27-1.36,8.69-1.44,13.94-1.52,9.76-.15,20.82-.31,28.51-8s7.85-18.75,8-28.51c.08-5.25.16-10.67,1.52-13.94,1.47-3.56,5.37-7.63,9.14-11.57C232.49,146.28,240,138.44,240,128S232.49,109.73,225.86,102.82Zm-11.55,39.29c-4.79,5-9.75,10.17-12.38,16.52-2.52,6.1-2.63,13.07-2.73,19.82-.1,7-.21,14.33-3.32,17.43s-10.39,3.22-17.43,3.32c-6.75.1-13.72.21-19.82,2.73-6.35,2.63-11.52,7.59-16.52,12.38S132,224,128,224s-9.15-4.92-14.11-9.69-10.17-9.75-16.52-12.38c-6.1-2.52-13.07-2.63-19.82-2.73-7-.1-14.33-.21-17.43-3.32s-3.22-10.39-3.32-17.43c-.1-6.75-.21-13.72-2.73-19.82-2.63-6.35-7.59-11.52-12.38-16.52S32,132,32,128s4.92-9.15,9.69-14.11,9.75-10.17,12.38-16.52c2.52-6.1,2.63-13.07,2.73-19.82.1-7,.21-14.33,3.32-17.43S70.51,56.9,77.55,56.8c6.75-.1,13.72-.21,19.82-2.73,6.35-2.63,11.52-7.59,16.52-12.38S124,32,128,32s9.15,4.92,14.11,9.69,10.17,9.75,16.52,12.38c6.1,2.52,13.07,2.63,19.82,2.73,7,.1,14.33.21,17.43,3.32s3.22,10.39,3.32,17.43c.1,6.75.21,13.72,2.73,19.82,2.63,6.35,7.59,11.52,12.38,16.52S224,124,224,128,219.08,137.15,214.31,142.11ZM140,180a12,12,0,1,1-12-12A12,12,0,0,1,140,180Zm28-72c0,17.38-13.76,31.93-32,35.28V144a8,8,0,0,1-16,0v-8a8,8,0,0,1,8-8c13.23,0,24-9,24-20s-10.77-20-24-20-24,9-24,20v4a8,8,0,0,1-16,0v-4c0-19.85,17.94-36,40-36S168,88.15,168,108Z"></path></symbol>
+<symbol fill="currentColor" id="ph-sparkle" viewbox="0 0 256 256"><path d="M194.82,151.43l-55.09,20.3-20.3,55.09a7.92,7.92,0,0,1-14.86,0l-20.3-55.09-55.09-20.3a7.92,7.92,0,0,1,0-14.86l55.09-20.3,20.3-55.09a7.92,7.92,0,0,1,14.86,0l20.3,55.09,55.09,20.3A7.92,7.92,0,0,1,194.82,151.43Z" opacity="0.2"></path><path d="M197.58,129.06,146,110l-19-51.62a15.92,15.92,0,0,0-29.88,0L78,110l-51.62,19a15.92,15.92,0,0,0,0,29.88L78,178l19,51.62a15.92,15.92,0,0,0,29.88,0L146,178l51.62-19a15.92,15.92,0,0,0,0-29.88ZM137,164.22a8,8,0,0,0-4.74,4.74L112,223.85,91.78,169A8,8,0,0,0,87,164.22L32.15,144,87,123.78A8,8,0,0,0,91.78,119L112,64.15,132.22,119a8,8,0,0,0,4.74,4.74L191.85,144ZM144,40a8,8,0,0,1,8-8h16V16a8,8,0,0,1,16,0V32h16a8,8,0,0,1,0,16H184V64a8,8,0,0,1-16,0V48H152A8,8,0,0,1,144,40ZM248,88a8,8,0,0,1-8,8h-8v8a8,8,0,0,1-16,0V96h-8a8,8,0,0,1,0-16h8V72a8,8,0,0,1,16,0v8h8A8,8,0,0,1,248,88Z"></path></symbol>
+<symbol fill="currentColor" id="ph-storefront" viewbox="0 0 256 256"><path d="M224,96v16a32,32,0,0,1-64,0V96H96v16a32,32,0,0,1-64,0V96L46.34,45.8A8,8,0,0,1,54,40H202a8,8,0,0,1,7.69,5.8Z" opacity="0.2"></path><path d="M231.69,93.81,217.35,43.6A16.07,16.07,0,0,0,202,32H54A16.07,16.07,0,0,0,38.65,43.6L24.31,93.81A7.94,7.94,0,0,0,24,96v16a40,40,0,0,0,16,32v72a8,8,0,0,0,8,8H208a8,8,0,0,0,8-8V144a40,40,0,0,0,16-32V96A7.94,7.94,0,0,0,231.69,93.81ZM54,48H202l11.42,40H42.61Zm98,56v8a24,24,0,0,1-48,0v-8ZM51.06,132.2A24,24,0,0,1,40,112v-8H88v8a24,24,0,0,1-35.12,21.26A7.88,7.88,0,0,0,51.06,132.2ZM200,208H56V151.2a40.57,40.57,0,0,0,8,.8,40,40,0,0,0,32-16,40,40,0,0,0,64,0,40,40,0,0,0,32,16,40.57,40.57,0,0,0,8-.8Zm16-96a24,24,0,0,1-11.07,20.2,8.08,8.08,0,0,0-1.8,1.05A24,24,0,0,1,168,112v-8h48Z"></path></symbol>
+<symbol fill="currentColor" id="ph-table" viewbox="0 0 256 256"><path d="M88,104v96H32V104Z" opacity="0.2"></path><path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM40,112H80v32H40Zm56,0H216v32H96ZM216,64V96H40V64ZM40,160H80v32H40Zm176,32H96V160H216v32Z"></path></symbol>
+<symbol fill="currentColor" id="ph-trash" viewbox="0 0 256 256"><path d="M200,56V208a8,8,0,0,1-8,8H64a8,8,0,0,1-8-8V56Z" opacity="0.2"></path><path d="M216,48H176V40a24,24,0,0,0-24-24H104A24,24,0,0,0,80,40v8H40a8,8,0,0,0,0,16h8V208a16,16,0,0,0,16,16H192a16,16,0,0,0,16-16V64h8a8,8,0,0,0,0-16ZM96,40a8,8,0,0,1,8-8h48a8,8,0,0,1,8,8v8H96Zm96,168H64V64H192ZM112,104v64a8,8,0,0,1-16,0V104a8,8,0,0,1,16,0Zm48,0v64a8,8,0,0,1-16,0V104a8,8,0,0,1,16,0Z"></path></symbol>
+<symbol fill="currentColor" id="ph-trend-up" viewbox="0 0 256 256"><path d="M232,56v64L168,56Z" opacity="0.2"></path><path d="M232,48H168a8,8,0,0,0-5.66,13.66L188.69,88,136,140.69l-34.34-34.35a8,8,0,0,0-11.32,0l-72,72a8,8,0,0,0,11.32,11.32L96,123.31l34.34,34.35a8,8,0,0,0,11.32,0L200,99.31l26.34,26.35A8,8,0,0,0,240,120V56A8,8,0,0,0,232,48Zm-8,52.69L187.31,64H224Z"></path></symbol>
+<symbol fill="currentColor" id="ph-truck" viewbox="0 0 256 256"><path d="M248,120v64a8,8,0,0,1-8,8H216a24,24,0,0,0-48,0H104a24,24,0,0,0-48,0H32a8,8,0,0,1-8-8V144H184V120Z" opacity="0.2"></path><path d="M255.42,117l-14-35A15.93,15.93,0,0,0,226.58,72H192V64a8,8,0,0,0-8-8H32A16,16,0,0,0,16,72V184a16,16,0,0,0,16,16H49a32,32,0,0,0,62,0h50a32,32,0,0,0,62,0h17a16,16,0,0,0,16-16V120A7.94,7.94,0,0,0,255.42,117ZM192,88h34.58l9.6,24H192ZM32,72H176v64H32ZM80,208a16,16,0,1,1,16-16A16,16,0,0,1,80,208Zm81-24H111a32,32,0,0,0-62,0H32V152H176v12.31A32.11,32.11,0,0,0,161,184Zm31,24a16,16,0,1,1,16-16A16,16,0,0,1,192,208Zm48-24H223a32.06,32.06,0,0,0-31-24V128h48Z"></path></symbol>
+<symbol fill="currentColor" id="ph-upload-simple" viewbox="0 0 256 256"><path d="M216,48V208H40V48A16,16,0,0,1,56,32H200A16,16,0,0,1,216,48Z" opacity="0.2"></path><path d="M224,144v64a8,8,0,0,1-8,8H40a8,8,0,0,1-8-8V144a8,8,0,0,1,16,0v56H208V144a8,8,0,0,1,16,0ZM93.66,77.66,120,51.31V144a8,8,0,0,0,16,0V51.31l26.34,26.35a8,8,0,0,0,11.32-11.32l-40-40a8,8,0,0,0-11.32,0l-40,40A8,8,0,0,0,93.66,77.66Z"></path></symbol>
+<symbol fill="currentColor" id="ph-whatsapp-logo" viewbox="0 0 256 256"><path d="M128,32A96,96,0,0,0,44.89,176.07L32.42,213.46a8,8,0,0,0,10.12,10.12l37.39-12.47A96,96,0,1,0,128,32Zm24,152a80,80,0,0,1-80-80,32,32,0,0,1,32-32l16,32-12.32,18.47a48.19,48.19,0,0,0,25.85,25.85L152,136l32,16A32,32,0,0,1,152,184Z" opacity="0.2"></path><path d="M187.58,144.84l-32-16a8,8,0,0,0-8,.5l-14.69,9.8a40.55,40.55,0,0,1-16-16l9.8-14.69a8,8,0,0,0,.5-8l-16-32A8,8,0,0,0,104,64a40,40,0,0,0-40,40,88.1,88.1,0,0,0,88,88,40,40,0,0,0,40-40A8,8,0,0,0,187.58,144.84ZM152,176a72.08,72.08,0,0,1-72-72A24,24,0,0,1,99.29,80.46l11.48,23L101,118a8,8,0,0,0-.73,7.51,56.47,56.47,0,0,0,30.15,30.15A8,8,0,0,0,138,155l14.62-9.74,23,11.48A24,24,0,0,1,152,176ZM128,24A104,104,0,0,0,36.18,176.88L24.83,210.93a16,16,0,0,0,20.24,20.24l34.05-11.35A104,104,0,1,0,128,24Zm0,192a87.87,87.87,0,0,1-44.06-11.81,8,8,0,0,0-6.54-.67L40,216,52.47,178.6a8,8,0,0,0-.66-6.54A88,88,0,1,1,128,216Z"></path></symbol>
+</svg>
+<header class="hdr"><div class="in">
+<a class="brand" href="/"><img alt="" class="rface" height="26" src="/brand/face-blink-light.gif" width="26"/>Rocoto</a>
+<nav>
+<div class="hasmenu navdd">
+<button aria-expanded="false" class="navdd-t" onclick="Site.dd(this)" type="button">A quién ayuda<svg aria-hidden="true" class="ic navdd-c"><use href="#ph-caret-down"></use></svg></button>
+<div class="menu"><a href="/sales.html"><span class="mi"><svg class="ic"><use href="#ph-chats-circle"></use></svg></span><span class="mt"><b>Comerciales</b><span>El pedido lo lleva Rocoto. La cuenta sigue siendo suya.</span></span></a><a href="/procurement.html"><span class="mi"><svg class="ic"><use href="#ph-package"></use></svg></span><span class="mt"><b>Compras</b><span>El catálogo, los precios del día y lo que hace falta mañana.</span></span></a><a href="/owner.html"><span class="mi"><svg class="ic"><use href="#ph-chart-line-up"></use></svg></span><span class="mt"><b>El dueño</b><span>Lo que entra, lo que sale y lo que se resolvió solo.</span></span></a></div>
+</div>
+<a class="nav-start-m" href="https://preview.atelierneyra.com/apps/erp/app.html" rel="noopener noreferrer" target="_blank">Abrir demo</a>
+<a class="nav-signin-m github-link" href="https://github.com/latintzar/ai-native-erp" rel="noopener noreferrer" target="_blank"><img alt="" height="18" src="/assets/github.webp" width="18"/>GitHub</a>
+</nav>
+<button aria-expanded="false" aria-label="Menu" class="burger" onclick="var o=!document.documentElement.classList.contains('navopen');document.documentElement.classList.toggle('navopen',o);document.body.classList.toggle('navopen',o);this.setAttribute('aria-expanded',o)"><i></i><i></i></button>
+<div class="sp">
+<a class="b s signin github-link" href="https://github.com/latintzar/ai-native-erp" rel="noopener noreferrer" target="_blank"><img alt="" height="18" src="/assets/github.webp" width="18"/>GitHub</a>
+<a class="b p s" href="https://preview.atelierneyra.com/apps/erp/app.html" rel="noopener noreferrer" target="_blank">Abrir demo</a>
+<span class="lang"><a class="on" href="/">ES</a><a href="/en/">EN</a></span>
+</div>
+</div></header>
+<div class="wrap">
+<section class="hero hero-kit" style="border:none">
+<div>
+<h1>ERP con IA para distribuidores de alimentación</h1>
+<p class="sub">Rocoto convierte los pedidos de WhatsApp y email en albaranes, con tus productos, tus precios y lo que compra cada cliente. Tu equipo recibe las decisiones que necesitan su criterio.</p>
+<div class="cta"><a class="b p lg" href="https://preview.atelierneyra.com/apps/erp/app.html" rel="noopener noreferrer" target="_blank">Abrir demo</a><a class="b s lg github-link" href="https://github.com/latintzar/ai-native-erp" rel="noopener noreferrer" target="_blank"><img alt="" height="18" src="/assets/github.webp" width="18"/>GitHub</a></div>
+</div>
+<div class="hero-morph"><div id="triptych-kit"></div></div>
+</section><section id="how">
+<h2 class="t" style="margin-top:8px">Entran pedidos, salen albaranes.</h2>
+<p class="l">Un cerebro en medio, con tus clientes, tu catálogo y tus precios.</p>
+<div class="dia" id="how-dia" style="margin-top:26px">
+<svg aria-hidden="true" class="wires"><defs>
+<marker id="wh" markerheight="5" markerwidth="5" orient="auto-start-reverse" refx="6.4" refy="4" viewbox="0 0 8 8">
+<path d="M1 1.4 6.4 4 1 6.6z" fill="var(--line-hard)"></path></marker>
+</defs></svg>
+<div class="rail-lbl"><span class="eyebrow">Entran pedidos</span></div>
+<div class="lane" data-lane="in" data-n="4"><div class="node"><svg class="ic"><use href="#ph-whatsapp-logo"></use></svg><b>WhatsApp</b></div><div class="node"><svg class="ic"><use href="#ph-microphone"></use></svg><b>Notas de voz</b></div><div class="node"><svg class="ic"><use href="#ph-camera"></use></svg><b>Fotos</b></div><div class="node"><svg class="ic"><use href="#ph-envelope-simple"></use></svg><b>Email</b></div></div>
+<div class="core">
+<div class="side l" data-side="l"><b>Tus clientes</b></div>
+<!-- JUST THE LOGO, blinking, transparent (Peter, 2026-08-09). It was a bordered white card
+           with the name and «una memoria · unas reglas» under it — a third label competing with
+           the eight it is wired to, when what the centre has to say is only «everything meets
+           here». The name is kept for a screen reader, not for the eye. -->
+<div aria-label="Rocoto" class="hub logo-only" id="how-diahub" role="img"><img alt="" class="rface bare" height="26" src="/brand/face-blink-transparent.gif" width="26"/></div>
+<div class="side r" data-side="r"><b>Tu catálogo</b></div>
+</div>
+<div class="rail-lbl out"><span class="eyebrow">Salen pedidos</span></div>
+<div class="lane" data-lane="out" data-n="3"><div class="node"><svg class="ic"><use href="#ph-table"></use></svg><b>Excel o Sage</b></div><div class="node"><svg class="ic"><use href="#ph-printer"></use></svg><b>Papel</b></div><div class="node"><svg class="ic"><use href="#ph-code"></use></svg><b>API</b></div></div>
+</div>
+</section>
+<script>
+/* The diagram's connectors are MEASURED from the DOM, not hand-drawn: each curve starts at the
+   edge-centre of a node and ends at the edge-centre of the hub, so they stay centred at any width and
+   after a font swap. Straight arrow stubs (what this replaces) never actually reached the nodes. */
+(function(){
+  var box=document.getElementById('how-dia'); if(!box) return;
+  var svg=box.querySelector('.wires'), hub=document.getElementById('how-diahub');
+  if(!svg||!hub) return;
+  var defs=svg.querySelector('defs');
+  function c(el){var r=el.getBoundingClientRect(),b=box.getBoundingClientRect();
+    return {l:r.left-b.left,t:r.top-b.top,r:r.right-b.left,b:r.bottom-b.top,
+            cx:r.left-b.left+r.width/2,cy:r.top-b.top+r.height/2};}
+  function draw(){
+    var b=box.getBoundingClientRect(); if(!b.width) return;
+    svg.setAttribute('viewBox','0 0 '+b.width+' '+b.height);
+    while(svg.lastChild&&svg.lastChild!==defs) svg.removeChild(svg.lastChild);
+    var H=c(hub), d=[];
+    box.querySelectorAll('[data-lane="in"] .node').forEach(function(n){
+      var N=c(n),x1=N.cx,y1=N.b,x2=H.cx,y2=H.t,m=(y1+y2)/2;
+      d.push('M'+x1+' '+y1+'C'+x1+' '+m+' '+x2+' '+m+' '+x2+' '+y2);});
+    box.querySelectorAll('[data-lane="out"] .node').forEach(function(n){
+      var N=c(n),x1=H.cx,y1=H.b,x2=N.cx,y2=N.t,m=(y1+y2)/2;
+      d.push('M'+x1+' '+y1+'C'+x1+' '+m+' '+x2+' '+m+' '+x2+' '+y2);});
+    box.querySelectorAll('[data-side]').forEach(function(n){
+      var N=c(n),left=n.getAttribute('data-side')==='l';
+      var x1=left?N.r:N.l,y1=N.cy,x2=left?H.l:H.r,y2=H.cy,m=(x1+x2)/2;
+      d.push('M'+x1+' '+y1+'C'+m+' '+y1+' '+m+' '+y2+' '+x2+' '+y2);});
+    /* each connector twice: the grey line, then a travelling light on top of it — the same
+       treatment the platform section's wires use (.ent-wire), so the two diagrams animate alike
+       rather than each inventing a motion. Staggered so it reads as a bundle, not a metronome. */
+    d.forEach(function(p,i){
+      var el=document.createElementNS('http://www.w3.org/2000/svg','path');
+      el.setAttribute('d',p); el.setAttribute('marker-end','url(#wh)'); svg.appendChild(el);
+      var fl=document.createElementNS('http://www.w3.org/2000/svg','path');
+      fl.setAttribute('d',p); fl.setAttribute('class','w-flow');
+      fl.style.setProperty('--d',(i*0.34).toFixed(2)+'s'); svg.appendChild(fl);});
+  }
+  draw();
+  if(window.ResizeObserver) new ResizeObserver(draw).observe(box);
+  window.addEventListener('load',draw);
+  if(document.fonts&&document.fonts.ready) document.fonts.ready.then(draw);
+})();
+</script>
+<section class="rgw" id="ayuda">
+<div class="rgw-x">
+<div class="rgw-h">
+<h2 class="t">A quién ayuda Rocoto</h2>
+<p class="l">Tres puestos, y una página por cada uno con las pantallas de verdad.</p>
+</div>
+<div class="rg"><div class="rgc"><figure class="ayp pbp" style="--sw:448px"><span aria-hidden="true" class="ayp-blobs" style="background:radial-gradient(55.95174394035712% 73.41504449117929% at 28.7% 17.6%, color-mix(in srgb, color-mix(in oklab, var(--panel-roc) 62%, var(--panel-attn)) 89%, transparent) 0%, color-mix(in srgb, color-mix(in oklab, var(--panel-roc) 62%, var(--panel-attn)) 75%, transparent) 28%, transparent 64%), radial-gradient(47.466022180859% 48.281196375377476% at 22.8% 20.6%, color-mix(in srgb, color-mix(in oklab, var(--panel-roc) 1%, var(--panel-attn)) 99%, transparent) 0%, color-mix(in srgb, color-mix(in oklab, var(--panel-roc) 1%, var(--panel-attn)) 84%, transparent) 18%, transparent 57%), radial-gradient(50.72048514848575% 60.27834453899413% at 81.0% 10.7%, color-mix(in srgb, color-mix(in oklab, var(--panel-roc) 31%, var(--panel-attn)) 76%, transparent) 0%, color-mix(in srgb, color-mix(in oklab, var(--panel-roc) 31%, var(--panel-attn)) 65%, transparent) 25%, transparent 63%)"></span><svg aria-hidden="true" class="ayp-curve" preserveaspectratio="none" style="transform:rotate(-1.5deg) scale(1.25)" viewbox="0 0 100 100"><path d="M0,40 C22,38 44,65 66,16 C82,69 93,76 100,20 L100,-1 L0,-1 Z" fill="color-mix(in srgb, color-mix(in oklab, var(--panel-roc) 1%, var(--panel-attn)) 33%, transparent)"></path><path d="M0,40 C22,38 44,65 66,16 C82,69 93,76 100,20 L100,-1 L0,-1 Z" fill="none" stroke="color-mix(in srgb, color-mix(in oklab, var(--panel-roc) 62%, var(--panel-attn)) 48%, transparent)" stroke-width="0.7"></path></svg><div class="ayp-scroll"><div class="pb-fit" data-nw="448"><div class="pb-nat" style="width:448px"><div class="pb-host" id="shot-albaran"></div></div></div></div></figure><a class="rgc-x" href="/sales.html"><b>Comerciales</b><span class="rgc-p">El pedido lo lleva Rocoto. La cuenta sigue siendo suya.</span><span class="rgc-go">Ver la página<svg class="ic"><use href="#ph-arrow-right"></use></svg></span></a></div><div class="rgc"><figure class="ayp pbp" style="--sw:480px"><span aria-hidden="true" class="ayp-blobs" style="background:radial-gradient(75.40274689299986% 54.09036361053586% at 51.9% 39.3%, color-mix(in srgb, color-mix(in oklab, var(--panel-roc) 21%, var(--panel-attn)) 92%, transparent) 0%, color-mix(in srgb, color-mix(in oklab, var(--panel-roc) 21%, var(--panel-attn)) 78%, transparent) 19%, transparent 68%), radial-gradient(57.56236678455025% 47.624047262594104% at 53.5% 85.6%, color-mix(in srgb, color-mix(in oklab, var(--panel-attn) 57%, var(--panel-roc)) 93%, transparent) 0%, color-mix(in srgb, color-mix(in oklab, var(--panel-attn) 57%, var(--panel-roc)) 79%, transparent) 18%, transparent 61%)"></span><svg aria-hidden="true" class="ayp-curve" preserveaspectratio="none" style="transform:rotate(-3.7deg) scale(1.25)" viewbox="0 0 100 100"><path d="M0,53 C22,72 44,69 66,72 C82,35 93,39 100,86 L100,-1 L0,-1 Z" fill="color-mix(in srgb, color-mix(in oklab, var(--panel-attn) 57%, var(--panel-roc)) 56%, transparent)"></path><path d="M0,53 C22,72 44,69 66,72 C82,35 93,39 100,86 L100,-1 L0,-1 Z" fill="none" stroke="color-mix(in srgb, color-mix(in oklab, var(--panel-roc) 21%, var(--panel-attn)) 68%, transparent)" stroke-width="0.7"></path></svg><div class="ayp-scroll"><div class="pb-fit" data-nw="480"><div class="pb-nat" style="width:480px"><div class="pb-host" id="shot-catalog"></div></div></div></div></figure><a class="rgc-x" href="/procurement.html"><b>Compras</b><span class="rgc-p">El catálogo, los precios del día y lo que hace falta mañana.</span><span class="rgc-go">Ver la página<svg class="ic"><use href="#ph-arrow-right"></use></svg></span></a></div><div class="rgc"><figure class="ayp pbp" style="--sw:480px"><span aria-hidden="true" class="ayp-blobs" style="background:radial-gradient(63.862680525518954% 63.82605907693505% at 69.7% 52.1%, color-mix(in srgb, color-mix(in oklab, var(--panel-attn) 84%, var(--panel-roc)) 73%, transparent) 0%, color-mix(in srgb, color-mix(in oklab, var(--panel-attn) 84%, var(--panel-roc)) 62%, transparent) 23%, transparent 64%), radial-gradient(77.53036724030972% 62.75184920243919% at 84.6% 51.9%, color-mix(in srgb, color-mix(in oklab, var(--panel-roc) 26%, var(--panel-attn)) 72%, transparent) 0%, color-mix(in srgb, color-mix(in oklab, var(--panel-roc) 26%, var(--panel-attn)) 62%, transparent) 30%, transparent 57%), radial-gradient(46.96166444616392% 48.86153402924538% at 65.0% 28.6%, color-mix(in srgb, color-mix(in oklab, var(--panel-roc) 5%, var(--panel-attn)) 95%, transparent) 0%, color-mix(in srgb, color-mix(in oklab, var(--panel-roc) 5%, var(--panel-attn)) 81%, transparent) 20%, transparent 62%)"></span><svg aria-hidden="true" class="ayp-curve" preserveaspectratio="none" style="transform:rotate(0.3deg) scale(1.25)" viewbox="0 0 100 100"><path d="M0,40 C22,53 44,32 66,15 C82,82 93,90 100,19 L100,-1 L0,-1 Z" fill="color-mix(in srgb, color-mix(in oklab, var(--panel-roc) 26%, var(--panel-attn)) 43%, transparent)"></path><path d="M0,40 C22,53 44,32 66,15 C82,82 93,90 100,19 L100,-1 L0,-1 Z" fill="none" stroke="color-mix(in srgb, color-mix(in oklab, var(--panel-attn) 84%, var(--panel-roc)) 55%, transparent)" stroke-width="0.7"></path></svg><div class="ayp-scroll"><div class="pb-fit" data-nw="480"><div class="pb-nat" style="width:480px"><div class="pb-host" id="shot-report-chart"></div></div></div></div></figure><a class="rgc-x" href="/owner.html"><b>El dueño</b><span class="rgc-p">Lo que entra, lo que sale y lo que se resolvió solo.</span><span class="rgc-go">Ver la página<svg class="ic"><use href="#ph-arrow-right"></use></svg></span></a></div></div>
+</div>
+</section><section class="bgw">
+<h2 class="t">Hecho para cómo se pide de verdad</h2>
+<ul class="bg"><li><span class="bg-k"><svg class="ic"><use href="#ph-chats-circle"></use></svg></span><b>Todos los canales</b><span>WhatsApp, notas de voz, fotos y email entran al mismo sitio.</span></li><li><span class="bg-k"><svg class="ic"><use href="#ph-chat-circle-dots"></use></svg></span><b>Sus palabras</b><span>«La paleta», «el york del bueno» — se resuelven a tu catálogo.</span></li><li><span class="bg-k"><svg class="ic"><use href="#ph-package"></use></svg></span><b>Tus variantes</b><span>Entera, sin cabeza, de pincho — la línea coge la que es.</span></li><li><span class="bg-k"><svg class="ic"><use href="#ph-check"></use></svg></span><b>Seis controles</b><span>Cada pedido pasa seis controles antes de salir.</span></li><li><span class="bg-k"><svg class="ic"><use href="#ph-table"></use></svg></span><b>Tu Excel o tu Sage</b><span>El día sale en el archivo que tu equipo ya sabe abrir.</span></li><li><span class="bg-k"><svg class="ic"><use href="#ph-seal-question"></use></svg></span><b>Los que dudan</b><span>El pedido con dudas se pone delante, con su motivo.</span></li></ul>
+</section><section class="problem-stream ps-short" id="problema">
+<div class="ps-sticky">
+<div class="ps-bg" style="background-image:url(/mercado.webp)"></div>
+<div class="ps-inner">
+<h2 class="ps-h">El pedido llega por WhatsApp. Alguien lo pasa al programa.</h2>
+<p class="ps-text"><span class="ps-w">Ahora</span> <span class="ps-w">mismo,</span> <span class="ps-w">un</span> <span class="ps-w">proveedor</span> <span class="ps-w">de</span> <span class="ps-w">hostelería</span> <span class="ps-w">pierde</span> <span class="ps-w ps-hot">10</span> <span class="ps-w ps-hot">horas</span> <span class="ps-w">a</span> <span class="ps-w">la</span> <span class="ps-w">semana</span> <span class="ps-w">pasando</span> <span class="ps-w">pedidos</span> <span class="ps-w">a</span> <span class="ps-w">mano,</span> <span class="ps-w">de</span> <span class="ps-w">notas</span> <span class="ps-w">de</span> <span class="ps-w">voz,</span> <span class="ps-w">de</span> <span class="ps-w">fotos,</span> <span class="ps-w">de</span> <span class="ps-w">mensajes</span> <span class="ps-w">a</span> <span class="ps-w">deshoras.</span></p>
+<p class="ps-text ps-turn"><span class="ps-w ps-sol">Rocoto</span> <span class="ps-w">los</span> <span class="ps-w">lee</span> <span class="ps-w">todos,</span> <span class="ps-w">escribe</span> <span class="ps-w">el</span> <span class="ps-w">albarán</span> <span class="ps-w">y</span> <span class="ps-w">lo</span> <span class="ps-w">deja</span> <span class="ps-w">en</span> <span class="ps-w">tu</span> <span class="ps-w">Excel</span> <span class="ps-w">o</span> <span class="ps-w">en</span> <span class="ps-w">tu</span> <span class="ps-w">Sage.</span></p>
+</div>
+</div>
+</section>
+<style>
+.v2 .problem-stream{position:relative;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);
+  width:100vw;padding:0;border-bottom:0;background:#0F0E0C;height:180vh}
+.v2 .ps-sticky{position:sticky;top:0;min-height:100vh;overflow:hidden;display:flex;
+  align-items:center}
+.v2 .ps-bg{position:absolute;inset:0;background-size:cover;background-position:center;
+  opacity:.13;filter:grayscale(.45) contrast(1.05)}
+.v2 .ps-sticky:after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(120% 90% at 15% 30%,transparent 40%,rgba(15,14,12,.55))}
+.v2 .ps-inner{position:relative;z-index:1;width:100%;max-width:1040px;margin:0 auto;
+  text-align:left;padding:0 clamp(20px,4vw,44px)}
+/* ⚠️ THE KICKER BECAME A HEADING (2026-08-28). This band opened on «El problema» in small red
+   tracked caps — an eyebrow, which is looked at and never read (Peter's standing rule: the
+   heading carries the message). What replaces it NAMES THE THING that is happening, and the
+   streamed statement under it is the evidence for it. It sits a clear step under the statement's
+   display size so the order reads label → evidence rather than two headlines arguing. */
+.v2 .ps-h{display:block;margin:0 0 18px;text-align:left;max-width:26ch;
+  font-family:var(--rocoto-font-display);font-weight:600;
+  font-size:clamp(19px,2.1vw,26px);line-height:1.2;letter-spacing:-.012em;color:#F2B65C}
+.v2 .ps-text{margin:0;max-width:none;text-align:left;font-family:var(--rocoto-font-display);
+  font-weight:600;font-size:clamp(25px,3.3vw,43px);line-height:1.18;letter-spacing:-.012em;
+  color:#FAF7F3;text-wrap:pretty}
+.v2 .ps-turn{margin-top:.5em}
+/* the words themselves: dim on arrival, lit as the section scrolls. `.lit` is added by
+   PS_SCRIPT; without that script every word would stay at 19% on near-black, which is why the
+   two ship together. */
+.v2 .ps-w{color:rgba(250,247,243,.19);transition:color .4s cubic-bezier(.25,1,.5,1)}
+.v2 .ps-text .ps-w{white-space:nowrap}
+.v2 .ps-w.lit{color:#FAF7F3}
+.v2 .ps-hot{color:rgba(240,82,90,.30);font-style:normal}
+.v2 .ps-hot.lit{color:#F04E5A}
+.v2 .ps-sol{color:rgba(242,182,92,.28);font-style:normal}
+.v2 .ps-sol.lit{color:#F2B65C}
+@media(prefers-reduced-motion:reduce){
+  .v2 .problem-stream{height:auto}
+  .v2 .ps-sticky{position:static;min-height:0;padding:14vh 0}
+  .v2 .ps-w{color:#FAF7F3}.v2 .ps-hot{color:#F04E5A}.v2 .ps-sol{color:#F2B65C}}
+</style><script>
+(function(){
+  var sec=document.getElementById('problema'); if(!sec) return;
+  var words=[].slice.call(sec.querySelectorAll('.ps-w')); var n=words.length; if(!n) return;
+  var ticking=false;
+  function paint(){
+    ticking=false;
+    var vh=window.innerHeight||1;
+    var top=sec.getBoundingClientRect().top;
+    var total=sec.offsetHeight-vh; if(total<1) total=1;
+    // begin a touch before the section pins (streams in while scrolling in), finish at 78% -> give
+    var prog=(-top + vh*0.20)/(total + vh*0.20);
+    prog = prog<0?0 : prog>1?1 : prog;
+    var lit=Math.round(Math.min(prog/0.78,1)*n);
+    for(var i=0;i<n;i++){ var on=i<lit; if(words[i]._on!==on){ words[i].classList.toggle('lit',on); words[i]._on=on; } }
+  }
+  function onScroll(){ if(!ticking){ ticking=true; requestAnimationFrame(paint); } }
+  addEventListener('scroll',onScroll,{passive:true}); addEventListener('resize',paint);
+  if('requestAnimationFrame' in window) requestAnimationFrame(paint); else paint();
+})();
+</script><section aria-labelledby="founder-heading" class="fndw">
+<div class="fnd-intro">
+<h2 class="t" id="founder-heading">Experiencia en alimentación y tecnología</h2>
+<div class="fnd-by">
+<img alt="Peter Neyra" height="72" loading="lazy" src="/peter.webp" width="72"/>
+<div><b>Peter Neyra</b><span>Fundador de Rocoto</span></div>
+</div>
+</div>
+<div class="fnd-story">
+<p>Peter Neyra empezó trabajando con comerciantes en los mercados mayoristas de Londres. En Tallysticks, una empresa de tecnología para el comercio que pasó por Barclays Techstars, ayudó a convertir su papeleo en un sistema claro.</p>
+<p>Más tarde asesoró a Gojek en logística de pedidos de restaurantes y organizó hackathons de cadena de suministro para Imperial College London con Bird’s Eye, Waitrose, Syngenta y Tate &amp; Lyle.</p>
+</div>
+</section><section class="v3-close">
+<h2 class="t">Ve Rocoto con tu operación. Reserva una llamada.</h2>
+<div class="cta cta-mid"><a class="b p lg" href="https://preview.atelierneyra.com/apps/erp/app.html" rel="noopener noreferrer" target="_blank">Abrir demo</a></div>
+</section><style>
+/* ══════════════════════════════════════════════════════════════════════════════════════════════
+   W26 — THE PROOF BAND, THE BENEFIT GRID, THE ERP GRID (2026-08-29)
+
+   Page-scoped and emitted from the BODY rather than from PAGE_HEAD, and that is deliberate: the
+   English tree is being rebuilt ahead of the Spanish one (canon §31.5), and a rule in the shared
+   head would change the Spanish pages' bytes for a shape they do not render yet.
+
+   Every value resolves through the `.v2` tokens the house style already declares — the type ramp,
+   the ink ramp, --line-soft, --acc-t, --r and the landing's own shadow ramp. Nothing here picks a
+   colour, a radius or a shadow by hand.
+   ══════════════════════════════════════════════════════════════════════════════════════════ */
+
+/* ── P1 · BESIDE, NOT UNDER. P2 · THE PAIR OWNS ITS SPACE ─────────────────────────────────────
+   The vertical padding IS the design, not slack: one claim and one shot to a band, with enough
+   air around them that two pairs cannot crowd one screen. §31: «Remember to have SPACE.» */
+.v2 .pb{display:grid;grid-template-columns:minmax(0,.88fr) minmax(0,1.12fr);
+  gap:clamp(24px,4.4vw,72px);align-items:center;
+  padding:clamp(46px,6.6vw,102px) 0;border-bottom:1px solid var(--line-soft)}
+/* REVERSING THE SIDE REVERSES THE TRACKS TOO — the same trap `.ay-aide.rev` documents: `order`
+   alone moves the plate into column one and hands it the narrow track. The pair moves together. */
+.v2 .pb.rev{grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr)}
+.v2 .pb.rev>.pb-x{order:2}
+/* P4 · TEXT AT TALKING LENGTH — a heading that names the thing, then two short sentences. */
+.v2 .pb-x h2{font-family:var(--f-display,'Fraunces',Georgia,serif);
+  font-size:clamp(23px,2.3vw,29px);font-weight:600;letter-spacing:-.016em;line-height:1.15;
+  margin:0;max-width:19ch;text-wrap:balance}
+.v2 .pb-x p{margin:14px 0 0;font-size:var(--t-body);color:var(--mid);line-height:1.6;
+  max-width:44ch;text-wrap:pretty}
+/* THE FILM BAND is marked by TYPE, never by scale (P3): its heading is one step up and its first
+   sentence carries the page's ink, so the eye knows which band is the scene. */
+.v2 .pb-film .pb-x h2{font-size:clamp(27px,3vw,37px);max-width:17ch;letter-spacing:-.02em}
+.v2 .pb-film .pb-x p:first-of-type{margin-top:16px;font-size:var(--t-lead);color:var(--fg)}
+.v2 .pb-film{padding-top:clamp(30px,4vw,58px)}
+
+/* The whole proof scales within a generous safe area; it never borrows the page gutter. */
+.v2 .ayp.pbp{width:min(100%,calc(var(--sw,480px) + 2 * var(--site-visual-inset)));
+  margin:0 auto;padding:var(--site-visual-inset)}
+/* the fit box: the natural-width layer is transform-scaled by PB_FIT_SCRIPT, never re-flowed */
+.v2 .pb-fit{position:relative;width:100%;overflow:hidden}
+.v2 .pb-nat{position:absolute;top:0;left:0;transform-origin:top left}
+/* ⚠️ NO EMPTY PLATE, EVER (rule 15: «ONLY marketing-ready shots exist anywhere a reviewer or
+   visitor looks»). The host is empty in the served HTML — canon §35 and SHOT-RULES rule zero
+   both mean there is no capture to lay under it as a no-JS floor, because a crop of an app
+   screen is not a shot. So the plate itself waits: it paints the moment React has rendered into
+   `.pb-host`, and a browser without `:has()` gets the plate straight away rather than nothing. */
+.v2 .ayp.pbp{opacity:0}
+.v2 .ayp.pbp:has(.pb-host:not(:empty)){opacity:1;transition:opacity 240ms ease}
+@supports not selector(:has(*)){.v2 .ayp.pbp{opacity:1}}
+
+@media(max-width:900px){
+  /* the stack is the MOBILE FALLBACK and never the design (P1) — sentence, then shot */
+  .v2 .pb,.v2 .pb.rev{grid-template-columns:minmax(0,1fr);gap:clamp(20px,4vw,30px);
+    padding:clamp(34px,7vw,54px) 0}
+  .v2 .pb.rev>.pb-x{order:0}
+  .v2 .pb-x p{max-width:none}
+}
+/* ── THE BENEFIT GRID ─────────────────────────────────────────────────────────────────────────
+   Three across, because six cells as two rows of three is the shape that lets a header be two
+   words and a sentence be one line and a half. The icon frame is the site's own — the same
+   32px sunk tile `.wdoor-ic` and `.st .k` wear, so a benefit cell reads as house furniture. */
+.v2 .bgw{padding:clamp(48px,6.4vw,96px) 0;border-bottom:1px solid var(--line-soft)}
+.v2 .pb-k{display:block;margin-bottom:11px;font-size:var(--t-label);font-weight:700;
+  letter-spacing:.11em;text-transform:uppercase;color:var(--acc-t)}
+.v2 .fndw{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);
+  gap:clamp(28px,6vw,88px);align-items:start;padding:var(--site-section-space) 0}
+.v2 .fndw h2.t{max-width:18ch}
+.v2 .fnd-by{display:flex;align-items:center;gap:16px;margin-top:28px}
+.v2 .fnd-by img{width:72px;height:72px;border-radius:var(--r);object-fit:cover;
+  border:1px solid var(--line-soft)}
+.v2 .fnd-by b{display:block;font-size:var(--t-h);font-weight:600;letter-spacing:-.008em}
+.v2 .fnd-by span{display:block;margin-top:3px;font-size:var(--t-sm);color:var(--mid)}
+.v2 .fnd-story{max-width:58ch}
+.v2 .fnd-story p{font-size:var(--t-lead);line-height:1.7;color:var(--mid);margin:0;text-wrap:pretty}
+.v2 .fnd-story p+p{margin-top:20px}
+@media(max-width:760px){.v2 .fndw{grid-template-columns:minmax(0,1fr);gap:26px}}
+.v2 .bg{list-style:none;margin:clamp(26px,3.6vw,44px) 0 0;padding:0;display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:clamp(24px,3vw,40px) clamp(26px,3.6vw,52px)}
+.v2 .bg-k{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;
+  border-radius:var(--r);background:var(--sunk);border:1px solid var(--line-soft);
+  color:var(--acc-t);margin-bottom:13px}
+.v2 .bg-k svg.ic{width:17px;height:17px}
+.v2 .bg b{display:block;font-size:var(--t-h);font-weight:600;letter-spacing:-.008em;
+  line-height:1.2}
+.v2 .bg li>span:last-child{display:block;margin-top:7px;font-size:var(--t-sm);color:var(--mid);
+  line-height:1.55;text-wrap:pretty}
+@media(max-width:900px){.v2 .bg{grid-template-columns:repeat(2,minmax(0,1fr))}}
+/* TWO ACROSS ON THE PHONE TOO. One column turned six benefits into a 1.400px scroll of
+   paragraphs — «the grid shit doesn't even exist» (Peter, 2026-08-30, looking at his phone). A
+   grid has to read as a grid at every width, so the cells narrow instead of unstacking, and the
+   sentences below are cut to a length that survives a 160px column. */
+@media(max-width:560px){
+  .v2 .bg{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 16px}
+  .v2 .bg-k{width:26px;height:26px;margin-bottom:9px}
+  .v2 .bg-k svg.ic{width:14px;height:14px}
+  .v2 .bg li>span:last-child{margin-top:5px;line-height:1.45}
+}
+
+/* ── THE ERP GRID — chips, never marks ────────────────────────────────────────────────────── */
+.v2 .egw{padding:clamp(48px,6.4vw,96px) 0;border-bottom:1px solid var(--line-soft)}
+.v2 .eg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:clamp(24px,3vw,42px);margin-top:clamp(26px,3.4vw,40px);align-items:start}
+.v2 .eg-g h3{margin:0;font-size:var(--t-label);font-weight:700;letter-spacing:.11em;
+  text-transform:uppercase;color:var(--acc-t)}
+.v2 .eg-c{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.v2 .eg-c span{display:inline-flex;align-items:center;padding:7px 13px;
+  border-radius:var(--rocoto-radius-pill,999px);background:var(--white);
+  border:1px solid var(--line);font-size:var(--t-cap);line-height:1.25;color:var(--fg);
+  box-shadow:var(--rocoto-shadow-hairline)}
+.v2 .eg-n{margin:13px 0 0;font-size:var(--t-cap);color:var(--faint);line-height:1.5;
+  max-width:40ch}
+.v2 .eg-a{display:inline-flex;align-items:center;gap:7px;margin-top:clamp(22px,2.6vw,30px);
+  font-size:var(--t-sm);font-weight:600;color:var(--acc-t)}
+.v2 .eg-a svg.ic{width:14px;height:14px}
+@media(max-width:900px){.v2 .eg{grid-template-columns:1fr;gap:26px}}
+
+/* Context first, one proof beside it; the component keeps its own proportions at every width. */
+.v2 .hero.hero-kit{grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);
+  gap:clamp(32px,5vw,80px);align-items:center;
+  padding:clamp(44px,5.5vw,88px) 0 clamp(48px,6vw,96px)}
+.v2 .hero-kit .hero-morph{width:100%;max-width:616px;margin-inline:auto;
+  padding:var(--site-visual-inset);border:1px solid var(--line-soft);border-radius:var(--r)}
+.v2 .hero-kit .sub{max-width:45ch;margin-top:24px}
+.v2 .hero-kit .cta{margin-top:26px}
+@media(max-width:900px){
+  .v2 .hero.hero-kit{grid-template-columns:minmax(0,1fr);gap:32px;padding:40px 0 56px}
+  .v2 .hero-kit .sub{margin-top:20px}
+  .v2 .hero-kit .cta{margin-top:24px}
+}
+
+/* ── BAND 2 · THE INS-AND-OUTS RAIL ──────────────────────────────────────────────────────────
+   `.lane` is a four-track grid in sections-v2.css, written when both rails held four nodes.
+   Peter's out-rail holds THREE — the file, the paper, the API — and in a four-track grid those
+   three hang left of the hub they are wired to, which the measured connectors then draw as a
+   lopsided fan. The track count follows the node count. */
+.v2 .dia .lane[data-n="3"]{grid-template-columns:repeat(3,1fr)}
+.v2 .dia .lane[data-n="3"] .node{max-width:168px}
+/* the sides lost their gloss (`sub=False`), so the plate should not keep the height of a line
+   that is no longer in it */
+.v2 .dia .side:has(>b:only-child){display:flex;align-items:center;min-height:52px}
+
+/* Role previews share the page grid. Their inner safe area scales the whole UI. */
+.v2 .rgw{width:100%;padding:var(--site-section-space) 0;border-bottom:1px solid var(--line-soft)}
+.v2 .rgw-x,.v2 .rgw-h{width:100%;max-width:none;margin-inline:auto}
+.v2 .rg{display:grid;grid-template-columns:1fr;gap:clamp(26px,2.4vw,34px);
+  margin-top:clamp(26px,3.4vw,42px)}
+@media(min-width:1180px){.v2 .rg{grid-template-columns:repeat(3,minmax(0,1fr))}}
+/* ⚠️ AND THE TEXT UNDER THEM HAS TO LINE UP — canon §34's frame law is explicit about it:
+   «a frame that perfectly scales down regardless of the screen, so everything is always visible
+   AND THE TEXT STAYS ALIGNED WITH IT». The three shots are drawn at three different heights (the
+   albarán is portrait, the chart is landscape), so three cells laid out normally put «Sales
+   reps» a hundred pixels below «The owner» — rendered and looked at, and it reads as a broken
+   page rather than as three peers. SUBGRID fixes it at the source: each cell spans the band's
+   two rows and inherits their track sizes, so row one is the tallest plate and row two starts at
+   one y for all three. The plate then FILLS its row and centres the shot inside it, which also
+   turns three ragged gradients into one clean row of plates.
+   Guarded, because a browser without subgrid must still get a readable stack rather than a
+   collapsed grid: without the @supports it falls back to today's behaviour, cell by cell. */
+.v2 .rgc{display:flex;flex-direction:column;gap:17px}
+@supports (grid-template-rows:subgrid){
+  @media(min-width:1180px){
+    .v2 .rg{grid-template-rows:auto auto}
+    .v2 .rgc{display:grid;grid-row:span 2;grid-template-rows:subgrid;gap:17px}
+  }
+}
+/* the plate is the shot's own width everywhere else on the site; in a grid cell it is the CELL's
+   width, so the three sit on one baseline instead of stepping with their composed sizes.
+
+   ⚠️ AND IT KEEPS ITS OWN HEIGHT — `height:100%` was tried first and it is a RULE 11 failure:
+   stretching all three plates to the tallest (the albarán, which is portrait) left the catalogue
+   and the chart floating in the middle of a big gradient, «a shot swimming in its plate». So the
+   plates end on ONE LINE instead of starting on one: `align-self:end` puts every shot's bottom
+   edge directly above its own caption, which is what §34's «the text stays aligned with it»
+   actually asks for, and each plate is still exactly its shot plus a hairline of air. */
+.v2 .rgc>.ayp.pbp{width:100%;padding:var(--site-visual-inset);align-self:end}
+.v2 .rgc-x{display:block;color:inherit}
+.v2 .rgc-x b{display:block;font-family:var(--f-display,'Fraunces',Georgia,serif);
+  font-size:clamp(19px,1.7vw,22px);font-weight:600;letter-spacing:-.012em;line-height:1.2}
+.v2 .rgc-p{display:block;margin-top:7px;font-size:var(--t-sm);color:var(--mid);
+  line-height:1.55;text-wrap:pretty;max-width:38ch}
+.v2 .rgc-go{display:inline-flex;align-items:center;gap:6px;margin-top:12px;
+  font-size:var(--t-sm);font-weight:600;color:var(--acc-t)}
+.v2 .rgc-go svg.ic{width:14px;height:14px;transition:transform 180ms cubic-bezier(.25,1,.5,1)}
+.v2 .rgc-x:hover .rgc-go svg.ic{transform:translateX(3px)}
+@media(prefers-reduced-motion:reduce){.v2 .rgc-go svg.ic{transition:none}}
+/* ── BAND 4 · THE PROBLEM, CUT TO ITS CORE ───────────────────────────────────────────────────
+   `.problem-stream`'s 180vh is a SCROLL BUDGET, not a height: PS_SCRIPT lights the statement word
+   by word across it, and the band is over when the last word lands. The English statement is now
+   a third shorter, so 180vh spends its tail on a black screen — and on a 900px viewport that is
+   360px of the page's total length for nothing. 130vh puts the turn's last word near the band's
+   own end, which is what the number was for. */
+.v2 .problem-stream.ps-short{height:126vh}
+
+/* ── BAND 5 · «WHO I AM» ──────────────────────────────────────────────────────────────────────
+   `.founder` is the current landing's own two-column block (132px portrait + text) and it is
+   reused whole. What this adds is the heading above it and the role line under the name, which
+   is the line the CV paragraph used to open with. */
+.v2 .fnd{padding:clamp(48px,6.4vw,92px) 0;border-bottom:1px solid var(--line-soft)}
+/* `.founder` ships as `margin:26px auto 0` because it used to be a CENTRED band under a centred
+   heading. Under a left-aligned §31 heading that `auto` pushes the portrait 146px right of the
+   word above it — rendered and looked at. The block keeps its own measure and loses the centring. */
+.v2 .fnd .founder{margin:clamp(22px,2.8vw,32px) 0 0;max-width:760px}
+.v2 .fnd .fr{font-size:var(--t-sm);color:var(--acc-t);font-weight:600;margin:-2px 0 10px}
+.v2 .fnd .fd{max-width:56ch}
+
+/* ── THE ROLE PAGE, REBUILT ON BANDS ──────────────────────────────────────────────────────────
+   The hero keeps its own shape; what changed underneath it is that `.ro-aides` (a run of aides
+   packed three to a screen) became a run of `.pb` bands, each with its own air. */
+.v2 .ro-hero{padding-bottom:0}
+/* the hero's own air before the film. (`.pb:first-of-type` was the obvious way to write this and
+   it never matched anything: `:first-of-type` counts SECTIONS, and the first section on every one
+   of these pages is the hero.) */
+.v2 .ro-hero+.pb,.v2 .ro-lede+.pb{margin-top:clamp(10px,1.6vw,22px)}
+</style><script>
+(function(){
+  var boxes = document.querySelectorAll('.pb-fit');
+  if(!boxes.length) return;
+  function fit(el){
+    var nat = el.firstElementChild;
+    if(!nat) return;
+    var nw = parseFloat(el.dataset.nw) || 1;
+    var avail = el.clientWidth;
+    if(!avail) return;
+    var s = Math.min(1, avail / nw);
+    /* the natural height is layout height, which `transform` does not touch — so it can be read
+       after the scale is applied and stays right through the shot's own build-in */
+    nat.style.transform = s < 1 ? 'scale(' + s + ')' : 'none';
+    el.style.height = Math.round(nat.offsetHeight * s) + 'px';
+  }
+  var pend = new Set(), raf = 0;
+  function flush(){ raf = 0; var l = Array.from(pend); pend.clear(); l.forEach(fit); }
+  function later(el){ pend.add(el); if(!raf) raf = requestAnimationFrame(flush); }
+  var RO = window.ResizeObserver ? new ResizeObserver(function(es){
+    es.forEach(function(e){
+      var el = e.target.classList.contains('pb-fit') ? e.target : e.target.parentElement;
+      if(el) later(el);
+    });
+  }) : null;
+  boxes.forEach(function(el){
+    fit(el);
+    if(RO){ RO.observe(el); if(el.firstElementChild) RO.observe(el.firstElementChild); }
+  });
+  /* the islands mount after this script runs and the shots build themselves in on entering
+     view, so measure again once both have had their turn */
+  window.addEventListener('load', function(){ boxes.forEach(later); });
+  setTimeout(function(){ boxes.forEach(later); }, 1200);
+})();
+</script>
+</div>
+<footer class="ftr"><div class="wrap">
+<div class="fgrid">
+<div class="fbrand">
+<a class="brand" href="/"><img alt="" class="rface" height="26" src="/brand/face-blink-light.gif" width="26"/>Rocoto</a>
+<p>ERP con IA para distribuidores de alimentación.</p>
+</div>
+<div><h4>A quién ayuda</h4><a href="/sales.html">Comerciales</a><a href="/procurement.html">Compras</a><a href="/owner.html">El dueño</a>
+<a href="https://docs.atelierneyra.com/ai-native-erp/overview/" rel="noopener noreferrer" target="_blank">Documentación</a></div>
+<div><h4>Código</h4><a href="https://github.com/latintzar/ai-native-erp" rel="noopener noreferrer" target="_blank">GitHub</a><a href="https://github.com/latintzar/ai-native-erp/blob/main/docs/SECURITY.md" rel="noopener noreferrer" target="_blank">Seguridad</a><a href="https://github.com/latintzar/ai-native-erp/blob/main/LICENSE" rel="noopener noreferrer" target="_blank">Licencia del código</a></div>
+<!-- the documentation link moved up into the roles column, so it is not printed twice -->
+<div><h4>Demo</h4><a href="https://preview.atelierneyra.com/apps/erp/app.html" rel="noopener noreferrer" target="_blank">Abrir demo</a></div>
+</div>
+<div class="fbot">
+<span>© 2026 Peter Neyra</span>
+<div class="sp"><span class="lang"><a class="on" href="/">ES</a><a href="/en/">EN</a></span></div>
+</div>
+</div><a href="https://atelierneyra.com" rel="noopener noreferrer" target="_blank">made by atelier neyra</a></footer>
+<script>
+(function(){
+  window.Site = window.Site || {};
+  Site.tabs = function(btn, group, fn){
+    document.querySelectorAll('[data-tabs="'+group+'"] button').forEach(function(b){b.classList.remove('on')});
+    btn.classList.add('on'); if(fn) fn(btn.dataset.k);
+  };
+  // the Documentation module's segmented control. Scoped to its OWN panel rather than to the
+  // document, because the module ships on three pages and could one day ship twice on one.
+  Site.docs = function(btn, k){
+    var root = btn.closest('.docsmod-panel'); if(!root) return;
+    root.querySelectorAll('.docsmod-seg button').forEach(function(b){b.classList.toggle('on', b===btn)});
+    root.querySelectorAll('.docsmod-pane').forEach(function(p){p.classList.toggle('on', p.dataset.k===k)});
+  };
+  /* THE NAV DROPDOWN, FOR A FINGER (review round 2, decision 6). The menu opens on :hover and
+     on :focus-within in CSS, which covers a mouse and a keyboard and covers NEITHER a touch
+     screen — there :hover fires on the first tap and then sticks with nothing to dismiss it. So
+     the trigger toggles an explicit class, and this closes it the two ways a person expects:
+     Escape, and a tap anywhere else. Registered once, on the document, for every page's header. */
+  Site.dd = function(btn){
+    var box = btn.parentNode, open = !box.classList.contains('open');
+    document.querySelectorAll('.hasmenu.open').forEach(function(o){
+      o.classList.remove('open');
+      var b = o.querySelector('[aria-expanded]'); if(b) b.setAttribute('aria-expanded','false');
+    });
+    box.classList.toggle('open', open);
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    /* :focus-within is the other opener, and on a touch screen the tap that CLOSES the box also
+       leaves the trigger focused — so without this the menu shuts and immediately reopens. */
+    if(!open) btn.blur();
+  };
+  function ddshut(){
+    document.querySelectorAll('.hasmenu.open').forEach(function(o){
+      o.classList.remove('open');
+      var b = o.querySelector('[aria-expanded]'); if(b) b.setAttribute('aria-expanded','false');
+    });
+  }
+  document.addEventListener('click', function(e){
+    if(!e.target.closest || !e.target.closest('.hasmenu')) ddshut();
+  });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') ddshut(); });
+})();
+</script>
+<script defer="" src="/rocoto-face.js"></script>
+<script defer="" src="/assets/hero.js"></script>
+</body>
+</html>

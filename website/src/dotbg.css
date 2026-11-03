@@ -1,0 +1,25 @@
+/* dotbg.css — THE STANDING RULE: message surfaces get a dot field behind them.
+ *
+ * Peter, 2026-07-27: *"when there's text bubbles or message bubbles etc, always have a dot
+ * background. consistency!!!!"*
+ *
+ * So this is deliberately NOT scoped to one island. It lives in its own file, is imported once in
+ * main.tsx, and every island that renders a bubble, a quote, or a received message reaches for
+ * `.dot-bg`. Anyone adding a new message surface uses this class instead of inventing a background
+ * — that is the whole point of it being here rather than in oferta.css.
+ *
+ * Values are tokens: the dot inherits the app's border colour, so it moves when the palette moves
+ * and it can never fight the surface it sits on.
+ */
+
+.dot-bg {
+  background-color: var(--rocoto-surface);
+  background-image: radial-gradient(var(--rocoto-border-strong) 1px, transparent 1px);
+  background-size: 13px 13px;
+  background-position: -1px -1px;
+}
+
+/* On the darker/elevated surfaces the same field would read as noise at full strength. */
+.dot-bg-soft {
+  background-image: radial-gradient(var(--rocoto-border) 1px, transparent 1px);
+}

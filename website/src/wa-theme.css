@@ -1,0 +1,22 @@
+/* WhatsApp-green customer view — the landing's semantic chat overlay (hand-authored ON PURPOSE:
+   an overlay of VALUES in the peter-liftout retheme pattern; geometry stays the app tokens).
+   Base aliases map to the generated --rocoto-* vars from packages/rocoto-tokens; [data-theme="wa"]
+   swaps only the colour world to WhatsApp's. Moved verbatim out of the generated tokens.css when
+   the exporter graduated to packages/rocoto-tokens (2026-07-25). */
+:root{
+  --chat-out:var(--rocoto-chat-out-bubble); --chat-out-bd:var(--rocoto-chat-out-border);
+  --chat-in:var(--rocoto-chat-in-bubble); --chat-in-bd:var(--rocoto-chat-in-border);
+  --chat-bg:var(--rocoto-bg);
+  --c-hbg:var(--rocoto-bg); --c-hfg:var(--rocoto-fg); --c-hic:var(--rocoto-muted);
+  --c-av:var(--rocoto-saffron-dim); --c-avfg:var(--rocoto-saffron-text);
+  --c-accent:var(--rocoto-saffron); --c-accentfg:var(--rocoto-on-saffron);
+  --c-recdot:var(--rocoto-red); --c-link:var(--rocoto-saffron); --c-tick:var(--rocoto-faint);
+  --c-wave:var(--rocoto-muted); --dot:var(--rocoto-saffron-dim);
+}
+[data-theme="wa"]{
+  --chat-out:#D9FDD3; --chat-out-bd:rgba(0,110,80,.16); --chat-in:#FFFFFF; --chat-in-bd:rgba(11,27,22,.07);
+  --chat-bg:#EFE7DE; --dot:rgba(6,40,28,.05);
+  --c-hbg:#008069; --c-hfg:#FFFFFF; --c-hic:rgba(255,255,255,.94); --c-av:#DBF5E1; --c-avfg:#075E54;
+  --c-accent:#00A884; --c-accentfg:#FFFFFF; --c-confbg:#DBF5E1; --c-conffg:#075E54;
+  --c-recdot:#EA4335; --c-link:#027EB5; --c-tick:#53BDEB; --c-wave:#54806E;
+}

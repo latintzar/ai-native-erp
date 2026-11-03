@@ -1,0 +1,681 @@
+/* ══ THE SHOT LIBRARY — six composed, kit-true shots (SHOT-RULES.md, all fifteen) ════════════════
+   Six shots after round 1, grouped by the world's entities rather than listed flat — S9 is THE
+   ORDER's document, V3 is THE DAY, S12 is THE CUSTOMER, S1 and S10 are STOCK & PRICES, S2 is
+   SUPPLIERS, S7 is THE REPORT. Every shot is a COMPOSITION at marketing dose out of the app's own
+   anatomy — never a raw screen crop and never a drawing. The captures in /assets/app-frames and
+   the report generator in landing/informe_muestra.py are the CONTENT SOURCE (strings, prices,
+   names, series, geometry); the pixels here are DOM built from kit tokens, the way TriptychKit
+   (V44, canon §36/§37) is built. That band is the approved register and this sheet matches it
+   deliberately: same card ground, same shadow ramp, same ink ladder, same figure lockup, same
+   underline grammar.
+
+   THE RULES THE FIRST CUT FAILED, and what this sheet does about each:
+
+   · RULE 15 · EVERYTHING APPEARS. «A static paste is not a shot» (Peter, 2026-08-29). Every shot
+     builds itself in once on entering view — the block at the top of this sheet is the whole
+     mechanism, and each shot's markup only chooses the order and the delays.
+
+   · RULE 13 · A SHOT IS A QUICK IDEA. Round 1's verdict on the library, over and over, was that it
+     read as writing: «looks like editorial text as does eveyrhting you do», «too much text… people
+     get quick ideas», «not visual?». So the words came out and the PICTURES went in — a chart
+     where there were three ranked rows (S7), a week and a leaderboard where there was a paragraph
+     (S12), two outcomes where there were two sentences (S1), a catalogue that opens where there
+     was an inconsistent price column (S10).
+
+   · RULE 14 · LABELS, NOT CHAT. Every string here is a product label. The stock door is the live
+     example: the APP ITSELF says «I'm telling you how much we have now», and the shot says
+     `On hand`, because founder-voice inside a marketing frame is the failure V22 named.
+
+   · RULE 3 · DOSE. A capture carries everything the screen carries; a shot carries a few rows and
+     about a dozen words. The cutting happens HERE, in markup, not by shrinking a screenshot until
+     its text dies: `informe-dormidos` has six customers and this shows one, at full size;
+     `albaran-sheet` has five lines and this shows three, re-footed on its own arithmetic;
+     `cliente-ficha` has seven fields and this shows three, with the history folded in under them.
+
+   · RULE 11 · FILL THE FRAME. Every shot's root is `width:100%` and its content runs edge to edge
+     inside it — there is no outer padding anywhere in this sheet.
+
+   · RULE 12 · CARDS BREATHE. Where the app fuses rows into one slab, the shot SEPARATES them.
+     Where the object genuinely IS one document (the albarán, a customer's page, a chart) it stays
+     one card — and then the air lives INSIDE it, as space between rows rather than as hairlines.
+
+   THE CONSTANTS ARE THE APP'S OWN (BEATS.md, «Measured constants»): card ground #FFFFFF, pane and
+   chip ground #F3F3F3, the attention dot #C01B2C, the app's hairline #E4E4E4. Ink and accent come
+   from the generated token package, so a re-theme moves the whole library. The report shot (S7)
+   additionally carries the report's own palette, which report-frames/FRAMES.md documents.
+   ═══════════════════════════════════════════════════════════════════════════════════════════════ */
+
+/* ── THE ROOT every shot mounts into ──────────────────────────────────────────────────────────
+   Fluid: it lays out at whatever width its host gives it. In the review gallery that host is
+   pinned at the shot's own composed width and the whole thing is transform-scaled (§34's frame
+   law: scaled uniformly, never cropped, never re-drawn at a second size). */
+.sh {
+  --sh-ink: var(--rocoto-fg, #1A1413);
+  --sh-2: #4B4B4B;            /* secondary ink — context, sublines, meta */
+  --sh-3: #6B6B6B;            /* tertiary ink — labels, counters, placeholders */
+  --sh-mono: #F3F3F3;         /* pane ground, chip pill, segmented-control rest */
+  --sh-ghost: #E4E4E4;        /* the app's own hairline underlines and empty-row bars */
+  --sh-accent: var(--rocoto-saffron, #C01B2C);
+  --sh-paper: #FFFFFF;
+  --sh-warm: #C4B9A8;         /* the report's de-emphasis warm gray (report-frames/FRAMES.md) */
+  /* ⚠️ ROUND 5 · THE ONE INK FOR TEXT THAT STANDS ON THE PLATE ITSELF. Round 5 took the plate's
+     field from a whisper to the agents band's own strength («I told you I want the gradients to be
+     like the ones we have on the Agents page… I do want Gaussian noise»), and the price of that is
+     paid by the five or six labels in this library that stand DIRECTLY on the field with no card
+     under them: `Stock update`, `On hand`, `4 new`, the inbox address, `12 products`, the river's
+     count. At --sh-3 (#6B6B6B) they measured 2,2–2,6:1 against the darkest wash under them, which
+     is a label you have to hunt for. This ink holds 5:1 and over on the same ground, and it is
+     still visibly a secondary label everywhere it is used. Text on a WHITE CARD keeps --sh-3: it is
+     reading 5,2:1 there and darkening it would flatten the card's own hierarchy. */
+  --sh-onplate: #3F3833;
+  --sh-line: #D9D0C3;         /* the page's own hairline, for a control drawn straight on the plate */
+  --sh-card-shadow: var(--rocoto-shadow-popover, 0 6px 14px rgba(26, 20, 19, .08), 0 16px 40px rgba(26, 20, 19, .12));
+  --sh-r: var(--rocoto-radius-card, 12px);
+  --sh-ease: cubic-bezier(0.2, 0.8, 0.4, 1);   /* the only curve the app declares */
+
+  width: 100%;
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  font-weight: 400; font-size: 14px; line-height: 20px; color: var(--sh-ink);
+  text-align: left; letter-spacing: 0; -webkit-font-smoothing: antialiased;
+}
+.sh *, .sh *::before, .sh *::after { box-sizing: border-box; }
+.sh b, .sh u, .sh i, .sh em { font-style: normal; font-weight: 400; text-decoration: none; }
+.sh img { display: block; }
+.sh p { margin: 0; }
+
+/* ══ RULE 15 · THE BUILD-IN ══════════════════════════════════════════════════════════════════════
+   «A static paste is not a shot» (Peter, 2026-08-29). Everything marked `.sh-r` rests 12px low and
+   invisible, and comes up on the app's own curve when `useBuildIn()` puts `.is-in` on the root.
+
+   THE TRANSITION IS DECLARED ONLY ON THE `.is-in` SIDE. That is deliberate and it is the whole
+   trick: with no transition on the rest state, an element that has arrived can never animate back
+   out, and the observer disconnects after the first crossing, so a shot builds in ONCE. A
+   marketing still that re-animates on every scroll past is a fidget, not a build-in.
+
+   Each shot's markup carries its own `--d` per element, so the ORDER of the stagger is a decision
+   made where the content is, next to the reason for it. Nothing here runs longer than ~850 ms end
+   to end, which is rule 15's own window. */
+.sh .sh-r { opacity: 0; transform: translateY(12px); }
+.sh.is-in .sh-r {
+  opacity: 1; transform: none;
+  transition: opacity 420ms var(--sh-ease) var(--d, 0ms), transform 420ms var(--sh-ease) var(--d, 0ms);
+}
+/* THE REST STATE IS INVISIBLE, so reduced motion has to CANCEL it and not merely un-animate it —
+   a reader who cannot see motion must never be shown a blank frame. */
+@media (prefers-reduced-motion: reduce) {
+  .sh .sh-r { opacity: 1 !important; transform: none !important; transition: none !important; }
+}
+
+/* the floating card — the whole chrome of every shot. The POPOVER ramp, not the card ramp: on a
+   near-white plate a 2dp shadow does not lift the object off the ground, and an object that does
+   not lift reads as part of the page rather than as a thing standing on it (triptych.css's note). */
+.sh-card { background: var(--sh-paper); border-radius: var(--sh-r); box-shadow: var(--sh-card-shadow); }
+
+/* THE SHOT'S OWN HEAD — a name, never a card. Cut wherever the objects name themselves; PRESENT
+   wherever a stranger could not otherwise say what the thing is (rule 10, and Peter on S10: «if
+   it's catalogue show the catalogue title then»). */
+.sh-head { display: block; font-size: 22px; line-height: 28px; font-weight: 700; letter-spacing: -.015em; }
+
+/* ── SHARED KIT ATOMS ─────────────────────────────────────────────────────────────────────────
+   Each one is an anatomy read off a capture and reused across shots, so the library is ONE system
+   rather than six drawings. */
+
+/* THE FIGURE LOCKUP — big integer, small decimals, and THE UNIT ON THE NUMBER'S OWN LINE. That
+   last part is a standing global rule, not a preference: a rate whose unit drops to a line of its
+   own is read as a one-off, which mis-sells. `nowrap` holds it at every width. */
+.sh-fig { display: inline-flex; align-items: baseline; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.sh-fig b { font-size: 19px; line-height: 24px; font-weight: 600; }
+.sh-fig i { font-size: 12.5px; font-weight: 600; }
+.sh-fig em { margin-left: 4px; font-size: 12.5px; font-weight: 600; color: var(--sh-2); }
+.sh-fig-lg b { font-size: 26px; line-height: 30px; font-weight: 700; }
+.sh-fig-lg i { font-size: 15px; font-weight: 700; }
+.sh-fig-lg em { font-size: 14px; font-weight: 600; }
+
+/* THE ATTENTION DOT — filled, `#C01B2C`, «this needs reading» */
+.sh-dot { display: inline-block; width: 7px; height: 7px; flex: none; border-radius: 50%; background: var(--sh-accent); }
+
+/* THE CHIP PILL — `#F3F3F3` ground, the app's own */
+.sh-pill { display: inline-flex; align-items: center; gap: 6px; height: 26px; padding: 0 10px;
+  border-radius: 999px; background: var(--sh-mono); font-size: 13px; line-height: 18px; color: var(--sh-ink); }
+.sh-pill-out { background: none; border: 1px solid var(--sh-ghost); font-weight: 500; }
+
+/* THE LABEL — small caps grey, over a value */
+.sh-kc { display: block; font-size: 11.5px; line-height: 16px; letter-spacing: .09em;
+  text-transform: uppercase; color: var(--sh-3); }
+
+/* THE MONTH AXIS — SPARSE AND NAMED, shared by the two twelve-month plots (S7, S12).
+   ROUND 3 · «the month shit is shit lol» · «the sondermamjja is shit». Twelve single letters under
+   twelve nodes read as a word rather than as an axis, two of them repeat, and the Spanish initials
+   do not match the English ones a reader would guess. Four named ticks out of twelve, the year on
+   the first and the last, and the plot keeps its mark on every month — the readings did not get
+   coarser, only the labelling stopped shouting. The ends align to the plot's ends; everything
+   between is centred on its month and allowed to overflow its 1/12 cell. */
+.sh-mo { display: grid; grid-template-columns: repeat(12, 1fr); margin-top: 4px;
+  font-family: var(--f-mono), Inter, ui-Inter, Inter;
+  font-size: 11px; line-height: 16px; color: var(--sh-3); text-align: center; }
+.sh-mo span { white-space: nowrap; overflow: visible; }
+.sh-mo span:first-child { text-align: left; }
+.sh-mo span:last-child { text-align: right; }
+.sh-mo span.is-on { color: var(--sh-accent); font-weight: 600; }
+
+/* A VALUE ON A LINE IS A FIELD — the app underlines every one of them in the document register */
+.sh-u { text-decoration: underline; text-underline-offset: 5px; text-decoration-color: var(--sh-ghost); }
+
+/* THE GOODS' OWN PAINTING */
+.sh-face { width: 32px; height: 32px; flex: none; object-fit: contain; }
+.sh-face-lg { width: 44px; height: 44px; }
+
+/* THE LINE'S CHIP RUN — `class Extra · lote`, each chip its own underlined value */
+.sh-chips { display: block; font-size: 13px; line-height: 18px; color: var(--sh-2); }
+.sh-chips b { color: var(--sh-ink); text-decoration: underline; text-underline-offset: 4px; text-decoration-color: var(--sh-ghost); }
+.sh-chips b + b::before { content: ' · '; color: var(--sh-2); text-decoration: none; }
+
+/* THE BIG NUMBER FIELD — the one instrument the app uses wherever a number comes off a scale, a
+   price list or a stock count: a 1.5px ink box, the value very large at the left, the unit small
+   at the right, ON THE VALUE'S OWN LINE. Anatomy off compras-precio.png and inventario-hoy.png. */
+.sh-field { display: flex; align-items: center; justify-content: space-between; gap: 14px;
+  height: 66px; padding: 0 18px; border: 1.5px solid var(--sh-ink); border-radius: 10px; }
+.sh-field-v { font-size: 42px; line-height: 48px; font-weight: 700; letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
+.sh-field-u { font-size: 17px; line-height: 22px; font-weight: 600; color: var(--sh-2); white-space: nowrap; }
+
+/* THE PRIMARY ACT — the app's own black button */
+.sh-btn { display: inline-flex; align-items: center; justify-content: center; gap: 9px; height: 40px; padding: 0 18px;
+  border-radius: 10px; background: var(--sh-ink); color: #fff; font-size: 15px; line-height: 20px; font-weight: 600; }
+.sh-btn svg { width: 17px; height: 17px; flex: none; }
+
+/* THE SEGMENTED CONTROL — a thing you can see IS a control (V27: «tarifa doesnt look selectable»).
+   The albarán's paper size and the customer page's tarifa are the same instrument at two widths, so
+   they are written once each below and read identically: grey trough, 4px inset, the chosen cell
+   white and lifted. A shared class would have to carry both widths and would say less. */
+
+/* ══ S1 · shot-stock-modes — the stock door, as a scene ════════════════════════════════════════
+   ROUND 2: the two same-size outcome boxes are gone («Multiple numbers is a ridiculous thing… They
+   all look the same, with the same boxes and the same size»). The shot is now the four beats Peter
+   dictated, and its stage is a FIXED HEIGHT holding two states — so the pick, the amount and the
+   result all play inside one box and the gallery's square never has to rescale mid-loop.
+
+   ⚠️ ROUND 3 · ONE QUESTION AT A TIME. «the merluza gamba etc chips are bad. it's one question at a
+   time like typeform. free form entry to select product with smart dropdown, then just the price.»
+   The pill row is gone; what stands in the stage now is a QUESTION, its field, and — on the first
+   question — the list narrowing under it. The stage keeps one fixed height across all three states,
+   so the square never rescales mid-run. */
+/* ⚠️ ROUND 5 · ONE CENTRE AXIS, MONZO'S OWN («It should all be Monzo-style centered», Peter). This
+   is a single-question sheet and every part of it now stands on one axis: the kicker, the question,
+   the typed value, each hit, the `or` rule, the document door, the answered chip, the amount and
+   its unit, `On hand`, the act, and the result. Nothing in this shot is hung left any more. */
+.s1 { display: flex; flex-direction: column; text-align: center; }
+/* the ONE label this shot stands on the plate itself — see `--sh-onplate`. ⚠️ ROUND 7 · the
+   result's `On hand · What Merluza stands at` came off this rule when the states got their card:
+   `--sh-onplate` is the contrast a label needs against the GRADIENT, and on white paper it reads
+   as a label darkened for no reason. It takes the ordinary `.sh-kc` colour now. */
+.s1-hd .sh-kc { color: var(--sh-onplate); }
+.s1-hd { display: flex; justify-content: center; }
+
+/* ONE STAGE, THREE STATES, ONE HEIGHT — 296 → 336 for the document door, which now stands inside
+   the first question instead of in the head's right-hand corner.
+   ROUND 7 · 336 → 380, which is the 336 the states already needed plus the card's own 22px of top
+   and bottom padding. The states did not grow; they acquired a ground. */
+.s1-stage { position: relative; height: 380px; margin-top: 16px; }
+/* ⚠️ ROUND 7 · THE STATES STAND ON ISOLATED CARDS. «not bad but i dont want such transparent shit.
+   put isolated cards lol» (Peter, round 6).
+
+   THIS WAS THE ONE SHOT IN THE LIBRARY WITH NOTHING UNDER ITS CONTENT. Every other shot puts its
+   subject on `.sh-card` — a white ground with the house radius and the house shadow — and S1 alone
+   laid a question, a field, a list and a 60px figure straight onto the plate's gradient. It read as
+   a transparency because it WAS one: rule 12's «one object, breathing» needs an object, and a
+   composition with no ground is a set of parts floating over a wash. The question sheet and the
+   result are now each a card, which is also what the app draws — an entry sheet is paper.
+
+   ONE CARD PER STATE, NOT ONE CARD FOR THE STAGE: the three states are alternatives, and a single
+   permanent card would make the run look like content changing inside a container rather than the
+   app moving from one question to the next. They share the stage's box, so nothing reflows. */
+.s1-step, .s1-out { position: absolute; inset: 0; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; padding: 22px 20px;
+  background: var(--sh-paper); border-radius: var(--sh-r); box-shadow: var(--sh-card-shadow);
+  animation: s1-in 240ms var(--sh-ease) both; }
+@keyframes s1-in { from { opacity: 0; transform: translateY(8px) } to { opacity: 1; transform: none } }
+
+/* THE QUESTION — the one thing being asked, at the size of a thing being asked */
+.s1-q { display: block; margin-bottom: 12px; font-size: 22px; line-height: 28px; font-weight: 600;
+  letter-spacing: -.014em; }
+/* the question already answered, collapsed to its answer */
+.s1-ans { display: inline-flex; align-items: center; gap: 8px; height: 30px; margin-bottom: 14px;
+  padding: 0 12px 0 10px; border-radius: 999px; background: var(--sh-mono);
+  font-size: 14px; line-height: 19px; font-weight: 600; }
+.s1-ans svg { width: 14px; height: 14px; flex: none; color: var(--sh-accent); }
+.s1-ans img { width: 22px; height: 22px; flex: none; object-fit: contain; border-radius: 5px; }
+
+/* THE FREE-FORM FIELD, and the smart list under it. The field's value is CENTRED in the box, which
+   is what an entry sheet does with the one thing it is asking for. */
+.s1-qf { width: 100%; height: 62px; padding: 0 18px; justify-content: center; }
+.s1-qf .sh-field-v { font-size: 26px; line-height: 32px; font-weight: 600; }
+.s1-typed { min-width: 0; white-space: nowrap; overflow: hidden; }
+.s1-hits { width: 100%; margin-top: 10px; display: flex; flex-direction: column; gap: 2px; }
+.s1-hit { display: flex; align-items: center; justify-content: center; gap: 12px;
+  height: 44px; padding: 0 12px;
+  border-radius: 9px; font-size: 16px; line-height: 22px;
+  transition: background 160ms linear, transform 120ms var(--sh-ease); }
+
+/* ── THE OTHER DOOR, ON THE AXIS AND OFFERED FROM THE FIRST FRAME ─────────────────────────────
+   «Why is the photograph and the document left-aligned when they shouldn't be? Why does the
+   document only appear when we're trying to select a product…» (Peter, round 5). It used to be a
+   12,5px grey line in the head's top-right corner — the place a screen puts something it is not
+   really offering. It is a CONTROL now, under the product question, behind an `or` rule: a second
+   genuine way to answer the same question. */
+.s1-or { display: flex; align-items: center; gap: 12px; width: 100%; margin-top: 14px;
+  font-size: 12.5px; line-height: 18px; color: var(--sh-3); }
+.s1-or::before, .s1-or::after { content: ""; flex: 1; height: 1px; background: var(--sh-ghost); }
+.s1-cam { display: inline-flex; align-items: center; gap: 9px; height: 44px; margin-top: 12px;
+  padding: 0 18px; border: 1px solid var(--sh-line); border-radius: 10px;
+  font-size: 15px; line-height: 20px; font-weight: 500; color: var(--sh-ink); white-space: nowrap;
+  background: var(--sh-paper); }
+.s1-cam svg { width: 19px; height: 19px; flex: none; color: var(--sh-2); }
+/* ⚠️ THE PAINTINGS CARRY THEIR OWN WHITE. `app-motion/faces/*.webp` are RGB cut-outs on a white
+   ground with no alpha channel. Round 4's seeded field made that white square read as a tile here,
+   because S1 was then the one composition standing them straight on the plate — and ROUND 7 SETTLED
+   IT AT THE ROOT by putting the states on white cards, where the cut-out's own ground is the card's.
+   The radius stays because it is what the app's product thumbnail actually is; the hairline that
+   was hiding a seam is gone, since there is no longer a seam. */
+.s1-hit img { width: 32px; height: 32px; flex: none; object-fit: contain; border-radius: 7px; }
+.s1-hit b { font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.s1-hit mark { background: none; color: var(--sh-ink); font-weight: 700; }
+.s1-hit.is-on { background: var(--sh-mono); }
+.s1-hit.is-tap { background: var(--sh-ghost); transform: scale(0.99); }
+
+.s1-on { display: block; margin-top: 12px; font-size: 13.5px; line-height: 22px; color: var(--sh-2); }
+.s1-on b { font-weight: 700; color: var(--sh-ink); font-variant-numeric: tabular-nums; }
+/* the amount and its unit CENTRED TOGETHER — the unit on the number's own line, never under it */
+.s1-field { width: 100%; height: 92px; padding: 0 22px; justify-content: center; }
+.s1-amt { display: block; white-space: nowrap; }
+.s1-field .sh-field-v { font-size: 54px; line-height: 60px; }
+.s1-field .sh-field-u { font-size: 20px; margin-left: 10px; }
+.s1-caret { display: inline-block; width: 3px; height: 1em; vertical-align: -0.12em;
+  background: var(--sh-ink); animation: s1-blink 1s steps(1) infinite; }
+@keyframes s1-blink { 0%, 55% { opacity: 1 } 56%, 100% { opacity: 0 } }
+.s1-add { width: 100%; height: 48px; margin-top: 16px; opacity: .3;
+  transition: opacity 220ms var(--sh-ease), background 160ms var(--sh-ease), transform 120ms var(--sh-ease); }
+.s1-add.live { opacity: 1; }
+.s1-add.over { background: #312B2B; }
+.s1-add.press { transform: scale(0.985); }
+
+/* THE RESULT — one number, once. Nothing beside it is the same size, which is the whole verdict.
+   ROUND 5 · «The image isn't really big here, though»: the painting is the subject of this frame
+   and it stands at 76, on the axis, over the figure it produced. */
+.s1-out { display: flex; flex-direction: column; align-items: center; justify-content: center; }
+/* ⚠️ ROUND 7 · AND THE TILE DRESSING CAME OFF WITH IT. On the plate this painting needed a white
+   ground, a hairline and a shadow to stop its own opaque white square reading as an artefact; on
+   the result CARD the ground is the card's, so the same three properties would now draw a tile
+   floating on paper — furniture invented to hide a problem that no longer exists. */
+.s1-face { width: 76px; height: 76px; object-fit: contain; margin-bottom: 14px; }
+.s1-added { display: flex; align-items: center; justify-content: center; gap: 9px; margin-bottom: 18px;
+  font-size: 17px; line-height: 23px; font-weight: 600; }
+.s1-now { display: block; margin-top: 4px; }
+.s1-now .sh-fig b { font-size: 60px; line-height: 66px; letter-spacing: -.03em; }
+.s1-now .sh-fig i { font-size: 30px; }
+.s1-now .sh-fig em { font-size: 22px; margin-left: 8px; }
+
+/* ══ S2 · shot-supplier-mail — the Gmail register ══════════════════════════════════════════════
+   ROUND 2, built against the Gmail screenshot Peter sent as the reference: bold sender · subject ·
+   a state chip · a red PDF pill with its filename · the time hard right, on a LIST with hairlines
+   and a `Today` divider.
+   ⚠️ RULE 12's ONE DELIBERATE EXCEPTION IN THE LIBRARY. Everywhere else the shot pulls the app's
+   fused rows apart into free-standing cards; an inbox broken into detached cards stops reading as
+   an inbox, and «should feel like gmail» is the instruction. So the air is INSIDE the row and the
+   separator is the app's own hairline.
+
+   ⚠️ ROUND 3 · 660 → 520, AND THE ROW BECAME TWO LINES. «this is almost there! why full width. but
+   busy.» Five columns on one line is a 660px shape; at 520 the subject dies first, and the app's own
+   inbox already answers this at a narrow measure — sender and time, then the subject with its
+   attachment and its state (`situations/baseweb/src/app/inbox.tsx`). The filename text is gone with
+   it: the red mark IS the attachment, and «albaran-L-22…» four times over was the busyness. */
+.s2-hd { display: flex; align-items: baseline; gap: 10px; }
+.s2-new { font-size: 14px; line-height: 20px; color: var(--sh-onplate); }
+.s2-inbox { margin: 3px 0 14px; font-family: var(--f-mono), Inter, ui-Inter, Inter;
+  font-size: 12.5px; line-height: 18px; color: var(--sh-onplate); }
+/* ⚠️ ROUND 7 · SIDE PADDING INSIDE THE CARD. «add padding on the sides...» (Peter, round 6). The
+   list ran on 16px, which is a phone's measure, and on a 480px card it put the sender hard against
+   the left edge and the time hard against the right — an inbox with no gutter, where the rows read
+   as text laid on a rectangle rather than as a document with margins. 16 → 24, on the `Today`
+   divider and on every row, so the whole list keeps ONE left edge. The vertical rhythm is
+   untouched: this is a horizontal fix and nothing else moves. */
+.s2-list { overflow: hidden; }
+.s2-day { padding: 11px 24px 10px; font-size: 12.5px; line-height: 17px; color: var(--sh-3);
+  border-bottom: 1px solid var(--sh-mono); }
+.s2-row { display: block; padding: 11px 24px 12px; border-bottom: 1px solid var(--sh-mono); }
+.s2-row:last-child { border-bottom: 0; }
+.s2-l1 { display: flex; align-items: baseline; gap: 10px; }
+.s2-l2 { display: flex; align-items: center; gap: 9px; margin-top: 3px; }
+/* THE SENDER, BOLD — Gmail's own first column, and the reason the row reads as mail at a glance */
+.s2-from { flex: 1; min-width: 0; font-size: 14.5px; line-height: 20px; font-weight: 700;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.s2-sub { flex: 1; min-width: 0; font-size: 14px; line-height: 19px;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.s2-sub b { font-weight: 600; }
+.s2-sub em { color: var(--sh-3); }
+.s2-sub b + em::before { content: ' — '; }
+/* THE STATE, AS A LABEL. `In arrivals` was printed on every row, which is one fact four times; the
+   flagged rows now carry the reading's own kind instead, and a flag wears the attention dot. */
+.s2-chip {
+  flex: none; display: inline-flex; align-items: center; gap: 4px; height: 23px; padding: 0 9px;
+  border-radius: 999px; background: var(--sh-mono); color: var(--sh-ink);
+  font-size: 11.5px; line-height: 16px; font-weight: 600; white-space: nowrap;
+}
+.s2-chip svg { width: 12px; height: 12px; flex: none; color: var(--sh-accent); }
+/* a FLAGGED row wears the accent, tinted rather than solid: three saturated marks on one row (the
+   PDF, the chip, the dot) is the busyness he named, and a flag only has to be findable. */
+.s2-chip.is-flag { background: rgba(192, 27, 44, .09); color: var(--sh-accent); }
+.s2-chip.is-flag .sh-dot { width: 6px; height: 6px; }
+/* THE ATTACHMENT — the shape a stranger recognises across a room. The mark alone: the filename was
+   the same twenty-two characters on every row and it is what made the list read busy. */
+.s2-pdf-i { flex: none; display: grid; place-items: center; color: #C8362B; }
+.s2-pdf-i svg { width: 16px; height: 16px; display: block; }
+.s2-at { flex: none; text-align: right; font-size: 12.5px; line-height: 17px; color: var(--sh-3);
+  font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+/* ══ S7 · shot-report-chart — twelve readings, not one shape ═══════════════════════════════════
+   ROUND 2 · «awfully imprecise. For a whole year, it should be more precise… You always have to
+   have these things with enough padding or gutter on those sides.» A node on every month, a tick
+   under every month, the two means drawn as references, and the card's gutter opened 24 → 34. */
+.s7-card { padding: 26px 34px 28px; }
+.s7-hd { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; }
+.s7-who b { display: block; font-size: 19px; line-height: 26px; font-weight: 600; }
+.s7-who span { display: block; margin-top: 3px; font-family: var(--f-mono), Inter, ui-Inter, Inter;
+  font-size: 12px; line-height: 17px; color: var(--sh-3); }
+.s7-chg { flex: none; display: inline-flex; align-items: baseline; gap: 5px;
+  font-size: 19px; line-height: 26px; font-weight: 700; color: var(--sh-accent); }
+.s7-chg i { font-size: 11px; }
+.s7-plot { display: block; width: 100%; height: auto; margin-top: 16px; }
+/* ROUND 4 · THE FIGURES ARE THREE CARDS, NOT A FUSED FOOT. «The single-card report: the stuff below
+   still as individual cards» (Peter). They used to be three columns inside the chart's own card
+   under a hairline — one slab carrying four different readings, which is exactly the fusion rule 12
+   asks a shot to break. Three grounds, air between them, and the chart card keeps the lead: it is
+   the object, and these are what it comes to. */
+.s7-stats { display: flex; gap: 10px; margin-top: 12px; }
+.s7-stat { flex: 1 1 0; min-width: 0; padding: 13px 15px 14px; }
+.s7-stat .sh-kc { display: flex; align-items: center; gap: 6px; margin-bottom: 4px; }
+.s7-stat .sh-fig b { font-size: 18px; }
+.s7-stat.is-play .sh-fig b, .s7-stat.is-play .sh-fig em { color: var(--sh-accent); }
+/* THE LEGEND, ON THE TILE THAT CARRIES THE VALUE. A 14px length of the plot's own dash — same
+   pattern, same weight, same colour as the line it names — so the two references in the chart are
+   legended without a single word being added to the drawing. */
+.s7-key { flex: none; width: 14px; height: 1px; background: none;
+  border-top: 1px dashed var(--sh-warm); }
+.s7-key.is-hot { border-top-color: var(--sh-accent); opacity: .8; }
+
+/* ══ S9 · shot-albaran — A TRUE A4, AND THE TOGGLE THAT REFORMATS IT ═══════════════════════════
+   ROUND 2 · «this doesn't look like it's going to be printed. It should be an A4 thing… Let's see
+   how it changes when they go from A4 to A5.»
+
+   ⚠️ ROUND 3 · THE SHEET IS ONE CONSTANT RECTANGLE AND ONLY THE CONTENT REFORMATS. «i would just
+   keep the shape the same as the proportions are identical.» A4 and A5 are both 1 : √2, so drawing
+   the A5 at 70,71 % of the A4 was the SAME rectangle twice at two scales — a zoom, and the reason
+   the fitting read as weird (the box had to be the A4's height and the smaller sheet floated inside
+   it). The paper is now 448 × 634 in both states — 1 : √2 to the pixel — and what changes is what
+   is PRINTED on it: `--pf` steps the type UP by 1,26 on A5, because the same ink on a physically
+   smaller page occupies more of it; the LOTE column collapses into the trazabilidad; the masthead
+   stacks; and the third line moves to the second sheet, which is what the page count says.
+
+   IT IS PAPER AND NOT A CARD: square corners, a paper shadow rather than the popover ramp, real
+   margins on all four sides, and the foot pinned to the bottom with genuine white above it. Those
+   four things are the whole difference between a picture of print and a picture of software.
+
+   ⚠️ ROUND 4 · THE CONTROLS ARE UNDER THE PAGE AND THE PAGE HAS AIR AROUND IT. «print button at the
+   bottom or something, figure it out; and padding above and below the pages.» The right rail is
+   overruled. It cost the sheet nothing and it bought the wrong thing: a page with a strip of
+   software bolted to its side is a print DIALOG, and this shot exists to be a picture of paper.
+   The drawing is now 448 × 740 — 22px of air, the 634 sheet, 16px, a 46px control row, 22px of air
+   — so 86 % of it is the page and the page touches nothing. In the gallery's 520 square that puts
+   the sheet at 431px tall against the rail's 500: the 14 % is the price, and it is stated in
+   shots.tsx rather than argued away. */
+.s9-wrap { display: flex; flex-direction: column; align-items: center; padding: 22px 0; }
+
+/* THE CONTROL ROW — one line, centred under the sheet: the paper size, what it comes to in pages,
+   and the act. `flex-wrap` is off on purpose: this row is composed at a fixed width and scaled with
+   everything else, so it can never be the thing that reflows. */
+/* THE ROW'S TYPE IS SET ONE STEP UP FROM THE RAIL'S. Under the page, the whole drawing is scaled to
+   the square by the page's own height, so 14px composed arrives at ~9,5px — under rule 7. At 15/12
+   /14 it lands at 10–11px, which reads. */
+/* ⚠️ ROUND 5 · THE PRINT BUTTON IS BIGGER. «better. yes. however bigger pting button.» (Peter). It
+   is the ACT this whole shot exists for — the page is a picture of paper and Print is what you do
+   with paper — and at 38px it was the smallest object in a row of three, so the eye read the paper
+   size selector as the primary control. 38 → 50 tall, its label 14 → 17, its mark 17 → 21, and the
+   size selector steps up with it so the row still reads as one scale rather than as a big button
+   parked beside a small control. */
+.s9-bar { display: flex; align-items: center; justify-content: center; gap: 18px; margin-top: 22px; height: 58px; }
+.s9-size { display: flex; gap: 4px; padding: 4px; border-radius: 12px; background: var(--sh-mono); }
+.s9-sz { display: grid; place-items: center; width: 56px; height: 42px; border-radius: 9px;
+  font-size: 16px; font-weight: 600; color: var(--sh-3);
+  transition: background 180ms var(--sh-ease), color 180ms var(--sh-ease), transform 120ms var(--sh-ease); }
+.s9-sz.is-on { background: var(--sh-paper); color: var(--sh-ink); box-shadow: 0 1px 3px rgba(26, 20, 19, .16); }
+.s9-sz.tap { transform: scale(0.94); }
+.s9-pages { font-family: var(--f-mono), Inter, ui-Inter, Inter;
+  font-size: 12.5px; line-height: 16px; letter-spacing: .06em; text-transform: uppercase;
+  /* on the plate, with no card under it — see `--sh-onplate` */
+  color: var(--sh-onplate); }
+.s9-print { height: 50px; padding: 0 22px; gap: 9px; font-size: 17px; border-radius: 11px; }
+.s9-print svg { width: 21px; height: 21px; }
+
+.s9-box { flex: none; width: 448px; }
+.s9-paper {
+  --pf: 1;
+  width: 448px; height: 634px;
+  background: #fff; border-radius: 2px;
+  /* PAPER, not a card: a tight contact shadow and a soft drop, no radius to speak of */
+  box-shadow: 0 0 0 1px rgba(26, 20, 19, .07), 0 2px 4px rgba(26, 20, 19, .07), 0 18px 36px rgba(26, 20, 19, .12);
+}
+/* the ink layer is KEYED on the paper size, so the reformat is a 190 ms cross-fade with nothing
+   sliding — «just make it snappier» */
+.s9-ink { height: 100%; padding: calc(34px * var(--pf)); display: flex; flex-direction: column;
+  font-size: calc(12px * var(--pf)); overflow: hidden; animation: s9-swap 190ms var(--sh-ease) both; }
+@keyframes s9-swap { from { opacity: 0 } to { opacity: 1 } }
+.s9-paper.is-a5 { --pf: 1.26; }
+
+.s9-mast { display: flex; align-items: flex-start; justify-content: space-between; gap: calc(16px * var(--pf)); }
+.s9-house { min-width: 0; }
+.s9-house b { display: block; font-size: calc(21px * var(--pf)); line-height: calc(27px * var(--pf));
+  font-weight: 700; letter-spacing: -.014em; }
+.s9-van { display: block; margin-top: calc(3px * var(--pf)); font-size: calc(10.5px * var(--pf));
+  line-height: calc(15px * var(--pf)); color: var(--sh-accent); }
+.s9-legal { display: block; margin-top: calc(5px * var(--pf)); font-size: calc(9px * var(--pf));
+  line-height: calc(13px * var(--pf)); color: var(--sh-3); }
+.s9-doc { flex: none; text-align: right; }
+.s9-doc b { display: block; font-size: calc(13px * var(--pf)); line-height: calc(18px * var(--pf)); font-weight: 700; }
+.s9-doc span { display: block; font-size: calc(10.5px * var(--pf)); line-height: calc(15px * var(--pf)); color: var(--sh-2); }
+
+.s9-rule { height: 1px; margin: calc(12px * var(--pf)) 0 0; background: var(--sh-ink); }
+/* THE COLUMNS SCALE WITH THE TYPE. They were fixed pixels while `--pf` moved, which is what put the
+   name column at 27px the moment the type stepped up — the measure has to reformat with the ink. */
+.s9-cols {
+  display: grid; grid-template-columns: 1fr calc(72px * var(--pf)) calc(40px * var(--pf)) calc(54px * var(--pf));
+  column-gap: calc(10px * var(--pf));
+  padding: calc(7px * var(--pf)) 0 calc(6px * var(--pf));
+  border-bottom: 1px solid var(--sh-ghost);
+  font-size: calc(8.5px * var(--pf)); line-height: calc(12px * var(--pf));
+  letter-spacing: .1em; text-transform: uppercase; color: var(--sh-3);
+}
+.s9-r { text-align: right; }
+.s9-ln {
+  display: grid; grid-template-columns: 1fr calc(72px * var(--pf)) calc(40px * var(--pf)) calc(54px * var(--pf));
+  column-gap: calc(10px * var(--pf));
+  align-items: start; padding: calc(9px * var(--pf)) 0;
+  border-bottom: 1px solid var(--sh-mono);
+}
+.s9-p { display: flex; align-items: flex-start; gap: calc(8px * var(--pf)); min-width: 0; }
+.s9-face { width: calc(20px * var(--pf)); height: calc(20px * var(--pf)); flex: none; object-fit: contain; margin-top: 1px; }
+.s9-p-t { min-width: 0; }
+.s9-p-t b { display: block; font-size: calc(12px * var(--pf)); line-height: calc(16px * var(--pf)); font-weight: 600; }
+/* THE FINE PRINT. It is small because a printed albarán's trazabilidad IS small, and it is the one
+   thing on the page that says the document carries the law (rule 7's argued exception). */
+.s9-p-t em { display: block; margin-top: calc(2px * var(--pf)); font-size: calc(10px * var(--pf));
+  line-height: calc(13px * var(--pf)); color: var(--sh-3); }
+.s9-lote, .s9-sent, .s9-eur { font-size: calc(11px * var(--pf)); line-height: calc(16px * var(--pf));
+  font-variant-numeric: tabular-nums; }
+.s9-lote { color: var(--sh-3); white-space: nowrap; }
+.s9-sent, .s9-eur { text-align: right; }
+.s9-eur b { font-weight: 700; }
+.s9-eur i { font-size: calc(9px * var(--pf)); font-weight: 700; }
+/* AT THE A5 MEASURE THE LOTE COLUMN COLLAPSES — it has joined the trace line under the name */
+.s9-paper.is-a5 .s9-cols, .s9-paper.is-a5 .s9-ln {
+  grid-template-columns: 1fr calc(52px * var(--pf)) calc(60px * var(--pf));
+}
+.s9-paper.is-a5 .s9-c-lote, .s9-paper.is-a5 .s9-lote { display: none; }
+/* and the masthead stacks, because at 340px the two blocks no longer sit side by side */
+.s9-paper.is-a5 .s9-mast { flex-direction: column; gap: calc(8px * var(--pf)); }
+.s9-paper.is-a5 .s9-doc { text-align: left; }
+
+.s9-white { flex: 1; min-height: calc(24px * var(--pf)); }
+.s9-foot { display: flex; align-items: flex-end; justify-content: space-between; gap: calc(16px * var(--pf));
+  padding-top: calc(8px * var(--pf)); }
+.s9-f-l b { display: block; font-size: calc(12.5px * var(--pf)); line-height: calc(17px * var(--pf)); font-weight: 700;
+  font-variant-numeric: tabular-nums; }
+.s9-f-l > span { display: block; margin-top: calc(2px * var(--pf)); font-size: calc(9.5px * var(--pf));
+  line-height: calc(13px * var(--pf)); color: var(--sh-3); }
+.s9-f-r { flex: none; text-align: right; }
+.s9-sig { display: block; width: calc(112px * var(--pf)); height: 1px; margin: 0 0 calc(4px * var(--pf)) auto;
+  background: var(--sh-ink); }
+.s9-f-r span { display: block; font-size: calc(9.5px * var(--pf)); line-height: calc(13px * var(--pf)); color: var(--sh-3); }
+.s9-pg { margin-top: calc(3px * var(--pf)); font-variant-numeric: tabular-nums; }
+
+/* ══ S10 · shot-catalog — the expansion, both ways ═════════════════════════════════════════════
+   ROUND 2 · «I want to see tariffs for one, and then another one expands… the shrimp one expands.
+   You have tariffs for the shrimp… You put the merluza second, and then it expands. You can see
+   that it has a bunch of sub-products.»
+   Both expansions are exactly THREE ROWS AT THE SAME ROW HEIGHT, and one card is open at a time, so
+   the shot's own height is constant and the two beats cross without the frame rescaling. */
+/* ⚠️ ROUND 5 · `Today · Tarifa 1` IS GONE FROM THIS HEAD. It named a second axis over a card that
+   was simultaneously opening onto three tarifas — «the tariff selector at the top and then you have
+   tariffs in one of these feels wrong» (Peter). The tarifa dimension has its proofs on V5 and V4;
+   this shot is families and their variations, and nothing else. */
+.s10-hd { display: flex; align-items: baseline; gap: 12px; margin-bottom: 14px; }
+.s10-cnt { font-size: 15px; line-height: 20px; color: var(--sh-onplate); }
+
+.s10-rows { display: flex; flex-direction: column; gap: 12px; min-height: 366px; }
+.s10-card { overflow: hidden; transition: transform 140ms var(--sh-ease); }
+.s10-card.is-tap { transform: scale(0.99); }
+.s10-row { display: flex; align-items: center; gap: 16px; padding: 13px 18px; }
+.s10-b { flex: 1; min-width: 0; }
+.s10-n { display: block; font-size: 19px; line-height: 26px; font-weight: 600; }
+.s10-s { display: block; margin-top: 2px; font-size: 14px; line-height: 19px; color: var(--sh-3); }
+.s10-caret { flex: none; color: var(--sh-3); transition: transform 320ms var(--sh-ease); }
+.s10-caret svg { width: 18px; height: 18px; display: block; }
+.s10-caret.up { transform: rotate(180deg); }
+
+/* WHAT OPENING GIVES YOU — the family's variations, each with its own price */
+.s10-open {
+  max-height: 0; opacity: 0; overflow: hidden;
+  transition: max-height 340ms var(--sh-ease), opacity 240ms var(--sh-ease);
+}
+.s10-card.is-open .s10-open { max-height: 180px; opacity: 1; }
+.s10-mem {
+  display: flex; align-items: center; gap: 12px; height: 46px; padding: 0 18px 0 22px;
+  border-radius: 8px; margin: 0 8px;
+  opacity: 0; transform: translateY(6px);
+  transition: opacity 260ms var(--sh-ease), transform 260ms var(--sh-ease),
+              background 420ms var(--sh-ease);
+}
+.s10-mem.in { opacity: 1; transform: none; }
+/* ── THE ATTENTION CHOREOGRAPHY ────────────────────────────────────────────────────────────────
+   «All it is is an animated thing to make them notice it, so it's not that it shows different info
+   about those variations» (Peter, round 5). A soft wash walks the three rows in turn, ~900 ms each,
+   and the price it is standing on comes up to full ink. It carries NO information — it is there so
+   the eye visits three prices instead of reading three rows as one block. */
+.s10-card.is-open .s10-open > :last-child { margin-bottom: 10px; }
+.s10-mem.lit { background: var(--sh-mono); }
+.s10-mem .sh-fig { transition: transform 420ms var(--sh-ease), color 420ms var(--sh-ease); }
+.s10-mem.lit .sh-fig { color: var(--sh-ink); transform: scale(1.06); transform-origin: right center; }
+.s10-mem .sh-fig b { font-size: 20px; line-height: 26px; font-weight: 700; }
+.s10-mem .sh-fig i, .s10-mem .sh-fig em { font-size: 12.5px; }
+/* THE BENT ARROW — this row hangs off the family above it, said and not implied */
+.s10-arrow { flex: none; width: 16px; height: 16px; color: var(--sh-3); }
+.s10-arrow svg { width: 16px; height: 16px; display: block; }
+/* a MEMBER says only the word it adds, and what the year noticed of it — the app's own rule */
+.s10-mw { flex: none; font-size: 15px; line-height: 21px; font-weight: 500; }
+.s10-mn { flex: 1; min-width: 0; font-size: 13px; line-height: 18px; color: var(--sh-3);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+/* THE VARIATION ROCOTO FOUND AND THE HOUSE HAS NOT PRICED — the row carries the act, not a number.
+   `provisional: true` in the app's own catalogue: found on twelve albaranes, proposed, unpriced. */
+.s10-set { flex: none; font-size: 14px; line-height: 20px; font-weight: 600; color: var(--sh-accent);
+  text-decoration: underline; text-underline-offset: 4px;
+  text-decoration-color: color-mix(in srgb, var(--sh-accent) 38%, transparent); }
+
+/* ══ S12 · shot-customer — volume, rank, tarifa, history ═══════════════════════════════════════
+   ROUND 2: the weekday chart became TWELVE MONTHS OF VOLUME, the leaderboard lost the bars that
+   re-drew its own ranking, a `Show more` chevron closes the history, and the history stands as its
+   own labelled block. */
+/* ROUND 3 · «why full height. confusing.» Every number in this block came down: the card's own
+   padding, the head's air, the plot's height (96 → 76), the leaderboard's row (38 → 34) and every
+   margin between the blocks. The page carries the same six facts in about seventy fewer pixels.
+   ⚠️ ROUND 5 · «the fact that it's full height is an issue» — it came down AGAIN, and again out of
+   the composition rather than out of the content: the card's padding (20/24 → 15/20), the head's
+   air (14 → 10), the plot (76 → 62), the leaderboard's row (34 → 31), the label margins (16 → 11)
+   and every gap between blocks. Six facts, ~72 fewer pixels, nothing cut. */
+/* ⚠️ ROUND 7 · «ok just fix the padding» (Peter). Round 5's height-cutting took the card to
+   `15px 20px 16px` — three different numbers, none of them the house's, and 15px of top air under a
+   22px name reads as a card that has been squeezed rather than one that has been set. The measure is
+   ONE number now, 20px on all four sides, which is the app's own card padding and the same gutter
+   the S2 list was just given. The height it costs comes straight back out of the block rhythm below,
+   where the tarifa's row used to sit. */
+.s12-card { padding: 20px; }
+.s12-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; }
+.s12-who { min-width: 0; }
+.s12-nm { display: block; font-size: 22px; line-height: 29px; font-weight: 700; letter-spacing: -.018em; }
+/* THE ACCOUNT'S OWN NUMBER, under the name it belongs to — a fact you can act on, in the register
+   the app gives a reachable fact: the glyph, then the number, tabular so it reads as a number. */
+.s12-tel { display: flex; align-items: center; gap: 7px; margin-top: 4px;
+  font-size: 13.5px; line-height: 18px; color: var(--sh-2); font-variant-numeric: tabular-nums;
+  white-space: nowrap; }
+.s12-tel svg { width: 14px; height: 14px; flex: none; color: var(--sh-3); }
+/* ROUND 5 · «The map thing can be bigger.» 48 → 72: it is where this customer IS, which is one of
+   the six facts the page carries, and at 48 it read as an icon rather than as a place. */
+.s12-map { flex: none; width: 72px; height: 74px; border-radius: 10px; object-fit: cover; }
+.s12-lab { margin-top: 11px; }
+/* THE VOLUME — a node on every month, and a named tick under four of them (`.sh-mo`) */
+.s12-vol { display: block; width: 100%; height: auto; margin-top: 5px; }
+/* THE LEADERBOARD — a rank and a weight. The bars were the ranking said twice. */
+.s12-board { margin-top: 6px; display: flex; flex-direction: column; gap: 2px; }
+.s12-lr { display: grid; grid-template-columns: 18px 26px 1fr auto; align-items: center; column-gap: 12px;
+  height: 31px; }
+.s12-rk { font-size: 13px; line-height: 18px; font-weight: 700; color: var(--sh-3);
+  font-variant-numeric: tabular-nums; }
+.s12-lr img { width: 26px; height: 26px; object-fit: contain; }
+.s12-ln { font-size: 15px; line-height: 21px; font-weight: 500;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.s12-lv { font-size: 15px; line-height: 21px; font-weight: 600; font-variant-numeric: tabular-nums; }
+/* THE TARIFA, as a control that looks like one — AND IT STANDS AT THE TOP (round 7).
+   «put the tarifa to be around the top. better not around states as it's a control thing» (Peter).
+   It is the head's second row now: the label, the three-way switch, and a rule under it that starts
+   the READING. Everything below that rule is the page telling you something; everything above it is
+   the account and the one lever on it. That division is why the move works — it is not a tidier
+   place for the same object, it is the object filed under what it is. */
+.s12-two { display: flex; align-items: center; gap: 14px; margin-top: 14px;
+  padding-bottom: 14px; border-bottom: 1px solid var(--sh-mono); }
+/* the reading starts under that rule */
+.s12-read { margin-top: 13px; }
+.s12-tarifas { display: inline-flex; gap: 4px; padding: 4px; border-radius: 11px; background: var(--sh-mono); }
+.s12-t { display: grid; place-items: center; width: 44px; height: 34px; border-radius: 8px;
+  font-size: 14.5px; font-weight: 600; color: var(--sh-3); }
+.s12-t.is-on { background: var(--sh-paper); color: var(--sh-ink); box-shadow: 0 1px 3px rgba(26, 20, 19, .16); }
+/* THE HISTORY, its own labelled block under its own rule */
+.s12-hist { margin-top: 12px; padding-top: 11px; border-top: 1px solid var(--sh-mono); }
+.s12-h-row { display: flex; align-items: center; gap: 14px; margin-top: 9px; }
+.s12-h-b { flex: 1; min-width: 0; }
+.s12-h-d { display: block; font-size: 16px; line-height: 22px; font-weight: 500; }
+.s12-h-m { display: flex; align-items: center; gap: 7px; margin-top: 3px;
+  font-size: 13px; line-height: 18px; color: var(--sh-2); white-space: nowrap; }
+.s12-h-m svg { width: 14px; height: 14px; flex: none; }
+.s12-h-r { flex: none; text-align: right; }
+.s12-h-s { display: block; margin-top: 1px; font-size: 12.5px; line-height: 17px; color: var(--sh-3); }
+/* THE CONTROL THAT SAYS THE LIST KEEPS GOING. ROUND 3 · it stands under `Their usual order`, which
+   is the list it truncates — «the show more should be in their usual order».
+   ⚠️ ROUND 5 · AND IT IS CENTRED, WHICH IS NOW APP-WIDE LAW. «Show more in general across the app,
+   as it is in top companies, which is centered usually» (Peter). A control that belongs to the
+   WHOLE list under it stands on the list's own centre line; hard left it reads as one more row of
+   the list rather than as the door out of it. Same law, same round, as `Add item` on V4. */
+.s12-more { display: flex; align-items: center; justify-content: center; gap: 5px; height: 30px;
+  margin-top: 4px; font-size: 14px; line-height: 19px; font-weight: 600; color: var(--sh-2); }
+.s12-more svg { width: 16px; height: 16px; flex: none; }
+
+/* ── REDUCED MOTION: the film shots hold a settled frame and nothing moves ───────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .sh *, .sh *::before, .sh *::after { transition: none !important; animation: none !important; }
+}

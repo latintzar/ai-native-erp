@@ -1,0 +1,408 @@
+/* ══ THE MORPH — canon §37 (evolves §36's triptych) ═════════════════════════════════════════════
+   ONE object changing state, and ROUND 4 gave it TWO RUNS THAT ALTERNATE (Peter: «one run is a
+   voice note → transcription; run it again and it's an IMAGE with little bounding boxes on it»).
+   Stage one is ONE thing above a white card, centred on its axis: run A plays the voice note while
+   the reading writes on the same progress; run B snaps three bounding boxes onto the pad's written
+   lines and then writes what they found. Then — identically in both runs — the card GROWS into the
+   albarán's geometry and the words fly into the document as its head, its names and its chips, and
+   what the words could not carry (the painting, the price) arrives after them.
+
+   §29 CHROMELESS: the bubbles are bare (no phone bezel, no header, no composer) and the albarán is
+   a bare document card (no pane, no window, no browser). Ambiguous whether desktop or mobile,
+   because it really is the same on both.
+
+   THE CONSTANTS ARE THE APP'S OWN (BEATS.md, «Measured constants») — card ground #FFFFFF, pane and
+   chip ground #F3F3F3, the attention dot #C01B2C, and the one curve the app declares. The ink and
+   the accent come from the token package, so a re-theme moves this band with everything else. The
+   WhatsApp greens are WhatsApp's, taken from wa-theme.css's [data-theme="wa"] block.
+
+   THE ISLAND IS DRAWN AT 536 × 500 AND SCALED AS A WHOLE — never re-flowed at a second size. That
+   is the §34 frame law and motionkit's rule in one: the gallery's square, a 390px phone column and
+   a hero slot are all the same drawing, uniformly reduced. The 512 card sits inside 536 so its own
+   shadow has 12px to stand in on either side, and 500 is a little over the settled albarán's 389 —
+   which makes the gallery fit WIDTH-bound at 0,933 rather than height-bound at 0,862, so the card
+   lands 37px wider on the plate than the 512 × 580 stage put it.
+
+   HOW THE TWO STAGES SHARE ONE BOX. Both layers — the reading and the albarán — are absolutely
+   positioned inside the card, so each one holds a FIXED internal layout whatever height the card
+   is currently at. The card's height is the only thing that animates, the group is centred in the
+   stage so the growth reads from both edges, and the stage's own height never changes — which is
+   what keeps the frame around it (the gallery's fit, a hero slot) perfectly still through a morph.
+   ═══════════════════════════════════════════════════════════════════════════════════════════════ */
+
+/* RULE 15 · THE BUILD-IN. The band rises into view once before it starts telling its story — the
+   same entrance every fitted island gets (appmotion.css), on the box rather than the stage, because
+   the stage carries the fit's `scale()` inline. Fails safe: no IntersectionObserver → shown at once,
+   and reduced motion cancels the rest state below. */
+.mo-fit { position: relative; width: min(100%, var(--nw)); margin: 0 auto; opacity: 0; transform: translateY(14px); }
+.mo-fit.is-in {
+  opacity: 1; transform: none;
+  transition: opacity 520ms cubic-bezier(0.2, 0.8, 0.4, 1), transform 520ms cubic-bezier(0.2, 0.8, 0.4, 1);
+}
+.mo-stage { position: absolute; top: 0; left: 0; transform-origin: top left; }
+
+.triptych-morph {
+  --mo-ink: var(--rocoto-fg, #1A1413);
+  --mo-2: #4B4B4B;          /* secondary ink — context lines, sublines */
+  --mo-3: #6B6B6B;          /* tertiary ink — meta, counters */
+  --mo-mono: #F3F3F3;       /* pane ground, chip pill */
+  --mo-ghost: #E4E4E4;      /* the app's own empty-albarán bars */
+  --mo-accent: var(--rocoto-saffron, #C01B2C);
+  --mo-ease: cubic-bezier(0.2, 0.8, 0.4, 1);
+  /* THE MORPH'S OWN CURVE. `--mo-ease` arrives hard — it is the app's curve for a thing that snaps
+     into place, and on a card growing 230 px it reads as a lurch. This one leaves slowly, covers
+     most of the distance in the middle and settles without a stop, which is what «the morphing can
+     be a bit smoother» (Peter, round 1) asks for. Used by the card's height and by every flight. */
+  --mo-morph: cubic-bezier(0.32, 0.72, 0, 1);
+  /* WhatsApp's own colour world */
+  --wa-bub: #D9FDD3;
+  --wa-bd: rgba(0, 110, 80, .16);
+  --wa-go: #00A884;
+  --wa-rest: rgba(11, 63, 45, .26);
+  --wa-meta: rgba(11, 63, 45, .55);
+  --wa-tick: #53BDEB;
+
+  /* ROUND 4 · EVERYTHING ON ONE CENTRE LINE. `align-items:center` is the whole of «everything
+     centered»: the 244 media and the 512 card now share an axis, where the media used to stand
+     hard left under a full-width card and the eye crossed the frame at every beat. */
+  width: 100%; height: 100%;
+  display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 20px;
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  font-weight: 400; font-size: 14px; line-height: 20px; color: var(--mo-ink);
+  text-align: left; letter-spacing: 0; -webkit-font-smoothing: antialiased;
+  transition: opacity 300ms linear;
+}
+.triptych-morph.mo-fade { opacity: 0; }
+.triptych-morph *, .triptych-morph *::before, .triptych-morph *::after { box-sizing: border-box; }
+.triptych-morph b, .triptych-morph u, .triptych-morph i, .triptych-morph em { font-style: normal; font-weight: 400; text-decoration: none; }
+.triptych-morph img { display: block; }
+.triptych-morph p { margin: 0; }
+
+/* ── ABOVE · ONE BARE WHATSAPP ELEMENT ────────────────────────────────────────────────────────
+   ROUND 4 · «voice note as the ONLY thing, everything centered — or a ROTATING animation: one run
+   is a voice note → transcription; run it again and it's an IMAGE with little bounding boxes on
+   it.» So the slot holds ONE piece per run and the runs alternate.
+
+   IT IS A FIXED 164px SLOT, CENTRED, AND ITS CONTENT IS BOTTOM-ANCHORED. 164 is the photo bubble's
+   own height (3 + 158 + 3), so the voice run and the photo run put the card's top edge in exactly
+   the same place — the alternation reads as one machine taking two kinds of input rather than as
+   two different drawings. Bottom-anchored because what arrived should stand ON the card that is
+   about to read it: the eye is already at that seam when the words start.
+
+   IT LEAVES OUTRIGHT AT THE MORPH — opacity 0 AND zero height, where it used to sit at half.
+   «When the delivery note appears, it should be just it» (Peter, round 2): a dimmed photograph
+   behind a document is still a second picture. The negative margin eats the column's own gap, so
+   the document ends up CENTRED in the frame at the beat that matters. */
+.mo-media {
+  flex: none; height: 164px; display: flex; align-items: flex-end; justify-content: center;
+  transform-origin: 50% 100%; overflow: hidden;
+  /* THE OPACITY LEAVES BEFORE THE HEIGHT DOES — 260 against 480. Collapsing a 164px bubble inside
+     `overflow:hidden` crops it to a horizontal sliver on the way down, and a sliver of photograph
+     still at half opacity over a developing document is a smear. Gone in 260 ms, the box keeps
+     closing under nothing. */
+  transition: transform 480ms var(--mo-morph), opacity 260ms linear,
+              height 480ms var(--mo-morph), margin-bottom 480ms var(--mo-morph);
+}
+.mo-media.back { transform: scale(.94); opacity: 0; height: 0; margin-bottom: -20px; }
+
+/* each piece ARRIVES — it rises on the app's curve when its beat comes, and never plays backwards */
+.mo-photo, .mo-vn {
+  opacity: 0; transform: translateY(10px);
+  transition: opacity 320ms var(--mo-ease, cubic-bezier(0.2, 0.8, 0.4, 1)),
+              transform 320ms var(--mo-ease, cubic-bezier(0.2, 0.8, 0.4, 1));
+}
+.mo-photo.in, .mo-vn.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { .mo-photo, .mo-vn { opacity: 1; transform: none; } }
+
+.mo-photo {
+  position: relative; width: 244px; padding: 3px; border-radius: 12px;
+  background: var(--wa-bub); border: 1px solid var(--wa-bd);
+  box-shadow: 0 1px 1px rgba(11, 20, 26, .13);
+}
+.mo-shot { position: relative; width: 238px; height: 158px; border-radius: 10px; overflow: hidden; }
+.mo-photo img { width: 100%; height: 158px; object-fit: cover; }
+
+/* ── THE BOUNDING BOXES · run B ───────────────────────────────────────────────────────────────
+   «an IMAGE with little bounding boxes on it» (Peter, round 4). Three of them, one per written
+   line, snapping on 240 ms apart in the app's own accent — a reader finding lines, drawn the way a
+   reader draws them: a rounded rectangle and a thin stroke, nothing else. No confidence figure, no
+   label, no crosshair; those are a machine describing itself, which is the exact thing the river's
+   progress bar was cut for.
+
+   AND EACH ONE HANDS OVER. When the words that box found have been written into the card, it drops
+   its fill and dims — the same grammar the flying tokens use when the document takes them, so the
+   picture and the sentence are visibly one transaction rather than two animations. */
+.mo-bb {
+  position: absolute; box-sizing: border-box; border-radius: 4px;
+  border: 1.5px solid var(--mo-accent);
+  background: color-mix(in srgb, var(--mo-accent) 13%, transparent);
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, .3);
+  /* the writing's own angle — see BOXES in TriptychKit.tsx */
+  opacity: 0; transform: rotate(var(--rot, 0deg)) scale(1.09);
+  transition: opacity 260ms var(--mo-ease), transform 260ms var(--mo-ease),
+              background 220ms linear, border-color 220ms linear;
+}
+.mo-bb.in { opacity: 1; transform: rotate(var(--rot, 0deg)); }
+.mo-bb.read {
+  background: transparent;
+  border-color: color-mix(in srgb, var(--mo-accent) 42%, transparent);
+}
+
+.mo-meta {
+  display: inline-flex; align-items: center; gap: 4px;
+  font-size: 11px; line-height: 14px; color: var(--wa-meta); white-space: nowrap;
+}
+.mo-meta-on {
+  position: absolute; right: 10px; bottom: 10px; color: #fff;
+  padding: 2px 7px; border-radius: 9px; background: rgba(11, 20, 26, .38);
+}
+.mo-tick { color: var(--wa-tick); font-size: 11px; letter-spacing: -1px; }
+.mo-meta-on .mo-tick { color: #cfefff; }
+
+/* ── THE VOICE NOTE · ROUND 3 ─────────────────────────────────────────────────────────────────
+   «the fucking waveform is not taking the full width… the voice note should be the same size as the
+   image… but the waveform inside it bro… even its format and structure» (Peter, round 3).
+
+   TWO THINGS WERE WRONG AND THEY WERE THE SAME THING. The bubble ran the CARD'S 512 while the photo
+   ran 244, so two messages from one person arrived at two different widths — which no chat does.
+   And inside it the bars carried `max-width: 2.5px` against `flex: 1`, so 44 bars could only ever
+   cover 44 × 2.5 + 43 × 1.5 ≈ 175 px of a 448 px track: the waveform sat as a small stub in the
+   left third of a very wide bubble with dead green either side of it. Capping a flex child is what
+   stopped it filling; the cap is gone and the bars now DIVIDE the track.
+
+   THE ANATOMY IS WHATSAPP'S, in WhatsApp's own proportions: the play triangle hard left at 20px,
+   the waveform taking every pixel that is left, and under them the duration on the left of the same
+   column the waveform stands in with the timestamp and its ticks hard right. Nothing else. */
+.mo-vn {
+  width: 244px; padding: 8px 10px 6px; border-radius: 12px;
+  background: var(--wa-bub); border: 1px solid var(--wa-bd);
+  box-shadow: 0 1px 1px rgba(11, 20, 26, .13);
+}
+.mo-vn-row { display: flex; align-items: center; gap: 9px; }
+.mo-vn-play { flex: none; width: 20px; display: grid; place-items: center; color: var(--wa-go); }
+.mo-vn-play svg { width: 20px; height: 20px; }
+/* THE TRACK IS EVERYTHING THE PLAY BUTTON LEAVES, and the bars divide it: `flex:1` with NO cap, so
+   44 bars land at ~2.9px each on a 187px track and the waveform reaches the bubble's inner edge. */
+.mo-wave { position: relative; flex: 1; min-width: 0; display: flex; align-items: center;
+  justify-content: space-between; gap: 1.5px; height: 22px; }
+.mo-wave i { flex: 1 1 0; min-width: 1px; border-radius: 2px; background: var(--wa-rest); }
+.mo-wave i.on { background: var(--wa-go); }
+/* the scrubber head rides the played edge — the one thing that says «it is playing» */
+.mo-head {
+  position: absolute; top: 50%; width: 8px; height: 8px; margin: -4px 0 0 -4px;
+  border-radius: 50%; background: var(--wa-go); box-shadow: 0 1px 2px rgba(0, 0, 0, .22);
+  transition: left 60ms linear;
+}
+/* the foot stands in the WAVEFORM'S column, not the bubble's — the duration reads as the track's */
+.mo-vn-foot { display: flex; align-items: center; justify-content: space-between; gap: 10px;
+  margin-top: 1px; padding-left: 29px; }
+.mo-dur { font-family: var(--f-mono), Inter, ui-Inter, Inter; font-size: 11px; line-height: 15px; color: var(--wa-meta); font-variant-numeric: tabular-nums; }
+
+/* ══ THE ONE CARD ═══════════════════════════════════════════════════════════════════════════════
+   It is the reading, and then it IS the albarán. Only its HEIGHT animates; the two layers inside
+   hold their own fixed layouts and cross over.
+   The popover ramp, not the card ramp: on a near-white plate the 2dp shadow does not lift the
+   document off the ground, and a card that does not lift reads as part of the page. */
+/* ROUND 4 · THE CARD'S BOX IS RESERVED FROM FRAME ONE and only its INK arrives — it fades up when
+   the reading starts instead of being inserted into the column. An inserted card re-centres the
+   whole group under the media, which is a jump at the exact moment the reader is being asked to
+   look at what arrived. Nothing in stage one reflows now: the media slot is a constant 164 and the
+   card is a constant `--h1` from the first paint. */
+.mo-card {
+  position: relative; flex: none; width: 512px; overflow: hidden;
+  background: #fff; border-radius: 12px;
+  box-shadow: var(--rocoto-shadow-popover, 0 6px 14px rgba(26, 20, 19, .08), 0 16px 40px rgba(26, 20, 19, .12));
+  opacity: 0;
+  transition: height 700ms var(--mo-morph), opacity 320ms var(--mo-ease);
+  /* the two heights are MEASURED off the two layers on mount and written here as `--h1`/`--h2`;
+     the literals are the verified numbers, and are what a no-JS or first paint uses. `--h1` is set
+     INLINE PER RUN in TriptychKit.tsx (258 on the voice run's three lines, 218 on the photo run's
+     two) so the very first paint is already the right box; `--h2` is 389 on the three-line albarán
+     and 468 on the four-line one, and the measuring pass writes whichever this run is. */
+  height: var(--h1, 258px);
+}
+.mo-card.on { opacity: 1; }
+.mo-card.big { height: var(--h2, 468px); }
+
+/* ── LAYER A · THE READING ────────────────────────────────────────────────────────────────── */
+.mo-read { position: absolute; top: 0; left: 0; width: 100%; z-index: 2; padding: 20px 24px 22px; }
+.mo-k { display: block; font-size: 12px; line-height: 16px; color: var(--mo-3); }
+/* THE TRANSCRIPT, 18 → 22 → 26 → 30px (round 1 «the transcription can be bigger», round 5 «make
+   the transcript bigger font»). It is the only thing the card carries in stage one, so it may have
+   the size. ⚠️ `SAY_PX` in TriptychKit.tsx is this number: the flights scale each token by its
+   destination size ÷ this one, so the two move together or every word lands at the wrong size.
+
+   ⚠️ ROUND 5 · AND THE RESERVE IS THE SENTENCE'S OWN LINE COUNT. «no need for the extra space it
+   has» (Peter). `min-height` used to be a flat 108px on both runs, which is three lines of the old
+   36px leading — right for run A's 71 characters and a third of a line of dead paper under run B's.
+   It is now set INLINE, per run, as `sayLines × 40`, and `sayLines` was read off the rendered frame
+   at native size rather than estimated. The reserve exists at all because the card must not grow
+   line by line while the words are typed (round 3's «the height keeps changing»); it must be the
+   sentence's own height and never a round number above it. */
+.mo-said {
+  margin-top: 12px;
+  font-size: 30px; line-height: 40px; letter-spacing: -0.012em;
+}
+.mo-caret {
+  display: inline-block; width: 2px; height: 31px; margin-left: 1px; vertical-align: -6px;
+  background: var(--mo-ink); animation: mo-blink 1s steps(1) infinite;
+}
+@keyframes mo-blink { 0%, 55% { opacity: 1 } 56%, 100% { opacity: 0 } }
+
+/* ── THE MORPH · the glue dissolves, the words fly ────────────────────────────────────────────
+   The sentence's connective tissue («For», «:», the commas) and everything around it go out; the
+   TOKENS stay lit and travel, because they are not leaving — they are becoming the document. */
+.mo-g, .mo-k, .mo-caret { transition: opacity 200ms linear; }
+.mo-read.gone .mo-g, .mo-read.gone .mo-k, .mo-read.gone .mo-caret { opacity: 0; }
+/* AND THEN THE WHOLE LAYER GOES. Once the last word has handed over there is nothing left in the
+   reading that belongs on screen — «when the delivery note appears, it should be just it» — so the
+   layer clears outright rather than leaving a residue of dimmed tokens over the document. */
+.mo-read { transition: opacity 260ms linear; }
+.mo-read.clear { opacity: 0; }
+
+/* a token must be inline-BLOCK: an inline box ignores transform, and a word that wrapped across
+   two lines would fly as the union of both halves */
+.mo-t {
+  display: inline-block; white-space: nowrap;
+  transform-origin: 0 0;
+  transition: transform 460ms var(--mo-morph), opacity 200ms linear, text-shadow 200ms linear;
+}
+.mo-t.go { transform: translate(var(--dx, 0), var(--dy, 0)) scale(var(--sc, 1)); }
+/* ONE THING IS BRIGHT AT A TIME. Once the morph starts, a word that has not left yet drops back to
+   a third — so the still shows a developing document, the rest of the sentence waiting on it, and
+   the one or two words actually crossing. The halo is what keeps a moving word legible where its
+   path runs over the words it has not yet left behind. Order matters: a landed token carries both
+   classes, and the last rule is the one that must win. */
+.mo-read.gone .mo-t { opacity: .34; }
+.mo-read.gone .mo-t.go { opacity: 1; text-shadow: 0 0 10px #fff, 0 0 4px #fff, 0 0 2px #fff; }
+/* it hands over to the real line the moment that line is written */
+.mo-read.gone .mo-t.gone, .mo-t.gone { opacity: 0; text-shadow: none; }
+/* while the flight plan is being measured nothing may be displaced */
+.mo-measuring .mo-t { transform: none !important; transition: none !important; }
+
+/* ── LAYER B · THE ALBARÁN ────────────────────────────────────────────────────────────────────
+   Anatomy off app-frames/albaran-sheet.png. Laid out at its full height from the first frame — it
+   is simply clipped by the shorter card — so every destination a word flies to is already exactly
+   where it will be. */
+/* THE DOCUMENT DEVELOPS — «it should come out of the ghosted much better» (Peter, round 1).
+   It comes up as a BLURRED ghost of itself while the words are still crossing it, then the blur
+   clears and the ink comes up. Opacity alone, stepped .38 → 1 in 400 ms, was a light switch; blur
+   is what makes it read as a photograph coming up in a tray, and it is also the honest picture —
+   two layers of dark text over each other is what made the first cut unreadable, and a document
+   that is not solid yet is the truth, because nothing has been written on it.
+   NO TRANSFORM HERE, deliberately: the flight plan measures every destination inside this layer
+   before it develops, and a 4px translate would put every flown word 4px off its line. `filter`
+   leaves the box exactly where `getBoundingClientRect` reads it. */
+.mo-alb {
+  position: absolute; top: 0; left: 0; width: 100%; z-index: 1;
+  opacity: 0; filter: blur(3px);
+  transition: opacity 320ms var(--mo-morph), filter 320ms var(--mo-morph);
+}
+.mo-alb.on { opacity: .36; filter: blur(1.8px); }
+/* the development is the SLOWEST thing in the band on purpose — everything else got snappier */
+.mo-alb.on.solid {
+  opacity: 1; filter: blur(0);
+  transition: opacity 560ms var(--mo-morph), filter 560ms var(--mo-morph);
+}
+.mo-alb-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; padding: 16px 20px 18px; }
+.mo-alb-who { min-width: 0; flex: 1; }
+.mo-alb-name { display: block; font-size: 22px; line-height: 30px; font-weight: 700; letter-spacing: -0.015em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.mo-alb-id { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 8px; font-size: 12.5px; line-height: 22px; color: var(--mo-2); }
+.mo-alb-id > * { white-space: nowrap; }
+.mo-alb-id b { letter-spacing: 0.02em; }
+.mo-tarifa { height: 22px; padding: 0 10px; border-radius: 999px; border: 1px solid var(--mo-ghost); color: var(--mo-ink); font-weight: 500; }
+.mo-alb-map { flex: none; width: 56px; height: 58px; border-radius: 8px; }
+
+/* the day's seat in the head: the app's own grey `for ▒▒▒` bar, holding the place until the word
+   arrives out of the sentence */
+.mo-slot { position: relative; display: inline-block; }
+.mo-ph {
+  position: absolute; left: 0; right: 0; top: 5px; bottom: 5px;
+  border-radius: 4px; background: var(--mo-ghost);
+  transition: opacity 200ms var(--mo-ease);
+}
+.mo-ph.off { opacity: 0; }
+.mo-date { opacity: 0; transition: opacity 160ms linear; }
+.mo-date.in { opacity: 1; }
+
+/* a line wears its goods: the painting, the name, the chips it was written with, the money.
+   The row is the fixed box; the ghost and the line share it, and the line replaces the ghost. */
+.mo-row { position: relative; height: 79px; border-top: 1px solid var(--mo-mono); }
+.mo-line, .mo-ghost {
+  position: absolute; inset: 0; display: flex; align-items: center; gap: 12px; padding: 13px 20px;
+}
+.mo-line { align-items: flex-start; }
+.mo-ghost { transition: opacity 220ms var(--mo-ease); }
+.mo-ghost.off { opacity: 0; }
+.mo-g-tile { width: 32px; height: 32px; flex: none; border-radius: 8px; background: var(--mo-ghost); }
+.mo-g-bars { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 11px; }
+.mo-g-line { display: block; height: 10px; border-radius: 5px; background: var(--mo-ghost); }
+.mo-g-bars .mo-g2 { height: 8px; }
+.mo-g-pill { width: 40px; height: 22px; border-radius: 11px; background: var(--mo-ghost); flex: none; }
+.mo-g-sm { width: 17px; }
+.mo-g-wide { width: 74px; }
+.mo-g-r { display: flex; align-items: center; gap: 7px; }
+
+/* THE THINGS THE WORDS COULD NOT CARRY. The painting comes off the catalogue and the price off
+   this customer's tarifa — neither of them was ever said, which is the whole claim (§33). They
+   arrive AFTER the words land, 120 ms and 220 ms behind. */
+.mo-l-face {
+  width: 32px; height: 32px; flex: none; margin-top: 4px; object-fit: contain;
+  opacity: 0; transform: scale(.72);
+  transition: opacity 280ms var(--mo-ease), transform 280ms var(--mo-ease);
+}
+.mo-l-face.in { opacity: 1; transform: none; }
+.mo-l-body { flex: 1; min-width: 0; }
+.mo-l-name { display: block; font-size: 15px; line-height: 20px; font-weight: 500; text-decoration: underline; text-underline-offset: 5px; text-decoration-color: var(--mo-ghost); opacity: 0; transition: opacity 160ms linear; }
+.mo-l-name.in { opacity: 1; }
+/* «Gamba roja» was said; « de Palamós» is what Rocoto filled it with — so the name COMPLETES
+   itself as the word lands, which is the sentence the reading line spent stage one making. */
+/* an inline-block breaks the name's underline propagation, so this half carries its own */
+.mo-l-name .mo-l-more {
+  display: inline-block; max-width: 0; overflow: hidden; opacity: 0; vertical-align: bottom;
+  /* nowrap or the two words break inside the collapsing box and stack on top of each other
+     while it opens — caught at 6950 ms, where « de» sat above «Palamós» */
+  white-space: nowrap;
+  text-decoration: underline; text-underline-offset: 5px; text-decoration-color: var(--mo-ghost);
+  transition: max-width 420ms var(--mo-ease) 120ms, opacity 260ms linear 160ms;
+}
+.mo-l-name .mo-l-more.in { max-width: 180px; opacity: 1; }
+.mo-l-chips { display: block; margin-top: 10px; font-size: 13px; line-height: 18px; color: var(--mo-2); opacity: 0; transition: opacity 160ms linear; }
+.mo-l-chips.in { opacity: 1; }
+.mo-l-chips b { color: var(--mo-ink); text-decoration: underline; text-underline-offset: 4px; text-decoration-color: var(--mo-ghost); }
+.mo-l-chips b + b::before { content: ' · '; color: var(--mo-2); text-decoration: none; }
+/* the flight lands on the chip's TEXT, so the destination is the inner span rather than the chip
+   itself — the chip's own box starts at the ` · ` separator, eight pixels to the left of the word */
+.mo-l-chips u { text-decoration: inherit; }
+.mo-l-amt {
+  flex: none; margin-top: 5px; font-variant-numeric: tabular-nums;
+  text-decoration: underline; text-underline-offset: 5px; text-decoration-color: var(--mo-ghost);
+  opacity: 0; transform: translateY(8px);
+  transition: opacity 280ms var(--mo-ease), transform 280ms var(--mo-ease);
+}
+.mo-l-amt.in { opacity: 1; transform: none; }
+.mo-l-amt b { font-size: 19px; line-height: 24px; font-weight: 600; }
+.mo-l-amt i { font-size: 12.5px; font-weight: 600; }
+
+.mo-alb-foot { position: relative; height: 58px; background: var(--mo-mono); }
+.mo-dock-ghost, .mo-total {
+  position: absolute; inset: 0; display: flex; align-items: center; justify-content: space-between;
+  gap: 12px; padding: 0 20px;
+}
+.mo-total { opacity: 0; transition: opacity 220ms var(--mo-ease); }
+.mo-total.on { opacity: 1; }
+.mo-f-k { font-size: 14px; color: var(--mo-2); }
+.mo-f-v { font-variant-numeric: tabular-nums; }
+.mo-f-v b { font-size: 24px; font-weight: 700; }
+.mo-f-v i { font-size: 14px; font-weight: 600; }
+
+/* ── REDUCED MOTION: the settled albarán, the piece that arrived above it, nothing moving ──────
+   THE REST STATES ARE INVISIBLE, so this has to CANCEL them and not merely un-animate them — a
+   reader who cannot see motion must never be handed a blank frame. */
+@media (prefers-reduced-motion: reduce) {
+  .triptych-morph, .triptych-morph *, .triptych-morph *::before, .triptych-morph *::after { transition: none !important; animation: none !important; }
+  .mo-fit { opacity: 1 !important; transform: none !important; }
+  .mo-card { opacity: 1 !important; transform: none !important; }
+  .mo-bb { opacity: 1 !important; transform: rotate(var(--rot, 0deg)) !important; }
+  .mo-caret { display: none; }
+}

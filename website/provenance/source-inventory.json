@@ -1,0 +1,673 @@
+{
+  "repository": "https://github.com/Rocoto-Labs/site",
+  "commit": "c9c41946d4376d858833dfe8ccd9e77c8336ca41",
+  "pages": [
+    "index.html",
+    "sales.html",
+    "procurement.html",
+    "owner.html",
+    "custom.html",
+    "get-started.html",
+    "muestra-informe.html",
+    "en/index.html",
+    "en/sales.html",
+    "en/procurement.html",
+    "en/owner.html",
+    "en/custom.html",
+    "en/get-started.html",
+    "en/sample-report.html"
+  ],
+  "files": [
+    {
+      "path": "index.html",
+      "sha256": "2e2bdec078380dce011a533f83c8bae34b5d899e89fecdf936ce1f7995866541",
+      "bytes": 115375,
+      "source_path": "index.html",
+      "source_blob": "edae33fb209335c274dd43c2b88b070552bdf672",
+      "original_sha256": "eb27ec9d08ab42de6ec269fac15bbead9d512ed555fc12ad6ec06a439247d177",
+      "unchanged": false
+    },
+    {
+      "path": "sales.html",
+      "sha256": "7e685e544d4c7b6f2d9dae31a8746f42fc67087ac4b0dc4cbeeaac0b80028aac",
+      "bytes": 105665,
+      "source_path": "sales.html",
+      "source_blob": "58ddd3b030b81bd685b8d4fee143ad311bf678fd",
+      "original_sha256": "7cfcd59da2dbc719e0753b906fd810ae81cebbbd47eaed2b6c6a9cdbf898548c",
+      "unchanged": false
+    },
+    {
+      "path": "procurement.html",
+      "sha256": "5096d419dcd2c470c32df72afecd6a61691757fc9775b373ad97189ac98739bd",
+      "bytes": 108020,
+      "source_path": "procurement.html",
+      "source_blob": "3f94fa2f65bcd3d77aa81c3ed31f494054a386f3",
+      "original_sha256": "8fe0e08d26ab118998f2f315aa509037a90a6508832a2de5a17b4bbb0849a486",
+      "unchanged": false
+    },
+    {
+      "path": "owner.html",
+      "sha256": "9523f431de34e6479e1538b15ab145cb3dd4c09083e8ec8540e11392a86e8df2",
+      "bytes": 130062,
+      "source_path": "owner.html",
+      "source_blob": "c55676d497e363fd1ccea02b8500e6657b88e379",
+      "original_sha256": "97df943cd361255c634f85c3f344add0a5e6b6b19762f2f291225ca6fd7cb68d",
+      "unchanged": false
+    },
+    {
+      "path": "custom.html",
+      "sha256": "7b4b594d9004891390f941396baa48747149b99a9b521df11a3ce9bdd3f3288c",
+      "bytes": 99253,
+      "source_path": "custom.html",
+      "source_blob": "9755fe6a99004c155a2837dd59fbcedea744c0f9",
+      "original_sha256": "ed06f9bbb1706a9e14d8293d80de70bc646b1ac64165cf164fd50801e873204e",
+      "unchanged": false
+    },
+    {
+      "path": "get-started.html",
+      "sha256": "84f5cc2e9ab7e5c0414b8ded2800b89051e7af76a10e71090f153b72665a5ed4",
+      "bytes": 113857,
+      "source_path": "get-started.html",
+      "source_blob": "a291d68c43958506b12198ba7504180703f070b3",
+      "original_sha256": "f4ac342d604681270bf47615e9b2972994277e51102a228c83311f169ae0314e",
+      "unchanged": false
+    },
+    {
+      "path": "muestra-informe.html",
+      "sha256": "f0475ee61705156de86c174f9f0644c67f42f5c193e8d910aa187fd15625eda2",
+      "bytes": 83407,
+      "source_path": "muestra-informe.html",
+      "source_blob": "c0c203eda31c93644276ccbf9bbb2ae7b8197a4e",
+      "original_sha256": "5c3f5a4f144fe8b1b2e3d28fac0927fb8b102bb57a8db7b9a897a158ae3ec9c5",
+      "unchanged": false
+    },
+    {
+      "path": "en/index.html",
+      "sha256": "b1658bfab2c6afb39722dc00917886a73552ea83fbb60978c919244a65b303fb",
+      "bytes": 115248,
+      "source_path": "en/index.html",
+      "source_blob": "44570e01ed56e79c34660a79ef33a232679cfd6e",
+      "original_sha256": "aee0288315dcf671770b41c54e055aaeb90d4f48b67d037f4042075fbe2cfea5",
+      "unchanged": false
+    },
+    {
+      "path": "en/sales.html",
+      "sha256": "75125873d989c47d2185e0c49fda563a3a4b9cb136ef1214af3c87511ffd3097",
+      "bytes": 105599,
+      "source_path": "en/sales.html",
+      "source_blob": "9939464c404d9d57dd470ca90105479dc56ed40a",
+      "original_sha256": "5a12d3f693e248489158f2b16bfa31dfad9cc4424c82e202f47e8ed85abbabac",
+      "unchanged": false
+    },
+    {
+      "path": "en/procurement.html",
+      "sha256": "a1ffcb3db317f39a46666785fb61fbf116f8389cfe5d568889542bd549ad1228",
+      "bytes": 107945,
+      "source_path": "en/procurement.html",
+      "source_blob": "be94b70dcaa6f7419b08b4e4834aaa827ef4ac96",
+      "original_sha256": "5a825d82ecfcbc684c845411832dcfc2fb0158ecd808921b824108d2c20dbd26",
+      "unchanged": false
+    },
+    {
+      "path": "en/owner.html",
+      "sha256": "ebaea71b538803045ed4de4f51398a339e818e3e5b68d5643d5af8f62e3f61a9",
+      "bytes": 129941,
+      "source_path": "en/owner.html",
+      "source_blob": "d32c85644193a62f91f792f8aa55eb3b7834e214",
+      "original_sha256": "34ab79126b850228eafc6b730001cf7fdb882ec2d3db74d1a5b9c86fa6b0f9ac",
+      "unchanged": false
+    },
+    {
+      "path": "en/custom.html",
+      "sha256": "f97d6bfea7f25e690bedef9fd06a366ce36bde8aa06fa30445e3184224564a06",
+      "bytes": 99203,
+      "source_path": "en/custom.html",
+      "source_blob": "e284a16b8aa280cd33e69c21e855628115ea740e",
+      "original_sha256": "29ec6c0b930c8122e9ef6b9a244ba0599bb5f5ecea5f7fb3c37aee0048b7f00c",
+      "unchanged": false
+    },
+    {
+      "path": "en/get-started.html",
+      "sha256": "30a73c80ac13b7b23c868f1dd855fc244b5b59182b624d317b9b38e2898bb978",
+      "bytes": 113890,
+      "source_path": "en/get-started.html",
+      "source_blob": "98709ffd872f34b30d1304cae98d263dff8faa8f",
+      "original_sha256": "916d97be7a80c8adb5dc06e69350fc538c847feca289534e75fccab08da73d59",
+      "unchanged": false
+    },
+    {
+      "path": "en/sample-report.html",
+      "sha256": "41c2a33340776582653623fd771b9a3b1f00523c7568f1e5111db5abdf45842a",
+      "bytes": 82386,
+      "source_path": "en/sample-report.html",
+      "source_blob": "1aef314a08652e8908cdd59a86244ef4e5426503",
+      "original_sha256": "e9f4ed06521ae53134fbe00967023d7b06156b1d7f533c4fe9dfc15fbc38b772",
+      "unchanged": false
+    },
+    {
+      "path": "src/marketing.tsx",
+      "sha256": "f133eac75e05f149b8a7c7c5a7d5734bf495a7d1f523e9d8c1781200b350151c",
+      "bytes": 7200,
+      "source_path": "src/main.tsx",
+      "source_blob": "8a2011bdc7ec958ede05a5e09a8695aaf97e6d83",
+      "original_sha256": "bf0c1b7750d00c541e2b9b38165263ed44c4bc4f78010f712382c561862ece4e",
+      "unchanged": false
+    },
+    {
+      "path": "src/styles/tokens.css",
+      "sha256": "5c12f7e3ac826a9eab6f9afe334b68bc866d2a8fcf479e9c659519f67ab1ba06",
+      "bytes": 7091,
+      "source_path": "src/styles/tokens.css",
+      "source_blob": "89a36d01813527d1eeae9196755c371d915003f8",
+      "original_sha256": "c048957cc975e7a0006587259d051ca817ac93461574818c1589fdec766806ab",
+      "unchanged": false
+    },
+    {
+      "path": "src/styles/shadows.css",
+      "sha256": "684e0c853270f4fbebf1f8a54c303114823309f0be0e48f291a5b34a557f4d13",
+      "bytes": 981,
+      "source_path": "src/styles/shadows.css",
+      "source_blob": "aebf74d88c0ad7a9800f32b5682c765885fb7152",
+      "original_sha256": "684e0c853270f4fbebf1f8a54c303114823309f0be0e48f291a5b34a557f4d13",
+      "unchanged": true
+    },
+    {
+      "path": "src/wa-theme.css",
+      "sha256": "f4b0231b3d8afe14fa4e724cc2bdefc25b5957c82cdb13c97ed88c15dae3a714",
+      "bytes": 1499,
+      "source_path": "src/wa-theme.css",
+      "source_blob": "e98db63a5875ffb3bbc31e3c92f86f6f4621a613",
+      "original_sha256": "f4b0231b3d8afe14fa4e724cc2bdefc25b5957c82cdb13c97ed88c15dae3a714",
+      "unchanged": true
+    },
+    {
+      "path": "src/dotbg.css",
+      "sha256": "31031d7ca905dbad130c254916adeacbe1aa6fe64185c188029fe77ed31f700e",
+      "bytes": 1135,
+      "source_path": "src/dotbg.css",
+      "source_blob": "19b722f9f62df52a57ddee3857ef887cfeb4fe98",
+      "original_sha256": "31031d7ca905dbad130c254916adeacbe1aa6fe64185c188029fe77ed31f700e",
+      "unchanged": true
+    },
+    {
+      "path": "src/hero.css",
+      "sha256": "5a875ce28f6cbd250c51e13d08ebb26be22f28435f7631a6b2795c73499157e1",
+      "bytes": 35497,
+      "source_path": "src/hero.css",
+      "source_blob": "f2768bcc0a6bffa0fa21731839c64e0e1cf9d6de",
+      "original_sha256": "5a875ce28f6cbd250c51e13d08ebb26be22f28435f7631a6b2795c73499157e1",
+      "unchanged": true
+    },
+    {
+      "path": "src/sections.css",
+      "sha256": "d13631c1c0cf3044d88eefa2e1b46e881ebe37421da8897c4ce57b51302b2a6b",
+      "bytes": 28300,
+      "source_path": "src/sections.css",
+      "source_blob": "0b8a24c5dfa39c14a3d9f9ee2b802281cb4e4ff2",
+      "original_sha256": "d13631c1c0cf3044d88eefa2e1b46e881ebe37421da8897c4ce57b51302b2a6b",
+      "unchanged": true
+    },
+    {
+      "path": "src/sections-v2.css",
+      "sha256": "8603d4ab99ea578fe332da6eb5e095377e5215d3d677737f4d7fdc17a554af27",
+      "bytes": 68791,
+      "source_path": "src/sections-v2.css",
+      "source_blob": "4b2297a39d4810081d8f45e95256ad0c847b8954",
+      "original_sha256": "8603d4ab99ea578fe332da6eb5e095377e5215d3d677737f4d7fdc17a554af27",
+      "unchanged": true
+    },
+    {
+      "path": "src/appmotion.css",
+      "sha256": "c34d216871c2420aec31952b391d65a0c658dca3f2bca29d317ea12bbdcb8720",
+      "bytes": 51832,
+      "source_path": "src/appmotion.css",
+      "source_blob": "27a8bfdb06b8b051c4a0b0ff2bbaacde7e47e537",
+      "original_sha256": "c34d216871c2420aec31952b391d65a0c658dca3f2bca29d317ea12bbdcb8720",
+      "unchanged": true
+    },
+    {
+      "path": "src/triptych.css",
+      "sha256": "172f332fc3e7c91ba067b86a3c6ca13949e9c08bea9297849f1a273eccdf5f65",
+      "bytes": 27611,
+      "source_path": "src/triptych.css",
+      "source_blob": "3e37536414e81a08e958debad7f8ad984aa8defc",
+      "original_sha256": "ea8682639ba1b95f7d35cfe33c7b0f43ea9c1908339075c4a134dba157c69549",
+      "unchanged": false
+    },
+    {
+      "path": "src/shots.css",
+      "sha256": "f7363912fe1171841f6e2f10d4c74e9082570a11b53fc60ced29ad06b82c5b00",
+      "bytes": 51143,
+      "source_path": "src/shots.css",
+      "source_blob": "2066147fc9bd1d768453bb7c85298fe424a31fd0",
+      "original_sha256": "492a77f1a18da550f08db28d07a97b33322b5ab30abc68993c154defccec492c",
+      "unchanged": false
+    },
+    {
+      "path": "src/TriptychKit.tsx",
+      "sha256": "a146d9c819882a409f08a39d81164952936fb526b3254ff9772cc9ef44f195e4",
+      "bytes": 41684,
+      "source_path": "src/TriptychKit.tsx",
+      "source_blob": "f99a35d70a648c84d48e8894e592d2d7f5fa5de2",
+      "original_sha256": "a146d9c819882a409f08a39d81164952936fb526b3254ff9772cc9ef44f195e4",
+      "unchanged": true
+    },
+    {
+      "path": "src/shots.tsx",
+      "sha256": "721e1a2b182efcfba9c53a403136a94393914e6b416c40916d7b182f5d0d020f",
+      "bytes": 87795,
+      "source_path": "src/shots.tsx",
+      "source_blob": "8c4cbc52e073844a8988c0947606d3df1c2c5fa9",
+      "original_sha256": "721e1a2b182efcfba9c53a403136a94393914e6b416c40916d7b182f5d0d020f",
+      "unchanged": true
+    },
+    {
+      "path": "src/PrecioLoop.tsx",
+      "sha256": "5576fbea6231385f3b70f3131a4c1694ce71154bf1c51ee0db2449f6d97d798f",
+      "bytes": 18262,
+      "source_path": "src/PrecioLoop.tsx",
+      "source_blob": "394138be01e0c4c8ba3d8d2fa0df8b00f95b4495",
+      "original_sha256": "5576fbea6231385f3b70f3131a4c1694ce71154bf1c51ee0db2449f6d97d798f",
+      "unchanged": true
+    },
+    {
+      "path": "src/RiverResolve.tsx",
+      "sha256": "6f5afbc3382269ae2e7f536619bc6c36d6881975cf57524d18595efe8ef8c60b",
+      "bytes": 23865,
+      "source_path": "src/RiverResolve.tsx",
+      "source_blob": "3f78437dd77f83098a7972aaef25c24ce403df80",
+      "original_sha256": "6f5afbc3382269ae2e7f536619bc6c36d6881975cf57524d18595efe8ef8c60b",
+      "unchanged": true
+    },
+    {
+      "path": "src/ComposerBirth.tsx",
+      "sha256": "e4e7752bc49022727c62feee66b9bd8ec7d6a6d45bf8fa68e661567e7c947b2c",
+      "bytes": 25408,
+      "source_path": "src/ComposerBirth.tsx",
+      "source_blob": "8ce9d6b167e994fa34a7050dd5d07566ac79e580",
+      "original_sha256": "e4e7752bc49022727c62feee66b9bd8ec7d6a6d45bf8fa68e661567e7c947b2c",
+      "unchanged": true
+    },
+    {
+      "path": "src/motionkit.tsx",
+      "sha256": "aa555a44bc56c6daa5ee1a18fd50aa2a276242cb2c78e58f442a4d0c2231cb3e",
+      "bytes": 9172,
+      "source_path": "src/motionkit.tsx",
+      "source_blob": "24512802ea912e8f4da2fa43012eb8aa667847a7",
+      "original_sha256": "aa555a44bc56c6daa5ee1a18fd50aa2a276242cb2c78e58f442a4d0c2231cb3e",
+      "unchanged": true
+    },
+    {
+      "path": "rocoto-face.js",
+      "sha256": "b7e65b2145f55ff454f9913a17d7f6c1dbf2cb943718412d02c8d76068305308",
+      "bytes": 3483,
+      "source_path": "rocoto-face.js",
+      "source_blob": "41b8cb8625b56ac59d072be775f6968ce0dea8b4",
+      "original_sha256": "b7e65b2145f55ff454f9913a17d7f6c1dbf2cb943718412d02c8d76068305308",
+      "unchanged": true
+    },
+    {
+      "path": "peter.webp",
+      "sha256": "c9ca472672e6ec4c19c9bfc3bb45f2dd30db033ba511eec9f7b5e8ef9eaec3a8",
+      "bytes": 64444,
+      "source_path": "peter.webp",
+      "source_blob": "64b6c981a15993abaa7c943e831bc5d6b8ba66d2",
+      "original_sha256": "c9ca472672e6ec4c19c9bfc3bb45f2dd30db033ba511eec9f7b5e8ef9eaec3a8",
+      "unchanged": true
+    },
+    {
+      "path": "brand/face-blink-light.gif",
+      "sha256": "4608569871c16804b40e207b86399fa1440f011b0994bcfb514971f6ab21bb11",
+      "bytes": 114524,
+      "source_path": "brand/face-blink-light.gif",
+      "source_blob": "40cf16c225197f71ec5ab6b6a9f7721d3d288cfd",
+      "original_sha256": "4608569871c16804b40e207b86399fa1440f011b0994bcfb514971f6ab21bb11",
+      "unchanged": true
+    },
+    {
+      "path": "brand/face-blink-transparent.gif",
+      "sha256": "71c8f80b41312fabca30fab8254d4e20c647c9b3d5927c2f51eb78fa03e1d2c2",
+      "bytes": 115102,
+      "source_path": "brand/face-blink-transparent.gif",
+      "source_blob": "c17d4cbb979e81cdc73d58d2394d088c1ad5b1eb",
+      "original_sha256": "71c8f80b41312fabca30fab8254d4e20c647c9b3d5927c2f51eb78fa03e1d2c2",
+      "unchanged": true
+    },
+    {
+      "path": "assets/agents.css",
+      "sha256": "2c5217d42d327d6a0ba7cff3fd5f98648ff4b77b757ca14fc2534a83e4986556",
+      "bytes": 154741,
+      "source_path": "assets/agents.css",
+      "source_blob": "940578506eec698c2faf2452ad754f46754b4949",
+      "original_sha256": "55952675389dd77d8f34680244ffbc37a0a24e89fb5b699dc19faffd5d3bad16",
+      "unchanged": false
+    },
+    {
+      "path": "assets/report-frames/informe-portada.png",
+      "sha256": "5a97b0f59652d1a7d65fc6c212d12402dddaa24cc143383d2c9cdc4b5bea071e",
+      "bytes": 125416,
+      "source_path": "assets/report-frames/informe-portada.png",
+      "source_blob": "688ead672520433807a164e92f50bb63cd0b9481",
+      "original_sha256": "5a97b0f59652d1a7d65fc6c212d12402dddaa24cc143383d2c9cdc4b5bea071e",
+      "unchanged": true
+    },
+    {
+      "path": "brand/favicon-32.png",
+      "sha256": "e3682e8e391c908baf4a1d8325a810652443e42663ffdccae1010ff0cf4ffb0d",
+      "bytes": 994,
+      "source_path": "brand/favicon-32.png",
+      "source_blob": "e3d32da361b9a4471e4c5a1e16db4f5d9e0c6763",
+      "original_sha256": "e3682e8e391c908baf4a1d8325a810652443e42663ffdccae1010ff0cf4ffb0d",
+      "unchanged": true
+    },
+    {
+      "path": "assets/notebook.webp",
+      "sha256": "eddfef9807d0e59d06979f4469e5ff81ea1fd50af4f5b0e6a3e97fd8f8c5b53d",
+      "bytes": 46736,
+      "source_path": "assets/notebook.webp",
+      "source_blob": "12347314d2a42c261e49b111cbbbc928aae2816d",
+      "original_sha256": "eddfef9807d0e59d06979f4469e5ff81ea1fd50af4f5b0e6a3e97fd8f8c5b53d",
+      "unchanged": true
+    },
+    {
+      "path": "brand/favicon-180.png",
+      "sha256": "13f826be5b4695abb95a785b4155029c13cdd2c207be9b8c0b827ac453e64964",
+      "bytes": 15151,
+      "source_path": "brand/favicon-180.png",
+      "source_blob": "b434c902d2e38df669dfea6a330129bc5cd32ec0",
+      "original_sha256": "13f826be5b4695abb95a785b4155029c13cdd2c207be9b8c0b827ac453e64964",
+      "unchanged": true
+    },
+    {
+      "path": "assets/inter.woff2",
+      "sha256": "67d06a7b038f2e4c112e8235b62df4032e218f874f3c5d948c21dcf9e8a621a7",
+      "bytes": 26020
+    },
+    {
+      "path": "assets/fraunces-latin-500-700.woff2",
+      "sha256": "7234ed860a9cc83045413c4faee63c960a8f2d1917adcf728119307d56e0d783",
+      "bytes": 67304
+    },
+    {
+      "path": "assets/inter-OFL.txt",
+      "sha256": "3b0a5fca3d17942cde889069889dedbbbd075e9b599968c82a95f4d944e9b345",
+      "bytes": 4477
+    },
+    {
+      "path": "assets/Fraunces-OFL.txt",
+      "sha256": "bdf4c22802eaf804f998195871c6b8938aac2ac14b2d78a8bd66a6f1eced833b",
+      "bytes": 4391
+    },
+    {
+      "path": "assets/restoration.css",
+      "sha256": "2823509951cb0ab790689a63306e9d12584e5234fc95b23f588fa4d50fa0b252",
+      "bytes": 706
+    },
+    {
+      "path": "package.json",
+      "sha256": "063a2fae73b6bdd9dbb556ef229b79fe52a8d64d441e752f368978b597cc7575",
+      "bytes": 639
+    },
+    {
+      "path": "mercado.webp",
+      "source_path": "mercado.webp",
+      "source_blob": "d9591d70b6127e77432bcd4cd56eefd1724dcf3a",
+      "sha256": "d4959870cd39a9f0a605b3a7133782cd1e19ed289385999d4606cdf66388c64f",
+      "original_sha256": "d4959870cd39a9f0a605b3a7133782cd1e19ed289385999d4606cdf66388c64f",
+      "bytes": 75508,
+      "unchanged": true
+    },
+    {
+      "path": "assets/app-motion/faces/map-thumb.png",
+      "source_path": "assets/app-motion/faces/map-thumb.png",
+      "source_blob": "92e18a31dedbaece82eeb1d79a846a708050e5c4",
+      "sha256": "f9b046ecd7a46a2a86886ac38f40e8c5210df26a8b70757a3f3cc4a09026d7ce",
+      "original_sha256": "f9b046ecd7a46a2a86886ac38f40e8c5210df26a8b70757a3f3cc4a09026d7ce",
+      "bytes": 9519,
+      "unchanged": true
+    },
+    {
+      "path": "assets/app-motion/faces/merluza.webp",
+      "source_path": "assets/app-motion/faces/merluza.webp",
+      "source_blob": "ffe89ffa0323e1ce2efc2a179188d9fb37cf67d4",
+      "sha256": "787477ebc8e94bf1ba841adcc357bf354335b8ca24e022819f0e78595fd3e8e1",
+      "original_sha256": "787477ebc8e94bf1ba841adcc357bf354335b8ca24e022819f0e78595fd3e8e1",
+      "bytes": 1178,
+      "unchanged": true
+    },
+    {
+      "path": "assets/app-motion/faces/gamba-roja.webp",
+      "source_path": "assets/app-motion/faces/gamba-roja.webp",
+      "source_blob": "02e8b939ef706e8deaa1b5261bf91ab45c5f268c",
+      "sha256": "6371a9ac8162063cab1d7301094e1df0a722dc09b799361de8091266806b0f76",
+      "original_sha256": "6371a9ac8162063cab1d7301094e1df0a722dc09b799361de8091266806b0f76",
+      "bytes": 1898,
+      "unchanged": true
+    },
+    {
+      "path": "assets/app-motion/faces/rape.webp",
+      "source_path": "assets/app-motion/faces/rape.webp",
+      "source_blob": "498aa4827ada905b8e67a17719fa5d03eb71e2ae",
+      "sha256": "97585d9d9c205758196b1ca04afba1d2902befdc860d5707edfee05cbc2c0459",
+      "original_sha256": "97585d9d9c205758196b1ca04afba1d2902befdc860d5707edfee05cbc2c0459",
+      "bytes": 1992,
+      "unchanged": true
+    },
+    {
+      "path": "assets/app-motion/faces/pulpo.webp",
+      "source_path": "assets/app-motion/faces/pulpo.webp",
+      "source_blob": "3648e1ca6e896ab57763a9550efb594c268aa962",
+      "sha256": "913c85a319300e5c331e88e92280e322b1ec2ce77a6c76091de1a624bfc9df23",
+      "original_sha256": "913c85a319300e5c331e88e92280e322b1ec2ce77a6c76091de1a624bfc9df23",
+      "bytes": 2732,
+      "unchanged": true
+    }
+  ],
+  "omitted_page_paths": [
+    "admin.html",
+    "auth-callback.html",
+    "bienvenida.html",
+    "cohorte.html",
+    "conectar/index.html",
+    "cookies.html",
+    "datos-seguridad.html",
+    "docs/agentes.html",
+    "docs/api-catalogue.html",
+    "docs/api-customers.html",
+    "docs/api-deliveries.html",
+    "docs/api-documents.html",
+    "docs/api-orders.html",
+    "docs/api-payments.html",
+    "docs/api-results.html",
+    "docs/api-settlements.html",
+    "docs/api-stock.html",
+    "docs/api.html",
+    "docs/auth.html",
+    "docs/build.html",
+    "docs/canales.html",
+    "docs/cobros.html",
+    "docs/conventions.html",
+    "docs/data.html",
+    "docs/desvio.html",
+    "docs/erp-brief.html",
+    "docs/erp-systems.html",
+    "docs/erp.html",
+    "docs/index.html",
+    "docs/integrations.html",
+    "docs/inteligencia.html",
+    "docs/inventario.html",
+    "docs/mcp-plans.html",
+    "docs/mcp-verbs.html",
+    "docs/mcp.html",
+    "docs/pedidos.html",
+    "docs/quickstart.html",
+    "docs/registers.html",
+    "docs/releases.html",
+    "docs/reparto.html",
+    "docs/results.html",
+    "docs/sdk.html",
+    "docs/webhooks.html",
+    "dpa.html",
+    "en/cookies.html",
+    "en/data-security.html",
+    "en/docs/agentes.html",
+    "en/docs/api-catalogue.html",
+    "en/docs/api-customers.html",
+    "en/docs/api-deliveries.html",
+    "en/docs/api-documents.html",
+    "en/docs/api-orders.html",
+    "en/docs/api-payments.html",
+    "en/docs/api-results.html",
+    "en/docs/api-settlements.html",
+    "en/docs/api-stock.html",
+    "en/docs/api.html",
+    "en/docs/auth.html",
+    "en/docs/build.html",
+    "en/docs/canales.html",
+    "en/docs/cobros.html",
+    "en/docs/conventions.html",
+    "en/docs/data.html",
+    "en/docs/desvio.html",
+    "en/docs/erp-brief.html",
+    "en/docs/erp-systems.html",
+    "en/docs/erp.html",
+    "en/docs/index.html",
+    "en/docs/integrations.html",
+    "en/docs/inteligencia.html",
+    "en/docs/inventario.html",
+    "en/docs/mcp-plans.html",
+    "en/docs/mcp-verbs.html",
+    "en/docs/mcp.html",
+    "en/docs/pedidos.html",
+    "en/docs/quickstart.html",
+    "en/docs/registers.html",
+    "en/docs/releases.html",
+    "en/docs/reparto.html",
+    "en/docs/results.html",
+    "en/docs/sdk.html",
+    "en/docs/webhooks.html",
+    "en/dpa.html",
+    "en/join.html",
+    "en/plan.html",
+    "en/privacy.html",
+    "en/proposal/carlos/index.html",
+    "en/proposal/gabriela/index.html",
+    "en/terms.html",
+    "en/visuals-review.html",
+    "inventory-upload.html",
+    "join.html",
+    "pedidos.html",
+    "plan.html",
+    "privacy.html",
+    "propuesta/carlos/index.html",
+    "propuesta/gabriela/index.html",
+    "reserva.html",
+    "subir.html",
+    "terminos.html",
+    "waitlist.html"
+  ],
+  "transformations": [
+    {
+      "path": "index.html",
+      "reason": "Original marketing layout/island hosts retained; account/lead/provider actions point to current public demo/source/guides; self-hosted fonts."
+    },
+    {
+      "path": "sales.html",
+      "reason": "Original marketing layout/island hosts retained; account/lead/provider actions point to current public demo/source/guides; self-hosted fonts."
+    },
+    {
+      "path": "procurement.html",
+      "reason": "Original marketing layout/island hosts retained; account/lead/provider actions point to current public demo/source/guides; self-hosted fonts."
+    },
+    {
+      "path": "owner.html",
+      "reason": "Original marketing layout/island hosts retained; account/lead/provider actions point to current public demo/source/guides; self-hosted fonts."
+    },
+    {
+      "path": "custom.html",
+      "reason": "Original marketing layout/island hosts retained; account/lead/provider actions point to current public demo/source/guides; self-hosted fonts."
+    },
+    {
+      "path": "get-started.html",
+      "reason": "Original marketing layout/island hosts retained; account/lead/provider actions point to current public demo/source/guides; self-hosted fonts."
+    },
+    {
+      "path": "muestra-informe.html",
+      "reason": "Original marketing layout/island hosts retained; account/lead/provider actions point to current public demo/source/guides; self-hosted fonts."
+    },
+    {
+      "path": "en/index.html",
+      "reason": "Original marketing layout/island hosts retained; account/lead/provider actions point to current public demo/source/guides; self-hosted fonts."
+    },
+    {
+      "path": "en/sales.html",
+      "reason": "Original marketing layout/island hosts retained; account/lead/provider actions point to current public demo/source/guides; self-hosted fonts."
+    },
+    {
+      "path": "en/procurement.html",
+      "reason": "Original marketing layout/island hosts retained; account/lead/provider actions point to current public demo/source/guides; self-hosted fonts."
+    },
+    {
+      "path": "en/owner.html",
+      "reason": "Original marketing layout/island hosts retained; account/lead/provider actions point to current public demo/source/guides; self-hosted fonts."
+    },
+    {
+      "path": "en/custom.html",
+      "reason": "Original marketing layout/island hosts retained; account/lead/provider actions point to current public demo/source/guides; self-hosted fonts."
+    },
+    {
+      "path": "en/get-started.html",
+      "reason": "Original marketing layout/island hosts retained; account/lead/provider actions point to current public demo/source/guides; self-hosted fonts."
+    },
+    {
+      "path": "en/sample-report.html",
+      "reason": "Original marketing layout/island hosts retained; account/lead/provider actions point to current public demo/source/guides; self-hosted fonts."
+    },
+    {
+      "path": "src/marketing.tsx",
+      "reason": "Pure original visual islands only; every account/provider mount and import omitted."
+    },
+    {
+      "path": "src/styles/tokens.css",
+      "reason": "Interface mono face uses Inter."
+    },
+    {
+      "path": "src/triptych.css",
+      "reason": "Interface mono face uses Inter."
+    },
+    {
+      "path": "src/shots.css",
+      "reason": "Interface mono face uses Inter."
+    },
+    {
+      "path": "all marketing HTML",
+      "reason": "CSP blocks connections and form submissions; current setup links open the published product guide."
+    },
+    {
+      "path": "assets/hero.js",
+      "reason": "Rebuilt only from original pure visual source with React18.3.1/esbuild0.28.2; old auth/provider bundle omitted."
+    },
+    {
+      "path": "index.html and en/index.html",
+      "reason": "Peter\u2019s explicit current category: AI-native ERP for food distributors; Spanish names the same ERP audience. Original design and native visual components retained."
+    },
+    {
+      "path": "marketing actions",
+      "reason": "Current public demo, GitHub with official mark and source setup guide."
+    },
+    {
+      "path": "marketing body metadata",
+      "reason": "Removed dormant archived telephone and backend data attributes; only language metadata is retained."
+    },
+    {
+      "path": "marketing footers",
+      "reason": "Replace historical service/legal labels and operator/transfer guarantees with truthful GitHub, Security and MIT source-licence links. Preserve original product content and footer layout."
+    },
+    {
+      "path": "marketing header start actions",
+      "reason": "The original Get started/Empieza controls now open the public ERP demo and use Open demo/Abrir demo. The dated rollout proposal keeps its informational English/Spanish language links."
+    }
+  ],
+  "derivative": "Personal open-source food-distributor website restoration",
+  "status": "Prepared for owner review; no publication or domain change."
+}

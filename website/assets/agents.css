@@ -1,0 +1,2765 @@
+/* THE PANEL'S COMPONENTS, ON THE LANDING — hand-written, loaded after hero.css on every page.
+   It began as /producto/agents.html's own sheet (§17.55k/§17.55b) and outlived it: the page was
+   retired on 2026-08-15 and the automations moved inside Ventas, Compras and Reparto, but the
+   PARTS it lifted from the panel — the generated field, the result artefacts, the voice chip,
+   the document thumbs — are used across the site and stay here. Its own file on purpose: a
+   frame class is declared in exactly one place (BUILD-CONCERNS #6). Every colour goes through
+   the landing's own custom properties, never a literal.
+
+   THE RETIRED PAGE'S OWN RULES ARE GONE (2026-08-16). `.ag-grid` · `.ag-tile` · `.ag-meta` ·
+   `.ag-foot` · `.ag-rail*` · `.ag-stage*` · `.ag-mini*` · `.ag-fade` · `.ag-hero*` · `.ag-mail*`
+   · `.ag-sheet*` · `.ag-li*` · `.agmach*` · `.lib-*` and the eight hand-written `.g1`–`.g8`
+   gradients the generator replaced on 2026-08-09 — ~19 kB that every page was still carrying.
+   Established, not guessed: none of those class names occurs in any built page, in hero.js, or
+   anywhere in landing-react/src or the build scripts, and each removed selector was queried
+   against the live DOM of all 88 pages in the sitemap and matched nothing.
+
+   WHAT SURVIVED, AND WHY: `.ag-shot` / `.ag-art` still dress the three automation cards on
+   /soluciones/empresa, and `.rt-blobs` / `.rt-curve` carry the generated field there and on the
+   home product tiles. */
+
+
+/* ── the field: poles, then the bezier band, with the artefact hanging off the bottom ── */
+/* THE ARTEFACT COMES OUT FROM UNDER THE FIELD (Peter, 2026-08-09): «I don't like how the bottom
+   of the little artifacts inside the gradient things is curved. It should feel like it's coming
+   from behind… it shouldn't end where the label below it is… the gradient has a V depth. I don't
+   want them to close.»
+   Three changes, and they only work together:
+     · the artefact is pulled BELOW the shot's lower edge and clipped by it (.ag-art margin), so
+       it reads as a sheet continuing behind the label rather than a card that stops;
+     · its bottom corners and bottom border are removed — a closed rounded box cannot read as
+       "there is more of this underneath";
+     · the field gets an inset shade at the foot, which is the V: the light sits high on the
+       curve and the depth is at the bottom, where the artefact emerges from.
+   Slightly taller and less top padding, so the artefact fills more of the field. */
+.ag-shot {
+  /* THE ARTEFACT SHOWS ITSELF FULLY — lifted from webapp .rt-shot, including the reason. Peter,
+     2026-08-09: «why so peaking and not showing itself fully». The old landing treatment hung
+     the card off the bottom edge to keep the top band clear, and what that produced was a
+     cropped preview. An agent is known by what it produces, so it cannot be half a thing. It
+     floats centred with air on every side, and the field reads around it. */
+  position: relative;
+  isolation: isolate;
+  height: 268px;
+  background: var(--panel-sunk);
+  border-bottom: 1px solid var(--panel-line);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  padding: var(--rocoto-space-md);
+}
+.ag-shot::before {
+  content: "";
+  position: absolute;
+  inset: -14%;
+  z-index: 0;
+  filter: blur(46px) saturate(2.1) contrast(1.06);
+}
+.ag-shot::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  opacity: .4;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.ag-art {
+  position: relative; z-index: 3; min-width: 0; width: 100%;
+  max-height: 100%; color: var(--ink, #1a1413);
+}
+
+
+/* ══════════════════════════════════════════════════════════════════════════════════════════
+   THE HERO — a month with a hole in it (2026-08-09).
+
+   The page used to open with six artefacts in a row, which reads as a screenshot shelf. This
+   opens with ONE: July, twenty-four invoices, twenty-three of them real and one square empty.
+   A folder cannot tell you what should have been in it; the empty square is that sentence,
+   drawn, and it needs no reading.
+
+   And it OPENS. Press an invoice and it comes up full size on the same page. The product's own
+   test — if you cannot reach the original thing in one press, the screen is a report — applied
+   to the marketing page itself.
+   ══════════════════════════════════════════════════════════════════════════════════════════ */
+
+.mo {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--paper, #fff);
+  padding: 20px;
+  max-width: 100%;
+  overflow: hidden;
+  box-shadow: 0 18px 40px -28px rgba(0, 0, 0, .35);
+}
+.mo-h {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+  padding-bottom: 12px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid var(--line);
+}
+.mo-h b { font-weight: 500; font-size: 15px; }
+.mo-h span { font-size: 12px; color: var(--faint); }
+
+.mo-grid {
+  /* auto-fill rather than a fixed count: the sheaf fills whatever width it is given and the last
+     column is never half-cut, at any viewport, without three breakpoints guessing at it. */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(62px, 1fr));
+  gap: 10px;
+}
+
+/* one invoice, square-cornered, at page proportions — a real invoice, small */
+.mo-i {
+  border: 0; background: none; padding: 0; cursor: pointer;
+  display: flex; flex-direction: column; gap: 5px; text-align: left;
+  min-width: 0;                 /* a caption may ellipsis; it may not set the grid's width */
+  transition: transform .16s ease;
+}
+.mo-i:hover { transform: translateY(-2px); }
+.mo-i:focus-visible { outline: 2px solid var(--acc); outline-offset: 3px; }
+.mo-pg {
+  aspect-ratio: 1 / 1.414;
+  border: 1px solid var(--line);
+  background: #fff;
+  padding: 5px 4px;
+  display: flex; flex-direction: column; gap: 2px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
+}
+.mo-pg b {
+  font-size: 4.6px; font-weight: 600; line-height: 1.2; letter-spacing: .01em;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  border-bottom: .5px solid var(--line); padding-bottom: 2px;
+}
+.mo-pg u { text-decoration: none; font-size: 3.6px; color: var(--faint); }
+/* the body reduced to rules: at 60px nobody reads body copy, and pretending otherwise is what
+   made the old previews read as zoomed crops rather than shrunk pages */
+.mo-pg i { display: block; height: 1.4px; background: var(--line); border-radius: 1px; }
+.mo-pg em {
+  font-style: normal; font-size: 4.4px; font-weight: 600; margin-top: auto;
+  border-top: .5px solid var(--line); padding-top: 2px; text-align: right;
+}
+.mo-i figcaption { font-size: 9.5px; color: var(--faint); line-height: 1.25; }
+.mo-i figcaption b { display: block; font-weight: 400; color: var(--ink); font-size: 10px;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+/* THE HOLE — same footprint as a page, so the eye reads an absence in a sheaf */
+.mo-pg.gap {
+  border-style: dashed; border-color: var(--acc);
+  background: color-mix(in srgb, var(--acc) 5%, #fff);
+  align-items: center; justify-content: center;
+}
+.mo-pg.gap span { font-size: 5.5px; color: var(--acc-t); text-align: center; line-height: 1.3; }
+
+.mo-f { margin: 16px 0 0; font-size: 13px; color: var(--muted); line-height: 1.55; }
+.mo-f b { font-weight: 500; color: var(--ink); }
+.mo-note { margin: 8px 0 0; font-size: 11.5px; color: var(--faint); }
+.mo-stamp { font-size: 11px; color: var(--faint); }
+
+/* opened: the invoice at the size you would actually read it */
+.mo-open {
+  position: fixed; inset: 0; z-index: 60; display: none;
+  background: color-mix(in srgb, var(--ink) 55%, transparent);
+  padding: 24px; overflow: auto;
+}
+.mo-open:target { display: grid; place-items: center; }
+.mo-doc {
+  background: #fff; border: 1px solid var(--line); max-width: 430px; width: 100%;
+  padding: 26px 28px; box-shadow: 0 24px 60px -20px rgba(0, 0, 0, .5);
+}
+.mo-doc-h { display: flex; justify-content: space-between; gap: 18px;
+  border-bottom: 1px solid var(--ink); padding-bottom: 10px; margin-bottom: 14px; }
+.mo-doc-h b { font-size: 13px; font-weight: 600; }
+.mo-doc-h div { font-size: 10px; color: var(--muted); line-height: 1.5; }
+.mo-doc table { width: 100%; border-collapse: collapse; font-size: 11px; }
+.mo-doc th { text-align: left; font-weight: 400; font-size: 9px; letter-spacing: .06em;
+  text-transform: uppercase; color: var(--faint); padding-bottom: 5px;
+  border-bottom: 1px solid var(--line); }
+.mo-doc td { padding: 5px 0; border-bottom: 1px solid var(--line);
+  font-variant-numeric: tabular-nums; }
+.mo-doc td:last-child, .mo-doc th:last-child { text-align: right; }
+.mo-doc tfoot td { border: 0; padding-top: 7px; color: var(--muted); }
+.mo-doc tfoot tr:last-child td { color: var(--ink); font-size: 12.5px; }
+.mo-close { display: block; margin-top: 14px; font-size: 12px; color: var(--faint);
+  text-align: right; }
+
+
+/* ══════════════════════════════════════════════════════════════════════════════════════════
+   THE CENTRED HERO, AND THE WALL BELOW IT (Peter, 2026-08-09).
+   «Introducing» and an italic «Agents», then a grid of the agent tiles fading out at the bottom.
+   The fade is the honest way to say «there are more» without printing a number — which is what
+   made the old page read as a finished feature list.
+   ══════════════════════════════════════════════════════════════════════════════════════════ */
+/* the page never needs a horizontal bleed now, so nothing can shift it */
+.aghero { text-align: center; padding: 54px 0 0; border: none; }
+.aghero-k {
+  margin: 0;
+  font-size: var(--t-sm, 14px);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+.aghero-h {
+  margin: 6px 0 0;
+  font-family: var(--f-display, 'Fraunces', Georgia, serif);
+  font-size: clamp(46px, 8vw, 92px);
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: -.03em;
+  line-height: 1;
+}
+.aghero-s {
+  margin: 20px auto 0;
+  max-width: 56ch;
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+.aghero .cta { justify-content: center; margin-top: 26px; }
+
+/* ══════════════════════════════════════════════════════════════════════════════════════════
+   THE THREE STEPS, AFTER A FULL-BLEED WALL (Peter, 2026-08-09: «what is this? it just feels
+   bare… when you put it under such a graphic section, you need space»).
+
+   He is right, and the diagnosis is specific: three bordered boxes of text landing straight
+   under a graphic band reads as falling off a cliff. Boxes were doing the work that space
+   should do. Scoped to this page only — the other product pages keep the compact card version,
+   because none of them follows a full-bleed hero.
+   ══════════════════════════════════════════════════════════════════════════════════════════ */
+body:has(.aghero) .wr-how { padding-top: 96px; padding-bottom: 40px; }
+body:has(.aghero) .steps {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 56px;
+  margin-top: 0;
+}
+body:has(.aghero) .st {
+  background: transparent;
+  border: 0;
+  border-top: 1px solid var(--line);
+  border-radius: 0;
+  padding: 20px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+/* the number stays because these ARE a sequence — you pick, it drafts, it runs — but it stops
+   being a red badge on a card and becomes a quiet index */
+body:has(.aghero) .st .k {
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: .12em;
+  color: var(--faint);
+  margin-bottom: 0;
+}
+body:has(.aghero) .st b {
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: -.01em;
+  line-height: 1.25;
+}
+body:has(.aghero) .st span {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--muted);
+  margin-top: 0;
+}
+@media (max-width: 760px) {
+  body:has(.aghero) .steps { gap: 34px; }
+  body:has(.aghero) .wr-how { padding-top: 56px; }
+}
+
+
+@keyframes agdrop { 0% { top: -2px; opacity: 0 } 20% { opacity: 1 } 80% { opacity: 1 }
+  100% { top: 24px; opacity: 0 } }
+@keyframes agflow { 0% { left: -2px; opacity: 0 } 20% { opacity: 1 } 80% { opacity: 1 }
+  100% { left: 100%; opacity: 0 } }
+
+.slot-in  { grid-area: sin }
+.k-in     { grid-area: kin }
+.wire-a   { grid-area: w1 }
+.wire-b   { grid-area: w2 }
+.slot-out { grid-area: sout }
+.k-out    { grid-area: kout }
+
+
+/* THE SLOT — one visible component at a time, cross-fading. Fixed height so nothing reflows. */
+.slot { position: relative; width: 100%; min-width: 0; height: 330px; }
+/* sized by the MEDIAN frame, not the tallest. One outlier was setting the box for all
+   four, so three of them floated in up to 160px of paper above and below. */
+@media (min-width: 901px) { .slot { height: 300px; } }
+.slot-f {
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0;
+  animation: agrot 14s ease-in-out infinite;
+  animation-delay: calc(var(--n) * 3.5s);
+}
+@keyframes agrot {
+  /* the fading one is GONE before the next arrives — an overlap showed two components at once
+     and the text of both read through each other */
+  0%   { opacity: 0; transform: translateY(5px) }
+  3%   { opacity: 1; transform: none }
+  22%  { opacity: 1; transform: none }
+  25%  { opacity: 0; transform: translateY(-5px) }
+  100% { opacity: 0; transform: translateY(-5px) }
+}
+@media (prefers-reduced-motion: reduce) {
+  .slot-f { animation: none; opacity: 0 }
+  .slot-f[style*="--n:0"] { opacity: 1 }
+  }
+/* the machine sits inside a CENTRED hero, and every real component it holds is left-set type.
+   .rp-big keeps its own centre because a single figure is centred by design. */
+/* ONE WIDTH. Peter, 2026-08-09: «not all well-fitted. varying widths etc». Each component was
+   sizing itself, so the machine changed shape on every rotation. */
+.slot-c { width: 100%; max-width: 392px; min-width: 0; text-align: left; }
+.slot-c > * { width: 100%; }
+.slot-c.chromeless > .slot-who { width: 100%; }
+
+/* the components themselves — real surfaces, small */
+
+
+/* ══════════════════════════════════════════════════════════════════════════════════════════
+   THE ENTERPRISE CARD — the only dark thing on the page.
+
+   Colours are the real dark-surface tokens from the design system (--rocoto-hero-top/bottom,
+   --rocoto-on-hero, --rocoto-hero-accent), not new ones invented for a marketing card. The dot
+   field is the same 4px grid the app uses behind its dark surfaces.
+   ══════════════════════════════════════════════════════════════════════════════════════════ */
+.entcard {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: 14px;
+  padding: 44px 44px 40px;
+  text-decoration: none;
+  background:
+    radial-gradient(115% 135% at 8% -10%, #3b2a1c 0%, transparent 58%),
+    linear-gradient(158deg, var(--rocoto-hero-top, #221A13), var(--rocoto-hero-bottom, #130E0A));
+  color: var(--rocoto-on-hero, #F7F2EA);
+  transition: transform .22s cubic-bezier(.2,.7,.3,1), box-shadow .22s ease;
+  box-shadow: 0 1px 2px rgba(0,0,0,.18);
+}
+.entcard:hover { transform: translateY(-2px); box-shadow: 0 18px 40px -28px rgba(0,0,0,.75); }
+.entcard:focus-visible { outline: 2px solid var(--rocoto-hero-accent, #E2707D); outline-offset: 3px; }
+.entcard-dots {
+  position: absolute; inset: 0;
+  background-image: radial-gradient(rgba(247,242,234,.22) 1px, transparent 1px);
+  background-size: 14px 14px;
+  -webkit-mask-image: radial-gradient(120% 105% at 92% 18%, #000 0%, transparent 72%);
+          mask-image: radial-gradient(120% 105% at 92% 18%, #000 0%, transparent 72%);
+  pointer-events: none;
+}
+.entcard-in { position: relative; display: flex; flex-direction: column; align-items: flex-start; }
+.entcard-k {
+  font-size: 11.5px; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--rocoto-hero-accent, #E2707D);
+}
+.entcard-h {
+  margin-top: 14px; font-weight: 400; font-size: 27px; line-height: 1.25;
+  letter-spacing: -.015em; max-width: 20ch;
+  /* stated, not inherited: an inherited value loses to ANY rule that matches <b> directly,
+     at any specificity, and the sheet has several */
+  color: var(--rocoto-on-hero, #F7F2EA);
+}
+.entcard-l {
+  margin-top: 12px; font-size: 15.5px; line-height: 1.62; max-width: 62ch;
+  color: var(--rocoto-on-hero-muted, rgba(247,242,234,.7));
+}
+.entcard-cta {
+  margin-top: 26px;
+  display: inline-flex; align-items: center; gap: 8px;
+  border: 1px solid var(--rocoto-hero-glass-border, rgba(251,248,242,.15));
+  background: var(--rocoto-hero-glass, rgba(251,248,242,.078));
+  border-radius: 999px; padding: 10px 18px; font-size: 14.5px;
+  color: var(--rocoto-on-hero, #F7F2EA);
+  transition: background .18s ease;
+}
+.entcard:hover .entcard-cta { background: var(--rocoto-hero-glass-strong, rgba(251,248,242,.129)); }
+.entcard-cta .ic { width: 15px; height: 15px; }
+@media (max-width: 700px) {
+  .entcard { padding: 32px 24px 30px; }
+  .entcard-h { font-size: 23px; }
+}
+@media (prefers-reduced-motion: reduce) { .entcard { transition: none } }
+
+/* ── the surfaces that plug into the machine ────────────────────────────────────────────────
+   WhatsApp messages sit on WhatsApp's own ground and reuse the live .wa-* bubble classes from
+   hero.css. Only the ground and the two bubble variants below are new. */
+
+/* a photo, as it arrives from the dock */
+.wa-b.imgb { display: flex; flex-direction: column; gap: 6px; padding: 6px 6px 5px; width: 210px; }
+/* the source asset carries a green sliver on its right edge; clip it */
+.imgb-t { display: block; width: 100%; height: 104px; border-radius: 5px;
+  object-fit: cover; clip-path: inset(0 2.5% 0 0); }
+.imgb-c { font-size: 12.5px; padding: 0 3px; }
+
+/* a voice note, as it arrives from purchasing */
+
+/* the phone, cropped to its top — the real .wa-phone, 300px wide, showing its first 210px */
+/* pull the thread up so the reply buttons clear the fade — they are the point of the frame */
+
+/* the price stopped being a section of its own (Peter, 2026-08-09: «why price? it should just be
+   the CTA at the end»). It is now one quiet line under the closing buttons. */
+
+/* ══════════════════════════════════════════════════════════════════════════════════════════════
+   THE PANEL SHIM — so this page can carry the REAL components instead of marketing lookalikes.
+
+   Peter, 2026-08-09: «they're all made up without looking at the fact that we have precedent for
+   every single one of these UI elements in other places.» He is right, and the reason it kept
+   happening is mechanical: the panel's components are written against --panel-* and the landing
+   only declares --rocoto-*, so lifting one meant it painted as `unset` and the tempting fix was
+   always to redraw it smaller.
+
+   This is the mapping, copied from webapp/src/styles/themes/board.css:28-60 and :110-125. Every
+   value resolves to a --rocoto-* token that hero.css already declares at :root. With it in place
+   a panel component can be pasted here and it is the same object, not a drawing of one.
+   ══════════════════════════════════════════════════════════════════════════════════════════════ */
+:root {
+  --panel-bg: var(--rocoto-elevated);
+  --panel-card: var(--rocoto-elevated);
+  --panel-paper: var(--rocoto-bg);
+  --panel-surface: var(--rocoto-surface);
+  --panel-fg: var(--rocoto-fg);
+  --panel-mid: var(--rocoto-muted);
+  --panel-faint: var(--rocoto-faint);
+  --panel-ghost: var(--rocoto-nav-icon);
+  --panel-line: var(--rocoto-border);
+  --panel-line-hard: var(--rocoto-border-strong);
+  --panel-sunk: var(--rocoto-surface2);
+  --panel-sunk2: var(--rocoto-highlight);
+  --panel-live: var(--rocoto-green);
+  --panel-live-bg: var(--rocoto-green-dim);
+  --panel-live-text: var(--rocoto-green-text);
+  --panel-attn: var(--rocoto-red-text);
+  --panel-attn-bg: var(--rocoto-red-dim);
+  --panel-attn-solid: var(--rocoto-red);
+  --panel-roc: var(--rocoto-saffron);
+  --panel-roc-text: var(--rocoto-saffron-text);
+  --panel-roc-dim: var(--rocoto-saffron-dim);
+  --panel-attn-text: var(--rocoto-red-text);
+  --panel-chat-out: var(--rocoto-chat-out-bubble);
+  --panel-chat-out-line: var(--rocoto-chat-out-border);
+  --panel-chat-in: var(--rocoto-chat-in-bubble);
+  --panel-chat-in-line: var(--rocoto-chat-in-border);
+  --panel-danger-text: var(--rocoto-danger-text);
+  --panel-on-roc: var(--rocoto-on-saffron);
+
+  --panel-t-ledger: 33px;
+  --panel-t-hero: 24px;
+  --panel-t-lede: 14px;
+  --panel-t-h1: 19px;
+  --panel-t-h2: 14.5px;
+  --panel-t-body: 13px;
+  --panel-t-sm: 11.5px;
+  --panel-t-xs: 10px;
+  --panel-t-nano: 9.5px;
+  --panel-t-figure: 26px;
+  --panel-t-micro-a: 6px;
+  --panel-t-micro-b: 7px;
+  --panel-t-micro-c: 8px;
+}
+
+/* ── the real result previews, lifted VERBATIM from webapp/src/routes/agents.css:191-253 ─────
+   Same selectors, same declarations. Do not "simplify" these to match the marketing page: the
+   point is that an email on soyrocoto.com and an email in the panel are one drawing. */
+.rp-mail-body {
+  padding: var(--rocoto-space-md); font-size: var(--panel-t-xs);
+  color: var(--panel-mid); line-height: 1.65; white-space: pre-wrap;
+}
+
+/* the other four result views, also verbatim from webapp/src/routes/agents.css */
+.rp-sheet, .rp-list, .rp-folder, .rp-chat {
+  border: 1px solid var(--panel-line);
+  border-radius: var(--rocoto-radius-sm);
+  background: var(--panel-paper);
+  box-shadow: var(--rocoto-shadow-sheet);
+  overflow: hidden;
+}
+.rp-folder { padding-bottom: var(--rocoto-space-sm); }
+.rp-hd {
+  display: flex; gap: var(--rocoto-space-sm);
+  padding: var(--rocoto-space-xs) var(--rocoto-space-sm);
+  border-bottom: 1px solid var(--panel-line); background: var(--panel-card);
+  font-size: var(--panel-t-xs); letter-spacing: .06em; text-transform: uppercase;
+  color: var(--panel-ghost);
+}
+.rp-hd b { flex: 1; min-width: 0; font-weight: 700; }
+.rp-big { text-align: center; display: flex; flex-direction: column; gap: var(--rocoto-space-xxs); }
+.rp-sheet .rp-big { padding: var(--rocoto-space-lg) var(--rocoto-space-md); }
+.rp-num { font-size: var(--panel-t-hero); font-weight: 300; line-height: 1; font-variant-numeric: tabular-nums; }
+.rp-num em { font-style: normal; color: var(--panel-faint); }
+.rp-cap { font-size: var(--panel-t-sm); color: var(--panel-mid); }
+.rp-sub { font-size: var(--panel-t-xs); color: var(--panel-faint); }
+.rp-li {
+  display: flex; gap: var(--rocoto-space-sm);
+  padding: var(--rocoto-space-xs) var(--rocoto-space-sm);
+  font-size: var(--panel-t-xs); color: var(--panel-mid); align-items: baseline;
+}
+.rp-li b { font-weight: 600; color: var(--panel-fg); flex: 1; min-width: 0; }
+.rp-li span { color: var(--panel-faint); white-space: nowrap; }
+.rt-dim { color: var(--panel-faint); }
+.rp-ch-body { display: flex; flex-direction: column; gap: var(--rocoto-space-xs); padding: var(--rocoto-space-sm); }
+.rp-bub {
+  align-self: flex-end; max-width: 88%;
+  background: var(--panel-chat-out); border: 1px solid var(--panel-chat-out-line);
+  border-radius: 10px 10px 2px 10px;
+  padding: var(--rocoto-space-xs) var(--rocoto-space-sm);
+  font-size: var(--panel-t-xs); line-height: 1.45; color: var(--panel-fg);
+}
+.rp-btns { display: flex; flex-direction: column; gap: 3px; align-self: flex-end; width: 88%; }
+.rp-btn {
+  text-align: center; background: var(--panel-chat-out);
+  border: 1px solid var(--panel-chat-out-line); border-radius: 6px; padding: 4px;
+  font-size: var(--panel-t-xs); color: var(--panel-roc-text);
+}
+
+/* ── THE DOCUMENT THUMBNAIL, verbatim from webapp/src/components/docthumb.css ────────────────
+   One primitive, every surface (§17.55u). It replaced a list of filenames because reading
+   `albaran-frutas-vila-4471.pdf` is slower than seeing the paper. The marketing page had its own
+   ".docmini" rectangles, which is the same mistake one layer down. */
+.dt {
+  display: flex; flex-direction: column; gap: 5px;
+  aspect-ratio: 1 / 1.414; flex: none;
+  border: 1px solid var(--panel-line);
+  border-radius: 0;                 /* paper is square — «files are never rounded lol» */
+  background: var(--panel-card);
+  box-shadow: var(--rocoto-shadow-hairline);
+  padding: 8px 7px; overflow: hidden;
+}
+.dt-hd { display: flex; flex-direction: column; gap: 1px;
+  border-bottom: 1px solid var(--panel-line); padding-bottom: 4px; }
+.dt-hd b { font-size: var(--panel-t-micro-b); font-weight: 600; letter-spacing: .01em;
+  line-height: 1.25; color: var(--panel-fg);
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.dt-hd i { font-style: normal; font-size: var(--panel-t-micro-a); color: var(--panel-faint);
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.dt-rows { display: flex; flex-direction: column; gap: 4px; flex: 1; padding-top: 3px; }
+.dt-r { height: 2.5px; width: var(--w, 80%); border-radius: 1px; background: var(--panel-sunk); }
+.dt-tot { display: flex; align-items: baseline; justify-content: space-between; gap: 4px;
+  border-top: 1px solid var(--panel-line); padding-top: 4px; }
+.dt-tot i { font-style: normal; font-size: var(--panel-t-micro-a); color: var(--panel-mid); }
+.dt-tot b { font-size: var(--panel-t-micro-c); font-weight: 600;
+  font-variant-numeric: tabular-nums; color: var(--panel-fg); }
+.dt-sub { font-size: var(--panel-t-micro-a); color: var(--panel-faint);
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.dt-missing { align-items: center; justify-content: center; gap: 7px;
+  border-style: dashed; border-color: var(--panel-attn); border-radius: 0;
+  background: var(--panel-attn-bg); }
+.dt-x { width: 15px; height: 15px; position: relative; }
+.dt-x::before, .dt-x::after { content: ''; position: absolute; inset: 50% 0 auto 0;
+  height: 1.5px; background: var(--panel-attn); border-radius: 1px; }
+.dt-x::before { transform: rotate(45deg); }
+.dt-x::after { transform: rotate(-45deg); }
+.dt-mtxt { font-size: var(--panel-t-micro-b); color: var(--panel-attn-text); }
+.dt-strip { display: flex; gap: var(--rocoto-space-sm); align-items: flex-start; }
+.rp-folder .dt-strip { padding: var(--rocoto-space-sm); overflow: hidden; }
+
+/* ── THE GENERATED FIELD, on the landing ─────────────────────────────────────────────────────
+   `.rt-blobs` and `.rt-curve` are the panel's own class names (webapp/src/components/field.css),
+   carrying inline backgrounds and paths that landing/agent_field.py generates — the same
+   arithmetic as Field.tsx, proved by tools/check_field_port.py. The eight hand-written gradient
+   classes and three pole classes they replaced are gone. */
+.rt-blobs { position: absolute; inset: 0; z-index: 0; }
+.rt-curve {
+  position: absolute; inset: 0; width: 100%; height: 100%; z-index: 1;
+  filter: blur(7px); transform-origin: 50% 50%;
+}
+
+/* ── THE SAME FIELD ON THE HOME PRODUCT TILES, AT A FRACTION OF THE PRESENCE ─────────────────
+   Peter, 2026-08-16: «add some subtle gradients like in the previous agents page. those were
+   very good. in the product tiles.»
+
+   What made the /agents tiles good was never the gradient on its own — it was a THREE-LAYER
+   field mostly covered by the thing it lit: blurred poles, a blurred bezier curve giving the
+   light a direction, film grain over both so it reads as printed paper rather than as a CSS
+   gradient, and a white artefact sitting on top so all that survived was a warm rim. Reproduced
+   here layer for layer, on `.pc .shot` — the field is emitted by build.py's `card()` from
+   `warm_field(slug)`, the same seed the enterprise carousel uses.
+
+   THE INTENSITY IS THE WHOLE JOB, and it is not the /agents one. There the field carried a
+   268px tile whose subject WAS the field; here it sits behind a product's real phone on a 190px
+   shot, on a page made of paper. The panel's own answer to this exact question is `.gfield` in
+   webapp field.css — «an entrance carries identity, not drama … same recipe, a third of the
+   presence», blur(64px) saturate(1.15) opacity .22 — so this is that setting, nudged up because
+   a 190px tile is a smaller canvas than a full-page door and the blur eats more of it. Swept
+   against the built page at .20 / .26 / .32 / .40: at .40 it is a coloured panel, at .32 the
+   bottom two tiles read as tinted rather than lit, at .20 the direction starts to go. .26.
+
+   THE TEXT NEVER TOUCHES IT. `.pc .meta` — the name, the sentence and «Saber más» — is a
+   separate white block below `.shot`, so no contrast changes by construction; the only thing
+   over the field is the product's own phone, and that carries its own opaque screen. */
+.v2 .pc .shot.pcfield { isolation: isolate; }
+.v2 .pc .pc-blobs {
+  position: absolute; inset: -18%; z-index: 0; pointer-events: none;
+  filter: blur(54px) saturate(1.12);
+  opacity: .26;
+}
+.v2 .pc .pc-curve {
+  position: absolute; inset: -6%; width: 112%; height: 112%; z-index: 1;
+  pointer-events: none; transform-origin: 50% 50%;
+  filter: blur(16px); opacity: .28;
+}
+/* the grain — the layer that stops it looking like a CSS gradient. Under the phone (z-index 2
+   against the artefact's 3), the same order the /agents tile stacked them in. */
+.v2 .pc .shot.pcfield::after {
+  content: ""; position: absolute; inset: 0; z-index: 2; pointer-events: none;
+  opacity: .19; mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+/* the product's own surface, above all three layers. `.shotfit` is a static flex item, and a
+   static child paints BELOW a positioned one — without this the grain would sit on the phone. */
+.v2 .pc .shot.pcfield .shotfit { position: relative; z-index: 3; }
+
+
+/* ── HOW A TILE HOLDS ITS ARTEFACT — lifted from webapp/src/routes/agents.css:118-146,1965.
+   The panel's rule: a preview shows the result WHOLE, never sliced. «Two rows and an honest
+   +N more beats three rows with one sliced.» So the mail body is clamped and its footer is
+   hidden rather than the card being cropped by the tile's edge. */
+.ag-shot > .rp-mail, .ag-shot > .rp-sheet, .ag-shot > .rp-list,
+.ag-shot > .rp-chat, .ag-shot > .rp-folder,
+.ag-art > .rp-mail, .ag-art > .rp-sheet, .ag-art > .rp-list,
+.ag-art > .rp-chat, .ag-art > .rp-folder {
+  position: relative; z-index: 3; width: 100%; max-height: 100%;
+}
+.ag-shot .rp-mail-body {
+  display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
+}
+.ag-shot .rp-mail-foot { display: none; }
+.ag-shot .dt-strip > .dt:nth-child(n + 3) { display: none; }
+.ag-shot .rp-chat .rp-btn:nth-child(n + 3) { display: none; }
+
+/* ── THE VOICE CHIP, verbatim from webapp/src/chat/chat-port.css:152-188 ─────────────────────
+   That file is itself a 1:1 port of the Android kit/VoiceChip.kt, and its first law is Peter's:
+   «all the chat composer/mic/waveforms MUST be like in the android app». The landing had its own
+   ".vn-*" bars, which is that law broken one surface further out. The play button is scaled down
+   here — the app's is 56px inside a full-width bubble, which is larger than this preview needs —
+   and everything else is the component's own geometry and colour. */
+.rk-vc {
+  display: flex; align-items: center;
+  width: 248px; max-width: 100%;
+  padding: var(--rocoto-space-sm);
+  background: var(--vc-bg);
+  box-shadow: inset 0 0 0 1px var(--vc-border);
+}
+.rk-vc--in {
+  border-radius: 0 6px 6px 6px;
+  --vc-bg: var(--rocoto-surface2);
+  --vc-border: var(--rocoto-border);
+  --vc-played: var(--rocoto-saffron);
+  --vc-unplayed: var(--rocoto-faint);
+  --vc-time: var(--rocoto-muted);
+  --vc-play: var(--rocoto-saffron-text);
+}
+.rk-vc--out {
+  border-radius: 6px 0 6px 6px;
+  --vc-bg: transparent;
+  --vc-border: var(--rocoto-chat-out-border);
+  --vc-played: var(--rocoto-saffron-text);
+  --vc-unplayed: color-mix(in srgb, var(--rocoto-saffron-text) 30%, transparent);
+  --vc-time: var(--rocoto-saffron-text);
+  --vc-play: var(--rocoto-saffron-text);
+}
+.rk-vc__play {
+  width: 30px; height: 30px; flex: none;
+  display: flex; align-items: center; justify-content: center; color: var(--vc-play);
+}
+.rk-vc__play .ic { width: 26px; height: 26px; }
+.rk-vc__gap2 { width: var(--rocoto-space-sm); flex: none; }
+.rk-vc__wave { flex: 1 1 0; min-width: 0; height: var(--rocoto-chat-wave-height, 24px); }
+.rk-vc__wave svg { width: 100%; height: 100%; display: block; }
+/* nothing has been played, so every bar is the unplayed tint — the app's own resting state */
+.rk-vc__wave rect { fill: var(--vc-unplayed); }
+.rk-vc__time { color: var(--vc-time); text-align: right; flex: none; font-size: 11px; }
+
+/* ── CHROMELESS (Peter, 2026-08-09: «why not chromeless lol… random amount of unnecessary space
+   in cards/chromes»). A WhatsApp message on a page is the bubble and who sent it. The beige
+   ground it used to sit in was a container invented for this page, and every container invented
+   for a page brings padding nobody chose. ─────────────────────────────────────────────────── */
+.chromeless { display: flex; flex-direction: column; align-items: flex-start; gap: 9px; }
+.slot-who {
+  display: flex; align-items: center; gap: 6px;
+  font-size: 12px; color: var(--faint);
+}
+.slot-who .wa-mark { width: 14px; height: 14px; color: #25D366; }
+.slot-said { font-size: 12.5px; color: var(--muted); }
+.chromeless .wa-b { max-width: 100%; margin-bottom: 0; text-align: left; }
+/* the incoming bubble carries WhatsApp's own chat ground as its shadow rather than a box */
+.chromeless .wa-in { box-shadow: 0 1px .5px rgba(11,20,26,.13), 0 6px 22px -14px rgba(11,20,26,.5); }
+
+/* THE PHONE, WHOLE. Peter: «why wasn't it the full properly scaled down phone?» The .wa-phone is
+   300x650 by design; it is shown entire at 46% instead of cropped to its top and faded, which
+   read as a broken frame. */
+/* transform does NOT shrink the layout box, so the phone needs a box sized to the RESULT and
+   the device scaled into it from the top-left. 300 x 650 at .44 = 132 x 286. */
+
+/* ONE BASELINE FOR EVERY SLOT. Peter: «the centreing is shit». Each component was centred inside
+   its own 300px box, so a short bubble and a tall email started at different heights and the
+   labels drifted away from them. The slot is a grid with one centred cell; the label sits
+   immediately under the machine instead of at the bottom of the tallest thing in it. */
+.slot { display: grid; place-items: center; }
+.slot-f { display: grid; place-items: center; }
+
+/* the sender, the way a mail client shows one — an email without one reads as a text box */
+/* the sender chip sits in its own column beside all three rows, the way a mail client shows one.
+   A flex-wrap header put «DE» on one line and pushed the rest full-width underneath. */
+/* every row belongs in column two; without this they auto-flow into the avatar's column and
+   the labels scatter across two columns */
+
+/* the enterprise mark — «maybe there should be a little enterprise icon here, like a building
+   factory type of icon» */
+.entcard-ic {
+  display: inline-flex; margin-bottom: 14px;
+  width: 38px; height: 38px; border-radius: 9px;
+  align-items: center; justify-content: center;
+  background: var(--rocoto-hero-glass, rgba(251,248,242,.078));
+  border: 1px solid var(--rocoto-hero-glass-border, rgba(251,248,242,.15));
+  color: var(--rocoto-hero-accent, #E2707D);
+}
+.entcard-ic .ic { width: 20px; height: 20px; }
+
+/* ══════════════════════════════════════════════════════════════════════════════════════════════
+   SITE CHROME. This sheet is named for /agents but build.py links it on EVERY page, so it is
+   where hand-maintained site CSS lives — hero.css is a Vite artefact and must never be edited.
+   ══════════════════════════════════════════════════════════════════════════════════════════════ */
+
+/* THE PRODUCTS MENU — two columns (Peter, 2026-08-09: «it's too wide. why is there so much open
+   space on the right? do a grid, two columns because you have six products»). build.py's own
+   comment has claimed «a CARD GRID (2 columns x 3 rows)» since it was written; the rule that
+   would have made it one was never there, so it rendered as a 580px column with an empty right
+   half and the icons clipped off the left edge. .mi and .mt had no rules at all. */
+.v2 .hasmenu:hover > .menu,
+.v2 .hasmenu:focus-within > .menu {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2px;
+  min-width: 0;
+  width: max-content;
+  max-width: min(560px, 92vw);
+  padding: 8px;
+}
+.v2 .menu a {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: start;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 7px;
+  font-weight: 400;
+}
+.v2 .menu a:hover { background: var(--sunk, #f2ece5); }
+.v2 .menu .mi { display: grid; place-items: center; color: var(--acc-t); padding-top: 1px; }
+.v2 .menu .mi .ic { width: 22px; height: 22px; }
+.v2 .menu .mt { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.v2 .menu .mt b { font-size: 14px; font-weight: 600; color: var(--ink); }
+.v2 .menu .mt span { font-size: 12.5px; color: var(--muted); line-height: 1.4; }
+@media (max-width: 700px) {
+  .v2 .hasmenu:hover > .menu, .v2 .hasmenu:focus-within > .menu {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* THE WORDMARK IS SET IN THE BRAND'S OWN FACE (Peter, 2026-08-09: «this footer, the logo and
+   shit is really, really bad. why don't we have it with the nice actual serif font?»). It was
+   the UI sans at 600, which is a label, not a wordmark. Fraunces is already the display face of
+   every heading on the site. */
+.v2 .brand {
+  font-family: var(--f-display, 'Fraunces', Georgia, serif);
+  font-weight: 500;
+  font-size: 19px;
+  letter-spacing: -.015em;
+  color: var(--ink);
+}
+.v2 .ftr .brand { font-size: 21px; color: var(--ink); }
+.v2 .ftr .brand svg { color: var(--acc); }
+@media (max-width: 860px) { .v2 .brand { font-size: 17px; } }
+
+/* the outgoing message, chromeless — WhatsApp's own green bubble and its quick replies, with no
+   device around them. The words are the point. */
+.chromeless.out { align-items: flex-end; }
+.chromeless .wa-out { background: #d9fdd3; border-top-right-radius: 0; max-width: 100%;
+  box-shadow: 0 1px .5px rgba(11,20,26,.13), 0 6px 22px -14px rgba(11,20,26,.5); }
+.waqs { display: flex; flex-direction: column; gap: 4px; align-self: stretch; }
+.waq {
+  text-align: center; background: #fff; border: 1px solid rgba(11,27,22,.09);
+  border-radius: 7px; padding: 8px; font-size: 13px; color: #027eb5;
+}
+
+/* the photographed thing and what Rocoto read back — /producto/inventario's shape */
+.shotcard {
+  width: 100%; border: 1px solid var(--panel-line); border-radius: 10px;
+  background: var(--panel-card); overflow: hidden; box-shadow: var(--rocoto-shadow-sheet);
+}
+.shotcard img { display: block; width: 100%; height: 132px; object-fit: cover;
+  clip-path: inset(0 2.5% 0 0); }
+.shotcard-b { padding: 11px 13px 13px; display: flex; flex-direction: column; gap: 3px; }
+.shotcard-k { font-size: 9.5px; letter-spacing: .1em; color: var(--panel-ghost); }
+.shotcard-b b { font-size: 15px; font-weight: 600; color: var(--panel-fg); }
+.shotcard-s { font-size: 12.5px; color: var(--panel-mid); }
+
+
+/* the machine's folder shows two thumbs; a third pushes past the slot's width */
+.slot-c .dt-strip > .dt:nth-child(n + 3) { display: none; }
+
+/* ── THE PIECES, AS A CHAIN ──────────────────────────────────────────────────────────────────
+   Peter, 2026-08-09: «tile grids with centred big icons but delivered better. maybe actually we
+   should combine these so it feels like Zapier/IFTTT». Three bands stacked with an arrow between
+   them reads as one sentence; three columns side by side read as three lists. Pick one tile from
+   each band and you have an agent — which is the product. */
+.wr-reg { padding-top: 8px; }
+.reg-chain { display: flex; flex-direction: column; align-items: center; margin-top: 44px; }
+.reg-band { width: 100%; }
+.reg-bh { display: flex; align-items: baseline; gap: 12px; margin-bottom: 18px;
+  padding-bottom: 12px; border-bottom: 1px solid var(--line); }
+.reg-k { font-family: var(--f-mono, ui-Inter, Inter); font-size: 11.5px; color: var(--faint); }
+.reg-bh b { font-size: 17px; font-weight: 600; letter-spacing: -.01em; }
+.reg-tiles {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+@media (min-width: 760px) { .reg-tiles { grid-template-columns: repeat(var(--c, 4), minmax(0, 1fr)); } }
+.reg-t {
+  display: flex; flex-direction: column; align-items: center; text-align: center; gap: 10px;
+  padding: 22px 16px 20px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--panel-card);
+  min-width: 0;
+}
+.reg-ic { display: grid; place-items: center; color: var(--acc-t); }
+.reg-ic .ic { width: 40px; height: 40px; }
+.reg-t b { font-size: 15px; font-weight: 600; color: var(--ink); }
+.reg-t span { font-size: 12.5px; color: var(--muted); line-height: 1.5; max-width: 24ch; }
+/* the join — what makes three bands read as one chain rather than three lists */
+.reg-join { display: grid; place-items: center; height: 64px; color: var(--line-hard); }
+.reg-join .ic { width: 20px; height: 20px; transform: rotate(90deg); }
+
+
+/* ── AN EMAIL, THE WAY A MAIL CLIENT DRAWS ONE ───────────────────────────────────────────────
+   Peter sent a screenshot of his own inbox: «not real email ui. just make like the real thing».
+   Subject as the heading, then the sender on one line with an avatar and a date, then «para X».
+   The DE/PARA/ASUNTO stack it replaced is a form, not an email. */
+/* two single lines that ellipsis — a wrapping address turned the header into four lines */
+.gm-who b { font-size: 13px; font-weight: 600; color: var(--panel-fg); }
+
+/* the proportion, as a proportion — «23/24 just looks like a year lol» */
+.rp-ring { width: 104px; height: 104px; margin: 0 auto; display: block; }
+.rp-ring circle { fill: none; stroke-width: 9; }
+.rp-ring-t { stroke: var(--panel-sunk); }
+.rp-ring-v { stroke: var(--panel-roc); stroke-linecap: round; }
+.rp-ring-n {
+  text-anchor: middle; font-size: 30px; font-weight: 300;
+  fill: var(--panel-fg); font-variant-numeric: tabular-nums;
+}
+.rp-ring-d { text-anchor: middle; font-size: 11px; fill: var(--panel-faint); }
+
+/* ── THE ROCOTO EMAIL, as it actually goes out ───────────────────────────────────────────────
+   Ported from `_shell()` in backend/brain/onboarding.py:1058 — the template every Rocoto email
+   uses. Peter sent a screenshot of one in his inbox: «bruh this is what emails look like». What
+   this replaced was a drawing of Gmail's thread header, which is chrome, not the email. */
+.rocmail { background: var(--rocoto-bg, #FAF7F3); padding: 14px 14px 12px; }
+.rocmail-card {
+  background: #fff;
+  border: 1px solid rgba(26,20,19,.10);
+  border-radius: 14px;
+  padding: 13px 15px 15px;
+  box-shadow: var(--rocoto-shadow-hairline);
+}
+.rocmail-hd { display: flex; align-items: center; gap: 8px; }
+.rocmail-hd svg { width: 30px; height: 30px; border-radius: 50%; }
+.rocmail-hd span {
+  font-size: 15px; font-weight: 700; letter-spacing: -.01em;
+  color: var(--rocoto-saffron-text, #831521);
+}
+.rocmail-h {
+  margin: 10px 0 7px; font-size: 16px; line-height: 1.25;
+  font-weight: 700; letter-spacing: -.02em; color: var(--panel-fg);
+  display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
+}
+.rocmail-b {
+  font-size: 12.5px; line-height: 1.6; color: var(--panel-mid); white-space: pre-wrap;
+  display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
+}
+.rocmail-cta {
+  display: inline-block; margin-top: 14px;
+  background: var(--rocoto-saffron, #C01B2C); color: #fff;
+  padding: 9px 18px; border-radius: 11px; font-weight: 600; font-size: 13px;
+}
+.rocmail-foot {
+  text-align: center; color: var(--panel-faint); font-size: 10.5px;
+  line-height: 1.5; margin-top: 9px;
+}
+
+/* a message that ARRIVES — plain mail chrome, no Rocoto branding, because this one is from a
+   supplier. The Rocoto-branded card (.rocmail) is only right for mail Rocoto sends. */
+.inmail {
+  background: #fff; border: 1px solid var(--panel-line); border-radius: 12px;
+  padding: 15px 16px 14px; box-shadow: var(--rocoto-shadow-sheet);
+}
+.inmail-hd { display: grid; grid-template-columns: auto minmax(0,1fr) auto; gap: 10px; align-items: center; }
+.inmail-av {
+  width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center;
+  background: var(--panel-sunk); color: var(--panel-mid); font-size: 12.5px; font-weight: 600;
+}
+.inmail-who { display: grid; gap: 1px; min-width: 0; }
+.inmail-who > * { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.inmail-who b { font-size: 13.5px; font-weight: 600; color: var(--panel-fg); }
+.inmail-who span { font-size: 12px; color: var(--panel-faint); }
+.inmail-dt { font-size: 11.5px; color: var(--panel-faint); white-space: nowrap; }
+.inmail-subj {
+  margin-top: 12px; font-size: 15px; font-weight: 600; line-height: 1.3; color: var(--panel-fg);
+}
+.inmail-b { margin-top: 6px; font-size: 12.5px; line-height: 1.6; color: var(--panel-mid); }
+.inmail-att {
+  margin-top: 12px; display: inline-flex; align-items: center; gap: 7px;
+  border: 1px solid var(--panel-line); border-radius: 8px; padding: 6px 11px;
+  font-size: 12px; color: var(--panel-mid); background: var(--panel-sunk);
+}
+.inmail-att .ic { width: 14px; height: 14px; }
+
+/* THE INVENTORY PHONE, WHOLE AND SCALED. The .sc-* component is 320px wide and ~660 tall by
+   design; transform does not shrink a layout box, so it sits in a box sized to the RESULT and
+   scales into it from the top-left. Same technique the WhatsApp phone needed. */
+.scbox { display: grid; place-items: center; width: 100%; height: 100%; --sc: .48; }
+.scbox-in { width: calc(320px * var(--sc)); height: calc(668px * var(--sc)); position: relative; }
+.scbox .sc { position: absolute; top: 0; left: 0; width: 320px;
+  transform: scale(var(--sc)); transform-origin: top left; }
+.scbox .sc-phone { width: 320px; }
+@media (min-width: 901px) { .scbox { --sc: .55; } }
+
+/* the sprite frame `.ic` is declared in sections-v2.css at a specificity that beats a plain
+   `.reg-ic .ic`, so a 40px glyph came out at the default size */
+.v2 .reg-t .reg-ic .ic { width: 40px; height: 40px; }
+.v2 .menu .mi .ic { width: 22px; height: 22px; }
+
+
+/* ── THE MAIL CLIENT'S OWN CHROME, around the Rocoto card ────────────────────────────────────
+   Peter sent two screenshots of his inbox: «put the actual reply buttons and format of the
+   subjects etc in the email things». A received email is two things stacked — the client's
+   chrome and the message inside it. Drawing only one of them was the mistake, twice. */
+.gml {
+  background: #fff; border: 1px solid var(--panel-line); border-radius: 12px;
+  overflow: hidden; box-shadow: var(--rocoto-shadow-sheet);
+}
+.gml-subj {
+  display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap;
+  padding: 13px 15px 0; font-size: 15.5px; line-height: 1.3; color: var(--panel-fg);
+}
+.gml-tag {
+  flex: none; background: var(--panel-sunk); color: var(--panel-mid);
+  border-radius: 4px; padding: 2px 7px; font-size: 11px;
+}
+.gml-tag i { font-style: normal; color: var(--panel-faint); }
+.gml-hd {
+  display: grid; grid-template-columns: 32px minmax(0, 1fr) max-content;
+  gap: 10px; align-items: center; padding: 12px 15px 11px;
+}
+.gml-av {
+  width: 32px; height: 32px; border-radius: 50%; overflow: hidden;
+  background: var(--panel-sunk); display: grid; place-items: center;
+}
+.gml-av svg { width: 26px; height: 26px; }
+.gml-who { display: grid; grid-template-rows: auto auto; gap: 1px; min-width: 0; }
+.gml-who > * { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.gml-l1 b { font-size: 13.5px; font-weight: 700; color: var(--panel-fg); }
+.gml-l1 em { font-style: normal; font-size: 12px; color: var(--panel-mid); margin-left: 5px; }
+.gml-l2 { font-size: 12px; color: var(--panel-faint); display: flex; align-items: center; gap: 3px; }
+.v2 .gml-l2 .ic { width: 11px; height: 11px; flex: none; }
+.gml-meta { display: flex; align-items: center; gap: 8px; font-size: 11px;
+  color: var(--panel-faint); white-space: nowrap; }
+.v2 .gml-meta .ic { width: 14px; height: 14px; flex: none; opacity: .55; }
+.gml-body { border-top: 1px solid var(--panel-line); }
+.gml-act { display: flex; gap: 8px; padding: 11px 16px 13px; border-top: 1px solid var(--panel-line); }
+.gml-btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  border: 1px solid var(--panel-line); border-radius: 999px;
+  padding: 5px 14px; font-size: 12.5px; color: var(--panel-mid);
+}
+.v2 .gml-btn .ic { width: 13px; height: 13px; flex: none; transform: scaleX(-1); }
+
+/* ══════════════════════════════════════════════════════════════════════════════════════════════
+   THE DOCUMENTATION MODULE — the developer door, at the bottom of /, /producto/agents and
+   /soluciones/empresa (2026-08-09).
+
+   It is the pattern every MCP-shipping company uses: a tinted panel, a segmented control, and a
+   row of the client marks that actually work. The row is the whole point — an IT lead reads it
+   as «my tooling connects» before he has read a word.
+
+   LIGHT, not dark. Six of the eight client marks are black or near-black app icons with their own
+   containers baked in; on a dark panel they vanish. The tint is the site's own --sunk, and the
+   code line carries its own dark card inside, which is where the contrast belongs.
+
+   The marks are the apps' OWN icons, at 40px, with nothing added behind them (Peter: «i want the
+   icons to be big, not in their own backgrounded thing»). What looks like a container in
+   claude.avif or cursor.webp IS the brand asset.
+   ══════════════════════════════════════════════════════════════════════════════════════════════ */
+.v2 .docsmod { border-bottom: none; }
+.docsmod-panel {
+  background: var(--sunk); border: 1px solid var(--line-soft);
+  border-radius: 22px; padding: 46px 22px 44px; text-align: center;
+}
+@media (min-width: 901px) { .docsmod-panel { padding: 66px 48px 60px; } }
+.docsmod-panel h2.t { margin: 8px auto 0; max-width: 20ch; }
+.docsmod-lead { margin: 14px auto 0; max-width: 58ch; font-size: 17px; line-height: 1.55;
+  color: var(--mid); }
+
+/* the segmented control */
+.docsmod-seg {
+  display: inline-flex; gap: 3px; margin: 28px auto 0; padding: 4px;
+  background: var(--white); border: 1px solid var(--line-soft); border-radius: 999px;
+}
+.docsmod-seg button {
+  border: 0; background: transparent; cursor: pointer; border-radius: 999px;
+  padding: 8px 22px; font: inherit; font-size: 14px; font-weight: 600; color: var(--mid);
+  letter-spacing: .01em; transition: background .18s ease, color .18s ease;
+}
+.docsmod-seg button:hover { color: var(--fg); }
+.docsmod-seg button.on { background: var(--acc); color: #fff; }
+.docsmod-seg button:focus-visible { outline: 2px solid var(--acc); outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) { .docsmod-seg button { transition: none; } }
+
+.docsmod-pane { display: none; }
+.docsmod-pane.on { display: block; }
+
+/* the one line you paste. Dark card, mono, scrolls sideways on a phone rather than wrapping —
+   a wrapped shell command is a command that cannot be copied. */
+.docsmod-code {
+  margin: 26px auto 0; max-width: 720px; text-align: left;
+  background: var(--rocoto-ink, #17110F); border-radius: 12px;
+  padding: 15px 17px; overflow-x: auto;
+  font-family: var(--f-mono, Inter, ui-Inter, Inter);
+  font-size: 13px; line-height: 1.65; color: rgba(247,242,234,.86);
+  white-space: pre; -webkit-overflow-scrolling: touch;
+}
+.docsmod-code i { font-style: normal; color: #E2707D; }
+.docsmod-code b { font-weight: 600; color: #F7F2EA; }
+.docsmod-code + .docsmod-code { margin-top: 10px; }
+
+/* ── THE ERP ROW, ON THE API TAB ─────────────────────────────────────────────────────────────
+   A wordmark is wide and short where an app icon is square, so these tiles are laid out around a
+   fixed 26px OPTICAL HEIGHT rather than the clients' 40px square. Sizing a wordmark by width is
+   what makes a logo row look like a ransom note: SAP would tower over Sage and the eye reads the
+   difference as importance. Height is the only dimension that makes marks look equal.
+
+   Every mark here keeps its own colour. These sit on the cream panel, where all five read — the
+   dark treatment they need in /docs is that page's problem and lives in that page's sheet. */
+.docsmod-erp { gap: 26px 30px; max-width: 800px; }
+.docsmod-erp .docsmod-cl { width: 132px; gap: 12px; }
+.docsmod-erpmark { height: 26px; display: flex; align-items: center; justify-content: center; }
+/* height, not max-height — see the note on .ent-sysmark img: a 16x16 mark under a cap stays
+   16px and drops its label off the shared baseline. */
+/* MONOCHROME (Peter, 2026-08-09: «the logos can surely be made white unless they dnt invest
+   well»). Grayscale rather than invert, because SAP's mark is white type knocked out of a solid
+   shape: flatten it to one colour and the word disappears. Grayscale keeps every knockout intact,
+   kills the colour clash between five unrelated brands, and reads as a deliberate row rather than
+   a pile of favicons. Colour comes back on hover, which is where a reader looking for THEIR
+   system will be. */
+.docsmod-erpmark img { height: 26px; width: auto; max-width: 118px; display: block;
+  filter: grayscale(1) opacity(.62); transition: filter .18s ease; }
+.docsmod-cl:hover .docsmod-erpmark img { filter: none; }
+@media (prefers-reduced-motion: reduce) { .docsmod-erpmark img { transition: none; } }
+@media (max-width: 700px) {
+  .docsmod-erp { gap: 22px 18px; }
+  .docsmod-erp .docsmod-cl { width: 104px; }
+  .docsmod-erpmark img { max-width: 94px; }
+}
+
+/* the client row */
+.docsmod-clients {
+  display: flex; flex-wrap: wrap; justify-content: center;
+  gap: 24px 22px; margin: 34px auto 0; max-width: 880px;
+}
+@media (min-width: 901px) { .docsmod-clients { gap: 28px 30px; } }
+/* 96px, not 74: «GitHub Copilot» is the widest label on the row and at 74 it wrapped to two
+   lines, which dropped that one tile's baseline below the other five. */
+.docsmod-cl { display: flex; flex-direction: column; align-items: center; gap: 11px; width: 96px; }
+/* on a phone 96px only fits two across, which files six clients into three lean rows. 88px and a
+   tighter gutter fits three, so the row reads as a row. */
+@media (max-width: 700px) {
+  .docsmod-clients { gap: 22px 10px; }
+  .docsmod-cl { width: 88px; }
+}
+.docsmod-cl img { width: 40px; height: 40px; display: block; object-fit: contain; }
+.docsmod-cl span { font-size: 12.5px; line-height: 1.3; color: var(--mid); font-weight: 500; }
+
+.docsmod-note {
+  margin: 26px auto 0; max-width: 60ch; font-size: 14px; line-height: 1.6; color: var(--faint);
+}
+.docsmod-act { margin-top: 30px; display: flex; justify-content: center; gap: 12px;
+  flex-wrap: wrap; }
+
+/* the inline «Documentation» link, for the places on a page where the reader is already asking
+   the developer question — under the enterprise API sample, under the agents rails band */
+/* `.v2 a` sets the ink colour at (0,1,1); a bare `.docslink` at (0,1,0) loses to it, which is
+   why the first build painted this link the same colour as body text. */
+.v2 .docslink {
+  display: inline-flex; align-items: center; gap: 7px; margin-top: 18px;
+  font-size: 14.5px; font-weight: 600; color: var(--acc-t); text-decoration: none;
+}
+.v2 .docslink:hover { text-decoration: underline; text-underline-offset: 3px; }
+.v2 .docslink .ic { width: 14px; height: 14px; }
+/* on the dark enterprise API band the accent has to be the hero accent, or it disappears */
+.v2 .ent-dark .docslink, .v2 .ent-api-foot .docslink { color: var(--rocoto-hero-accent, #E2707D); }
+.ent-api-foot { margin-top: 4px; }
+
+/* ── ONE AGENT, OPENED ───────────────────────────────────────────────────────────────────────
+   Peter: «if i wanna show a quick preview of the agent … it opens in a modal to explain what
+   happens? the input output throughput? … and if i can link to them then i can send different
+   people a message saying yo i built you the fix to the issue you have».
+
+   So it is :target, not JavaScript. The URL carries the agent — #a-<id> — which means it opens
+   from a cold click in WhatsApp, survives a share, costs no script, and closes with a link. */
+.agmodal { display: none; }
+.agmodal:target {
+  display: grid; place-items: center;
+  position: fixed; inset: 0; z-index: 200; padding: 20px;
+}
+.agmodal-scrim { position: absolute; inset: 0; background: rgba(26,20,19,.42); backdrop-filter: blur(2px); }
+.agmodal-in {
+  position: relative; width: min(940px, 100%); max-height: 92vh; overflow-y: auto;
+  background: var(--panel-paper); border: 1px solid var(--line);
+  border-radius: 16px; padding: 26px 26px 22px;
+  box-shadow: 0 40px 90px -40px rgba(26,20,19,.6);
+}
+.agmodal-x {
+  position: absolute; top: 12px; right: 14px; z-index: 2;
+  width: 30px; height: 30px; display: grid; place-items: center;
+  border-radius: 50%; color: var(--muted); text-decoration: none; font-size: 20px; line-height: 1;
+}
+.agmodal-x:hover { background: var(--panel-sunk); }
+.am-hd { display: flex; gap: 14px; align-items: flex-start; padding-right: 34px; }
+.am-hd b { display: block; font-size: 20px; font-weight: 600; letter-spacing: -.015em; }
+.am-hd span { display: block; margin-top: 4px; font-size: 14.5px; line-height: 1.55; color: var(--muted); }
+.am-k { font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--faint); }
+/* THE ASK IS STUCK TO THE BOTTOM (Peter, 2026-08-09). The modal scrolls — three delivery cards
+   are taller than a laptop — so a footer at the end of the document is a footer most readers
+   never reach. Sticky, on the modal's own paper, with the negative offset cancelling the panel's
+   bottom padding so it sits flush on the edge. */
+/* the scrolling column clears the sticky footer, which was cutting a label and a red
+   button in half at every viewport under 900px tall */
+.agmodal-in { padding-bottom: 132px; }
+.am-foot {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 12px;
+  position: sticky; bottom: -22px; z-index: 3;
+  margin: 22px -26px -22px; padding: 14px 26px 18px;
+  background: var(--panel-paper); border-top: 1px solid var(--line);
+}
+.v2 .am-ask { gap: 8px; }
+.v2 .am-ask .ic { width: 17px; height: 17px; flex: none; }
+.am-foot .am-lib { margin-left: auto; }
+.am-lib { font-size: 13.5px; color: var(--acc-t); font-weight: 600; text-decoration: none; }
+
+/* ── THE SEQUENCE: who says it → Rocoto → who finds out ──────────────────────────────────────
+   Peter, 2026-08-09: «wtf is un toque? one tap is a STUPID way to speak … it's slogany, not
+   clear AT ALL» and «the output is stupid … it notifies the customer, the director, and the
+   administration by email and the customer via WhatsApp. That should be super clear.»
+
+   So the rail badges are gone. Each output is a CARD WITH A PERSON'S NAME ON IT, on the rail
+   that actually reaches them. Horizontal on a desktop, stacked on a phone. */
+.am-hd { display: block; padding-right: 34px; }
+.am-hd b { display: block; font-size: 21px; font-weight: 600; letter-spacing: -.015em; }
+.am-hd > span { display: block; margin-top: 5px; font-size: 14.5px; line-height: 1.55; color: var(--muted); }
+
+.am-seq { display: grid; gap: 18px; margin-top: 24px; grid-template-columns: minmax(0,1fr); }
+@media (min-width: 760px) {
+  /* TWO COLUMNS, NOT THREE (Peter, 2026-08-09: «bad fitting»).
+     Three equal tracks cannot fit this content: the left one holds a single sentence and the
+     right one holds three tall cards, so whatever you align them to most of the modal is empty.
+     Top-aligned put the hub above a void; centring put a void above AND below it.
+     So the SOURCE is one compact rail — what was said, then Rocoto under it — and the cards take
+     the whole second column and all the height they need. The rail sticks while they scroll,
+     because the sentence is the thing you keep referring back to. */
+  .am-seq {
+    grid-template-columns: minmax(0, 300px) minmax(0, 1fr);
+    /* auto, not 1fr: a 1fr row absorbs every spare pixel, which put up to
+       396px of blank between Rocoto and the question underneath it */
+    grid-template-rows: auto auto auto;
+    gap: 0 30px; align-items: start;
+  }
+  .am-seq > .am-col:first-child { grid-column: 1; grid-row: 1; position: sticky; top: 4px; }
+  .am-seq > .am-mid { grid-column: 1; grid-row: 2; align-self: start; position: sticky; top: 150px; }
+  .am-seq > .am-col:last-child { grid-column: 2; grid-row: 1 / span 2; }
+}
+.am-col { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.am-k { font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--faint); }
+
+/* the sentence somebody actually types, with the words Rocoto lifts out of it marked */
+.am-said { display: flex; flex-direction: column; gap: 8px; }
+.am-who { font-size: 12.5px; color: var(--faint); }
+.am-bub {
+  background: #fff; border: 1px solid var(--line); border-radius: 12px 12px 12px 2px;
+  padding: 14px 16px; font-size: 15px; line-height: 1.55; color: var(--ink);
+  box-shadow: 0 1px .5px rgba(11,20,26,.1), 0 8px 24px -18px rgba(11,20,26,.5);
+}
+.am-bub mark {
+  background: var(--panel-roc-dim); color: var(--panel-roc-text);
+  border-radius: 4px; padding: 1px 4px; font-weight: 600;
+}
+
+.am-mid { display: flex; align-items: center; justify-content: center; gap: 6px; padding: 4px 0; }
+.am-wire { display: none; }
+@media (min-width: 760px) {
+  /* the hub sits between the two columns and the curves reach out of it both ways: in from the
+     sentence somebody typed, out to the spine the cards hang off */
+  /* Rocoto sits UNDER the sentence, and the two curves say which way the thing travels: down out
+     of what was said, then right across the gutter onto the spine the cards hang off. */
+  .am-mid { display: grid; grid-template-columns: auto 1fr; grid-template-rows: auto auto;
+    justify-items: start; align-items: center; padding: 0; gap: 0; }
+  .am-wire { display: block; }
+  .am-wire--in { grid-column: 1; grid-row: 1; margin-left: 26px; margin-bottom: -10px; }
+  .am-mid .am-hub { grid-column: 1; grid-row: 2; }
+  /* the run to the spine crosses the whole gutter, so this one STRETCHES — with
+     non-scaling-stroke so the sweep gets longer without the line getting thinner */
+  .am-wire--out { grid-column: 2; grid-row: 2; width: auto; justify-self: stretch;
+    margin-left: -8px; margin-right: -30px; }
+}
+.am-hub {
+  display: inline-flex; align-items: center; gap: 6px; white-space: nowrap;
+  border: 1px solid var(--line); border-radius: 999px; background: #fff;
+  padding: 6px 13px 6px 7px; font-size: 13px;
+}
+.v2 .am-hub svg { width: 20px; height: 20px; }
+
+/* one card per person */
+.am-gets { display: flex; flex-direction: column; gap: 10px; }
+.dlv { border: 1px solid var(--line); border-radius: 12px; background: var(--panel-card); padding: 12px 13px 13px; }
+.dlv-h { display: flex; align-items: center; gap: 8px; margin-bottom: 9px; }
+.v2 .dlv-h .ic { width: 16px; height: 16px; flex: none; color: var(--acc-t); }
+.dlv-h b { font-size: 13.5px; font-weight: 600; flex: 1; min-width: 0; }
+.dlv-h span {
+  font-size: 10.5px; letter-spacing: .06em; text-transform: uppercase; color: var(--faint);
+}
+.dlv-sys { border: 1px dashed var(--line-hard); border-radius: 9px; padding: 10px 12px; }
+.dlv-sys b { display: block; font-size: 12.5px; }
+.dlv-sys span { display: block; margin-top: 2px; font-size: 12px; color: var(--muted); }
+.dlv .wa-out { max-width: 100%; background: #d9fdd3; border-top-right-radius: 0; }
+.dlv .waqs { margin-top: 5px; }
+
+.am-asks {
+  display: flex; flex-direction: column; gap: 5px;
+  margin-top: 24px; padding-top: 18px; border-top: 1px solid var(--line);
+}
+.am-asks b { font-size: 14.5px; font-weight: 400; line-height: 1.5; }
+
+/* The wires are SVG now — .am-wire and .dlv-wire, drawn as real rounded elbows with a crimson
+   accent stroke. A second set of CSS border-elbows used to be stacked on top of them here; two
+   wire systems drawing the same joint is how the shapes went wrong. */
+
+/* each delivery reads as a node: its own surface, its own label, its own rail */
+.dlv {
+  border: 1px solid var(--line-hard); border-radius: 12px;
+  background: var(--panel-card); padding: 12px 13px 13px;
+  box-shadow: 0 2px 10px -8px rgba(26,20,19,.4);
+}
+.dlv .rocmail { background: transparent; padding: 0; }
+.dlv .rocmail-card { border-radius: 10px; padding: 11px 13px 13px; }
+.dlv .rocmail-h { margin: 8px 0 6px; font-size: 14px; }
+.dlv .rocmail-b { font-size: 12.5px; -webkit-line-clamp: 3; }
+.dlv .rocmail-cta { margin-top: 11px; padding: 7px 14px; font-size: 12px; }
+.dlv .rocmail-hd svg { width: 22px; height: 22px; }
+.dlv .rocmail-hd span { font-size: 13px; }
+
+/* ── WALK THE LIBRARY WITHOUT CLOSING IT ─────────────────────────────────────────────────────
+   Chevrons outside the panel, plus the arrow keys. They are plain links to the neighbour's
+   #a-<id>, so they work with no script and every step is still a shareable URL. */
+.agmodal-nav {
+  position: absolute; top: 50%; margin-top: -22px; z-index: 3;
+  width: 44px; height: 44px; display: grid; place-items: center;
+  border-radius: 50%; background: #fff; border: 1px solid var(--line);
+  color: var(--ink); text-decoration: none;
+  box-shadow: 0 6px 20px -10px rgba(26,20,19,.5);
+  transition: transform .16s cubic-bezier(.2,.7,.3,1);
+}
+.agmodal-nav:hover { transform: scale(1.06); }
+.agmodal-nav.prev { left: 16px; }
+.agmodal-nav.next { right: 16px; }
+.agmodal-nav.next .ic { transform: rotate(180deg); }
+.v2 .agmodal-nav .ic { width: 18px; height: 18px; }
+@media (max-width: 1060px) {
+  /* on a narrow screen the panel owns the width, so the chevrons sit under it */
+  .agmodal:target { align-content: start; padding-bottom: 76px; }
+  .agmodal-nav { top: auto; bottom: 16px; margin-top: 0; }
+  .agmodal-nav.prev { left: 50%; margin-left: -52px; }
+  .agmodal-nav.next { right: 50%; margin-right: -52px; }
+}
+@media (prefers-reduced-motion: reduce) { .agmodal-nav { transition: none } }
+
+/* ── THE STRIP AN IT LEAD SCANS FOR ──────────────────────────────────────────────────────────
+   Four facts, no flourish, high on the page. The API/MCP band was at 76% scroll depth on a page
+   ten screens long, so the proof that this is a real system arrived after the verdict. Cold on
+   purpose: this is the one band that is not selling. */
+.itstrip { padding-top: 10px; padding-bottom: 34px; }
+.itgrid { display: grid; gap: 22px 30px; grid-template-columns: minmax(0,1fr); }
+@media (min-width: 700px) { .itgrid { grid-template-columns: repeat(2, minmax(0,1fr)); } }
+@media (min-width: 1000px) { .itgrid { grid-template-columns: repeat(4, minmax(0,1fr)); gap: 0 30px; } }
+.itc { display: flex; flex-direction: column; gap: 7px; min-width: 0; }
+@media (min-width: 1000px) { .itc { padding-left: 18px; border-left: 1px solid var(--line); } }
+.v2 .itc .ic { width: 20px; height: 20px; color: var(--acc-t); }
+.itc b { font-size: 14.5px; font-weight: 600; }
+.itc span { font-size: 13px; line-height: 1.55; color: var(--muted); }
+.itlink { display: inline-block; margin-top: 24px; font-size: 13.5px; font-weight: 600;
+  color: var(--acc-t); text-decoration: none; }
+.itlink:hover { text-decoration: underline; }
+
+
+/* ── THE WHOLE LIBRARY, categories down the side ─────────────────────────────────────────────
+   Same :target mechanism as the agent panels, so #biblioteca is a link you can send. */
+.libov { display: none; }
+.libov:target {
+  display: grid; place-items: center; position: fixed; inset: 0; z-index: 210; padding: 20px;
+}
+.libov-in {
+  position: relative; width: min(1160px, 100%); max-height: 92vh; display: flex;
+  flex-direction: column; overflow: hidden;
+  background: var(--panel-paper); border: 1px solid var(--line); border-radius: 16px;
+  box-shadow: 0 40px 90px -40px rgba(26,20,19,.6);
+}
+.libov-hd { padding: 22px 26px 16px; border-bottom: 1px solid var(--line); }
+.libov-hd b {
+  font-family: var(--f-display, 'Fraunces', Georgia, serif);
+  font-size: 24px; font-weight: 400; letter-spacing: -.02em;
+}
+.libov-body { display: grid; grid-template-columns: minmax(0,1fr); overflow: hidden; }
+@media (min-width: 860px) { .libov-body { grid-template-columns: 232px minmax(0,1fr); } }
+
+
+/* ═══ THE ARTEFACT READS WITHOUT DECODING (Peter, 2026-08-09) ═══════════════════════════════
+   The analysis sheet leads with WHAT IS BEING COUNTED, then the figure, then the detail — it led
+   with a ring and left the subject underneath it. And the rail pips carry a label, because a
+   bare row of icons beside the cadence reads as debris rather than as in -> out. */
+.rp-lab { font-size: var(--panel-t-sm); color: var(--panel-mid); line-height: 1.35; }
+.rp-big .rp-num { margin: 2px 0 1px; }
+.rp-num em { font-size: .46em; font-weight: 400; margin-left: .14em; }
+
+/* ── ONE SHELL, WIDER, FULL-SCREEN ON A PHONE ────────────────────────────────────────────────
+   Peter, 2026-08-10: «i wanted the stuff to appear nested inside the same modal that has the
+   groups sidebar … square is bad, make it wider to open up space, and of course on mobile it
+   would be full screen». An agent panel now wears the library's shell: same rail, same frame. */
+.agmodal-in.libov-in {
+  width: min(1080px, 100%); max-height: 92vh;
+  display: flex; flex-direction: column; overflow: hidden;
+  padding: 0; background: var(--panel-paper);
+}
+.agmodal-in.libov-in .am-hd { padding: 22px 26px 0; }
+.agmodal-in.libov-in .libov-body { flex: 1; min-height: 0; }
+.libov-main { overflow-y: auto; padding: 20px 26px 26px; min-width: 0; }
+.agmodal-in.libov-in .am-foot { margin: 0; padding: 14px 26px 16px; background: var(--panel-paper); }
+
+
+@media (max-width: 860px) {
+  /* FULL SCREEN. A phone has no room for a frame around a frame. */
+  .agmodal:target, .libov:target { padding: 0; place-items: stretch; }
+  .agmodal-in, .libov-in {
+    width: 100%; max-width: none; max-height: none; height: 100dvh; min-height: 100dvh;
+    border-radius: 0; border: 0;
+  }
+  .agmodal-nav { bottom: 84px; }
+}
+
+/* ── ONE AGENT: A HEADER BAR, NOT A SIDEBAR ──────────────────────────────────────────────────
+   Peter, 2026-08-10: «is the sidebar necessary when we're in one agent? i think just a header
+   bar with a back button and the name of the agent». The rail belongs to the library view, where
+   it is doing a job. Here it was six links nobody needs, taking a quarter of the frame. */
+.am-bar {
+  display: flex; align-items: center; gap: 14px;
+  padding: 13px 60px 13px 22px;
+  border-bottom: 1px solid var(--line); background: var(--panel-card);
+}
+/* a plain chevron, no chrome — a bordered pill on a back control is a button pretending to be
+   navigation (Peter, 2026-08-10: «a chevron without background top left») */
+.am-back {
+  display: inline-flex; align-items: center; gap: 7px;
+  font-size: 14px; color: var(--muted); text-decoration: none;
+  padding: 4px 4px 4px 0; border: 0; background: none; margin-left: -2px;
+}
+.am-back:hover { color: var(--ink); }
+.v2 .am-back .ic { width: 17px; height: 17px; }
+.am-bar-n { flex: 1; min-width: 0; font-size: 15px; font-weight: 600;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.am-bar .am-ask { flex: none; }
+/* the bar already names the agent; the h2 under it was the same words twice */
+.agmodal-in.libov-in .am-hd > .am-hd-hide { display: none; }
+.agmodal-in.libov-in .am-hd { padding-top: 18px; }
+.agmodal-in.libov-in .am-hd { padding: 20px 26px 0; }
+/* the rail is the library's, so the agent's body is one column */
+.agmodal-in.libov-in .libov-body { display: block; }
+
+/* the footer walks the set BY NAME — «Ver la biblioteca» inside the library was nonsense */
+.am-foot { display: flex; align-items: center; gap: 14px; justify-content: space-between; }
+.am-step-l {
+  display: inline-flex; align-items: center; gap: 9px; min-width: 0;
+  text-decoration: none; color: var(--ink);
+  padding: 8px 14px; border-radius: 10px; border: 1px solid var(--line);
+}
+.am-step-l:hover { background: var(--panel-sunk); }
+.am-step-l.next { margin-left: auto; }
+.am-step-l.next .ic { transform: rotate(180deg); }
+.v2 .am-step-l .ic { width: 15px; height: 15px; flex: none; color: var(--faint); }
+.am-step-l span { display: grid; min-width: 0; }
+.am-step-l i { font-style: normal; font-size: 10.5px; letter-spacing: .08em;
+  text-transform: uppercase; color: var(--faint); }
+.am-step-l b { font-size: 13.5px; font-weight: 600;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+@media (max-width: 620px) { .am-step-l i { display: none } .am-bar .am-ask { display: none } }
+
+/* THE MARK SITS WITH THE SENTENCE IT READ (Peter, 2026-08-10: «why the rocoto thing there, you
+   didn't build this thinking about the space we have»). It was pinned to the middle of a column
+   as tall as three delivery cards, so it floated in paper with a long wire chasing it. */
+
+
+/* ── AS CHROMELESS AS IT GOES (Peter, 2026-08-10) ────────────────────────────────────────────
+   A line chevron back to the library, the two steps together on the left, the ask bottom right.
+   Nothing here needs a border to say what it is. */
+.am-bar { padding: 11px 60px 11px 16px; gap: 10px; }
+.am-back { padding: 6px; margin-left: 0; }
+/* the chevron IS a span — hiding "span" to drop the old text label hid the chevron with it */
+.am-back span { display: none; }
+.am-back .am-chev { display: block; }
+.v2 .am-back .ic { width: 18px; height: 18px; }
+.am-bar-n { font-size: 15.5px; }
+
+.am-foot { gap: 8px; }
+.am-step-l { border: 0; padding: 7px 10px; border-radius: 9px; }
+.am-step-l.next { margin-left: 0; }
+.am-foot .am-ask { margin-left: auto; flex: none; }
+@media (max-width: 620px) {
+  .am-step-l b { max-width: 92px; }
+  .am-foot .am-ask { width: auto; }
+}
+
+
+/* ── THE RECONCILIATION SCENE ────────────────────────────────────────────────────────────────
+   Peter's own spec: «an email containing the list of invoices, and then a ui having the counter
+   with a pie chart and the list of what's missing and then all the file thumbnails below that».
+   An agent whose point is arithmetic and paper should show arithmetic and paper. */
+.rel { margin-top: 10px; border-top: 1px solid var(--panel-line); }
+.rel-r {
+  display: flex; align-items: baseline; justify-content: space-between; gap: 12px;
+  padding: 7px 0; border-bottom: 1px solid var(--panel-line);
+  font-size: 12.5px; color: var(--panel-mid);
+}
+.rel-r b { font-weight: 500; color: var(--panel-fg); }
+.rel-r span { font-variant-numeric: tabular-nums; }
+.rel-more { border-bottom: 0; }
+.rel-more b { font-weight: 400; color: var(--panel-faint); font-size: 12px; }
+
+.recon { display: flex; flex-direction: column; gap: 16px; }
+.recon-top { display: flex; align-items: center; gap: 18px; }
+.recon .rp-ring { width: 92px; height: 92px; flex: none; margin: 0; }
+.recon-miss { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+.recon-miss b { font-size: 14.5px; font-weight: 600; }
+.recon-miss > span:last-child { font-size: 12.5px; color: var(--panel-mid); line-height: 1.5; }
+.recon-docs { display: flex; flex-direction: column; gap: 8px;
+  padding-top: 14px; border-top: 1px solid var(--panel-line); }
+.recon-docs .dt-strip { gap: 8px; flex-wrap: wrap; }
+
+/* ══════════════════════════════════════════════════════════════════════════════════════════════
+   THE EMAIL PRIMITIVE — one drawing, every caller (Peter, 2026-08-10: «the emails better just
+   look like real composed emails bro with the reply button on the right etc. all round. can't you
+   save those primitives so we don't have to keep giving u the same feedback»).
+
+   An email was drawn six ways on this page. Every fix landed on one of them and the note came
+   back on the next. There is one now. The parts a reader recognises are always present and always
+   in this order: sender with an avatar, the address, the date on the right, «para X», the subject
+   as a heading, the body, and the reply row with the reply arrow.
+   ══════════════════════════════════════════════════════════════════════════════════════════════ */
+.em {
+  background: #fff; border: 1px solid var(--panel-line); border-radius: 12px;
+  overflow: hidden; box-shadow: var(--rocoto-shadow-sheet);
+}
+.em-av {
+  width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center;
+  background: var(--panel-roc-dim); color: var(--panel-roc-text);
+  font-size: 12.5px; font-weight: 600;
+}
+.em-body {
+  padding: 12px 15px; border-top: 1px solid var(--panel-line);
+  font-size: 12.5px; line-height: 1.6; color: var(--panel-mid); white-space: pre-wrap;
+  display: -webkit-box; -webkit-box-orient: vertical; overflow: hidden;
+}
+.em .rocmail-card { margin: 0 12px 12px; border-radius: 10px; }
+.em .rel { margin: 0 15px 12px; }
+.em-att {
+  margin: 0 15px 12px; display: inline-flex; align-items: center; gap: 7px;
+  border: 1px solid var(--panel-line); border-radius: 8px; padding: 6px 11px;
+  font-size: 12px; color: var(--panel-mid); background: var(--panel-sunk);
+}
+.v2 .em-att .ic { width: 14px; height: 14px; }
+/* THE REPLY ROW. Its arrow is the thing that says «email» faster than any other detail. */
+
+/* ── WHO IT HELPS, ABOVE WHAT IT DOES ────────────────────────────────────────────────────────
+   Peter, 2026-08-10: «each one should have a "help" sentence above as a subtitle, aimed at
+   helping ONE PERSON achieve something». A reader scanning seventeen agents is looking for their
+   own job, not for a feature. The role goes first, at a size you cannot miss. */
+.am-for {
+  display: inline-block; margin-bottom: 7px;
+  font-size: 11.5px; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--acc-t); font-weight: 600;
+}
+.am-what {
+  display: block; font-size: 19px; line-height: 1.4; letter-spacing: -.01em;
+  color: var(--ink); max-width: 46ch;
+}
+
+/* ── THE PANEL SCROLLS AGAIN ─────────────────────────────────────────────────────────────────
+   Peter, 2026-08-10: «can't seem to scroll within the modals». When the rail came out I set
+   .libov-body to display:block, which killed the flex chain — so .libov-main had no height to be
+   constrained by and nothing could overflow. A scroll container needs a bounded parent. */
+.agmodal-in.libov-in .libov-body { display: flex; flex: 1; min-height: 0; }
+.agmodal-in.libov-in .libov-main { flex: 1; min-height: 0; overflow-y: auto; }
+
+/* the dot field, mild — the brand's own ground, already on the enterprise card */
+.agmodal-in.libov-in {
+  background-color: var(--panel-paper);
+  background-image: radial-gradient(rgba(26,20,19,.055) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+.agmodal-in.libov-in .am-bar,
+.agmodal-in.libov-in .am-foot { background: var(--panel-card); }
+
+/* A LINE CHEVRON, NOT A TRIANGLE. Phosphor's caret is a solid wedge at this size; two borders on
+   a rotated square is an actual chevron and needs no glyph. */
+.am-step-l .ic, .am-back .ic { display: none; }
+.am-chev {
+  width: 8px; height: 8px; flex: none;
+  border-left: 1.6px solid currentColor; border-bottom: 1.6px solid currentColor;
+  transform: rotate(45deg); color: var(--faint);
+}
+.am-step-l.next .am-chev { transform: rotate(-135deg); }
+.am-back .am-chev { width: 9px; height: 9px; border-width: 1.8px; color: var(--muted); }
+
+/* the two steps are one control with a divider, not two loose links */
+.am-foot .am-step-l + .am-step-l { position: relative; }
+.am-foot .am-step-l + .am-step-l::before {
+  content: ''; position: absolute; left: -5px; top: 8px; bottom: 8px;
+  width: 1px; background: var(--line);
+}
+
+/* the bar owns its own close, flush to the frame — a floating × over an inset white strip is
+   what made the top read as sloppy */
+.agmodal-in.libov-in .am-bar { padding: 12px 16px 12px 14px; }
+.am-x {
+  flex: none; width: 30px; height: 30px; display: grid; place-items: center;
+  border-radius: 50%; color: var(--muted); text-decoration: none;
+  font-size: 20px; line-height: 1;
+}
+.am-x:hover { background: var(--panel-sunk); color: var(--ink); }
+/* the close belongs ON the bar's line, not floating above an inset strip */
+/* it had become a flex ITEM in the column, taking 30px of height and pushing the bar down —
+   which is the gap above the bar that read as sloppy */
+.agmodal-in.libov-in > .agmodal-x { position: absolute; top: 21px; right: 14px; z-index: 4; }
+.agmodal-in.libov-in .am-bar { padding-right: 56px; }
+/* the flow needs no captions: a message on the left and named cards on the right say it */
+.am-seq .am-k { display: none; }
+.am-asks .am-k { display: block; }
+
+/* the header bar owns the top of the frame. The 21px above it was the close button sitting in
+   the column's flow; it is taken out of flow explicitly here rather than by inheritance. */
+.agmodal-in.libov-in { position: relative; }
+.agmodal-in.libov-in > .agmodal-x {
+  position: absolute !important; top: 13px; right: 14px; z-index: 5; margin: 0;
+}
+.agmodal-in.libov-in > .am-bar:first-of-type { margin-top: 0; }
+
+/* ── THE MAIL CLIENT'S OWN CHROME ────────────────────────────────────────────────────────────
+   Peter pasted Gmail's DOM: «notice the icons etc». The glyphs are what make a screenshot read
+   as an email before a word of it is read. Subject with print and open-in-new at its right; then
+   avatar, sender in bold with <address>, the timestamp, and star · react · reply · more. */
+.em-top {
+  display: flex; align-items: flex-start; gap: 12px;
+  padding: 14px 16px 12px;
+}
+.em-subj {
+  flex: 1; min-width: 0; margin: 0;
+  font-size: 17px; font-weight: 400; line-height: 1.3; letter-spacing: -.01em;
+  color: var(--panel-fg);
+}
+.em-tools { display: flex; gap: 12px; flex: none; padding-top: 2px; }
+.gmi { width: 18px; height: 18px; fill: currentColor; color: var(--panel-faint); flex: none; }
+.em-tools .gmi { width: 17px; height: 17px; }
+
+.em-hd {
+  display: grid; grid-template-columns: auto minmax(0,1fr) auto;
+  gap: 11px; align-items: flex-start; padding: 0 16px 12px;
+}
+.em-av {
+  width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center;
+  background: var(--panel-roc-dim); color: var(--panel-roc-text);
+  font-size: 14px; font-weight: 600;
+}
+.em-who { display: grid; gap: 2px; min-width: 0; padding-top: 2px; }
+.em-who > * { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.em-l1 b { font-size: 13.5px; font-weight: 700; color: var(--panel-fg); }
+.em-l1 em { font-style: normal; font-size: 12.5px; color: var(--panel-mid); margin-left: 4px; }
+.em-to { font-size: 12.5px; color: var(--panel-mid); display: flex; align-items: center; gap: 5px; }
+.em-caret {
+  width: 0; height: 0; border-left: 3.5px solid transparent; border-right: 3.5px solid transparent;
+  border-top: 4px solid var(--panel-faint);
+}
+.em-meta { display: flex; align-items: center; gap: 11px; flex: none; padding-top: 3px; }
+.em-date { font-size: 12px; color: var(--panel-mid); white-space: nowrap; }
+
+.em-act {
+  display: flex; gap: 9px; padding: 12px 16px 14px;
+}
+.em-btn {
+  display: inline-flex; align-items: center; gap: 7px;
+  border: 1px solid var(--panel-line); border-radius: 999px;
+  padding: 6px 15px; font-size: 13px; color: var(--panel-mid);
+}
+.em-btn .gmi { width: 15px; height: 15px; }
+@media (max-width: 620px) { .em-meta .gmi:nth-of-type(n+2) { display: none } }
+
+/* ── WHAT LEAVES BY API — the reader here is an IT lead ──────────────────────────────────────
+   Peter: «also API things cos some things will be sent out by API». A request line, the real JSON
+   their system receives, and when it fires. Nothing decorative: this one is read, not felt. */
+.apic {
+  border: 1px solid var(--panel-line); border-radius: 10px; overflow: hidden;
+  background: var(--panel-card);
+}
+.apic-h {
+  display: flex; align-items: center; gap: 9px;
+  padding: 9px 12px; border-bottom: 1px solid var(--panel-line);
+  font-family: var(--rocoto-font-mono, ui-Inter, Inter); font-size: 12px;
+}
+.apic-v {
+  background: var(--panel-live-bg); color: var(--panel-live-text);
+  border-radius: 4px; padding: 2px 7px; font-weight: 700; font-size: 10.5px; letter-spacing: .04em;
+}
+.apic-h code { color: var(--panel-mid); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.apic-b {
+  margin: 0; padding: 11px 12px; overflow-x: auto;
+  font-family: var(--rocoto-font-mono, ui-Inter, Inter);
+  font-size: 11.5px; line-height: 1.6; color: var(--panel-mid); background: var(--panel-sunk);
+}
+.apic-n { padding: 9px 12px; font-size: 12px; color: var(--panel-faint); }
+
+/* ── THE PHONE FORM — fields on the screen where work goes in ────────────────────────────────
+   Peter: «also phone forms». Read closely, so a field is a label and a REAL value on one line,
+   with the hairline between rows that every mobile form has. */
+.pf { margin: 0 var(--rocoto-space-lg); border-top: 1px solid var(--panel-line); }
+.pf-f {
+  display: flex; align-items: baseline; justify-content: space-between; gap: 12px;
+  padding: 9px 0; border-bottom: 1px solid var(--panel-line);
+}
+.pf-f span { font-size: 11px; letter-spacing: .04em; text-transform: uppercase; color: var(--panel-faint); }
+.pf-f b { font-size: 13px; font-weight: 600; color: var(--panel-fg); font-variant-numeric: tabular-nums; }
+
+/* ── THE CHART WIDGET — bars that carry their own numbers ────────────────────────────────────
+   «assuming people look at them in detail» — so every bar is labelled and valued. A chart whose
+   values you cannot read is decoration. */
+.wch {
+  display: flex; align-items: flex-end; gap: 14px;
+  padding: 20px 18px 14px; height: 170px;
+}
+.wch-c { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 6px; height: 100%; justify-content: flex-end; }
+.wch-c b { font-size: 12.5px; font-weight: 600; font-variant-numeric: tabular-nums; color: var(--panel-fg); }
+.wch-b {
+  width: 100%; max-width: 46px; border-radius: 5px 5px 2px 2px;
+  background: linear-gradient(180deg, var(--panel-roc), color-mix(in srgb, var(--panel-roc) 62%, transparent));
+}
+.wch-c i { font-style: normal; font-size: 11px; color: var(--panel-faint); text-align: center; }
+.wch-s {
+  padding: 0 18px 14px; font-size: 12px; color: var(--panel-faint);
+  border-top: 1px solid var(--panel-line); padding-top: 11px; margin-top: 2px;
+}
+
+/* ── THE MODAL KEEPS ITS SHAPE ───────────────────────────────────────────────────────────────
+   Peter, 2026-08-10: «make the modal NOT change shape bro». It was sized by its content, so
+   every agent opened a different rectangle and walking the library with the chevrons made the
+   frame jump. One height; the content scrolls inside it. */
+.agmodal-in.libov-in { height: min(860px, 92vh); }
+@media (max-width: 860px) { .agmodal-in.libov-in { height: 100dvh; } }
+
+/* the back control says where it goes — his line, verbatim */
+.am-back { gap: 8px; }
+.am-back .am-back-l { display: inline; font-size: 13.5px; color: var(--muted); }
+.am-back:hover .am-back-l { color: var(--ink); }
+
+/* ONE THUMBNAIL SIZE. Mixed widths across scenes made the paper look uneven; a sheaf reads as a
+   sheaf when every sheet is the same sheet. */
+.dt-strip .dt { width: 96px !important; }
+.rp-folder .dt-strip, .recon-docs .dt-strip { gap: 10px; flex-wrap: wrap; }
+
+/* ── THE TITLE IS CENTRED, AS A TITLE IS ─────────────────────────────────────────────────────
+   Peter, 2026-08-10: «the title of the agent should be centred in the modal as standard». A
+   spacer mirrors the back control's width so the centre is the FRAME's centre, not what is left
+   over after the controls. */
+.agmodal-in.libov-in .am-bar { display: grid; grid-template-columns: 1fr auto 1fr; }
+.am-bar-n { text-align: center; font-size: 15px; }
+.am-bar-sp { display: block; }
+.am-back { justify-self: start; }
+
+/* ── THE ROLE LEADS THE SENTENCE ─────────────────────────────────────────────────────────────
+   «the placement of the "para compras" thing is weird bro». It was floating above as its own
+   line, which read as a stray label. It is the first two words of the sentence it belongs to. */
+.am-what {
+  margin: 0; font-size: 17px; line-height: 1.5; letter-spacing: -.005em;
+  color: var(--ink); max-width: 52ch;
+}
+.am-for {
+  display: inline; margin: 0 8px 0 0; text-transform: none; letter-spacing: 0;
+  font-size: inherit; font-weight: 600; color: var(--acc-t);
+}
+.am-for::after { content: ' ·'; color: var(--line-hard); font-weight: 400; }
+.agmodal-in.libov-in .am-hd { padding: 18px 26px 2px; }
+
+/* ── THE EMAIL SAYS IT, RATHER THAN ASKING YOU TO GO AND READ IT ─────────────────────────────
+   «emails should contain the necessary info, not requiring the person to open it in rocoto. the
+   link to open can even be a simple hyperlink». A red button says «the real thing is elsewhere»;
+   a link says «and there is more if you want it». */
+.rocmail-link {
+  display: inline-block; margin-top: 10px;
+  font-size: 13px; font-weight: 600; color: var(--acc-t); text-decoration: none;
+}
+.rocmail-link:hover { text-decoration: underline; }
+.rocmail-b { font-size: 13px; line-height: 1.6; -webkit-line-clamp: 5; }
+.em .rocmail-card { padding: 12px 14px 14px; }
+
+/* ── THE CONTEXT BAND, UNDER THE HEADER ──────────────────────────────────────────────────────
+   Peter, 2026-08-10: «make sure the copy and everything is super tight, and that the agents are
+   super clear as to what they unlock… perhaps best to have the info to be under the header. it's
+   about contextualising them.»
+
+   Three facts a reader needs before they look at anything: who it is for, when it fires, and what
+   it leaves behind. They sat scattered — the role floating as a label, the cadence only on the
+   tile, the surface nowhere. One band, three labelled pairs, immediately under the title. */
+.am-what {
+  margin: 0; font-size: 20px; line-height: 1.4; letter-spacing: -.012em;
+  color: var(--ink); max-width: 44ch; font-weight: 500;
+}
+.am-ctx {
+  display: flex; flex-wrap: wrap; gap: 0 34px;
+  margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--line);
+}
+.am-ctx-i { display: grid; gap: 3px; min-width: 0; }
+.am-ctx-i i {
+  font-style: normal; font-size: 10.5px; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--faint);
+}
+.am-ctx-i b { font-size: 13.5px; font-weight: 600; color: var(--ink); }
+.am-for { display: none; }
+.agmodal-in.libov-in .am-hd { padding: 20px 26px 4px; }
+@media (max-width: 620px) { .am-ctx { gap: 12px 22px; } .am-what { font-size: 18px; } }
+
+
+/* ── scene: cash-off-the-route ── */
+/* ── THE CASH SCENE — a day's takings, counted ───────────────────────────────────────────────
+   The reconciliation scene draws a proportion as a ring. This one draws a SUM: one bar that is
+   the day, split into the three drivers who brought it in, with a dashed tail for the part still
+   on the road. `.am-k` is hidden inside `.am-seq` («the flow needs no captions»), so the label
+   that belongs to the count sheet itself carries its own class. */
+.cash-said { gap: 15px; }
+.cash-t { font-style: normal; margin-left: 6px; color: var(--faint); }
+
+.cash { display: flex; flex-direction: column; gap: 11px; }
+.cash-k { font-size: 10.5px; letter-spacing: .08em; text-transform: uppercase;
+  color: var(--panel-ghost); }
+.cash-tot { display: flex; flex-direction: column; gap: 3px; }
+.cash-tot b { font-size: 31px; font-weight: 300; line-height: 1;
+  font-variant-numeric: tabular-nums; color: var(--panel-fg); }
+
+/* the day as one bar: three men, then the part still out. Segment widths are the real figures —
+   flex-grow carries them, so the picture cannot disagree with the numbers printed under it. */
+.cash-stack { display: flex; align-items: stretch; gap: 3px; height: 9px; }
+.cash-stack i { flex-basis: 0; flex-shrink: 1; border-radius: 2px;
+  background: var(--panel-roc); opacity: var(--o, 1); }
+/* the selector carries `.cash-stack` so its fixed basis beats the rule above — written flat it
+   lost to `.cash-stack i` on specificity and the tail collapsed to a sliver */
+.cash-stack .cash-open-seg { flex: 0 0 46px; background: none;
+  border: 1px dashed var(--panel-attn); opacity: .8; }
+
+.cash-rows { border-top: 1px solid var(--panel-line); }
+.cash-r { display: grid; grid-template-columns: 9px auto 1fr auto; align-items: baseline;
+  gap: 9px; padding: 8px 0; border-bottom: 1px solid var(--panel-line); }
+.cash-d { width: 9px; height: 9px; border-radius: 2px; align-self: center;
+  background: var(--panel-roc); opacity: var(--o, 1); }
+.cash-r b { font-size: 13.5px; font-weight: 600; color: var(--panel-fg); }
+.cash-r i { font-style: normal; font-size: 12px; color: var(--panel-faint); }
+.cash-v { font-size: 13.5px; font-weight: 600; font-variant-numeric: tabular-nums;
+  color: var(--panel-fg); }
+
+/* an open stop is a row whose figure is still to come — drawn the way the sheaf's gap is drawn,
+   at full size, in the attention tint the missing invoice already uses */
+.cash-open { display: flex; flex-direction: column; gap: 6px; padding-top: 3px; }
+.cash-o { display: grid; grid-template-columns: auto 1fr auto; align-items: baseline; gap: 9px;
+  border: 1px dashed var(--panel-attn); background: var(--panel-attn-bg);
+  border-radius: 8px; padding: 8px 10px; }
+.cash-o b { font-size: 13px; font-weight: 600; color: var(--panel-fg); }
+.cash-o i { font-style: normal; font-size: 12px; color: var(--panel-mid); }
+.cash-o > span { font-size: 10.5px; letter-spacing: .06em; text-transform: uppercase;
+  color: var(--panel-attn-text); }
+
+/* ── scene: catalogue-hole ── */
+/* ── THE CATALOGUE-GAP SCENE ─────────────────────────────────────────────────────────────────
+   Goes in public/assets/agents.css, right after the .recon block (the reconciliation scene), so
+   the bespoke scenes stay together.
+
+   Demand you cannot fill. The event is a REPETITION, so the left column is the repetition: the
+   same ask in three different mouths, dated down a spine, with what each one was worth beside
+   the day. The spine, its dot and its accent are the ones the delivery cards already use, so
+   the two columns read as one drawing. */
+.chq-hd { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+.chq { position: relative; display: flex; flex-direction: column; gap: 15px; padding-left: 20px; }
+.chq::before {
+  content: ''; position: absolute; left: 4px; top: 7px; bottom: 7px; width: 2px;
+  border-radius: 2px; background: var(--line-hard);
+}
+.chq-a { position: relative; }
+.chq-a::before {
+  content: ''; position: absolute; left: -19px; top: 3px; width: 8px; height: 8px;
+  border-radius: 50%; background: var(--acc); box-shadow: 0 0 0 3px var(--panel-paper);
+}
+.chq-d {
+  display: flex; align-items: baseline; justify-content: space-between; gap: 10px;
+  margin-bottom: 7px;
+}
+.chq-d b { font-size: 12px; font-weight: 600; color: var(--ink); }
+.chq-d span { font-size: 12.5px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.chq-c { gap: 6px; }
+.chq-new {
+  font-style: normal; font-size: 9.5px; letter-spacing: .07em; text-transform: uppercase;
+  border-radius: 999px; padding: 2px 7px;
+  background: var(--panel-roc-dim); color: var(--panel-roc-text);
+}
+/* the lifted words look the same inside a WhatsApp bubble as they do in .am-bub — one mark, one
+   meaning, wherever the sentence happens to be drawn */
+.chq .wa-b mark {
+  background: var(--panel-roc-dim); color: var(--panel-roc-text);
+  border-radius: 4px; padding: 1px 4px; font-weight: 600;
+  -webkit-box-decoration-break: clone; box-decoration-break: clone;
+}
+/* the scene carries its own micro label: `.am-seq .am-k` is display:none in the live sheet, and
+   a figure whose label is invisible is the exact mistake the panel's LABEL-FIRST rule exists to
+   stop — the reader meets the number before the subject */
+.chole-k, .chq-k {
+  font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--faint);
+}
+.chq-sum {
+  display: flex; align-items: baseline; gap: 9px;
+  margin-top: 2px; padding-top: 13px; border-top: 1px solid var(--line);
+}
+.chq-sum b { font-size: 24px; font-weight: 300; font-variant-numeric: tabular-nums; }
+.chq-sum span { font-size: 12.5px; color: var(--muted); }
+
+/* the count, in Rocoto's own panel grammar: the ring, the money, and what is still under the bar */
+.chole { display: flex; flex-direction: column; gap: 15px; }
+.chole-hd {
+  display: flex; align-items: baseline; justify-content: space-between; gap: 10px;
+  padding-bottom: 11px; border-bottom: 1px solid var(--panel-line);
+}
+.chole-hd b { font-size: 16px; font-weight: 600; }
+.chole-hd span {
+  font-size: 10.5px; letter-spacing: .06em; text-transform: uppercase; color: var(--panel-faint);
+}
+.chole-top { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.chole-f { display: flex; flex-direction: column; align-items: flex-start; gap: 7px; min-width: 0; }
+.chole .rp-ring { width: 86px; height: 86px; margin: 0; }
+.chole-eur { font-size: 30px; font-weight: 300; line-height: 1; font-variant-numeric: tabular-nums; }
+.chole-fs { font-size: 12.5px; color: var(--panel-mid); line-height: 1.5; }
+.chole-note { font-size: 13px; line-height: 1.55; color: var(--panel-fg); }
+.chole-watch {
+  display: flex; flex-direction: column; gap: 9px;
+  padding-top: 13px; border-top: 1px solid var(--panel-line);
+}
+.chole-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chole-chip {
+  display: inline-flex; align-items: baseline; gap: 7px; font-size: 12px;
+  border: 1px solid var(--panel-line); border-radius: 999px; padding: 5px 11px;
+  background: var(--panel-sunk);
+}
+.chole-chip b { font-weight: 500; color: var(--panel-fg); }
+.chole-chip i { font-style: normal; color: var(--panel-faint); font-variant-numeric: tabular-nums; }
+@media (max-width: 430px) {
+  /* the ring and the money stack on a phone rather than squeezing to 130px each */
+  .chole-top { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+}
+
+/* ── scene: changed-after-printing ── */
+/* ── THE CHANGE AFTER THE PRINT ──────────────────────────────────────────────────────────────
+   Peter's direction: «a sheet printed at 05:41, a change at 05:58. Show the two timestamps and
+   the diff — what became what — because the diff is the whole thing.»
+
+   Left rail: the morning in clock order — the sheet leaving the printer, the seventeen minutes
+   drawn as the distance they are, then the message. Right: Rocoto's reading, with the clocks in
+   the header and the printed quantity struck beside the true one. */
+
+/* THE MORNING */
+.chg-morning { display: flex; flex-direction: column; }
+.chg-stop { display: flex; flex-direction: column; gap: 9px; }
+.chg-stamp { display: flex; align-items: center; gap: 7px; }
+.v2 .chg-stamp .ic { width: 14px; height: 14px; flex: none; color: var(--acc-t); }
+.chg-stamp b {
+  font-family: var(--rocoto-font-mono, Inter, ui-Inter, Inter);
+  font-size: 13px; font-weight: 600; font-variant-numeric: tabular-nums; color: var(--ink);
+}
+.chg-stamp span { font-size: 12.5px; color: var(--muted); }
+
+.chg-paper { display: flex; align-items: flex-start; gap: 12px; }
+.chg-paper p { margin: 0; font-size: 12.5px; line-height: 1.55; color: var(--muted); }
+
+/* seventeen minutes, drawn as the distance it is — the rail continues under the printer glyph */
+.chg-gap {
+  position: relative; margin: 4px 0; padding: 14px 0 14px 22px;
+  font-size: 11px; letter-spacing: .09em; text-transform: uppercase; color: var(--faint);
+}
+.chg-gap::before {
+  content: ''; position: absolute; left: 6px; top: 0; bottom: 0; width: 1.5px; border-radius: 2px;
+  background: repeating-linear-gradient(var(--line-hard) 0 4px, transparent 4px 9px);
+}
+
+/* WHAT ROCOTO READ */
+.chg { display: flex; flex-direction: column; gap: 13px; }
+.chg-clock {
+  display: flex; align-items: center; gap: 12px;
+  border: 1px solid var(--panel-line); border-radius: 9px;
+  background: var(--panel-sunk); padding: 9px 13px;
+}
+.chg-c { display: flex; flex-direction: column; gap: 1px; flex: none; }
+.chg-c i {
+  font-style: normal; font-size: 16px; font-weight: 600;
+  font-family: var(--rocoto-font-mono, Inter, ui-Inter, Inter);
+  font-variant-numeric: tabular-nums; color: var(--panel-fg); line-height: 1.2;
+}
+.chg-c em {
+  font-style: normal; font-size: 10px; letter-spacing: .08em; text-transform: uppercase;
+  color: var(--panel-faint);
+}
+.chg-c--on i { color: var(--acc-t); }
+.chg-run { flex: 1; min-width: 26px; display: flex; flex-direction: column; align-items: center;
+  gap: 4px; }
+.chg-run b { font-size: 10.5px; font-weight: 500; letter-spacing: .04em; color: var(--panel-mid); }
+.chg-rule { display: block; width: 100%; height: 1.5px; border-radius: 2px;
+  background: var(--panel-line-hard); }
+
+/* ONE ROW PER LINE THAT MOVED. The struck value is what the paper says. The marked one is what is
+   true — same saffron as the words Rocoto lifts out of a sentence, so the reader meets one ink. */
+.chg-rows { display: flex; flex-direction: column; }
+.chg-r { display: flex; align-items: center; gap: 10px;
+  padding: 10px 0; border-top: 1px solid var(--panel-line); }
+.chg-r:first-child { border-top: 0; padding-top: 2px; }
+.chg-r > b { flex: 1; min-width: 0; font-size: 13.5px; font-weight: 500; color: var(--panel-fg); }
+.chg-was, .chg-now {
+  font-family: var(--rocoto-font-mono, Inter, ui-Inter, Inter);
+  font-size: 12.5px; font-variant-numeric: tabular-nums; flex: none;
+}
+/* both quantity columns hold their width, so the two rows line up and the eye runs straight down
+   the struck values and straight down the true ones */
+.chg-was { min-width: 46px; text-align: right; color: var(--panel-faint);
+  text-decoration: line-through; text-decoration-thickness: 1.5px; }
+.v2 .chg-r .chg-ar { width: 13px; height: 13px; flex: none; color: var(--panel-faint); }
+.chg-now { min-width: 68px; text-align: center; font-weight: 600;
+  border-radius: 4px; padding: 2px 8px;
+  color: var(--panel-roc-text); background: var(--panel-roc-dim); }
+.chg-gone { color: var(--panel-attn-text); background: var(--panel-attn-bg); }
+
+.chg-rest { border-top: 1px solid var(--panel-line); padding-top: 12px;
+  font-size: 12.5px; line-height: 1.55; color: var(--panel-mid); }
+
+/* ── scene: complaints ── */
+/* ── THE CASE THAT AGES ──────────────────────────────────────────────────────────────────────
+   Peter's direction for this agent: «show the complaint arriving, the clock on it, the chase at
+   48 h, and that it stays open until somebody says how it ended». The subject here is ELAPSED
+   TIME, so the scene draws a clock. Two notification cards would have shown neither the hours
+   nor the gate, which is the whole agent.
+
+   The pill, the figure, the chat bubble and both emails are the product's own components. Only
+   the ageing rail is new, because the panel has no drawing of a case's age yet. */
+
+/* the message as it lands, in WhatsApp's own bubble. The 8px inset keeps each bubble's tail
+   inside the modal's scroll container — a tail at -8px on a scrolling column makes the whole
+   panel scroll sideways. */
+.case-in .wa-b { margin: 0 8px; }
+.case-in .wa-b mark {
+  background: var(--panel-roc-dim); color: var(--panel-roc-text);
+  border-radius: 4px; padding: 1px 4px; font-weight: 600;
+}
+/* the thread's own divider chip, carrying the hours instead of a date — the customer is still
+   there, two days later, and that is the fact the whole agent exists for */
+.case-wait {
+  align-self: stretch; display: flex; align-items: center; justify-content: center; gap: 9px;
+  margin: 4px 8px 0; padding: 7px 13px; border-radius: 999px; background: var(--panel-sunk);
+}
+.case-wait span {
+  font-size: 11px; letter-spacing: .05em;
+  color: var(--panel-faint); font-variant-numeric: tabular-nums;
+}
+.case-wait b { font-size: 12px; font-weight: 600; color: var(--panel-mid); }
+.case-own { margin: 2px 8px 0; font-size: 12.5px; line-height: 1.5; color: var(--muted); }
+
+.case { display: flex; flex-direction: column; gap: 15px; }
+.case-top { display: flex; align-items: center; gap: 16px; }
+/* the age is a figure, so it is the panel's figure — .rp-big, on its own plate */
+.case-fig {
+  flex: none; width: 100px; padding: 12px 8px;
+  border-radius: 10px; background: var(--panel-sunk);
+}
+.case-fig .rp-num { font-size: 30px; }
+.case-id { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 9px; min-width: 0; }
+.case-id b { font-size: 14.5px; font-weight: 600; }
+/* the state register's own word, in the app's own pill, parked at the end of the row the way the
+   panel's case list parks it. Its type comes from the .t-label-sm utility in the panel, which
+   this page does not carry. */
+.case-id .pill { margin-left: auto; font-size: 11.5px; font-weight: 600; }
+.case-id-l { flex: 1 0 100%; font-size: 12.5px; line-height: 1.5; color: var(--panel-mid); }
+
+/* THE AGEING RAIL. A case's age is a distance already travelled, so it is drawn as one: three
+   stops, the last one live. Each stop's words align to its own dot — left, centre, right. */
+.agecl {
+  display: flex; flex-direction: column; gap: 10px;
+  padding-top: 14px; border-top: 1px solid var(--panel-line);
+}
+.agecl-rail { display: flex; align-items: center; padding: 2px 2px 0; }
+.agecl-d { width: 9px; height: 9px; flex: none; border-radius: 50%; background: var(--panel-roc); }
+.agecl-seg { flex: 1; height: 1.5px; background: var(--panel-roc); opacity: .38; }
+.agecl-now { width: 13px; height: 13px; box-shadow: 0 0 0 4px var(--panel-roc-dim); }
+.agecl-ls { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.agecl-l { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.agecl-l:nth-child(2) { align-items: center; text-align: center; }
+.agecl-l:nth-child(3) { align-items: flex-end; text-align: right; }
+/* the hours stay lowercase — text-transform turned «+48 h» into «+48 H», and an hour is written
+   with a small h everywhere else on the page */
+.agecl-l i {
+  font-style: normal; font-size: 11px; letter-spacing: .05em;
+  color: var(--panel-faint); font-variant-numeric: tabular-nums;
+}
+.agecl-l b { font-size: 12.5px; font-weight: 600; color: var(--panel-fg); }
+.agecl-l > span { font-size: 11.5px; line-height: 1.45; color: var(--panel-mid); }
+
+/* THE GATE — what keeps it open, and the two sentences that end it. The reply arrow is the
+   email primitive's own glyph, because an ending arrives as a reply. */
+.case-close {
+  display: flex; flex-direction: column; gap: 7px;
+  padding-top: 14px; border-top: 1px solid var(--panel-line);
+}
+/* .am-k is hidden inside .am-seq, so the scene carries its own label at the same setting */
+.case-k {
+  font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--panel-faint);
+}
+.case-close > b { font-size: 13.5px; font-weight: 600; line-height: 1.45; }
+.case-ends { display: flex; flex-direction: column; gap: 5px; margin-top: 2px; }
+.case-end {
+  display: flex; align-items: center; gap: 9px;
+  border: 1px solid var(--panel-line); border-radius: 8px;
+  background: var(--panel-sunk); padding: 7px 10px;
+}
+.case-end .gmi { width: 14px; height: 14px; }
+.case-end b { flex: 1; min-width: 0; font-size: 12.5px; font-weight: 500; color: var(--panel-fg); }
+.case-end i {
+  font-style: normal; font-size: 11px; letter-spacing: .06em; text-transform: uppercase;
+  color: var(--panel-faint);
+}
+.case-note { font-size: 12px; line-height: 1.5; color: var(--panel-mid); }
+
+@media (max-width: 620px) {
+  .case-top { flex-direction: column; align-items: flex-start; gap: 12px; }
+  .case-fig { width: 100%; }
+  /* stacked, the pill belongs under the name it describes, not hanging off the right edge */
+  .case-id .pill { margin-left: 0; }
+}
+
+/* ── scene: credit-issued ── */
+/* ── THE CREDIT AT THE DOOR ──────────────────────────────────────────────────────────────────
+   A credit is money given back by a person standing on a doorstep, so the left is the STOP —
+   who, which route, what time — with Marc's own voice on it and the figure on the slip. */
+.door {
+  border: 1px solid var(--line); border-radius: 12px; background: #fff; overflow: hidden;
+  box-shadow: 0 1px .5px rgba(11,20,26,.1), 0 8px 24px -18px rgba(11,20,26,.5);
+}
+.door-hd {
+  display: flex; align-items: center; gap: 8px; padding: 10px 13px;
+  background: var(--panel-sunk); border-bottom: 1px solid var(--panel-line);
+}
+.v2 .door-hd .ic { width: 15px; height: 15px; flex: none; color: var(--acc-t); }
+.door-hd b { font-size: 13.5px; font-weight: 600; flex: 1; min-width: 0; }
+.door-hd span { font-size: 11px; color: var(--faint); white-space: nowrap;
+  font-variant-numeric: tabular-nums; }
+.door-b { padding: 13px; display: flex; flex-direction: column; gap: 11px; }
+.door-said { font-size: 14px; line-height: 1.55; color: var(--ink); }
+.door-said mark {
+  background: var(--panel-roc-dim); color: var(--panel-roc-text);
+  border-radius: 4px; padding: 1px 4px; font-weight: 600;
+}
+/* the slip: the word first, then the money — label before figure */
+.door-f {
+  display: flex; align-items: baseline; gap: 9px; padding: 11px 13px;
+  border-top: 1px solid var(--panel-line); background: var(--panel-paper);
+}
+.door-f i { font-style: normal; font-size: 10.5px; letter-spacing: .06em;
+  text-transform: uppercase; color: var(--faint); }
+.door-f b { font-size: 19px; font-weight: 600; font-variant-numeric: tabular-nums; }
+.door-f span { margin-left: auto; font-size: 12px; color: var(--muted); }
+
+/* ── THE ACCOUNT'S MONTH ─────────────────────────────────────────────────────────────────────
+   «The third this month» is a rhythm, and a rhythm is drawn on a rule: August, the three credits
+   standing on the days they happened, three weeks of month still ahead of them. */
+.cred { display: flex; flex-direction: column; gap: 13px; }
+.cred-k { font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--faint); }
+.cred-figs { display: flex; align-items: flex-end; gap: 26px; }
+.cred-fig { display: flex; flex-direction: column; gap: 2px; }
+.cred-fig i { font-style: normal; font-size: 11.5px; color: var(--panel-mid); }
+.cred-fig b { font-size: 24px; font-weight: 600; line-height: 1.05;
+  font-variant-numeric: tabular-nums; color: var(--panel-fg); }
+
+.cred-month { position: relative; height: 48px; margin: 2px 2px 0; }
+.cred-rule { position: absolute; left: 0; right: 0; top: 28px; height: 1.5px;
+  border-radius: 2px; background: var(--panel-line-hard); }
+.cred-pin { position: absolute; top: 0; transform: translateX(-50%);
+  display: flex; flex-direction: column; align-items: center; gap: 4px; }
+/* every pin keeps the label's line, labelled or not, so the marks stand on one baseline */
+.cred-pin i { display: block; min-height: 14px; line-height: 14px;
+  font-style: normal; font-size: 10.5px; color: var(--faint); white-space: nowrap; }
+.cred-pin s { text-decoration: none; display: block; width: 2px; height: 12px;
+  border-radius: 1px; background: var(--line-hard); }
+.cred-pin.on i { color: var(--acc-t); font-weight: 600; }
+.cred-pin.on s { width: 3px; height: 18px; background: var(--acc); }
+.cred-sc { position: absolute; left: 0; right: 0; top: 34px;
+  display: flex; justify-content: space-between; }
+.cred-sc i { font-style: normal; font-size: 10.5px; color: var(--panel-faint); }
+
+.cred-rows { display: flex; flex-direction: column; }
+.cred-r {
+  display: flex; align-items: baseline; gap: 10px; padding: 8px 0;
+  border-top: 1px solid var(--panel-line); font-size: 12.5px; color: var(--panel-mid);
+}
+.cred-r i { font-style: normal; flex: none; width: 48px; white-space: nowrap;
+  color: var(--panel-faint); }
+.cred-r b { font-weight: 500; color: var(--panel-fg); flex: 1; min-width: 0; }
+.cred-r em { font-style: normal; color: var(--panel-faint); }
+.cred-r span { font-variant-numeric: tabular-nums; color: var(--panel-fg); white-space: nowrap; }
+.cred-r.on i { color: var(--acc-t); font-weight: 600; }
+.cred-r.on b, .cred-r.on span { font-weight: 600; }
+@media (max-width: 620px) {
+  .cred-figs { gap: 18px; }
+  .cred-fig b { font-size: 21px; }
+  .cred-r { flex-wrap: wrap; }
+}
+
+/* ── scene: off-the-list ── */
+/* ── OFF THE LIST — an order that is finished except for one line ────────────────────────────
+   Peter's direction: «an order arrives with a line you do not stock. Show the order with THAT
+   line marked, and the buyer email with the hour it is needed by.»
+
+   The sheet is the panel's own .rp-list and the figure is the panel's own .rp-sheet. The only
+   new thing here is the ROW, because an order line is three columns — what, how much, how much
+   it costs — where a worklist row is two. That difference is the whole file. */
+.ofl-said .wa-b { white-space: pre-line; }   /* an order typed as a list arrives as a list */
+.ofl-said mark {
+  background: var(--panel-roc-dim); color: var(--panel-roc-text);
+  border-radius: 4px; padding: 0 3px; font-weight: 600;
+  -webkit-box-decoration-break: clone; box-decoration-break: clone;
+}
+.ofl-stack { display: flex; flex-direction: column; gap: 10px; }
+
+.ofl-r {
+  display: grid; grid-template-columns: minmax(0, 1fr) auto auto; gap: 12px;
+  align-items: baseline; padding: 7px 11px; font-size: 12.5px;
+  border-top: 1px solid var(--panel-line);
+}
+.ofl .rp-hd + .ofl-r { border-top: 0; }     /* the header already drew that line */
+.ofl-r > b {
+  font-weight: 500; color: var(--panel-fg); min-width: 0; overflow-wrap: anywhere;
+}
+.ofl-q { color: var(--panel-faint); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.ofl-p {
+  min-width: 62px; text-align: right; color: var(--panel-mid);
+  font-variant-numeric: tabular-nums; white-space: nowrap;
+}
+
+/* THE LINE YOU DO NOT STOCK, IN THE PLACE IT WAS TYPED. Reaching it means running the list,
+   which is the job this agent takes off whoever buys — so the marking has to be strong enough
+   to find at a glance and quiet enough to still read as one row of an order. */
+.ofl-off {
+  padding: 10px 11px; background: var(--panel-attn-bg);
+  box-shadow: inset 3px 0 0 var(--panel-attn-solid);
+}
+.ofl-off > b { font-weight: 700; }
+.ofl-pill {
+  justify-self: end; border: 1px solid var(--panel-attn-solid); border-radius: 999px;
+  background: var(--panel-card); padding: 3px 9px;
+  font-size: 10px; letter-spacing: .06em; text-transform: uppercase;
+  color: var(--panel-attn-text); white-space: nowrap;
+}
+
+.ofl-foot {
+  display: flex; align-items: baseline; gap: 12px; padding: 9px 11px 10px;
+  border-top: 1px solid var(--panel-line); background: var(--panel-card);
+  font-size: 12px; color: var(--panel-mid);
+}
+.ofl-foot span { flex: 1; min-width: 0; }
+.ofl-foot b {
+  font-size: 14px; font-weight: 600; color: var(--panel-fg);
+  font-variant-numeric: tabular-nums;
+}
+
+/* THE CRAMPED BAND. Between 760px and a laptop the modal's third track is genuinely narrow, so
+   the row folds — the line on top, what it costs under it — instead of shortening the product.
+   An order line the reader cannot read is not an order line. */
+@media (min-width: 760px) and (max-width: 880px) {
+  .ofl-r { grid-template-columns: minmax(0, 1fr) auto; row-gap: 3px; }
+  .ofl-r > b { grid-column: 1 / -1; }
+  .ofl-q { grid-column: 1; }
+  .ofl-p, .ofl-pill { grid-column: 2; }
+}
+
+/* ── scene: paper-catcher ── */
+/* ── PAPER-CATCHER · the albarán at the door, and the sheaf it becomes ───────────────────────
+   Composition only. `doc_thumb()` draws the paper at both ends of the scene and the app's own
+   confirm card reads it back; nothing here is a second drawing of either.
+
+   The big sheet is the component at its OWN size, scaled into a box sized to the result — the
+   technique `.scbox` uses for the phone. Retyping the type sizes to «make it bigger» would have
+   given a sheet whose proportions are not the document's. */
+.pc-cap { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; }
+.pc-cap .slot-who .ic { width: 14px; height: 14px; color: var(--acc-t); }
+.pc-paper { width: 188px; height: 266px; flex: none; transform: rotate(-1.8deg); }
+.pc-paper > .dt {
+  transform: scale(1.62); transform-origin: top left;
+  box-shadow: 0 22px 46px -26px rgba(26,20,19,.62), 0 0 0 1px var(--panel-line);
+}
+/* the read lands ON the paper, because that is what happened to it */
+.pc-read {
+  position: relative; z-index: 2;
+  width: min(100%, 244px); margin: -40px 0 0 auto;
+  background: var(--panel-card); border: 1px solid var(--panel-line);
+  border-radius: var(--rocoto-radius-card); overflow: hidden;
+  box-shadow: 0 18px 40px -22px rgba(26,20,19,.55);
+}
+/* ⚠️ .sc-card ships at opacity 0 and is revealed by .sc-in, which React adds on scroll. This is
+   a static lift, so the revealed state is pinned here as well as carried in the markup — the
+   invisible-paint trap has caught two sessions already. */
+.pc-read .sc-card {
+  opacity: 1; transform: none; margin: 0; border-radius: 0; box-shadow: none;
+  padding: var(--rocoto-space-md) var(--rocoto-space-lg) var(--rocoto-space-sm);
+}
+.pc-read .sc-item { font-size: 20px; line-height: 1.12; }
+.pc-read .sc-qty { font-size: 15px; }
+.pc-read .pf { margin: 0; padding: 0 var(--rocoto-space-lg); }
+.pc-read .pf-f:last-child { border-bottom: 0; }
+
+/* the sheet it is still reading, next to what it needs to finish it */
+.pc-ask { display: flex; align-items: flex-start; gap: 12px; }
+.pc-ask > .dt { flex: none; }
+.pc-ask-t { display: flex; flex-direction: column; align-items: flex-start; gap: 5px; min-width: 0; }
+.pc-ask-t b { font-size: 13px; font-weight: 600; color: var(--panel-fg); }
+.pc-ask-t > span { font-size: 12.5px; line-height: 1.5; color: var(--panel-mid); }
+.pc-ask .rp-btn { padding: 5px 11px; font-size: var(--panel-t-sm); }
+
+/* the sheaf: every sheet with the order it landed on, at one size */
+.pcf { flex-wrap: wrap; gap: 12px; }
+.pcf-c { display: flex; flex-direction: column; gap: 6px; width: 116px; }
+.pcf-o {
+  text-align: center; padding: 4px 6px; border-radius: var(--rocoto-radius-pill);
+  font-size: 10.5px; font-variant-numeric: tabular-nums;
+  background: var(--panel-live-bg); color: var(--panel-live-text);
+}
+.pcf-o--ask { background: var(--panel-attn-bg); color: var(--panel-attn-text); }
+.pcf-m { margin-top: 12px; font-size: 12.5px; line-height: 1.5; color: var(--panel-mid); }
+
+/* ── scene: payment-overdue ── */
+/* ── THE OVERDUE SCENE ───────────────────────────────────────────────────────────────────────
+   Overdue money, ageing: the three customers with their days and their amounts, and the chases
+   written and held until somebody approves them.
+
+   ⚠️ `.am-seq .am-k { display:none }` (above) hides every caption inside the sequence, so a scene
+   that needs a label carries its own. That is what `.ovd-k` is; an `.am-k` here paints nothing —
+   the labels inside `.recon` in the reconciliation scene are invisible for this reason. */
+.ovd-k {
+  display: block; font-size: 10.5px; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--panel-faint);
+}
+
+/* THE TRIGGER IS A CLOCK, so the left column is the month it runs in with the Tuesdays marked.
+   Nobody typed a sentence into this agent; a chat bubble there would be a lie about how it
+   starts. The grid comes from `calendar.monthdayscalendar`, so the weekdays cannot be wrong. */
+.cal {
+  max-width: 320px; overflow: hidden;
+  border: 1px solid var(--panel-line); border-radius: 12px;
+  background: var(--panel-card); box-shadow: var(--rocoto-shadow-sheet);
+}
+.cal-h {
+  display: flex; align-items: center; gap: 8px;
+  padding: 10px 12px; border-bottom: 1px solid var(--panel-line);
+}
+.v2 .cal-h .ic { width: 15px; height: 15px; color: var(--acc-t); flex: none; }
+.cal-h b { flex: 1; min-width: 0; font-size: 13px; font-weight: 600; color: var(--panel-fg); }
+.cal-h span { font-size: 11.5px; color: var(--panel-faint); }
+.cal-g { display: grid; grid-template-columns: repeat(7, 1fr); gap: 2px; padding: 10px 10px 12px; }
+.cal-w {
+  font-style: normal; text-align: center; padding-bottom: 4px;
+  font-size: 9.5px; letter-spacing: .06em; color: var(--panel-faint);
+}
+.cal-d {
+  display: grid; place-items: center; height: 25px; border-radius: 7px;
+  font-size: 11.5px; font-variant-numeric: tabular-nums; color: var(--panel-mid);
+}
+.cal-tue { background: var(--panel-sunk); color: var(--panel-fg); font-weight: 600; }
+.cal-now { background: var(--acc); color: var(--rocoto-on-saffron); font-weight: 600; }
+.cal-r {
+  display: flex; flex-direction: column; gap: 6px;
+  padding: 12px; border-top: 1px solid var(--panel-line); background: var(--panel-paper);
+}
+.cal-r b { font-size: 13.5px; font-weight: 400; line-height: 1.5; color: var(--panel-fg); }
+.cal-r mark {
+  background: var(--panel-roc-dim); color: var(--panel-roc-text);
+  border-radius: 4px; padding: 1px 4px; font-weight: 600;
+  /* a highlight broken across two lines reads as two highlights */
+  white-space: nowrap;
+}
+
+/* THE AGEING. The same 880 € means one thing at 21 days and another at 38, so the delay is drawn
+   at its real length against the oldest one. Amber is the panel's own attention colour, and the
+   length carries the meaning — no threshold is drawn, because the threshold is the customer's
+   own setting and this agent asks them for it. */
+.ovd { display: flex; flex-direction: column; gap: 13px; }
+.ovd-rows { display: flex; flex-direction: column; gap: 12px; }
+.ovd-r {
+  display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 5px 10px;
+  align-items: baseline;
+}
+.ovd-r b {
+  font-size: 13.5px; font-weight: 600; color: var(--panel-fg);
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.ovd-amt { font-size: 13.5px; color: var(--panel-fg); font-variant-numeric: tabular-nums; }
+.ovd-bar {
+  grid-column: 1; align-self: center; height: 6px; border-radius: 3px;
+  background: var(--panel-sunk); overflow: hidden;
+}
+.ovd-bar i { display: block; height: 100%; border-radius: 3px; background: var(--panel-attn-solid); }
+.ovd-days {
+  grid-column: 2; font-size: 11.5px; color: var(--panel-mid);
+  font-variant-numeric: tabular-nums; white-space: nowrap;
+}
+/* a ledger puts its total at the bottom, under a rule */
+.ovd-t {
+  display: flex; align-items: baseline; justify-content: space-between; gap: 12px;
+  padding-top: 11px; border-top: 1px solid var(--panel-line);
+}
+.ovd-t b { font-size: 12.5px; font-weight: 600; color: var(--panel-fg); }
+.ovd-t span {
+  font-size: 16px; font-weight: 600; color: var(--panel-fg); font-variant-numeric: tabular-nums;
+}
+.ovd-note {
+  display: flex; align-items: center; gap: 7px;
+  font-size: 12px; line-height: 1.45; color: var(--panel-mid);
+}
+.v2 .ovd-note .ic { width: 14px; height: 14px; color: var(--panel-faint); flex: none; }
+
+/* THE HOLD. Three chases exist and one is open; the bar under it is the whole reason a person
+   lets this agent near their own customers. */
+.drf { display: flex; flex-direction: column; gap: 10px; }
+.drf-q { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.drf-q .ovd-k { margin-right: 2px; }
+.drf-t {
+  font-size: 11.5px; padding: 4px 10px; border-radius: 999px;
+  border: 1px solid var(--panel-line); background: var(--panel-card); color: var(--panel-mid);
+}
+.drf-t.on {
+  border-color: var(--acc); background: var(--panel-roc-dim);
+  color: var(--panel-roc-text); font-weight: 600;
+}
+.drf-hold {
+  display: flex; align-items: center; gap: 9px;
+  padding: 9px 10px 9px 11px; border-radius: 10px;
+  border: 1px dashed var(--line-hard); background: var(--panel-sunk);
+}
+.v2 .drf-hold > .ic { width: 15px; height: 15px; color: var(--panel-mid); flex: none; }
+.drf-txt { flex: 1; min-width: 0; font-size: 12px; line-height: 1.45; color: var(--panel-mid); }
+.drf-go {
+  flex: none; display: inline-flex; align-items: center; gap: 6px;
+  padding: 7px 14px; border-radius: 999px;
+  background: var(--acc); color: var(--rocoto-on-saffron);
+  font-size: 12px; font-weight: 600;
+}
+.v2 .drf-go .ic { width: 14px; height: 14px; color: var(--rocoto-on-saffron); }
+@media (max-width: 520px) {
+  /* the sentence takes its own line and the button keeps its side */
+  .drf-hold { flex-wrap: wrap; }
+  .drf-txt { flex: 1 0 100%; order: 2; }
+  .drf-go { order: 3; margin-left: auto; }
+}
+
+/* ── scene: payroll-filing ── */
+/* the mail client's narrow rule, keyed to the slot instead of the viewport: the said column is
+   300px, and star · react · reply · more eat 147px of the header, which leaves the sender four
+   letters and an ellipsis. The primitive already sheds these glyphs at ≤620px — this is that same
+   shedding, in a 300px column, on a wide screen. Reply keeps its own row at the foot. */
+.pf-said .em-meta .gmi:nth-of-type(n+2) { display: none; }
+
+/* ── THE FILING SCENE — one attachment, then a person under every page ────────────────────────
+   Payroll is the one thing that arrives glued together and has to come apart: the gestoría sends
+   a month in a single PDF, and each page belongs to exactly one human who is the only person
+   entitled to open it. So the card is a split — the bundle, the drop, and one column per person,
+   with the paper standing on the face it belongs to. */
+.pfil { display: flex; flex-direction: column; }
+
+.pfil-src {
+  display: flex; align-items: center; gap: 9px;
+  padding: 9px 12px; border: 1px solid var(--panel-line); border-radius: 9px;
+  background: var(--panel-sunk);
+}
+.v2 .pfil-src .ic { width: 15px; height: 15px; flex: none; color: var(--panel-mid); }
+.pfil-src b {
+  font-size: 12.5px; font-weight: 600; color: var(--panel-fg); min-width: 0;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.pfil-src span { margin-left: auto; flex: none; font-size: 11.5px; color: var(--panel-faint); }
+
+/* the split itself: one drop out of the bundle, a bus, and a drop into each person. Equal tracks
+   put every column centre on a known fraction, so the bus reaches the outer two with `50% / n`
+   and holds at any width and any number of people — which is why this is CSS and not an SVG fan
+   whose endpoints would have to be measured. */
+.pfil-cols {
+  position: relative; margin-top: 34px;
+  display: grid; grid-template-columns: repeat(var(--n, 3), minmax(0, 1fr));
+  justify-items: center; gap: 14px 8px;
+}
+.pfil-cols::before, .pfil-cols::after {
+  content: ''; position: absolute; background: var(--panel-line-hard);
+}
+.pfil-cols::before { left: calc(50% - .75px); top: -34px; width: 1.5px; height: 17px; }
+.pfil-cols::after {
+  left: calc(50% / var(--n, 3)); right: calc(50% / var(--n, 3));
+  top: -17.75px; height: 1.5px;
+}
+
+.pfil-c {
+  position: relative; width: 100%; min-width: 0;
+  display: flex; flex-direction: column; align-items: center; gap: 5px;
+}
+.pfil-c::before {
+  content: ''; position: absolute; left: calc(50% - .75px); top: -17px;
+  width: 1.5px; height: 17px; background: var(--panel-line-hard);
+}
+/* a page still on its way hangs off a dashed drop, so the eye finds the open branch before it
+   reads a word */
+.pfil-c--wait::before { background: none; border-left: 1.5px dashed var(--panel-line-hard); }
+
+.pfil-c .dt { margin-bottom: 3px; }
+.pfil-av {
+  width: 25px; height: 25px; border-radius: 50%; display: grid; place-items: center;
+  background: var(--panel-roc-dim); color: var(--panel-roc-text);
+  font-size: 10.5px; font-weight: 600; letter-spacing: .02em;
+}
+.pfil-c--wait .pfil-av { background: var(--panel-attn-bg); color: var(--panel-attn-text); }
+.pfil-n {
+  max-width: 100%; font-size: 12.5px; font-weight: 600; line-height: 1.25; text-align: center;
+  color: var(--panel-fg); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.pfil-s { font-style: normal; font-size: 11px; line-height: 1.3; text-align: center;
+  color: var(--panel-faint); }
+.pfil-c--wait .pfil-s { color: var(--panel-attn-text); }
+
+.pfil-foot {
+  display: flex; align-items: center; flex-wrap: wrap; gap: 6px 8px;
+  margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--panel-line);
+}
+.v2 .pfil-foot .ic { width: 14px; height: 14px; flex: none; color: var(--panel-faint); }
+.pfil-foot b { font-size: 12px; font-weight: 400; color: var(--panel-mid); }
+.pfil-foot span { margin-left: auto; flex: none; font-size: 11.5px; color: var(--panel-faint); }
+
+/* ── scene: quality-report ── */
+/* ── THE QUALITY-REPORT SCENE ─────────────────────────────────────────────────────────────────
+   A photo taken at the dock, the fields lifted out of it, and what those add up to against one
+   supplier this month. The proportion here is a COUNT, so it is drawn as a count — nine marks,
+   three of them theirs. A ring would have made this the reconciliation scene again. */
+.qr { display: flex; flex-direction: column; gap: 12px; }
+
+/* the photograph, with the time and place burnt into it the way a dock photo carries them */
+.qr-shot { position: relative; aspect-ratio: 16/10; border-radius: 10px; overflow: hidden;
+  background: var(--panel-sunk); }
+.qr-shot img { width: 100%; height: 100%; object-fit: cover; object-position: 44% 62%;
+  display: block; }
+.qr-stamp { position: absolute; left: 9px; bottom: 9px; padding: 4px 8px; border-radius: 6px;
+  background: rgba(26,20,19,.72); color: #FAF7F3; letter-spacing: .03em; font-size: 10.5px;
+  font-family: var(--rocoto-font-mono, ui-Inter, Inter); }
+
+/* what was read out of it, as fields on the paper */
+.qr-fs { display: flex; flex-direction: column; }
+.qr-f { display: flex; align-items: baseline; justify-content: space-between; gap: 12px;
+  padding: 7px 0; border-bottom: 1px solid var(--panel-line); font-size: 12.5px; }
+.qr-f:last-child { border-bottom: 0; }
+.qr-fk { color: var(--panel-faint); }
+.qr-fv { font-weight: 500; color: var(--panel-fg); text-align: right; }
+/* THE SAME TINT AS THE MARKED WORDS IN THE SENTENCE (.am-bub mark). The three words Rocoto
+   lifted are the three fields on the parte, and carrying the highlight across joins them with
+   nothing explaining it. */
+.qr-fv.lift { background: var(--panel-roc-dim); color: var(--panel-roc-text); font-weight: 600;
+  border-radius: 4px; padding: 1px 6px; }
+
+/* the running tally against this supplier */
+/* the labels here are OUR OWN class, because `.am-seq .am-k` is display:none inside the modal —
+   a figure whose caption is hidden is a figure the reader has to decode. */
+.qr-k { font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--panel-faint); }
+.qr-tal { display: flex; flex-direction: column; gap: 14px; }
+.qr-lede { font-size: 16.5px; font-weight: 600; line-height: 1.3; color: var(--panel-fg); }
+.qr-count { display: flex; flex-direction: column; gap: 7px; }
+.qr-marks { display: flex; align-items: flex-end; gap: 13px; }
+.qr-mg { display: flex; gap: 5px; }
+.qr-m { width: 10px; height: 26px; border-radius: 3px; border: 1.5px solid var(--panel-line-hard); }
+.qr-mg.on .qr-m { background: var(--acc); border-color: var(--acc); }
+.qr-cap { font-size: 12.5px; color: var(--panel-mid); line-height: 1.5; }
+.qr-docs { display: flex; flex-direction: column; gap: 8px; padding-top: 12px;
+  border-top: 1px solid var(--panel-line); }
+.qr-docs .dt-strip { gap: 8px; flex-wrap: wrap; }
+
+/* THE DOCK PHONE, AT THE SIZE THIS COLUMN CAN CARRY. Two classes, so it beats the .scbox media
+   step that sizes the same component inside the narrower vocabulary slots. */
+.scbox.qr-fone { --sc: .72; margin-top: 2px; }
+@media (min-width: 760px) { .scbox.qr-fone { --sc: .88; } }
+.qr-dock img { object-position: 44% 62%; }
+
+/* ── scene: quiet-customers ── */
+/* ── THE MONDAY SPLIT ────────────────────────────────────────────────────────────────────────
+   «Show that Ana and Marc each get only their own — the split is the point, not the list.» So
+   the left is one book with one measurement per account, and the right cuts it in two and hands
+   each half over. Both sheets are the panel's own .rp-list chrome; only the body is new.
+
+   Nothing here uses .am-k: `.am-seq .am-k { display: none }` hides it everywhere inside the flow
+   except under .am-asks, so a label written with it inside a scene never paints. */
+
+/* THE BOOK, MEASURED. Days of silence as a bar, and the customer's own line as a paper-coloured
+   notch cut into it at 14 days — the notch lands on the fill, where a hairline over red would
+   vanish, and three notches at the same x read as one threshold across the sheet. The scale runs
+   to three weeks so 14 days lands at two thirds and the days past it still have room to show. */
+.qbk-rows { position: relative; display: flex; flex-direction: column; gap: 12px;
+  padding: 12px var(--rocoto-space-sm) 10px; }
+.qbk-r { display: flex; flex-direction: column; gap: 6px; }
+.qbk-l { display: flex; align-items: baseline; gap: 8px; }
+.qbk-l b { flex: 1; min-width: 0; font-size: 12.5px; font-weight: 600; color: var(--panel-fg);
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.qbk-l em { font-style: normal; font-size: 11.5px; color: var(--panel-mid);
+  font-variant-numeric: tabular-nums; }
+.qbk-bar { position: relative; display: block; height: 8px; border-radius: 999px;
+  background: var(--panel-sunk); }
+.qbk-bar i { display: block; height: 100%; border-radius: 999px; background: var(--acc); }
+.qbk-bar::after { content: ''; position: absolute; left: 66.6%; top: -1px; bottom: -1px;
+  width: 2.5px; border-radius: 1px; background: var(--panel-paper); }
+.qbk-more { padding: 0 var(--rocoto-space-sm) 12px; font-size: 11.5px;
+  color: var(--panel-faint); }
+.qbk-foot { display: flex; align-items: center; padding: 9px var(--rocoto-space-sm) 10px;
+  border-top: 1px solid var(--panel-line); background: var(--panel-sunk);
+  font-size: 11px; line-height: 1.45; color: var(--panel-mid); }
+/* the key is the row in miniature, so the notch is named before it has to be guessed */
+.qbk-key { flex: none; position: relative; width: 26px; height: 8px; margin-right: 9px;
+  border-radius: 999px; background: var(--acc); }
+.qbk-key::after { content: ''; position: absolute; left: 66.6%; top: -1px; bottom: -1px;
+  width: 2.5px; border-radius: 1px; background: var(--panel-sunk); }
+
+/* THE CUT. One figure, two shares, each share's own accounts under it. Same hue for both, one
+   solid and one tinted — two people, one thing divided, and no colour that claims a meaning. */
+.qsp-bar { display: flex; gap: 3px; padding: 12px var(--rocoto-space-sm) 0; }
+.qsp-seg { display: flex; align-items: center; justify-content: center; height: 28px;
+  border-radius: 7px; font-size: 12px; font-weight: 600; white-space: nowrap; }
+.qsp-seg--a { background: var(--panel-roc); color: var(--panel-on-roc); }
+.qsp-seg--m { background: var(--panel-roc-dim); color: var(--panel-roc-text); }
+.qsp-cols { display: grid; grid-template-columns: 1fr 1fr;
+  padding: 14px var(--rocoto-space-sm) 0; }
+.qsp-c { min-width: 0; padding-right: 14px; }
+.qsp-c + .qsp-c { border-left: 1px solid var(--panel-line); padding: 0 0 0 14px; }
+.qsp-ch { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+.qsp-av { flex: none; width: 22px; height: 22px; border-radius: 50%; display: grid;
+  place-items: center; font-size: 10.5px; font-weight: 700;
+  background: var(--panel-roc); color: var(--panel-on-roc); }
+.qsp-av--m { background: var(--panel-roc-dim); color: var(--panel-roc-text); }
+.qsp-ch b { font-size: 13px; font-weight: 600; color: var(--panel-fg); }
+.qsp-r { display: flex; align-items: baseline; gap: 8px; padding: 4px 0; }
+.qsp-r b { flex: 1; min-width: 0; font-size: 12px; font-weight: 500; color: var(--panel-fg);
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.qsp-r span { font-size: 11.5px; color: var(--panel-faint); white-space: nowrap;
+  font-variant-numeric: tabular-nums; }
+.qsp-r--more b { font-weight: 400; color: var(--panel-faint); }
+.qsp-foot { margin-top: 12px; padding: 9px var(--rocoto-space-sm) 10px;
+  border-top: 1px solid var(--panel-line); background: var(--panel-sunk);
+  font-size: 11.5px; color: var(--panel-mid); }
+/* two columns become two blocks rather than two slivers; the divider turns with them */
+@media (max-width: 460px) {
+  .qsp-cols { grid-template-columns: 1fr; }
+  .qsp-c { padding-right: 0; }
+  .qsp-c + .qsp-c { border-left: 0; border-top: 1px solid var(--panel-line);
+    padding: 12px 0 0; margin-top: 12px; }
+}
+
+/* ── scene: skipped-stop ── */
+/* ── THE SKIPPED STOP ─────────────────────────────────────────────────────────────────────────
+   Marc's screen is the app's own `.rs-*` delivery device (landing-react/src/RepartoStops.tsx,
+   compiled into hero.css). Three states it did not carry yet arrive as ARGUMENTS to that same
+   drawing, never as a second one: a skipped dot, a skipped control, and the reason he left. */
+.rs-dot-skipped { background: var(--rocoto-red); width: 20px; height: 20px;
+  margin: -10px 0 0 -10px; }
+.rs-dot-skipped svg { stroke: var(--rocoto-on-red); width: 11px; height: 11px; }
+.rs-ctrl-skip.rs-ctrl-on { background: var(--rocoto-red); color: var(--rocoto-on-red);
+  border-color: var(--rocoto-red); }
+/* HE SAID IT, AND ROCOTO WROTE IT DOWN. The chip is the app's own VoiceChip; here it sits in a
+   field on the stop card rather than in a thread, so it loses the bubble notch and fills the row. */
+.rs-why { margin-top: var(--rocoto-space-sm); display: flex; flex-direction: column;
+  gap: var(--rocoto-space-xs); padding: var(--rocoto-space-sm);
+  background: var(--rocoto-surface2); border-left: 2px solid var(--rocoto-red);
+  border-radius: 0 var(--rocoto-radius-sm) var(--rocoto-radius-sm) 0; }
+.rs-why .rk-vc { width: 100%; border-radius: var(--rocoto-radius-sm);
+  padding: var(--rocoto-space-xs) var(--rocoto-space-sm); }
+.rs-why-q { font-size: 13px; line-height: 1.45; color: var(--rocoto-fg); }
+/* LABEL BEFORE FIGURE. `.am-k` cannot be used inside a scene — agents.css carries
+   `.am-seq .am-k{display:none}`, so every label written with it paints nothing and the reader is
+   handed a bare number to decode. These are the scene's own. */
+.rs-why-k, .skp-k { font-size: 10.5px; letter-spacing: .09em; text-transform: uppercase;
+  color: var(--rocoto-muted); }
+
+/* THE OFFICE BOARD. The route as a rail, so the position reads in one look: what is behind him,
+   the one that broke, where the van is now. */
+.skp { display: flex; flex-direction: column; gap: 14px; }
+.skp-hd { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+.skp-hd b { font-size: 13.5px; font-weight: 600; }
+.skp-hd span { font-family: var(--rocoto-font-mono); font-size: 12px; color: var(--panel-mid); }
+.skp-rail { position: relative; display: flex; align-items: center;
+  justify-content: space-between; padding: 7px 0; }
+.skp-rail::before { content: ''; position: absolute; left: 8px; right: 8px; top: 50%;
+  height: 1.5px; margin-top: -.75px; background: var(--panel-line-hard); }
+.skp-n { position: relative; flex: none; width: 15px; height: 15px; border-radius: 50%;
+  display: grid; place-items: center; background: var(--panel-card);
+  box-shadow: 0 0 0 3px var(--panel-card); }
+.skp-n svg { width: 9px; height: 9px; }
+.skp-n--done { background: var(--panel-mid); }
+.skp-n--done svg { stroke: var(--panel-card); }
+.skp-n--skip { width: 20px; height: 20px; background: var(--panel-attn-solid); }
+.skp-n--skip svg { width: 11px; height: 11px; stroke: var(--rocoto-on-red); }
+.skp-n--now { background: var(--panel-roc); }
+.skp-n--next { box-shadow: 0 0 0 3px var(--panel-card), inset 0 0 0 1.5px var(--panel-line-hard); }
+.skp-counts { font-size: 12px; color: var(--panel-mid); }
+.skp-stop { display: flex; flex-direction: column; gap: 4px;
+  padding-top: 13px; border-top: 1px solid var(--panel-line); }
+.skp-stop-t { display: flex; align-items: baseline; gap: 9px; }
+.skp-stop-t b { font-size: 14.5px; font-weight: 600; }
+.skp-stop-t span { font-family: var(--rocoto-font-mono); font-size: 12px;
+  color: var(--panel-attn-text); }
+.skp-q { font-size: 13px; line-height: 1.5; color: var(--panel-fg); }
+.skp-foot { display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+  padding-top: 13px; border-top: 1px solid var(--panel-line); }
+.skp-foot > div { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+.skp-foot b { font-size: 13.5px; font-weight: 600; font-variant-numeric: tabular-nums; }
+@media (max-width: 420px) { .skp-foot { grid-template-columns: 1fr; } }
+
+/* ── scene: supply-issue ── */
+/* ── THE SHORTAGE FAN-OUT ─────────────────────────────────────────────────────────────────────
+   Compras says it once and fourteen customers hear it in the same second, so the scene is
+   deliberately lopsided: one short sentence on the left, and on the right the fourteen orders by
+   name with two of the messages drawn whole. Two messages that differ only in a name and a
+   number say «each one gets his own» faster than any sentence claiming it does. */
+.si-when { align-self: flex-end; font-size: 11.5px; color: var(--faint);
+  font-variant-numeric: tabular-nums; }
+.si-blast { display: flex; flex-direction: column; gap: 11px; }
+.si-note { margin: 0; font-size: 13px; line-height: 1.5; color: var(--muted); }
+/* `.am-seq .am-k{display:none}` silences the sequence's own captions — and it currently blanks
+   the reconciliation scene's «Falta» and «Lo archivado» labels too. This one is content, not a
+   caption: it is what the reader is being shown next. So it is turned back on for this card. */
+.si-blast > .am-k { display: block; margin-top: 3px; }
+
+/* SIDE BY SIDE, because they leave together. Stacked, two messages read as a thread; in two
+   tracks they read as two people being told the same thing at the same second.
+   `auto-fit` and not a media query: between 760px and about 1000px the sequence is already three
+   columns, so this card is ~256px wide while the VIEWPORT is wide — a viewport breakpoint puts
+   two 122px slivers there and the message wraps every three words. The track minimum decides it
+   from the space this card actually has. */
+.si-fan { display: grid; gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr)); }
+/* WhatsApp puts the contact at the TOP LEFT of a thread, over the bubble — not beside it. The
+   chromeless outgoing variant right-aligns its column, which is right for one loose message and
+   wrong for a column of them. */
+.si-fan .chromeless.out { align-items: stretch; gap: 7px; }
+.si-fan .wa-b, .si-fan .wa-out { align-self: stretch; max-width: 100%; font-size: 12.5px; }
+.si-fan .waq { padding: 7px; font-size: 12.5px; }
+
+/* ── scene: unusual-order ── */
+/* ── THE UNUSUAL-ORDER SCENE ─────────────────────────────────────────────────────────────────
+   An order eleven times their own normal, so the scene IS the comparison: six of Bar Nuria's
+   own lomo orders and today's, on one axis. The stubs and the tower are the argument.
+
+   The plot is the panel's chart widget. It sits flush in the delivery card — the same move as
+   `.dlv .rocmail` above, which strips the mail's outer frame because the card is already the
+   frame — and keeps its own header type, so it still reads as the widget the customer meets
+   again in the panel. */
+.unu { display: flex; flex-direction: column; gap: 14px; }
+
+.unu-top { display: flex; align-items: center; gap: 12px; }
+.unu-x {
+  flex: none; padding: 8px 11px; border-radius: 10px;
+  background: var(--panel-attn-bg); color: var(--panel-attn-text);
+  font-size: 25px; font-weight: 300; line-height: 1; font-variant-numeric: tabular-nums;
+}
+.unu-t { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+.unu-t b { font-size: 14.5px; font-weight: 600; line-height: 1.3; }
+.unu-t > span { font-size: 12.5px; color: var(--panel-mid); }
+
+.unu .rp-sheet { border: 0; background: transparent; border-radius: 0; box-shadow: none; }
+.unu .rp-hd { padding: 0 0 8px; background: transparent; }
+.unu .wch { padding: 14px 0 6px; height: 148px; gap: 9px; }
+.unu .wch-s { padding: 10px 0 0; margin-top: 0; }
+/* ONE BASELINE. A date that wraps to two lines makes its own column taller, and the widget
+   bottom-aligns every column, so one wrapped label lifts one bar off the floor and the plot
+   stops being a comparison. */
+.unu .wch-c i { white-space: nowrap; }
+/* TODAY CARRIES THE COLOUR and the six behind it go quiet. The widget's own palette puts brand
+   crimson on every bar, which spent the loud colour on the six orders that are the background
+   of the argument. A highlight is an argument to the widget's markup, never a second chart. */
+.unu .wch-b { max-width: 34px; background: color-mix(in srgb, var(--panel-fg) 28%, transparent); }
+.unu .wch-c b { color: var(--panel-mid); font-weight: 500; }
+.unu .wch-c:last-child b { color: var(--panel-attn-text); font-weight: 700; }
+.unu .wch-c:last-child .wch-b {
+  background: linear-gradient(180deg, var(--panel-attn-solid),
+    color-mix(in srgb, var(--panel-attn-solid) 68%, transparent));
+}
+
+/* the forty minutes, and the two things Ana can do inside them */
+.unu-win {
+  display: flex; flex-direction: column; gap: 9px;
+  padding-top: 13px; border-top: 1px solid var(--panel-line);
+}
+.unu-win-h { display: flex; align-items: center; gap: 8px; font-size: 13px; }
+.unu-win-h .ic { width: 16px; height: 16px; flex: none; color: var(--panel-attn-text); }
+.unu-win-h b { font-weight: 600; }
+.unu-win-h > span {
+  margin-left: auto; font-size: 12px; color: var(--panel-mid);
+  font-variant-numeric: tabular-nums;
+}
+/* A TIME TRACK, NOT A PROGRESS BAR. The dot is now, the cap is 09:14, and the run between them
+   is the window. A bar filled to 100% would be a graphic carrying no reading. */
+.unu-track { position: relative; height: 9px; }
+.unu-track::before {
+  content: ''; position: absolute; left: 6px; right: 2px; top: 3.5px; height: 1.5px;
+  border-radius: 2px; background: var(--panel-line-hard);
+}
+.unu-track::after {
+  content: ''; position: absolute; right: 0; top: 0; width: 1.5px; height: 9px;
+  border-radius: 2px; background: var(--panel-line-hard);
+}
+.unu-track i {
+  position: absolute; left: 0; top: 0; width: 8px; height: 8px; border-radius: 50%;
+  background: var(--panel-attn-solid);
+}
+.unu-acts { display: flex; gap: 8px; }
+.unu-act {
+  flex: 1; text-align: center; padding: 8px 10px; border-radius: 9px;
+  border: 1px solid var(--panel-line); background: var(--panel-paper);
+  font-size: 12.5px; font-weight: 600; color: var(--panel-fg);
+}
+/* the product's own primary, so the one thing Ana is likely to press reads as a button she has
+   pressed before. Amber stays the ATTENTION signal — the bar, the chip, the clock — and keeps
+   out of actions, where its contrast under white text is too low to read. */
+.unu-act.hot {
+  border-color: transparent; background: var(--panel-roc); color: var(--panel-on-roc);
+}
+
+@media (max-width: 620px) {
+  .unu .wch { gap: 5px; height: 132px; }
+  .unu .wch-c b { font-size: 11.5px; }
+  .unu .wch-c i { font-size: 9.5px; }
+}

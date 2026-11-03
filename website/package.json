@@ -1,0 +1,21 @@
+{
+  "name": "rocoto-original-website",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "python3 -m http.server 8081 --bind 127.0.0.1",
+    "build": "esbuild src/marketing.tsx --bundle --minify --legal-comments=linked --define:process.env.NODE_ENV=\\\"production\\\" --format=esm --platform=browser --target=es2020 --jsx=automatic --outdir=assets --entry-names=hero --external:/assets/* --external:/brand/*"
+  },
+  "dependencies": {
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  }
+}

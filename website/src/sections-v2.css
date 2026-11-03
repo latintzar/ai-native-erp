@@ -1,0 +1,934 @@
+/* sections-v2 — J&J-style header + subtitle for HowItWorks & Review */
+
+.hiw-sub,
+.rev-body {
+  margin: 0.6rem 0 0;
+  max-width: 46ch;
+  font-size: clamp(0.95rem, 1.6vw, 1.1rem);
+  line-height: 1.5;
+  color: var(--muted, #6b6b6b);
+}
+
+.rev-body {
+  max-width: 42ch;
+}
+
+/* HowItWorks header subtitle centered under the centered heading; wider so the long mechanistic
+   intro lands in ~2-3 lines instead of a 5-6 line centered rag */
+.hiw-sub { margin-left: auto; margin-right: auto; text-align: center; max-width: 58ch; }
+
+/* voice note: fixed-density bars fill the full bubble width to the 0:38 duration (were bunching at ~half),
+   a bigger play button, and a cleaner WhatsApp sent-bubble radius (soft, sharper top-right tail) */
+.hiw-vnbub .vnote-wave { overflow: hidden; justify-content: flex-start; }
+.hiw-vnbub .vnote-wave i { flex: none; width: 2.5px; min-width: 0; max-width: none; }
+.hiw-vnbub .vnote-play svg { width: 26px; height: 26px; }
+.hiw-vnbub { border-radius: 10px; border-top-right-radius: 3px; }
+
+/* photo bubble: image was leaving a mint-green band on the right (read as a double border).
+   Bulletproof fix — absolutely fill the bubble edge-to-edge (WhatsApp shows sent photos this way),
+   so no flex/intrinsic-width quirk can leave a gap. Timestamp overlays on top. */
+.hiw-photobub { position: relative; height: 124px; padding: 0; overflow: hidden; border-radius: 12px; }
+.hiw-photobub img { position: absolute !important; inset: 0 !important; width: 100% !important; height: 100% !important; object-fit: cover !important; border-radius: 0 !important; }
+.hiw-photobub .hiw-photobub-meta { z-index: 2; }
+
+/* ══════════════════════════════════════════════════════════════════════════════════════════════
+   SITE v2 — the house style for the whole marketing site (SITE-V2-PLAN.md).
+   Extracted from public/v2/site.css (Peter, verbatim: "the spacing you did, text styles, icon
+   styles, genuinely stellar" — 2026-07-28). Bundled here so every page — the landing and the five
+   product pages — gets ONE button system, ONE type scale, ONE icon set, from the same hero.css this
+   whole site already loads. No new stylesheet per page (SITE-V2-PLAN §4.4).
+
+   TOKENS: colour resolves through packages/rocoto-tokens (Tokens.kt) wherever an exact value exists
+   there — v2's own --acc (#C01B2C) IS --rocoto-saffron, --ink (#1A1413) IS --rocoto-fg, and so on;
+   this is the same design, named twice, not a fork. Spacing aliases to --rocoto-space-* wherever the
+   literal already sits exactly on the scale (24/12/8/64px do). RADIUS is the one deliberate
+   departure: v2's flat --r:4px reads sharper than the app's rounded card scale on purpose (Peter
+   approved that exact sharpness), so it takes the CLOSEST token (--rocoto-radius-sm, 6px) rather
+   than the app's --rocoto-radius-card (12px), instead of re-inventing a fifth radius value. ══════ */
+.v2 {
+  --paper: var(--rocoto-bg);
+  --white: var(--rocoto-elevated);
+  --sunk: var(--rocoto-surface2);
+  --ink: var(--rocoto-fg);
+  --line: var(--rocoto-border);
+  --line-soft: rgba(26,20,19,.085);
+  --line-hard: var(--rocoto-border-strong);
+  --fg: var(--rocoto-fg);
+  --mid: var(--rocoto-muted);
+  /* ⚠️ THE ONE DELIBERATE COLOUR OVERRIDE ON THIS SITE, and it is a legibility fix (2026-08-16).
+     `--rocoto-faint` is #998F83, which on this site's three surfaces measures 2.97:1 on --paper
+     (#FAF7F3), 3.18:1 on --white and 2.71:1 on --sunk (#F2ECE5) — under the 4.5:1 AA bar for
+     small text on every one of them. It is not a decorative token: it paints every mono kicker,
+     every caption, the fine print under the bill, and — the reason it was found — the PRICE
+     sub-lines on /precios: «99 € · 249 € · 749 € al mes, según el plan que tengas», «39 € por
+     furgoneta al mes», «+15 % sobre lo que ya tengas». Money a buyer cannot read is a defect in
+     the page that takes the money.
+     #776E65 measures 4.68:1 on paper, 5.00:1 on white and 4.26:1 on sunk — AA on the two surfaces
+     these lines actually sit on, and up from 2.7 on the third. It stays a step lighter than --mid
+     (#6F665C, L* 43.7 against this one's 47.0), so the fg/mid/faint ramp still reads as three.
+     WHY IT IS AN OVERRIDE AND NOT AN EDIT TO tokens.css: exactly the reason the shadow ramp below
+     is one. packages/rocoto-tokens/tokens.css is GENERATED from the Android app's Tokens.kt and
+     `npm run tokens` rewrites it on every build, so an edit there would be wiped — and if it
+     survived it would push a marketing-legibility decision into the phone UI, which is read at
+     30cm on a small bright screen rather than at arm's length on a large cream one. `.v2` IS the
+     body element, so the scope is exactly «the marketing site». */
+  --faint: #776E65;
+  --acc: var(--rocoto-saffron);
+  --acc-t: var(--rocoto-saffron-text);
+  --acc-dim: var(--rocoto-saffron-dim);
+  --ok: var(--rocoto-green);
+  --ok-t: var(--rocoto-green-text);
+  --ok-dim: var(--rocoto-green-dim);
+  --warn: var(--rocoto-red-text);
+  --warn-dim: var(--rocoto-red-dim);
+  /* the app's INCOMING chat bubble, aliased here for the same reason every colour above is: a
+     marketing surface that quotes the product must quote its paint too, through the alias layer */
+  --chat-in: var(--rocoto-chat-in-bubble);
+  --chat-in-line: var(--rocoto-chat-in-border);
+  --test: #2B5BB7;
+  --test-dim: rgba(43,91,183,.08);
+  --sans: var(--rocoto-font-sans);
+  --mono: var(--rocoto-font-mono);
+  --r: var(--rocoto-radius-sm);           /* v2's own sharp scale — see note above */
+
+  /* ── ELEVATION: THE LANDING'S OWN RAMP (Peter, 2026-08-09: «i also want to make my shadow
+     bigger») ────────────────────────────────────────────────────────────────────────────────
+     WHY IT IS DECLARED HERE AND NOT PER-SELECTOR: every raised surface on this page already
+     reads its shadow from `--rocoto-shadow-*` (packages/rocoto-tokens/shadows.css, imported by
+     main.tsx). Deepening the six NAMES moves the pricing cards, the try-band artefact, the desk
+     island, the reparto stops and the next card somebody adds — all at once, and a new component
+     inherits the depth instead of needing its own patch.
+
+     WHY IT IS AN OVERRIDE AND NOT AN EDIT TO shadows.css: that file is GENERATED from the Android
+     app's Tokens.kt and `npm run build` regenerates it on every build — an edit there would be
+     wiped, and if it survived it would push a marketing decision into the product's phone UI,
+     where 44px of ambient shadow is wrong. The app keeps the tight ramp; the page, which is read
+     at arm's length on a big cream surface, gets a deeper one. `.v2` IS the body, so the scope is
+     exactly "the marketing site" — and it beats :root on specificity, in either import order.
+
+     THE SHAPE OF THE CHANGE: not darker — WIDER. The source ramp is one or two tight layers
+     (card = 2px + 8px blur), which at this size reads as a hairline on paper rather than as a
+     raised object. Each step keeps its contact layer, keeps low warm-ink alpha, and gains a big
+     diffuse layer at 2-3x the blur: that is what an expensive shadow is made of. A hard, dark,
+     single-offset drop shadow is the 2010 look and is exactly what this must not become.
+
+     THE INK IS THE TOKEN, never a literal: color-mix over --rocoto-fg (#1A1413), so the shadows
+     stay the warm near-black the whole system is drawn in and move if the ink ever moves. Same
+     mechanism the app already uses (webapp/src/chat/chat-ext.css, deskapp.css). */
+  --sh-ink-5: color-mix(in srgb, var(--rocoto-fg) 5%, transparent);
+  --sh-ink-7: color-mix(in srgb, var(--rocoto-fg) 7%, transparent);
+  --sh-ink-8: color-mix(in srgb, var(--rocoto-fg) 8%, transparent);
+  --sh-ink-9: color-mix(in srgb, var(--rocoto-fg) 9%, transparent);
+  --sh-ink-10: color-mix(in srgb, var(--rocoto-fg) 10%, transparent);
+  --sh-ink-12: color-mix(in srgb, var(--rocoto-fg) 12%, transparent);
+  --sh-ink-14: color-mix(in srgb, var(--rocoto-fg) 14%, transparent);
+  --sh-ink-16: color-mix(in srgb, var(--rocoto-fg) 16%, transparent);
+  --rocoto-shadow-hairline: 0 1px 2px var(--sh-ink-7), 0 3px 8px var(--sh-ink-5);
+  --rocoto-shadow-card: 0 1px 2px var(--sh-ink-7), 0 6px 16px var(--sh-ink-8),
+    0 18px 40px var(--sh-ink-9);
+  --rocoto-shadow-sticky: 0 2px 4px var(--sh-ink-7), 0 10px 24px var(--sh-ink-9),
+    0 28px 58px var(--sh-ink-10);
+  --rocoto-shadow-sheet: 0 2px 6px var(--sh-ink-7), 0 14px 34px var(--sh-ink-9),
+    0 40px 82px var(--sh-ink-12);
+  --rocoto-shadow-popover: 0 3px 8px var(--sh-ink-8), 0 20px 46px var(--sh-ink-12),
+    0 56px 104px var(--sh-ink-14);
+  --rocoto-shadow-toast: 0 4px 10px var(--sh-ink-8), 0 28px 58px var(--sh-ink-14),
+    0 68px 130px var(--sh-ink-16);
+
+  /* ── THE TYPE FLOOR (Peter, 2026-08-08: «and less small text in general») ────────────────────
+     v2 grew as ~100 hand-set px sizes with a 12–13px centre of gravity, which is a UI density on
+     a surface nobody is operating — a visitor is READING it. So the small end of the ramp gets
+     NAMES and one floor, declared here: a section added next month inherits the fix instead of
+     needing its own patch, and lifting the floor again is one edit.
+
+       --t-lead   the sentence under an h2
+       --t-body   the sentence that carries a point: card copy, a paragraph inside a card
+       --t-sm     THE FLOOR for anything a visitor reads — ✓ lists, nav, footer links
+       --t-cap    a caption BOLTED to the thing it explains (a price's unit, a figure's legend);
+                  never a sentence standing on its own
+       --t-label  eyebrows, stamps, legal — LABELS. Looked at, not read, so they may stay small.
+
+     Deliberately NOT touched: the display ramp (h1/h2/the price figure) — this is about the small
+     end. And deliberately landing-only: the panel's --panel-t-* desk ramp and the app's phone
+     ramp are different surfaces with their own laws (WP-B).
+     Quoted PRODUCT UI keeps its own sizes too — a WhatsApp bubble, the order card in the try-band,
+     the desk mockup: those are miniatures of a real interface and blowing their type up stops
+     them being a likeness. They are looked at, like a photograph, not read. ─────────────────── */
+  --t-lead: clamp(16px,1.2vw,18px);
+  --t-body: clamp(15px,1.05vw,17px);
+  --t-sm: clamp(14px,1vw,15px);
+  --t-cap: 13.5px;
+  --t-label: 11.5px;
+  --t-h: 16.5px;                          /* a card's own name, one step over its body */
+
+  --site-max: 1440px;
+  --site-gutter: clamp(20px,3vw,48px);
+  --site-visual-inset: clamp(24px,3vw,40px);
+  --site-section-space: clamp(48px,6vw,96px);
+
+  margin: 0;
+  background: var(--paper);
+  color: var(--fg);
+  font: var(--t-body)/1.5 var(--sans);
+  -webkit-font-smoothing: antialiased;
+}
+.v2 *{box-sizing:border-box}
+/* ── THE RESET STOPS AT /join's ISLAND (JOIN-PAGE-SPEC §3) ────────────────────────────────────
+   These two are the site-wide reset, and `<body class="v2">` is on every page, so `.v2 button`
+   (0,1,1) and `.v2 a` (0,1,1) outrank ANY single class — including the atomic classes Base Web's
+   style engine writes, which are exactly one class each. On /join that stripped the app's own
+   controls of their paint: the primary answer came out as bare text with no pill, and the booking
+   anchor took `color:inherit` over its own. `#join-chat` is that island's host and its ONLY host,
+   and `:where()` carries no specificity, so the exclusion changes nothing for any other button or
+   link on the site — the selector still matches them at the same weight. Seen at 1600, in the
+   built bundle, not read off the CSS. */
+.v2 button:not(:where(#join-chat *)){font:inherit;cursor:pointer;border:none;background:none;color:inherit}
+.v2 a:not(:where(#join-chat *)){color:inherit;text-decoration:none}
+/* THE ICON FRAME — declared here and nowhere else (17.56 ICON LAW). The sprite these
+   pages <use> is Phosphor DUOTONE, generated from the package by tools/phosphor_sprite.py:
+   two FILLED paths, one at 0.2 opacity, on a 256 viewBox. So the frame paints with fill and
+   never stroke; every stroke property the hand-drawn set needed is gone with it. The symbol
+   carries fill=currentColor itself, so an icon inherits the red of an active link and the
+   grey of a faint one without a single literal colour anywhere. */
+.v2 svg.ic{width:15px;height:15px;fill:currentColor;stroke:none;flex-shrink:0}
+.v2 .n{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.v2 .eyebrow{font-size:var(--t-label);font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:var(--faint)}
+.v2 .wrap{max-width:var(--site-max);margin:0 auto;padding:0 var(--site-gutter)}
+.v2 section{padding:var(--site-section-space) 0;border-bottom:1px solid var(--line-soft)}
+.v2 section.tight{padding-top:0}
+/* ── THE SECTION HEADING, AND WHERE THE AIR COMES FROM (measured, 2026-08-30) ────────────────
+   Peter: «their pages have better air though». So both pages were measured rather than admired.
+   Burnt run a 1.344px container inside 48px gutters, section headings at 62px/68 and body at
+   14px/21 — a 4,4× step from heading to body. Ours ran a 1.100px container inside 170px gutters,
+   headings at 29px and body at 17px: a 1,7× step. That is the whole difference. Their air is not
+   more blank space, it is a bigger interval between the loudest thing and the quietest, which
+   lets a heading own the top of a section and the paragraph sit small and calm underneath.
+   The heading now scales 30 → 46px against a body that stays 17px (their 14px is too small for
+   a 35-to-60-year-old reading a phone in a van), which puts the step at 2,7× — as far as this
+   face goes before Fraunces starts shouting. */
+.v2 h2.t{font-family:var(--f-display,'Fraunces',Georgia,serif);
+  font-size:clamp(28px,3.3vw,46px);font-weight:500;letter-spacing:-.018em;line-height:1.12;
+  margin:0;max-width:20ch;text-wrap:balance}
+.v2 p.l{font-size:var(--t-lead);color:var(--mid);max-width:56ch;
+  margin-top:var(--rocoto-space-md);line-height:1.6}
+.v2 .b{display:inline-flex;align-items:center;justify-content:center;gap:var(--rocoto-space-sm);text-decoration:none;color:var(--fg);padding:8px 15px;border:1px solid var(--line-hard);border-radius:var(--r);font-size:var(--t-sm);font-weight:600;background:var(--white)}
+.v2 .b:hover{background:var(--sunk)}
+.v2 .b.p{background:var(--acc);border-color:var(--acc);color:#fff}
+.v2 .b.p:hover{background:#9E1524}
+.v2 .b.s{padding:5px 10px;font-size:var(--t-cap)}
+.v2 .b.lg{padding:10px 18px;font-size:var(--t-body)}
+.v2 .s{display:inline-flex;align-items:center;gap:5px;padding:2px 7px;border-radius:3px;font-size:11px;font-weight:600;border:1px solid transparent}
+.v2 .s.on{background:var(--ok-dim);color:var(--ok-t)}
+.v2 .s.test{background:var(--test-dim);color:var(--test)}
+.v2 .s.soon{color:var(--faint);border-color:var(--line)}
+.v2 .s i{width:5px;height:5px;border-radius:50%;background:currentColor}
+
+/* header */
+.v2 .hdr{position:sticky;top:0;z-index:40;background:rgba(244,240,234,.93);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+:root[data-theme="dark"] .v2 .hdr, .v2 .hdr{background:rgba(244,240,234,.93)}
+.v2 .hdr .in{max-width:var(--site-max);margin:0 auto;padding:12px var(--site-gutter);display:flex;align-items:center;gap:22px}
+.v2 .brand{display:flex;align-items:center;gap:9px;font-weight:600;letter-spacing:-.02em;font-size:16px;text-decoration:none}
+.v2 .brand svg{width:26px;height:26px;color:var(--acc)}
+.v2 .hdr nav{display:flex;gap:18px;position:relative}
+.v2 .hdr nav a{color:var(--mid);text-decoration:none;font-size:var(--t-sm);font-weight:500}
+.v2 .hdr nav a:hover{color:var(--fg)}
+.v2 .hdr .sp{margin-left:auto;display:flex;gap:9px;align-items:center}
+.v2 .hasmenu{position:relative}
+.v2 .hasmenu > .menu{display:none;position:absolute;top:100%;left:0;margin-top:10px;background:var(--white);border:1px solid var(--line);border-radius:var(--r);box-shadow:0 12px 28px rgba(26,20,19,.14);min-width:210px;padding:6px;z-index:50}
+.v2 .hasmenu:hover > .menu, .v2 .hasmenu:focus-within > .menu{display:block}
+.v2 .menu a{display:flex;flex-direction:column;gap:1px;padding:8px 10px;border-radius:4px;font-size:var(--t-sm);font-weight:600;color:var(--fg)}
+.v2 .menu a span{font-size:var(--t-cap);font-weight:400;color:var(--faint)}
+.v2 .menu a:hover{background:var(--sunk)}
+@media(max-width:820px){.v2 .hdr nav{display:none}}
+
+/* hero */
+.v2 .hero{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center;padding:56px 0 52px}
+.v2 .hero h1{font-family:var(--f-display,'Fraunces',Georgia,serif);font-size:clamp(38px,4.3vw,64px);font-weight:500;letter-spacing:-.025em;line-height:1.06;margin:0;max-width:18ch;text-wrap:balance}
+.v2 .hero .sub{font-size:var(--t-lead);color:var(--mid);max-width:46ch;margin-top:15px;line-height:1.5}
+.v2 .cta{display:flex;gap:9px;margin-top:22px;flex-wrap:wrap;align-items:center}
+.v2 .hero-visual{width:100%;max-width:340px;margin-inline:auto}  /* 340 = .hp-frame's own max-width; 300 shrank the hero phone below what the current site shows */
+@media(max-width:900px){.v2 .hero{grid-template-columns:1fr;gap:30px}.v2 .hero h1{font-size:clamp(34px,10vw,42px)}}
+
+/* diagram */
+.v2 .dia{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:26px 22px;position:relative}
+.v2 .lane{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+
+.v2 .node .ic{color:var(--mid)}
+
+.v2 .core{display:grid;grid-template-columns:1fr auto 1fr;gap:14px;align-items:center;margin:16px 0}
+.v2 .side{border:1px dashed var(--line-hard);border-radius:var(--r);padding:10px 12px;background:var(--sunk);position:relative}
+.v2 .side.l:after,.v2 .side.r:after{content:"";position:absolute;top:50%;width:14px;height:1px;background:var(--line-hard)}
+.v2 .side.l:after{right:-14px}.v2 .side.r:after{left:-14px}
+.v2 .side.l:before,.v2 .side.r:before{content:"";position:absolute;top:calc(50% - 3px);border-top:3px solid transparent;border-bottom:3px solid transparent}
+.v2 .side.l:before{right:-14px;border-left:5px solid var(--line-hard)}
+.v2 .side.r:before{left:-14px;border-right:5px solid var(--line-hard)}
+.v2 .side b{font-size:12.5px;display:block}
+.v2 .side span{font-size:11px;color:var(--faint)}
+.v2 .hub{border:1.5px solid var(--acc);border-radius:var(--r);background:var(--white);padding:13px 26px;text-align:center;min-width:186px;box-shadow:0 0 0 4px var(--acc-dim)}
+.v2 .hub svg{width:28px;height:28px;color:var(--acc);margin-bottom:4px}
+.v2 .hub b{font-size:15px;font-weight:600;letter-spacing:-.015em;display:block}
+.v2 .hub span{font-size:11px;color:var(--faint);display:block;margin-top:1px}
+.v2 .rail-lbl{margin-bottom:8px}
+
+
+
+@media(max-width:760px){
+  .v2 .lane{gap:6px}
+  .v2 .core{gap:8px;margin:26px 0}
+  .v2 .hub{min-width:0;padding:10px 10px}
+  .v2 .side{padding:8px 8px}
+  .v2 .side b{font-size:10.5px}
+  .v2 .side span{font-size:9px}
+}
+
+/* product cards — the SHOT frames a real, mounted island (never a hand-drawn screen) */
+.v2 .pg{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px;margin-top:24px}
+/* a product card is a RAISED object on the cream page, not a rectangle drawn on it: it was
+   border-only, which at this size reads as a table cell. The hover already darkened the
+   border; now it also lifts a step, so the pointer gets depth feedback and not just ink. */
+.v2 .pc{background:var(--white);border:1px solid var(--line);border-radius:var(--r);display:flex;flex-direction:column;overflow:hidden;text-decoration:none;
+  box-shadow:var(--rocoto-shadow-card);transition:box-shadow .22s var(--ease,ease),border-color .22s var(--ease,ease)}
+.v2 .pc:hover{border-color:var(--line-hard);box-shadow:var(--rocoto-shadow-sheet)}
+.v2 .pc .shot{background:var(--sunk);border-bottom:1px solid var(--line-soft);height:190px;overflow:hidden;display:flex;align-items:flex-start;justify-content:center;position:relative}
+.v2 .pc .shot .shotfit{width:340px;transform:scale(.46);transform-origin:top center;margin-top:14px;pointer-events:none;flex-shrink:0}
+/* width:340px is load-bearing, not decoration: the islands inside are width:min(100%,320px) with a
+   FIXED pixel height, so without an explicit width on this flex child `100%` collapses to intrinsic
+   (measured: 117px against a 312px height) and the little phone renders too narrow. Same root cause
+   as .pphero .visual above. */
+/* OfertaDelDia's card-preview crop: hide its copy column, phone only, centred (see build.py card()). */
+.v2 .pc .shot .shotfit.od-card{width:340px}
+.v2 .pc .shot .shotfit.od-card .od{display:flex;justify-content:center}
+.v2 .pc .shot .shotfit.od-card .od-copy{display:none}
+.v2 .pc .noshot{min-height:64px;display:flex;align-items:center;justify-content:center;color:var(--faint);font-size:var(--t-cap)}
+.v2 .pc .meta{padding:13px 15px;display:flex;flex-direction:column;gap:5px;flex:1}
+.v2 .pc .meta .top{display:flex;align-items:center;gap:8px}
+.v2 .pc .meta b{font-size:var(--t-h);font-weight:600;letter-spacing:-.012em}
+.v2 .pc .meta p{font-size:var(--t-sm);color:var(--mid);line-height:1.45}
+.v2 .pc .meta .more{font-size:var(--t-sm);font-weight:600;color:var(--acc-t);display:inline-flex;align-items:center;gap:5px;margin-top:2px}
+
+/* try it — three short ways in, no chat prop (the real "Prueba la IA" widget is a separate work
+   package, §6/WP-E; nothing here claims a live chat that is not wired up). */
+.v2 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:11px;margin-top:22px}
+.v2 .st{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:15px}
+.v2 .st .k{font-family:var(--mono);font-size:var(--t-label);font-weight:600;color:var(--acc-t);display:block;margin-bottom:6px}
+.v2 .st b{font-size:var(--t-h);font-weight:600;display:block}
+.v2 .st span{font-size:var(--t-sm);color:var(--mid);display:block;margin-top:4px;line-height:1.45}
+@media(max-width:760px){.v2 .steps{grid-template-columns:1fr}}
+
+/* ══ §17.56e PRICING: TWO TIERS ════════════════════════════════════════════════════════════════
+   (landing/build.py emits the markup from ONE `tier()` emitter — 2026-08-08.)
+
+   THE DEMO CARD IS GONE (Peter, 2026-08-09: «in the landing page no need for the free demo thing.
+   since we have it below lol»). It was a third column here, and the try-band a few hundred pixels
+   below it already offers the demo AND shows what comes out of it — the same door drawn twice on
+   one screen, once without the proof. So the grid is now the two things you can BUY and the band
+   under it is the thing you can OPEN. The columns went 3 → 2 with it: three columns holding two
+   cards leaves a hole, and `1fr 1fr` at this container width is ~510px a card, which is the
+   width the six slots were measured at before the demo was ever added.
+
+   The axis is not features, it is HOW FAR INTO THE VISITOR'S REAL BUSINESS IT GOES: Autoservicio
+   enters it, Enterprise enters their systems too. So the grid's job is to ROUTE, and «super
+   clear» is a construction, not an adjective:
+
+     THE SIX SLOTS, in this order, in every card
+       1 .pxs-h      the name (+ the marked tier's stamp — Enterprise since 2026-08-09)
+       2 .pxs-who    who it is for — one line
+       3 .pxs-price  the price, ONE treatment for both
+       4 .pxs-far    the one thing that changes vs the tier to its left — THE design
+       5 .pl         the ✓ list, whatever length the tier honestly has
+       6 .pxs-cta    one CTA, same position
+
+   The rows are declared ON THE GRID and each card is a SUBGRID of them, so slot n starts on the
+   same y in both even though .pxs-far wraps to one line in one card and two in another. Flex
+   is the base layout and subgrid the enhancement (@supports), because a card that merely stacks
+   is still correct — it just stops being aligned, which is the thing worth having.
+
+   The add-on toggle cards (.tg/.tot/.prg/.pxs-live/.pxs-price--dual) and the GMV calculator
+   (.calc*) were declared here and are GONE: nothing emits them any more. The calculator's own
+   reason is written where its markup used to be, in landing/build.py. ══════════════════════ */
+.v2 .pxg{display:grid;gap:12px;margin-top:22px}
+.v2 .pxg--tiers{grid-template-columns:repeat(2,minmax(0,1fr));align-items:stretch}
+.v2 .pxg--tiers .pxs{display:flex;flex-direction:column}
+.v2 .pxg--tiers .pl{flex:1 1 auto}
+@supports (grid-template-rows:subgrid){
+  @media(min-width:941px){
+    .v2 .pxg--tiers{grid-template-rows:auto auto auto auto 1fr auto;row-gap:0}
+    .v2 .pxg--tiers .pxs{grid-row:span 6;display:grid;grid-template-rows:subgrid}
+    .v2 .pxg--tiers .pl{flex:none}
+  }
+}
+.v2 .pxs{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:20px;
+  box-shadow:var(--rocoto-shadow-card)}
+/* ── THE WEIGHT MOVED TO ENTERPRISE (Peter, 2026-08-09: «we're pushing for enterprise where it
+   is custom [...] there's no access to the product self serve right now») ───────────────────
+   The lift used to sit on Autoservicio, because it was the tier with a published price. That
+   made the one tier a visitor cannot actually buy today the one the grid recommended. So the
+   emphasis walks one card to the right and is carried by three things at once, none of which
+   is a claim: the harder border, one step further off the paper (sheet, not card), and the
+   only filled button in the row. It survives the demo card's removal unchanged — with two
+   cards there is one plain card and one lifted one, which is the clearest that reads.
+   WHAT IS DELIBERATELY NOT DONE: no «most popular», no counter, no countdown, no bigger
+   type. There are zero paying accounts, so anything about demand would be invented — and
+   §17.56e's six parallel slots, the shared «Hasta dónde llega» label and the left-to-right
+   ladder are untouched, because the readable DIFFERENCE between the tiers is the design.
+   The 4px rise is desktop-only: stacked, a card floating above its neighbour reads as a
+   rendering bug rather than as a recommendation. */
+.v2 .pxs--ent{border-color:var(--line-hard);box-shadow:var(--rocoto-shadow-sheet)}
+@media(min-width:941px){.v2 .pxs--ent{transform:translateY(-4px)}}
+.v2 .pxs-h{display:flex;align-items:center;gap:9px}
+.v2 .pxs-h .pxs-ic{width:22px;height:22px;color:var(--fg);flex-shrink:0}
+.v2 .pxs-h b{font-size:var(--t-h);font-weight:600;letter-spacing:-.01em}
+.v2 .pxs-mark{margin-left:auto;flex:none;white-space:nowrap;font-size:var(--t-label);
+  font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--faint);
+  background:var(--sunk);border:1px solid var(--line);padding:3px 8px;
+  border-radius:var(--rocoto-radius-pill)}
+.v2 .pxs-who{margin-top:10px;font-size:var(--t-sm);line-height:1.45;color:var(--mid)}
+/* the price is a COLUMN, not a baseline row: the unit is three words in one tier and eight in
+   another, and letting it wrap where it likes is what pulls the two figures off one line */
+.v2 .pxs-price{margin-top:18px;display:flex;flex-direction:column;align-items:flex-start;gap:3px}
+/* ONE treatment for «29 €» and «Hablemos» — same face, same size, same baseline. It supersedes
+   the old split of .n (mono numerals) for the figure and .pxs-word (display serif, a step down)
+   for the word: two faces at two sizes in what has to read as one row across the cards.
+   Tabular sans, so the figure is a figure and mono stays off the surface (§17.30j). */
+.v2 .pxs-price .pxs-p{font-family:var(--sans);font-variant-numeric:tabular-nums lining-nums;
+  font-size:31px;font-weight:600;letter-spacing:-.022em;line-height:1.05;color:var(--fg)}
+.v2 .pxs-price .pxs-u{font-size:var(--t-cap);line-height:1.35;color:var(--faint)}
+/* SLOT 4 — the difference. The label is IDENTICAL in both cards on purpose: it is the axis
+   named out loud, so the eye reads across the row and compares two answers to one question
+   instead of two unrelated pitches. The sentence under it is the only thing that changes, and
+   it is set in the reading size, above the ✓ list in weight — the list is detail, this is not. */
+.v2 .pxs-far{margin-top:18px;padding-top:15px;border-top:1px solid var(--line-soft)}
+.v2 .pxs-far-k{display:block;font-size:var(--t-label);font-weight:700;letter-spacing:.05em;
+  text-transform:uppercase;color:var(--faint)}
+.v2 .pxs-far p{margin:7px 0 0;font-size:var(--t-body);line-height:1.42;letter-spacing:-.006em;
+  color:var(--fg);text-wrap:pretty}
+.v2 .pl{margin-top:18px;display:grid;gap:8px;align-content:start}
+.v2 .pl div{display:flex;gap:9px;font-size:var(--t-sm);line-height:1.42;color:var(--mid);
+  align-items:flex-start}
+.v2 .pl svg{color:var(--ok);margin-top:3px;flex:none}
+.v2 .pxs-cta{margin-top:20px;padding-top:18px;border-top:1px solid var(--line-soft)}
+.v2 .pxs-cta .b{width:100%;justify-content:center}
+/* THE STACK. The breakpoint stays at 940px, where it was set for three columns: two cards still
+   have ~430px each right down to it, so nothing is cramped above it, and below it a phone gets
+   the two cards one under the other in the order the lead sentence just taught. */
+@media(max-width:940px){
+  .v2 .pxg--tiers{grid-template-columns:minmax(0,1fr);gap:14px}
+  /* stacked, the ✓ list no longer has to reach a shared baseline, so the footer rule would be
+     a line under a list that already ended — it only earns its keep when it aligns the cards */
+  .v2 .pxs-cta{padding-top:0;border-top:none}
+}
+
+/* THE TRY-BAND — the /agents field, ported whole (webapp/src/routes/agents.css .rt-shot/.rt-curve,
+   §17.55k). Prefixed .tryband-* so it can never collide with the panel's .rt-* or .rp-*, and
+   declared in THIS file and nowhere else (BUILD-CONCERNS #6: a frame class lives in one place).
+
+   IT IS A STRIP, NOT A SECOND HERO (Peter, 2026-08-08: «i was imagining a less tall band btw»).
+   Since 2026-08-09 it is also the ONLY place the demo is offered in this section — the Demo card
+   above it was removed as the same offer twice — and it still must not compete with the grid it
+   sits beneath: it is a strip, and the two tiers are the row. The height came down ~a third, and
+   every millimetre of it came
+   out of the composition rather than out of the artefact's legibility: the field's min-height
+   (290 → 198), both paddings, and one order line (three → two, in build.py — «messy sentence in,
+   priced order out» is made by the second line and only repeated by the third). The incoming
+   chat bubble stays: it is half the argument.
+   THREE LAYERS, in the panel's own order, because the saturation is NOT in the curve — the first
+   port shipped the curve alone and read as a pale smear:
+     1 .tryband-field::before  the two poles, blur(46px) saturate(1.5) at .62
+     2 .tryband-curve          the bezier band + its hairline edge, blur(7px)
+     3 .tryband-field::after   the grain, .42 multiply
+     4 .tryband-art            THE ARTEFACT, on top of all of it — see the note above it
+   The field is a right-hand PANEL near the tile's aspect, never a full-bleed smear: stretching a
+   100x100 viewBox over the whole 1200px band flattens the curve into fog and the boundary dies. */
+/* the band is the widest single object on the page and sat perfectly flat under cards that now
+   do not — one step above them (sheet), so the section reads front-to-back */
+.v2 .tryband{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,46%);align-items:stretch;
+  margin-top:14px;border:1px solid var(--line-hard);border-radius:var(--r);
+  background:var(--white);overflow:hidden;box-shadow:var(--rocoto-shadow-sheet)}
+.v2 .tryband-in{padding:clamp(18px,2vw,26px);display:flex;flex-direction:column;
+  align-items:flex-start;justify-content:center}
+/* margin:0 is load-bearing — the UA's own 1em h3 margin-bottom opened a ~40px hole between the
+   question and its answer, so the three elements read as three, not as one block of copy */
+.v2 .tryband-in h3{margin:0;font-family:var(--f-display,"Fraunces",Georgia,serif);
+  font-size:clamp(18px,1.9vw,21px);font-weight:600;letter-spacing:-.015em;line-height:1.16;
+  text-wrap:balance;color:var(--fg);max-width:26ch}
+.v2 .tryband-in p{margin-top:8px;font-size:var(--t-body);line-height:1.5;color:var(--mid);max-width:46ch}
+.v2 .tryband-in .b{margin-top:16px}
+/* NOT `aspect-ratio`: inside a 42% grid column it computes a width WIDER than the column and the
+   composition is clipped on the right (measured: 545px of field in a 442px slot, the roc pole
+   sliced off centre). Column width + a min-height lands it near the tile's aspect on desktop,
+   which is what the curve needs in order to read as a curve — and at the shorter height the ratio
+   goes WIDER, not squarer, so the curve still crosses the box. Padding + centring is .rt-shot's
+   own box: the artefact is a child that floats, not a background. */
+.v2 .tryband-field{position:relative;isolation:isolate;overflow:hidden;min-height:170px;
+  display:flex;align-items:center;justify-content:center;padding:clamp(11px,1.2vw,14px);
+  color:var(--acc);border-left:1px solid var(--line);
+  --blobx:56%;--bloby:58%;--pole-roc:var(--acc);--pole-attn:var(--warn);--pole-card:var(--white)}
+/* 1 — THE POLES. g8 in field.css («one corner only, the rest light»): roc at 92% 88%, attn at
+   12% 24%. NOT the hashed g5 — g5 is roc-over-live, i.e. crimson over green, and with the middle
+   now covered by the card the surviving rim was the worst half of it. g8's crimson↔ochre diagonal
+   is the register the warm /agents tiles already wear. Same -14% inset, so the blobs bleed past
+   the edge instead of ringing.
+   INTENSITY IS .gfield's, NOT .rt-shot's — saturate(1.5) at .62 rather than saturate(2.2) at
+   full. That is already the codebase's answer for a field OUTSIDE a 208px tile («an entrance
+   carries identity, not drama»), and this band is exactly that case: the same recipe over 441x341
+   instead of 300x208 gives the poles half again as much room, and at tile intensity the corners
+   go to slab. The curve loses the same amount (.7, again .gfield's). */
+.v2 .tryband-field:before{content:"";position:absolute;inset:-14%;z-index:0;
+  filter:blur(46px) saturate(1.5);opacity:.62;
+  background:
+    radial-gradient(var(--blobx) var(--bloby) at 92% 88%, var(--pole-roc) 0%, var(--pole-roc) 24%, transparent 62%),
+    radial-gradient(var(--blobx) var(--bloby) at 12% 24%, var(--pole-attn) 0%, var(--pole-attn) 24%, transparent 68%),
+    var(--pole-card)}
+/* 2 — THE CURVE, above the poles, exactly as .rt-curve sits in a tile */
+.v2 .tryband-curve{position:absolute;inset:0;z-index:1;width:100%;height:100%;filter:blur(7px);
+  opacity:.7;pointer-events:none}
+.v2 .tryband-edge{fill:none;stroke:currentColor;stroke-width:.6;opacity:.5}
+/* 3 — THE GRAIN. Verbatim from .rt-shot::after: fine, dense, film-like; a texture, not a whisper */
+.v2 .tryband-field:after{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;
+  opacity:.42;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+/* 4 — THE ARTEFACT. A real /agents tile is ~85 % occluded by its result window; the field was
+   drawn as a BACKDROP and never as the subject, so the band carries the thing the door promises:
+   the customer's sentence, and the order Rocoto priced out of it. The card is ExtractedOrderCard's
+   grammar (Bubbles.tsx OrderCard, chat-port.css .rk-order/.rk-line/.rk-rule/.rk-total) at the
+   tiles' .rp-* scale — a lift, not a fourth card style. z-index 3 puts it over the grain, which is
+   where .rt-shot puts its own artefact. */
+.v2 .tryband-art{position:relative;z-index:3;width:100%;max-width:392px;display:grid;
+  gap:8px;justify-items:stretch}
+/* the sentence as it arrives — the app's INCOMING chat bubble, cream paper with its tail corner
+   squared off, so the pair reads top-to-bottom in time: what was said, then what was written */
+.v2 .tryband-said{justify-self:start;max-width:100%;padding:8px 11px;
+  background:var(--chat-in);border:1px solid var(--chat-in-line);
+  border-radius:10px;border-bottom-left-radius:3px;font-size:12px;line-height:1.45;
+  color:var(--fg);box-shadow:var(--rocoto-shadow-card)}
+.v2 .tryband-card{background:var(--white);border:1px solid var(--line);border-radius:var(--r);
+  box-shadow:var(--rocoto-shadow-sheet);padding:10px 12px 8px}
+.v2 .tryband-card-hd{display:flex;align-items:baseline;gap:8px}
+.v2 .tryband-chan{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+  font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--faint)}
+/* the honesty stamp — on paper rather than on the gradient so it is always legible, and QUIET:
+   a pill in the accent read as a live product badge and outranked the title it sits above. It is
+   a disclosure, not a feature. */
+.v2 .tryband-eg{flex:none;font-size:9.5px;font-weight:700;letter-spacing:.07em;
+  text-transform:uppercase;color:var(--faint);background:var(--sunk);
+  border:1px solid var(--line);padding:1px 6px;border-radius:var(--rocoto-radius-pill)}
+.v2 .tryband-ttl{display:block;margin-top:5px;font-size:14.5px;font-weight:600;
+  letter-spacing:-.01em;line-height:1.25;color:var(--fg)}
+.v2 .tryband-sub{display:block;margin-top:1px;font-size:11px;color:var(--mid);
+  font-variant-numeric:tabular-nums lining-nums}
+.v2 .tryband-lines{margin-top:7px}
+.v2 .tryband-rule{height:1px;background:var(--line)}
+.v2 .tryband-rule--hard{background:var(--line-hard);margin-top:2px}
+.v2 .tryband-row{display:flex;align-items:baseline;gap:10px;padding:5px 0}
+.v2 .tryband-nm{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+  font-size:12px;color:var(--fg)}
+/* §17.30j: figures are tabular SANS. Mono is the developer register and is banned on a product
+   surface — and this card IS the product surface, quoted. */
+.v2 .tryband-qt,.v2 .tryband-am,.v2 .tryband-tot b{font-family:var(--sans);
+  font-variant-numeric:tabular-nums lining-nums;white-space:nowrap}
+.v2 .tryband-qt{flex:none;font-size:11px;color:var(--faint)}
+.v2 .tryband-am{flex:none;font-size:12px;font-weight:500;color:var(--fg)}
+.v2 .tryband-tot{display:flex;align-items:baseline;gap:10px;padding:7px 0 0}
+.v2 .tryband-tot span{flex:1;font-size:11.5px;color:var(--mid)}
+.v2 .tryband-tot b{font-size:14px;font-weight:600;color:var(--fg)}
+
+@media(max-width:860px){
+  .v2 .tryband{grid-template-columns:1fr}
+  /* the field goes UNDER the copy on a phone. It keeps the ARTEFACT — 150px of naked gradient is
+     the same composition error in miniature — and gives up the min-height so the card, not a
+     ratio box, decides how tall the strip is. */
+  .v2 .tryband-field{min-height:0;order:2;border-left:none;border-top:1px solid var(--line);
+    padding:22px 18px}
+  .v2 .tryband-in{order:1}
+  /* stacked, the field is a FULL-WIDTH strip: at 352px the card left ~180px of bare gradient on
+     each side at tablet width, which is the same «the field became the subject» error the desktop
+     panel had. The artefact grows with the strip so the rim stays a rim. */
+  .v2 .tryband-art{max-width:480px}
+}
+
+/* two ways in — Distribuidores (warehouse) / Repartidores (no warehouse, runs the van) */
+.v2 .aud2{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin-top:22px}
+.v2 .ac{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:20px;display:flex;flex-direction:column;gap:9px;
+  box-shadow:var(--rocoto-shadow-card)}
+.v2 .ac .ttl{display:flex;align-items:center;gap:9px}
+.v2 .ac b{font-size:16.5px;font-weight:600;letter-spacing:-.02em}
+.v2 .ac .es{font-size:var(--t-cap);color:var(--faint);font-family:var(--mono)}
+.v2 .ac p{font-size:var(--t-body);color:var(--mid);line-height:1.5}
+.v2 .ac ul{list-style:none;display:grid;gap:5px;margin-top:2px;padding:0}
+.v2 .ac li{font-size:var(--t-sm);color:var(--mid);display:flex;gap:7px}
+.v2 .ac li svg{color:var(--ok);margin-top:2px}
+@media(max-width:700px){.v2 .aud2{grid-template-columns:1fr}}
+
+/* footer */
+.v2 .ftr{background:var(--white);border-top:1px solid var(--line);padding:44px 0 26px}
+.v2 .fgrid{display:grid;grid-template-columns:1.4fr repeat(3,1fr);gap:24px}
+.v2 .fgrid h4{font-size:var(--t-label);font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--faint);margin-bottom:10px}
+.v2 .fgrid a{display:block;font-size:var(--t-sm);color:var(--mid);text-decoration:none;padding:3px 0}
+.v2 .fgrid a:hover{color:var(--fg)}
+.v2 .fbrand p{font-size:var(--t-cap);color:var(--faint);margin-top:10px;max-width:30ch;line-height:1.5}
+.v2 .fbot{display:flex;gap:14px;align-items:center;margin-top:30px;padding-top:16px;border-top:1px solid var(--line-soft);font-size:var(--t-cap);color:var(--faint);flex-wrap:wrap}
+.v2 .fbot .sp{margin-left:auto;display:flex;gap:10px;align-items:center}
+.v2 .lang{border:1px solid var(--line);border-radius:var(--r);padding:4px 8px;font-size:var(--t-cap);background:var(--white);display:inline-flex;gap:8px}
+.v2 .lang a.on{font-weight:700;color:var(--fg)}
+.v2 .lang a{color:var(--faint)}
+@media(max-width:820px){.v2 .fgrid{grid-template-columns:1fr 1fr}}
+
+/* NavAuth (#nav-auth) renders its OWN classNames (.btn/.btn-outline/.nav-auth-*) — they used to come
+   from public/rocoto.css, which the v2 shell no longer loads (rule 4: one button system, the v2
+   one, everywhere). Restyled here to the v2 look rather than duplicating a second sign-in button. */
+.v2 #nav-auth .btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:5px 10px;border-radius:var(--r);font-size:var(--t-cap);font-weight:600;border:1px solid var(--line-hard);background:var(--white);color:var(--fg);cursor:pointer}
+.v2 #nav-auth .btn:hover{background:var(--sunk)}
+.v2 #nav-auth .btn-ghost{border-color:transparent;background:none}
+.v2 #nav-auth .nav-auth-user{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;color:var(--mid)}
+.v2 #nav-auth .nav-auth-avatar{width:22px;height:22px;border-radius:50%;background:var(--ink);color:var(--paper);display:inline-flex;align-items:center;justify-content:center;font-size:10px;font-weight:700}
+.v2 #nav-auth .nav-auth-name{display:inline-flex;align-items:center;gap:6px;font-weight:600;color:var(--fg)}
+.v2 #nav-auth .nav-auth-sep{width:1px;height:14px;background:var(--line);display:inline-block}
+.v2 #nav-auth .nav-auth-signout{font-size:12px;color:var(--faint);background:none;border:none;cursor:pointer}
+.v2 #nav-auth .nav-auth-signout:hover{color:var(--fg)}
+
+/* product page chrome */
+.v2 .crumbs{display:flex;align-items:center;gap:8px;font-size:var(--t-cap);color:var(--mid);padding-top:26px}
+.v2 .crumbs a{color:var(--acc-t);text-decoration:none;font-weight:600}
+.v2 .pphero{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center;padding:26px 0 46px}
+.v2 .pphero h1{font-family:var(--f-display,'Fraunces',Georgia,serif);font-size:38px;font-weight:600;letter-spacing:-.015em;line-height:1.1;max-width:16ch}
+.v2 .pphero .visual{display:block}
+/* The island frames size themselves off their host's WIDTH and carry a FIXED pixel height
+   (review.css .rv-screen 660px, stock-confirm 660px, oferta 700px) paired with width:min(100%,320px).
+   A flex host makes the island an intrinsically-sized flex item, so `100%` resolves to the shrunk
+   content width (measured: 254px) while the height stays 660 — the frame comes out too narrow AND
+   too tall. On the old page these sat in a BLOCK container, which is why they were right there.
+   Keep this a block, and let each island's own centring rule do the centring. */
+.v2 .pphero .visual > div{width:100%}
+.v2 .limit{background:var(--sunk);border:1px solid var(--line-soft);border-radius:var(--r);padding:16px 18px;font-size:var(--t-body);color:var(--mid);line-height:1.55}
+.v2 .limit b{color:var(--fg)}
+@media(max-width:820px){.v2 .pphero{grid-template-columns:1fr}}
+
+/* ── the flow diagram: SQUARE icon tiles + MEASURED curved wires (Peter, 2026-07-28) ─────────────
+   Was: wide rows with the channel spelled out ("Email · text, tables, attachments") joined by short
+   straight arrow stubs that never reached the nodes. Now each node is a squarish tile — big icon,
+   label under it — and the connectors are cubic curves drawn from measured edge-centres by the
+   script beside the markup, so they land dead-centre on the hub and on every node at any width. */
+.v2 .dia{position:relative}
+.v2 .wires{position:absolute;inset:0;pointer-events:none;overflow:visible;z-index:0}
+.v2 .wires path{fill:none;stroke:var(--line-hard);stroke-width:1.3;stroke-linecap:round;opacity:.9}
+.v2 .dia .lane,.v2 .dia .core{position:relative;z-index:1}
+.v2 .node{width:100%;max-width:148px;margin-inline:auto;aspect-ratio:1/.88;border:1px solid var(--line);border-radius:var(--r);
+  background:var(--white);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:10px 8px;text-align:center}
+.v2 .node .ic{width:24px;height:24px;color:var(--fg)}
+.v2 .node b{font-size:12.5px;font-weight:600;letter-spacing:-.005em;line-height:1.2}
+.v2 .dia .lane{gap:10px}
+.v2 .rail-lbl.out{margin-top:8px}
+/* the wires pass behind these labels, so give the text its own paper so nothing reads struck-through */
+.v2 .dia .rail-lbl span{background:var(--white);padding-right:9px;position:relative;z-index:1}
+.v2 .core{margin:38px 0}   /* room for the curves to actually curve */
+@media(max-width:760px){
+  .v2 .node{aspect-ratio:auto;padding:9px 3px;gap:6px}
+  .v2 .node .ic{width:19px;height:19px}
+  .v2 .node b{font-size:9.5px;letter-spacing:0}
+}
+
+
+/* ── the payment-link phone (Cobros) — lifted from the REAL checkout at
+   medusa/storefront/components/CheckoutClient.tsx: sectioned Contacto/Entrega/Pago each with
+   "Cambiar", a PaymentElement-shaped method row, a sticky white total band over ONE coloured CTA
+   reading "Pagar · <precio>" with a lock icon. Peter's own Apple Pay / Google Pay markup from the
+   leo-casa portfolio page (ours), restyled to the token set instead of its original inline styles. */
+.v2 .pay-phone{width:100%;max-width:330px;margin-inline:auto;background:var(--rocoto-fg,#1A1413);border-radius:34px;padding:8px;box-shadow:0 22px 50px rgba(26,20,19,.24)}
+.v2 .pay-screen{background:#fff;border-radius:26px;overflow:hidden;padding:14px 13px 14px;display:flex;flex-direction:column;gap:0}
+.v2 .pay-top{display:flex;justify-content:space-between;align-items:baseline;padding-bottom:10px;border-bottom:1px solid var(--line-soft)}
+.v2 .pay-top .n{font-size:12.5px;font-weight:600}
+.v2 .pay-top .pay-total{font-size:12.5px;font-weight:600;color:var(--faint)}
+.v2 .pay-sec{display:flex;align-items:center;gap:8px;padding:10px 0;border-bottom:1px solid var(--line-soft)}
+.v2 .pay-sec svg{width:15px;height:15px;flex-shrink:0}
+.v2 .pay-sec.done svg{color:var(--ok)}
+.v2 .pay-sec.on svg{color:var(--acc)}
+.v2 .pay-sec div{flex:1;min-width:0}
+.v2 .pay-sec b{font-size:11.5px;font-weight:600;display:block}
+.v2 .pay-sec span{font-size:10.5px;color:var(--faint);display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.v2 .pay-sec em{font-size:10.5px;font-style:normal;color:var(--acc-t);font-weight:600}
+.v2 .pay-methods{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:10px 0 8px}
+.v2 .pay-btn{display:flex;align-items:center;justify-content:center;gap:6px;height:36px;border-radius:8px;border:none;cursor:pointer}
+.v2 .pay-btn--apple{background:#000}
+.v2 .pay-btn--google{background:#fff;border:1px solid var(--line-hard)}
+.v2 .pay-lbl{font-size:14px;font-weight:600;color:#fff;font-family:-apple-system,'Segoe UI',sans-serif}
+.v2 .pay-btn--google .pay-lbl{color:#3c4043}
+.v2 .pay-or{text-align:center;font-size:10px;color:var(--faint);padding:2px 0 8px;position:relative}
+.v2 .pay-cardrow{display:flex;align-items:center;gap:8px;padding:9px 10px;border:1px solid var(--line);border-radius:8px;margin-bottom:12px;font-size:11.5px}
+.v2 .pay-cardrow svg{width:16px;height:16px;color:var(--faint)}
+.v2 .pay-cardrow .pay-exp{margin-left:auto;color:var(--faint)}
+/* the CTA lives INSIDE .pay-screen — as a sibling it rendered on top of the black frame, outside the
+   phone's rounded screen entirely (Peter, 2026-07-29: "the confirmar button should sit in front") */
+.v2 .pay-cta{background:#fff;padding:12px 0 0;margin-top:auto}
+.v2 .pay-ctabtn{width:100%;background:var(--acc);color:#fff;border:none;border-radius:10px;padding:12px;font-size:13.5px;font-weight:600;display:flex;align-items:center;justify-content:center;gap:7px;cursor:pointer}
+.v2 .pay-ctabtn svg{width:14px;height:14px}
+
+
+/* ── small utility classes the relocated sections need ──────────────────────────────────────── */
+.v2 .hint{font-size:var(--t-cap);color:var(--faint);line-height:1.5}
+.v2 .chip{display:inline-flex;padding:5px 11px;border:1px solid var(--line);border-radius:99px;font-size:var(--t-cap);font-weight:500;background:var(--sunk)}
+
+/* the alias-learning exchange (vocabulario) — two short lines + the real catalogue options as chips */
+.v2 .qcard{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:16px;display:flex;flex-direction:column;gap:8px}
+.v2 .qrow{max-width:82%;padding:8px 12px;border-radius:10px;font-size:13.5px;line-height:1.4}
+.v2 .qrow.out{align-self:flex-end;background:var(--acc-dim);color:var(--acc-t);border:1px solid rgba(192,27,44,.18)}
+.v2 .qrow.in{align-self:flex-start;background:var(--sunk);border:1px solid var(--line-soft)}
+.v2 .qopts{display:flex;gap:6px;flex-wrap:wrap;padding:2px 0 2px 4px}
+
+/* the customer reorder-link preview (enlace) — a flat card, no phone frame (that's Cobros' job) */
+.v2 .linkprev{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:16px;max-width:320px}
+.v2 .lp-top{display:flex;justify-content:space-between;align-items:baseline;padding-bottom:10px;border-bottom:1px solid var(--line-soft);margin-bottom:8px}
+.v2 .lp-top b{font-size:13px;font-weight:600}
+.v2 .lp-top span{font-size:11.5px;color:var(--faint)}
+.v2 .lp-line{display:flex;justify-content:space-between;font-size:12.8px;padding:4px 0;color:var(--mid)}
+.v2 .lp-line b{color:var(--fg);font-weight:600}
+.v2 .lp-hist{margin-top:12px;padding-top:10px;border-top:1px solid var(--line-soft)}
+.v2 .lp-hist .lbl{font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--faint);display:block;margin-bottom:6px}
+.v2 .lp-hist div{display:flex;gap:8px;font-size:11.8px;padding:3px 0;color:var(--mid)}
+.v2 .lp-hist i{font-style:normal;color:var(--faint);width:64px;flex-shrink:0}
+.v2 .lp-hist b{color:var(--fg);font-weight:600;flex:1}
+.v2 .lp-hist em{font-style:normal;font-weight:600}
+
+/* the Billie/Stripe trust strip (credito → Cobros) — the real logos, currentColor so they sit on paper */
+.v2 .trustrow{display:flex;gap:34px;justify-content:center;align-items:center;color:var(--mid);flex-wrap:wrap}
+.v2 .trustrow svg{height:26px;width:auto}
+
+
+/* the real printable sheets on /pedidos.
+   TWO things the screen has to reproduce that print does for free:
+   (1) PAGE MARGINS. The real stylesheet sets `@page { size:A4; margin:14mm }`, and @page applies
+       ONLY when printing — on screen the sheet had no margins at all, so the header ran to the
+       edge and the right-hand column (the Rocoto mark, "Albarán Nº") fell off the paper. 14mm of
+       A4's 210mm width is 52.9px at 794px, so the A4 box carries that as real padding.
+   (2) A SCALE THAT MATCHES ITS BOX. transform:scale() does not change the layout box, so a
+       hardcoded .4 against a fluid `width:100%` container clipped whenever the grid column came
+       out narrower than 794*.4. The sheet is a FIXED 318x449 (= 794x1123 * .4) and centres itself;
+       the two numbers can no longer drift apart. */
+.v2 .ptpl{display:grid;grid-template-columns:repeat(auto-fit,minmax(440px,1fr));gap:28px}
+.v2 .ptpl-item{margin:0}
+.v2 .ptpl-sheet{position:relative;width:476px;height:673px;overflow:hidden;background:#fff;margin-inline:auto;
+  border:1px solid var(--line);border-radius:3px;box-shadow:0 12px 30px rgba(26,20,19,.13)}
+.v2 .ptpl-a4{position:absolute;top:0;left:0;width:794px;height:1123px;
+  transform:scale(.5995);transform-origin:top left}   /* 476/794; padding comes from .deskdoc-a4 */
+.v2 .ptpl-item figcaption{margin:14px auto 0;width:476px;max-width:100%}
+.v2 .ptpl-item figcaption b{font-size:var(--t-sm);font-weight:600;display:block}
+.v2 .ptpl-item figcaption span{font-size:var(--t-cap);color:var(--mid);display:block;margin-top:2px;line-height:1.45}
+
+/* the Cobros card preview scales the SAME phone every other card scales its island — the old
+   bespoke "compact" cut hid the middle and left a stub whose shop name and total both wrapped */
+.v2 .pc .shot .shotfit.paycard{width:330px;transform:scale(.52);margin-top:10px}
+
+/* /pedidos hero: the headline and the "A las 6:03" flow are ONE unit, not a bare headline with an
+   orphan panel floating below it. HowItWorks is a self-contained full-bleed island (.hiw-panel, its
+   own .wrap), so it stacks UNDER the lead copy at full width instead of being squeezed into the
+   half-width .visual column every other product page uses. */
+.v2 .pphero-stacked{display:block;padding-bottom:0}
+.v2 .pphero-lead{max-width:660px}
+.v2 .pphero-lead .sub{margin-top:10px}
+.v2 .pphero-wide{margin-top:26px}
+/* the island centres its own lead paragraph; on this page the hero already said it, so keep that
+   sub-line tight rather than letting it read as a second, competing intro */
+.v2 .pphero-wide .hiw-lead{max-width:none;margin-bottom:18px}
+.v2 .pphero-wide .hiw-sub{font-size:var(--t-body);color:var(--mid)}
+
+/* ── STATIC PHONE LIFTS ────────────────────────────────────────────────────────────────────────
+   A phone is a FIXED-SIZE object. It keeps .hp-frame's real 320/660 aspect and scales down with the
+   viewport; it never stretches to fit its content (Peter, 2026-07-29: "frames MUST be fixed size...
+   none of these elongated shits"). Content that overruns is CLIPPED by the screen, exactly like a
+   real phone showing the top of a scrollable page — never allowed to lengthen the device. */
+.v2 .hp-frame{width:100%;max-width:320px;aspect-ratio:320/660;margin-inline:auto}
+.v2 .hp-frame .hp-screen{height:100%;overflow:hidden}
+.v2 .hp-frame .hp-sheet{position:absolute;inset:30px 0 0;height:auto;display:flex;flex-direction:column}
+.v2 .hp-frame .hp-app-view{flex:1;min-height:0;overflow:hidden}
+.v2 .hp-frame .hp-app-inv{position:absolute;inset:0;overflow:hidden}
+
+/* /pedidos hero: HowItWorks renders its own centred lead paragraph, which between the CTAs and the
+   panel read as a second, competing intro. The hero above already says it. */
+.v2 .pphero-wide .hiw-lead{display:none}
+
+/* ── THE RESTAURANT'S OWN WHATSAPP — lifted VERBATIM from the current landing ─────────────────
+   Its own comment there explains why it does not reuse the hero island's .hp-* classes: those
+   assume the island owns a positioned full-bleed frame, and inside a page section its bubbles
+   escape the phone. I hit exactly that and rebuilt it wrong; this is the real one. */
+.v2 .wa-phone{width:min(300px,80vw);aspect-ratio:9/19.5;margin:0 auto;background:#111B21;
+  border-radius:38px;padding:9px;box-shadow:0 26px 60px rgba(26,20,19,.22),0 2px 6px rgba(26,20,19,.10)}
+.v2 .wa-screen{border-radius:30px;overflow:hidden;background:#EFE7DE;height:100%;display:flex;flex-direction:column;position:relative}
+/* the home-indicator pill, and the room it needs so the last bubble is not under it */
+.v2 .wa-screen::after{content:"";position:absolute;left:50%;bottom:7px;transform:translateX(-50%);
+  width:36%;height:4px;border-radius:99px;background:rgba(17,27,33,.26);z-index:2}
+.v2 .wa-bar{display:flex;align-items:center;justify-content:space-between;padding:9px 17px 3px;
+  font-family:var(--f-mono);font-size:11.5px;font-weight:600;color:#111B21;background:#FFFFFF}
+.v2 .wa-bar-r{display:inline-flex;align-items:center;gap:5px;color:#111B21}
+.v2 .wa-sb{height:11px;width:auto;display:block;fill:currentColor}
+.v2 .wa-sb-bat{height:12px}
+.v2 .wa-bar-r{display:inline-flex;gap:5px;align-items:center;opacity:.8}
+.v2 .wa-top{display:flex;align-items:center;gap:9px;padding:8px 13px 10px;background:#FFFFFF;
+  border-bottom:1px solid rgba(11,27,22,.06)}
+/* the composer, same shape as our own app's: pill field, clip + camera inside, round mic at the right */
+.v2 .wa-comp{flex:none;display:flex;align-items:center;gap:7px;padding:7px 9px 18px;background:#FFFFFF;
+  border-top:1px solid rgba(11,27,22,.06)}
+.v2 .wa-field{flex:1;display:flex;align-items:center;gap:7px;background:#F4F0EA;border-radius:999px;
+  padding:7px 11px;font-size:12.5px;color:rgba(17,27,33,.42)}
+.v2 .wa-field i{margin-left:auto;display:inline-flex;align-items:center;gap:9px;opacity:.42}
+.v2 .wa-ic{width:15px;height:15px;display:block}
+.v2 .wa-mic-ic{width:14px;height:14px;display:block}
+.v2 .wa-mic{width:32px;height:32px;flex:none;border-radius:50%;background:#C01B2C;color:#fff;
+  display:grid;place-items:center}
+.v2 .wa-av{width:28px;height:28px;border-radius:50%;background:#DBF5E1;flex:none}
+.v2 .wa-who{font-size:14px;font-weight:600;color:#111B21;line-height:1.15}
+.v2 .wa-thread{padding:11px 9px 6px;display:flex;flex-direction:column;flex:1;overflow:hidden}
+/* the last exchange sits at the bottom of the screen, the way an open chat actually looks */
+.v2 .wa-thread::before{content:"";flex:1}
+.v2 .wa-b{max-width:84%;padding:6px 9px 5px;font-size:13px;line-height:1.38;color:#111B21;position:relative;
+  box-shadow:0 1px .5px rgba(11,20,26,.13);border-radius:7.5px;margin-bottom:6px}
+.v2 .wa-in{background:#FFFFFF;align-self:flex-start;border-top-left-radius:0}
+.v2 .wa-out{background:#D9FDD3;align-self:flex-end;border-top-right-radius:0}
+.v2 .wa-b::after{content:"";position:absolute;top:0;width:8px;height:13px}
+.v2 .wa-in::after{left:-8px;background:#FFFFFF;clip-path:polygon(100% 0,100% 100%,0 0)}
+.v2 .wa-out::after{right:-8px;background:#D9FDD3;clip-path:polygon(0 0,0 100%,100% 0)}
+.v2 .wa-t{display:block;text-align:right;font-size:10px;color:rgba(17,27,33,.45);margin-top:2px}
+.v2 .wa-t i{display:inline-block;color:#53BDEB;font-style:normal;margin-left:3px;vertical-align:-1px}
+.v2 .wa-tick{width:13px;height:9px;display:block}
+.v2 .wa-opts{align-self:flex-start;width:84%;display:flex;flex-direction:column;margin:-6px 0 8px;
+  border-radius:0 0 7.5px 7.5px;overflow:hidden;background:#FFFFFF;box-shadow:0 1px .5px rgba(11,20,26,.13)}
+.v2 .wa-opt{color:#027EB5;font-size:13px;font-weight:500;text-align:center;padding:9px 6px;
+  border-top:1px solid rgba(2,126,181,.15)}
+
+
+/* ── the `.tour` bands lifted from the current landing (alternating mockup sides) ──────────────── */
+.v2 .tour{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,64px);align-items:center}
+.v2 .tour > div{display:flex;flex-direction:column;justify-content:center}
+.v2 .tour .section-head{margin:0;max-width:none}
+.v2 .tour-media{align-self:center;min-width:0}
+.v2 .tour-media video{width:100%;max-width:320px;max-height:620px;object-fit:contain;display:block;margin-inline:auto;border-radius:22px}
+.v2 .section-head .kicker{font-family:var(--mono);font-size:var(--t-label);letter-spacing:.14em;
+  text-transform:uppercase;color:var(--acc);font-weight:700;margin-bottom:10px}
+.v2 .section-head h2{font-family:Fraunces,Georgia,serif;font-size:clamp(26px,3.4vw,40px);line-height:1.1;
+  letter-spacing:-.02em;margin:0 0 12px;text-wrap:balance}
+.v2 .section-head p{font-size:15px;color:var(--mid);line-height:1.55;max-width:52ch}
+.v2 .vocab-notes{margin-top:20px;display:flex;flex-direction:column;gap:10px}
+.v2 .vocab-notes span{font-size:var(--t-sm);color:var(--mid);padding-left:16px;position:relative;line-height:1.5}
+.v2 .vocab-notes span::before{content:"";position:absolute;left:0;top:8px;width:6px;height:6px;
+  border-radius:50%;background:var(--acc)}
+@media(max-width:900px){.v2 .tour{grid-template-columns:1fr}
+  .v2 .tour-media{order:-1}}
+
+/* founder */
+.v2 .founder{display:grid;grid-template-columns:132px 1fr;gap:24px;align-items:start;
+  max-width:820px;margin:26px auto 0}
+.v2 .founder img{width:132px;height:132px;border-radius:var(--r);object-fit:cover}
+.v2 .founder .fn{font-weight:700;font-size:15px;margin-bottom:6px}
+.v2 .founder .fd{font-size:var(--t-body);color:var(--mid);line-height:1.6}
+@media(max-width:640px){.v2 .founder{grid-template-columns:1fr}}
+
+.v2 .tour .section-head h1{font-family:Fraunces,Georgia,serif;font-size:clamp(28px,3.6vw,42px);line-height:1.08;letter-spacing:-.025em;margin:0 0 12px;text-wrap:balance}
+.v2 .tour .cta{margin-top:20px}
+
+/* portal.css sizes this button off --rocoto-type-label-* vars, which the token package does not
+   export — the declarations drop and the button renders as blank space inside the card. Pin the
+   two values it actually needs. */
+.v2 .pt-repetir{font-size:13px;line-height:1.2;padding:9px 14px;color:var(--fg);background:var(--white)}
+.v2 .pt-ped-acciones{display:flex;gap:8px;margin-top:10px}
+
+/* the product cover photo under each hero — Peter's own 3:1 crops from the current landing */
+.v2 .pcover{width:100%;aspect-ratio:3/1;object-fit:cover;border-radius:var(--r);display:block}
+
+/* navbar: white bar, and the CTA is the red one */
+.v2 .hdr{background:var(--white)}
+.v2 .hdr .b.p{background:var(--acc);border-color:var(--acc);color:#fff}
+.v2 .hdr .b.p:hover{background:#9E1524}
+
+/* ── PRODUCTS MEGA-MENU: 2 columns x 3 rows of icon cards, on hover ─────────────────────────── */
+.v2 .hdr .hasmenu{position:relative}
+.v2 .hdr .menu{position:absolute;top:100%;left:50%;transform:translateX(-50%) translateY(6px);
+  display:grid;grid-template-columns:repeat(2,minmax(210px,1fr));gap:6px;padding:10px;
+  background:var(--white);border:1px solid var(--line);border-radius:8px;
+  box-shadow:0 18px 44px rgba(26,20,19,.16);opacity:0;visibility:hidden;pointer-events:none;
+  transition:opacity .14s,transform .14s;z-index:60}
+.v2 .hdr .hasmenu:hover .menu,.v2 .hdr .hasmenu:focus-within .menu{
+  opacity:1;visibility:visible;pointer-events:auto;transform:translateX(-50%) translateY(2px)}
+.v2 .hdr .menu a{display:flex;gap:10px;align-items:flex-start;padding:10px;border-radius:6px;
+  text-decoration:none;color:var(--fg)}
+.v2 .hdr .menu a:hover{background:var(--sunk)}
+.v2 .hdr .menu .mi{width:30px;height:30px;flex:none;border-radius:6px;background:var(--sunk);
+  border:1px solid var(--line-soft);display:grid;place-items:center;color:var(--acc-t)}
+.v2 .hdr .menu .mt{min-width:0;display:block}
+.v2 .hdr .menu .mt b{display:block;font-size:var(--t-sm);font-weight:600;line-height:1.25}
+.v2 .hdr .menu .mt span{display:block;font-size:var(--t-cap);color:var(--mid);line-height:1.4;margin-top:2px}
+
+/* ── MOBILE: full-screen menu ───────────────────────────────────────────────────────────────── */
+.v2 .burger{display:none;width:38px;height:38px;margin-left:auto;border-radius:6px;
+  flex-direction:column;justify-content:center;align-items:center;gap:5px;background:none;border:none}
+.v2 .burger i{display:block;width:19px;height:1.6px;background:var(--fg);transition:transform .2s,opacity .2s}
+body.navopen .v2 .burger i:first-child,.v2 body.navopen .burger i:first-child{transform:translateY(3.3px) rotate(45deg)}
+body.navopen .burger i:first-child{transform:translateY(3.3px) rotate(45deg)}
+body.navopen .burger i:last-child{transform:translateY(-3.3px) rotate(-45deg)}
+@media(max-width:860px){
+  .v2 .burger{display:flex}
+  .v2 .hdr .in{gap:10px}
+  .v2 .hdr nav{position:fixed;inset:56px 0 0;background:var(--white);display:block;padding:18px 20px 40px;
+    overflow-y:auto;transform:translateY(-8px);opacity:0;visibility:hidden;transition:opacity .18s,transform .18s;z-index:55}
+  body.navopen .v2 .hdr nav,body.navopen .hdr nav{opacity:1;visibility:visible;transform:none}
+  body.navopen{overflow:hidden}
+  .v2 .hdr nav > a{display:block;font-size:17px;font-weight:600;padding:14px 0;border-bottom:1px solid var(--line-soft)}
+  .v2 .hdr .hasmenu{display:block}
+  .v2 .hdr .hasmenu > a{display:block;font-size:var(--t-label);font-weight:700;letter-spacing:.1em;
+    text-transform:uppercase;color:var(--faint);padding:16px 0 8px}
+  .v2 .hdr .menu{position:static;transform:none;opacity:1;visibility:visible;pointer-events:auto;
+    grid-template-columns:1fr;box-shadow:none;border:none;padding:0;background:none}
+  .v2 .hdr .menu a{padding:12px 0;border-bottom:1px solid var(--line-soft);border-radius:0}
+  .v2 .hdr .sp .b.p{padding:9px 14px}
+  .v2 .hdr #nav-auth{display:none}
+}
+/* ── MOBILE POLISH: stacking, alignment, no overflow anywhere ───────────────────────────────── */
+@media(max-width:760px){
+  .v2 .tour{gap:26px}
+  .v2 .tour-media{order:-1}
+  .v2 .section-head h2,.v2 .tour .section-head h1{font-size:clamp(24px,7vw,32px)}
+  .v2 .section-head p,.v2 p.l{font-size:var(--t-body)}
+  .v2 .steps{grid-template-columns:1fr}
+  .v2 .pg,.v2 .fg,.v2 .ptpl{grid-template-columns:1fr}
+  .v2 .ptpl-sheet{width:100%;max-width:min(100%,476px);height:auto;aspect-ratio:794/1123}
+  .v2 .ptpl-item figcaption{width:100%}
+  .v2 .aud2{grid-template-columns:1fr}
+  .v2 .cta{flex-wrap:wrap}
+  .v2 .cta .b{flex:1 1 auto;justify-content:center}
+  .v2 .pcover{aspect-ratio:16/10}
+  .v2 .fgrid{grid-template-columns:1fr 1fr;gap:20px}
+  .v2 .dia{padding:16px 12px}
+}
+
+/* ── MOBILE OVERFLOW GUARD ──────────────────────────────────────────────────────────────────────
+   The header row was laying out brand + burger + a full-size CTA + sign-in + the language pair on a
+   390px screen, so the bar itself overflowed and dragged the page's horizontal scroll with it. On
+   phones the header carries brand · burger · ONE compact CTA; everything else lives in the sheet. */
+html,body{max-width:100%;overflow-x:hidden}
+@media(max-width:860px){
+  .v2 .hdr .in{padding:10px var(--site-gutter);flex-wrap:nowrap;gap:8px}
+  .v2 .brand{font-size:15px;flex:none}
+  .v2 .burger{margin-left:auto;flex:none}
+  .v2 .hdr .sp{flex:none;gap:6px;min-width:0}
+  .v2 .hdr .sp .lang{display:none}
+  /* Peter, 2026-08-12: «No buttons in the navbar apart from the hamburger, simpler. But on
+     desktop have the get started button.» Below 860px the burger IS the navigation, and
+     Empieza ahora is a tap away inside it — a second red button beside it only crowds a
+     phone header that already has the brand and the menu. */
+  .v2 .hdr .sp .b{display:none}
+  .v2 .wrap{padding-inline:var(--site-gutter)}
+  .v2 section{padding:var(--site-section-space) 0}
+}
+@media(max-width:420px){
+  /* below this the CTA and the burger cannot both sit beside the wordmark honestly */
+  .v2 .hdr .sp .b.p{padding:7px 9px;font-size:var(--t-cap)}
+}
+
+/* the burger sits LAST on mobile (brand · CTA · burger); with margin-left:auto and the CTA after it
+   in the DOM, the button was pushed past the right edge and clipped */
+@media(max-width:860px){
+  .v2 .hdr .in{display:flex;align-items:center;gap:8px}
+  .v2 .brand{flex:0 1 auto;min-width:0;overflow:hidden}
+  .v2 .hdr .sp{order:2;margin-left:auto}
+  .v2 .burger{order:3;margin-left:0}
+  /* the cookie strip is a legacy island; keep it inside the viewport like everything else */
+  #cookie,#cookie > *{max-width:100vw;box-sizing:border-box}
+}

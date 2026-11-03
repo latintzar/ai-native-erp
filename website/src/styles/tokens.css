@@ -1,0 +1,153 @@
+/* Site-owned versioned stylesheet. Recovered from v0.196.0; see README.md in this directory. */
+
+:root{
+  /* color */
+  --rocoto-bg: #FAF7F3;
+  --rocoto-surface: #FAF7F3;
+  --rocoto-surface2: #F2ECE5;
+  --rocoto-elevated: #FFFFFF;
+  --rocoto-border: rgba(26,20,19,0.141);
+  --rocoto-border-strong: rgba(26,20,19,0.22);
+  --rocoto-fg: #1A1413;
+  --rocoto-muted: #6F665C;
+  --rocoto-faint: #998F83;
+  --rocoto-saffron: #C01B2C;
+  --rocoto-saffron-text: #831521;
+  --rocoto-saffron-dim: rgba(192,27,44,0.161);
+  --rocoto-chat-out-bubble: #FBE2E5;
+  --rocoto-chat-out-border: rgba(192,27,44,0.2);
+  --rocoto-chat-in-bubble: #F5F0E8;
+  --rocoto-chat-in-border: rgba(42,32,24,0.122);
+  --rocoto-green: #4E9E5E;
+  --rocoto-green-text: #2E6038;
+  --rocoto-green-dim: rgba(78,158,94,0.188);
+  --rocoto-red: #F4A300;
+  --rocoto-red-text: #8A5300;
+  --rocoto-red-dim: rgba(244,163,0,0.188);
+  --rocoto-on-saffron: #FAF7F3;
+  --rocoto-on-green: #0C2A1E;
+  --rocoto-on-red: #3D2A00;
+  --rocoto-danger: #C01B2C;
+  --rocoto-danger-text: #831521;
+  --rocoto-danger-dim: rgba(192,27,44,0.161);
+  --rocoto-on-danger: #FAF7F3;
+  --rocoto-nav-bar: #1A1413;
+  --rocoto-nav-icon: #948A80;
+  --rocoto-nav-icon-selected: #FFFFFF;
+  --rocoto-band-dark: #1A1413;
+  --rocoto-band-dark-raised: #2A2320;
+  --rocoto-on-band-dark: #FAF7F3;
+  --rocoto-on-band-dark-soft: #A79C91;
+  --rocoto-band-dark-line: rgba(250,247,243,0.161);
+  --rocoto-highlight: rgba(227,184,78,0.141);
+  --rocoto-scrim: rgba(33,28,21,0.4);
+  --rocoto-scrim-strong: rgba(33,28,21,0.6);
+  --rocoto-on-scrim: #FBF8F2;
+  --rocoto-call-bg-top: #0F3A2B;
+  --rocoto-call-bg-bottom: #071711;
+  --rocoto-call-fg: #F4EFE7;
+  --rocoto-call-muted: rgba(244,239,231,0.659);
+  --rocoto-call-bar: rgba(251,248,242,0.102);
+  --rocoto-on-call-bg: #FBF8F2;
+  --rocoto-hero-top: #221A13;
+  --rocoto-hero-bottom: #130E0A;
+  --rocoto-hero-glass: rgba(251,248,242,0.078);
+  --rocoto-hero-glass-strong: rgba(251,248,242,0.129);
+  --rocoto-hero-glass-border: rgba(251,248,242,0.149);
+  --rocoto-on-hero: #F7F2EA;
+  --rocoto-on-hero-muted: rgba(247,242,234,0.702);
+  --rocoto-on-hero-faint: rgba(247,242,234,0.502);
+  --rocoto-hero-accent: #E2707D;
+  --rocoto-hero-accent-dim: rgba(226,112,125,0.2);
+  --rocoto-accent-moss: #2A8358;
+  --rocoto-accent-moss-deep: #143D24;
+  --rocoto-accent-moss-dim: rgba(42,131,88,0.086);
+  --rocoto-on-accent-moss: #F1FAF4;
+  --rocoto-accent-rust: #B04A2B;
+  --rocoto-accent-rust-deep: #6E2C16;
+  --rocoto-accent-rust-dim: rgba(176,74,43,0.094);
+  --rocoto-on-accent-rust: #FBF1EA;
+  --rocoto-accent-berry: #A8466A;
+  --rocoto-accent-berry-deep: #5F2840;
+  --rocoto-accent-berry-dim: rgba(168,70,106,0.094);
+  --rocoto-on-accent-berry: #FBF0F4;
+  --rocoto-accent-cana: #C0812F;
+  --rocoto-accent-cana-deep: #8A5816;
+  --rocoto-accent-cana-dim: rgba(192,129,47,0.094);
+  --rocoto-on-accent-cana: #FBF3E6;
+  /* space */
+  --rocoto-space-xxs: 2px;
+  --rocoto-space-xxs2: 3px;
+  --rocoto-space-xs: 4px;
+  --rocoto-space-sm: 8px;
+  --rocoto-space-md: 12px;
+  --rocoto-space-lg: 16px;
+  --rocoto-space-xl: 20px;
+  --rocoto-space-xxl: 24px;
+  --rocoto-space-xxxl: 32px;
+  --rocoto-space-huge: 48px;
+  --rocoto-space-giant: 64px;
+  /* radius */
+  --rocoto-radius-sm: 6px;
+  --rocoto-radius-base: 8px;
+  --rocoto-radius-card: 12px;
+  --rocoto-radius-sheet: 20px;
+  --rocoto-radius-pill: 999px;
+  /* elevation */
+  --rocoto-elevation-flat: 0px;
+  --rocoto-elevation-hairline: 1px;
+  --rocoto-elevation-card: 2px;
+  --rocoto-elevation-sticky: 3px;
+  --rocoto-elevation-sheet: 4px;
+  --rocoto-elevation-popover: 5px;
+  --rocoto-elevation-toast: 6px;
+  /* button */
+  --rocoto-button-sm: 32px;
+  --rocoto-button-md: 40px;
+  --rocoto-button-lg: 48px;
+  /* stroke */
+  --rocoto-stroke-hairline: 1px;
+  --rocoto-stroke-thick: 1.5px;
+  /* icon */
+  --rocoto-icon-sm: 16px;
+  --rocoto-icon-md: 20px;
+  --rocoto-icon-lg: 24px;
+  /* chat */
+  --rocoto-chat-bubble-max-width: 250px;
+  --rocoto-chat-image-max-width: 290px;
+  --rocoto-chat-image-max-height: 360px;
+  --rocoto-chat-vn-width: 250px;
+  --rocoto-chat-vn-wave-width: 132px;
+  --rocoto-chat-wave-height: 24px;
+  --rocoto-chat-avatar: 42px;
+  --rocoto-chat-play: 34px;
+  --rocoto-chat-bubble-radius: 7.5px;
+  /* motion */
+  --rocoto-motion-dur-micro: 130ms;
+  --rocoto-motion-dur-standard: 250ms;
+  --rocoto-motion-dur-overlay: 380ms;
+  --rocoto-motion-dur-confirm-fill: 160ms;
+  --rocoto-motion-dur-undo-window: 5000ms;
+  /* motion springs — REAL physics: linear() sampled from the Kotlin (dampingRatio, stiffness)
+     solution; pair each easing with its own -dur. *-bezier = v1 bucketed fallback. */
+  --rocoto-motion-standard: linear(0, 0.0089, 0.0331, 0.0687, 0.1129, 0.1631, 0.2171, 0.2732, 0.33, 0.3863, 0.4414, 0.4944, 0.545, 0.5928, 0.6375, 0.679, 0.7174, 0.7525, 0.7844, 0.8134, 0.8394, 0.8628, 0.8836, 0.902, 0.9182, 0.9324, 0.9448, 0.9555, 0.9647, 0.9726, 0.9793, 0.985, 0.9897, 0.9936, 0.9968, 0.9993, 1.0014, 1.003, 1.0042, 1.0051, 1.0057, 1.006, 1.0062, 1.0063, 1.0062, 1.0061, 1.0058, 1.0055, 1.0052, 1.0049, 1.0045, 1.0042, 1.0038, 1.0035, 1.0031, 1.0028, 1.0025, 1.0022, 1.002, 1.0017, 1.0015, 1.0013, 1.0011, 1);
+  --rocoto-motion-standard-dur: 392ms;
+  --rocoto-motion-standard-bezier: cubic-bezier(0.22, 1, 0.36, 1);
+  --rocoto-motion-snappy: linear(0, 0.0098, 0.0355, 0.0726, 0.1175, 0.1675, 0.2202, 0.2741, 0.3277, 0.3803, 0.431, 0.4794, 0.5252, 0.5681, 0.6082, 0.6454, 0.6798, 0.7113, 0.7403, 0.7666, 0.7907, 0.8125, 0.8323, 0.8501, 0.8662, 0.8807, 0.8938, 0.9055, 0.9159, 0.9253, 0.9337, 0.9412, 0.9479, 0.9538, 0.9591, 0.9638, 0.968, 0.9717, 0.975, 0.978, 0.9806, 0.9828, 0.9849, 0.9867, 0.9883, 0.9897, 0.9909, 0.992, 0.993, 0.9938, 0.9946, 0.9952, 0.9958, 0.9963, 0.9968, 0.9972, 0.9975, 0.9978, 0.9981, 0.9983, 0.9985, 0.9987, 0.9989, 1);
+  --rocoto-motion-snappy-dur: 197ms;
+  --rocoto-motion-snappy-bezier: cubic-bezier(0.2, 0, 0, 1);
+  --rocoto-motion-expressive: linear(0, 0.0122, 0.0456, 0.0956, 0.1582, 0.2297, 0.3068, 0.3867, 0.467, 0.5458, 0.6214, 0.6927, 0.7587, 0.8187, 0.8725, 0.9198, 0.9607, 0.9953, 1.0239, 1.047, 1.0648, 1.078, 1.087, 1.0924, 1.0946, 1.0943, 1.0917, 1.0874, 1.0819, 1.0753, 1.0682, 1.0607, 1.053, 1.0455, 1.0382, 1.0313, 1.0249, 1.019, 1.0137, 1.009, 1.0049, 1.0015, 0.9986, 0.9962, 0.9944, 0.993, 0.992, 0.9914, 0.9911, 0.991, 0.9912, 0.9916, 0.9921, 0.9926, 0.9933, 0.994, 0.9947, 0.9955, 0.9961, 0.9968, 0.9974, 0.998, 0.9985, 1);
+  --rocoto-motion-expressive-dur: 587ms;
+  --rocoto-motion-expressive-bezier: cubic-bezier(0.34, 1.56, 0.64, 1);
+  /* Motion.kt — the physical curve + surface tiers + §18 highlight */
+  --rocoto-motion-physical: cubic-bezier(0.31, 0.325, 0, 0.92);
+  --rocoto-motion-phys-micro: 220ms;
+  --rocoto-motion-phys-surface: 320ms;
+  --rocoto-motion-highlight-in: 120ms;
+  --rocoto-motion-highlight-hold: 120ms;
+  --rocoto-motion-highlight-out: 1200ms;
+  /* font stacks (binaries + @font-face live in fonts.css) */
+  --rocoto-font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --rocoto-font-display: 'Fraunces', Georgia, serif;
+  --rocoto-font-mono: Inter, ui-Inter, 'SF Mono', Inter;
+}

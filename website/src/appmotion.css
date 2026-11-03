@@ -1,0 +1,771 @@
+/* ══ app-motion — the three deterministic islands ═══════════════════════════════════════════════
+   Canon §27/§28: the visuals are the kit MOVING — coded, token-driven, editable line by line,
+   never a filmed recording. The beat scripts and the DPR-2 fidelity stills they are built against
+   live in `public/assets/app-motion/BEATS.md`; when an island and a still disagree, the still is
+   right, and these numbers were measured off those stills.
+
+   THE FOUR CONSTANTS THE V2 APP ACTUALLY DECLARES (BEATS.md, «Measured constants»):
+     card / sheet ground              #FFFFFF
+     pane ground · chip · rest state  #F3F3F3
+     primary button rest / hover      #1A1413 → #312B2B
+     the attention dot                #C01B2C
+   The first two are Base Web's own greys and live here as local vars; the ink and the accent are
+   the BRAND and come from the token package, so a re-theme moves the islands with everything else.
+
+   §29: CHROMELESS. No phone bezel, no browser bar, no window — the naked component on its plate.
+   ═══════════════════════════════════════════════════════════════════════════════════════════════ */
+
+.am-stage {
+  --am-ink: var(--rocoto-fg, #1A1413);
+  --am-accent: var(--rocoto-saffron, #C01B2C);
+  --am-over: #312B2B;      /* the primary under the pointer */
+  --am-mono: #F3F3F3;      /* pane ground, chip pill, segmented-control rest */
+  --am-2: #4B4B4B;         /* secondary ink — context lines, sublines */
+  --am-3: #5E5E5E;         /* tertiary ink — meta, counters, placeholders */
+  --am-ghost: #E4E4E4;     /* the empty state's own bars */
+  --am-ease: cubic-bezier(0.2, 0.8, 0.4, 1);   /* the only curve the app declares */
+}
+
+/* THE ISLAND IS DRAWN AT ITS OWN PIXELS AND FITTED. Same rule as `.ayp-shot` beside it: it takes
+   its native size where the column has room and shrinks when it does not — never scaled up. */
+.am-fit { position: relative; width: min(100%, var(--nw)); margin: 0 auto; }
+
+/* ── RULE 15 · THE BUILD-IN, on every fitted island ───────────────────────────────────────────
+   «A static paste is not a shot» (Peter, 2026-08-29). These islands already held their settled
+   frame until they were on screen and only then started looping — but they ARRIVED whole, which
+   reads as a paste however good the loop after it is. One entrance, once, on the app's own curve:
+   the whole fit rises 14px and comes up over 520 ms the first time it crosses into view
+   (`useEnter` in motionkit.tsx adds `.is-in`; the observer disconnects, so it never replays).
+   ⚠️ IT LIVES ON `.am-fit`, NOT `.am-stage`: the stage carries the fit's `scale()` as an inline
+   style, and a transform declared here would be overwritten on every resize. */
+.am-fit { opacity: 0; transform: translateY(14px); }
+.am-fit.is-in {
+  opacity: 1; transform: none;
+  transition: opacity 520ms var(--am-ease, cubic-bezier(0.2, 0.8, 0.4, 1)),
+              transform 520ms var(--am-ease, cubic-bezier(0.2, 0.8, 0.4, 1));
+}
+.am-stage {
+  position: absolute; top: 0; left: 0; transform-origin: top left;
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  font-weight: 400; font-size: 14px; line-height: 20px; color: var(--am-ink);
+  text-align: left; letter-spacing: 0; -webkit-font-smoothing: antialiased;
+}
+.am-stage *, .am-stage *::before, .am-stage *::after { box-sizing: border-box; }
+.am-stage b, .am-stage u, .am-stage i, .am-stage mark { font-style: normal; text-decoration: none; }
+.am-stage img { display: block; }
+/* the island takes the still's place the moment React runs; the capture stays as the no-JS floor */
+.v2 .ayp.am-on .ayp-shot { display: none; }
+
+@keyframes am-blink { 0%, 55% { opacity: 1 } 56%, 100% { opacity: 0 } }
+
+/* ══ 1 · compras-precio — pick the product, then walk its tarifas ═══════════════════════════════
+   RE-CONCEIVED ROUND 2: the linear run belongs to the TARIFAS of one product, never product to
+   product («they only follow it linearly for the tariffs»). The card box holds still for the whole
+   walk — only what is on it changes — so the three tarifas read as one job and not as three
+   screens. Its two beats (the ad-hoc pick, the walk) are the same 480 × 380 box centred in the
+   stage, so nothing jumps when the pick hands over to the sheet. */
+/* ⚠️ NAMED `.pl-run` AND NOT `.pl`. `sections-v2.css` already owns `.v2 .pl` — the pricing tier's
+   ✓ list — and with it `.v2 .pl div { display:flex }`, which at higher specificity turned this
+   island's card, sheet, head and field into a row of flex boxes and spilled the whole component
+   out of its frame. Caught by LOOKING at the frames, never by reading the file. Every island
+   wrapper on this sheet needs a name no page stylesheet can claim. */
+/* ROUND 3 · «decent. make the shit centred tho somehow.» The card WAS the stage — 480 inside 480 —
+   so it ran the frame edge to edge and there was nothing for it to be centred IN. It is now 420 in
+   a 480 box, which gives it 30px of air on each side and 20 above and below: the composition stands
+   at its own width in the middle of its plate instead of filling it. */
+/* ⚠️ ROUND 5 · ONE CENTRE AXIS. «Same centered comment about this. The tariff should probably be
+   centered.» Round 3 centred the CARD and left every line inside it hard left, which is why the
+   note came back. This is a single-question sheet — one product, one number, one act — so the
+   goods, the name, the counter, the tarifa chips, the figure, the previous price and the button all
+   stand on the same axis, and NOTHING is left-aligned. The stage grew 376 → 470 for the painting,
+   which in the gallery's 520 square costs nothing at all: the fit is capped at 1 and 470 < 520, so
+   this card now renders at its own native pixels there. */
+.pl-run { width: 480px; height: 470px; display: flex; align-items: center; justify-content: center;
+  transition: opacity 260ms linear; }
+.pl-run.fade { opacity: 0; }
+.pl-card {
+  width: 420px; padding: 22px; background: #fff; border-radius: 12px; text-align: center;
+  box-shadow: var(--rocoto-shadow-popover, 0 6px 14px rgba(26, 20, 19, .08), 0 16px 40px rgba(26, 20, 19, .12));
+}
+
+/* ── BEAT 1 · THE PICK, ad hoc ───────────────────────────────────────────────────────────────── */
+.pl-pick { min-height: 386px; }
+.pl-kc { display: block; font-size: 11.5px; line-height: 16px; letter-spacing: .09em;
+  text-transform: uppercase; color: var(--am-3); }
+.pl-search {
+  display: flex; align-items: center; justify-content: center; gap: 11px;
+  height: 50px; margin-top: 12px; padding: 0 14px;
+  border: 1.5px solid var(--am-ink); border-radius: 9px;
+}
+.pl-ic { width: 19px; height: 19px; flex: none; color: var(--am-3); }
+.pl-q { flex: none; font-size: 17px; line-height: 22px; }
+.pl-hits { margin-top: 12px; display: flex; flex-direction: column; gap: 4px; }
+/* a hit is centred as a unit — painting and words together on the axis, so the three read as a
+   stack of choices rather than as a left-hung list */
+.pl-hit {
+  display: flex; align-items: center; justify-content: center; gap: 12px;
+  height: 54px; padding: 0 12px; border-radius: 9px;
+  transition: background 140ms linear, transform 120ms var(--am-ease);
+}
+.pl-hit img { width: 26px; height: 26px; flex: none; object-fit: contain; }
+.pl-hit b { font-size: 16px; font-weight: 500; }
+.pl-hit u { font-size: 16px; color: var(--am-2); }
+.pl-hit.on { background: var(--am-mono); }
+.pl-hit.press { background: #E4E4E4; transform: scale(0.99); }
+
+/* ── BEAT 2 · THE WALK ───────────────────────────────────────────────────────────────────────── */
+.pl-sheet { min-height: 386px; }
+/* THE GOODS ARE THE HERO: the painting alone and large, the name under it, the sort under that,
+   and the counter on the same axis. 38 → 68 («The image can be bigger for the fish»). */
+.pl-head { display: flex; flex-direction: column; align-items: center; }
+.pl-face { width: 68px; height: 68px; flex: none; }
+.pl-face img { width: 100%; height: 100%; object-fit: contain; }
+.pl-name { margin-top: 8px; font-size: 20px; line-height: 26px; font-weight: 600; letter-spacing: -.012em; }
+.pl-word { margin-top: 1px; font-size: 13px; line-height: 18px; color: var(--am-2); }
+
+/* ── ROUND 7 · THE SELECTION MORPH ────────────────────────────────────────────────────────────
+   «once they select, make the merluza image go big and centred and then morph to the other spot,
+   like most selectors» (Peter, round 6).
+
+   ONE ELEMENT, TWO TRANSFORMS, AND NOTHING CROSS-FADES. The painting that stands above the name is
+   the same box the whole way: at the take it is pushed to the card's centre at 2,35× (68 → 160px,
+   the size at which a fish is the subject rather than an avatar), and then the class simply comes
+   OFF — so the flight home is the transition back to its own resting transform. A shared element
+   is what makes this read as the thing you picked arriving, which two faded copies never do.
+
+   THE GEOMETRY. `.pl-sheet` reserves 386px and the painting's own top sits at 0, so translating it
+   +118px puts its centre at 118 + 34 = 152 — the middle of the sheet's upper body, which is where
+   the eye already is when the hit is pressed. `will-change` is declared because this is the one
+   transform in the island that moves a raster.
+
+   AND THE SHEET WAITS FOR IT. `.held` holds everything under the painting out of the frame — a
+   name and a price ladder standing behind a 160px fish is the fold, not a morph. They come in as
+   it leaves, on the same curve, so the two movements read as one arrival. */
+.pl-face {
+  transform-origin: 50% 50%; will-change: transform;
+  transition: transform 440ms var(--am-ease);
+}
+.pl-face.big { transform: translateY(118px) scale(2.35); }
+.pl-sheet .pl-name, .pl-sheet .pl-word, .pl-sheet .pl-bands,
+.pl-sheet .pl-field, .pl-sheet .pl-ctx, .pl-sheet .pl-foot {
+  transition: opacity 300ms var(--am-ease) 120ms, transform 300ms var(--am-ease) 120ms;
+}
+.pl-sheet.held .pl-name, .pl-sheet.held .pl-word, .pl-sheet.held .pl-bands,
+.pl-sheet.held .pl-field, .pl-sheet.held .pl-ctx, .pl-sheet.held .pl-foot {
+  opacity: 0; transform: translateY(10px); transition-delay: 0ms;
+}
+/* the rest state IS the settled sheet, so reduced motion lands on it with nothing to cancel */
+@media (prefers-reduced-motion: reduce) {
+  .pl-face, .pl-face.big { transition: none; transform: none; }
+}
+
+.pl-bands { margin-top: 14px; display: flex; justify-content: center; gap: 8px; }
+.pl-band {
+  display: inline-flex; align-items: center; gap: 6px; height: 34px; padding: 0 14px;
+  border-radius: 999px; background: var(--am-mono); color: var(--am-2);
+  font-size: 14px; font-weight: 500; white-space: nowrap;
+  transition: background 260ms var(--am-ease), color 260ms var(--am-ease);
+}
+.pl-band.on { background: var(--am-ink); color: #fff; }
+/* a tarifa already walked keeps its tick — the run's own progress, on the objects it is walking */
+.pl-band.set { color: var(--am-ink); }
+.pl-tick { width: 13px; height: 13px; flex: none; color: var(--am-accent); }
+
+/* THE FIELD IS THE COMPONENT. Empty, it stands yesterday's price in the box at the same very large
+   size, so the number to beat is under the thumb about to type over it. */
+/* THE FIGURE, BIGGER AND ON THE AXIS. 44 → 62 («again, make the € bigger»), the value and its unit
+   CENTRED TOGETHER inside the box — and the unit on the value's own line, never under it, which is
+   the standing global rule for any rate. */
+.pl-field {
+  margin-top: 14px; height: 96px; padding: 0 18px;
+  display: flex; align-items: center; justify-content: center;
+  border: 2px solid var(--am-ink); border-radius: 10px;
+}
+.pl-amt { display: block; white-space: nowrap; }
+.pl-value {
+  font-size: 62px; line-height: 70px; font-weight: 700;
+  letter-spacing: -0.025em; font-variant-numeric: tabular-nums; white-space: nowrap;
+}
+.pl-value.ph { color: var(--am-3); }
+.pl-caret {
+  display: inline-block; width: 4px; height: 54px; margin-left: 3px; vertical-align: -9px;
+  background: var(--am-ink); animation: am-blink 1s steps(1) infinite;
+}
+.pl-search .pl-caret { height: 20px; width: 2px; vertical-align: -3px; }
+.pl-unit { margin-left: 10px; font-size: 19px; font-weight: 600; color: var(--am-2); white-space: nowrap; }
+
+.pl-ctx { margin-top: 12px; font-size: 12.5px; line-height: 20px; color: var(--am-2); white-space: nowrap; }
+
+/* the act stands on the axis too: the pair is centred as a group and the primary is sized to its
+   own label rather than stretched across the card, so nothing in this sheet is edge-hung */
+.pl-foot { margin-top: 16px; height: 52px; display: flex; align-items: center;
+  justify-content: center; gap: 8px; }
+.pl-go {
+  position: relative; flex: none; min-width: 176px; height: 52px; border-radius: 10px; background: var(--am-ink);
+  transition: background 160ms var(--am-ease), transform 120ms var(--am-ease), opacity 200ms linear;
+}
+.pl-go.over { background: var(--am-over); }
+.pl-go.press { transform: scale(0.98); }
+.pl-go.off { opacity: .35; }
+.pl-go b {
+  position: absolute; inset: 0; display: grid; place-items: center;
+  color: #fff; font-size: 16px; font-weight: 600; transition: opacity 200ms linear;
+}
+.pl-go b.out { opacity: 0; }
+.pl-done { flex: none; min-width: 84px; text-align: center; font-size: 14px; font-weight: 500; color: var(--am-2); }
+
+/* ══ 2 · comerciales-river — THE ALBARÁN, AND THE ANXIETY LIVES ON THE LINE ═════════════════════
+   ⚠️ REBUILT ROUND 7. Everything under `.rr-*` is gone with the shape it dressed: a river of three
+   cards, one of which opened into four titled sections (`What they sent` · `Why this stopped` with
+   two ratio bars · `The delivery note` · a choice row). Peter inverted the subject —
+
+       «the delivery note would always be as usual, but the anxiety would be inline around the
+        products… the albaran wouldnt have the other orders below it lol… Name / time / location /
+        truck // Products // Order (comm trail) // anxieties are inline of the above… then theres
+        the thing to print… may as well just be at the top of the albaran, and be sticky along with
+        the name and the delivery time and truck. its the products and comms that scrolls.»
+
+   — so the stylesheet is now a DOCUMENT: a fixed head, a body that moves under it, lines in columns,
+   and one slim accent annotation hanging off the line it concerns. `.rd-` is the new prefix, and the
+   rename is deliberate: nothing here is a river any more, and a class name that says otherwise is
+   the first thing to mislead the next person in the file.
+
+   ⚠️ RULE 11 · THE BOX IS THE DOCUMENT'S OWN CONSTANT HEIGHT, AND NOTHING RESERVES ROOM FOR A
+   TALLER BEAT. The old island stood 692 tall because that was its OPEN card, and every collapsed
+   beat left the plate showing empty ground — the page builder flagged it, and it was real. The
+   document below is 443 in every frame of every run: the head is fixed, the body is a fixed
+   viewport that SCROLLS rather than grows, and the annotation's two states are sized to the taller
+   of them. There is no beat at which this card is shorter than its box, so there is nothing left to
+   reserve.
+
+   AND 443 IS SHORTER THAN ITS OWN CONTENT ON PURPOSE. «be efficient» — the body holds 443px of
+   products, foot and comm trail in a 300px viewport, so the trail is cut at the fold and run 2's
+   scroll has somewhere real to go. A document that fits its own window has no scroll to demonstrate,
+   and a sticky head is only visible as a fact when something moves under it. The two numbers are
+   tuned to each other: 143 of travel is exactly the column heads, the annotated line and its
+   annotation, so the run ends on a clean document bottom — Merluza, Gamba roja, the foot and the
+   whole comm trail — rather than halfway through a row. */
+.rd { width: 460px; height: 443px; display: flex; flex-direction: column;
+  transition: opacity 260ms linear; }
+.rd.fade { opacity: 0; }
+
+/* THE DOCUMENT — one object, the app's own card, and it fills its stage. */
+.rd-doc {
+  flex: 1; min-height: 0; display: flex; flex-direction: column; overflow: hidden;
+  background: #fff; border-radius: 12px;
+  box-shadow: var(--rocoto-shadow-popover, 0 6px 14px rgba(26, 20, 19, .08), 0 16px 40px rgba(26, 20, 19, .12));
+}
+
+/* ── THE STICKY HEAD ──────────────────────────────────────────────────────────────────────────
+   «then theres the thing to print but now i realise that may as well just be at the top of the
+   albaran, and be sticky along with the name and the delivery time and truck» (Peter).
+
+   IT IS NOT `position: sticky` AND IT MUST NOT BE. The head is a FLEX SIBLING of the scrolling
+   body, which is stronger than sticky: it can never be scrolled past even for a frame, it needs no
+   scroll container to resolve against, and its hairline is the body's own top edge rather than a
+   shadow that appears at some offset. What scrolls is the products and the comms — exactly and only
+   what Peter said scrolls. */
+.rd-head {
+  flex: none; padding: 14px 18px 13px; border-bottom: 1px solid var(--am-mono);
+}
+.rd-h-top { display: flex; align-items: flex-start; gap: 14px; }
+.rd-who { flex: 1; min-width: 0; font-size: 17px; line-height: 23px; font-weight: 600;
+  letter-spacing: -.01em; }
+/* THE RUBRIC CHIP — the app's own two-word statement of why this document stopped. It sits under
+   the name, and it GOES when the line is resolved, whichever way it was resolved: a document with
+   nothing outstanding on it does not wear a flag. */
+.rd-flag {
+  display: block; margin-top: 3px; font-size: 12px; line-height: 16px; font-weight: 600;
+  letter-spacing: .01em; color: var(--am-accent);
+  transition: opacity 300ms var(--am-ease), max-height 300ms var(--am-ease);
+  max-height: 20px; overflow: hidden;
+}
+.rd-flag.off { opacity: 0; max-height: 0; margin-top: 0; }
+.rd-dot { display: inline-block; width: 6px; height: 6px; margin-right: 7px; vertical-align: 1px;
+  border-radius: 50%; background: var(--am-accent); }
+/* THE PRINT ACT, IN THE HEAD. It is the one thing you DO to a finished albarán, so it stands on the
+   head's own line with the name, in reach from any scroll position. */
+.rd-print {
+  flex: none; display: inline-flex; align-items: center; gap: 8px; height: 34px; padding: 0 14px;
+  border-radius: 8px; border: 1px solid var(--am-ghost);
+  font-size: 14px; font-weight: 600; color: var(--am-ink); white-space: nowrap;
+}
+/* «The time of delivery is way too small» (Peter, §131) — it is the biggest thing on the head, at
+   the size of the one fact the morning is organised around. */
+.rd-when {
+  display: block; margin-top: 9px; font-size: 25px; line-height: 31px; font-weight: 700;
+  letter-spacing: -.02em; font-variant-numeric: tabular-nums;
+}
+.rd-meta { display: flex; align-items: center; gap: 10px; margin-top: 7px; }
+.rd-run { font-size: 13px; line-height: 18px; color: var(--am-2); white-space: nowrap; }
+/* «the tariff that they run should be selectable» — so it is drawn as a control and not as a label:
+   a bordered chip with the app's own caret, the same affordance the composer's head carries. */
+.rd-tarifa {
+  display: inline-flex; align-items: center; gap: 4px; height: 26px; padding: 0 6px 0 10px;
+  border-radius: 999px; border: 1px solid var(--am-ghost);
+  font-size: 12.5px; line-height: 17px; font-weight: 600; color: var(--am-ink); white-space: nowrap;
+}
+.rd-ic { width: 15px; height: 15px; flex: none; }
+.rd-chev { width: 13px; height: 13px; color: var(--am-3); }
+
+/* ── THE SCROLLING BODY ───────────────────────────────────────────────────────────────────────
+   A FIXED VIEWPORT AND A TRANSFORMED TRACK. The travel is a `translateY` on a compositor-only
+   property rather than a real `scrollTop`, so run 2's movement costs nothing and holds its settled
+   position under reduced motion (the rest beat has `scroll: 0`, which is the document's top). */
+.rd-body { flex: 1; min-height: 0; overflow: hidden; }
+.rd-scroll { transition: transform 1500ms var(--am-ease); will-change: transform; }
+
+/* THE COLUMNS, NAMED ONCE — the composer's own three heads, so a line written in V4 and a line read
+   here stand in the same three places. «the column shit.. like basics.» */
+.rd-ch {
+  display: grid; grid-template-columns: 1fr 92px 96px; align-items: baseline; column-gap: 12px;
+  padding: 11px 18px 8px;
+  font-size: 10.5px; line-height: 14px; letter-spacing: .09em; text-transform: uppercase;
+  color: var(--am-3);
+}
+.rd-r { text-align: right; }
+
+/* ── A LINE. Three columns, never a stack. ────────────────────────────────────────────────── */
+.rd-line {
+  display: grid; grid-template-columns: 1fr 92px 96px; align-items: baseline; column-gap: 12px;
+  padding: 9px 18px; font-size: 14.5px; line-height: 20px; color: var(--am-2);
+}
+.rd-n { min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.rd-q { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.rd-q b { font-weight: 600; color: var(--am-ink); }
+/* THE STRIKE AND THE CORRECTION ARE ONE EVENT, and it happens on the NUMBER — the reader is looking
+   at the quantity column, so that is where the change has to be visible, not only in the total. */
+.rd-q s { margin-right: 7px; color: var(--am-3); text-decoration-thickness: 2px; }
+.rd-a { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; color: var(--am-ink); }
+.rd-a b { font-size: 15.5px; font-weight: 600; }
+.rd-a i { font-size: 12px; font-weight: 600; }
+/* the line the annotation hangs off carries the ink — it is the subject of the frame */
+.rd-line.hot { color: var(--am-ink); font-weight: 500; }
+
+/* ── THE ANXIETY, INLINE ──────────────────────────────────────────────────────────────────────
+   «the anxiety would be inline around the products which are put down as usual… the explanation
+   about the anxiety would be shorter and the explanation of the resolution would be typed in free
+   text. they can ignore the question too.» (Peter, round 6)
+
+   FOUR THINGS MAKE IT AN ANNOTATION RATHER THAN A SECTION, and all four are here:
+     · IT IS INDENTED TO THE LINE'S OWN NAME COLUMN and hangs off an accent rule down its left, so
+       it reads as a note ON that line and cannot be read as a block between two lines. §131.2's own
+       words for a packing note — «a note shown as an indent below something» — and an edit concern
+       is the same shape of thing.
+     · IT IS FOUR WORDS. The ratio, and nothing else: the figure it is about is standing 20px above
+       it in the quantity column, so restating it here would be the same fact twice.
+     · IT IS SLIM — 42px of reasoning and act on one row, against round 5's 260px of titled section.
+     · AND IT ASKS FOR NOTHING. The act is a button and the dismissal is a FIELD standing open. A
+       place to type is the least demanding thing a screen can put in front of somebody, which is
+       exactly what makes the question ignorable — run 2 walks past it and the document is fine.
+   ⚠️ ONE HEIGHT FOR BOTH STATES: the open annotation and the settled line are sized to the taller,
+   so resolving it never moves the foot or the comm trail under it. */
+.rd-anx {
+  margin: 2px 18px 8px 30px; padding: 8px 0 8px 13px;
+  border-left: 2px solid var(--am-accent);
+  /* ⚠️ 70 IS THE OPEN STATE'S OWN HEIGHT, and it is a floor on BOTH states so resolving the line
+     never moves the foot or the trail under it — the settled sentence is 33px tall on its own and
+     the 12px collapse it would cause is exactly the «the height keeps changing» class of bug. */
+  min-height: 70px; display: flex; flex-direction: column; justify-content: center;
+  transition: border-color 300ms var(--am-ease);
+}
+.rd-anx.done { border-left-color: var(--am-ghost); }
+.rd-anx-why {
+  display: block; font-size: 12.5px; line-height: 17px; font-weight: 600; color: var(--am-accent);
+}
+.rd-anx-do { display: flex; align-items: center; gap: 10px; margin-top: 7px; }
+/* THE ACT DOES THE THING, and its label is Peter's own: «if any button is needed it's the ACTION
+   ("Put 12 kg on" style, doing, not confirming)». Small, because it belongs to one line. */
+.rd-act {
+  flex: none; display: grid; place-items: center; height: 30px; padding: 0 13px; border-radius: 7px;
+  background: var(--am-ink); color: #fff; font-size: 13px; font-weight: 600; white-space: nowrap;
+  transition: background 200ms var(--am-ease), transform 120ms var(--am-ease);
+}
+.rd-act.over { background: var(--am-over); }
+.rd-act.press { transform: scale(0.97); }
+/* THE OTHER WAY OUT IS A FIELD — «the explanation of the resolution would be typed in free text».
+   Two suggestion chips went with round 5: a chip is a machine offering a person its own vocabulary,
+   and the reason a house dismisses an order is never in that list. */
+.rd-say {
+  flex: 1; min-width: 0; height: 30px; display: flex; align-items: center; padding: 0 11px;
+  border: 1px solid var(--am-ghost); border-radius: 7px; background: #fff;
+  font-size: 13px; line-height: 18px; white-space: nowrap; overflow: hidden;
+  transition: border-color 180ms linear;
+}
+.rd-say.on { border-color: var(--am-ink); }
+.rd-ph { color: #8A8A8A; }
+.rd-said { color: var(--am-ink); }
+.rd-caret {
+  display: inline-block; width: 2px; height: 15px; margin-left: 2px; vertical-align: -3px;
+  background: var(--am-ink); animation: am-blink 1s steps(1) infinite;
+}
+/* AND WHEN IT IS OVER IT IS ONE GREY LINE. The accent goes, the controls go, and what stands is the
+   sentence of what happened — «Put on at 12 kg», or the reason in the words the house typed. */
+.rd-anx-set {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 12.5px; line-height: 17px; color: var(--am-2);
+  animation: rd-in 260ms var(--am-ease) both;
+}
+.rd-anx-set .rd-ic { width: 13px; height: 13px; color: var(--am-3); }
+.rd-anx-set em { font-style: normal; color: var(--am-ink); font-weight: 500; }
+@keyframes rd-in { from { opacity: 0; transform: translateY(-4px) } to { opacity: 1; transform: none } }
+
+/* ── THE FOOT — it counts the document's own lines and totals them, in the same frame as the line
+       that moved, never a beat after it. ─────────────────────────────────────────────────────── */
+.rd-total {
+  display: flex; align-items: baseline; justify-content: space-between; gap: 14px;
+  margin-top: 2px; padding: 11px 18px 12px;
+  border-top: 1px solid var(--am-mono); background: var(--am-mono);
+  font-size: 13px; line-height: 18px; color: var(--am-2);
+}
+.rd-t-v { color: var(--am-ink); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.rd-t-v b { font-size: 19px; line-height: 24px; font-weight: 700; }
+.rd-t-v i { font-size: 12.5px; font-weight: 700; }
+
+/* ── THE ORDER, AS ITS COMM TRAIL ─────────────────────────────────────────────────────────────
+   «Order (comm trail)… You can see all this in the comments if I see the original order… then they
+   can open a chat with us… In general, people have a keyboard persistently on desktop, and they can
+   always type something.» (Peter)
+
+   ONE PLACE, BELOW THE PRODUCTS: the message the document was made out of, the channel it came in
+   on, and the seat to answer standing open. What is NOT here is the whole point — no «How it
+   arrived» block, no `Rocoto answers` pill, no popup. The trail is where a message-shaped anxiety
+   would hang, by the same rule the edit-shaped one hangs off its line (§128, §131.3). */
+.rd-trail { padding: 13px 18px 16px; }
+.rd-kc {
+  display: block; font-size: 10.5px; line-height: 14px; letter-spacing: .09em;
+  text-transform: uppercase; color: var(--am-3);
+}
+.rd-msg { margin-top: 8px; }
+.rd-said-msg { margin: 0; font-size: 13.5px; line-height: 19px; color: var(--am-2); }
+/* the figure the annotation is about, MARKED INSIDE THEIR OWN WORDS — the evidence and the note
+   agree, and the reader can check the machine against the message without leaving the document */
+.rd-said-msg mark {
+  background: color-mix(in srgb, var(--am-accent) 12%, transparent);
+  color: var(--am-ink); font-weight: 600; border-radius: 3px; padding: 1px 3px; margin: 0 -1px;
+}
+.rd-chan { display: block; margin-top: 5px; font-size: 11.5px; line-height: 16px; color: var(--am-3); }
+/* THE SEAT — persistent, because the keyboard is */
+.rd-seat {
+  display: flex; align-items: center; gap: 10px; height: 42px; margin-top: 11px; padding: 0 6px 0 13px;
+  border: 1px solid var(--am-ghost); border-radius: 9px; background: #fff;
+}
+.rd-seat-ph { flex: 1; min-width: 0; font-size: 13.5px; line-height: 19px; color: #8A8A8A;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.rd-seat-key {
+  flex: none; display: grid; place-items: center; width: 30px; height: 30px; border-radius: 7px;
+  background: var(--am-ghost); color: #fff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rd-scroll { transition: none; }
+}
+
+/* ══ 3 · comerciales-composer — free form in, finished structure out ════════════════════════════
+   ⚠️ REBUILT ROUND 2 on Peter's verdict, which killed the old anatomy outright: «You still have the
+   price on the left… Why isn't this whole thing centered, or why do you have the fold?… When you
+   add a new line item, it shouldn't have the price on it at all. It shouldn't have the
+   recommendations at the bottom… it should only show the fields once they press Enter.»
+
+   THE FOLD IS GONE because the stage is gone. The island used to be drawn at 719 × 692 — the app's
+   own pane — and its first beat filled barely half of it, so the frame was a card at the top of a
+   box with three hundred pixels of nothing under it. The stage is now 560 × 560, the pane has no
+   ground of its own, and the card is CENTRED in it at every beat: the frame is the card.
+
+   THE ROW IS ONE ANATOMY IN TWO STATES. `.cb-new` (being written: framed, on the chip ground) and
+   `.cb-new.built` / `.cb-line` (written: flat, on the document) carry the same three columns at the
+   same widths. ENTER removes the frame and the ground — never the shape — which is what makes the
+   line read as the row settling onto the document rather than as a second component taking its
+   place. The widths live in ONE grid template so the two cannot drift.
+
+   ⚠️ ROUND 4 · THERE IS NO STATE BETWEEN THEM AND NO BUTTON. The transition above used to be a
+   `Confirm` two and a half seconds after Enter. It is gone and it must stay gone.
+   ═══════════════════════════════════════════════════════════════════════════════════════════════ */
+/* ── ROUND 3 · NARROWER, CENTRED, AND THE HEIGHT NEVER MOVES ──────────────────────────────────
+   «why full width? … and the jitteryness can improve, the height keeps changing.» (Peter, round 3)
+
+   THE JITTER WAS THE CARD MEASURING ITSELF. Every beat re-read its own content and animated the
+   card to the new height — five heights in one loop (add-row · field · columns · dropdown open ·
+   the landed line), so the whole frame breathed in and out for ten seconds. It is now ONE RESERVED
+   SLOT: `.cb-slot` is a fixed box that the tallest beat fits in, every beat draws INSIDE it, and
+   the card's height is therefore a constant. Nothing measures anything and nothing reflows.
+
+   AND IT IS 460 RATHER THAN 560, centred in a 500 stage — the composition sits at its own width
+   with air either side instead of running the frame's full measure. */
+.cb {
+  position: relative; width: 500px; height: 430px; padding: 0;
+  display: flex; align-items: center; justify-content: center;
+  background: transparent; overflow: hidden; transition: opacity 260ms linear;
+}
+.cb.fade { opacity: 0; }
+/* `overflow: visible`, and the DOCK carries the bottom radius instead. The card used to clip its
+   own children to get the grey foot's corners right, and it clipped the tarifa popover with them —
+   `Edit tariffs` was sliced off at the card's edge on every loop. A popover hanging past the card
+   it belongs to is what a popover does; the stage around it (`.cb`, 500 × 430) still clips. */
+.cb-card {
+  position: relative; width: 460px; background: #fff; border-radius: 12px; overflow: visible;
+  box-shadow: var(--rocoto-shadow-popover, 0 6px 14px rgba(26, 20, 19, .08), 0 16px 40px rgba(26, 20, 19, .12));
+}
+
+/* THE ONE GRID. Column 1 is the widest (the name and its sort); column 2 is the quantity with its
+   unit as a sub-column; column 3 is the price, right-aligned. Written and being-written share it.
+   Retuned for 460: at the old 92/118 the name column fell to 148px and «Gamba roja de Palamós»
+   truncated, which is the one string on the row a reader needs whole. */
+.cb-card { --cb-grid: 1fr 66px 96px; --cb-pad: 16px; }
+
+/* THE RESERVED SLOT — the tallest beat's box, held open for every beat. `--cb-slot` is the one
+   number, and it is sized to the BUILT beat (heads · the row · `Add item`): the tarifa list hangs
+   over the foot the way a dropdown hangs over what is under it, rather than the card growing 128px
+   to seat it. ROUND 4 took it 158 → 106: the Confirm button left the box and the column heads moved
+   up into the document, so what stands here is the row and `Add item`, and nothing else.
+   ROUND 5 takes it 106 → 132, for the air above the divider: the reserve grows with the beat it
+   reserves, which is the only way it can go on being a constant. */
+.cb-slot { position: relative; z-index: 2; height: var(--cb-slot, 132px); }
+.cb-slot > * { position: absolute; top: 0; left: 0; right: 0; }
+.cb-dock { position: relative; z-index: 1; }
+
+/* ── THE HEAD ────────────────────────────────────────────────────────────────────────────────── */
+.cb-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px;
+  padding: 16px var(--cb-pad) 14px; }
+.cb-h-l { min-width: 0; flex: 1; }
+.cb-title {
+  display: block; font-size: 24px; line-height: 32px; font-weight: 700; letter-spacing: -0.015em;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.cb-ident { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 7px;
+  font-size: 12.5px; line-height: 22px; color: var(--am-2); }
+.cb-ident > * { white-space: nowrap; }
+.cb-ref { font-weight: 400; letter-spacing: 0.02em; }
+.cb-tarifa {
+  height: 22px; line-height: 20px; padding: 0 10px; border-radius: 999px;
+  border: 1px solid var(--am-ghost); color: var(--am-ink); font-weight: 500; font-size: 12.5px;
+}
+.cb-map { flex: none; width: 54px; height: 56px; border-radius: 8px; object-fit: cover; }
+
+/* ── A LINE ALREADY ON THE DOCUMENT ──────────────────────────────────────────────────────────── */
+.cb-line {
+  display: grid; grid-template-columns: 30px var(--cb-grid); align-items: center; column-gap: 12px;
+  padding: 11px var(--cb-pad); border-top: 1px solid var(--am-mono);
+}
+.cb-line.fresh { animation: cb-land 300ms var(--am-ease) both; }
+@keyframes cb-land { from { opacity: 0; transform: translateY(10px) } to { opacity: 1; transform: none } }
+.cb-l-face { width: 30px; height: 30px; object-fit: contain; }
+.cb-l-txt { min-width: 0; }
+.cb-l-nm { display: block; font-size: 15px; line-height: 23px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.cb-l-nm b { font-weight: 500; }
+.cb-l-nm em { color: var(--am-2); }
+.cb-l-sub { display: block; margin-top: 2px; font-size: 12px; line-height: 16px; color: var(--am-3); }
+.cb-l-sub b { color: var(--am-2); }
+.cb-l-qty { font-size: 15px; line-height: 20px; font-variant-numeric: tabular-nums; }
+.cb-l-qty b { font-weight: 600; }
+.cb-l-qty em { margin-left: 4px; font-size: 12.5px; color: var(--am-2); }
+/* the unit's own underline stands on the unit's own box, so a reader sees TWO fields on the
+   quantity column — the number and what it is counted in — and not one field with a suffix */
+.cb-l-qty em.cb-ed, .cb-c2 em.cb-ed { text-underline-offset: 4px; }
+.cb-l-amt { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.cb-l-amt b { font-size: 19px; line-height: 24px; font-weight: 600; }
+.cb-l-amt i { font-size: 12.5px; font-weight: 600; }
+
+/* ── BEAT 1 · ONE ROW, ONE ACT ─────────────────────────────────────────────────────────────────
+   ROUND 5 · `Add item` IS CENTRED. «add item should be centred» (Peter) — and it is the same law
+   S12's `Show more` is now written to («Show more in general across the app, as it is in top
+   companies, which is centered usually»): a control that belongs to the WHOLE list under it stands
+   on the list's own centre line, never hard left where it reads as one more row. */
+.cb-add {
+  display: flex; align-items: center; justify-content: center; gap: 9px;
+  height: 52px; padding: 0 var(--cb-pad);
+  border-top: 1px solid var(--am-mono); font-size: 15px; font-weight: 500; color: var(--am-2);
+  transition: background 120ms linear;
+}
+.cb-add.press { background: var(--am-mono); }
+.cb-ic { width: 16px; height: 16px; flex: none; }
+
+/* ── THE ROW BEING WRITTEN, AND THE LINE IT IS ───────────────────────────────────────────────── */
+.cb-new { margin: 10px var(--cb-pad) 12px; padding: 12px; border-radius: 10px;
+  background: var(--am-mono);
+  transition: background 260ms var(--am-ease), margin 260ms var(--am-ease),
+              padding 260ms var(--am-ease); }
+/* ROUND 4 · ENTER PUTS IT ON THE DOCUMENT, AND THAT IS THE WHOLE OF IT. The chip ground goes and
+   the row lands on `--cb-pad`, the document's own measure, so it stands in the same column as the
+   line above it. This used to be what `Confirm` did, two and a half seconds later, behind a button;
+   «EVERYTHING SHOULD ALWAYS BE EDITABLE FROM THE GET-GO. You shouldn't need to confirm anything»
+   (Peter, round 4). The values keep their `.cb-ed` underlines afterwards, for good — the line is
+   live, and the row you just wrote is not a different kind of thing from the one above it. */
+/* ROUND 5 · AIR ABOVE THE RULE. «increase the padding above the divider line» (Peter). The written
+   row sat 8px under the line above it and 0 above the hairline that carries `Add item`, so the row
+   the reader just watched appear was pressed against a divider — the one place on the card where a
+   line needs room to have landed. 16 above, 18 below; the reserved slot grew by the same 18 so the
+   card's height is still a constant (round 3's «the height keeps changing» stays fixed). */
+.cb-new.built { margin: 16px 4px 18px; padding: 0 12px; background: transparent; }
+.cb-new.built .cb-ch, .cb-new.built .cb-cr { padding-left: 0; padding-right: 0; }
+/* ROUND 3 · the row no longer GROWS to make room for the tarifa list. It used to add 128px of
+   padding when the list opened, which was one of the five heights that made the card breathe; the
+   reserved slot above holds that room permanently, so the list simply hangs into space that is
+   already there. */
+
+/* THE ONE FREE-FORM FIELD. Nothing beside it, nothing under it — until Enter. */
+.cb-field {
+  display: flex; align-items: center; gap: 10px; height: 48px; padding: 0 8px 0 14px;
+  background: #fff; border: 1.5px solid var(--am-ink); border-radius: 9px;
+}
+.cb-f-in { flex: 1; min-width: 0; font-size: 16px; line-height: 22px; white-space: nowrap; overflow: hidden; }
+.cb-f-ph { color: #8A8A8A; }
+.cb-f-typed { color: var(--am-ink); }
+.cb-caret {
+  display: inline-block; width: 2px; height: 19px; margin-left: 2px; vertical-align: -4px;
+  background: var(--am-ink); animation: am-blink 1s steps(1) infinite;
+}
+/* THE IN-FIELD TRIO — the house pattern for any field that suggests (canon: the ambient thesis).
+   The Rocoto face is what Rocoto would put here; the heart is what this customer has taken before;
+   the key commits. Small, quiet, INSIDE the field on the right, so the help sits where the hands
+   already are rather than in a panel somewhere else on the screen. */
+.cb-f-acts { flex: none; display: flex; align-items: center; gap: 4px; }
+.cb-f-b {
+  display: grid; place-items: center; width: 30px; height: 30px; border-radius: 7px;
+  color: var(--am-3); background: transparent;
+}
+/* ROUND 6 · the raster face that used to sit here is gone — the mark is the app's own `reset`
+   linework now, so there is nothing left in this seat but an svg. */
+.cb-f-b .cb-ic { width: 17px; height: 17px; }
+/* the return key: the Claude-composer send button — a small rounded square that wakes the moment
+   the field has something to give it */
+.cb-f-key {
+  display: grid; place-items: center; width: 32px; height: 32px; margin-left: 2px;
+  border-radius: 8px; background: var(--am-ghost); color: #fff;
+  transition: background 160ms var(--am-ease), transform 120ms var(--am-ease);
+}
+.cb-f-key .cb-ic { width: 17px; height: 17px; }
+.cb-f-key.live { background: var(--am-ink); }
+.cb-f-key.over { background: var(--am-over); }
+.cb-f-key.press { transform: scale(0.94); }
+
+/* ── THE STRUCTURE, IN COLUMNS ───────────────────────────────────────────────────────────────── */
+.cb-cols { position: relative; }
+.cb-ch, .cb-cr {
+  display: grid; grid-template-columns: 30px var(--cb-grid); align-items: center; column-gap: 12px;
+}
+.cb-ch {
+  padding: 0 2px 8px; font-size: 10.5px; line-height: 14px; letter-spacing: .09em;
+  text-transform: uppercase; color: var(--am-3);
+}
+/* THE DOCUMENT'S OWN COLUMN HEADS, at the top of the body and true of every line under them.
+   Round 4 moved them out of the row being written: with no Confirm the row never flattens, so the
+   heads it used to carry would stand forever between line one and line two. */
+.cb-ch-doc { padding: 0 var(--cb-pad) 7px; }
+.cb-ch > span:first-child { grid-column: 1 / 3; }
+.cb-ch .cb-r { text-align: right; }
+.cb-cr { padding: 0 2px; align-items: start; }
+
+/* each column ARRIVES on its own beat, in the order the line is read */
+.cb-ch, .cb-c1, .cb-c2, .cb-c3, .cb-c-sub {
+  opacity: 0; transform: translateY(6px);
+  transition: opacity 220ms var(--am-ease), transform 220ms var(--am-ease);
+}
+.cb-ch.in, .cb-c1.in, .cb-c2.in, .cb-c3.in, .cb-c-sub.in { opacity: 1; transform: none; }
+
+/* col 1 — the name and its sort, with class and lot SMALL below it */
+.cb-c1 { grid-column: 1 / 3; display: grid; grid-template-columns: 30px 1fr; column-gap: 12px; align-items: start; }
+.cb-c-face { width: 30px; height: 30px; object-fit: contain; }
+.cb-c-txt { min-width: 0; }
+.cb-c-nm { display: block; font-size: 16px; line-height: 25px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.cb-c-nm b { font-weight: 600; }
+.cb-c-nm em { color: var(--am-2); }
+.cb-c-sub { display: block; margin-top: 3px; font-size: 12px; line-height: 16px; color: var(--am-3); }
+
+/* col 2 — the quantity, with the unit as its own editable sub-column */
+.cb-c2 { padding-top: 1px; font-variant-numeric: tabular-nums; }
+.cb-qty { font-size: 18px; line-height: 22px; font-weight: 600; }
+.cb-unit { margin-left: 5px; font-size: 13px; color: var(--am-2); }
+
+/* col 3 — the price, auto-filled, right-aligned, and a door into the tarifa that set it */
+.cb-c3 { position: relative; text-align: right; padding-top: 1px; }
+.cb-price {
+  display: inline-flex; align-items: baseline; gap: 1px; padding: 3px 6px; margin: -3px -6px;
+  border-radius: 7px; font-variant-numeric: tabular-nums; white-space: nowrap;
+  transition: background 140ms linear;
+}
+.cb-price b { font-size: 19px; line-height: 24px; font-weight: 600; }
+.cb-price i { font-size: 12.5px; font-weight: 600; }
+.cb-p-v { display: inline-flex; align-items: baseline; gap: 1px; }
+.cb-cur { margin-left: 4px; font-size: 12.5px; font-weight: 600; }
+/* ⚠️ THE NAME'S UNDERLINE NEEDS ROOM INSIDE A CLIPPING BOX. `.cb-l-nm` and `.cb-c-nm` carry
+   `overflow:hidden` so a long product name ellipsizes — and a 15px face on a 20px line box puts its
+   baseline ~17px down, so an underline 5px under it landed at 22px and was CUT AWAY. The name was
+   the one value on the row with no editable mark while every other value had one. Two changes, both
+   needed: the offset comes to 3px, and the line box opens to 23/25px so 3px still has somewhere to
+   land. Verified by rendering the row at 3× and looking at it, twice. */
+.cb-l-nm .cb-ed, .cb-c-nm .cb-ed { text-underline-offset: 3px; }
+.cb-price.tap, .cb-price.open { background: #E4E4E4; }
+.cb-chev { width: 14px; height: 14px; margin-left: 2px; align-self: center; color: var(--am-3); }
+.cb-price.open .cb-chev { transform: rotate(180deg); }
+
+/* THEIR TARIFAS — a small dropdown, and a door out of it. «Everything is nice and circular»:
+   price → the tariff that made it → the catalogue that sets the tariff. */
+.cb-drop {
+  position: absolute; top: 30px; right: -6px; z-index: 5; width: 186px; padding: 5px;
+  background: #fff; border-radius: 10px; box-shadow: var(--rocoto-shadow-popover, 0 6px 14px rgba(26, 20, 19, .08), 0 16px 40px rgba(26, 20, 19, .12));
+  animation: cb-drop 180ms var(--am-ease) both; text-align: left;
+}
+@keyframes cb-drop { from { opacity: 0; transform: translateY(-6px) } to { opacity: 1; transform: none } }
+.cb-dr {
+  display: flex; align-items: baseline; justify-content: space-between; gap: 12px;
+  height: 34px; padding: 0 9px; border-radius: 7px; font-size: 13.5px; color: var(--am-2);
+}
+.cb-dr u { font-variant-numeric: tabular-nums; color: var(--am-ink); }
+.cb-dr u b { font-size: 15px; font-weight: 600; }
+.cb-dr u i { font-size: 11.5px; font-weight: 600; }
+.cb-dr.on { background: var(--am-mono); color: var(--am-ink); font-weight: 600; }
+.cb-edit { margin-top: 4px; padding-top: 4px; border-top: 1px solid var(--am-mono);
+  height: 36px; color: var(--am-ink); font-weight: 500; justify-content: flex-start; gap: 4px; }
+.cb-edit .cb-chev { transform: rotate(-90deg); margin-left: auto; }
+
+/* ⚠️ `.cb-ok` — THE CONFIRM BUTTON — WAS DELETED IN ROUND 4 AND MUST NOT COME BACK. «I told you not
+   confirm… why is there still confirm???» (Peter). It sat under the built columns for two and a
+   half seconds as a gate between a person and their own line. Enter is the commit; the total moves
+   with it; the row is editable the whole way through. */
+
+/* ── THE FOOT ────────────────────────────────────────────────────────────────────────────────── */
+.cb-dock {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  height: 54px; padding: 0 var(--cb-pad); background: var(--am-mono);
+  border-radius: 0 0 12px 12px;
+}
+.cb-d-k { font-size: 13.5px; color: var(--am-2); }
+.cb-d-v { font-variant-numeric: tabular-nums; }
+.cb-d-v b { font-size: 22px; line-height: 26px; font-weight: 700; }
+.cb-d-v i { font-size: 14px; font-weight: 700; }
+
+/* EVERY VALUE IS EDITABLE, AND SAYS SO. The document register's hairline underline is the app's own
+   mark for «you can open this» — it rides the values and never the labels.
+
+   ⚠️ ROUND 5 · IT HAS TO BE SEEN TO BE A MARK. «kg should unit should be editable in all» (Peter).
+   Two things were wrong and they were the same thing. The mark was drawn in `--am-ghost` (#E4E4E4)
+   on white — 1,2:1 against the card, which is a line you can find only if you already know it is
+   there — and it was carried by the row being WRITTEN and not by the rows already written, so a
+   reader comparing the two lines on the document saw one live row and one dead one. The colour is
+   now #C4C4C4 (2,1:1 — still quiet, still under the ink at 15:1, but present), and `.cb-ed` rides
+   every value on every row: the name, its sort, the quantity, THE UNIT, the class, the lot and the
+   money. `text-decoration-skip-ink` off, so a `g` or a `j` cannot break the line into fragments. */
+/* ⚠️ `.am-stage .cb-ed`, AND THE ANCESTOR IS LOAD-BEARING. This sheet's own reset —
+   `.am-stage b, .am-stage u, .am-stage i, .am-stage mark { text-decoration: none }` — is (0,1,1),
+   and `.cb-ed` alone is (0,1,0). Every editable value in this island is a `<b>`, so the reset won
+   and the underline never drew on ANY of them: the only mark that has ever appeared on this card is
+   the one on `kg`, because `<em>` is the one tag the reset does not name. That is the whole of «kg
+   should unit should be editable in all» — the unit was not the exception, it was the only one
+   working. Found by rendering the row at 3× and looking, never by reading the file. */
+.am-stage .cb-ed {
+  text-decoration: underline; text-underline-offset: 5px;
+  text-decoration-color: #C4C4C4; text-decoration-skip-ink: none;
+}
+
+/* ── REDUCED MOTION: the islands hold their settled frame and nothing moves at all ────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .am-stage *, .am-stage *::before, .am-stage *::after {
+    transition: none !important; animation: none !important;
+  }
+  /* the build-in's rest state is INVISIBLE, so it has to be cancelled and not merely un-animated */
+  .am-fit { opacity: 1 !important; transform: none !important; }
+  .pl-caret, .cb-caret { display: none; }
+  /* the staged columns' rest state is invisible, so it is CANCELLED and not merely un-animated */
+  .cb-ch, .cb-c1, .cb-c2, .cb-c3, .cb-c-sub { opacity: 1 !important; transform: none !important; }
+}

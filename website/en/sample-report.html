@@ -1,0 +1,683 @@
+<!-- GENERATED from landing/informe_muestra.py — edit the data and copy there, then rerun. -->
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>The month's report — a sample | Rocoto</title>
+<meta content="A sample of the report you take away from the first month: revenue concentration, customers falling away, products they stopped ordering, season, sales gaps and autonomy measured week by week." name="description"/>
+<link href="https://soyrocoto.com/en/sample-report.html" rel="canonical"/>
+<link href="https://soyrocoto.com/muestra-informe.html" hreflang="es" rel="alternate"/>
+<link href="https://soyrocoto.com/en/sample-report.html" hreflang="en" rel="alternate"/>
+<link href="https://soyrocoto.com/muestra-informe.html" hreflang="x-default" rel="alternate"/>
+<meta content="article" property="og:type"/>
+<meta content="The month's report — a sample | Rocoto" property="og:title"/>
+<meta content="A sample of the report you take away from the first month: revenue concentration, customers falling away, products they stopped ordering, season, sales gaps and autonomy measured week by week." property="og:description"/>
+<meta content="en_GB" property="og:locale"/>
+<link href="/brand/favicon-32.png" rel="icon" type="image/png"/>
+<link href="/brand/favicon-180.png" rel="apple-touch-icon"/>
+<style>
+:root{
+  /* Rocoto tokens — packages/rocoto-tokens/tokens.css, generated from the app's ui/theme */
+  --plane:#FAF7F3; --surface:#FFFFFF; --sunk:#F2ECE5;
+  --ink:#1A1413; --ink-2:#6F665C; --ink-3:#998F83;
+  --border:rgba(26,20,19,.141); --rule:rgba(26,20,19,.085);
+  --grid:#E7E0D6; --baseline:#CFC7BB;
+  /* THE REPORT'S COLOR CONTRACT — validated, never eyeballed (see this file's docstring) */
+  --c-data:#C01B2C; --c-data-2:#E2707D; --c-data-t:#831521;
+  --c-context:#C4B9A8;
+  --c-alone:#4E9E5E; --c-alone-t:#2E6038;
+  --c-review:#2B5BB7;
+  --f-display:'Fraunces',Georgia,serif;
+  --f-sans:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --f-mono:Inter,ui-Inter,'SF Mono',Inter;
+  --r:12px; --maxw:1120px; --pad:clamp(20px,5vw,40px);
+  --sh-card:0 1px 2px rgba(26,20,19,.05), 0 6px 18px rgba(26,20,19,.055);
+  color-scheme:light;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{font-family:var(--f-sans);color:var(--ink);background:var(--plane);
+  font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;
+  font-feature-settings:'cv05' 1,'ss03' 1}
+a{color:inherit}
+.wrap{max-width:var(--maxw);margin:0 auto;padding-inline:var(--pad)}
+
+/* ── masthead ─────────────────────────────────────────────────────────────── */
+.rp-top{border-bottom:1px solid var(--border);background:rgba(250,247,243,.94);
+  backdrop-filter:saturate(1.4) blur(8px);position:sticky;top:0;z-index:30}
+.rp-top .wrap{display:flex;align-items:center;gap:16px;min-height:62px;flex-wrap:wrap}
+.rp-brand{display:inline-flex;align-items:center;gap:9px;font-family:var(--f-display);
+  font-weight:700;font-size:21px;letter-spacing:-.02em;text-decoration:none}
+.rp-brand .dot{width:11px;height:11px;border-radius:999px;background:var(--c-data);
+  box-shadow:0 0 0 4px rgba(192,27,44,.10)}
+.rp-title{font-family:var(--f-display);font-weight:600;font-size:16px;color:var(--ink-2);
+  padding-left:16px;border-left:1px solid var(--border)}
+.rp-sample{margin-left:auto;font-family:var(--f-mono);font-size:11.5px;font-weight:600;
+  letter-spacing:.06em;text-transform:uppercase;color:var(--c-data-t);
+  background:rgba(192,27,44,.09);border-radius:999px;padding:5px 12px}
+.rp-lang{display:inline-flex;border:1px solid var(--border);border-radius:999px;overflow:hidden;
+  font-family:var(--f-mono);font-size:11.5px;font-weight:600}
+.rp-lang a{padding:5px 11px;color:var(--ink-3);text-decoration:none}
+.rp-lang a[aria-current=true]{background:var(--ink);color:var(--plane)}
+
+/* ── cover ────────────────────────────────────────────────────────────────── */
+.rp-cover{padding:clamp(44px,7vw,88px) 0 clamp(30px,4vw,44px)}
+.rp-cover-in{max-width:var(--maxw);margin:0 auto;padding-inline:var(--pad)}
+.rp-house{font-family:var(--f-display);font-size:clamp(30px,4.4vw,46px);font-weight:600;
+  line-height:1.06;letter-spacing:-.018em;margin-top:11px;max-width:20ch}
+.rp-house span{display:block;font-family:var(--f-sans);font-size:15.5px;font-weight:500;
+  letter-spacing:0;color:var(--ink-2);margin-top:12px;max-width:none}
+.rp-period{font-family:var(--f-mono);font-size:12.5px;color:var(--ink-2);margin-top:14px}
+.rp-hero{margin-top:36px;padding:28px 30px 26px;background:var(--surface);
+  border:1px solid var(--border);border-radius:var(--r);box-shadow:var(--sh-card);
+  border-left:3px solid var(--c-data);
+  display:grid;grid-template-columns:minmax(0,auto) minmax(0,1fr);
+  column-gap:44px;row-gap:0;align-items:end}
+.rp-hero-l{grid-column:1;font-family:var(--f-mono);font-size:11.5px;font-weight:600;
+  letter-spacing:.11em;text-transform:uppercase;color:var(--ink-2)}
+.rp-hero-v{grid-column:1;font-size:clamp(44px,6.4vw,62px);font-weight:600;line-height:1.02;
+  letter-spacing:-.026em;margin-top:8px;white-space:nowrap}
+.rp-hero-s{grid-column:2;grid-row:1 / span 2;font-size:16px;line-height:1.6;color:var(--ink-2);
+  max-width:46ch;align-self:end;padding-bottom:6px;
+  border-left:1px solid var(--rule);padding-left:30px}
+.rp-tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:16px}
+.rp-tile{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);
+  padding:18px 20px}
+.rp-tile b{display:block;font-size:27px;font-weight:600;letter-spacing:-.02em;line-height:1.1}
+.rp-tile span{display:block;font-size:13.5px;color:var(--ink-2);margin-top:5px}
+.rp-cover-f{font-size:14px;color:var(--ink-3);margin-top:16px}
+
+/* ── section scaffold ─────────────────────────────────────────────────────── */
+.rp-sec{padding:clamp(34px,5vw,58px) 0;max-width:var(--maxw);margin:0 auto;
+  padding-inline:var(--pad);border-top:1px solid var(--rule)}
+.rp-head{max-width:70ch}
+.rp-kick{font-family:var(--f-mono);font-size:11.5px;font-weight:600;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--c-data)}
+.rp-h2{font-family:var(--f-display);font-size:clamp(26px,3.4vw,34px);font-weight:600;
+  line-height:1.12;letter-spacing:-.012em;margin-top:9px}
+.rp-lede{font-size:19px;line-height:1.5;color:var(--ink-2);margin-top:12px}
+.rp-means{font-size:16px;line-height:1.6;color:var(--ink-2);margin-top:18px;max-width:74ch}
+.rp-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);
+  box-shadow:var(--sh-card);padding:26px 28px 24px;margin-top:24px;overflow:hidden}
+.rp-rule{height:1px;background:var(--rule);margin:22px 0 20px}
+/* Wide content scrolls inside its OWN container. Nothing is hidden at 390px: a column dropped on a
+   phone is a value the reader cannot reach, and the whole point of this page is the numbers. */
+.rp-scroll{overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch}
+.rp-svg{display:block;width:100%;height:auto;overflow:visible}
+.rp-svg .cat{font:500 14px var(--f-sans);fill:var(--ink)}
+.rp-svg .val{font:600 13px var(--f-sans);fill:var(--ink);font-variant-numeric:tabular-nums}
+.rp-svg .val-s{font-weight:500;fill:var(--ink-2)}
+.rp-svg .pk{font-size:12px}
+.rp-svg .ax{font:500 11.5px var(--f-sans);fill:var(--ink-2);font-variant-numeric:tabular-nums}
+.rp-svg .leg{font:500 12px var(--f-sans);fill:var(--ink-2)}
+.hit{fill:transparent;cursor:default;outline:none}
+.hit:focus-visible{fill:rgba(192,27,44,.07);stroke:var(--c-data);stroke-width:1.5}
+.rp-key{display:flex;flex-wrap:wrap;gap:20px;margin-bottom:18px;font-size:13px;color:var(--ink-2)}
+.rp-key span{display:inline-flex;align-items:center;gap:8px}
+.rp-key .sw{width:12px;height:12px;border-radius:3px;flex:none}
+.rp-key .sw-dot{border-radius:999px;background:var(--c-context)}
+.rp-key .sw-ring{border-radius:999px;background:transparent;border:2px solid var(--c-data)}
+.rp-key .sw-star{width:auto;font-weight:700;color:var(--c-data)}
+.rp-legend{font-size:13px;line-height:1.55;color:var(--ink-3);margin-top:18px;max-width:82ch}
+
+/* ── row tables (§3, §4) ──────────────────────────────────────────────────── */
+.rp-rows{width:100%;border-collapse:collapse;font-size:14.5px}
+.rp-rows th,.rp-rows td{text-align:left;padding:13px 10px;vertical-align:middle}
+.rp-rows thead th{font:600 11.5px var(--f-mono);letter-spacing:.09em;text-transform:uppercase;
+  color:var(--ink-2);padding-bottom:9px;border-bottom:1px solid var(--border)}
+.rp-rows tbody tr{border-bottom:1px solid var(--rule)}
+.rp-rows tbody th{font-weight:600}
+.rp-rows tfoot th,.rp-rows tfoot td{padding-top:15px;font-size:13.5px;color:var(--ink-2)}
+.rp-rows tfoot b{color:var(--ink);font-size:15px}
+.rp-rows .c-n,.rp-rows .c-d,.rp-rows .c-s{text-align:right;font-variant-numeric:tabular-nums}
+.rp-rows .c-n{color:var(--ink-2)}
+.rp-rows .c-d{white-space:nowrap;font-weight:600}
+.rp-rows .c-d .tri{color:var(--c-data);margin-right:6px;font-size:10px;vertical-align:1px}
+.rp-rows .c-s{white-space:nowrap}
+.rp-rows .c-s b{font-size:15.5px;font-weight:600}
+.rp-rows .c-spark{width:174px;padding-right:22px;outline:none;border-radius:6px}
+.rp-rows .c-spark:focus-visible{box-shadow:0 0 0 2px var(--c-data)}
+.rp-cli{display:block}
+.rp-sub{display:block;font-family:var(--f-mono);font-size:11.5px;font-weight:500;
+  color:var(--ink-3);margin-top:3px}
+.spark{display:block}
+.rp-mbar{display:block;height:8px;border-radius:999px;background:var(--sunk);margin-top:7px;
+  overflow:hidden;outline:none}
+.rp-mbar i{display:block;height:100%;background:var(--c-data);border-radius:0 4px 4px 0}
+.rp-mbar-b i{background:var(--c-review)}
+.rp-mbar:focus-visible{box-shadow:0 0 0 2px var(--c-data)}
+.rp-rows-p .c-p{font-weight:600}
+.rp-rows-p .c-r,.rp-rows-p .c-w{color:var(--ink-2);font-size:13.5px;white-space:nowrap}
+.rp-rows-p .c-s{width:200px}
+.rp-rows-p tr.is-flag{background:rgba(192,27,44,.035)}
+.rp-rows-p tr.is-flag th{box-shadow:inset 2px 0 0 var(--c-data)}
+.rp-flag{display:block;font-family:var(--f-mono);font-size:11px;font-weight:600;
+  letter-spacing:.04em;color:var(--c-data-t);margin-top:4px}
+
+/* ── small multiples (§5, §7) ─────────────────────────────────────────────── */
+.rp-facets{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.rp-two{display:grid;grid-template-columns:repeat(2,1fr);gap:30px}
+.rp-facet figcaption{margin-bottom:10px}
+.rp-facet figcaption b{display:block;font-size:15px;font-weight:600}
+.rp-facet figcaption span{display:block;font-family:var(--f-mono);font-size:11.5px;
+  color:var(--ink-2);margin-top:3px}
+
+/* ── the twin grid (§6) ───────────────────────────────────────────────────── */
+.rp-grid-w{overflow-x:auto}
+.rp-gx{min-width:860px}
+.gx-r{display:grid;grid-template-columns:196px repeat(6,1fr);align-items:center;
+  border-bottom:1px solid var(--rule)}
+.gx-r:last-child{border-bottom:0}
+.gx-head{border-bottom:1px solid var(--border)}
+.gx-h{font:600 11.5px var(--f-mono);letter-spacing:.05em;color:var(--ink-2);text-align:center;
+  padding:0 6px 10px;line-height:1.3}
+.gx-n{font-size:14.5px;font-weight:600;padding:16px 12px 16px 0}
+.gx-c{display:flex;flex-direction:column;align-items:center;gap:5px;padding:14px 4px;
+  outline:none;border-radius:8px}
+.gx-c:focus-visible{box-shadow:0 0 0 2px var(--c-data)}
+.gx-c .dot{width:13px;height:13px;border-radius:999px;background:var(--c-context)}
+.gx-c .ring{width:15px;height:15px;border-radius:999px;border:2px solid var(--c-data);
+  box-sizing:border-box}
+.gx-e{font-size:11.5px;font-weight:600;color:var(--ink);font-variant-numeric:tabular-nums;
+  white-space:nowrap}
+.gx-c.is-seen .ring{border-color:var(--c-data-2)}
+.gx-c.is-seen .gx-e{color:var(--c-data);font-size:14px;line-height:.8}
+
+/* ── autonomy kpis + checks (§7) ──────────────────────────────────────────── */
+.rp-kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:24px}
+.rp-kpi{border-left:2px solid var(--border);padding-left:14px}
+.rp-kpi b{display:block;font-size:26px;font-weight:600;letter-spacing:-.018em;line-height:1.12}
+.rp-kpi span{display:block;font-size:13px;color:var(--ink-2);margin-top:4px}
+.rp-checks{margin-top:30px;padding-top:22px;border-top:1px solid var(--rule)}
+.rp-checks-h{font-family:var(--f-display);font-size:20px;font-weight:600;margin-bottom:15px}
+.rp-checks-h span{display:block;font-family:var(--f-sans);font-size:14px;font-weight:400;
+  color:var(--ink-2);margin-top:4px}
+.ck-r{display:grid;grid-template-columns:112px 190px 1fr;gap:18px;align-items:center;
+  padding:9px 0;border-bottom:1px solid var(--rule)}
+.ck-r:last-child{border-bottom:0}
+.ck-n{font-size:14.5px;font-weight:600}
+.ck-b{display:flex;align-items:center;gap:12px}
+.ck-b .rp-mbar{flex:1;margin-top:0}
+.ck-b b{font-size:15px;font-weight:600;font-variant-numeric:tabular-nums;min-width:26px;
+  text-align:right}
+.ck-s{font-size:14px;color:var(--ink-2)}
+
+/* ── table view ───────────────────────────────────────────────────────────── */
+.rp-tbl{margin-top:14px}
+.rp-tbl summary{display:inline-flex;align-items:center;gap:7px;cursor:pointer;
+  font-family:var(--f-mono);font-size:12px;font-weight:600;letter-spacing:.05em;color:var(--ink-2);
+  padding:5px 0;list-style:none}
+.rp-tbl summary::-webkit-details-marker{display:none}
+.rp-tbl summary::before{content:'+';font-size:14px;color:var(--c-data)}
+.rp-tbl[open] summary::before{content:'–'}
+.rp-tbl-w{overflow-x:auto;margin-top:10px;border:1px solid var(--border);border-radius:8px;
+  background:var(--surface)}
+.rp-tbl table{width:100%;border-collapse:collapse;font-size:13px;
+  font-variant-numeric:tabular-nums;white-space:nowrap}
+.rp-tbl th,.rp-tbl td{text-align:left;padding:9px 14px;border-bottom:1px solid var(--rule)}
+.rp-tbl thead th{font:600 11px var(--f-mono);letter-spacing:.06em;text-transform:uppercase;
+  color:var(--ink-2);background:var(--plane)}
+.rp-tbl tbody tr:last-child th,.rp-tbl tbody tr:last-child td{border-bottom:0}
+.rp-note{font-size:12.5px;color:var(--ink-3);margin-top:9px}
+
+/* ── close ────────────────────────────────────────────────────────────────── */
+.rp-end{border-top:1px solid var(--border);background:var(--sunk);margin-top:24px;
+  padding:clamp(40px,6vw,72px) 0}
+.rp-end .wrap{max-width:760px}
+.rp-end h2{font-family:var(--f-display);font-size:clamp(25px,3.2vw,33px);font-weight:600;
+  line-height:1.14;letter-spacing:-.012em}
+.rp-end p{font-size:17px;color:var(--ink-2);margin-top:14px}
+.rp-cta{display:inline-flex;align-items:center;justify-content:center;margin-top:24px;
+  background:var(--c-data);color:#fff;text-decoration:none;font-weight:700;font-size:15.5px;
+  padding:14px 26px;border-radius:999px;
+  transition:transform .16s cubic-bezier(.34,1.56,.64,1),box-shadow .16s ease}
+.rp-cta:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(192,27,44,.24)}
+.rp-foot{padding:26px 0 44px;font-size:13px;color:var(--ink-3)}
+.rp-foot .wrap{display:flex;gap:18px;flex-wrap:wrap;align-items:center}
+
+/* ── tooltip ──────────────────────────────────────────────────────────────── */
+.rp-tip{position:fixed;z-index:80;pointer-events:none;opacity:0;
+  transform:translate(-50%,-100%) translateY(-10px);
+  background:var(--ink);color:#fff;border-radius:8px;padding:8px 11px;
+  box-shadow:0 6px 22px rgba(26,20,19,.28);transition:opacity .12s ease;max-width:280px}
+.rp-tip.on{opacity:1}
+.rp-tip b{display:block;font-size:14px;font-weight:600;font-variant-numeric:tabular-nums}
+.rp-tip span{display:block;font-size:12px;color:#C6BCB0;margin-top:2px}
+@media (prefers-reduced-motion:reduce){*{transition-duration:.01ms!important}}
+
+/* ── narrow ───────────────────────────────────────────────────────────────── */
+@media (max-width:1000px){
+  .rp-facets{grid-template-columns:1fr 1fr}
+  .rp-tiles,.rp-kpis{grid-template-columns:1fr 1fr}
+  .ck-r{grid-template-columns:100px 150px 1fr;gap:12px}
+}
+@media (max-width:900px){
+  .rp-scroll > *{min-width:700px}
+  /* the week charts SCALE instead of scrolling — the story is the last column, and a story whose
+     ending sits off the right edge is not told. Their type is bumped in viewBox units so it lands
+     back at reading size once the SVG is scaled down. */
+  .rp-two .rp-svg .ax{font-size:15px}
+  .rp-two .rp-svg .val{font-size:17px}
+}
+@media (max-width:760px){
+  .rp-facets,.rp-two{grid-template-columns:1fr}
+  .rp-card{padding:20px 16px}
+  .rp-rows{font-size:13.5px}
+  .rp-rows th,.rp-rows td{padding:11px 8px}
+  .ck-r{grid-template-columns:1fr;gap:6px;padding:12px 0}
+  .rp-title{display:none}
+  .rp-hero{grid-template-columns:1fr}
+  .rp-hero-s{grid-column:1;grid-row:auto;border-left:0;padding-left:0;padding-top:14px;
+    max-width:none}
+  .rp-hero-v{white-space:normal}
+}
+
+/* ── paper ────────────────────────────────────────────────────────────────── */
+@media print{
+  :root{--plane:#fff;--sh-card:none}
+  .rp-top{position:static;background:#fff}
+  .rp-card,.rp-tile,.rp-hero{box-shadow:none;break-inside:avoid}
+  .rp-sec{break-inside:avoid}
+  .rp-end,.rp-tbl{display:none}
+}
+</style>
+<link href="/assets/restoration.css" rel="stylesheet"/><meta content="default-src 'self'; base-uri 'self'; connect-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; media-src 'self' blob:; frame-src 'self'; object-src 'none'; form-action 'none'" http-equiv="Content-Security-Policy"/></head>
+<body>
+<header class="rp-top">
+<div class="wrap">
+<a class="rp-brand" href="/en/"><span class="dot"></span>Rocoto</a>
+<span class="rp-title">The month's report</span>
+<span class="rp-sample">Sample, example data</span>
+<span class="rp-lang">
+<a href="https://soyrocoto.com/muestra-informe.html">ES</a>
+<a aria-current="true" href="https://soyrocoto.com/en/sample-report.html">EN</a>
+</span>
+</div>
+</header>
+<main>
+<section class="rp-cover" id="portada">
+<div class="rp-cover-in">
+<p class="rp-kick">01 · Cover</p>
+<h2 class="rp-house">What Rocoto read about Casa Mar
+      <span>Fish · Mercabarna · Twelve months of delivery notes</span></h2>
+<p class="rp-period">Period read: September 2025 – August 2026 · Pilot month: August 2026</p>
+<div class="rp-hero">
+<p class="rp-hero-l">Money in play, this month</p>
+<p class="rp-hero-v">€57,950/mo</p>
+<p class="rp-hero-s">€695,400/yr, against the €14,100,000 Rocoto read across twelve months. It comes out of the four sections below, counted once.</p>
+</div>
+<div class="rp-tiles"><div class="rp-tile"><b>77,363</b><span>delivery notes read</span></div><div class="rp-tile"><b>2,667</b><span>customers in your history</span></div><div class="rp-tile"><b>1,344</b><span>patterns learned</span></div><div class="rp-tile"><b>12</b><span>months of history</span></div></div>
+<p class="rp-cover-f">€182 average per delivery note · 2,667 customers, 1,344 ways of ordering learned.</p>
+</div>
+</section>
+<section class="rp-sec" id="concentracion">
+<header class="rp-head">
+<p class="rp-kick">02 · Concentration</p>
+<h2 class="rp-h2">Where your revenue sits</h2>
+<p class="rp-lede">Three customers out of 2,667 are 17.6% of your revenue. The top ten are 34.3%.</p>
+</header>
+<figure class="rp-card" id="fig-concentracion"><p class="rp-key"><span><i class="sw" style="background:var(--c-data)"></i>The top three</span><span><i class="sw" style="background:var(--c-context)"></i>4th to 10th</span></p><div class="rp-scroll"><svg aria-label="The top ten customers by annual revenue" class="rp-svg" role="img" viewbox="0 0 1040 412"><line stroke="var(--baseline)" stroke-width="1" x1="213" x2="213" y1="12" y2="402"></line><text class="cat" dominant-baseline="central" text-anchor="end" x="196" y="32">Grup Bertran</text><path d="M214.0 21.0 H730.0 A4 4 0 0 1 734.0 25 V39 A4 4 0 0 1 730.0 43 H214.0 Z" fill="var(--c-data)"></path><text class="val" dominant-baseline="central" x="746" y="32">€1,048,000<tspan class="val-s"> · 7.4%</tspan></text><rect aria-label="€1,048,000 — Grup Bertran · 7.4% of your revenue" class="hit" data-tip="€1,048,000|Grup Bertran · 7.4% of your revenue" height="36.0" role="img" tabindex="0" width="720.0" x="208.0" y="14.0"></rect><text class="cat" dominant-baseline="central" text-anchor="end" x="196" y="72">Hostal Montserrat</text><path d="M214.0 61.0 H612.9 A4 4 0 0 1 616.9 65 V79 A4 4 0 0 1 612.9 83 H214.0 Z" fill="var(--c-data)"></path><text class="val" dominant-baseline="central" x="629" y="72">€812,000<tspan class="val-s"> · 5.8%</tspan></text><rect aria-label="€812,000 — Hostal Montserrat · 5.8% of your revenue" class="hit" data-tip="€812,000|Hostal Montserrat · 5.8% of your revenue" height="36.0" role="img" tabindex="0" width="602.9" x="208.0" y="54.0"></rect><text class="cat" dominant-baseline="central" text-anchor="end" x="196" y="112">Braseria Marimon</text><path d="M214.0 101.0 H519.0 A4 4 0 0 1 523.0 105 V119 A4 4 0 0 1 519.0 123 H214.0 Z" fill="var(--c-data)"></path><text class="val" dominant-baseline="central" x="535" y="112">€622,800<tspan class="val-s"> · 4.4%</tspan></text><rect aria-label="€622,800 — Braseria Marimon · 4.4% of your revenue" class="hit" data-tip="€622,800|Braseria Marimon · 4.4% of your revenue" height="36.0" role="img" tabindex="0" width="509.0" x="208.0" y="94.0"></rect><text class="cat" dominant-baseline="central" text-anchor="end" x="196" y="152">Peixateria Duran</text><path d="M214.0 141.0 H466.6 A4 4 0 0 1 470.6 145 V159 A4 4 0 0 1 466.6 163 H214.0 Z" fill="var(--c-context)"></path><text class="val" dominant-baseline="central" x="483" y="152">€517,200<tspan class="val-s"> · 3.7%</tspan></text><rect aria-label="€517,200 — Peixateria Duran · 3.7% of your revenue" class="hit" data-tip="€517,200|Peixateria Duran · 3.7% of your revenue" height="36.0" role="img" tabindex="0" width="456.6" x="208.0" y="134.0"></rect><text class="cat" dominant-baseline="central" text-anchor="end" x="196" y="192">Bar Restaurant Marimon</text><path d="M214.0 181.0 H409.5 A4 4 0 0 1 413.5 185 V199 A4 4 0 0 1 409.5 203 H214.0 Z" fill="var(--c-context)"></path><text class="val" dominant-baseline="central" x="425" y="192">€402,000<tspan class="val-s"> · 2.9%</tspan></text><rect aria-label="€402,000 — Bar Restaurant Marimon · 2.9% of your revenue" class="hit" data-tip="€402,000|Bar Restaurant Marimon · 2.9% of your revenue" height="36.0" role="img" tabindex="0" width="399.5" x="208.0" y="174.0"></rect><text class="cat" dominant-baseline="central" text-anchor="end" x="196" y="232">Vermuteria Xifré</text><path d="M214.0 221.0 H384.2 A4 4 0 0 1 388.2 225 V239 A4 4 0 0 1 384.2 243 H214.0 Z" fill="var(--c-context)"></path><text class="val" dominant-baseline="central" x="400" y="232">€351,000<tspan class="val-s"> · 2.5%</tspan></text><rect aria-label="€351,000 — Vermuteria Xifré · 2.5% of your revenue" class="hit" data-tip="€351,000|Vermuteria Xifré · 2.5% of your revenue" height="36.0" role="img" tabindex="0" width="374.2" x="208.0" y="214.0"></rect><text class="cat" dominant-baseline="central" text-anchor="end" x="196" y="272">Can Solé del Port</text><path d="M214.0 261.0 H367.8 A4 4 0 0 1 371.8 265 V279 A4 4 0 0 1 367.8 283 H214.0 Z" fill="var(--c-context)"></path><text class="val" dominant-baseline="central" x="384" y="272">€318,000<tspan class="val-s"> · 2.3%</tspan></text><rect aria-label="€318,000 — Can Solé del Port · 2.3% of your revenue" class="hit" data-tip="€318,000|Can Solé del Port · 2.3% of your revenue" height="36.0" role="img" tabindex="0" width="357.8" x="208.0" y="254.0"></rect><text class="cat" dominant-baseline="central" text-anchor="end" x="196" y="312">Cuina Rovira</text><path d="M214.0 301.0 H351.7 A4 4 0 0 1 355.7 305 V319 A4 4 0 0 1 351.7 323 H214.0 Z" fill="var(--c-context)"></path><text class="val" dominant-baseline="central" x="368" y="312">€285,600<tspan class="val-s"> · 2.0%</tspan></text><rect aria-label="€285,600 — Cuina Rovira · 2.0% of your revenue" class="hit" data-tip="€285,600|Cuina Rovira · 2.0% of your revenue" height="36.0" role="img" tabindex="0" width="341.7" x="208.0" y="294.0"></rect><text class="cat" dominant-baseline="central" text-anchor="end" x="196" y="352">Fonda Tramuntana</text><path d="M214.0 341.0 H336.2 A4 4 0 0 1 340.2 345 V359 A4 4 0 0 1 336.2 363 H214.0 Z" fill="var(--c-context)"></path><text class="val" dominant-baseline="central" x="352" y="352">€254,400<tspan class="val-s"> · 1.8%</tspan></text><rect aria-label="€254,400 — Fonda Tramuntana · 1.8% of your revenue" class="hit" data-tip="€254,400|Fonda Tramuntana · 1.8% of your revenue" height="36.0" role="img" tabindex="0" width="326.2" x="208.0" y="334.0"></rect><text class="cat" dominant-baseline="central" text-anchor="end" x="196" y="392">Celler Aiguablava</text><path d="M214.0 381.0 H324.6 A4 4 0 0 1 328.6 385 V399 A4 4 0 0 1 324.6 403 H214.0 Z" fill="var(--c-context)"></path><text class="val" dominant-baseline="central" x="341" y="392">€231,000<tspan class="val-s"> · 1.6%</tspan></text><rect aria-label="€231,000 — Celler Aiguablava · 1.6% of your revenue" class="hit" data-tip="€231,000|Celler Aiguablava · 1.6% of your revenue" height="36.0" role="img" tabindex="0" width="314.6" x="208.0" y="374.0"></rect></svg></div><div class="rp-rule"></div><div class="rp-scroll"><svg aria-label="How revenue splits between the top ten and the rest" class="rp-svg" role="img" viewbox="0 -6 1040 62"><rect fill="var(--c-data)" height="26" width="181.1" x="0.0" y="0"></rect><rect aria-label="17.6% — The top three" class="hit" data-tip="17.6%|The top three" height="38.0" role="img" tabindex="0" width="181.1" x="0.0" y="-6.0"></rect><text class="leg" x="0.0" y="48">The top three · 17.6%</text><rect fill="var(--c-data-2)" height="26" width="172.0" x="183.1" y="0"></rect><rect aria-label="16.7% — 4th to 10th" class="hit" data-tip="16.7%|4th to 10th" height="38.0" role="img" tabindex="0" width="172.0" x="183.1" y="-6.0"></rect><text class="leg" x="183.1" y="48">4th to 10th · 16.7%</text><path d="M357.1 0.0 H1036.0 A4 4 0 0 1 1040.0 4 V22 A4 4 0 0 1 1036.0 26 H357.1 Z" fill="var(--c-context)"></path><rect aria-label="65.7% — The other 2,657 customers" class="hit" data-tip="65.7%|The other 2,657 customers" height="38.0" role="img" tabindex="0" width="682.9" x="357.1" y="-6.0"></rect><text class="leg" x="357.1" y="48">The other 2,657 customers · 65.7%</text></svg></div></figure>
+<details class="rp-tbl"><summary>See the table</summary><div class="rp-tbl-w"><table><thead><tr><th scope="col">Customer</th><th scope="col">Revenue, 12 months</th><th scope="col">Share of revenue</th></tr></thead><tbody><tr><th scope="row">Grup Bertran</th><td>€1,048,000</td><td>7.4%</td></tr><tr><th scope="row">Hostal Montserrat</th><td>€812,000</td><td>5.8%</td></tr><tr><th scope="row">Braseria Marimon</th><td>€622,800</td><td>4.4%</td></tr><tr><th scope="row">Peixateria Duran</th><td>€517,200</td><td>3.7%</td></tr><tr><th scope="row">Bar Restaurant Marimon</th><td>€402,000</td><td>2.9%</td></tr><tr><th scope="row">Vermuteria Xifré</th><td>€351,000</td><td>2.5%</td></tr><tr><th scope="row">Can Solé del Port</th><td>€318,000</td><td>2.3%</td></tr><tr><th scope="row">Cuina Rovira</th><td>€285,600</td><td>2.0%</td></tr><tr><th scope="row">Fonda Tramuntana</th><td>€254,400</td><td>1.8%</td></tr><tr><th scope="row">Celler Aiguablava</th><td>€231,000</td><td>1.6%</td></tr><tr><th scope="row"><b>The ten</b></th><td><b>€4,842,000</b></td><td><b>34.3%</b></td></tr></tbody></table></div></details>
+<p class="rp-means">The house lives off ten tables. When one moves, the whole month feels it — and one is moving: Braseria Marimon, your third customer, has been sliding for three months. It is in the next section.</p>
+</section>
+<section class="rp-sec" id="dormidos">
+<header class="rp-head">
+<p class="rp-kick">03 · Customers falling away</p>
+<h2 class="rp-h2">Who buys less than their own average</h2>
+<p class="rp-lede">Six customers are buying below their own twelve-month average. That is €47,100/mo.</p>
+</header>
+<figure class="rp-card" id="fig-dormidos">
+<div class="rp-scroll">
+<table class="rp-rows rp-rows-d">
+<thead><tr><th scope="col">Customer</th><th scope="col">Twelve months</th><th scope="col">12-month average</th><th scope="col">Last 3 months</th><th scope="col">Change</th><th scope="col">In play</th></tr></thead>
+<tbody>
+<tr>
+<th scope="row"><span class="rp-cli">Vermuteria Xifré</span>
+<span class="rp-sub">last purchase 21 Aug
+            · 7
+            days</span></th>
+<td aria-label="Vermuteria Xifré: twelve months, ending at €15,100" class="c-spark" data-tip="−41.5%|Vermuteria Xifré · twelve months, month by month" role="img" tabindex="0">
+<svg aria-hidden="true" class="spark" focusable="false" height="44" viewbox="0 0 150 44" width="150"><polygon fill="var(--c-context)" fill-opacity=".26" points="5,41 5.0,11.4 17.7,12.4 30.5,10.0 43.2,5.0 55.9,14.3 68.6,15.3 81.4,13.0 94.1,13.7 106.8,14.6 119.5,24.2 132.3,26.5 145.0,27.9 145,41"></polygon><polyline fill="none" points="5.0,11.4 17.7,12.4 30.5,10.0 43.2,5.0 55.9,14.3 68.6,15.3 81.4,13.0 94.1,13.7 106.8,14.6 119.5,24.2" stroke="var(--c-context)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polyline><polyline fill="none" points="119.5,24.2 132.3,26.5 145.0,27.9" stroke="var(--c-data)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polyline><circle cx="145.0" cy="27.9" fill="var(--c-data)" r="4" stroke="var(--surface)" stroke-width="2"></circle></svg></td>
+<td class="c-n">€29,250/mo</td>
+<td class="c-n">€17,100/mo</td>
+<td class="c-d"><span class="tri">▼</span>−41.5%</td>
+<td class="c-s"><b>€12,150/mo</b><span class="rp-mbar"><i style="width:100.0%"></i></span></td>
+</tr>
+<tr>
+<th scope="row"><span class="rp-cli">Peixateria Duran</span>
+<span class="rp-sub">last purchase 26 Aug
+            · 2
+            days</span></th>
+<td aria-label="Peixateria Duran: twelve months, ending at €31,850" class="c-spark" data-tip="−20.8%|Peixateria Duran · twelve months, month by month" role="img" tabindex="0">
+<svg aria-hidden="true" class="spark" focusable="false" height="44" viewbox="0 0 150 44" width="150"><polygon fill="var(--c-context)" fill-opacity=".26" points="5,41 5.0,10.5 17.7,11.0 30.5,9.4 43.2,5.0 55.9,11.5 68.6,11.9 81.4,9.8 94.1,10.7 106.8,11.8 119.5,16.6 132.3,18.1 145.0,19.7 145,41"></polygon><polyline fill="none" points="5.0,10.5 17.7,11.0 30.5,9.4 43.2,5.0 55.9,11.5 68.6,11.9 81.4,9.8 94.1,10.7 106.8,11.8 119.5,16.6" stroke="var(--c-context)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polyline><polyline fill="none" points="119.5,16.6 132.3,18.1 145.0,19.7" stroke="var(--c-data)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polyline><circle cx="145.0" cy="19.7" fill="var(--c-data)" r="4" stroke="var(--surface)" stroke-width="2"></circle></svg></td>
+<td class="c-n">€43,100/mo</td>
+<td class="c-n">€34,150/mo</td>
+<td class="c-d"><span class="tri">▼</span>−20.8%</td>
+<td class="c-s"><b>€8,950/mo</b><span class="rp-mbar"><i style="width:73.7%"></i></span></td>
+</tr>
+<tr>
+<th scope="row"><span class="rp-cli">Can Rectoret</span>
+<span class="rp-sub">last purchase 12 Jun
+            · 77
+            days</span></th>
+<td aria-label="Can Rectoret: twelve months, ending at €0" class="c-spark" data-tip="−86.2%|Can Rectoret · twelve months, month by month" role="img" tabindex="0">
+<svg aria-hidden="true" class="spark" focusable="false" height="44" viewbox="0 0 150 44" width="150"><polygon fill="var(--c-context)" fill-opacity=".26" points="5,41 5.0,13.1 17.7,11.6 30.5,13.5 43.2,5.0 55.9,12.8 68.6,14.2 81.4,12.3 94.1,13.3 106.8,15.2 119.5,31.8 132.3,41.0 145.0,41.0 145,41"></polygon><polyline fill="none" points="5.0,13.1 17.7,11.6 30.5,13.5 43.2,5.0 55.9,12.8 68.6,14.2 81.4,12.3 94.1,13.3 106.8,15.2 119.5,31.8" stroke="var(--c-context)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polyline><polyline fill="none" points="119.5,31.8 132.3,41.0 145.0,41.0" stroke="var(--c-data)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polyline><circle cx="145.0" cy="41.0" fill="var(--c-data)" r="4" stroke="var(--surface)" stroke-width="2"></circle></svg></td>
+<td class="c-n">€9,400/mo</td>
+<td class="c-n">€1,300/mo</td>
+<td class="c-d"><span class="tri">▼</span>−86.2%</td>
+<td class="c-s"><b>€8,100/mo</b><span class="rp-mbar"><i style="width:66.7%"></i></span></td>
+</tr>
+<tr>
+<th scope="row"><span class="rp-cli">Braseria Marimon</span>
+<span class="rp-sub">last purchase 27 Aug
+            · 1
+            day</span></th>
+<td aria-label="Braseria Marimon: twelve months, ending at €42,400" class="c-spark" data-tip="−14.1%|Braseria Marimon · twelve months, month by month" role="img" tabindex="0">
+<svg aria-hidden="true" class="spark" focusable="false" height="44" viewbox="0 0 150 44" width="150"><polygon fill="var(--c-context)" fill-opacity=".26" points="5,41 5.0,10.4 17.7,10.9 30.5,9.4 43.2,5.0 55.9,11.3 68.6,11.7 81.4,9.8 94.1,10.6 106.8,11.3 119.5,14.1 132.3,15.9 145.0,16.8 145,41"></polygon><polyline fill="none" points="5.0,10.4 17.7,10.9 30.5,9.4 43.2,5.0 55.9,11.3 68.6,11.7 81.4,9.8 94.1,10.6 106.8,11.3 119.5,14.1" stroke="var(--c-context)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polyline><polyline fill="none" points="119.5,14.1 132.3,15.9 145.0,16.8" stroke="var(--c-data)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polyline><circle cx="145.0" cy="16.8" fill="var(--c-data)" r="4" stroke="var(--surface)" stroke-width="2"></circle></svg></td>
+<td class="c-n">€51,900/mo</td>
+<td class="c-n">€44,600/mo</td>
+<td class="c-d"><span class="tri">▼</span>−14.1%</td>
+<td class="c-s"><b>€7,300/mo</b><span class="rp-mbar"><i style="width:60.1%"></i></span></td>
+</tr>
+<tr>
+<th scope="row"><span class="rp-cli">Cuina Rovira</span>
+<span class="rp-sub">last purchase 14 Aug
+            · 14
+            days</span></th>
+<td aria-label="Cuina Rovira: twelve months, ending at €16,000" class="c-spark" data-tip="−26.5%|Cuina Rovira · twelve months, month by month" role="img" tabindex="0">
+<svg aria-hidden="true" class="spark" focusable="false" height="44" viewbox="0 0 150 44" width="150"><polygon fill="var(--c-context)" fill-opacity=".26" points="5,41 5.0,10.6 17.7,11.2 30.5,9.5 43.2,5.0 55.9,10.9 68.6,11.6 81.4,9.8 94.1,10.5 106.8,11.1 119.5,18.2 132.3,20.2 145.0,21.9 145,41"></polygon><polyline fill="none" points="5.0,10.6 17.7,11.2 30.5,9.5 43.2,5.0 55.9,10.9 68.6,11.6 81.4,9.8 94.1,10.5 106.8,11.1 119.5,18.2" stroke="var(--c-context)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polyline><polyline fill="none" points="119.5,18.2 132.3,20.2 145.0,21.9" stroke="var(--c-data)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polyline><circle cx="145.0" cy="21.9" fill="var(--c-data)" r="4" stroke="var(--surface)" stroke-width="2"></circle></svg></td>
+<td class="c-n">€23,800/mo</td>
+<td class="c-n">€17,500/mo</td>
+<td class="c-d"><span class="tri">▼</span>−26.5%</td>
+<td class="c-s"><b>€6,300/mo</b><span class="rp-mbar"><i style="width:51.9%"></i></span></td>
+</tr>
+<tr>
+<th scope="row"><span class="rp-cli">Fonda Tramuntana</span>
+<span class="rp-sub">last purchase 19 Aug
+            · 9
+            days</span></th>
+<td aria-label="Fonda Tramuntana: twelve months, ending at €15,700" class="c-spark" data-tip="−20.3%|Fonda Tramuntana · twelve months, month by month" role="img" tabindex="0">
+<svg aria-hidden="true" class="spark" focusable="false" height="44" viewbox="0 0 150 44" width="150"><polygon fill="var(--c-context)" fill-opacity=".26" points="5,41 5.0,10.9 17.7,11.6 30.5,9.8 43.2,5.0 55.9,11.3 68.6,12.0 81.4,10.2 94.1,11.0 106.8,13.5 119.5,16.6 132.3,18.4 145.0,19.9 145,41"></polygon><polyline fill="none" points="5.0,10.9 17.7,11.6 30.5,9.8 43.2,5.0 55.9,11.3 68.6,12.0 81.4,10.2 94.1,11.0 106.8,13.5 119.5,16.6" stroke="var(--c-context)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polyline><polyline fill="none" points="119.5,16.6 132.3,18.4 145.0,19.9" stroke="var(--c-data)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polyline><circle cx="145.0" cy="19.9" fill="var(--c-data)" r="4" stroke="var(--surface)" stroke-width="2"></circle></svg></td>
+<td class="c-n">€21,200/mo</td>
+<td class="c-n">€16,900/mo</td>
+<td class="c-d"><span class="tri">▼</span>−20.3%</td>
+<td class="c-s"><b>€4,300/mo</b><span class="rp-mbar"><i style="width:35.4%"></i></span></td>
+</tr></tbody>
+<tfoot><tr><th scope="row">Six customers</th>
+<td colspan="4"></td><td class="c-s"><b>€47,100/mo</b></td></tr></tfoot>
+</table>
+</div>
+<p class="rp-legend">The grey stroke is the first nine months; the red one, the last three. Each stroke runs from zero to its own peak, so the drop reads to scale. «In play» is the 12-month average minus the last-three average.</p></figure>
+<details class="rp-tbl"><summary>See the table</summary><div class="rp-tbl-w"><table><thead><tr><th scope="col">Customer</th><th scope="col">Twelve months</th><th scope="col">12-month average</th><th scope="col">Last 3 months</th><th scope="col">Change</th><th scope="col">In play</th><th scope="col">Last purchase</th></tr></thead><tbody><tr><th scope="row">Vermuteria Xifré</th><td>€34,200 · €33,100 · €35,800 · €41,600 · €30,900 · €29,700 · €32,400 · €31,500 · €30,500 · €19,400 · €16,800 · €15,100</td><td>€29,250/mo</td><td>€17,100/mo</td><td>−41.5%</td><td>€12,150/mo</td><td>21 Aug</td></tr><tr><th scope="row">Peixateria Duran</th><td>€45,600 · €44,900 · €47,200 · €53,800 · €44,100 · €43,500 · €46,700 · €45,300 · €43,650 · €36,400 · €34,200 · €31,850</td><td>€43,100/mo</td><td>€34,150/mo</td><td>−20.8%</td><td>€8,950/mo</td><td>26 Aug</td></tr><tr><th scope="row">Can Rectoret</th><td>€11,800 · €12,400 · €11,600 · €15,200 · €11,900 · €11,300 · €12,100 · €11,700 · €10,900 · €3,900 · €0 · €0</td><td>€9,400/mo</td><td>€1,300/mo</td><td>−86.2%</td><td>€8,100/mo</td><td>12 Jun</td></tr><tr><th scope="row">Braseria Marimon</th><td>€53,800 · €52,900 · €55,400 · €63,200 · €52,100 · €51,400 · €54,700 · €53,300 · €52,200 · €47,300 · €44,100 · €42,400</td><td>€51,900/mo</td><td>€44,600/mo</td><td>−14.1%</td><td>€7,300/mo</td><td>27 Aug</td></tr><tr><th scope="row">Cuina Rovira</th><td>€25,400 · €24,900 · €26,300 · €30,100 · €25,200 · €24,600 · €26,100 · €25,500 · €25,000 · €19,100 · €17,400 · €16,000</td><td>€23,800/mo</td><td>€17,500/mo</td><td>−26.5%</td><td>€6,300/mo</td><td>14 Aug</td></tr><tr><th scope="row">Fonda Tramuntana</th><td>€22,400 · €21,900 · €23,200 · €26,800 · €22,100 · €21,600 · €22,900 · €22,300 · €20,500 · €18,200 · €16,800 · €15,700</td><td>€21,200/mo</td><td>€16,900/mo</td><td>−20.3%</td><td>€4,300/mo</td><td>19 Aug</td></tr></tbody></table></div></details>
+<p class="rp-means">The first, Vermuteria Xifré, used to order €29,250/mo and now orders €17,100/mo. Can Rectoret last bought on 12 Jun: 77 days ago. Three names on this list are also in the top ten above.</p>
+</section>
+<section class="rp-sec" id="dejados">
+<header class="rp-head">
+<p class="rp-kick">04 · Products they stopped ordering</p>
+<h2 class="rp-h2">Which product left which account, and when</h2>
+<p class="rp-lede">Eight products left eight accounts in the last three months. That is €25,040/mo, €300,480/yr.</p>
+</header>
+<figure class="rp-card" id="fig-dejados">
+<div class="rp-scroll">
+<table class="rp-rows rp-rows-p">
+<thead><tr><th scope="col">Customer</th><th scope="col">Product</th><th scope="col">They ordered it</th><th scope="col">Last time</th><th scope="col">Walked out</th></tr></thead>
+<tbody>
+<tr>
+<th scope="row">Vermuteria Xifré</th>
+<td class="c-p">Palamós red prawn</td>
+<td class="c-r">twice a week</td>
+<td class="c-w">9 Jun</td>
+<td class="c-s"><b>€4,820/mo</b>
+<span aria-label="Vermuteria Xifré, Palamós red prawn: €4,820/mo" class="rp-mbar" data-tip="€4,820/mo|Vermuteria Xifré · Palamós red prawn" role="img" tabindex="0"><i style="width:100.0%"></i></span></td>
+</tr>
+<tr>
+<th scope="row">Braseria Marimon</th>
+<td class="c-p">Line-caught hake · headless</td>
+<td class="c-r">three times a week</td>
+<td class="c-w">2 Jul</td>
+<td class="c-s"><b>€4,100/mo</b>
+<span aria-label="Braseria Marimon, Line-caught hake · headless: €4,100/mo" class="rp-mbar" data-tip="€4,100/mo|Braseria Marimon · Line-caught hake · headless" role="img" tabindex="0"><i style="width:85.1%"></i></span></td>
+</tr>
+<tr>
+<th scope="row">Peixateria Duran</th>
+<td class="c-p">White monkfish</td>
+<td class="c-r">every week</td>
+<td class="c-w">17 Jun</td>
+<td class="c-s"><b>€3,640/mo</b>
+<span aria-label="Peixateria Duran, White monkfish: €3,640/mo" class="rp-mbar" data-tip="€3,640/mo|Peixateria Duran · White monkfish" role="img" tabindex="0"><i style="width:75.5%"></i></span></td>
+</tr>
+<tr>
+<th scope="row">Vermuteria Xifré</th>
+<td class="c-p">Rock octopus, cooked</td>
+<td class="c-r">every week</td>
+<td class="c-w">24 Jun</td>
+<td class="c-s"><b>€3,180/mo</b>
+<span aria-label="Vermuteria Xifré, Rock octopus, cooked: €3,180/mo" class="rp-mbar" data-tip="€3,180/mo|Vermuteria Xifré · Rock octopus, cooked" role="img" tabindex="0"><i style="width:66.0%"></i></span></td>
+</tr>
+<tr>
+<th scope="row">Cuina Rovira</th>
+<td class="c-p">Desalted cod · loin</td>
+<td class="c-r">twice a week</td>
+<td class="c-w">28 May</td>
+<td class="c-s"><b>€2,950/mo</b>
+<span aria-label="Cuina Rovira, Desalted cod · loin: €2,950/mo" class="rp-mbar" data-tip="€2,950/mo|Cuina Rovira · Desalted cod · loin" role="img" tabindex="0"><i style="width:61.2%"></i></span></td>
+</tr>
+<tr class="is-flag">
+<th scope="row">Hostal Montserrat<span class="rp-flag">Their monthly total is holding</span></th>
+<td class="c-p">Carpet-shell clam</td>
+<td class="c-r">twice a week</td>
+<td class="c-w">21 Jul</td>
+<td class="c-s"><b>€2,410/mo</b>
+<span aria-label="Hostal Montserrat, Carpet-shell clam: €2,410/mo" class="rp-mbar" data-tip="€2,410/mo|Hostal Montserrat · Carpet-shell clam" role="img" tabindex="0"><i style="width:50.0%"></i></span></td>
+</tr>
+<tr>
+<th scope="row">Can Rectoret</th>
+<td class="c-p">Rock mussel</td>
+<td class="c-r">every week</td>
+<td class="c-w">12 Jun</td>
+<td class="c-s"><b>€2,180/mo</b>
+<span aria-label="Can Rectoret, Rock mussel: €2,180/mo" class="rp-mbar" data-tip="€2,180/mo|Can Rectoret · Rock mussel" role="img" tabindex="0"><i style="width:45.2%"></i></span></td>
+</tr>
+<tr>
+<th scope="row">Fonda Tramuntana</th>
+<td class="c-p">Cleaned cuttlefish</td>
+<td class="c-r">every week</td>
+<td class="c-w">8 Jul</td>
+<td class="c-s"><b>€1,760/mo</b>
+<span aria-label="Fonda Tramuntana, Cleaned cuttlefish: €1,760/mo" class="rp-mbar" data-tip="€1,760/mo|Fonda Tramuntana · Cleaned cuttlefish" role="img" tabindex="0"><i style="width:36.5%"></i></span></td>
+</tr></tbody>
+<tfoot><tr><th scope="row">Eight products, eight accounts</th>
+<td colspan="3"></td>
+<td class="c-s"><b>€25,040/mo</b></td></tr></tfoot>
+</table>
+</div></figure>
+<details class="rp-tbl"><summary>See the table</summary><div class="rp-tbl-w"><table><thead><tr><th scope="col">Customer</th><th scope="col">Product</th><th scope="col">They ordered it</th><th scope="col">Last time</th><th scope="col">Walked out</th></tr></thead><tbody><tr><th scope="row">Vermuteria Xifré</th><td>Palamós red prawn</td><td>twice a week</td><td>9 Jun</td><td>€4,820/mo</td></tr><tr><th scope="row">Braseria Marimon</th><td>Line-caught hake · headless</td><td>three times a week</td><td>2 Jul</td><td>€4,100/mo</td></tr><tr><th scope="row">Peixateria Duran</th><td>White monkfish</td><td>every week</td><td>17 Jun</td><td>€3,640/mo</td></tr><tr><th scope="row">Vermuteria Xifré</th><td>Rock octopus, cooked</td><td>every week</td><td>24 Jun</td><td>€3,180/mo</td></tr><tr><th scope="row">Cuina Rovira</th><td>Desalted cod · loin</td><td>twice a week</td><td>28 May</td><td>€2,950/mo</td></tr><tr><th scope="row">Hostal Montserrat</th><td>Carpet-shell clam</td><td>twice a week</td><td>21 Jul</td><td>€2,410/mo</td></tr><tr><th scope="row">Can Rectoret</th><td>Rock mussel</td><td>every week</td><td>12 Jun</td><td>€2,180/mo</td></tr><tr><th scope="row">Fonda Tramuntana</th><td>Cleaned cuttlefish</td><td>every week</td><td>8 Jul</td><td>€1,760/mo</td></tr></tbody></table></div></details>
+<p class="rp-means">Hostal Montserrat is the case that teaches the rest: your second-biggest customer, their monthly total holding steady, and the carpet-shell clam gone since 21 July. The total hides the product. The product is what tells you.</p>
+</section>
+<section class="rp-sec" id="temporada">
+<header class="rp-head">
+<p class="rp-kick">05 · Season</p>
+<h2 class="rp-h2">Your products' year</h2>
+<p class="rp-lede">December multiplies the prawn by 3 and puts the hake at its year's peak.</p>
+</header>
+<figure class="rp-card" id="fig-temporada"><div class="rp-facets">
+<figure class="rp-facet">
+<figcaption><b>Line-caught hake</b>
+<span>peak 5,980 kg · Dec</span></figcaption>
+<svg aria-label="Line-caught hake: twelve months in kg, peak 5,980 kg in Dec" class="rp-svg" role="img" viewbox="0 0 330 200">
+<rect fill="var(--sunk)" height="142" width="27.8" x="81.5" y="16"></rect>
+<line stroke="var(--baseline)" stroke-width="1" x1="12" x2="318" y1="158" y2="158"></line>
+<polygon fill="var(--c-data)" fill-opacity=".10" points="12,158 12.0,88.9 39.8,78.9 67.6,61.9 95.5,28.0 123.3,44.1 151.1,64.3 178.9,69.7 206.7,82.6 234.5,90.2 262.4,98.4 290.2,106.3 318.0,110.4 318,158"></polygon>
+<polyline fill="none" points="12.0,88.9 39.8,78.9 67.6,61.9 95.5,28.0 123.3,44.1 151.1,64.3 178.9,69.7 206.7,82.6 234.5,90.2 262.4,98.4 290.2,106.3 318.0,110.4" stroke="var(--c-data)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polyline>
+<circle cx="95.5" cy="28.0" fill="var(--c-data)" r="4.5" stroke="var(--surface)" stroke-width="2"></circle>
+<text class="val pk" text-anchor="middle" x="95.5" y="16.0">5,980 kg</text>
+<text class="ax" text-anchor="middle" x="12.0" y="178">S</text><text class="ax" text-anchor="middle" x="39.8" y="178">O</text><text class="ax" text-anchor="middle" x="67.6" y="178">N</text><text class="ax" text-anchor="middle" x="95.5" y="178">D</text><text class="ax" text-anchor="middle" x="123.3" y="178">J</text><text class="ax" text-anchor="middle" x="151.1" y="178">F</text><text class="ax" text-anchor="middle" x="178.9" y="178">M</text><text class="ax" text-anchor="middle" x="206.7" y="178">A</text><text class="ax" text-anchor="middle" x="234.5" y="178">M</text><text class="ax" text-anchor="middle" x="262.4" y="178">J</text><text class="ax" text-anchor="middle" x="290.2" y="178">J</text><text class="ax" text-anchor="middle" x="318.0" y="178">A</text><rect aria-label="3,180 kg — Sep" class="hit" data-tip="3,180 kg|Sep" height="154.0" role="img" tabindex="0" width="25.9" x="0.0" y="16.0"></rect><rect aria-label="3,640 kg — Oct" class="hit" data-tip="3,640 kg|Oct" height="154.0" role="img" tabindex="0" width="27.8" x="25.9" y="16.0"></rect><rect aria-label="4,420 kg — Nov" class="hit" data-tip="4,420 kg|Nov" height="154.0" role="img" tabindex="0" width="27.8" x="53.7" y="16.0"></rect><rect aria-label="5,980 kg — Dec" class="hit" data-tip="5,980 kg|Dec" height="154.0" role="img" tabindex="0" width="27.8" x="81.5" y="16.0"></rect><rect aria-label="5,240 kg — Jan" class="hit" data-tip="5,240 kg|Jan" height="154.0" role="img" tabindex="0" width="27.8" x="109.4" y="16.0"></rect><rect aria-label="4,310 kg — Feb" class="hit" data-tip="4,310 kg|Feb" height="154.0" role="img" tabindex="0" width="27.8" x="137.2" y="16.0"></rect><rect aria-label="4,060 kg — Mar" class="hit" data-tip="4,060 kg|Mar" height="154.0" role="img" tabindex="0" width="27.8" x="165.0" y="16.0"></rect><rect aria-label="3,470 kg — Apr" class="hit" data-tip="3,470 kg|Apr" height="154.0" role="img" tabindex="0" width="27.8" x="192.8" y="16.0"></rect><rect aria-label="3,120 kg — May" class="hit" data-tip="3,120 kg|May" height="154.0" role="img" tabindex="0" width="27.8" x="220.6" y="16.0"></rect><rect aria-label="2,740 kg — Jun" class="hit" data-tip="2,740 kg|Jun" height="154.0" role="img" tabindex="0" width="27.8" x="248.5" y="16.0"></rect><rect aria-label="2,380 kg — Jul" class="hit" data-tip="2,380 kg|Jul" height="154.0" role="img" tabindex="0" width="27.8" x="276.3" y="16.0"></rect><rect aria-label="2,190 kg — Aug" class="hit" data-tip="2,190 kg|Aug" height="154.0" role="img" tabindex="0" width="25.9" x="304.1" y="16.0"></rect>
+</svg>
+</figure>
+<figure class="rp-facet">
+<figcaption><b>Palamós red prawn</b>
+<span>peak 1,610 kg · Jul</span></figcaption>
+<svg aria-label="Palamós red prawn: twelve months in kg, peak 1,610 kg in Jul" class="rp-svg" role="img" viewbox="0 0 330 200">
+<rect fill="var(--sunk)" height="142" width="27.8" x="81.5" y="16"></rect>
+<line stroke="var(--baseline)" stroke-width="1" x1="12" x2="318" y1="158" y2="158"></line>
+<polygon fill="var(--c-data)" fill-opacity=".10" points="12,158 12.0,99.9 39.8,114.4 67.6,124.1 95.5,56.3 123.3,123.3 151.1,127.3 178.9,120.9 206.7,108.7 234.5,86.1 262.4,49.8 290.2,28.0 318.0,38.5 318,158"></polygon>
+<polyline fill="none" points="12.0,99.9 39.8,114.4 67.6,124.1 95.5,56.3 123.3,123.3 151.1,127.3 178.9,120.9 206.7,108.7 234.5,86.1 262.4,49.8 290.2,28.0 318.0,38.5" stroke="var(--c-data)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polyline>
+<circle cx="290.2" cy="28.0" fill="var(--c-data)" r="4.5" stroke="var(--surface)" stroke-width="2"></circle>
+<text class="val pk" text-anchor="end" x="296.2" y="16.0">1,610 kg</text>
+<text class="ax" text-anchor="middle" x="12.0" y="178">S</text><text class="ax" text-anchor="middle" x="39.8" y="178">O</text><text class="ax" text-anchor="middle" x="67.6" y="178">N</text><text class="ax" text-anchor="middle" x="95.5" y="178">D</text><text class="ax" text-anchor="middle" x="123.3" y="178">J</text><text class="ax" text-anchor="middle" x="151.1" y="178">F</text><text class="ax" text-anchor="middle" x="178.9" y="178">M</text><text class="ax" text-anchor="middle" x="206.7" y="178">A</text><text class="ax" text-anchor="middle" x="234.5" y="178">M</text><text class="ax" text-anchor="middle" x="262.4" y="178">J</text><text class="ax" text-anchor="middle" x="290.2" y="178">J</text><text class="ax" text-anchor="middle" x="318.0" y="178">A</text><rect aria-label="720 kg — Sep" class="hit" data-tip="720 kg|Sep" height="154.0" role="img" tabindex="0" width="25.9" x="0.0" y="16.0"></rect><rect aria-label="540 kg — Oct" class="hit" data-tip="540 kg|Oct" height="154.0" role="img" tabindex="0" width="27.8" x="25.9" y="16.0"></rect><rect aria-label="420 kg — Nov" class="hit" data-tip="420 kg|Nov" height="154.0" role="img" tabindex="0" width="27.8" x="53.7" y="16.0"></rect><rect aria-label="1,260 kg — Dec" class="hit" data-tip="1,260 kg|Dec" height="154.0" role="img" tabindex="0" width="27.8" x="81.5" y="16.0"></rect><rect aria-label="430 kg — Jan" class="hit" data-tip="430 kg|Jan" height="154.0" role="img" tabindex="0" width="27.8" x="109.4" y="16.0"></rect><rect aria-label="380 kg — Feb" class="hit" data-tip="380 kg|Feb" height="154.0" role="img" tabindex="0" width="27.8" x="137.2" y="16.0"></rect><rect aria-label="460 kg — Mar" class="hit" data-tip="460 kg|Mar" height="154.0" role="img" tabindex="0" width="27.8" x="165.0" y="16.0"></rect><rect aria-label="610 kg — Apr" class="hit" data-tip="610 kg|Apr" height="154.0" role="img" tabindex="0" width="27.8" x="192.8" y="16.0"></rect><rect aria-label="890 kg — May" class="hit" data-tip="890 kg|May" height="154.0" role="img" tabindex="0" width="27.8" x="220.6" y="16.0"></rect><rect aria-label="1,340 kg — Jun" class="hit" data-tip="1,340 kg|Jun" height="154.0" role="img" tabindex="0" width="27.8" x="248.5" y="16.0"></rect><rect aria-label="1,610 kg — Jul" class="hit" data-tip="1,610 kg|Jul" height="154.0" role="img" tabindex="0" width="27.8" x="276.3" y="16.0"></rect><rect aria-label="1,480 kg — Aug" class="hit" data-tip="1,480 kg|Aug" height="154.0" role="img" tabindex="0" width="25.9" x="304.1" y="16.0"></rect>
+</svg>
+</figure>
+<figure class="rp-facet">
+<figcaption><b>Rock octopus</b>
+<span>peak 1,520 kg · Jul</span></figcaption>
+<svg aria-label="Rock octopus: twelve months in kg, peak 1,520 kg in Jul" class="rp-svg" role="img" viewbox="0 0 330 200">
+<rect fill="var(--sunk)" height="142" width="27.8" x="81.5" y="16"></rect>
+<line stroke="var(--baseline)" stroke-width="1" x1="12" x2="318" y1="158" y2="158"></line>
+<polygon fill="var(--c-data)" fill-opacity=".10" points="12,158 12.0,60.5 39.8,70.8 67.6,74.2 95.5,32.3 123.3,84.4 151.1,88.7 178.9,77.6 206.7,65.6 234.5,50.2 262.4,37.4 290.2,28.0 318.0,39.1 318,158"></polygon>
+<polyline fill="none" points="12.0,60.5 39.8,70.8 67.6,74.2 95.5,32.3 123.3,84.4 151.1,88.7 178.9,77.6 206.7,65.6 234.5,50.2 262.4,37.4 290.2,28.0 318.0,39.1" stroke="var(--c-data)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polyline>
+<circle cx="290.2" cy="28.0" fill="var(--c-data)" r="4.5" stroke="var(--surface)" stroke-width="2"></circle>
+<text class="val pk" text-anchor="end" x="296.2" y="16.0">1,520 kg</text>
+<text class="ax" text-anchor="middle" x="12.0" y="178">S</text><text class="ax" text-anchor="middle" x="39.8" y="178">O</text><text class="ax" text-anchor="middle" x="67.6" y="178">N</text><text class="ax" text-anchor="middle" x="95.5" y="178">D</text><text class="ax" text-anchor="middle" x="123.3" y="178">J</text><text class="ax" text-anchor="middle" x="151.1" y="178">F</text><text class="ax" text-anchor="middle" x="178.9" y="178">M</text><text class="ax" text-anchor="middle" x="206.7" y="178">A</text><text class="ax" text-anchor="middle" x="234.5" y="178">M</text><text class="ax" text-anchor="middle" x="262.4" y="178">J</text><text class="ax" text-anchor="middle" x="290.2" y="178">J</text><text class="ax" text-anchor="middle" x="318.0" y="178">A</text><rect aria-label="1,140 kg — Sep" class="hit" data-tip="1,140 kg|Sep" height="154.0" role="img" tabindex="0" width="25.9" x="0.0" y="16.0"></rect><rect aria-label="1,020 kg — Oct" class="hit" data-tip="1,020 kg|Oct" height="154.0" role="img" tabindex="0" width="27.8" x="25.9" y="16.0"></rect><rect aria-label="980 kg — Nov" class="hit" data-tip="980 kg|Nov" height="154.0" role="img" tabindex="0" width="27.8" x="53.7" y="16.0"></rect><rect aria-label="1,470 kg — Dec" class="hit" data-tip="1,470 kg|Dec" height="154.0" role="img" tabindex="0" width="27.8" x="81.5" y="16.0"></rect><rect aria-label="860 kg — Jan" class="hit" data-tip="860 kg|Jan" height="154.0" role="img" tabindex="0" width="27.8" x="109.4" y="16.0"></rect><rect aria-label="810 kg — Feb" class="hit" data-tip="810 kg|Feb" height="154.0" role="img" tabindex="0" width="27.8" x="137.2" y="16.0"></rect><rect aria-label="940 kg — Mar" class="hit" data-tip="940 kg|Mar" height="154.0" role="img" tabindex="0" width="27.8" x="165.0" y="16.0"></rect><rect aria-label="1,080 kg — Apr" class="hit" data-tip="1,080 kg|Apr" height="154.0" role="img" tabindex="0" width="27.8" x="192.8" y="16.0"></rect><rect aria-label="1,260 kg — May" class="hit" data-tip="1,260 kg|May" height="154.0" role="img" tabindex="0" width="27.8" x="220.6" y="16.0"></rect><rect aria-label="1,410 kg — Jun" class="hit" data-tip="1,410 kg|Jun" height="154.0" role="img" tabindex="0" width="27.8" x="248.5" y="16.0"></rect><rect aria-label="1,520 kg — Jul" class="hit" data-tip="1,520 kg|Jul" height="154.0" role="img" tabindex="0" width="27.8" x="276.3" y="16.0"></rect><rect aria-label="1,390 kg — Aug" class="hit" data-tip="1,390 kg|Aug" height="154.0" role="img" tabindex="0" width="25.9" x="304.1" y="16.0"></rect>
+</svg>
+</figure></div><p class="rp-legend">The vertical band is December, in all three.</p></figure>
+<details class="rp-tbl"><summary>See the table</summary><div class="rp-tbl-w"><table><thead><tr><th scope="col">Product</th><th scope="col">Sep</th><th scope="col">Oct</th><th scope="col">Nov</th><th scope="col">Dec</th><th scope="col">Jan</th><th scope="col">Feb</th><th scope="col">Mar</th><th scope="col">Apr</th><th scope="col">May</th><th scope="col">Jun</th><th scope="col">Jul</th><th scope="col">Aug</th></tr></thead><tbody><tr><th scope="row">Line-caught hake</th><td>3,180 kg</td><td>3,640 kg</td><td>4,420 kg</td><td>5,980 kg</td><td>5,240 kg</td><td>4,310 kg</td><td>4,060 kg</td><td>3,470 kg</td><td>3,120 kg</td><td>2,740 kg</td><td>2,380 kg</td><td>2,190 kg</td></tr><tr><th scope="row">Palamós red prawn</th><td>720 kg</td><td>540 kg</td><td>420 kg</td><td>1,260 kg</td><td>430 kg</td><td>380 kg</td><td>460 kg</td><td>610 kg</td><td>890 kg</td><td>1,340 kg</td><td>1,610 kg</td><td>1,480 kg</td></tr><tr><th scope="row">Rock octopus</th><td>1,140 kg</td><td>1,020 kg</td><td>980 kg</td><td>1,470 kg</td><td>860 kg</td><td>810 kg</td><td>940 kg</td><td>1,080 kg</td><td>1,260 kg</td><td>1,410 kg</td><td>1,520 kg</td><td>1,390 kg</td></tr></tbody></table></div><p class="rp-note">Each product keeps its own scale: the peaks run from 1,520 kg to 5,980 kg, and one shared axis would flatten two of the three curves.</p></details>
+<p class="rp-means">November's buying decides December. July belongs to the prawn and the octopus; December to the hake — and the prawn shows up there too, a second time in the year.</p>
+</section>
+<section class="rp-sec" id="huecos">
+<header class="rp-head">
+<p class="rp-kick">06 · Sales gaps</p>
+<h2 class="rp-h2">What their twins already buy</h2>
+<p class="rp-lede">€8,440/mo in products the houses of the same profile already buy.</p>
+</header>
+<figure class="rp-card" id="fig-huecos">
+<p class="rp-key">
+<span><i class="sw sw-dot"></i>Buys it</span>
+<span><i class="sw sw-ring"></i>Gap</span>
+<span><i class="sw sw-star">*</i>Already in section 04</span></p>
+<div class="rp-grid-w">
+<div class="rp-gx">
+<div class="gx-r gx-head"><div class="gx-n"></div><div class="gx-h">Line-caught hake</div><div class="gx-h">Palamós red prawn</div><div class="gx-h">Rock octopus</div><div class="gx-h">Carpet-shell clam</div><div class="gx-h">White monkfish</div><div class="gx-h">Cleaned cuttlefish</div></div>
+<div class="gx-r"><div class="gx-n">Braseria Marimon</div><div aria-label="Braseria Marimon, Line-caught hake: gap already counted in section 04" class="gx-c is-seen" data-tip="Already in section 04|Braseria Marimon · Line-caught hake" role="img" tabindex="0"><i class="ring"></i><span class="gx-e">*</span></div><div aria-label="Braseria Marimon, Palamós red prawn: buys it" class="gx-c" data-tip="Buys it|Braseria Marimon · Palamós red prawn" role="img" tabindex="0"><i class="dot"></i></div><div aria-label="Braseria Marimon, Rock octopus: buys it" class="gx-c" data-tip="Buys it|Braseria Marimon · Rock octopus" role="img" tabindex="0"><i class="dot"></i></div><div aria-label="Braseria Marimon, Carpet-shell clam: buys it" class="gx-c" data-tip="Buys it|Braseria Marimon · Carpet-shell clam" role="img" tabindex="0"><i class="dot"></i></div><div aria-label="Braseria Marimon, White monkfish: buys it" class="gx-c" data-tip="Buys it|Braseria Marimon · White monkfish" role="img" tabindex="0"><i class="dot"></i></div><div aria-label="Braseria Marimon, Cleaned cuttlefish: buys it" class="gx-c" data-tip="Buys it|Braseria Marimon · Cleaned cuttlefish" role="img" tabindex="0"><i class="dot"></i></div></div><div class="gx-r"><div class="gx-n">Bar Restaurant Marimon</div><div aria-label="Bar Restaurant Marimon, Line-caught hake: buys it" class="gx-c" data-tip="Buys it|Bar Restaurant Marimon · Line-caught hake" role="img" tabindex="0"><i class="dot"></i></div><div aria-label="Bar Restaurant Marimon, Palamós red prawn: buys it" class="gx-c" data-tip="Buys it|Bar Restaurant Marimon · Palamós red prawn" role="img" tabindex="0"><i class="dot"></i></div><div aria-label="Bar Restaurant Marimon, Rock octopus: buys it" class="gx-c" data-tip="Buys it|Bar Restaurant Marimon · Rock octopus" role="img" tabindex="0"><i class="dot"></i></div><div aria-label="Bar Restaurant Marimon, Carpet-shell clam: gap of €1,980/mo" class="gx-c is-gap" data-tip="€1,980/mo|Bar Restaurant Marimon · Carpet-shell clam" role="img" tabindex="0"><i class="ring"></i><span class="gx-e">€1,980/mo</span></div><div aria-label="Bar Restaurant Marimon, White monkfish: buys it" class="gx-c" data-tip="Buys it|Bar Restaurant Marimon · White monkfish" role="img" tabindex="0"><i class="dot"></i></div><div aria-label="Bar Restaurant Marimon, Cleaned cuttlefish: buys it" class="gx-c" data-tip="Buys it|Bar Restaurant Marimon · Cleaned cuttlefish" role="img" tabindex="0"><i class="dot"></i></div></div><div class="gx-r"><div class="gx-n">Vermuteria Xifré</div><div aria-label="Vermuteria Xifré, Line-caught hake: buys it" class="gx-c" data-tip="Buys it|Vermuteria Xifré · Line-caught hake" role="img" tabindex="0"><i class="dot"></i></div><div aria-label="Vermuteria Xifré, Palamós red prawn: gap already counted in section 04" class="gx-c is-seen" data-tip="Already in section 04|Vermuteria Xifré · Palamós red prawn" role="img" tabindex="0"><i class="ring"></i><span class="gx-e">*</span></div><div aria-label="Vermuteria Xifré, Rock octopus: gap already counted in section 04" class="gx-c is-seen" data-tip="Already in section 04|Vermuteria Xifré · Rock octopus" role="img" tabindex="0"><i class="ring"></i><span class="gx-e">*</span></div><div aria-label="Vermuteria Xifré, Carpet-shell clam: buys it" class="gx-c" data-tip="Buys it|Vermuteria Xifré · Carpet-shell clam" role="img" tabindex="0"><i class="dot"></i></div><div aria-label="Vermuteria Xifré, White monkfish: buys it" class="gx-c" data-tip="Buys it|Vermuteria Xifré · White monkfish" role="img" tabindex="0"><i class="dot"></i></div><div aria-label="Vermuteria Xifré, Cleaned cuttlefish: buys it" class="gx-c" data-tip="Buys it|Vermuteria Xifré · Cleaned cuttlefish" role="img" tabindex="0"><i class="dot"></i></div></div><div class="gx-r"><div class="gx-n">Cuina Rovira</div><div aria-label="Cuina Rovira, Line-caught hake: buys it" class="gx-c" data-tip="Buys it|Cuina Rovira · Line-caught hake" role="img" tabindex="0"><i class="dot"></i></div><div aria-label="Cuina Rovira, Palamós red prawn: buys it" class="gx-c" data-tip="Buys it|Cuina Rovira · Palamós red prawn" role="img" tabindex="0"><i class="dot"></i></div><div aria-label="Cuina Rovira, Rock octopus: buys it" class="gx-c" data-tip="Buys it|Cuina Rovira · Rock octopus" role="img" tabindex="0"><i class="dot"></i></div><div aria-label="Cuina Rovira, Carpet-shell clam: buys it" class="gx-c" data-tip="Buys it|Cuina Rovira · Carpet-shell clam" role="img" tabindex="0"><i class="dot"></i></div><div aria-label="Cuina Rovira, White monkfish: gap of €2,240/mo" class="gx-c is-gap" data-tip="€2,240/mo|Cuina Rovira · White monkfish" role="img" tabindex="0"><i class="ring"></i><span class="gx-e">€2,240/mo</span></div><div aria-label="Cuina Rovira, Cleaned cuttlefish: buys it" class="gx-c" data-tip="Buys it|Cuina Rovira · Cleaned cuttlefish" role="img" tabindex="0"><i class="dot"></i></div></div><div class="gx-r"><div class="gx-n">Fonda Tramuntana</div><div aria-label="Fonda Tramuntana, Line-caught hake: buys it" class="gx-c" data-tip="Buys it|Fonda Tramuntana · Line-caught hake" role="img" tabindex="0"><i class="dot"></i></div><div aria-label="Fonda Tramuntana, Palamós red prawn: buys it" class="gx-c" data-tip="Buys it|Fonda Tramuntana · Palamós red prawn" role="img" tabindex="0"><i class="dot"></i></div><div aria-label="Fonda Tramuntana, Rock octopus: buys it" class="gx-c" data-tip="Buys it|Fonda Tramuntana · Rock octopus" role="img" tabindex="0"><i class="dot"></i></div><div aria-label="Fonda Tramuntana, Carpet-shell clam: buys it" class="gx-c" data-tip="Buys it|Fonda Tramuntana · Carpet-shell clam" role="img" tabindex="0"><i class="dot"></i></div><div aria-label="Fonda Tramuntana, White monkfish: buys it" class="gx-c" data-tip="Buys it|Fonda Tramuntana · White monkfish" role="img" tabindex="0"><i class="dot"></i></div><div aria-label="Fonda Tramuntana, Cleaned cuttlefish: gap already counted in section 04" class="gx-c is-seen" data-tip="Already in section 04|Fonda Tramuntana · Cleaned cuttlefish" role="img" tabindex="0"><i class="ring"></i><span class="gx-e">*</span></div></div><div class="gx-r"><div class="gx-n">Celler Aiguablava</div><div aria-label="Celler Aiguablava, Line-caught hake: buys it" class="gx-c" data-tip="Buys it|Celler Aiguablava · Line-caught hake" role="img" tabindex="0"><i class="dot"></i></div><div aria-label="Celler Aiguablava, Palamós red prawn: gap of €2,680/mo" class="gx-c is-gap" data-tip="€2,680/mo|Celler Aiguablava · Palamós red prawn" role="img" tabindex="0"><i class="ring"></i><span class="gx-e">€2,680/mo</span></div><div aria-label="Celler Aiguablava, Rock octopus: buys it" class="gx-c" data-tip="Buys it|Celler Aiguablava · Rock octopus" role="img" tabindex="0"><i class="dot"></i></div><div aria-label="Celler Aiguablava, Carpet-shell clam: gap of €1,540/mo" class="gx-c is-gap" data-tip="€1,540/mo|Celler Aiguablava · Carpet-shell clam" role="img" tabindex="0"><i class="ring"></i><span class="gx-e">€1,540/mo</span></div><div aria-label="Celler Aiguablava, White monkfish: buys it" class="gx-c" data-tip="Buys it|Celler Aiguablava · White monkfish" role="img" tabindex="0"><i class="dot"></i></div><div aria-label="Celler Aiguablava, Cleaned cuttlefish: buys it" class="gx-c" data-tip="Buys it|Celler Aiguablava · Cleaned cuttlefish" role="img" tabindex="0"><i class="dot"></i></div></div>
+</div>
+</div>
+<p class="rp-legend">Six houses of one profile — grills and rice — one under the other. The new gaps come to €8,440/mo. The four marked * are products they stopped ordering: they are in section 04, counted once (€13,860/mo). Each gap is estimated from what their twins buy, scaled to their own volume.</p></figure>
+<details class="rp-tbl"><summary>See the table</summary><div class="rp-tbl-w"><table><thead><tr><th scope="col">Customer</th><th scope="col">Line-caught hake</th><th scope="col">Palamós red prawn</th><th scope="col">Rock octopus</th><th scope="col">Carpet-shell clam</th><th scope="col">White monkfish</th><th scope="col">Cleaned cuttlefish</th></tr></thead><tbody><tr><th scope="row">Braseria Marimon</th><td>Gap · section 04</td><td>Buys it</td><td>Buys it</td><td>Buys it</td><td>Buys it</td><td>Buys it</td></tr><tr><th scope="row">Bar Restaurant Marimon</th><td>Buys it</td><td>Buys it</td><td>Buys it</td><td>Gap · €1,980/mo</td><td>Buys it</td><td>Buys it</td></tr><tr><th scope="row">Vermuteria Xifré</th><td>Buys it</td><td>Gap · section 04</td><td>Gap · section 04</td><td>Buys it</td><td>Buys it</td><td>Buys it</td></tr><tr><th scope="row">Cuina Rovira</th><td>Buys it</td><td>Buys it</td><td>Buys it</td><td>Buys it</td><td>Gap · €2,240/mo</td><td>Buys it</td></tr><tr><th scope="row">Fonda Tramuntana</th><td>Buys it</td><td>Buys it</td><td>Buys it</td><td>Buys it</td><td>Buys it</td><td>Gap · section 04</td></tr><tr><th scope="row">Celler Aiguablava</th><td>Buys it</td><td>Gap · €2,680/mo</td><td>Buys it</td><td>Gap · €1,540/mo</td><td>Buys it</td><td>Buys it</td></tr></tbody></table></div></details>
+<p class="rp-means">A gap is a product the other five houses already buy. That is a call to make. And Vermuteria Xifré turns up here again, with the prawn and the octopus it dropped in June: the same customer, seen from the product.</p>
+</section>
+<section class="rp-sec" id="autonomia">
+<header class="rp-head">
+<p class="rp-kick">07 · The month's autonomy</p>
+<h2 class="rp-h2">How much it handled alone, and when it knew to stop</h2>
+<p class="rp-lede">926 orders with 10 customers live. 771 went out alone.</p>
+</header>
+<figure class="rp-card" id="fig-autonomia">
+<div class="rp-kpis"><div class="rp-kpi"><b>926</b><span>orders this month</span></div><div class="rp-kpi"><b>771</b><span>went out alone · 83.3%</span></div><div class="rp-kpi"><b>63</b><span>times it asked and finished alone</span></div><div class="rp-kpi"><b>9</b><span>customer corrections · 1.2%</span></div></div><p class="rp-key"><span><i class="sw" style="background:var(--c-alone)"></i>Handled alone</span><span><i class="sw" style="background:var(--c-review)"></i>Reviewed by your team</span></p>
+<div class="rp-two">
+<figure class="rp-facet">
+<figcaption><b>Orders per week</b>
+<span>10 customers live</span></figcaption>
+<svg aria-label="Orders per week, handled alone and reviewed" class="rp-svg" role="img" viewbox="0 0 480 246"><line stroke="var(--grid)" stroke-width="1" x1="54" x2="464" y1="145.6" y2="145.6"></line><text class="ax" dominant-baseline="central" text-anchor="end" x="48" y="145.6">100</text><line stroke="var(--grid)" stroke-width="1" x1="54" x2="464" y1="79.1" y2="79.1"></line><text class="ax" dominant-baseline="central" text-anchor="end" x="48" y="79.1">200</text><line stroke="var(--baseline)" stroke-width="1" x1="54" x2="464" y1="212" y2="212"></line><rect fill="var(--c-alone)" height="103.0" width="24" x="100.2" y="109.0"></rect><path d="M100.25 107.0 V73.8 A4 4 0 0 1 104.25 69.8 H120.25 A4 4 0 0 1 124.25 73.8 V107.0 Z" fill="var(--c-review)"></path><text class="val" text-anchor="middle" x="112.2" y="57.8">214</text><text class="ax" text-anchor="middle" x="112.2" y="234">Week 1</text><rect fill="var(--c-alone)" height="124.2" width="24" x="200.8" y="87.8"></rect><path d="M200.75 85.8 V59.2 A4 4 0 0 1 204.75 55.2 H220.75 A4 4 0 0 1 224.75 59.2 V85.8 Z" fill="var(--c-review)"></path><text class="val" text-anchor="middle" x="212.8" y="43.2">236</text><text class="ax" text-anchor="middle" x="212.8" y="234">Week 2</text><rect fill="var(--c-alone)" height="130.2" width="24" x="301.2" y="81.8"></rect><path d="M301.25 79.8 V63.9 A4 4 0 0 1 305.25 59.9 H321.25 A4 4 0 0 1 325.25 63.9 V79.8 Z" fill="var(--c-review)"></path><text class="val" text-anchor="middle" x="313.2" y="47.9">229</text><text class="ax" text-anchor="middle" x="313.2" y="234">Week 3</text><rect fill="var(--c-alone)" height="146.8" width="24" x="401.8" y="65.2"></rect><path d="M401.75 63.2 V51.9 A4 4 0 0 1 405.75 47.9 H421.75 A4 4 0 0 1 425.75 51.9 V63.2 Z" fill="var(--c-review)"></path><text class="val" text-anchor="middle" x="413.8" y="35.9">247</text><text class="ax" text-anchor="middle" x="413.8" y="234">Week 4</text><rect aria-label="214 orders — Week 1 · 158 alone · 56 reviewed" class="hit" data-tip="214 orders|Week 1 · 158 alone · 56 reviewed" height="182.2" role="img" tabindex="0" width="52.0" x="86.2" y="49.8"></rect><rect aria-label="236 orders — Week 2 · 190 alone · 46 reviewed" class="hit" data-tip="236 orders|Week 2 · 190 alone · 46 reviewed" height="196.8" role="img" tabindex="0" width="52.0" x="186.8" y="35.2"></rect><rect aria-label="229 orders — Week 3 · 199 alone · 30 reviewed" class="hit" data-tip="229 orders|Week 3 · 199 alone · 30 reviewed" height="192.1" role="img" tabindex="0" width="52.0" x="287.2" y="39.9"></rect><rect aria-label="247 orders — Week 4 · 224 alone · 23 reviewed" class="hit" data-tip="247 orders|Week 4 · 224 alone · 23 reviewed" height="204.1" role="img" tabindex="0" width="52.0" x="387.8" y="27.9"></rect></svg>
+</figure>
+<figure class="rp-facet">
+<figcaption><b>Review rate</b>
+<span>from 26.2% to 9.3%</span></figcaption>
+<svg aria-label="Human review rate, week by week" class="rp-svg" role="img" viewbox="0 0 480 246"><line stroke="var(--grid)" stroke-width="1" x1="54" x2="464" y1="150.0" y2="150.0"></line><text class="ax" dominant-baseline="central" text-anchor="end" x="48" y="150.0">10%</text><line stroke="var(--grid)" stroke-width="1" x1="54" x2="464" y1="88.0" y2="88.0"></line><text class="ax" dominant-baseline="central" text-anchor="end" x="48" y="88.0">20%</text><line stroke="var(--grid)" stroke-width="1" x1="54" x2="464" y1="26.0" y2="26.0"></line><text class="ax" dominant-baseline="central" text-anchor="end" x="48" y="26.0">30%</text><line stroke="var(--baseline)" stroke-width="1" x1="54" x2="464" y1="212" y2="212"></line><polyline fill="none" points="112.2,49.8 212.8,91.2 313.2,130.8 413.8,154.3" stroke="var(--c-review)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polyline><circle cx="112.2" cy="49.8" fill="var(--c-review)" r="4.5" stroke="var(--surface)" stroke-width="2"></circle><circle cx="212.8" cy="91.2" fill="var(--c-review)" r="4.5" stroke="var(--surface)" stroke-width="2"></circle><circle cx="313.2" cy="130.8" fill="var(--c-review)" r="4.5" stroke="var(--surface)" stroke-width="2"></circle><circle cx="413.8" cy="154.3" fill="var(--c-review)" r="4.5" stroke="var(--surface)" stroke-width="2"></circle><text class="val" text-anchor="middle" x="112.2" y="35.8">26.2%</text><text class="ax" text-anchor="middle" x="112.2" y="234">Week 1</text><text class="ax" text-anchor="middle" x="212.8" y="77.2">19.5%</text><text class="ax" text-anchor="middle" x="212.8" y="234">Week 2</text><text class="ax" text-anchor="middle" x="313.2" y="116.8">13.1%</text><text class="ax" text-anchor="middle" x="313.2" y="234">Week 3</text><text class="val" text-anchor="middle" x="413.8" y="140.3">9.3%</text><text class="ax" text-anchor="middle" x="413.8" y="234">Week 4</text><rect aria-label="26.2% — Week 1 · 56 of 214" class="hit" data-tip="26.2%|Week 1 · 56 of 214" height="220.0" role="img" tabindex="0" width="100.5" x="62.0" y="12.0"></rect><rect aria-label="19.5% — Week 2 · 46 of 236" class="hit" data-tip="19.5%|Week 2 · 46 of 236" height="220.0" role="img" tabindex="0" width="100.5" x="162.5" y="12.0"></rect><rect aria-label="13.1% — Week 3 · 30 of 229" class="hit" data-tip="13.1%|Week 3 · 30 of 229" height="220.0" role="img" tabindex="0" width="100.5" x="263.0" y="12.0"></rect><rect aria-label="9.3% — Week 4 · 23 of 247" class="hit" data-tip="9.3%|Week 4 · 23 of 247" height="220.0" role="img" tabindex="0" width="100.5" x="363.5" y="12.0"></rect></svg>
+</figure>
+</div>
+<div class="rp-checks"><p class="rp-checks-h">The six checks<span>the 155 times it stopped, by name</span></p>
+<div class="ck-r">
+<div class="ck-n">Quantity</div>
+<div class="ck-b"><span aria-label="Quantity: 44 times" class="rp-mbar rp-mbar-b" data-tip="44|Quantity · times it stopped" role="img" tabindex="0"><i style="width:100.0%"></i></span><b>44</b></div>
+<div class="ck-s">the amount ran past what they usually take</div>
+</div>
+<div class="ck-r">
+<div class="ck-n">Catalogue</div>
+<div class="ck-b"><span aria-label="Catalogue: 38 times" class="rp-mbar rp-mbar-b" data-tip="38|Catalogue · times it stopped" role="img" tabindex="0"><i style="width:86.4%"></i></span><b>38</b></div>
+<div class="ck-s">the name pointed at two products</div>
+</div>
+<div class="ck-r">
+<div class="ck-n">Change</div>
+<div class="ck-b"><span aria-label="Change: 27 times" class="rp-mbar rp-mbar-b" data-tip="27|Change · times it stopped" role="img" tabindex="0"><i style="width:61.4%"></i></span><b>27</b></div>
+<div class="ck-s">they changed what they always order</div>
+</div>
+<div class="ck-r">
+<div class="ck-n">Amount</div>
+<div class="ck-b"><span aria-label="Amount: 21 times" class="rp-mbar rp-mbar-b" data-tip="21|Amount · times it stopped" role="img" tabindex="0"><i style="width:47.7%"></i></span><b>21</b></div>
+<div class="ck-s">the figure read halfway in the photo</div>
+</div>
+<div class="ck-r">
+<div class="ck-n">Money</div>
+<div class="ck-b"><span aria-label="Money: 15 times" class="rp-mbar rp-mbar-b" data-tip="15|Money · times it stopped" role="img" tabindex="0"><i style="width:34.1%"></i></span><b>15</b></div>
+<div class="ck-s">the day's price was still to set</div>
+</div>
+<div class="ck-r">
+<div class="ck-n">Question</div>
+<div class="ck-b"><span aria-label="Question: 10 times" class="rp-mbar rp-mbar-b" data-tip="10|Question · times it stopped" role="img" tabindex="0"><i style="width:22.7%"></i></span><b>10</b></div>
+<div class="ck-s">it was a question, and it went to your team</div>
+</div></div></figure>
+<details class="rp-tbl"><summary>See the table</summary><div class="rp-tbl-w"><table><thead><tr><th scope="col">Week</th><th scope="col">Orders</th><th scope="col">Alone</th><th scope="col">Reviewed</th><th scope="col">Review rate</th></tr></thead><tbody><tr><th scope="row">Week 1</th><td>214</td><td>158</td><td>56</td><td>26.2%</td></tr><tr><th scope="row">Week 2</th><td>236</td><td>190</td><td>46</td><td>19.5%</td></tr><tr><th scope="row">Week 3</th><td>229</td><td>199</td><td>30</td><td>13.1%</td></tr><tr><th scope="row">Week 4</th><td>247</td><td>224</td><td>23</td><td>9.3%</td></tr><tr><th scope="row"><b>The month</b></th><td><b>926</b></td><td><b>771</b></td><td><b>155</b></td><td><b>16.7%</b></td></tr><tr><th scope="row">Quantity</th><td></td><td></td><td>44</td><td></td></tr><tr><th scope="row">Catalogue</th><td></td><td></td><td>38</td><td></td></tr><tr><th scope="row">Change</th><td></td><td></td><td>27</td><td></td></tr><tr><th scope="row">Amount</th><td></td><td></td><td>21</td><td></td></tr><tr><th scope="row">Money</th><td></td><td></td><td>15</td><td></td></tr><tr><th scope="row">Question</th><td></td><td></td><td>10</td><td></td></tr></tbody></table></div></details>
+<p class="rp-means">Review went from 26.2% to 9.3% in four weeks: the same house, four more weeks of memory. And the 155 times Rocoto stopped have names — that measure matters as much as the hits.</p>
+</section>
+</main>
+<section class="rp-end">
+<div class="wrap">
+<h2>This report comes out of your first month.</h2>
+<p>With your delivery notes, your customers and your products. What you see here about Casa Mar, written about your house — and it is yours to keep.</p>
+<a class="rp-cta" href="https://docs.atelierneyra.com/ai-native-erp/overview/" rel="noopener noreferrer" target="_blank">Get started</a>
+</div>
+</section>
+<footer class="rp-foot"><div class="wrap">
+<span>Rocoto</span>
+<a href="/en/">Home</a>
+<span>Sample, example data</span>
+</div><a href="https://atelierneyra.com" rel="noopener noreferrer" target="_blank">made by atelier neyra</a></footer>
+<script>
+(function(){
+  var tip=document.createElement('div');tip.className='rp-tip';
+  var v=document.createElement('b'),l=document.createElement('span');
+  tip.appendChild(v);tip.appendChild(l);document.body.appendChild(tip);
+  var cur=null,mode='';
+  function place(x,y){tip.style.left=x+'px';tip.style.top=y+'px';}
+  function show(el,x,y,how){
+    var parts=(el.getAttribute('data-tip')||'').split('|');
+    /* labels are DATA, never markup — textContent, always */
+    v.textContent=parts[0]||'';l.textContent=parts[1]||'';
+    l.style.display=parts[1]?'block':'none';
+    place(x,y);tip.classList.add('on');cur=el;mode=how;
+  }
+  function atMark(el){var r=el.getBoundingClientRect();return [r.left+r.width/2,r.top-2];}
+  function hide(){tip.classList.remove('on');cur=null;mode='';}
+  function near(e){
+    var el=e.target.closest?e.target.closest('[data-tip]'):null;
+    if(!el){if(cur)hide();return;}
+    show(el,e.clientX,e.clientY-6,'hover');
+  }
+  document.addEventListener('pointermove',near,{passive:true});
+  /* NOT a capturing `pointerleave` on document: that fires for every element the pointer leaves on
+     its way in, so it hid the tooltip the instant it appeared. Only leaving the document hides it;
+     everything else is settled by the pointermove test above. */
+  document.documentElement.addEventListener('pointerleave',hide);
+  /* keyboard reads exactly what hover reads */
+  document.addEventListener('focusin',function(e){
+    var el=e.target.closest?e.target.closest('[data-tip]'):null;
+    if(!el){if(mode==='focus')hide();return;}
+    var p=atMark(el);show(el,p[0],p[1],'focus');
+  });
+  document.addEventListener('focusout',function(){if(mode==='focus')hide();});
+  /* a Tab that scrolls the mark into view must not throw its own tooltip away */
+  window.addEventListener('scroll',function(){
+    if(!cur)return;
+    if(mode==='focus'&&document.activeElement===cur){var p=atMark(cur);place(p[0],p[1]);return;}
+    hide();
+  },{passive:true});
+  /* the CTA prefers the site's booking modal when this page is ever mounted inside the bundle */
+  document.addEventListener('click',function(e){
+    var a=e.target.closest?e.target.closest('[data-rocoto-signup]'):null;
+    if(a&&window.rocotoOpenSignup){e.preventDefault();window.rocotoOpenSignup();}
+  });
+})();
+</script>
+</body>
+</html>

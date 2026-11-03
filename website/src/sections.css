@@ -1,0 +1,548 @@
+/* ===== HowItWorks (how-it-works) ===== */
+/* ============================================================
+   HowItWorks — Rocoto landing island. All classes .hiw-* prefixed.
+   Mobile-first friendly: two/three-column flow stacks to one column
+   at <=760px and the connector arrows rotate to point DOWN.
+   ============================================================ */
+
+/* NOTE: do NOT redefine the global .wrap here — it collides with the page nav/hero/sections.
+   The page's rocoto.css owns .wrap (max-width + horizontal padding); sections get vertical
+   padding from <section>. Island section spacing lives on the *-root classes below. */
+
+.section-head {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto clamp(18px, 3vw, 32px);
+}
+
+.section-head .kicker {
+  font-family: var(--f-mono);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--terracotta);
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.section-head h2 {
+  font-family: var(--f-display);
+  font-size: clamp(28px, 4vw, 44px);
+  line-height: 1.1;
+  color: var(--ink);
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+/* ---------- soft warm-pink panel ---------- */
+.hiw-panel {
+  background: rgba(192, 27, 44, 0.05);
+  border-radius: var(--r-xl, 20px);
+  padding: clamp(18px, 4vw, 44px);
+  box-sizing: border-box;
+}
+
+.hiw-flow {
+  display: grid;
+  grid-template-columns: 1fr auto 1.15fr auto 1.1fr;
+  align-items: stretch; /* every column shares the row height → balanced */
+  gap: clamp(10px, 2vw, 22px);
+}
+
+.hiw-col {
+  min-width: 0; /* allow children to shrink & wrap, never overflow */
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* the READS column (col 2) — title stays in the header row with the others;
+   the transcript card floats to the VERTICAL CENTRE of the leftover height so the
+   negative space between the taller channel + order columns is used, not dumped below */
+.hiw-col-reads .hiw-coltitle {
+  flex: none;
+}
+.hiw-col-reads .hiw-reads {
+  margin-block: auto; /* centre the card in the remaining column height */
+}
+
+.hiw-coltitle {
+  font-family: var(--f-mono);
+  font-size: var(--t-label);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--stone);
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 2px;
+}
+
+/* ---------- shared card look: depth + separation ---------- */
+.hiw-card {
+  background: var(--card, #fff);
+  border: 1px solid var(--border, #e7e1d8);
+  border-radius: var(--r-lg, 14px);
+  box-shadow: var(--sh-card, 0 4px 16px rgba(0, 0, 0, 0.08));
+  box-sizing: border-box;
+  min-width: 0;
+  opacity: 0;
+  transform: translateY(14px) scale(0.98);
+  transition:
+    opacity 0.55s var(--ease, cubic-bezier(0.25, 1, 0.5, 1)),
+    transform 0.55s var(--spring, cubic-bezier(0.34, 1.56, 0.64, 1));
+}
+
+.hiw-panel.in .hiw-card {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.hiw-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* The WhatsApp VOICE-CALL card that used to open this column (.hiw-call / .hiw-call-head /
+   -avatar / -name / -time / -status / -dot / -controls, .hiw-ctl, .hiw-ctl-end and the
+   @keyframes hiw-pulse that only .hiw-call-dot used) was deleted on 2026-07-27. Telephony went out
+   of scope with the Mercamadrid pivot (PRODUCT-SPEC §10); the markup went with it, the ~90 lines of
+   CSS did not, and they were still being served in hero.css. Its media-query and reduced-motion
+   fragments went too. */
+
+/* ---------- (a) handwritten note photo ---------- */
+/* handwritten note sent as a WhatsApp photo message — green bubble, image inside */
+.hiw-photobub {
+  position: relative;
+  align-self: stretch;
+  padding: 4px;
+  background: #D9FDD3;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 1px 2px rgba(26,20,19,.10);
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity .5s var(--ease), transform .5s var(--spring);
+}
+.hiw-panel.in .hiw-photobub { opacity: 1; transform: none; }
+.hiw-photobub img {
+  display: block;
+  width: 100%;
+  height: 116px;
+  object-fit: cover;
+  border-radius: 9px;
+}
+.hiw-photobub-meta {
+  position: absolute;
+  right: 9px;
+  bottom: 9px;
+  font-family: var(--f-mono);
+  font-size: 10px;
+  color: #fff;
+  background: rgba(0,0,0,.42);
+  padding: 2px 7px;
+  border-radius: 8px;
+}
+
+/* ---------- shared voice-note element — same shape everywhere, dense irregular waveform ---------- */
+.vnote { display:inline-flex; align-items:center; gap:10px; max-width:100%; background:#fff; border:1px solid rgba(26,20,19,.12); border-radius:16px; padding:10px 15px 10px 12px; box-shadow:0 1px 2px rgba(26,20,19,.08); }
+.vnote-white { background:#fff; }
+.vnote-play { color:#00A884; display:grid; place-items:center; flex:none; } .vnote-play svg { width:22px; height:22px; }
+.vnote-wave { position:relative; display:flex; align-items:center; gap:1.5px; height:24px; flex:1; min-width:120px; }
+.vnote-wave i { flex:1; min-width:1.5px; max-width:2.5px; border-radius:2px; background:rgba(11,63,45,.26); }
+.vnote-wave i.p { background:#00A884; }
+.vnote-dot { position:absolute; left:19%; top:50%; width:9px; height:9px; margin-top:-4.5px; border-radius:50%; background:#00A884; box-shadow:0 1px 2px rgba(0,0,0,.22); }
+.vnote-dur { font-family:var(--f-mono); font-size:11px; color:var(--stone); flex:none; }
+/* how-it-works reveal wrapper for the shared voice note — a sent WhatsApp green bubble */
+.hiw-vnbub { position:relative; align-self:stretch; background:#D9FDD3; border-radius:12px 12px 4px 12px; padding:8px 10px 6px; box-shadow:0 1px 2px rgba(26,20,19,.10); opacity:0; transform:translateY(12px); transition:opacity .5s var(--ease), transform .5s var(--spring); }
+.hiw-panel.in .hiw-vnbub { opacity:1; transform:none; }
+/* the voice-note pill sits on the green bubble, transparent so the bubble shows through */
+.hiw-vnbub .vnote.vnote-wa { display:flex; width:100%; background:transparent; border:none; box-shadow:none; padding:2px 2px 0; border-radius:0; gap:9px; }
+.hiw-vnbub .vnote-wa .vnote-dur { color:#4a5a4d; }
+.hiw-vnbub-meta { display:block; text-align:right; margin-top:3px; font-family:var(--f-mono); font-size:9.5px; color:#5a7a63; }
+
+/* The incoming plain-text bubbles (.hiw-msgs / .hiw-msg / .hiw-msg-m) went when the column was cut
+   to photo + voice note. Removed 2026-07-27 — no markup has carried these classes since. */
+
+/* onboarding head — left-aligned on desktop (per Peter), tighter to the grid */
+.onb-head { text-align:left; max-width:40ch; margin:0 0 clamp(22px,3vw,34px); }
+
+/* ---------- connector arrow ---------- */
+.hiw-arrow {
+  color: var(--terracotta, #da654d);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center; /* centre on the full row height, matching the centred transcript */
+}
+/* the between-column arrow now comes out of the page's Phosphor sprite (17.56 ICON LAW), which
+   is duotone FILL on a 256 box — so it is sized here and painted with fill, never stroked. */
+.hiw-arrow-ic { width: 30px; height: 30px; fill: currentColor; stroke: none; }
+
+/* ---------- (2) Rocoto reads ---------- */
+.hiw-reads {
+  padding: 16px 18px 18px;
+}
+
+/* .hiw-reads-head / .hiw-reads-dot and the @keyframes hiw-pulse-g that only the dot used: the card
+   lost its "escuchando" header row; the rules stayed. Removed 2026-07-27. */
+
+.hiw-transcript {
+  margin: 0;
+  font-family: var(--f-body);
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--ink, #1c1917);
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.hiw-word {
+  opacity: 0;
+  transition: opacity 0.28s var(--ease, ease);
+}
+
+.hiw-word.on {
+  opacity: 1;
+}
+
+.hiw-pill {
+  display: inline;
+  font-weight: 600;
+  color: #0B6B4F;
+  background: rgba(16, 185, 129, 0.14);
+  border-radius: var(--r-sm, 6px);
+  padding: 1px 7px;
+  margin-right: 4px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  opacity: 0;
+  transform: translateY(2px);
+  transition:
+    opacity 0.3s var(--ease, ease),
+    transform 0.3s var(--spring, cubic-bezier(0.34, 1.56, 0.64, 1));
+}
+
+.hiw-pill.on {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---------- (3) One clean order ---------- */
+.hiw-order {
+  padding: 0;
+  overflow: hidden;
+}
+
+.hiw-order-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border, #e7e1d8);
+}
+
+.hiw-order-client {
+  font-family: var(--f-body);
+  font-size: 14px;
+  color: var(--stone, #57534e);
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.hiw-order-client strong {
+  color: var(--ink, #1c1917);
+  font-weight: 700;
+}
+
+.hiw-order-lines {
+  font-family: var(--f-mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted, #a8a29e);
+  white-space: nowrap;
+  flex: none;
+}
+
+.hiw-order-rows {
+  display: flex;
+  flex-direction: column;
+}
+
+.hiw-orow {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  column-gap: 12px;
+  padding: 11px 16px;
+  border-bottom: 1px solid var(--cream-dark, #f0ebe3);
+  opacity: 0;
+  transform: translateY(6px);
+  transition:
+    opacity 0.4s var(--ease, ease),
+    transform 0.4s var(--spring, cubic-bezier(0.34, 1.56, 0.64, 1));
+}
+
+.hiw-orow.on {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hiw-orow-name {
+  font-family: var(--f-body);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink, #1c1917);
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.hiw-orow-qty {
+  font-family: var(--f-mono);
+  font-size: 12.5px;
+  color: var(--stone, #57534e);
+  white-space: nowrap;
+}
+
+.hiw-orow-price {
+  font-family: var(--f-mono);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink, #1c1917);
+  white-space: nowrap;
+  text-align: right;
+  min-width: 46px;
+}
+
+.hiw-order-total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  background: var(--cream, #faf8f4);
+  font-family: var(--f-body);
+  font-size: 14px;
+  color: var(--stone, #57534e);
+  opacity: 0;
+  transform: translateY(6px);
+  transition:
+    opacity 0.45s var(--ease, ease),
+    transform 0.45s var(--spring, cubic-bezier(0.34, 1.56, 0.64, 1));
+}
+
+.hiw-order-total.on {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hiw-total-val {
+  font-family: var(--f-mono);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--green, #10b981);
+  white-space: nowrap;
+}
+
+/* ============================================================
+   MOBILE — stack to one column, arrows point DOWN
+   ============================================================ */
+@media (max-width: 760px) {
+  .hiw-flow {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .hiw-col {
+    max-width: 420px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .hiw-arrow {
+    margin-top: 0;
+    transform: rotate(90deg);
+  }
+
+  .hiw-transcript {
+    font-size: 15px;
+  }
+
+}
+
+@media (max-width: 400px) {
+  .hiw-panel {
+    padding: 16px 12px;
+  }
+}
+
+/* ---------- reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .hiw-card,
+  .hiw-word,
+  .hiw-pill,
+  .hiw-orow,
+  .hiw-order-total,
+  .hiw-vnbub,
+  .hiw-photobub,
+  .onb-box,
+  .onb-say,
+  .onb-prod,
+  .onb-kick,
+  .ro-col,
+  .ro-nudge {
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .onb-dot,
+  .ro-nudge .dot {
+    animation: none !important;
+  }
+
+  .ro-pay-thumb {
+    transition: none !important;
+  }
+}
+
+/* ============ Review — daily brief, side by side ============ */
+.rev-root{ }
+.rev-grid{ display:grid; grid-template-columns:1fr 1fr; gap:clamp(24px,5vw,60px); align-items:center; }
+.rev-left .section-head{ margin-bottom:18px; text-align:left; }
+.rev-left .section-head, .rev-left .section-head h2{ text-align:left; margin-left:0; }
+.rev-body{ font-size:17px; line-height:1.6; color:var(--stone); max-width:42ch; opacity:0; transform:translateY(10px); transition:opacity .5s var(--ease), transform .5s var(--spring); }
+.rev-body.in{ opacity:1; transform:none; }
+/* the REAL daily brief — customer card header + message + what I understood */
+.brief{ background:#fff; border:1px solid rgba(26,20,19,.10); border-radius:var(--r-xl); box-shadow:0 14px 40px rgba(26,20,19,.07); padding:6px; opacity:0; transform:translateY(16px); transition:opacity .55s var(--ease), transform .6s var(--spring); color:var(--rocoto-fg); }
+.brief.in{ opacity:1; transform:none; }
+.brief-hd{ display:flex; align-items:center; gap:12px; padding:14px 16px 14px; border-bottom:1px solid rgba(26,20,19,.08); }
+.brief-hd-av{ width:40px; height:40px; border-radius:50%; background:var(--terracotta-light); color:var(--terracotta); font:700 13px var(--f-mono); display:grid; place-items:center; flex:none; }
+.brief-hd-c{ flex:1; min-width:0; } .brief-hd-c b{ display:block; font-family:var(--f-display); font-size:19px; color:var(--ink); line-height:1.15; } .brief-hd-c i{ font-style:normal; font-size:12.5px; color:var(--stone); }
+.brief-hd-t{ font-family:var(--f-mono); font-size:11px; color:var(--muted); flex:none; }
+.brief .vnote{ margin:16px 16px 0; }
+.brief-tx{ font-style:italic; font-size:15px; line-height:1.5; color:#3a332c; margin:12px 18px 0; }
+.brief-card{ margin:16px; background:var(--cream); border:1px solid rgba(26,20,19,.10); border-radius:14px; padding:16px 18px 15px;
+  background-image:radial-gradient(rgba(26,20,19,.05) 1px, transparent 1px); background-size:11px 11px; }
+.brief-ck{ font-family:var(--f-mono); font-size:10.5px; font-weight:600; letter-spacing:.09em; color:var(--rocoto-saffron); margin-bottom:11px; }
+.brief-row{ display:flex; justify-content:space-between; align-items:baseline; padding:10px 0; border-top:1px solid rgba(26,20,19,.10); }
+.brief-row:first-of-type{ border-top:none; }
+.brief-row .n{ font-size:15px; font-weight:500; } .brief-row .q{ font-family:var(--f-mono); font-size:14px; font-weight:600; color:var(--rocoto-fg); }
+.brief-cta{ margin-top:14px; background:var(--rocoto-saffron); color:#fff; text-align:center; font-weight:600; font-size:14.5px; border-radius:999px; padding:13px; }
+.brief-sec{ display:flex; gap:9px; margin-top:9px; }
+.brief-sec div{ flex:1; text-align:center; border:1px solid rgba(26,20,19,.16); border-radius:999px; padding:11px; font-size:14px; font-weight:500; background:#fff; }
+@media(max-width:820px){ .rev-grid{ grid-template-columns:1fr; gap:30px; } }
+
+/* ============ Onboarding — boxes describing what it learns ============ */
+.onb-root{ }
+.onb-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:22px; }
+.onb-box{ background:var(--card); border:1px solid var(--border); border-radius:var(--r-lg); padding:16px 16px 18px; box-shadow:var(--sh-card); display:flex; flex-direction:column; opacity:0; transform:translateY(14px); transition:opacity .5s var(--ease), transform .55s var(--spring); }
+.onb-box.in{ opacity:1; transform:none; }
+.onb-viz{ height:134px; background:var(--cream); border:1px solid var(--border); border-radius:var(--r-md); display:flex; align-items:center; justify-content:center; padding:16px; margin-bottom:15px; overflow:hidden; }
+.onb-box-t{ font-family:var(--f-display); font-size:19px; font-weight:700; color:var(--ink); letter-spacing:-.01em; }
+.onb-box-d{ font-size:14px; color:var(--stone); line-height:1.55; margin:6px 0 0; }
+.onb-chip{ width:100%; background:transparent; border:none; padding:0; }
+.onb-lbl{ font-family:var(--f-mono); font-size:11px; color:var(--stone); font-weight:600; margin-left:auto; }
+/* call — scattered WhatsApp-style phrase bubbles the AI is learning */
+.onb-chip-call{ position:relative; width:100%; height:100%; display:flex; flex-direction:column; gap:7px; justify-content:center; }
+.onb-say{ align-self:flex-start; max-width:88%; background:#fff; border:1px solid rgba(26,20,19,.10); border-radius:12px 12px 12px 4px; padding:7px 11px 6px; font-size:12.5px; line-height:1.3; color:var(--ink); box-shadow:0 1px 2px rgba(26,20,19,.09); opacity:0; transform:translateY(9px) scale(.96); transition:opacity .42s var(--ease), transform .42s var(--spring); }
+.onb-say.in{ opacity:1; transform:none; }
+.onb-say-1{ align-self:flex-end; margin-left:auto; border-radius:12px 12px 4px 12px; background:#D9FDD3; border-color:rgba(37,211,102,.28); }
+.onb-say-2{ align-self:flex-start; max-width:80%; }
+/* ERP — responsive logo grid, bigger logos, all connectors */
+.onb-chip-erp{ display:grid; grid-template-columns:repeat(3,1fr); align-items:center; justify-items:center; gap:16px 18px; width:100%; }
+.onb-chip-erp img{ max-width:100%; max-height:34px; object-fit:contain; opacity:.9; }
+/* clients */
+.onb-chip-clients{ display:flex; flex-direction:column; gap:9px; }
+.onb-cli{ display:flex; align-items:center; gap:10px; }
+.onb-av{ width:26px; height:26px; border-radius:50%; background:var(--terracotta-light); color:var(--terracotta); font:700 10.5px var(--f-mono); display:grid; place-items:center; flex:none; }
+.onb-cn{ font-size:13.5px; font-weight:600; color:var(--ink); } .onb-cc{ font-family:var(--f-mono); font-size:11px; color:var(--stone); margin-left:auto; }
+/* accept / ask */
+.onb-chip-accept{ display:flex; flex-direction:column; gap:9px; }
+.onb-split{ display:flex; justify-content:space-between; font:600 10px var(--f-mono); letter-spacing:.05em; } .onb-split span{ color:var(--muted); } .onb-split b{ color:var(--terracotta); }
+.onb-splitbar{ height:7px; border-radius:99px; background:#E4DED4; position:relative; overflow:hidden; } .onb-splitbar i{ position:absolute; right:0; top:0; bottom:0; width:36%; background:var(--terracotta); border-radius:99px; }
+.onb-exrow{ display:flex; align-items:center; gap:8px; font-size:12.5px; color:var(--ink); } .onb-exrow b{ margin-left:auto; color:var(--terracotta); font-family:var(--f-mono); font-size:10.5px; font-weight:600; }
+.onb-exdot{ width:7px; height:7px; border-radius:50%; background:var(--terracotta); flex:none; }
+/* delivery days */
+.onb-cal{ display:flex; gap:7px; width:100%; align-items:stretch; }
+.onb-cal-d{ flex:1; display:flex; flex-direction:column; align-items:center; gap:5px; }
+.onb-cal-l{ font:700 11px var(--f-mono); color:var(--muted); }
+.onb-cal-d.on .onb-cal-l{ color:var(--terracotta); }
+.onb-cal-s{ width:100%; height:16px; border-radius:5px; background:#E7E0D5; }
+.onb-cal-s.f{ background:var(--terracotta); }
+/* stock — real product photo cards with min/max stock band */
+.onb-chip-stock{ display:grid; grid-template-columns:repeat(2,1fr); gap:8px; width:100%; }
+.onb-prod{ position:relative; display:flex; align-items:center; gap:8px; background:var(--card); border:1px solid var(--border); border-radius:10px; padding:6px 8px 6px 6px; opacity:0; transform:translateY(8px); transition:opacity .42s var(--ease), transform .42s var(--spring); }
+.onb-prod.in{ opacity:1; transform:none; }
+.onb-prod-img{ width:34px; height:34px; border-radius:7px; background-size:cover; background-position:center; flex:none; }
+.onb-prod-c{ display:flex; flex-direction:column; gap:1px; min-width:0; }
+.onb-prod-n{ font-size:12px; font-weight:600; color:var(--ink); line-height:1.2; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.onb-prod-mm{ font-family:var(--f-mono); font-size:9.5px; font-weight:600; letter-spacing:.02em; color:var(--stone); }
+.onb-prod-s{ width:7px; height:7px; border-radius:50%; margin-left:auto; flex:none; align-self:flex-start; margin-top:3px; } .onb-prod-s.ok{ background:var(--green); } .onb-prod-s.low{ background:#E0A100; }
+.onb-kick{ text-align:center; max-width:60ch; margin:20px auto 0; font-size:15px; color:var(--stone); opacity:0; transition:opacity .6s var(--ease); }
+.onb-kick.in{ opacity:1; }
+@media(max-width:940px){ .onb-grid{ grid-template-columns:repeat(2,1fr); } }
+@media(max-width:600px){ .onb-grid{ grid-template-columns:1fr; } }
+
+/* ============ E-commerce — ported from july-deck/reorder.html (real colours) ============ */
+.ecom-root{ --g:#2E6037; --faint:#8B8378; --cr:var(--rocoto-saffron); }
+.ecom-intro{ max-width:56ch; font-size:18px; color:var(--stone); line-height:1.6; margin:2px 0 30px; }
+.reorder{ display:grid; grid-template-columns:1fr 1fr; gap:22px; align-items:stretch; }
+.ro-col{ display:flex; flex-direction:column; gap:18px; opacity:0; transform:translateY(18px); transition:opacity .55s var(--ease), transform .6s var(--spring); }
+.ro-col.in{ opacity:1; transform:none; }
+.ro-grow{ flex:1; display:flex; flex-direction:column; }
+.ro-card{ background:#fff; border:1px solid rgba(26,20,19,.09); border-radius:20px; box-shadow:0 12px 36px rgba(26,20,19,.06); padding:22px 24px; }
+.ro-cue{ display:inline-flex; align-items:center; gap:8px; font-family:var(--f-mono); font-size:12.5px; font-weight:600; letter-spacing:.02em; color:var(--g); background:rgba(46,96,55,.10); padding:10px 15px; border-radius:99px; align-self:flex-start; }
+.ro-cue svg{ width:16px; height:16px; fill:var(--g); }
+.ro-confhd{ display:flex; align-items:center; gap:12px; margin-bottom:14px; }
+.ro-tick{ width:36px; height:36px; border-radius:99px; background:var(--g); display:grid; place-items:center; flex:none; } .ro-tick svg{ width:19px; height:19px; stroke:#fff; stroke-width:3; fill:none; }
+/* behaviour card header */
+.ro-behavehd{ padding-bottom:16px; margin-bottom:16px; border-bottom:1px solid rgba(26,20,19,.08); }
+.ro-t{ font-family:var(--f-display); font-weight:600; font-size:22px; color:var(--ink); } .ro-t small{ display:block; font-size:13.5px; color:var(--stone); font-family:var(--f-body); font-weight:500; margin-top:3px; }
+.ro-li{ display:flex; align-items:baseline; justify-content:space-between; padding:12px 0; border-top:1px solid rgba(26,20,19,.08); }
+.ro-li .n{ font-size:16px; font-weight:500; color:var(--ink); } .ro-li .q{ font-family:var(--f-mono); font-size:14px; color:var(--stone); margin-left:auto; margin-right:20px; } .ro-li .p{ font-family:var(--f-mono); font-size:15px; font-weight:600; width:60px; text-align:right; color:var(--ink); }
+.ro-tot{ display:flex; align-items:baseline; justify-content:space-between; padding-top:14px; margin-top:5px; border-top:2px solid var(--ink); }
+.ro-tot .n{ font-family:var(--f-display); font-weight:600; font-size:17px; } .ro-tot .p{ font-family:var(--f-mono); font-size:24px; font-weight:600; }
+.ro-slab{ font-family:var(--f-mono); font-size:11px; font-weight:600; letter-spacing:.09em; color:var(--faint); margin-bottom:14px; }
+.ro-chart{ display:flex; align-items:flex-end; gap:10px; height:92px; padding:0 2px; }
+.ro-b{ flex:1; background:#E6DFD5; border-radius:5px 5px 0 0; transition:height .7s var(--spring); } .ro-b.hi{ background:var(--cr); }
+.ro-months{ display:flex; gap:10px; margin-top:10px; } .ro-months span{ flex:1; text-align:center; font-family:var(--f-mono); font-size:11.5px; color:#A89E92; } .ro-months span.now{ color:var(--cr); font-weight:600; }
+.ro-pop{ margin-top:20px; }
+.ro-prow{ display:flex; align-items:center; gap:13px; padding:12px 0; border-top:1px solid rgba(26,20,19,.08); } .ro-prow:first-of-type{ border-top:none; }
+.ro-prow .rank{ font-family:var(--f-mono); font-size:15px; font-weight:600; color:var(--cr); width:16px; } .ro-prow .pn{ font-size:15.5px; font-weight:500; flex:1; color:var(--ink); } .ro-prow .pc{ font-family:var(--f-mono); font-size:13px; color:var(--faint); }
+.ro-nudge{ display:flex; align-items:flex-start; gap:13px; margin-top:20px; background:rgba(192,27,44,.06); border:1px solid rgba(192,27,44,.24); border-radius:16px; padding:15px 17px; opacity:0; transform:translateY(10px); transition:opacity .5s var(--ease) .18s, transform .5s var(--spring) .18s; }
+.ro-nudge.in{ opacity:1; transform:none; }
+.ro-nudge .dot{ width:11px; height:11px; border-radius:99px; background:var(--cr); flex:none; margin-top:5px; box-shadow:0 0 0 5px rgba(192,27,44,.13); animation:onbBlink 1.6s var(--ease) infinite; }
+.ro-nudge .tx{ font-size:15px; font-weight:600; line-height:1.4; color:var(--ink); } .ro-nudge .tx b{ color:var(--cr); }
+.ro-nudge-k{ display:block; font-family:var(--f-mono); font-size:9.5px; font-weight:600; letter-spacing:.09em; color:var(--cr); margin-bottom:4px; }
+.ro-oahd{ font-family:var(--f-display); font-size:22px; font-weight:600; letter-spacing:-.01em; margin:4px 2px 0; color:var(--ink); }
+.ro-oahd span{ font-family:var(--f-mono); font-size:11.5px; font-weight:600; letter-spacing:.06em; color:var(--faint); margin-left:10px; }
+.ro-chips{ display:flex; gap:11px; }
+.ro-chip{ flex:1; border:1.5px solid rgba(26,20,19,.15); border-radius:14px; padding:13px 13px; background:#fff; }
+.ro-chip.sel{ border-color:var(--cr); box-shadow:0 3px 14px rgba(192,27,44,.15); }
+.ro-chip .d{ display:block; font-family:var(--f-mono); font-size:11px; color:var(--faint); font-weight:600; } .ro-chip.sel .d{ color:var(--cr); }
+.ro-chip .s{ display:block; font-size:15px; font-weight:600; margin-top:5px; color:var(--ink); } .ro-chip .v{ display:block; font-family:var(--f-mono); font-size:13px; color:var(--stone); margin-top:3px; }
+.ro-expand{ border:1px solid rgba(26,20,19,.09); border-radius:18px; padding:22px 22px; background:#fff; box-shadow:0 12px 36px rgba(26,20,19,.06); position:relative; justify-content:space-between; }
+.ro-erow{ display:flex; align-items:center; justify-content:space-between; padding:17px 0; border-top:1px solid rgba(26,20,19,.07); } .ro-erow:first-of-type{ border-top:none; }
+.ro-erow .n{ font-size:15.5px; font-weight:500; color:var(--ink); }
+.ro-step{ display:flex; align-items:center; border:1px solid rgba(26,20,19,.16); border-radius:11px; overflow:hidden; }
+.ro-step b{ width:36px; height:36px; display:grid; place-items:center; font-size:19px; color:var(--stone); background:#F7F3EE; } .ro-step span{ width:44px; text-align:center; font-family:var(--f-mono); font-size:16px; font-weight:600; color:var(--ink); }
+/* checkout: delivery-date selector + Apple Pay / cash toggle */
+.ro-checkout{ padding-top:14px; border-top:1px solid rgba(26,20,19,.07); margin-top:4px; }
+.ro-when{ display:flex; flex-direction:column; gap:9px; }
+.ro-when-k{ display:flex; align-items:center; gap:8px; font-family:var(--f-mono); font-size:11.5px; font-weight:600; letter-spacing:.05em; text-transform:uppercase; color:var(--stone); } .ro-when-k svg{ width:15px; height:15px; fill:none; stroke:var(--stone); stroke-width:1.8; }
+.ro-dates{ display:flex; gap:8px; }
+.ro-date{ flex:1; border:1.5px solid rgba(26,20,19,.15); background:#fff; border-radius:11px; padding:9px 4px; font-family:var(--f-mono); font-size:12px; font-weight:600; color:var(--stone); cursor:pointer; transition:border-color .16s var(--ease), color .16s, background .16s; }
+.ro-date.sel{ border-color:var(--cr); color:var(--cr); background:rgba(192,27,44,.05); }
+.ro-pay{ position:relative; display:flex; gap:6px; margin-top:14px; background:#F1ECE4; border-radius:13px; padding:4px; }
+/* sliding thumb that glides under the selected method (auto-cycles as you scroll in) */
+.ro-pay-thumb{ position:absolute; top:4px; bottom:4px; left:4px; width:calc(50% - 7px); background:#fff; border-radius:10px; box-shadow:0 2px 8px rgba(26,20,19,.10); transition:transform .4s var(--spring); z-index:0; }
+.ro-pay-thumb-cash{ transform:translateX(calc(100% + 6px)); }
+.ro-pm{ position:relative; z-index:1; flex:1; display:flex; align-items:center; justify-content:center; gap:7px; border:none; background:transparent; border-radius:10px; padding:11px; font-family:var(--f-body); font-weight:600; font-size:14.5px; color:var(--stone); cursor:pointer; transition:color .18s var(--ease); }
+.ro-pm svg{ width:17px; height:17px; } .ro-pm svg.ap{ fill:currentColor; } .ro-pm svg.csh{ fill:none; stroke:currentColor; stroke-width:1.8; }
+.ro-pm.sel{ color:var(--ink); }
+.ro-cta{ margin-top:14px; width:100%; border:none; cursor:pointer; background:var(--ink); color:#fff; border-radius:13px; text-align:center; font-family:var(--f-body); font-weight:600; font-size:16px; padding:15px; display:flex; align-items:center; justify-content:center; gap:9px; transition:transform .16s var(--spring); }
+.ro-cta:hover{ transform:translateY(-1px); } .ro-cta svg{ width:18px; height:18px; } .ro-cta svg.ap{ fill:#fff; } .ro-cta svg:not(.ap){ fill:none; stroke:#fff; stroke-width:3; }
+.ecom-note{ margin-top:24px; font-size:var(--t-body); color:var(--stone); background:var(--cream-dark); border-radius:var(--r-md); padding:12px 16px; display:inline-block; }
+@media(max-width:860px){ .reorder{ grid-template-columns:1fr; } .ecom-intro{ font-size:16px; } }
